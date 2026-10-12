@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seawithjose.es/sitemap.xml
