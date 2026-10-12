@@ -264,12 +264,75 @@ def json_ld(t, lang):
     return f'<script type="application/ld+json">{json.dumps(datos, ensure_ascii=False)}</script>\n'
 
 
+# ─────────────────────────────── el mar, ahora ───────────────────────────────
+# Lo que solo se pinta en el HTML; el resto de t["mar"] va al JS, que rellena las notas con datos/mar.json
+SOLO_HTML = ("eyebrow", "h2", "intro", "camaras_h", "en_directo", "ver", "camaras_nota", "camaras", "notas_h",
+             "dias_aria", "como_h", "como", "aviso_legal", "cargando")
+
+
+def seccion_mar(t):
+    m = t["mar"]
+    camaras = "".join(f"""
+      <li><a class="camara" href="{esc(c["url"])}" target="_blank" rel="noopener">
+        <span class="camara-directo"><span class="camara-punto" aria-hidden="true"></span>{esc(m["en_directo"])}</span>
+        <span class="camara-nombre">{esc(c["nombre"])}</span>
+        <span class="camara-que">{esc(c["que"])}</span>
+        <span class="camara-fuente">{esc(m["ver"])} · {esc(c["fuente"])} <span aria-hidden="true">↗</span></span>
+      </a></li>""" for c in m["camaras"])
+    indices = "".join(f"""
+        <article class="indice" data-act="{a}">
+          <h4 class="indice-cabeza">{SIMBOLOS[s]}<span>{esc(m["actividades"][a])}</span></h4>
+          <p class="indice-cifra"><span class="indice-n">–</span><span class="indice-de">/10</span></p>
+          <p class="indice-banda"></p>
+          <div class="indice-escala" aria-hidden="true">{"<i></i>" * 10}</div>
+          <p class="indice-frase"></p>
+          <ul class="indice-tramos"></ul>
+        </article>""" for a, s in (("navegar", "vela"), ("bucear", "buceo"), ("pescar", "pesca")))
+    como = "".join(f"<li><strong>{esc(a)}:</strong> {esc(b)}</li>" for a, b in m["como"])
+    return f"""
+<section class="seccion mar" id="mar" aria-labelledby="mar-titulo">
+  <div class="contenedor">
+    <p class="eyebrow">{esc(m["eyebrow"])}</p>
+    <h2 id="mar-titulo">{esc(m["h2"])}</h2>
+    <p class="intro">{esc(m["intro"])}</p>
+
+    <h3 class="mar-sub">{esc(m["camaras_h"])}</h3>
+    <ul class="camaras">{camaras}
+    </ul>
+    <p class="nota mar-nota">{esc(m["camaras_nota"])}</p>
+
+    <div class="notas">
+      <div class="notas-cabeza">
+        <h3 class="mar-sub">{esc(m["notas_h"])}</h3>
+        <div class="dias" role="group" aria-label="{esc(m["dias_aria"])}"></div>
+      </div>
+      <p class="notas-estado">{esc(m["cargando"])}</p>
+      <div class="aviso-mar" role="alert" hidden></div>
+      <div class="indices" hidden>{indices}
+      </div>
+      <div class="notas-detalle" hidden>
+        <table class="bitacora-mar"></table>
+        <div class="costera" hidden></div>
+      </div>
+      <details class="notas-como">
+        <summary>{esc(m["como_h"])}</summary>
+        <ul>{como}</ul>
+      </details>
+      <p class="nota notas-legal">{esc(m["aviso_legal"])}</p>
+      <p class="nota notas-fuente"></p>
+    </div>
+  </div>
+</section>
+"""
+
+
 # ─────────────────────────────── portada ───────────────────────────────
 def portada(lang):
     t = T[lang]
     prefijo = "" if lang == IDIOMAS[0] else "../"
     p = t["parte"]
-    datos_js = {"lang": lang, "prefijo": prefijo, "whatsapp": WHATSAPP, "parte": p, "plan": t["plan"]}
+    datos_js = {"lang": lang, "prefijo": prefijo, "whatsapp": WHATSAPP, "parte": p, "plan": t["plan"],
+                "mar": {k: v for k, v in t["mar"].items() if k not in SOLO_HTML}}
 
     credenciales = "".join(f'<li><strong>{esc(a)}</strong><span>{esc(b)}</span></li>' for a, b in t["credenciales"])
     experiencias = "".join(f"""
@@ -315,6 +378,7 @@ def portada(lang):
         <dl class="parte-datos"></dl>
         <p class="parte-lectura"></p>
         <p class="parte-fuente">{esc(p["sin_datos"])}</p>
+        <a class="parte-enlace" href="#mar">{esc(p["enlace"])} <span aria-hidden="true">↓</span></a>
       </aside>
     </div>
   </div>
@@ -333,7 +397,7 @@ def portada(lang):
     </div>
   </div>
 </section>
-
+{seccion_mar(t)}
 <section class="seccion seccion-blanca" id="jose" aria-labelledby="jose-titulo">
   <div class="contenedor jose">
     <figure class="jose-fotos">

@@ -20,23 +20,36 @@ Eso regenera `index.html`, `es/`, `ru/`, las páginas legales, el 404, el
 | `textos.py` | Textos, teléfono, Instagram y correo. |
 | `build.py` | Monta las páginas: carta náutica, experiencias, Jose, buceo, pasos, planificador y preguntas. |
 | `assets/estilo.css` | Diseño. Paleta de carta náutica: papel, tinta, isobatas, tierra y magenta para lo que se pulsa. |
-| `assets/web.js` | Parte del mar, puesta de sol, planificador de WhatsApp y menú del móvil. |
+| `assets/web.js` | Parte del mar, notas del 1 al 10, puesta de sol, planificador de WhatsApp y menú del móvil. |
 | `scripts/carta.py` | Isobatas reales de EMODnet (CC BY 4.0) para la carta de la portada → `fuentes/carta.json`. |
 | `scripts/recursos.py` | Descarga las tipografías (servidas desde la propia web, sin cookies) y optimiza las fotos. |
-| `scripts/parte_mar.py` | Previsión de AEMET para la playa Río Verde – Puerto Banús → `datos/mar.json`. |
+| `scripts/parte_mar.py` | Previsión de AEMET y notas del 1 al 10 para navegar, bucear y pescar → `datos/mar.json`. |
 
-## El parte del mar
+## El mar, ahora (parte, notas y cámaras)
 
-Lo actualiza la Action `parte.yml` dos veces al día. Necesita una clave
-gratuita de AEMET:
+La Action `parte.yml` ejecuta `scripts/parte_mar.py` cada tres horas (de 7:15
+a 22:15 en verano) y sube `datos/mar.json`. No necesita clave: lee los XML
+públicos de AEMET de la playa Río Verde – Puerto Banús, de Marbella por horas
+y por días, y el boletín costero de «Aguas costeras de Málaga» (estado de la
+mar, fuerza del viento, mar de fondo y avisos). Licencia de AEMET: uso libre
+citándola como autora, y la web la cita.
 
-1. Pedirla en https://opendata.aemet.es/centrodedescargas/altaUsuario (llega por correo).
-2. Guardarla en GitHub: *Settings → Secrets and variables → Actions → New repository
-   secret*, con el nombre `AEMET_API_KEY`.
-3. Lanzar la Action una vez a mano (*Actions → Parte del mar → Run workflow*).
+Con eso la web pinta el parte de la portada y la sección «El mar, ahora»:
 
-Sin clave, la web enseña solo la hora de la puesta de sol, que se calcula en
-el navegador.
+- **Notas del 1 al 10** para navegar, bucear y pescar, por tramos de 8 a 14 h y
+  de 14 a 20 h, para hoy y los dos días siguientes. Las reglas están en
+  `notas()` de `scripts/parte_mar.py` y se explican en la propia web («Cómo
+  pongo la nota»). Para cambiarlas, se toca esa función y se lanza la Action a
+  mano (*Actions → Parte del mar → Run workflow*).
+- **Cámaras en directo**: SkylineWebcams (puerto deportivo, y puerto y paseo
+  marítimo) y meteo365 (playa de El Cable y La Bajadilla). Ninguna deja
+  incrustarse en otras webs (bloquean los iframes y sus directos de YouTube no
+  se pueden insertar), así que cada tarjeta abre la cámara en su web. Si algún
+  día hay permiso de una de ellas, o una cámara propia emitiendo en YouTube, se
+  cambia la tarjeta por el vídeo. Las direcciones están en `textos.py`.
+
+Sin datos (AEMET caído), la portada enseña la puesta de sol, que se calcula en
+el navegador, y la sección invita a escribir por WhatsApp.
 
 ## Dominio
 

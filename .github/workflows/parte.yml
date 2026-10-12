@@ -1,11 +1,10 @@
 name: Parte del mar
 
-# Previsión de AEMET para la playa Río Verde - Puerto Banús, dos veces al día.
-# Necesita el secreto AEMET_API_KEY (gratis en opendata.aemet.es).
+# Previsión de AEMET (XML públicos, sin clave) y notas del 1 al 10 para navegar,
+# bucear y pescar, cada tres horas de 7:15 a 22:15 (hora de verano en Marbella).
 on:
   schedule:
-    - cron: "15 5 * * *"
-    - cron: "15 12 * * *"
+    - cron: "15 5-20/3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -25,8 +24,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Parte de AEMET
-        env:
-          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
         run: python scripts/parte_mar.py
       - name: Publicar si ha cambiado
         run: |
@@ -35,6 +32,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add datos/mar.json
           git diff --cached --quiet && exit 0
-          git commit -m "Parte del mar $(date -u +%Y-%m-%d)"
+          git commit -m "Parte del mar $(date -u +%Y-%m-%dT%H:%M)"
           git pull --rebase
           git push
