@@ -18,10 +18,11 @@ Eso regenera `index.html`, `es/`, `ru/`, las páginas legales, el 404, el
 | Pieza | Qué es |
 |---|---|
 | `textos.py` | Textos, teléfono, Instagram y correo. |
-| `build.py` | Monta las páginas: carta náutica, experiencias, Jose, buceo, pasos, planificador y preguntas. |
-| `assets/estilo.css` | Diseño. Paleta de carta náutica: papel, tinta, isobatas, tierra y magenta para lo que se pulsa. |
-| `assets/web.js` | Parte del mar, notas del 1 al 10, puesta de sol, planificador de WhatsApp y menú del móvil. |
-| `scripts/carta.py` | Isobatas reales de EMODnet (CC BY 4.0) para la carta de la portada → `fuentes/carta.json`. |
+| `build.py` | Monta las páginas: portada (precios, ruta, reserva, extras, barco, el mar hoy, Jose, cómo llegar, buceo, preguntas), la Senda Azul, gracias y aviso legal. |
+| `assets/estilo.css` | Diseño: colores de las banderas del Código (azul, amarillo, rojo), titulares en Sofia Sans Extra Condensed y texto en Sofia Sans. |
+| `assets/web.js` | Reserva (resumen, pago o WhatsApp), notas del 1 al 10, vídeo, filtros de buceo, página de gracias y menú del móvil. |
+| `scripts/carta.py` | Isobatas reales de EMODnet (CC BY 4.0) para la carta con la ruta → `fuentes/carta.json`. |
+| `scripts/mapa.py` | Plano de Puerto Banús con el parking Cristamar, de OpenStreetMap (ODbL) → `fuentes/mapa_banus.json`. |
 | `scripts/recursos.py` | Descarga las tipografías (servidas desde la propia web, sin cookies) y optimiza las fotos. |
 | `scripts/parte_mar.py` | Previsión de AEMET y notas del 1 al 10 para navegar, bucear y pescar → `datos/mar.json`. |
 
