@@ -2,6 +2,7 @@
 (() => {
   const nodo = document.getElementById('datos-pagina');
   const d = nodo ? JSON.parse(nodo.textContent) : {};
+  const sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ── menú del móvil ──
   const boton = document.querySelector('.menu-boton');
@@ -23,40 +24,29 @@
   window.addEventListener('scroll', marcar, { passive: true });
   marcar();
 
-  // ── parte del mar (portada) y «el mar, ahora»: los dos leen datos/mar.json ──
-  const parte = document.querySelector('.parte');
-  const mar = document.getElementById('mar');
-  const datosMar = (parte || mar)
-    ? fetch(`${d.prefijo}datos/mar.json`, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).catch(() => null)
-    : Promise.resolve(null);
-  if (parte && d.parte) pintarParte(parte, d, datosMar);
-  if (mar && d.mar) pintarMar(mar, d, datosMar);
-
-  // ── planificador → WhatsApp ──
-  const form = document.getElementById('planificador');
-  if (form && d.plan) {
-    const fecha = form.querySelector('input[type="date"]');
-    if (fecha) fecha.min = hoyEnMadrid();
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const p = d.plan, f = new FormData(form), lineas = [p.msg_inicio];
-      const anadir = (clave, valor) => { if (valor) lineas.push(`${clave}: ${valor}`); };
-      anadir(p.msg_actividad, f.get('actividad'));
-      const dia = f.get('fecha');
-      if (dia) {
-        const formato = new Intl.DateTimeFormat(d.lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-        anadir(p.msg_fecha, formato.format(new Date(dia + 'T00:00:00Z')));
-      }
-      anadir(p.msg_personas, f.get('personas'));
-      anadir(p.msg_nombre, String(f.get('nombre') || '').trim());
-      anadir(p.msg_notas, String(f.get('notas') || '').trim());
-      window.open(`https://wa.me/${d.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank', 'noopener');
-    });
+  // ── lo que se anima al entrar en pantalla (la carta se sondea y aparece la derrota) ──
+  const animables = document.querySelectorAll('.ruta-carta');
+  if (!('IntersectionObserver' in window) || sinMovimiento) {
+    animables.forEach(el => el.classList.add('visible'));
+  } else {
+    const obs = new IntersectionObserver(entradas => entradas.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }), { threshold: 0.25 });
+    animables.forEach(el => obs.observe(el));
   }
 
+  // ── utilidades de fecha y hora (siempre en la hora de Madrid) ──
   function hoyEnMadrid(desplazamiento = 0) {
     const fecha = new Date(Date.now() + desplazamiento * 86400000);
     return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(fecha);   // AAAA-MM-DD
+  }
+
+  function ahoraEnMadrid() {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+    }).formatToParts(new Date()).map(x => [x.type, x.value]));
+    return { fecha: `${p.year}-${p.month}-${p.day}`, hora: Number(p.hour) + Number(p.minute) / 60 };
   }
 
   // Puesta de sol con la ecuación del amanecer (NOAA simplificada), en Puerto Banús
@@ -76,66 +66,6 @@
     return new Date((jPuesta - 2440587.5) * 86400000);
   }
 
-  async function pintarParte(el, d, promesa) {
-    const t = d.parte;
-    const hoy = hoyEnMadrid();
-    let dia = null, etiqueta = '';
-    const datos = await promesa;              // sin parte: se queda la puesta de sol y el mensaje
-    if (datos) {
-      const dias = datos.dias || [];
-      dia = dias.find(x => x.fecha === hoy) || null;
-      if (!dia) {
-        const siguiente = dias.find(x => x.fecha === hoyEnMadrid(1));
-        if (siguiente) { dia = siguiente; etiqueta = 'manana'; }
-      }
-    }
-
-    const palabra = s => (t.palabras[String(s || '').toLowerCase()] || s || '').trim();
-    const doble = par => {
-      const [a, b] = par || [];
-      if (!a && !b) return '';
-      if (!b || a === b) return palabra(a || b);
-      return `${palabra(a)} (${t.manana}) · ${palabra(b)} (${t.tarde})`;
-    };
-    const filas = [];
-    if (dia) {
-      if (dia.agua != null) filas.push([t.agua, `${dia.agua} °C`]);
-      if (dia.maxima != null) filas.push([t.aire, `${dia.maxima} °C`]);
-      if (doble(dia.viento)) filas.push([t.viento, doble(dia.viento)]);
-      if (doble(dia.oleaje)) filas.push([t.oleaje, doble(dia.oleaje)]);
-    }
-    const base = dia ? new Date(`${dia.fecha}T12:00:00Z`) : new Date(`${hoy}T12:00:00Z`);
-    const hora = new Intl.DateTimeFormat(d.lang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Madrid' });
-    filas.push([t.puesta, hora.format(puestaDeSol(base))]);
-
-    const dl = el.querySelector('.parte-datos');
-    dl.replaceChildren(...filas.flatMap(([k, v]) => {
-      const dt = document.createElement('dt'), dd = document.createElement('dd');
-      dt.textContent = k; dd.textContent = v;
-      return [dt, dd];
-    }));
-    if (etiqueta) el.querySelector('.parte-titulo').textContent = t.titulo_manana;
-    el.querySelector('.parte-lectura').textContent = dia ? lectura(dia, t) : '';
-    el.querySelector('.parte-fuente').textContent = dia ? t.fuente : t.sin_datos;
-  }
-
-  function lectura(dia, t) {
-    const [vm, vt] = dia.viento || [], [om, ot] = dia.oleaje || [];
-    if ([vm, vt, om, ot].includes('fuerte')) return t.lecturas.movida;
-    if (om === 'débil' && vm === 'flojo') return t.lecturas.calma;
-    if (vt === 'moderado' && ot !== 'fuerte') return t.lecturas.brisa;
-    return '';
-  }
-
-  // ── el mar, ahora: notas del 1 al 10 por día y tramo (las calcula scripts/parte_mar.py) ──
-  function ahoraEnMadrid() {
-    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-    }).formatToParts(new Date()).map(x => [x.type, x.value]));
-    return { fecha: `${p.year}-${p.month}-${p.day}`, hora: Number(p.hour) + Number(p.minute) / 60 };
-  }
-
   function crear(etiqueta, texto, clase) {
     const n = document.createElement(etiqueta);
     if (texto != null) n.textContent = texto;
@@ -143,6 +73,240 @@
     return n;
   }
 
+  const nivelDe = n => Math.min(4, Math.floor((n - 1) / 2));      // 1-2, 3-4, 5-6, 7-8, 9-10
+  const hh = h => String(h).padStart(2, '0');
+
+  // ── datos del mar (AEMET, los deja la Action en datos/mar.json) ──
+  const necesitaMar = document.querySelector('#mar, .chip-mar, #reserva');
+  const datosMar = necesitaMar
+    ? fetch(`${d.prefijo}datos/mar.json`, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).catch(() => null)
+    : Promise.resolve(null);
+
+  const chip = document.querySelector('.chip-mar');
+  if (chip && d.chip) pintarChip(chip, d, datosMar);
+  const mar = document.getElementById('mar');
+  if (mar && d.mar) pintarMar(mar, d, datosMar);
+  const form = document.getElementById('reserva');
+  if (form && d.form) iniciarReserva(form, d, datosMar);
+  document.querySelectorAll('[data-tipo]').forEach(a => a.addEventListener('click', () => {
+    const radio = form && form.querySelector(`input[name="tipo"][value="${a.dataset.tipo}"]`);
+    if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', { bubbles: true })); }
+  }));
+  const video = document.querySelector('.petit-video');
+  if (video) iniciarVideo(video);
+  if (d.pagina === 'buceo') iniciarFiltros();
+  if (d.pagina === 'gracias') pintarGracias(d);
+
+  // ── el chip «hoy en el mar» de la portada: el agua de AEMET y la puesta de sol calculada aquí ──
+  async function pintarChip(el, d, promesa) {
+    const hoy = hoyEnMadrid();
+    const hora = new Intl.DateTimeFormat(d.lang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Madrid' });
+    const piezas = [d.chip[0]];
+    const datos = await promesa;
+    const dia = datos && (datos.dias || []).find(x => x.fecha === hoy);
+    if (dia && dia.agua != null) piezas.push(d.chip[1].replace('{t}', dia.agua));
+    piezas.push(d.chip[2].replace('{h}', hora.format(puestaDeSol(new Date(`${hoy}T12:00:00Z`)))));
+    el.querySelector('.chip-texto').textContent = piezas.join(' · ');
+  }
+
+  // ── la reserva: formulario, tarjeta de embarque y pago ──
+  function iniciarReserva(form, d, promesa) {
+    const f = d.form;
+    const zona = document.querySelector('.billete-zona');
+    const campo = n => zona.querySelector(`[data-campo="${n}"]`);
+    const fecha = form.elements.fecha;
+    const personas = form.elements.personas;
+    fecha.min = hoyEnMadrid(1);                 // desde mañana: el mismo día se reserva por WhatsApp
+    fecha.max = hoyEnMadrid(d.dias);
+    const pagos = d.pagos || {};
+    const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+    const formatoHora = new Intl.DateTimeFormat(d.lang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Madrid' });
+    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+    const CODIGOS = { buffet: 'bu', paella: 'pa', cocteles: 'co', tarta: 'ta', decoracion: 'de', otra: 'ot' };
+    let datos = null;
+    promesa.then(x => { datos = x; pintar(); });
+
+    // La salida de atardecer: 1 h 45 min antes de la puesta de sol, redondeada al cuarto de hora
+    function horaAtardecer(dia) {
+      const salida = new Date(puestaDeSol(new Date(`${dia}T12:00:00Z`)).getTime() - 105 * 60000);
+      salida.setUTCMinutes(salida.getUTCMinutes() - (salida.getUTCMinutes() % 15), 0, 0);
+      return formatoHora.format(salida);
+    }
+
+    function estado() {
+      const tipo = form.elements.tipo.value;
+      const dia = fecha.value;
+      const horaV = form.elements.hora.value;
+      const n = Math.min(d.plazas, Math.max(1, parseInt(personas.value, 10) || 1));
+      const extras = tipo === 'privada' ? [...form.querySelectorAll('input[name="extras"]:checked')].map(x => x.value) : [];
+      const otra = tipo === 'privada' ? form.elements.otra.value.trim() : '';
+      const hora = horaV === 'atardecer' ? (dia ? horaAtardecer(dia) : '') : horaV;
+      const total = tipo === 'privada' ? d.precios.privada : d.precios.compartida * n;
+      return { tipo, dia, horaV, hora, n, extras, otra, nombre: form.elements.nombre.value.trim(), total };
+    }
+
+    const textoExtras = e => [...e.extras.map(x => d.extras[x]), e.otra ? `${d.extras.otra}: ${e.otra}` : '']
+      .filter(Boolean).join(', ');
+
+    function referencia(e) {
+      const extras = [...e.extras, e.otra ? 'otra' : ''].filter(Boolean).map(x => CODIGOS[x]).join('');
+      return [e.tipo === 'privada' ? 'P' : 'C', e.dia.replaceAll('-', ''), e.hora.replace(':', ''), `${e.n}p`, extras]
+        .filter(Boolean).join('-');
+    }
+
+    function mensaje(e, ref) {
+      const lineas = [f.msg_inicio, `${f.msg_tipo}: ${f.tipos[e.tipo]}`];
+      if (e.dia) lineas.push(`${f.msg_fecha}: ${formatoFecha.format(new Date(`${e.dia}T12:00:00Z`))}`);
+      if (e.hora) lineas.push(`${f.msg_hora}: ${e.hora}`);
+      lineas.push(`${f.msg_personas}: ${e.n}`);
+      if (textoExtras(e)) lineas.push(`${f.msg_extras}: ${textoExtras(e)}`);
+      if (e.nombre) lineas.push(`${f.msg_nombre}: ${e.nombre}`);
+      lineas.push(`${f.msg_total}: ${euros(e.total)}`);
+      if (ref) lineas.push(`${f.msg_ref}: ${ref}`);
+      return `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`;
+    }
+
+    function enlacePago(e) {
+      return e.tipo === 'privada' ? (pagos.privada || '') : ((pagos.compartida || {})[String(e.n)] || '');
+    }
+
+    function prevision(e) {
+      const p = form.querySelector('.prevision');
+      p.hidden = true;
+      if (!datos || !e.dia || !e.hora) return;
+      const dia = (datos.dias || []).find(x => x.fecha === e.dia);
+      const h = parseInt(e.hora, 10);
+      const tramo = dia && (dia.tramos || []).find(t => t.notas && h >= t.de - 1 && h < t.a);
+      if (!tramo) return;
+      const n = tramo.notas.navegar.n;
+      p.textContent = f.prevision.replace('{n}', n).replace('{banda}', d.mar.bandas[nivelDe(n)]);
+      p.hidden = false;
+    }
+
+    function pintar() {
+      const e = estado();
+      form.querySelector('.extras-form').hidden = e.tipo !== 'privada';
+      campo('tipo').textContent = f.tipos[e.tipo];
+      campo('fecha').textContent = e.dia ? formatoFecha.format(new Date(`${e.dia}T12:00:00Z`)) : '—';
+      campo('hora').textContent = e.hora || '—';
+      campo('pax').textContent = e.n;
+      zona.querySelector('.billete-extras').hidden = !textoExtras(e);
+      campo('extras').textContent = textoExtras(e) || '—';
+      campo('total').textContent = euros(e.total);
+      campo('detalle').textContent = e.tipo === 'privada' ? f.detalle_privada : f.detalle_compartida.replace('{n}', e.n);
+      const pagar = zona.querySelector('.pagar-texto');
+      if (pagar) pagar.textContent = f.pagar.replace('{total}', euros(e.total));
+      const atardecer = form.querySelector('.hora-atardecer');
+      if (atardecer) atardecer.textContent = e.dia ? horaAtardecer(e.dia) : '';
+      form.querySelector('.contador-menos').disabled = e.n <= 1;
+      form.querySelector('.contador-mas').disabled = e.n >= d.plazas;
+      const wa = zona.querySelector('.enlace-wa');
+      if (wa) wa.href = mensaje(e);
+      prevision(e);
+    }
+
+    form.querySelector('.contador-menos').addEventListener('click', () => { personas.value = estado().n - 1; pintar(); });
+    form.querySelector('.contador-mas').addEventListener('click', () => { personas.value = estado().n + 1; pintar(); });
+    personas.addEventListener('change', () => { personas.value = estado().n; pintar(); });
+    form.addEventListener('input', pintar);
+    form.addEventListener('change', pintar);
+
+    form.addEventListener('submit', ev => {
+      ev.preventDefault();
+      const e = estado();
+      const error = form.querySelector('.error');
+      const falta = !e.dia ? ['fecha', f.falta_fecha] : !e.horaV ? ['hora', f.falta_hora] : null;
+      if (falta) {
+        error.textContent = falta[1];
+        error.hidden = false;
+        const destino = falta[0] === 'fecha' ? fecha : form.querySelector('input[name="hora"]');
+        destino.focus();
+        return;
+      }
+      error.hidden = true;
+      const ref = referencia(e);
+      try { localStorage.setItem('reserva', JSON.stringify({ ...e, ref, lang: d.lang, creada: Date.now() })); } catch (_) { /* sin almacenamiento */ }
+      const url = enlacePago(e);
+      if (url) {
+        window.location.href = `${url}${url.includes('?') ? '&' : '?'}client_reference_id=${encodeURIComponent(ref)}`;
+      } else {
+        window.open(mensaje(e, ref), '_blank', 'noopener');
+      }
+    });
+    pintar();
+  }
+
+  // ── el vídeo del Petit: solo se carga y suena (sin sonido) cuando está a la vista ──
+  function iniciarVideo(figura) {
+    const v = figura.querySelector('video');
+    const b = figura.querySelector('.video-boton');
+    const etiqueta = b.querySelector('.visualmente-oculto');
+    let manual = false;
+    const marcar = () => {
+      const sonando = !v.paused;
+      b.setAttribute('aria-pressed', String(sonando));
+      etiqueta.textContent = sonando ? b.dataset.pausa : b.dataset.play;
+    };
+    v.addEventListener('play', marcar);
+    v.addEventListener('pause', marcar);
+    b.addEventListener('click', () => { manual = true; if (v.paused) v.play().catch(() => {}); else v.pause(); });
+    if (sinMovimiento || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(entradas => entradas.forEach(e => {
+      if (manual) return;
+      if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+    }), { threshold: 0.4 }).observe(figura);
+  }
+
+  // ── la Senda Azul: filtros por nivel y por cercanía a Banús ──
+  function iniciarFiltros() {
+    const botones = document.querySelectorAll('.filtro');
+    const sitios = document.querySelectorAll('.senda .sitio');
+    const vacio = document.querySelector('.senda-vacio');
+    botones.forEach(b => b.addEventListener('click', () => {
+      botones.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      const filtro = b.dataset.filtro;
+      let visibles = 0;
+      sitios.forEach(s => {
+        const ver = filtro === 'todos' || (filtro === 'banus' ? s.dataset.banus === 'true'
+          : s.dataset.nivel.split(' ').includes(filtro));
+        s.hidden = !ver;
+        if (ver) visibles += 1;
+      });
+      vacio.hidden = visibles > 0;
+    }));
+  }
+
+  // ── reserva recibida: la tarjeta de embarque, recuperada de este navegador ──
+  function pintarGracias(d) {
+    let r = null;
+    try { r = JSON.parse(localStorage.getItem('reserva') || 'null'); } catch (_) { r = null; }
+    if (r && r.lang && r.lang !== d.lang && d.prefijo === '' && r.lang !== 'en') {
+      window.location.replace(`${r.lang}/gracias.html`);        // Stripe vuelve siempre a la versión inglesa
+      return;
+    }
+    if (!r) { document.querySelector('.gracias-sin').hidden = false; return; }
+    const f = d.form, b = d.billete;
+    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+    const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' });
+    const extras = [...(r.extras || []).map(x => d.extras[x]), r.otra ? `${d.extras.otra}: ${r.otra}` : ''].filter(Boolean).join(', ');
+    const filas = [[b.tipo, f.tipos[r.tipo]], [b.fecha, formatoFecha.format(new Date(`${r.dia}T12:00:00Z`))],
+      [b.hora, r.hora], [b.pax, r.n], [b.total, euros(r.total)], [f.msg_ref, r.ref]];
+    if (extras) filas.splice(4, 0, [b.extras, extras]);
+    const dl = document.querySelector('.gracias-billete .billete-datos');
+    dl.replaceChildren(...filas.map(([k, v]) => {
+      const div = crear('div');
+      div.append(crear('dt', k), crear('dd', String(v)));
+      return div;
+    }));
+    document.querySelector('.gracias-billete').hidden = false;
+    const wa = document.querySelector('[data-wa-gracias]');
+    const lineas = [f.msg_pagado, `${f.msg_tipo}: ${f.tipos[r.tipo]}`, `${f.msg_fecha}: ${r.dia}`, `${f.msg_hora}: ${r.hora}`,
+      `${f.msg_personas}: ${r.n}`, extras ? `${f.msg_extras}: ${extras}` : '', r.nombre ? `${f.msg_nombre}: ${r.nombre}` : '',
+      `${f.msg_ref}: ${r.ref}`].filter(Boolean);
+    wa.href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`;
+  }
+
+  // ── el mar, ahora: notas del 1 al 10 por día y tramo (las calcula scripts/parte_mar.py) ──
   async function pintarMar(el, d, promesa) {
     const m = d.mar, datos = await promesa;
     const ahora = ahoraEnMadrid(), manana = hoyEnMadrid(1);
@@ -152,7 +316,7 @@
     const estado = el.querySelector('.notas-estado');
     if (!dias.length) {
       const enlace = crear('a', 'WhatsApp');
-      enlace.href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(d.plan.msg_inicio)}`;
+      enlace.href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(d.form ? d.form.msg_inicio : '')}`;
       estado.replaceChildren(`${m.sin_datos} `, enlace);
       return;
     }
@@ -169,7 +333,6 @@
       const s = diaSemana.format(mediodia(f));
       return s.charAt(0).toUpperCase() + s.slice(1);
     };
-    const hh = h => String(h).padStart(2, '0');
     const tramo = t => `${hh(t.de)}–${hh(t.a)} ${m.tramo}`;
 
     const botones = dias.map((x, i) => {
@@ -192,7 +355,7 @@
       for (const art of el.querySelectorAll('.indice')) {
         const act = art.dataset.act;
         const mejor = vivos.reduce((a, t) => (!a || t.notas[act].n > a.notas[act].n ? t : a), null);
-        const n = mejor.notas[act].n, nivel = Math.min(4, Math.floor((n - 1) / 2));
+        const n = mejor.notas[act].n, nivel = nivelDe(n);
         const destaca = vivos.length > 1 && vivos.every(t => t === mejor || t.notas[act].n < n);
         art.dataset.nivel = nivel;
         art.querySelector('.indice-n').textContent = n;

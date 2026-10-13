@@ -39,7 +39,18 @@ FOTOS = {
     "tortuga": (os.path.join(BUCEO, "tortuga.jpg"), (0.015, 0.008, 0.985, 0.99), (520, 1040)),
     "tiburon": (os.path.join(BUCEO, "grupo-tiburon.jpg"), None, (520, 1040)),
     "timon": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.25.jpeg"), (0.40, 0.0, 1.0, 1.0), (640, 960)),
+    # El Petit (fotos de la carpeta del chárter; las de bandera francesa a la vista no se usan)
+    "petit-atardecer": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.57.jpeg"), None, (560, 1047)),
+    "petit-delfines": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.17.jpeg"), None, (640, 1136)),
+    "petit-banera": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.25.jpeg"), None, (800, 1600)),
+    "petit-fondeado": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.42.jpeg"), (0.0, 0.0, 0.62, 1.0), (634,)),
+    "petit-pantalan": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.41.51.jpeg"), None, (640, 1024)),
+    "petit-proa": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.45.jpeg"), None, (800, 1600)),
+    "petit-azul": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.53.jpeg"), None, (800, 1600)),
+    "petit-cubierta": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.43.28.jpeg"), None, (800, 1600)),
+    "petit-bimini": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.46.03.jpeg"), None, (800, 1600)),
 }
+VIDEO = os.path.join(BARCO, "WhatsApp Video 2026-07-03 at 16.43.47.mp4")
 
 
 def descargar(url):
@@ -84,12 +95,33 @@ def fotos():
                 copia = copia.resize((ancho, round(copia.height * ancho / copia.width)), Image.LANCZOS)
             copia.save(os.path.join(destino, f"{nombre}-{ancho}.webp"), "WEBP", quality=80, method=6)
         print(f"  [ok] {nombre}: {img.width}x{img.height} → {', '.join(map(str, anchos))}")
-    # Imagen para compartir en redes (1200x630), a partir de la foto del timón
-    img = ImageOps.exif_transpose(Image.open(FOTOS["timon"][0])).convert("RGB")
-    w, h = img.size
-    img = ImageOps.fit(img.crop((int(0.30 * w), 0, w, h)), (1200, 630), Image.LANCZOS, centering=(0.5, 0.45))
+    # Imagen para compartir en redes (1200x630): el Petit con los delfines
+    img = ImageOps.exif_transpose(Image.open(FOTOS["petit-delfines"][0])).convert("RGB")
+    img = ImageOps.fit(img, (1200, 630), Image.LANCZOS, centering=(0.5, 0.55))
     img.save(os.path.join(RAIZ, "assets", "compartir.jpg"), "JPEG", quality=84, optimize=True, progressive=True)
     print("  [ok] compartir.jpg")
+
+
+def video():
+    """El Petit navegando: MP4 sin sonido, ligero y con arranque rápido, más su fotograma de portada."""
+    import subprocess
+    try:
+        import imageio_ffmpeg
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        ffmpeg = "ffmpeg"
+    destino = os.path.join(RAIZ, "assets", "video")
+    os.makedirs(destino, exist_ok=True)
+    mp4 = os.path.join(destino, "petit-navegando.mp4")
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-i", VIDEO, "-an", "-vf", "scale=848:-2,fps=30",
+                    "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p", "-crf", "27",
+                    "-preset", "slow", "-movflags", "+faststart", mp4], check=True)
+    poster = os.path.join(destino, "petit-navegando.jpg")
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", "3", "-i", VIDEO, "-frames:v", "1",
+                    "-vf", "scale=848:-2", "-strict", "unofficial", "-q:v", "4", poster], check=True)
+    Image.open(poster).convert("RGB").save(poster.replace(".jpg", ".webp"), "WEBP", quality=78, method=6)
+    os.remove(poster)
+    print(f"  [ok] vídeo: {os.path.getsize(mp4) // 1024} KB")
 
 
 if __name__ == "__main__":
@@ -97,5 +129,6 @@ if __name__ == "__main__":
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:                                             # noqa: BLE001
         pass
-    fuentes()
-    fotos()
+    pasos = sys.argv[1:] or ["fuentes", "fotos", "video"]       # p. ej. «python scripts/recursos.py fotos»
+    for paso in pasos:
+        {"fuentes": fuentes, "fotos": fotos, "video": video}[paso]()
