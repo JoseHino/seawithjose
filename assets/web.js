@@ -77,13 +77,11 @@
   const hh = h => String(h).padStart(2, '0');
 
   // ── datos del mar (AEMET, los deja la Action en datos/mar.json) ──
-  const necesitaMar = document.querySelector('#mar, .chip-mar, #reserva');
+  const necesitaMar = document.querySelector('#mar, #reserva');
   const datosMar = necesitaMar
     ? fetch(`${d.prefijo}datos/mar.json`, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).catch(() => null)
     : Promise.resolve(null);
 
-  const chip = document.querySelector('.chip-mar');
-  if (chip && d.chip) pintarChip(chip, d, datosMar);
   const mar = document.getElementById('mar');
   if (mar && d.mar) pintarMar(mar, d, datosMar);
   const form = document.getElementById('reserva');
@@ -97,22 +95,10 @@
   if (d.pagina === 'buceo') iniciarFiltros();
   if (d.pagina === 'gracias') pintarGracias(d);
 
-  // ── el chip «hoy en el mar» de la portada: el agua de AEMET y la puesta de sol calculada aquí ──
-  async function pintarChip(el, d, promesa) {
-    const hoy = hoyEnMadrid();
-    const hora = new Intl.DateTimeFormat(d.lang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Madrid' });
-    const piezas = [d.chip[0]];
-    const datos = await promesa;
-    const dia = datos && (datos.dias || []).find(x => x.fecha === hoy);
-    if (dia && dia.agua != null) piezas.push(d.chip[1].replace('{t}', dia.agua));
-    piezas.push(d.chip[2].replace('{h}', hora.format(puestaDeSol(new Date(`${hoy}T12:00:00Z`)))));
-    el.querySelector('.chip-texto').textContent = piezas.join(' · ');
-  }
-
   // ── la reserva: formulario, tarjeta de embarque y pago ──
   function iniciarReserva(form, d, promesa) {
     const f = d.form;
-    const zona = document.querySelector('.billete-zona');
+    const zona = document.querySelector('.resumen-zona');
     const campo = n => zona.querySelector(`[data-campo="${n}"]`);
     const fecha = form.elements.fecha;
     const personas = form.elements.personas;
@@ -190,7 +176,7 @@
       campo('fecha').textContent = e.dia ? formatoFecha.format(new Date(`${e.dia}T12:00:00Z`)) : '—';
       campo('hora').textContent = e.hora || '—';
       campo('pax').textContent = e.n;
-      zona.querySelector('.billete-extras').hidden = !textoExtras(e);
+      zona.querySelector('.resumen-extras').hidden = !textoExtras(e);
       campo('extras').textContent = textoExtras(e) || '—';
       campo('total').textContent = euros(e.total);
       campo('detalle').textContent = e.tipo === 'privada' ? f.detalle_privada : f.detalle_compartida.replace('{n}', e.n);
@@ -285,20 +271,20 @@
       return;
     }
     if (!r) { document.querySelector('.gracias-sin').hidden = false; return; }
-    const f = d.form, b = d.billete;
+    const f = d.form, b = d.resumen;
     const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
     const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' });
     const extras = [...(r.extras || []).map(x => d.extras[x]), r.otra ? `${d.extras.otra}: ${r.otra}` : ''].filter(Boolean).join(', ');
-    const filas = [[b.tipo, f.tipos[r.tipo]], [b.fecha, formatoFecha.format(new Date(`${r.dia}T12:00:00Z`))],
+    const filas = [[b.salida, f.tipos[r.tipo]], [b.fecha, formatoFecha.format(new Date(`${r.dia}T12:00:00Z`))],
       [b.hora, r.hora], [b.pax, r.n], [b.total, euros(r.total)], [f.msg_ref, r.ref]];
     if (extras) filas.splice(4, 0, [b.extras, extras]);
-    const dl = document.querySelector('.gracias-billete .billete-datos');
+    const dl = document.querySelector('.gracias-resumen dl');
     dl.replaceChildren(...filas.map(([k, v]) => {
       const div = crear('div');
       div.append(crear('dt', k), crear('dd', String(v)));
       return div;
     }));
-    document.querySelector('.gracias-billete').hidden = false;
+    document.querySelector('.gracias-resumen').hidden = false;
     const wa = document.querySelector('[data-wa-gracias]');
     const lineas = [f.msg_pagado, `${f.msg_tipo}: ${f.tipos[r.tipo]}`, `${f.msg_fecha}: ${r.dia}`, `${f.msg_hora}: ${r.hora}`,
       `${f.msg_personas}: ${r.n}`, extras ? `${f.msg_extras}: ${extras}` : '', r.nombre ? `${f.msg_nombre}: ${r.nombre}` : '',

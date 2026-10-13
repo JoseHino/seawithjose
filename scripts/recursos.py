@@ -5,10 +5,9 @@
 
 - Tipografías: se descargan de Google Fonts y se sirven desde la propia web
   (sin peticiones a Google al visitarla: sin cookies ni transferencias de datos
-  fuera de la UE, y por tanto sin banner). Las tres llevan alfabeto cirílico.
-    Spectral   (titulares; la cursiva rotula la carta, como en las cartas náuticas)
-    Onest      (texto)
-    PT Mono    (coordenadas, sondas y el parte del mar)
+  fuera de la UE, y por tanto sin banner). Las dos llevan alfabeto cirílico.
+    Sofia Sans Extra Condensed  (titulares, en mayúsculas, como los carteles de regata)
+    Sofia Sans                  (texto, datos y rótulos de la carta)
 - Fotos: recorte y WebP en dos anchos. Las de origen viven fuera del repositorio.
 """
 
@@ -24,8 +23,8 @@ ESCRITORIO = os.path.join(os.path.expanduser("~"), "OneDrive", "Escritorio")
 BUCEO = os.path.join(ESCRITORIO, "buceo-marbella", "img")
 BARCO = os.path.join(ESCRITORIO, "Proyectos", "Petit", "Charter", "Fotos")
 
-FUENTES_CSS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;1,400;1,500"
-               "&family=Onest:wght@400..700&family=PT+Mono&display=swap")
+FUENTES_CSS = ("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400..800;1,400..600"
+               "&family=Sofia+Sans+Extra+Condensed:wght@700..900&display=swap")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
 SUBCONJUNTOS = {"latin", "latin-ext", "cyrillic", "cyrillic-ext"}
@@ -40,7 +39,7 @@ FOTOS = {
     "tiburon": (os.path.join(BUCEO, "grupo-tiburon.jpg"), None, (520, 1040)),
     "timon": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.25.jpeg"), (0.40, 0.0, 1.0, 1.0), (640, 960)),
     # El Petit (fotos de la carpeta del chárter; las de bandera francesa a la vista no se usan)
-    "petit-atardecer": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.57.jpeg"), None, (560, 1047)),
+    "petit-atardecer": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.57.jpeg"), (0.0, 0.0, 1.0, 0.94), (560, 1047)),
     "petit-delfines": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.17.jpeg"), None, (640, 1136)),
     "petit-banera": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.25.jpeg"), None, (800, 1600)),
     "petit-fondeado": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.42.jpeg"), (0.0, 0.0, 0.62, 1.0), (634,)),
@@ -61,6 +60,8 @@ def descargar(url):
 def fuentes():
     destino = os.path.join(RAIZ, "assets", "fuentes")
     os.makedirs(destino, exist_ok=True)
+    for viejo in os.listdir(destino):                 # fuera las tipografías de antes
+        os.remove(os.path.join(destino, viejo))
     css = descargar(FUENTES_CSS).decode("utf-8")
     bloques = re.findall(r"/\*\s*([\w-]+)\s*\*/\s*(@font-face\s*\{[^}]+\})", css)
     salida, n = [], 0
@@ -76,7 +77,7 @@ def fuentes():
         salida.append(bloque.replace(url, f"fuentes/{nombre}"))
         n += 1
     with open(os.path.join(RAIZ, "assets", "fuentes.css"), "w", encoding="utf-8") as f:
-        f.write("/* Generado por scripts/recursos.py · Spectral, Onest y PT Mono (SIL OFL 1.1) */\n")
+        f.write("/* Generado por scripts/recursos.py · Sofia Sans y Sofia Sans Extra Condensed (SIL OFL 1.1) */\n")
         f.write("\n".join(salida) + "\n")
     print(f"  [ok] {n} archivos de tipografía")
 

@@ -4,6 +4,8 @@
 Todo lo que se lee en la web sale de aquí: para cambiar una frase, se cambia
 en los tres idiomas y se ejecuta `python build.py`. Los precios, los horarios
 y los enlaces de pago están arriba del todo, una sola vez para los tres idiomas.
+
+Estilo: habla Jose, en primera persona y sin frases de anuncio.
 """
 
 WHATSAPP = "34665092090"
@@ -26,6 +28,9 @@ PAGOS = {"compartida": {}, "privada": ""}
 # Si SkylineWebcams o meteo365 autorizan a seawithjose.es, aquí va la dirección del reproductor de cada
 # cámara (mismo orden que en T[...]["mar"]["camaras"]) y la web la enseña en directo en vez del enlace.
 CAMARAS_EMBED = ["", "", ""]
+# Parking Cristamar (calle Francisco Villalón): gratis para quien sale en el barco
+PARKING = (36.49013, -4.95039)
+PARKING_MAPS = "https://www.google.com/maps/search/?api=1&query=36.49013%2C-4.95039"
 
 # ─────────────────────────────── la Senda Azul ───────────────────────────────
 # Datos de «Málaga sumergida. Guía de buceo de la Senda Azul» (Turismo y Planificación Costa del Sol,
@@ -120,122 +125,122 @@ T = {}
 # ───────────────────────────────── INGLÉS ─────────────────────────────────
 T["en"] = {
     "nombre_idioma": "English", "corto": "EN", "og_locale": "en_GB",
-    "title": "Sea With Jose — Sailing trips from Puerto Banús, Marbella",
-    "description": ("Sail Marbella aboard the Petit with Jose, yacht captain and oceanographer. Shared trips at €60 "
-                    "per person and two-hour private charters for up to 11 guests, from Puerto Banús."),
+    "title": "Sea With Jose · Sailing trips from Puerto Banús, Marbella",
+    "description": ("Sailing trips from Puerto Banús with Jose, yacht captain and oceanographer. A shared trip is "
+                    "€60 per person; a private one is €490 for the boat (2 hours, up to 11 guests)."),
     "saltar": "Skip to content",
-    "nav": {"salidas": "Trips", "petit": "The Petit", "mar": "Sea today", "buceo": "Diving", "jose": "Jose",
-            "faq": "FAQ"},
+    "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat", "mar": "Sea today",
+            "llegar": "Getting here", "buceo": "Diving"},
     "menu": "Menu", "whatsapp_corto": "WhatsApp", "reservar_corto": "Book",
     "wa_hola": "Hi Jose! I’d like to go sailing on the Petit.",
-    "hero_eyebrow": "Puerto Banús · Marbella",
-    "hero_h1": "Sail Marbella <em>aboard the Petit.</em>",
-    "hero_lead": ("A 12-metre sailing yacht, her captain and the open sea off Puerto Banús. Two hours to swim far "
-                  "from the beach, take the helm if you like and look out for dolphins."),
-    "hero_precios": [("Shared", "€60", "per person"), ("Private", "€490", "2 h · up to 11 guests")],
-    "hero_cta": "Book your trip",
-    "hero_cta2": "Ask me on WhatsApp",
-    "hero_foto_alt": "The Petit at anchor at sunset, against the light",
-    "hero_delfines_alt": "Dolphins leaping in front of a sailing yacht",
-    "hero_chip": "Today at sea", "hero_chip_agua": "water {t} °C", "hero_chip_sol": "sunset {h}",
-    "credenciales": [
-        ("Yacht Captain", "Spanish licence"),
-        ("Oceanographer", "University of Cádiz"),
-        ("Diving instructor", "FEDAS · CMAS"),
-        ("5 seasons", "skippering in Marbella"),
-        ("Languages", "English · Español · Русский"),
-    ],
-    "salidas_eyebrow": "Sailing trips",
-    "salidas_h2": "Choose how you sail",
-    "salidas_intro": ("Both leave from Puerto Banús and last two hours. I’m always at the helm — or right next to you "
-                      "if you’d like to steer."),
+    "banderas_aria": "Sea With Jose spelt out in International Code of Signals flags",
+    "hero_h1": "Sailing trips from Puerto Banús",
+    "hero_lead": ("I’m Jose, a yacht captain and oceanographer. I take people sailing for two hours along the Marbella "
+                  "coast on the Petit, a 12-metre sailing yacht. We stop for a swim well away from the beach and, with a "
+                  "bit of luck, we see dolphins."),
+    "hero_precios": [("Shared", "€60", "per person"), ("Private", "€490", "the boat, 2 hours")],
+    "hero_cta": "Book",
+    "hero_cta2": "Message me on WhatsApp",
+    "hero_foto_alt": "The Petit at anchor at sunset",
+    "precios_h2": "Prices",
     "opciones": {
         "compartida": {"titulo": "Shared trip", "precio": "€60", "unidad": "per person",
-                       "puntos": ["Two hours under sail", "Share the Petit with other travellers — 11 at most",
-                                  "A swim in open water when the sea allows", "Take the helm if you fancy it"],
-                       "cta": "Book a seat", "foto_alt": "The Petit’s cockpit under way, with the wheel"},
-        "privada": {"titulo": "Private trip", "precio": "€490", "unidad": "the whole boat · 2 h",
-                    "puntos": ["The Petit just for your group, up to 11 guests", "You pick the time — sunset included",
-                               "Your route: swimming, dolphins or the coast",
-                               "Make it yours with food, drinks and decorations"],
-                    "cta": "Book the boat", "foto_alt": "The Petit at anchor in clear water"},
+                       "puntos": ["Two hours under sail", "With other travellers, 11 people at most",
+                                  "A swim in open water if the sea allows", "Take the helm if you like"],
+                       "cta": "Book a seat"},
+        "privada": {"titulo": "Private trip", "precio": "€490", "unidad": "the whole boat, 2 hours",
+                    "puntos": ["Just your group, up to 11 people", "You choose the time, sunset included",
+                               "Add food, drinks, decorations or a jet ski"],
+                    "cta": "Book the boat"},
     },
-    "ruta_eyebrow": "Your trip, step by step",
-    "ruta_h2": "Two hours, more or less like this",
-    "ruta_nota": "This is the usual course: the wind and the sea decide the rest.",
-    "ruta_pasos": [
-        ("0:00", "Boarding at Puerto Banús", "I’ll meet you at the pontoon 15 minutes before; you’ll get the exact "
-                                             "spot on WhatsApp."),
-        ("0:15", "Sails up", "We motor out of the harbour and hoist the sails as soon as we clear the entrance. "
-                             "Take the helm if you like."),
-        ("0:45", "Anchor and swim", "We stop in a quiet spot off San Pedro to swim far from the beach."),
-        ("1:15", "Open sea", "We sail further out — that’s where the dolphins usually show up."),
-        ("2:00", "Back to Banús", "We sail home with the whole coast of Marbella ahead of us."),
+    "precios_nota": "I’m always your skipper.",
+    "fotos_alt": {"petit-delfines": "Dolphins leaping in front of a sailing yacht",
+                  "petit-banera": "The Petit’s cockpit under way",
+                  "petit-proa": "The Petit’s teak foredeck"},
+    "salida_h2": "What the trip is like",
+    "pasos": [
+        ("0:00", "We meet at the pontoon in Puerto Banús, 15 minutes before. I’ll send you the spot on WhatsApp."),
+        ("0:15", "We motor out and hoist the sails once we’re past the harbour entrance. Take the helm if you fancy it."),
+        ("0:45", "We anchor off San Pedro for a swim."),
+        ("1:15", "We sail further out, where the dolphins usually turn up."),
+        ("2:00", "We sail back to Banús."),
     ],
-    "carta_aria": ("Nautical chart of the coast between San Pedro Alcántara and Marbella, with the usual course of "
-                   "the trip from Puerto Banús"),
+    "salida_nota": "That’s the usual route. The wind and the sea decide the rest.",
+    "carta_aria": ("Nautical chart of the coast between San Pedro Alcántara and Marbella, with the usual route of the "
+                   "trip from Puerto Banús"),
     "carta": {"banus": "Puerto José Banús", "sanpedro": "San Pedro Alcántara", "marbella": "Marbella",
               "galeon": "The Galleon · 8–10 m", "rioverde": "Río Verde", "alboran": "Alboran Sea", "oeste": "W",
-              "norte": "N", "ruta": "Usual course"},
-    "reservar_eyebrow": "Booking",
-    "reservar_h2": "Book and pay in a minute",
-    "reservar_intro": "Choose the day, the time and how many of you are coming. I’ll confirm your trip on WhatsApp.",
+              "norte": "N", "ruta": "Usual route"},
+    "reserva_h2": "Booking",
+    "reserva_intro": "Choose the day, the time and how many of you are coming. I’ll confirm on WhatsApp.",
     "form": {
-        "tipo": "Type of trip", "tipos": {"compartida": "Shared", "privada": "Private"},
-        "tipos_sub": {"compartida": "€60 per person", "privada": "€490 · whole boat"},
-        "fecha": "Day", "hora": "Departure time", "atardecer": "Sunset",
-        "personas": "People", "menos": "One person fewer", "mas": "One person more", "max": "11 people at most",
-        "nombre": "Your name", "nombre_ph": "So I know who’s coming",
-        "extras": "Make your private trip yours",
-        "extras_nota": "Extras are quoted separately: I’ll send you the price on WhatsApp before the trip.",
-        "otra": "Another idea? Tell me",
-        "total": "Total", "detalle_compartida": "{n} × €60", "detalle_privada": "Whole boat, 2 h",
-        "pagar": "Pay {total} by card", "whatsapp": "Book on WhatsApp instead",
-        "seguro": "Secure payment with Stripe. Your card details never touch this website.",
-        "politica": ("Free cancellation up to 48 hours before. If the sea isn’t right for sailing, we change the date "
-                     "or I refund you in full."),
-        "sin_pago": "Card payment is coming very soon. For now, book on WhatsApp and I’ll confirm right away.",
-        "falta_fecha": "Choose a day.", "falta_hora": "Choose a departure time.", "falta_nombre": "Tell me your name.",
-        "prevision": "AEMET forecast for that time: sailing {n}/10 · {banda}",
+        "tipo": "Trip", "tipos": {"compartida": "Shared", "privada": "Private"},
+        "tipos_sub": {"compartida": "€60 per person", "privada": "€490 the boat"},
+        "fecha": "Day", "hora": "Time", "atardecer": "Sunset",
+        "personas": "People", "menos": "One person fewer", "mas": "One person more", "max": "11 at most",
+        "nombre": "Your name", "nombre_ph": "",
+        "extras": "Extras for private trips",
+        "extras_nota": "Extras are priced separately. I’ll send you the price on WhatsApp before the trip.",
+        "otra": "Anything else?",
+        "total": "Total", "detalle_compartida": "{n} × €60", "detalle_privada": "The whole boat, 2 hours",
+        "pagar": "Pay {total}", "whatsapp": "Book on WhatsApp",
+        "seguro": "Payment is handled by Stripe. Your card details never go through this website.",
+        "politica": ("You can cancel for free up to 48 hours before. If the sea isn’t good enough to go out, we change "
+                     "the day or I give you your money back."),
+        "sin_pago": "Card payment will be ready in a few days. For now, book on WhatsApp and I’ll confirm straight away.",
+        "falta_fecha": "Choose a day.", "falta_hora": "Choose a time.", "falta_nombre": "Tell me your name.",
+        "prevision": "AEMET forecast for that time: sailing {n}/10 ({banda})",
         "msg_inicio": "Hi Jose! I’d like to book a trip on the Petit.", "msg_tipo": "Trip", "msg_fecha": "Day",
         "msg_hora": "Time", "msg_personas": "People", "msg_extras": "Extras", "msg_nombre": "Name",
         "msg_total": "Total", "msg_ref": "Reference", "msg_pagado": "I’ve just paid online.",
     },
-    "billete": {"titulo": "Boarding pass", "barco": "Vessel", "barco_v": "Petit", "puerto": "From",
-                "puerto_v": "Puerto Banús", "fecha": "Date", "hora": "Time", "pax": "Guests", "tipo": "Trip",
-                "extras": "Extras", "total": "Total", "capitan": "Captain", "capitan_v": "Jose"},
-    "pers_eyebrow": "Private trips",
-    "pers_h2": "Make it yours",
-    "pers_intro": ("Birthdays, proposals, hen and stag parties — or just a great day with your people. Tell me what "
-                   "you have in mind and I’ll have it ready on board."),
+    "resumen": {"titulo": "Your booking", "salida": "Trip", "fecha": "Day", "hora": "Time", "pax": "People",
+                "extras": "Extras", "total": "Total"},
+    "extras_h2": "Extras for private trips",
+    "extras_intro": ("For birthdays, proposals, hen and stag parties, or just because. Tell me what you’d like and "
+                     "I’ll get it ready."),
     "extras": [
-        {"id": "buffet", "titulo": "Buffet on board", "texto": "Nibbles, fruit and something sweet for the whole group."},
-        {"id": "paella", "titulo": "Paella", "texto": "To enjoy at anchor, with Marbella as the backdrop."},
-        {"id": "cocteles", "titulo": "Cocktails", "texto": "Cocktails and cava for a toast at sea."},
-        {"id": "tarta", "titulo": "Cake", "texto": "Your birthday or celebration cake, waiting on board."},
-        {"id": "decoracion", "titulo": "Decorations", "texto": "Balloons, flowers, bunting: the boat dressed your way."},
-        {"id": "otra", "titulo": "Anything else", "texto": "Music, a photographer, a surprise… Just ask."},
+        {"id": "buffet", "titulo": "Buffet on board", "texto": "Nibbles, fruit and something sweet for everyone."},
+        {"id": "paella", "titulo": "Paella", "texto": "To eat at anchor."},
+        {"id": "cocteles", "titulo": "Cocktails", "texto": "And cava for a toast."},
+        {"id": "tarta", "titulo": "Cake", "texto": "Your birthday or celebration cake."},
+        {"id": "decoracion", "titulo": "Decorations", "texto": "Balloons, flowers and bunting, the way you want."},
+        {"id": "moto", "titulo": "Jet ski", "texto": "For a spin during the trip."},
+        {"id": "otra", "titulo": "Something else", "texto": "Music, a photographer, a surprise… just ask."},
     ],
-    "pers_nota": "Extras are quoted separately, depending on your group.",
-    "pers_cta": "Book a private trip",
-    "petit_eyebrow": "The boat",
-    "petit_h2": "The Petit",
-    "petit_sub": "P’tit Mousse — “the Petit” to her friends",
-    "petit_p": [
-        ("A centre-cockpit Jeanneau Sun Odyssey 42: 12.3 metres long, with a teak deck and a bimini that shades the "
-         "cockpit."),
-        "A stable, comfortable cruising yacht with room for eleven guests to sail at ease.",
+    "extras_precio": "on request",
+    "extras_cta": "Book a private trip",
+    "barco_h2": "The Petit",
+    "barco_sub": "Her name is P’tit Mousse, but everyone calls her the Petit.",
+    "barco_p": [
+        "She’s a centre-cockpit Jeanneau Sun Odyssey 42: 12.3 metres, a teak deck and a bimini that shades the cockpit.",
+        "She’s stable and comfortable, with room for eleven guests plus the skipper.",
     ],
-    "petit_datos": [("Model", "Jeanneau Sun Odyssey 42 CC"), ("Length", "12.3 m"), ("Guests", "up to 11 + captain"),
-                    ("Base", "Puerto José Banús")],
-    "galeria": {"petit-azul": "The Petit moored under a deep blue sky",
-                "petit-banera": "The cockpit under way, with the wheel",
-                "petit-proa": "The teak foredeck and the bow",
-                "petit-pantalan": "The Petit alongside a pontoon in turquoise water",
+    "barco_datos": [("Model", "Jeanneau Sun Odyssey 42 CC"), ("Length", "12.3 m"), ("Guests", "11 + skipper"),
+                    ("Berth", "Puerto José Banús")],
+    "galeria": {"petit-azul": "The Petit moored under a blue sky",
+                "petit-pantalan": "The Petit alongside a pontoon",
                 "petit-cubierta": "The deck seen from the bow",
-                "petit-bimini": "The bimini over the centre cockpit",
+                "petit-bimini": "The bimini over the cockpit",
                 "petit-fondeado": "The Petit at anchor"},
     "video_alt": "The Petit under way on a calm sea", "video_pausa": "Pause the video", "video_play": "Play the video",
+    "jose_h2": "Who’ll take you out",
+    "jose_p": [
+        ("I studied oceanography at the University of Cádiz. I’m a yacht captain and a FEDAS diving instructor, and "
+         "I’ve spent the last five seasons skippering sailing yachts, motorboats and fishing boats out of Marbella "
+         "and Puerto Banús."),
+        ("So I know where the water stays calm when the wind picks up, where the dolphins usually are and what lives "
+         "on the seabed under the boat. I’ll tell you all about it in English, Spanish or Russian."),
+    ],
+    "jose_foto": "Jose on a boat, ready to dive",
+    "cuaderno": "My logbook",
+    "bitacora": [
+        ("2016", "First dives. Ten years on, I still keep going back underwater."),
+        ("2022", "First season as a charter skipper in Marbella."),
+        ("2023", "Diving instructor (FEDAS · CMAS) and in charge of a charter fleet."),
+        ("2025", "Sailing trips to see dolphins, and fishing charters."),
+        ("2026", "Yacht Captain licence."),
+    ],
     "mar": {
         "eyebrow": "The sea, right now",
         "h2": "How’s the sea today?",
@@ -297,12 +302,21 @@ T["en"] = {
         "sin_datos": ("The AEMET forecast isn’t coming through right now. Message me and I’ll tell you how the sea "
                       "looks."),
     },
-    "buceo_eyebrow": "Diving · The Blue Path",
-    "buceo_h2": "Marbella carries on underwater",
-    "buceo_lead": ("I’m a FEDAS diving instructor. I’ll take you to the dive sites of Málaga’s Blue Path (Senda Azul) "
-                   "to suit your level — from your first try dive to banks 40 metres down."),
+    "llegar_h2": "Getting here",
+    "llegar_p": [
+        "We leave from Puerto José Banús, in Marbella. When you book, I’ll send you the exact pontoon on WhatsApp.",
+        ("If you’re coming by car, park at the Cristamar car park on Calle Francisco Villalón. It’s free if you’re "
+         "sailing with us, and it’s a 5-minute walk to the boat."),
+    ],
+    "mapa": {"puerto": "Puerto José Banús", "parking": "Cristamar car park", "minutos": "5 min walk",
+             "aria": "Map of Puerto Banús with the Cristamar car park and the walk to the harbour",
+             "fuente": "Map: © OpenStreetMap contributors (ODbL)"},
+    "llegar_enlace": "Open the car park in Google Maps",
+    "buceo_h2": "Do you dive?",
+    "buceo_lead": ("I’m also a FEDAS diving instructor. I’ll take you to the dive sites of Málaga’s Blue Path to suit "
+                   "your level, or to your very first try dive."),
     "buceo_cta": "See all 15 dive sites",
-    "buceo_title": "Diving in Marbella: the Blue Path dive sites — Sea With Jose",
+    "buceo_title": "Diving in Marbella: the Blue Path dive sites · Sea With Jose",
     "buceo_description": ("The 15 dive sites of Málaga’s Blue Path with their depth, level and access, plus try dives "
                           "and FEDAS courses with Jose, diving instructor in Marbella."),
     "senda": {
@@ -326,7 +340,7 @@ T["en"] = {
     },
     "buceo_bloques": [
         ("Your first dive", "Calm, shallow water and me right beside you the whole time. "
-                            "No experience needed — just curiosity."),
+                            "No experience needed, just curiosity."),
         ("Get certified", "FEDAS · CMAS courses: from One Star Diver (B1E), which lets you dive with a buddy "
                           "down to 25 metres, to advanced levels and specialties. Recognised worldwide through CMAS."),
     ],
@@ -340,7 +354,7 @@ T["en"] = {
         "within reach of any diver.",
     ],
     "pecio_datos": [("Depth", "8–10 m"), ("Level", "beginner"), ("You’ll see", "frames, ballast and the life on the wreck")],
-    "habichuelas_h": "The Beans Wreck — Punta Carnero",
+    "habichuelas_h": "The Beans Wreck at Punta Carnero",
     "habichuelas_p": ("The <em>Dina</em>, a 109-metre freighter that ran aground in an easterly storm in 1983 "
                       "carrying tinned beans. Today it’s a reef full of life between 8 and 12 metres."),
     "viajes_h": "Dive trips",
@@ -350,72 +364,47 @@ T["en"] = {
                     "tortuga": "Diving with a green turtle", "tiburon": "Divers watching a tiger shark"},
     "buceo_wa": "Hi Jose! I’d like to go diving with you.",
     "buceo_wa_cta": "Ask about diving",
-    "jose_eyebrow": "Your captain",
-    "jose_h2": "An oceanographer who made the sea his job",
-    "jose_p": [
-        ("I studied oceanography at the University of Cádiz. I’m a yacht captain and a FEDAS diving instructor, and "
-         "I’ve spent the last five seasons skippering sailing yachts, motorboats and fishing boats out of Marbella "
-         "and Puerto Banús."),
-        ("So I know where the water stays calm when the wind picks up, where the dolphins usually are, and what lives "
-         "on the seabed below your boat. I’ll share all of it with you — in English, Spanish or Russian."),
-    ],
-    "jose_foto": "Jose on a boat, ready to get in the water",
-    "cuaderno": "Logbook",
-    "bitacora": [
-        ("2016", "First dives. Ten years later I’m still going back underwater."),
-        ("2022", "First season as a charter skipper in Marbella."),
-        ("2023", "Diving instructor (FEDAS · CMAS) and head of a charter fleet."),
-        ("2025", "Sailing trips to see dolphins, and fishing charters."),
-        ("2026", "Yacht Captain licence."),
-    ],
-    "tambien_eyebrow": "More at sea",
-    "tambien_h2": "Fishing and jet ski",
-    "tambien": [
-        {"id": "pesca", "titulo": "Fishing trips",
-         "frase": "I’ll take you where the fish are biting — beginners, families and keen anglers alike.",
-         "puntos": ["Bottom fishing or trolling", "Morning or afternoon", "New to fishing? I’ll show you how"],
-         "cta": "Ask about fishing", "wa": "Hi Jose! I’d like to know more about your fishing trips."},
-        {"id": "moto", "titulo": "Jet ski",
-         "frase": "The Golden Mile from the water, at full throttle.",
-         "puntos": ["Guided rides along the coast", "First time on a jet ski? I’ll brief you before we go"],
-         "cta": "Ask about jet ski", "wa": "Hi Jose! I’d like to know more about jet ski rides."},
-    ],
+    "pesca_h2": "If fishing is more your thing",
+    "pesca_p": ("I also run fishing trips, bottom fishing or trolling, in the morning or the afternoon. If it’s your "
+                "first time, I’ll show you how."),
+    "pesca_cta": "Ask about fishing",
+    "pesca_wa": "Hi Jose! I’d like to know more about your fishing trips.",
     "faq_h2": "Questions",
     "faq": [
         ("How much does it cost?", "A shared trip is €60 per person. A private trip is €490 for the whole boat for two "
-                                   "hours, for up to 11 guests. Extras for private trips (food, drinks, decorations) "
-                                   "are quoted separately."),
-        ("Do I need to know how to sail?", "No. I sail the boat — you just enjoy it. If you’d like, I’ll show you how "
-                                           "to steer."),
-        ("Where do we meet?", "At Puerto José Banús, Marbella. I’ll send you the exact pontoon on WhatsApp."),
+                                   "hours, for up to 11 people. Extras for private trips are priced separately."),
+        ("Do I need to know how to sail?", "No, I sail the boat. If you like, I’ll show you how to steer."),
+        ("Where do we meet?", "At Puerto José Banús. I’ll send you the exact pontoon on WhatsApp."),
+        ("Where can I park?", "At the Cristamar car park, a 5-minute walk from the boat. It’s free if you’re sailing "
+                              "with us."),
         ("What should I bring?", "Swimsuit, towel, sunscreen and sunglasses."),
-        ("What if the weather is bad?", "I only go out when the sea is safe and enjoyable. If I cancel because of the "
-                                        "weather, you choose: another date or a full refund."),
-        ("Can I cancel?", "Yes, free of charge up to 48 hours before your trip."),
-        ("Can children come?", "Yes, families are very welcome. Tell me their ages when you book."),
+        ("What if the weather is bad?", "I only go out when the sea is right. If I cancel because of the weather, you "
+                                        "choose another day or I give you your money back."),
+        ("Can I cancel?", "Yes, for free up to 48 hours before."),
+        ("Can children come?", "Of course. Tell me their ages when you book."),
         ("Which languages do you speak?", "English, Spanish and Russian."),
     ],
-    "final_h2": "See you on board?",
-    "final_p": "Book your seat or message me on WhatsApp and I’ll help you choose.",
+    "final_h2": "Coming aboard?",
+    "final_p": "Book your seat or message me and I’ll help you choose.",
     "pie_lugar": "Puerto José Banús, 29660 Marbella (Málaga), Spain",
     "pie_legal": "Legal notice, bookings and privacy",
-    "pie_creditos": "Photos: the Petit · Bathymetry: EMODnet (CC BY 4.0) · Forecast: AEMET · Dive sites: Senda Azul",
-    "legal_title": "Legal notice, bookings and privacy — Sea With Jose",
+    "pie_creditos": "Photos: the Petit · Charts: EMODnet (CC BY 4.0) and OpenStreetMap (ODbL) · Forecast: AEMET",
+    "legal_title": "Legal notice, bookings and privacy · Sea With Jose",
     "legal_h1": "Legal notice, bookings and privacy",
     "legal": [
         ("Who runs this website", "Sea With Jose is the personal brand of José María Hinojosa Figueira, based in "
                                   "Marbella (Málaga, Spain). Contact: {email} · WhatsApp {tel}."),
-        ("What this website does", "It presents my sailing trips on the Petit and my other experiences at sea, and "
-                                   "lets you book and pay for sailing trips online."),
+        ("What this website does", "It shows my sailing trips on the Petit and the extras for private trips, and "
+                                   "lets you book and pay for them online."),
         ("Bookings and payment", "Trips are paid in advance by card through Stripe, which processes the payment: this "
                                  "website never sees or stores your card details. Your booking is confirmed when I "
-                                 "write to you on WhatsApp or by email. Prices shown are final prices. Extras for "
-                                 "private trips are quoted and paid separately."),
-        ("Cancellations", "You can cancel free of charge up to 48 hours before your trip and I’ll refund you in full. "
-                          "If I cancel because of the state of the sea or for safety reasons, you choose another date "
-                          "or a full refund. As this is a leisure activity on a specific date, the 14-day right of "
+                                 "write to you on WhatsApp or by email. The prices shown are final prices. Extras for "
+                                 "private trips are priced and paid separately."),
+        ("Cancellations", "You can cancel for free up to 48 hours before your trip and I’ll refund you in full. If I "
+                          "cancel because of the state of the sea or for safety reasons, you choose another day or a "
+                          "full refund. As this is a leisure activity on a specific date, the 14-day right of "
                           "withdrawal does not apply (article 103.l of the Spanish consumer protection law)."),
-        ("On board", "For safety, the captain decides the route, where to anchor and whether to go out or carry on "
+        ("On board", "For safety, the skipper decides the route, where to anchor and whether to go out or carry on "
                      "sailing."),
         ("Your data", "If you book or write to me, I use your name, contact details and booking details only to "
                       "organise your trip and meet my tax obligations, and I keep them only as long as required. "
@@ -423,16 +412,17 @@ T["en"] = {
                       "me at any time to see, correct or delete your data by writing to {email}, and you can complain "
                       "to the Spanish Data Protection Agency (aepd.es)."),
         ("Cookies", "This website uses no cookies and no analytics. While you book, your browser keeps the details of "
-                    "your booking so they can be shown to you when you come back from the payment page. Fonts and "
+                    "your booking so they can be shown again when you come back from the payment page. Fonts and "
                     "images are served from the site itself."),
         ("Third parties", "The site is hosted on GitHub Pages (GitHub Inc.), which may record visitors’ IP addresses "
-                          "for security. The WhatsApp, Instagram and webcam links take you to those services, which "
-                          "have their own privacy policies."),
-        ("Credits", "Bathymetry: EMODnet Bathymetry Consortium, CC BY 4.0. Forecasts: information prepared by the "
-                    "Spanish State Meteorological Agency (AEMET). Dive sites: “Málaga sumergida. Guía de buceo de la "
-                    "Senda Azul”, Turismo y Planificación Costa del Sol."),
+                          "for security. The WhatsApp, Instagram, Google Maps and webcam links take you to those "
+                          "services, which have their own privacy policies."),
+        ("Credits", "Bathymetry: EMODnet Bathymetry Consortium, CC BY 4.0. Map of Puerto Banús: © OpenStreetMap "
+                    "contributors, ODbL. Forecasts: information prepared by the Spanish State Meteorological Agency "
+                    "(AEMET). Dive sites: “Málaga sumergida. Guía de buceo de la Senda Azul”, Turismo y "
+                    "Planificación Costa del Sol."),
     ],
-    "gracias": {"title": "Booking received — Sea With Jose", "h1": "Booking received!",
+    "gracias": {"title": "Booking received · Sea With Jose", "h1": "Booking received",
                 "p": "Thank you. As soon as I see your payment, I’ll confirm your trip on WhatsApp.",
                 "resumen": "Your trip", "wa": "Message me on WhatsApp", "volver": "Back to the website",
                 "sin": ("I can’t find your booking details in this browser, but don’t worry: Stripe has emailed you the "
@@ -445,124 +435,120 @@ T["en"] = {
 # ───────────────────────────────── ESPAÑOL ─────────────────────────────────
 T["es"] = {
     "nombre_idioma": "Español", "corto": "ES", "og_locale": "es_ES",
-    "title": "Sea With Jose — Salidas en velero desde Puerto Banús, Marbella",
-    "description": ("Navega por Marbella a bordo del Petit con Jose, capitán de yate y oceanógrafo. Salidas "
-                    "compartidas a 60 € por persona y privadas de dos horas para hasta 11 personas, desde Puerto "
-                    "Banús."),
+    "title": "Sea With Jose · Salidas en velero desde Puerto Banús, Marbella",
+    "description": ("Salidas en velero desde Puerto Banús con Jose, capitán de yate y oceanógrafo. La compartida, 60 € "
+                    "por persona; la privada, 490 € el barco (2 horas, hasta 11 personas)."),
     "saltar": "Ir al contenido",
-    "nav": {"salidas": "Salidas", "petit": "El Petit", "mar": "El mar hoy", "buceo": "Buceo", "jose": "Jose",
-            "faq": "Preguntas"},
+    "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco", "mar": "El mar hoy",
+            "llegar": "Cómo llegar", "buceo": "Buceo"},
     "menu": "Menú", "whatsapp_corto": "WhatsApp", "reservar_corto": "Reservar",
-    "wa_hola": "¡Hola Jose! Me gustaría navegar en el Petit.",
-    "hero_eyebrow": "Puerto Banús · Marbella",
-    "hero_h1": "A vela por Marbella, <em>a bordo del Petit.</em>",
-    "hero_lead": ("Un velero de 12 metros, su capitán y el mar abierto frente a Puerto Banús. Dos horas para bañarte "
-                  "lejos de la orilla, llevar el timón si te apetece y buscar delfines."),
-    "hero_precios": [("Compartida", "60 €", "por persona"), ("Privada", "490 €", "2 h · hasta 11 personas")],
-    "hero_cta": "Reserva tu salida",
-    "hero_cta2": "Pregúntame por WhatsApp",
-    "hero_foto_alt": "El Petit fondeado al atardecer, a contraluz",
-    "hero_delfines_alt": "Delfines saltando delante de un velero",
-    "hero_chip": "Hoy en el mar", "hero_chip_agua": "agua {t} °C", "hero_chip_sol": "puesta de sol {h}",
-    "credenciales": [
-        ("Capitán de yate", "titulación española"),
-        ("Oceanógrafo", "Universidad de Cádiz"),
-        ("Instructor de buceo", "FEDAS · CMAS"),
-        ("5 temporadas", "de patrón en Marbella"),
-        ("Idiomas", "English · Español · Русский"),
-    ],
-    "salidas_eyebrow": "Salidas en velero",
-    "salidas_h2": "Elige cómo quieres navegar",
-    "salidas_intro": ("Las dos salen de Puerto Banús y duran dos horas. El barco lo llevo yo, o voy a tu lado si te "
-                      "apetece llevar el timón."),
+    "wa_hola": "¡Hola Jose! Me gustaría salir a navegar en el Petit.",
+    "banderas_aria": "Sea With Jose escrito con banderas del Código Internacional de Señales",
+    "hero_h1": "Salidas en velero desde Puerto Banús",
+    "hero_lead": ("Soy Jose, capitán de yate y oceanógrafo. Salgo a navegar dos horas por la costa de Marbella en el "
+                  "Petit, un velero de 12 metros. Paramos a bañarnos lejos de la orilla y, con suerte, vemos delfines."),
+    "hero_precios": [("Compartida", "60 €", "por persona"), ("Privada", "490 €", "el barco, 2 horas")],
+    "hero_cta": "Reservar",
+    "hero_cta2": "Escríbeme por WhatsApp",
+    "hero_foto_alt": "El Petit fondeado al atardecer",
+    "precios_h2": "Precios",
     "opciones": {
         "compartida": {"titulo": "Salida compartida", "precio": "60 €", "unidad": "por persona",
-                       "puntos": ["Dos horas a vela", "Compartes el Petit con otros viajeros: 11 como máximo",
-                                  "Baño en mar abierto si el mar lo permite", "Lleva el timón si te apetece"],
-                       "cta": "Reservar plaza", "foto_alt": "La bañera del Petit navegando, con el timón"},
-        "privada": {"titulo": "Salida privada", "precio": "490 €", "unidad": "el barco entero · 2 h",
-                    "puntos": ["El Petit solo para tu grupo, hasta 11 personas", "Tú eliges la hora, también al atardecer",
-                               "Ruta a tu medida: baño, delfines o costa",
-                               "Personalízala con comida, bebida y decoración"],
-                    "cta": "Reservar el barco", "foto_alt": "El Petit fondeado en aguas claras"},
+                       "puntos": ["Dos horas a vela", "Con otros viajeros, como mucho 11 personas",
+                                  "Baño en mar abierto si el mar lo permite", "Si quieres, llevas el timón"],
+                       "cta": "Reservar plaza"},
+        "privada": {"titulo": "Salida privada", "precio": "490 €", "unidad": "el barco entero, 2 horas",
+                    "puntos": ["Solo tu grupo, hasta 11 personas", "Tú eliges la hora, también al atardecer",
+                               "Puedes añadir comida, bebida, decoración o una moto de agua"],
+                    "cta": "Reservar el barco"},
     },
-    "ruta_eyebrow": "Tu salida, paso a paso",
-    "ruta_h2": "Dos horas, más o menos así",
-    "ruta_nota": "Es la ruta habitual: el viento y el mar deciden el resto.",
-    "ruta_pasos": [
-        ("0:00", "Embarque en Puerto Banús", "Te espero en el pantalán 15 minutos antes; te mando la ubicación exacta "
-                                             "por WhatsApp."),
-        ("0:15", "Velas arriba", "Salimos del puerto a motor e izamos velas nada más pasar la bocana. Si quieres, "
-                                 "llevas el timón."),
-        ("0:45", "Fondeo y baño", "Paramos en una zona tranquila frente a San Pedro para bañarnos lejos de la orilla."),
-        ("1:15", "Mar abierto", "Navegamos a vela mar adentro: es donde suelen aparecer los delfines."),
-        ("2:00", "De vuelta a Banús", "Volvemos a vela con toda la costa de Marbella de frente."),
+    "precios_nota": "El capitán siempre soy yo.",
+    "fotos_alt": {"petit-delfines": "Delfines saltando delante de un velero",
+                  "petit-banera": "La bañera del Petit navegando",
+                  "petit-proa": "La cubierta de teca del Petit"},
+    "salida_h2": "Así es la salida",
+    "pasos": [
+        ("0:00", "Nos vemos en el pantalán de Puerto Banús un cuarto de hora antes. Te mando la ubicación por WhatsApp."),
+        ("0:15", "Salimos a motor y, pasada la bocana, izamos velas. Si te apetece, llevas el timón."),
+        ("0:45", "Fondeamos frente a San Pedro para bañarnos."),
+        ("1:15", "Navegamos mar adentro, que es donde suelen aparecer los delfines."),
+        ("2:00", "Volvemos a Banús a vela."),
     ],
+    "salida_nota": "Es la ruta habitual. El viento y el mar deciden el resto.",
     "carta_aria": ("Carta náutica de la costa entre San Pedro Alcántara y Marbella, con la ruta habitual de la salida "
                    "desde Puerto Banús"),
     "carta": {"banus": "Puerto José Banús", "sanpedro": "San Pedro Alcántara", "marbella": "Marbella",
               "galeon": "El Galeón · 8–10 m", "rioverde": "Río Verde", "alboran": "Mar de Alborán", "oeste": "O",
               "norte": "N", "ruta": "Ruta habitual"},
-    "reservar_eyebrow": "Reserva",
-    "reservar_h2": "Reserva y paga en un minuto",
-    "reservar_intro": "Elige el día, la hora y cuántos sois. Te confirmo la salida por WhatsApp.",
+    "reserva_h2": "Reserva",
+    "reserva_intro": "Elige el día, la hora y cuántos sois. Te confirmo por WhatsApp.",
     "form": {
-        "tipo": "Tipo de salida", "tipos": {"compartida": "Compartida", "privada": "Privada"},
-        "tipos_sub": {"compartida": "60 € por persona", "privada": "490 € · barco entero"},
-        "fecha": "Día", "hora": "Hora de salida", "atardecer": "Atardecer",
-        "personas": "Personas", "menos": "Una persona menos", "mas": "Una persona más", "max": "11 personas como máximo",
-        "nombre": "Tu nombre", "nombre_ph": "Para saber quién viene",
-        "extras": "Personaliza tu salida privada",
-        "extras_nota": "Los extras se presupuestan aparte: te paso el precio por WhatsApp antes de la salida.",
-        "otra": "¿Otra idea? Cuéntamela",
-        "total": "Total", "detalle_compartida": "{n} × 60 €", "detalle_privada": "Barco entero, 2 h",
-        "pagar": "Pagar {total} con tarjeta", "whatsapp": "Prefiero reservar por WhatsApp",
-        "seguro": "Pago seguro con Stripe. Los datos de tu tarjeta no pasan por esta web.",
-        "politica": ("Cancelación gratis hasta 48 horas antes. Si el mar no está para salir, cambiamos la fecha o te "
-                     "devuelvo todo el dinero."),
-        "sin_pago": "Muy pronto podrás pagar aquí con tarjeta. De momento, reserva por WhatsApp y te confirmo al momento.",
-        "falta_fecha": "Elige un día.", "falta_hora": "Elige la hora de salida.", "falta_nombre": "Dime tu nombre.",
-        "prevision": "Previsión de AEMET para esa hora: navegar {n}/10 · {banda}",
+        "tipo": "Salida", "tipos": {"compartida": "Compartida", "privada": "Privada"},
+        "tipos_sub": {"compartida": "60 € por persona", "privada": "490 € el barco"},
+        "fecha": "Día", "hora": "Hora", "atardecer": "Atardecer",
+        "personas": "Personas", "menos": "Una persona menos", "mas": "Una persona más", "max": "Como mucho 11",
+        "nombre": "Tu nombre", "nombre_ph": "",
+        "extras": "Extras para la privada",
+        "extras_nota": "Los extras van aparte. Te paso el precio por WhatsApp antes de la salida.",
+        "otra": "¿Algo más?",
+        "total": "Total", "detalle_compartida": "{n} × 60 €", "detalle_privada": "El barco entero, 2 horas",
+        "pagar": "Pagar {total}", "whatsapp": "Reservar por WhatsApp",
+        "seguro": "El pago lo gestiona Stripe. Los datos de tu tarjeta no pasan por esta web.",
+        "politica": ("Puedes cancelar gratis hasta 48 horas antes. Si el mar no deja salir, cambiamos el día o te "
+                     "devuelvo el dinero."),
+        "sin_pago": "El pago con tarjeta estará listo en unos días. Mientras, reserva por WhatsApp y te confirmo enseguida.",
+        "falta_fecha": "Elige el día.", "falta_hora": "Elige la hora.", "falta_nombre": "Dime tu nombre.",
+        "prevision": "Previsión de AEMET para esa hora: navegar {n}/10 ({banda})",
         "msg_inicio": "¡Hola Jose! Quiero reservar una salida en el Petit.", "msg_tipo": "Salida", "msg_fecha": "Día",
         "msg_hora": "Hora", "msg_personas": "Personas", "msg_extras": "Extras", "msg_nombre": "Nombre",
         "msg_total": "Total", "msg_ref": "Referencia", "msg_pagado": "Acabo de pagar por la web.",
     },
-    "billete": {"titulo": "Tarjeta de embarque", "barco": "Barco", "barco_v": "Petit", "puerto": "Salida",
-                "puerto_v": "Puerto Banús", "fecha": "Día", "hora": "Hora", "pax": "Pasajeros", "tipo": "Tipo",
-                "extras": "Extras", "total": "Total", "capitan": "Capitán", "capitan_v": "Jose"},
-    "pers_eyebrow": "Salidas privadas",
-    "pers_h2": "Hazla tuya",
-    "pers_intro": ("Cumpleaños, pedidas, despedidas o simplemente un buen día con los tuyos. Dime qué te apetece y lo "
-                   "tengo listo a bordo."),
+    "resumen": {"titulo": "Tu reserva", "salida": "Salida", "fecha": "Día", "hora": "Hora", "pax": "Personas",
+                "extras": "Extras", "total": "Total"},
+    "extras_h2": "Extras para las privadas",
+    "extras_intro": "Para cumpleaños, pedidas, despedidas o porque sí. Dime qué te apetece y lo preparo.",
     "extras": [
         {"id": "buffet", "titulo": "Buffet a bordo", "texto": "Picoteo, fruta y algo dulce para todo el grupo."},
-        {"id": "paella", "titulo": "Paella", "texto": "Para comer fondeados, con Marbella de fondo."},
-        {"id": "cocteles", "titulo": "Coctelería", "texto": "Cócteles y cava para brindar en el mar."},
-        {"id": "tarta", "titulo": "Tarta", "texto": "La de tu cumpleaños o tu celebración, esperando a bordo."},
-        {"id": "decoracion", "titulo": "Decoración", "texto": "Globos, flores, banderines: el barco decorado a tu gusto."},
-        {"id": "otra", "titulo": "Lo que se te ocurra", "texto": "Música, fotógrafo, una sorpresa… Pídemelo."},
+        {"id": "paella", "titulo": "Paella", "texto": "Para comer fondeados."},
+        {"id": "cocteles", "titulo": "Cócteles", "texto": "Y cava para brindar."},
+        {"id": "tarta", "titulo": "Tarta", "texto": "La de tu cumpleaños o la de tu celebración."},
+        {"id": "decoracion", "titulo": "Decoración", "texto": "Globos, flores y banderines, como tú quieras."},
+        {"id": "moto", "titulo": "Moto de agua", "texto": "Para dar una vuelta durante la salida."},
+        {"id": "otra", "titulo": "Otra idea", "texto": "Música, fotógrafo, una sorpresa… Pídemelo."},
     ],
-    "pers_nota": "Los extras se presupuestan aparte, según el grupo.",
-    "pers_cta": "Reservar salida privada",
-    "petit_eyebrow": "El barco",
-    "petit_h2": "El Petit",
-    "petit_sub": "P’tit Mousse, «el Petit» para los amigos",
-    "petit_p": [
-        ("Un Jeanneau Sun Odyssey 42 de bañera central: 12,3 metros de eslora, cubierta de teca y un bimini que da "
-         "sombra a la bañera."),
-        "Un velero de crucero estable y cómodo, con sitio para que once personas naveguen a gusto.",
+    "extras_precio": "a consultar",
+    "extras_cta": "Reservar salida privada",
+    "barco_h2": "El Petit",
+    "barco_sub": "Se llama P’tit Mousse, pero todos lo llamamos el Petit.",
+    "barco_p": [
+        "Es un Jeanneau Sun Odyssey 42 de bañera central: 12,3 metros, cubierta de teca y un bimini que da sombra a la bañera.",
+        "Es estable y cómodo, y caben once personas más el capitán.",
     ],
-    "petit_datos": [("Modelo", "Jeanneau Sun Odyssey 42 CC"), ("Eslora", "12,3 m"),
-                    ("Pasajeros", "hasta 11 + capitán"), ("Base", "Puerto José Banús")],
-    "galeria": {"petit-azul": "El Petit amarrado bajo un cielo azul intenso",
-                "petit-banera": "La bañera navegando, con el timón",
-                "petit-proa": "La cubierta de teca y la proa",
-                "petit-pantalan": "El Petit abarloado a un pantalán, en agua turquesa",
+    "barco_datos": [("Modelo", "Jeanneau Sun Odyssey 42 CC"), ("Eslora", "12,3 m"), ("Pasajeros", "11 + capitán"),
+                    ("Amarre", "Puerto José Banús")],
+    "galeria": {"petit-azul": "El Petit amarrado con el cielo azul",
+                "petit-pantalan": "El Petit abarloado a un pantalán",
                 "petit-cubierta": "La cubierta vista desde proa",
-                "petit-bimini": "El bimini sobre la bañera central",
+                "petit-bimini": "El bimini sobre la bañera",
                 "petit-fondeado": "El Petit fondeado"},
-    "video_alt": "El Petit navegando en un mar en calma", "video_pausa": "Pausar el vídeo",
+    "video_alt": "El Petit navegando con el mar en calma", "video_pausa": "Pausar el vídeo",
     "video_play": "Reproducir el vídeo",
+    "jose_h2": "Quién te lleva",
+    "jose_p": [
+        ("Soy oceanógrafo por la Universidad de Cádiz, capitán de yate e instructor de buceo FEDAS. Llevo cinco "
+         "temporadas de patrón en veleros, lanchas y barcos de pesca en Marbella y Puerto Banús."),
+        ("Por eso sé dónde sigue el agua en calma cuando se levanta el viento, por dónde suelen andar los delfines y "
+         "qué vive en el fondo debajo del barco. Te lo cuento en español, en inglés o en ruso."),
+    ],
+    "jose_foto": "Jose en un barco, listo para bucear",
+    "cuaderno": "Mi cuaderno de bitácora",
+    "bitacora": [
+        ("2016", "Primeras inmersiones. Diez años después sigo volviendo bajo el agua."),
+        ("2022", "Primera temporada como patrón de chárter en Marbella."),
+        ("2023", "Instructor de buceo (FEDAS · CMAS) y responsable de una flota de chárter."),
+        ("2025", "Salidas en velero para ver delfines y chárter de pesca."),
+        ("2026", "Título de Capitán de Yate."),
+    ],
     "mar": {
         "eyebrow": "El mar, ahora",
         "h2": "¿Cómo está el mar hoy?",
@@ -624,12 +610,21 @@ T["es"] = {
         "cargando": "Cargando la previsión de AEMET…",
         "sin_datos": "Ahora mismo no me llega la previsión de AEMET. Escríbeme y te digo cómo está el mar.",
     },
-    "buceo_eyebrow": "Buceo · La Senda Azul",
-    "buceo_h2": "Bajo el agua, Marbella sigue",
-    "buceo_lead": ("Soy instructor de buceo FEDAS. Te llevo a los puntos de la Senda Azul de Málaga según tu nivel: "
-                   "desde tu primer bautizo hasta los bajos de 40 metros."),
+    "llegar_h2": "Cómo llegar",
+    "llegar_p": [
+        "Salimos de Puerto José Banús, en Marbella. Cuando reserves, te mando por WhatsApp el pantalán exacto.",
+        ("Si vienes en coche, aparca en el parking Cristamar, en la calle Francisco Villalón. Si sales en el barco, "
+         "es gratis, y de ahí al barco hay 5 minutos andando."),
+    ],
+    "mapa": {"puerto": "Puerto José Banús", "parking": "Parking Cristamar", "minutos": "5 min andando",
+             "aria": "Plano de Puerto Banús con el parking Cristamar y el camino andando hasta el puerto",
+             "fuente": "Plano: © colaboradores de OpenStreetMap (ODbL)"},
+    "llegar_enlace": "Abrir el parking en Google Maps",
+    "buceo_h2": "¿Buceas?",
+    "buceo_lead": ("También soy instructor de buceo FEDAS. Te llevo a los puntos de la Senda Azul de Málaga según tu "
+                   "nivel y, si nunca has buceado, a tu primer bautizo."),
     "buceo_cta": "Ver los 15 puntos de buceo",
-    "buceo_title": "Bucear en Marbella: los puntos de la Senda Azul — Sea With Jose",
+    "buceo_title": "Bucear en Marbella: los puntos de la Senda Azul · Sea With Jose",
     "buceo_description": ("Los 15 puntos de buceo de la Senda Azul de Málaga con su profundidad, nivel y acceso, y "
                           "bautizos y cursos FEDAS con Jose, instructor de buceo en Marbella."),
     "senda": {
@@ -671,7 +666,7 @@ T["es"] = {
     ],
     "pecio_datos": [("Profundidad", "8–10 m"), ("Nivel", "básico"),
                     ("Qué verás", "cuadernas, lastre y la vida sobre el pecio")],
-    "habichuelas_h": "El barco de las Habichuelas — Punta Carnero",
+    "habichuelas_h": "El barco de las Habichuelas, en Punta Carnero",
     "habichuelas_p": ("El <em>Dina</em>, un mercante de 109 metros que embarrancó en un temporal de levante en 1983 "
                       "cargado de conservas de legumbres. Hoy es un arrecife lleno de vida entre 8 y 12 metros."),
     "viajes_h": "Viajes de buceo",
@@ -681,73 +676,47 @@ T["es"] = {
                     "tortuga": "Buceando junto a una tortuga verde", "tiburon": "Buceadores observando un tiburón tigre"},
     "buceo_wa": "¡Hola Jose! Me gustaría bucear contigo.",
     "buceo_wa_cta": "Pregunta por el buceo",
-    "jose_eyebrow": "Tu capitán",
-    "jose_h2": "Un oceanógrafo que hizo del mar su trabajo",
-    "jose_p": [
-        ("Soy oceanógrafo por la Universidad de Cádiz, capitán de yate e instructor de buceo FEDAS, y llevo cinco "
-         "temporadas como patrón de veleros, lanchas y barcos de pesca en Marbella y Puerto Banús."),
-        ("Por eso sé dónde sigue el agua en calma cuando se levanta el viento, por dónde suelen andar los delfines y "
-         "qué vive en el fondo bajo tu barco. Te lo cuento todo en inglés, en español o en ruso."),
-    ],
-    "jose_foto": "Jose en un barco, listo para meterse al agua",
-    "cuaderno": "Cuaderno de bitácora",
-    "bitacora": [
-        ("2016", "Primeras inmersiones. Diez años después sigo volviendo bajo el agua."),
-        ("2022", "Primera temporada como patrón de chárter en Marbella."),
-        ("2023", "Instructor de buceo (FEDAS · CMAS) y responsable de una flota de chárter."),
-        ("2025", "Salidas en velero para ver delfines y chárter de pesca."),
-        ("2026", "Título de Capitán de Yate."),
-    ],
-    "tambien_eyebrow": "Más mar",
-    "tambien_h2": "Pesca y motos de agua",
-    "tambien": [
-        {"id": "pesca", "titulo": "Salidas de pesca",
-         "frase": "Te llevo donde pica, seas principiante, familia o pescador con experiencia.",
-         "puntos": ["Pesca a fondo o al curricán", "Por la mañana o por la tarde", "¿Es tu primera vez? Te enseño"],
-         "cta": "Pregunta por la pesca", "wa": "¡Hola Jose! Me gustaría saber más sobre las salidas de pesca."},
-        {"id": "moto", "titulo": "Motos de agua",
-         "frase": "La Milla de Oro desde el mar, a todo gas.",
-         "puntos": ["Rutas guiadas por la costa", "¿Primera vez en moto de agua? Te lo explico todo antes de salir"],
-         "cta": "Pregunta por las motos de agua",
-         "wa": "¡Hola Jose! Me gustaría saber más sobre las motos de agua."},
-    ],
+    "pesca_h2": "Y si lo tuyo es pescar",
+    "pesca_p": ("También organizo salidas de pesca, a fondo o al curricán, por la mañana o por la tarde. Si es tu "
+                "primera vez, te enseño."),
+    "pesca_cta": "Pregunta por la pesca",
+    "pesca_wa": "¡Hola Jose! Me gustaría saber más sobre las salidas de pesca.",
     "faq_h2": "Preguntas",
     "faq": [
-        ("¿Cuánto cuesta?", "La salida compartida cuesta 60 € por persona. La privada, 490 € por el barco entero durante "
-                            "dos horas, para hasta 11 personas. Los extras de las privadas (comida, bebida, decoración) "
-                            "se presupuestan aparte."),
-        ("¿Tengo que saber navegar?", "No. El barco lo llevo yo; tú solo disfruta. Si te apetece, te enseño a llevar "
-                                      "el timón."),
-        ("¿Dónde quedamos?", "En Puerto José Banús, Marbella. Te mando el pantalán exacto por WhatsApp."),
+        ("¿Cuánto cuesta?", "La compartida, 60 € por persona. La privada, 490 € por el barco entero durante dos horas, "
+                            "para hasta 11 personas. Los extras de las privadas van aparte."),
+        ("¿Tengo que saber navegar?", "No, el barco lo llevo yo. Si quieres, te enseño a llevar el timón."),
+        ("¿Dónde quedamos?", "En Puerto José Banús. Te mando el pantalán exacto por WhatsApp."),
+        ("¿Dónde aparco?", "En el parking Cristamar, a 5 minutos andando del barco. Si sales con nosotros, es gratis."),
         ("¿Qué llevo?", "Bañador, toalla, crema solar y gafas de sol."),
-        ("¿Y si hace mal tiempo?", "Solo salgo cuando el mar está seguro y apetece. Si cancelo por el tiempo, eliges: "
-                                   "otra fecha o la devolución de todo el dinero."),
-        ("¿Puedo cancelar?", "Sí, gratis hasta 48 horas antes de la salida."),
-        ("¿Pueden venir niños?", "Sí, las familias son bienvenidas. Dime sus edades al reservar."),
-        ("¿En qué idiomas hablas?", "Inglés, español y ruso."),
+        ("¿Y si hace mal tiempo?", "Solo salgo si el mar está bien. Si cancelo por el tiempo, eliges otro día o te "
+                                   "devuelvo el dinero."),
+        ("¿Puedo cancelar?", "Sí, gratis hasta 48 horas antes."),
+        ("¿Pueden venir niños?", "Claro. Dime sus edades al reservar."),
+        ("¿En qué idiomas hablas?", "Español, inglés y ruso."),
     ],
-    "final_h2": "¿Nos vemos a bordo?",
-    "final_p": "Reserva tu plaza o escríbeme por WhatsApp y te ayudo a elegir.",
+    "final_h2": "¿Te vienes?",
+    "final_p": "Reserva tu plaza o escríbeme y te ayudo a elegir.",
     "pie_lugar": "Puerto José Banús, 29660 Marbella (Málaga)",
     "pie_legal": "Aviso legal, reservas y privacidad",
-    "pie_creditos": "Fotos: el Petit · Batimetría: EMODnet (CC BY 4.0) · Previsión: AEMET · Puntos de buceo: Senda Azul",
-    "legal_title": "Aviso legal, reservas y privacidad — Sea With Jose",
+    "pie_creditos": "Fotos: el Petit · Cartografía: EMODnet (CC BY 4.0) y OpenStreetMap (ODbL) · Previsión: AEMET",
+    "legal_title": "Aviso legal, reservas y privacidad · Sea With Jose",
     "legal_h1": "Aviso legal, reservas y privacidad",
     "legal": [
         ("Titular", "Sea With Jose es la marca personal de José María Hinojosa Figueira, con domicilio en Marbella "
                     "(Málaga). Contacto: {email} · WhatsApp {tel}."),
-        ("Qué hace esta web", "Presenta mis salidas en velero en el Petit y mis otras experiencias en el mar, y permite "
-                              "reservar y pagar las salidas en velero."),
+        ("Qué hace esta web", "Enseña mis salidas en velero en el Petit y los extras de las salidas privadas, y "
+                              "permite reservarlas y pagarlas."),
         ("Reservas y pagos", "Las salidas se pagan por adelantado con tarjeta a través de Stripe, que procesa el pago: "
                              "esta web no ve ni guarda los datos de tu tarjeta. La reserva queda confirmada cuando te "
                              "escribo por WhatsApp o por correo. Los precios que ves son precios finales. Los extras de "
-                             "las salidas privadas se presupuestan y se pagan aparte."),
+                             "las privadas se presupuestan y se pagan aparte."),
         ("Cancelaciones", "Puedes cancelar gratis hasta 48 horas antes de la salida y te devuelvo todo el importe. Si "
-                          "cancelo yo por el estado del mar o por seguridad, eliges otra fecha o la devolución íntegra. "
+                          "cancelo yo por el estado del mar o por seguridad, eliges otro día o la devolución íntegra. "
                           "Al tratarse de una actividad de ocio con fecha concreta, no se aplica el derecho de "
                           "desistimiento de 14 días (artículo 103.l de la Ley General para la Defensa de los "
                           "Consumidores y Usuarios)."),
-        ("A bordo", "Por seguridad, el capitán decide la ruta, el fondeo y si se puede salir o seguir navegando."),
+        ("A bordo", "Por seguridad, el capitán decide la ruta, dónde fondear y si se puede salir o seguir navegando."),
         ("Tus datos", "Si reservas o me escribes, uso tu nombre, tus datos de contacto y los de la reserva solo para "
                       "organizar tu salida y cumplir mis obligaciones fiscales, y los conservo únicamente el tiempo "
                       "obligatorio. Stripe trata los datos del pago como responsable independiente "
@@ -757,13 +726,14 @@ T["es"] = {
                     "datos de la reserva para enseñártelos al volver de la página de pago. Las tipografías y las "
                     "imágenes se sirven desde la propia web."),
         ("Terceros", "La web está alojada en GitHub Pages (GitHub Inc.), que puede registrar las direcciones IP de las "
-                     "visitas por seguridad. Los enlaces de WhatsApp, Instagram y las cámaras te llevan a esos "
-                     "servicios, que tienen sus propias políticas de privacidad."),
-        ("Créditos", "Batimetría: EMODnet Bathymetry Consortium, CC BY 4.0. Previsiones: información elaborada por la "
-                     "Agencia Estatal de Meteorología (AEMET). Puntos de buceo: «Málaga sumergida. Guía de buceo de "
-                     "la Senda Azul», Turismo y Planificación Costa del Sol."),
+                     "visitas por seguridad. Los enlaces de WhatsApp, Instagram, Google Maps y las cámaras te llevan a "
+                     "esos servicios, que tienen sus propias políticas de privacidad."),
+        ("Créditos", "Batimetría: EMODnet Bathymetry Consortium, CC BY 4.0. Plano de Puerto Banús: © colaboradores de "
+                     "OpenStreetMap, ODbL. Previsiones: información elaborada por la Agencia Estatal de Meteorología "
+                     "(AEMET). Puntos de buceo: «Málaga sumergida. Guía de buceo de la Senda Azul», Turismo y "
+                     "Planificación Costa del Sol."),
     ],
-    "gracias": {"title": "Reserva recibida — Sea With Jose", "h1": "¡Reserva recibida!",
+    "gracias": {"title": "Reserva recibida · Sea With Jose", "h1": "Reserva recibida",
                 "p": "Gracias. En cuanto vea el pago, te confirmo la salida por WhatsApp.",
                 "resumen": "Tu salida", "wa": "Escríbeme por WhatsApp", "volver": "Volver a la web",
                 "sin": ("No encuentro los datos de tu reserva en este navegador, pero no te preocupes: Stripe te ha "
@@ -776,124 +746,123 @@ T["es"] = {
 # ───────────────────────────────── RUSO ─────────────────────────────────
 T["ru"] = {
     "nombre_idioma": "Русский", "corto": "RU", "og_locale": "ru_RU",
-    "title": "Sea With Jose — прогулки под парусом из Пуэрто-Бануса, Марбелья",
-    "description": ("Прогулки под парусом в Марбелье на яхте «Пти» с Хосе — капитаном яхты и океанографом. "
-                    "Групповые выходы за 60 € с человека и индивидуальные двухчасовые прогулки до 11 гостей из "
-                    "Пуэрто-Бануса."),
+    "title": "Sea With Jose · прогулки под парусом из Пуэрто-Бануса, Марбелья",
+    "description": ("Прогулки под парусом из Пуэрто-Бануса с Хосе, капитаном яхты и океанографом. Групповая прогулка "
+                    "стоит 60 € с человека, индивидуальная 490 € за яхту (2 часа, до 11 гостей)."),
     "saltar": "Перейти к содержанию",
-    "nav": {"salidas": "Прогулки", "petit": "«Пти»", "mar": "Море сегодня", "buceo": "Дайвинг", "jose": "Хосе",
-            "faq": "Вопросы"},
+    "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта", "mar": "Море сегодня",
+            "llegar": "Как добраться", "buceo": "Дайвинг"},
     "menu": "Меню", "whatsapp_corto": "WhatsApp", "reservar_corto": "Забронировать",
     "wa_hola": "Здравствуйте, Хосе! Хочу выйти в море на «Пти».",
-    "hero_eyebrow": "Пуэрто-Банус · Марбелья",
-    "hero_h1": "Под парусом в Марбелье — <em>на борту «Пти».</em>",
-    "hero_lead": ("12-метровая парусная яхта, её капитан и открытое море у Пуэрто-Бануса. Два часа, чтобы искупаться "
-                  "вдали от пляжа, постоять за штурвалом и поискать дельфинов."),
-    "hero_precios": [("Групповая", "60 €", "с человека"), ("Индивидуальная", "490 €", "2 ч · до 11 гостей")],
-    "hero_cta": "Забронировать прогулку",
-    "hero_cta2": "Спросить в WhatsApp",
-    "hero_foto_alt": "«Пти» на якоре на закате, против света",
-    "hero_delfines_alt": "Дельфины выпрыгивают из воды перед парусной яхтой",
-    "hero_chip": "Сегодня в море", "hero_chip_agua": "вода {t} °C", "hero_chip_sol": "закат в {h}",
-    "credenciales": [
-        ("Капитан яхты", "испанский диплом"),
-        ("Океанограф", "Университет Кадиса"),
-        ("Инструктор по дайвингу", "FEDAS · CMAS"),
-        ("5 сезонов", "шкипером в Марбелье"),
-        ("Языки", "English · Español · Русский"),
-    ],
-    "salidas_eyebrow": "Прогулки под парусом",
-    "salidas_h2": "Выберите свою прогулку",
-    "salidas_intro": ("Обе начинаются в Пуэрто-Банусе и длятся два часа. Яхтой управляю я — или стою рядом, если вам "
-                      "захочется порулить."),
+    "banderas_aria": "Sea With Jose, написанное флагами Международного свода сигналов",
+    "hero_h1": "Прогулки под парусом из Пуэрто-Бануса",
+    "hero_lead": ("Меня зовут Хосе, я капитан яхты и океанограф. Два часа мы ходим под парусом вдоль побережья "
+                  "Марбельи на «Пти», 12-метровой парусной яхте. Купаемся вдали от пляжа, а если повезёт, видим "
+                  "дельфинов."),
+    "hero_precios": [("Групповая", "60 €", "с человека"), ("Индивидуальная", "490 €", "яхта, 2 часа")],
+    "hero_cta": "Забронировать",
+    "hero_cta2": "Написать в WhatsApp",
+    "hero_foto_alt": "«Пти» на якоре на закате",
+    "precios_h2": "Цены",
     "opciones": {
         "compartida": {"titulo": "Групповая прогулка", "precio": "60 €", "unidad": "с человека",
-                       "puntos": ["Два часа под парусом", "«Пти» вместе с другими путешественниками — не больше 11",
+                       "puntos": ["Два часа под парусом", "С другими путешественниками, не больше 11 человек",
                                   "Купание в открытом море, если позволяет погода", "Можно постоять за штурвалом"],
-                       "cta": "Забронировать место", "foto_alt": "Кокпит «Пти» на ходу, штурвал"},
-        "privada": {"titulo": "Индивидуальная прогулка", "precio": "490 €", "unidad": "вся яхта · 2 ч",
-                    "puntos": ["«Пти» только для вашей компании, до 11 гостей", "Время выбираете вы, в том числе закат",
-                               "Маршрут на ваш вкус: купание, дельфины или берег",
-                               "Дополните угощением, напитками и украшениями"],
-                    "cta": "Забронировать яхту", "foto_alt": "«Пти» на якоре в прозрачной воде"},
+                       "cta": "Забронировать место"},
+        "privada": {"titulo": "Индивидуальная прогулка", "precio": "490 €", "unidad": "вся яхта, 2 часа",
+                    "puntos": ["Только ваша компания, до 11 человек", "Время выбираете вы, в том числе закат",
+                               "Можно добавить еду, напитки, украшения или гидроцикл"],
+                    "cta": "Забронировать яхту"},
     },
-    "ruta_eyebrow": "Ваша прогулка шаг за шагом",
-    "ruta_h2": "Два часа — примерно так",
-    "ruta_nota": "Это обычный маршрут: остальное решают ветер и море.",
-    "ruta_pasos": [
-        ("0:00", "Посадка в Пуэрто-Банусе", "Встречаю вас на причале за 15 минут до выхода; точное место пришлю "
-                                            "в WhatsApp."),
-        ("0:15", "Поднимаем паруса", "Выходим из порта на моторе и сразу за входом поднимаем паруса. Хотите — "
-                                     "вставайте за штурвал."),
-        ("0:45", "Якорь и купание", "Встаём на якорь в тихом месте у Сан-Педро и купаемся вдали от берега."),
-        ("1:15", "Открытое море", "Идём под парусом мористее — именно там обычно появляются дельфины."),
-        ("2:00", "Обратно в Банус", "Возвращаемся под парусом, и перед вами всё побережье Марбельи."),
+    "precios_nota": "Капитан всегда я.",
+    "fotos_alt": {"petit-delfines": "Дельфины выпрыгивают перед парусной яхтой",
+                  "petit-banera": "Кокпит «Пти» на ходу",
+                  "petit-proa": "Тиковая палуба «Пти»"},
+    "salida_h2": "Как проходит прогулка",
+    "pasos": [
+        ("0:00", "Встречаемся на причале в Пуэрто-Банусе за 15 минут до выхода. Точное место пришлю в WhatsApp."),
+        ("0:15", "Выходим из порта на моторе и сразу за входом поднимаем паруса. Хотите, вставайте за штурвал."),
+        ("0:45", "Встаём на якорь у Сан-Педро и купаемся."),
+        ("1:15", "Уходим мористее, там обычно и появляются дельфины."),
+        ("2:00", "Под парусом возвращаемся в Банус."),
     ],
+    "salida_nota": "Это обычный маршрут, остальное решают ветер и море.",
     "carta_aria": ("Морская карта побережья между Сан-Педро-Алькантара и Марбельей с обычным маршрутом прогулки из "
                    "Пуэрто-Бануса"),
     "carta": {"banus": "Пуэрто-Хосе-Банус", "sanpedro": "Сан-Педро-Алькантара", "marbella": "Марбелья",
               "galeon": "«Галеон» · 8–10 м", "rioverde": "Рио-Верде", "alboran": "Море Альборан", "oeste": "W",
               "norte": "N", "ruta": "Обычный маршрут"},
-    "reservar_eyebrow": "Бронирование",
-    "reservar_h2": "Бронирование и оплата за минуту",
-    "reservar_intro": "Выберите день, время и количество гостей. Я подтвержу прогулку в WhatsApp.",
+    "reserva_h2": "Бронирование",
+    "reserva_intro": "Выберите день, время и сколько вас будет. Я подтвержу в WhatsApp.",
     "form": {
-        "tipo": "Тип прогулки", "tipos": {"compartida": "Групповая", "privada": "Индивидуальная"},
-        "tipos_sub": {"compartida": "60 € с человека", "privada": "490 € · вся яхта"},
-        "fecha": "День", "hora": "Время выхода", "atardecer": "Закат",
-        "personas": "Гостей", "menos": "На одного меньше", "mas": "На одного больше", "max": "Не больше 11 человек",
-        "nombre": "Ваше имя", "nombre_ph": "Чтобы я знал, кто придёт",
-        "extras": "Сделайте индивидуальную прогулку особенной",
-        "extras_nota": "Дополнительные услуги оплачиваются отдельно: я пришлю цену в WhatsApp до прогулки.",
-        "otra": "Есть другая идея? Расскажите",
-        "total": "Итого", "detalle_compartida": "{n} × 60 €", "detalle_privada": "Вся яхта, 2 ч",
-        "pagar": "Оплатить {total} картой", "whatsapp": "Забронировать через WhatsApp",
-        "seguro": "Безопасная оплата через Stripe. Данные карты не проходят через этот сайт.",
-        "politica": ("Бесплатная отмена не позднее чем за 48 часов. Если море не позволяет выйти, перенесём дату "
-                     "или я верну деньги полностью."),
-        "sin_pago": "Оплата картой появится совсем скоро. Пока бронируйте через WhatsApp — я сразу подтвержу.",
-        "falta_fecha": "Выберите день.", "falta_hora": "Выберите время выхода.", "falta_nombre": "Напишите своё имя.",
-        "prevision": "Прогноз AEMET на это время: парус {n}/10 · {banda}",
+        "tipo": "Прогулка", "tipos": {"compartida": "Групповая", "privada": "Индивидуальная"},
+        "tipos_sub": {"compartida": "60 € с человека", "privada": "490 € за яхту"},
+        "fecha": "День", "hora": "Время", "atardecer": "Закат",
+        "personas": "Гостей", "menos": "На одного меньше", "mas": "На одного больше", "max": "Не больше 11",
+        "nombre": "Ваше имя", "nombre_ph": "",
+        "extras": "Дополнительно к индивидуальной прогулке",
+        "extras_nota": "Дополнительные услуги оплачиваются отдельно. Цену пришлю в WhatsApp до прогулки.",
+        "otra": "Что-то ещё?",
+        "total": "Итого", "detalle_compartida": "{n} × 60 €", "detalle_privada": "Вся яхта, 2 часа",
+        "pagar": "Оплатить {total}", "whatsapp": "Забронировать через WhatsApp",
+        "seguro": "Оплату проводит Stripe. Данные карты не проходят через этот сайт.",
+        "politica": ("Отменить можно бесплатно не позднее чем за 48 часов. Если море не позволяет выйти, перенесём "
+                     "день или я верну деньги."),
+        "sin_pago": "Оплата картой заработает через несколько дней. Пока бронируйте через WhatsApp, я сразу подтвержу.",
+        "falta_fecha": "Выберите день.", "falta_hora": "Выберите время.", "falta_nombre": "Напишите своё имя.",
+        "prevision": "Прогноз AEMET на это время: парус {n}/10 ({banda})",
         "msg_inicio": "Здравствуйте, Хосе! Хочу забронировать прогулку на «Пти».", "msg_tipo": "Прогулка",
         "msg_fecha": "День", "msg_hora": "Время", "msg_personas": "Гостей", "msg_extras": "Дополнительно",
         "msg_nombre": "Имя", "msg_total": "Итого", "msg_ref": "Номер брони", "msg_pagado": "Я только что оплатил(а) на сайте.",
     },
-    "billete": {"titulo": "Посадочный талон", "barco": "Яхта", "barco_v": "Пти", "puerto": "Отправление",
-                "puerto_v": "Пуэрто-Банус", "fecha": "Дата", "hora": "Время", "pax": "Гостей", "tipo": "Прогулка",
-                "extras": "Дополнительно", "total": "Итого", "capitan": "Капитан", "capitan_v": "Хосе"},
-    "pers_eyebrow": "Индивидуальные прогулки",
-    "pers_h2": "Сделайте её своей",
-    "pers_intro": ("Дни рождения, предложения руки и сердца, девичники и мальчишники — или просто хороший день с "
-                   "близкими. Расскажите, что вы задумали, и всё будет готово на борту."),
+    "resumen": {"titulo": "Ваша бронь", "salida": "Прогулка", "fecha": "День", "hora": "Время", "pax": "Гостей",
+                "extras": "Дополнительно", "total": "Итого"},
+    "extras_h2": "Дополнительно к индивидуальным прогулкам",
+    "extras_intro": ("Для дня рождения, предложения руки и сердца, девичника или просто так. Скажите, что вы хотите, и "
+                     "я всё подготовлю."),
     "extras": [
-        {"id": "buffet", "titulo": "Фуршет на борту", "texto": "Закуски, фрукты и что-нибудь сладкое на всю компанию."},
-        {"id": "paella", "titulo": "Паэлья", "texto": "Чтобы пообедать на якоре на фоне Марбельи."},
-        {"id": "cocteles", "titulo": "Коктейли", "texto": "Коктейли и кава, чтобы поднять бокалы в море."},
-        {"id": "tarta", "titulo": "Торт", "texto": "Торт ко дню рождения или празднику ждёт вас на борту."},
-        {"id": "decoracion", "titulo": "Украшения", "texto": "Шары, цветы, флажки: яхта украшена по вашему вкусу."},
-        {"id": "otra", "titulo": "Всё, что придумаете", "texto": "Музыка, фотограф, сюрприз… Просто скажите."},
+        {"id": "buffet", "titulo": "Фуршет на борту", "texto": "Закуски, фрукты и что-нибудь сладкое на всех."},
+        {"id": "paella", "titulo": "Паэлья", "texto": "Чтобы пообедать на якоре."},
+        {"id": "cocteles", "titulo": "Коктейли", "texto": "И кава, чтобы поднять бокалы."},
+        {"id": "tarta", "titulo": "Торт", "texto": "Ко дню рождения или к празднику."},
+        {"id": "decoracion", "titulo": "Украшения", "texto": "Шары, цветы и флажки, как вам нравится."},
+        {"id": "moto", "titulo": "Гидроцикл", "texto": "Прокатиться во время прогулки."},
+        {"id": "otra", "titulo": "Другая идея", "texto": "Музыка, фотограф, сюрприз… Просто скажите."},
     ],
-    "pers_nota": "Дополнительные услуги оплачиваются отдельно, в зависимости от компании.",
-    "pers_cta": "Забронировать индивидуальную прогулку",
-    "petit_eyebrow": "Яхта",
-    "petit_h2": "«Пти»",
-    "petit_sub": "P’tit Mousse — для друзей просто «Пти»",
-    "petit_p": [
-        ("Jeanneau Sun Odyssey 42 с центральным кокпитом: 12,3 метра, тиковая палуба и бимини, которое даёт тень "
-         "в кокпите."),
-        "Устойчивая и удобная круизная яхта, на которой с комфортом разместятся одиннадцать гостей.",
+    "extras_precio": "по запросу",
+    "extras_cta": "Забронировать индивидуальную прогулку",
+    "barco_h2": "«Пти»",
+    "barco_sub": "Её зовут P’tit Mousse, но все называют её просто «Пти».",
+    "barco_p": [
+        "Это Jeanneau Sun Odyssey 42 с центральным кокпитом: 12,3 метра, тиковая палуба и бимини, которое даёт тень.",
+        "Яхта устойчивая и удобная, на борту помещаются одиннадцать гостей и капитан.",
     ],
-    "petit_datos": [("Модель", "Jeanneau Sun Odyssey 42 CC"), ("Длина", "12,3 м"), ("Гостей", "до 11 + капитан"),
+    "barco_datos": [("Модель", "Jeanneau Sun Odyssey 42 CC"), ("Длина", "12,3 м"), ("Гостей", "11 + капитан"),
                     ("Стоянка", "Пуэрто-Хосе-Банус")],
-    "galeria": {"petit-azul": "«Пти» у причала под ярко-синим небом",
-                "petit-banera": "Кокпит на ходу, штурвал",
-                "petit-proa": "Тиковая палуба и нос яхты",
-                "petit-pantalan": "«Пти» у понтона в бирюзовой воде",
+    "galeria": {"petit-azul": "«Пти» у причала под синим небом",
+                "petit-pantalan": "«Пти» у понтона",
                 "petit-cubierta": "Палуба, вид с носа",
-                "petit-bimini": "Бимини над центральным кокпитом",
+                "petit-bimini": "Бимини над кокпитом",
                 "petit-fondeado": "«Пти» на якоре"},
     "video_alt": "«Пти» идёт по спокойному морю", "video_pausa": "Поставить видео на паузу",
     "video_play": "Воспроизвести видео",
+    "jose_h2": "Кто вас повезёт",
+    "jose_p": [
+        ("Я изучал океанографию в Университете Кадиса, у меня диплом капитана яхты и инструктора по дайвингу FEDAS. "
+         "Последние пять сезонов я работаю шкипером на парусных яхтах, катерах и рыболовных лодках в Марбелье и "
+         "Пуэрто-Банусе."),
+        ("Поэтому я знаю, где вода остаётся спокойной, когда поднимается ветер, где обычно встречаются дельфины и кто "
+         "живёт на дне под яхтой. Расскажу обо всём по-русски, по-английски или по-испански."),
+    ],
+    "jose_foto": "Хосе на лодке перед погружением",
+    "cuaderno": "Мой судовой журнал",
+    "bitacora": [
+        ("2016", "Первые погружения. Десять лет спустя я всё так же возвращаюсь под воду."),
+        ("2022", "Первый сезон шкипером чартеров в Марбелье."),
+        ("2023", "Инструктор по дайвингу (FEDAS · CMAS) и руководитель чартерного флота."),
+        ("2025", "Парусные выходы к дельфинам и рыболовные чартеры."),
+        ("2026", "Диплом капитана яхты."),
+    ],
     "mar": {
         "eyebrow": "Море сейчас",
         "h2": "Какое сегодня море?",
@@ -956,12 +925,21 @@ T["ru"] = {
         "cargando": "Загружаю прогноз AEMET…",
         "sin_datos": "Сейчас прогноз AEMET недоступен. Напишите мне — расскажу, какое море.",
     },
-    "buceo_eyebrow": "Дайвинг · «Голубая тропа»",
-    "buceo_h2": "Под водой Марбелья продолжается",
-    "buceo_lead": ("Я инструктор по дайвингу FEDAS. Отвезу вас к точкам «Голубой тропы» (Senda Azul) Малаги под ваш "
-                   "уровень — от первого пробного погружения до банок на глубине 40 метров."),
+    "llegar_h2": "Как добраться",
+    "llegar_p": [
+        "Мы выходим из порта Пуэрто-Хосе-Банус в Марбелье. После бронирования я пришлю в WhatsApp точный причал.",
+        ("Если вы на машине, оставьте её на парковке Cristamar на улице Франсиско Вильялон. Для гостей яхты она "
+         "бесплатная, а до яхты оттуда 5 минут пешком."),
+    ],
+    "mapa": {"puerto": "Пуэрто-Хосе-Банус", "parking": "Парковка Cristamar", "minutos": "5 минут пешком",
+             "aria": "Карта Пуэрто-Бануса с парковкой Cristamar и пешим путём до порта",
+             "fuente": "Карта: © участники OpenStreetMap (ODbL)"},
+    "llegar_enlace": "Открыть парковку в Google Картах",
+    "buceo_h2": "Ныряете?",
+    "buceo_lead": ("Я ещё и инструктор по дайвингу FEDAS. Отвезу вас к точкам «Голубой тропы» Малаги под ваш уровень, "
+                   "а если вы никогда не ныряли, на первое пробное погружение."),
     "buceo_cta": "Все 15 точек погружения",
-    "buceo_title": "Дайвинг в Марбелье: точки «Голубой тропы» — Sea With Jose",
+    "buceo_title": "Дайвинг в Марбелье: точки «Голубой тропы» · Sea With Jose",
     "buceo_description": ("15 точек погружения «Голубой тропы» Малаги с глубиной, уровнем и доступом, а также пробные "
                           "погружения и курсы FEDAS с Хосе, инструктором по дайвингу в Марбелье."),
     "senda": {
@@ -1004,7 +982,7 @@ T["ru"] = {
     ],
     "pecio_datos": [("Глубина", "8–10 м"), ("Уровень", "начальный"),
                     ("Что увидите", "шпангоуты, балласт и жизнь на корабле")],
-    "habichuelas_h": "«Корабль с фасолью» — Пунта-Карнеро",
+    "habichuelas_h": "«Корабль с фасолью» у Пунта-Карнеро",
     "habichuelas_p": ("<em>«Дина»</em> — 109-метровое грузовое судно, севшее на мель во время восточного шторма в 1983 "
                       "году с грузом консервированной фасоли. Сегодня это риф, полный жизни, на глубине от 8 до 12 "
                       "метров."),
@@ -1016,77 +994,49 @@ T["ru"] = {
                     "tiburon": "Дайверы наблюдают за тигровой акулой"},
     "buceo_wa": "Здравствуйте, Хосе! Хочу понырять с вами.",
     "buceo_wa_cta": "Спросить о дайвинге",
-    "jose_eyebrow": "Ваш капитан",
-    "jose_h2": "Океанограф, который сделал море своей работой",
-    "jose_p": [
-        ("Я изучал океанографию в Университете Кадиса, у меня диплом капитана яхты и инструктора по дайвингу FEDAS, "
-         "а последние пять сезонов я работаю шкипером на парусных яхтах, моторных катерах и рыболовных лодках в "
-         "Марбелье и Пуэрто-Банусе."),
-        ("Поэтому я знаю, где вода остаётся спокойной, когда поднимается ветер, где обычно встречаются дельфины и кто "
-         "живёт на дне под вашей лодкой. Расскажу обо всём — по-английски, по-испански или по-русски."),
-    ],
-    "jose_foto": "Хосе на лодке перед погружением",
-    "cuaderno": "Судовой журнал",
-    "bitacora": [
-        ("2016", "Первые погружения. Десять лет спустя я всё так же возвращаюсь под воду."),
-        ("2022", "Первый сезон шкипером чартеров в Марбелье."),
-        ("2023", "Инструктор по дайвингу (FEDAS · CMAS) и руководитель чартерного флота."),
-        ("2025", "Парусные выходы к дельфинам и рыболовные чартеры."),
-        ("2026", "Диплом капитана яхты."),
-    ],
-    "tambien_eyebrow": "Ещё в море",
-    "tambien_h2": "Рыбалка и гидроциклы",
-    "tambien": [
-        {"id": "pesca", "titulo": "Морская рыбалка",
-         "frase": "Отвезу вас туда, где клюёт, — и новичков, и семьи, и опытных рыбаков.",
-         "puntos": ["Донная рыбалка или троллинг", "Утром или после обеда", "Рыбачите впервые? Всё покажу"],
-         "cta": "Спросить о рыбалке",
-         "wa": "Здравствуйте, Хосе! Хотел(а) бы узнать подробнее о морской рыбалке."},
-        {"id": "moto", "titulo": "Гидроциклы",
-         "frase": "Золотая миля Марбельи с воды — на полном газу.",
-         "puntos": ["Прогулки с гидом вдоль побережья", "Впервые на гидроцикле? Перед стартом всё объясню"],
-         "cta": "Спросить о гидроциклах",
-         "wa": "Здравствуйте, Хосе! Хотел(а) бы узнать подробнее о прогулках на гидроцикле."},
-    ],
+    "pesca_h2": "А если вам больше по душе рыбалка",
+    "pesca_p": ("Я также организую морскую рыбалку, донную или троллингом, утром или после обеда. Если вы рыбачите "
+                "впервые, всё покажу."),
+    "pesca_cta": "Спросить о рыбалке",
+    "pesca_wa": "Здравствуйте, Хосе! Хотел(а) бы узнать подробнее о морской рыбалке.",
     "faq_h2": "Вопросы",
     "faq": [
-        ("Сколько это стоит?", "Групповая прогулка — 60 € с человека. Индивидуальная — 490 € за всю яхту на два часа, "
-                               "до 11 гостей. Дополнительные услуги для индивидуальных прогулок (еда, напитки, "
-                               "украшения) оплачиваются отдельно."),
-        ("Нужно ли уметь ходить под парусом?", "Нет. Яхтой управляю я, а вы просто отдыхаете. Если захотите, научу "
-                                               "держать штурвал."),
-        ("Где встречаемся?", "В Пуэрто-Хосе-Банусе, Марбелья. Точный причал пришлю в WhatsApp."),
+        ("Сколько это стоит?", "Групповая прогулка стоит 60 € с человека. Индивидуальная, 490 € за всю яхту на два "
+                               "часа, до 11 человек. Дополнительные услуги оплачиваются отдельно."),
+        ("Нужно ли уметь ходить под парусом?", "Нет, яхтой управляю я. Если захотите, научу держать штурвал."),
+        ("Где встречаемся?", "В Пуэрто-Хосе-Банусе. Точный причал пришлю в WhatsApp."),
+        ("Где оставить машину?", "На парковке Cristamar, в 5 минутах пешком от яхты. Для гостей яхты она бесплатная."),
         ("Что взять с собой?", "Купальник, полотенце, солнцезащитный крем и солнечные очки."),
-        ("А если погода плохая?", "Я выхожу в море только тогда, когда это безопасно и приятно. Если я отменю прогулку "
-                                  "из-за погоды, выбирайте: другая дата или полный возврат денег."),
-        ("Можно ли отменить бронь?", "Да, бесплатно не позднее чем за 48 часов до прогулки."),
-        ("Можно ли с детьми?", "Да, семьям всегда рады. Укажите возраст детей при бронировании."),
-        ("На каких языках вы говорите?", "На английском, испанском и русском."),
+        ("А если погода плохая?", "Я выхожу в море, только когда оно спокойное. Если я отменю прогулку из-за погоды, "
+                                  "выбирайте другой день или полный возврат денег."),
+        ("Можно ли отменить бронь?", "Да, бесплатно не позднее чем за 48 часов."),
+        ("Можно ли с детьми?", "Конечно. Укажите их возраст при бронировании."),
+        ("На каких языках вы говорите?", "На русском, английском и испанском."),
     ],
     "final_h2": "До встречи на борту?",
-    "final_p": "Забронируйте место или напишите мне в WhatsApp — помогу выбрать.",
+    "final_p": "Забронируйте место или напишите мне, я помогу выбрать.",
     "pie_lugar": "Пуэрто-Хосе-Банус, 29660 Марбелья (Малага), Испания",
     "pie_legal": "Правовая информация, бронирование и конфиденциальность",
-    "pie_creditos": "Фото: «Пти» · Батиметрия: EMODnet (CC BY 4.0) · Прогноз: AEMET · Точки погружений: Senda Azul",
-    "legal_title": "Правовая информация, бронирование и конфиденциальность — Sea With Jose",
+    "pie_creditos": "Фото: «Пти» · Карты: EMODnet (CC BY 4.0) и OpenStreetMap (ODbL) · Прогноз: AEMET",
+    "legal_title": "Правовая информация, бронирование и конфиденциальность · Sea With Jose",
     "legal_h1": "Правовая информация, бронирование и конфиденциальность",
     "legal": [
-        ("Владелец сайта", "Sea With Jose — личный бренд Хосе Марии Инохосы Фигейры (José María Hinojosa Figueira), "
+        ("Владелец сайта", "Sea With Jose, личный бренд Хосе Марии Инохосы Фигейры (José María Hinojosa Figueira), "
                            "Марбелья (Малага, Испания). Контакты: {email} · WhatsApp {tel}."),
-        ("Назначение сайта", "Сайт рассказывает о прогулках под парусом на «Пти» и других моих морских программах и "
-                             "позволяет забронировать и оплатить прогулки онлайн."),
-        ("Бронирование и оплата", "Прогулки оплачиваются заранее картой через Stripe, который обрабатывает платёж: этот "
+        ("Назначение сайта", "Сайт рассказывает о прогулках под парусом на «Пти» и дополнительных услугах для "
+                             "индивидуальных прогулок и позволяет забронировать и оплатить их."),
+        ("Бронирование и оплата", "Прогулки оплачиваются заранее картой через Stripe, который проводит платёж: этот "
                                   "сайт не видит и не хранит данные вашей карты. Бронь подтверждается, когда я пишу вам "
-                                  "в WhatsApp или по почте. Указанные цены — окончательные. Дополнительные услуги для "
+                                  "в WhatsApp или по почте. Указанные цены окончательные. Дополнительные услуги для "
                                   "индивидуальных прогулок оцениваются и оплачиваются отдельно."),
         ("Отмена", "Вы можете бесплатно отменить бронь не позднее чем за 48 часов до прогулки, и я верну всю сумму. "
                    "Если прогулку отменяю я из-за состояния моря или по соображениям безопасности, вы выбираете "
-                   "другую дату или полный возврат. Поскольку это досуговая услуга на конкретную дату, 14-дневное "
+                   "другой день или полный возврат. Поскольку это досуговая услуга на конкретную дату, 14-дневное "
                    "право на отказ не применяется (статья 103.l испанского закона о защите прав потребителей)."),
         ("На борту", "Ради безопасности маршрут, место якорной стоянки и возможность выйти в море или продолжить "
                      "прогулку определяет капитан."),
         ("Ваши данные", "Если вы бронируете или пишете мне, я использую ваше имя, контакты и данные брони только для "
-                        "организации прогулки и выполнения налоговых обязательств и храню их лишь в течение "
+                        "организации прогулки и выполнения налоговых обязательств и храню их только в течение "
                         "обязательного срока. Stripe обрабатывает платёжные данные как независимый оператор "
                         "(stripe.com/privacy). В любой момент вы можете попросить показать, исправить или удалить ваши "
                         "данные, написав на {email}, а также подать жалобу в Испанское агентство по защите данных "
@@ -1095,13 +1045,14 @@ T["ru"] = {
                     "показать их вам после возвращения со страницы оплаты. Шрифты и изображения загружаются с самого "
                     "сайта."),
         ("Третьи лица", "Сайт размещён на GitHub Pages (GitHub Inc.), который может записывать IP-адреса посетителей "
-                        "в целях безопасности. Ссылки на WhatsApp, Instagram и веб-камеры ведут на эти сервисы, у "
-                        "которых свои правила конфиденциальности."),
-        ("Источники", "Батиметрия: EMODnet Bathymetry Consortium, CC BY 4.0. Прогнозы: информация Государственного "
-                      "метеорологического агентства Испании (AEMET). Точки погружений: «Málaga sumergida. Guía de "
-                      "buceo de la Senda Azul», Turismo y Planificación Costa del Sol."),
+                        "в целях безопасности. Ссылки на WhatsApp, Instagram, Google Карты и веб-камеры ведут на эти "
+                        "сервисы, у которых свои правила конфиденциальности."),
+        ("Источники", "Батиметрия: EMODnet Bathymetry Consortium, CC BY 4.0. Карта Пуэрто-Бануса: © участники "
+                      "OpenStreetMap, ODbL. Прогнозы: информация Государственного метеорологического агентства Испании "
+                      "(AEMET). Точки погружений: «Málaga sumergida. Guía de buceo de la Senda Azul», Turismo y "
+                      "Planificación Costa del Sol."),
     ],
-    "gracias": {"title": "Бронь получена — Sea With Jose", "h1": "Бронь получена!",
+    "gracias": {"title": "Бронь получена · Sea With Jose", "h1": "Бронь получена",
                 "p": "Спасибо! Как только я увижу оплату, подтвержу прогулку в WhatsApp.",
                 "resumen": "Ваша прогулка", "wa": "Написать мне в WhatsApp", "volver": "Вернуться на сайт",
                 "sin": ("Я не нахожу данных вашей брони в этом браузере, но не волнуйтесь: Stripe отправил вам чек по "
