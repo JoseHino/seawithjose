@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-14T19:36Z",
+ "actualizado": "2026-10-14T19:51Z",
  "noticias": [
   {
    "fecha": "2026-10-14",
@@ -488,6 +488,22 @@
    "fuente": "BBC",
    "titular": "Dolphin freed after getting tangled in net in Ipswich river",
    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBNTUg4aU1vRDJCeDBHT3o2ek1wNzNOYmppeUNkSUlPT1daVkdRSkJBUmRqdnNGM3lBdkpkT2s5cHY0dWV0M3k4ZWJvYWNzQU1jVFRTZkZHcVU?oc=5"
+  },
+  {
+   "fecha": "2026-10-14",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Informat.ro",
+   "titular": "La UE adopta nuevas reglas de control para la pesca del espadín y el rodaballo en el mar Negro",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMWFDWGJmRzlFb0wtcHdNR0F5VW1uSzZqd056MzhEZ2luNGNlQzI2VHV2OWFTaVdXelpNZ1NFYU9tMUZsamdBZEJnOVc2WnRVcllGM0VLWDJsR2Z1U1FrNVhmc0FzRGpla1JUbWZGNzZKcTJURGx3eXMxYW9sc2s3MmxHU2ZuNHJrTWFlaWxuX2h3MlhkaTRVNg?oc=5"
+  },
+  {
+   "fecha": "2026-10-14",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "The Guardian",
+   "titular": "Southern California beach closes after sighting of great white shark ‘exhibiting aggressive behavior’",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNa1g3RWQta3NsbkgzLWluaWRDZDBpX0U0NEo0YWZTSWd2ZWpPcDg4ODRlN1h3UTg2YXR5dDZZSlo1M25oZ2tGVXBDZ3lOZW93MTRTWmVEM3lZNUE4cU9vXzMxckxFTXpVSWo1b2NSMHJNdlBaZjN4MGpzLVM2R0g1TDFUbUh6aW5KUVE?oc=5"
   },
   {
    "fecha": "2026-10-13",
@@ -2034,6 +2050,14 @@
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9lQ1BOcUhRWTA5RG9WVGVXazl3cm8yV0NUNjh6UlhuYTVzUmQ5YXhwWFJaNXhhamZZVmV6NHJXT3pUbmR2RXMzMU1VVXdPUGFpSEExay1uUkhVYVZhUnlMTV9wbk5hdjNoMFZiMW93ZFQxdDE3b0E?oc=5"
   },
   {
+   "fecha": "2026-10-09",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Noticias del Vino",
+   "titular": "El pequeño pueblo donde Joaquín Sánchez dio sus primeras patadas al balón antes de ser una estrella",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPWXFsX0JYb0FtdW9DbDJFZF9Bb1pDRFJ4LTNDeGJNajJ3U1A1Z2JEeTVrZ05aU19DQVR5b1JUMElMM2l4UTRxd29ZODdtOTdRanhpLVpOM3FHSS0wcVVQRlpaMFNvTktmcVNYRllsanVIM0xRcUV0ODhYSTJkT1hmYzUtS0ZfLXI2aXU3dVJrMzJ0ZG9wOC1JVEUyZHEyeF9US190Tnd3RUVweXR6czJXbkRjcGdtMTN6Y3hsbzRXQ3R0TFdoWlZuYlk4TzdNTXFoZkJSZFJHc29iR0xrM21tZ0FoM2Uwd1hqdFdVVTVrUUI?oc=5"
+  },
+  {
    "fecha": "2026-10-08",
    "eje": "local",
    "lang": "es",
@@ -2856,6 +2880,14 @@
    "fuente": "Al Sol de la Costa",
    "titular": "Sotogrande celebra su 64º Aniversario e inaugura los “Reconocimientos Impacto Positivo Sotogrande”",
    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMHZ4WS01bDgxWHBEWW5SQnRPVjF1Uml4ZkVqT05lUUNVeThHVC03REVOMXcyR1cxUU1YNTVRZFBKSjVJSWlLaFV5NkZHZlFJRi1pcG5qcFppUnFuUUJnN1Y5NklYVnRsX2hoVW16Ty1MczBVQ1BnUnFtZDlEQV9yd0pUbFZEY2xZMzVFcDlPZ3cxM1lGTDJSS2dCLW8xb19lUmpNZ29HUjgyd2lmNlN5cXhJVlAwVmUzZkFiV1lUUUZxZw?oc=5"
+  },
+  {
+   "fecha": "2026-10-06",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "El Faro de Melilla",
+   "titular": "Melilla, sede del III Encuentro Marítimo Suncruise el día 15 de octubre - El Faro de Melilla",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUS1aT3VnVnc2akxnLXZ2dkJodThVUW51X3EwQW00Ry01aEJObElKWk1XU1pxOVNZUXR1bTZ4T3VwbDhyeEFMQ0VLZXhXMUlJSjd0RVcyOU9wdTVGdlZqOU96aHRlWFdVVkt2M3owS1JJWnpvMGc2RGhCMmNFeTczN2RscjdxZUlOdWhHMkZTMlZ0clNxV2pkdnRvOVpaMm_SAaQBQVVfeXFMTk5kYUZoR3dpb2RQT3lqWWNTRzhxNVZXemFWWF8xQVlDeGFsYnVFdHFXeVRPMTBFSEZnbng5VkFKckRjM3dja0FxbTZITEVSRlQwam9kUVZWNURESEJyMlZjYl9JT2xzaWpwXzRvNEZHYlVfdk0wTGgwdzJUd1Q0LVM1aGxYVDRHazhtQTNHTjR1TnJvcHVnei03OU40Z2JqeTRPYnY?oc=5"
   },
   {
    "fecha": "2026-10-05",

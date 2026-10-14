@@ -21,14 +21,285 @@
     "2026-10-26",
     "llena"
    ]
-  ]
+  ],
+  "tiempo": {
+   "desde": "2026-09-29",
+   "hasta": "2026-10-13",
+   "dias_con_datos": 13,
+   "tmax": 27.0,
+   "tmax_dia": "2026-10-07",
+   "tmin": 18.3,
+   "tmin_dia": "2026-10-11",
+   "lluvia_total": 1.8,
+   "dias_lluvia": 1,
+   "racha_max": 46,
+   "racha_dia": "2026-10-07",
+   "racha_dir": "SO",
+   "viento_medio": 12,
+   "dir_dominante": "NE",
+   "dias_levante": 8,
+   "dias_poniente": 2
+  },
+  "prevision": [
+   {
+    "fecha": "2026-10-14",
+    "cielo": "Despejado",
+    "tmax": 28,
+    "tmin": 21,
+    "lluvia": 0,
+    "viento": 25,
+    "viento_dir": "E",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-15",
+    "cielo": "Nuboso con lluvia escasa",
+    "tmax": 27,
+    "tmin": 21,
+    "lluvia": 65,
+    "viento": 25,
+    "viento_dir": "E",
+    "racha": 35
+   },
+   {
+    "fecha": "2026-10-16",
+    "cielo": "Intervalos nubosos",
+    "tmax": 28,
+    "tmin": 20,
+    "lluvia": 40,
+    "viento": 20,
+    "viento_dir": "E",
+    "racha": 30
+   },
+   {
+    "fecha": "2026-10-17",
+    "cielo": "Intervalos nubosos con lluvia",
+    "tmax": 26,
+    "tmin": 18,
+    "lluvia": 100,
+    "viento": 5,
+    "viento_dir": "SO",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-18",
+    "cielo": "Intervalos nubosos con lluvia",
+    "tmax": 23,
+    "tmin": 17,
+    "lluvia": 100,
+    "viento": 5,
+    "viento_dir": "S",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-19",
+    "cielo": "Muy nuboso con lluvia",
+    "tmax": 22,
+    "tmin": 17,
+    "lluvia": 85,
+    "viento": 10,
+    "viento_dir": "E",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-20",
+    "cielo": "Intervalos nubosos con lluvia",
+    "tmax": 24,
+    "tmin": 17,
+    "lluvia": 75,
+    "viento": 5,
+    "viento_dir": "SE",
+    "racha": null
+   }
+  ],
+  "analisis": {
+   "pares_historicos": 1283,
+   "desde_historico": "2022-11-23",
+   "por_sector": {
+    "NE": {
+     "media": 0.14,
+     "n": 30
+    },
+    "E": {
+     "media": 0.09,
+     "n": 131
+    },
+    "SE": {
+     "media": 0.14,
+     "n": 21
+    },
+    "S": {
+     "media": -0.01,
+     "n": 7
+    },
+    "SO": {
+     "media": -0.21,
+     "n": 169
+    },
+    "O": {
+     "media": -0.17,
+     "n": 30
+    }
+   },
+   "tramos": {
+    "poniente": {
+     "flojo (<10 km/h)": {
+      "media": -0.02,
+      "n": 192
+     },
+     "moderado (10-20 km/h)": {
+      "media": -0.13,
+      "n": 207
+     },
+     "fuerte (>20 km/h)": {
+      "media": -0.22,
+      "n": 121
+     }
+    },
+    "levante": {
+     "flojo (<10 km/h)": {
+      "media": 0.08,
+      "n": 221
+     },
+     "moderado (10-20 km/h)": {
+      "media": 0.11,
+      "n": 221
+     },
+     "fuerte (>20 km/h)": {
+      "media": 0.14,
+      "n": 85
+     }
+    }
+   },
+   "quincena": [
+    {
+     "fecha": "2026-09-29",
+     "agua": 23.1,
+     "viento": 5,
+     "dir": "SE"
+    },
+    {
+     "fecha": "2026-09-30",
+     "agua": 23.1,
+     "viento": 5,
+     "dir": "SO"
+    },
+    {
+     "fecha": "2026-10-01",
+     "agua": 23.1,
+     "viento": 4,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-02",
+     "agua": 23.0,
+     "viento": 20,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-03",
+     "agua": 22.9,
+     "viento": 21,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-04",
+     "agua": 22.9,
+     "viento": 20,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-05",
+     "agua": 22.7,
+     "viento": 8,
+     "dir": "E"
+    },
+    {
+     "fecha": "2026-10-06",
+     "agua": 22.5,
+     "viento": 13,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-07",
+     "agua": 22.1,
+     "viento": 16,
+     "dir": "SO"
+    },
+    {
+     "fecha": "2026-10-08",
+     "agua": 22.1,
+     "viento": 5,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-09",
+     "agua": 21.8,
+     "viento": 18,
+     "dir": "E"
+    },
+    {
+     "fecha": "2026-10-10",
+     "agua": 21.7,
+     "viento": 10,
+     "dir": "SE"
+    },
+    {
+     "fecha": "2026-10-11",
+     "agua": 21.8,
+     "viento": 11,
+     "dir": "N"
+    },
+    {
+     "fecha": "2026-10-12",
+     "agua": 21.7,
+     "viento": null,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-13",
+     "agua": 21.6,
+     "viento": null,
+     "dir": null
+    }
+   ],
+   "mayor_bajada_2_dias": {
+    "desde": "2026-10-05",
+    "hasta": "2026-10-07",
+    "cambio": -0.6,
+    "vientos": [
+     [
+      "E",
+      8
+     ],
+     [
+      "NE",
+      13
+     ]
+    ]
+   },
+   "mayor_subida_2_dias": null,
+   "agua_inicio": 23.1,
+   "agua_fin": 21.6,
+   "cambio_quincena": -1.5,
+   "cambio_normal": -0.5,
+   "anios_normal": 3
+  },
+  "hechos": "Histórico: 1283 días desde 2022-11-23 con viento de AEMET (Marbella Puerto) y temperatura del agua de Copernicus Marine.\nCambio medio del agua al día siguiente con viento medio ≥ 15 km/h, por dirección: NE +0.14 °C (30 días); E +0.09 °C (131 días); SE +0.14 °C (21 días); S -0.01 °C (7 días); SO -0.21 °C (169 días); O -0.17 °C (30 días)\nCon poniente: flojo (<10 km/h) -0.02 °C (192 días); moderado (10-20 km/h) -0.13 °C (207 días); fuerte (>20 km/h) -0.22 °C (121 días)\nCon levante: flojo (<10 km/h) +0.08 °C (221 días); moderado (10-20 km/h) +0.11 °C (221 días); fuerte (>20 km/h) +0.14 °C (85 días)\nQuincena día a día (fecha: agua °C · viento medio km/h · dirección): 09-29: 23.1 · 5 · SE; 09-30: 23.1 · 5 · SO; 10-01: 23.1 · 4 · None; 10-02: 23.0 · 20 · NE; 10-03: 22.9 · 21 · None; 10-04: 22.9 · 20 · NE; 10-05: 22.7 · 8 · E; 10-06: 22.5 · 13 · NE; 10-07: 22.1 · 16 · SO; 10-08: 22.1 · 5 · NE; 10-09: 21.8 · 18 · E; 10-10: 21.7 · 10 · SE; 10-11: 21.8 · 11 · N; 10-12: 21.7 · None · None; 10-13: 21.6 · None · None\nEl agua pasó de 23.1 a 21.6 °C en la quincena (-1.5 °C); en las mismas fechas de los 3 años anteriores cambió de media -0.5 °C (lo normal por la época)\nMayor bajada en 2 días: -0.6 °C del 2026-10-05 al 2026-10-07, con viento E 8 km/h, NE 13 km/h\nTiempo de la quincena (AEMET Marbella Puerto): {\"desde\": \"2026-09-29\", \"hasta\": \"2026-10-13\", \"dias_con_datos\": 13, \"tmax\": 27.0, \"tmax_dia\": \"2026-10-07\", \"tmin\": 18.3, \"tmin_dia\": \"2026-10-11\", \"lluvia_total\": 1.8, \"dias_lluvia\": 1, \"racha_max\": 46, \"racha_dia\": \"2026-10-07\", \"racha_dir\": \"SO\", \"viento_medio\": 12, \"dir_dominante\": \"NE\", \"dias_levante\": 8, \"dias_poniente\": 2}\nPrevisión AEMET Marbella próximos días: [{\"fecha\": \"2026-10-14\", \"cielo\": \"Despejado\", \"tmax\": 28, \"tmin\": 21, \"lluvia\": 0, \"viento\": 25, \"viento_dir\": \"E\", \"racha\": null}, {\"fecha\": \"2026-10-15\", \"cielo\": \"Nuboso con lluvia escasa\", \"tmax\": 27, \"tmin\": 21, \"lluvia\": 65, \"viento\": 25, \"viento_dir\": \"E\", \"racha\": 35}, {\"fecha\": \"2026-10-16\", \"cielo\": \"Intervalos nubosos\", \"tmax\": 28, \"tmin\": 20, \"lluvia\": 40, \"viento\": 20, \"viento_dir\": \"E\", \"racha\": 30}, {\"fecha\": \"2026-10-17\", \"cielo\": \"Intervalos nubosos con lluvia\", \"tmax\": 26, \"tmin\": 18, \"lluvia\": 100, \"viento\": 5, \"viento_dir\": \"SO\", \"racha\": null}, {\"fecha\": \"2026-10-18\", \"cielo\": \"Intervalos nubosos con lluvia\", \"tmax\": 23, \"tmin\": 17, \"lluvia\": 100, \"viento\": 5, \"viento_dir\": \"S\", \"racha\": null}, {\"fecha\": \"2026-10-19\", \"cielo\": \"Muy nuboso con lluvia\", \"tmax\": 22, \"tmin\": 17, \"lluvia\": 85, \"viento\": 10, \"viento_dir\": \"E\", \"racha\": null}, {\"fecha\": \"2026-10-20\", \"cielo\": \"Intervalos nubosos con lluvia\", \"tmax\": 24, \"tmin\": 17, \"lluvia\": 75, \"viento\": 5, \"viento_dir\": \"SE\", \"racha\": null}]",
+  "graficas": {
+   "es": "https://seawithjose.es/revista/graficas/2026-10-14-es.png",
+   "en": "https://seawithjose.es/revista/graficas/2026-10-14-en.png"
+  }
  },
  "contenido": {
   "es": {
-   "asunto": "El agua aguanta a 22.4 °C y el buceo toma protagonismo",
-   "entradilla": "Mar aún templado, fondos que dan que hablar y buenas historias para navegar con calma.",
-   "editorial": "El agua se ha mantenido en una media de 22.4 °C, una temperatura estupenda para alargar la temporada de baño y buceo. Esta quincena miro especialmente bajo la superficie: hay pecios, destinos cercanos y propuestas para acercar el mar a más gente.\n\nTambién traigo vela, pesca y ciencia marina para leer sin prisa desde el pantalán. Y si os apetece aprovechar estos días de mar templado, nos vemos a bordo o bajo el agua.",
-   "comentario_mar": "Con el agua entre 21.4 y 23.6 °C, todavía se disfruta bien del baño y del buceo; para inmersiones largas, un traje adecuado ayuda a alargar el confort. Las olas no pasaron de 1.1 m, aunque la racha de 38 km/h recuerda que conviene elegir abrigo y horario; el cuarto creciente y la luna llena ya se acercan para quienes siguen las mareas de pesca.",
+   "asunto": "El agua cae 1.5 °C en una quincena de levante",
+   "entradilla": "El mar sigue agradable, pero los datos muestran un enfriamiento poco habitual para octubre.",
+   "editorial": "Lo más llamativo de estos quince días está bajo la superficie: el agua ha bajado 1.5 °C, tres veces más que el descenso medio de estas fechas en los últimos años. Es un buen recordatorio de que, aunque aún tengamos días cálidos, el mar ya empieza a cambiar de estación.\n\nTambién me quedo con el hallazgo de unos gusanos devora-huesos en el golfo de Cádiz y con la vela inclusiva que ha reunido a tripulaciones en Vigo. Si os apetece aprovechar las últimas jornadas templadas, nos vemos en el mar.",
+   "comentario_mar": "Con una media de 22.4 °C y un mínimo de 21.4 °C, el agua sigue siendo agradable para bañarse y para bucear con protección adecuada. La ola máxima de 1.1 m y la racha máxima de 38 km/h han dejado una quincena con momentos movidos; el cuarto creciente llega el 2026-10-19 y la luna llena, el 2026-10-26.",
+   "datos_titulo": "El agua bajó 1.5 °C, tres veces más que lo normal para estas fechas",
+   "datos_texto": "Según Copernicus Marine, el agua pasó de 23.1 °C a 21.6 °C entre el 2026-09-29 y el 2026-10-13: una bajada de 1.5 °C. En las mismas fechas de los tres años anteriores, el cambio medio fue de -0.5 °C, así que este enfriamiento ha sido mayor de lo habitual.\n\nLa mayor caída en dos días fue de -0.6 °C, del 2026-10-05 al 2026-10-07, con viento E de 8 km/h y NE de 13 km/h. En el histórico, el levante tiende a acompañarse de subidas del agua al día siguiente, mientras que el poniente suele enfriarla; esta quincena no sigue ese patrón con claridad.",
+   "tiempo_comentario": "La quincena fue mayormente de levante, con 8 días de levante frente a 2 de poniente, 1.8 de lluvia total y una racha máxima de 46 km/h del SO el 2026-10-07. Vienen días de E de 25 km/h hasta el 2026-10-15 y después un tramo más nuboso y lluvioso, con lluvia prevista del 2026-10-17 al 2026-10-20.",
    "secciones": [
     {
      "eje": "buceo",
@@ -36,29 +307,22 @@
      "items": [
       {
        "ref": "N16",
-       "titular": "Hallan un barco romano con vajilla de lujo intacta",
-       "texto": "El pecio, hundido hace 2.100 años, conservaba un cargamento de más de 6 mil piezas de vajilla de lujo. Un recordatorio del valor histórico que pueden guardar los fondos.",
+       "titular": "Hallan un barco romano con un cargamento de vajilla intacto",
+       "texto": "El pecio, hundido hace 2.100 años, conservaba más de 6 mil piezas de vajilla de lujo. Un hallazgo que recuerda la riqueza arqueológica que puede esconder el fondo marino.",
        "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRd9IBigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRdw?oc=5",
        "fuente": "Infobae"
       },
       {
        "ref": "N20",
-       "titular": "La Herradura pide FP de Buceo Profesional",
-       "texto": "Almuñécar ha solicitado a la Junta un grado medio de Formación Profesional de Buceo Profesional en La Herradura. La iniciativa pone el foco en la formación vinculada al mar.",
+       "titular": "La Herradura solicita FP de Buceo Profesional",
+       "texto": "Almuñécar ha pedido a la Junta un grado medio de Formación Profesional de Buceo Profesional en La Herradura.",
        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZ1dPUkhkYXhGTkdhdXF1bkJaM1J0b05GTFFOLUdSTUp4ZEdyY3pjLXN0TTV3SkJRa0VQY3A5Z1R4NHhONHVPT1prbGUzUlBlazd4aWlMMHQwM0NFbVpRZThyVUl0V0JDX2pBZ1RBbUNYc3haX3RLVE01WFllWG40dkRvVkFQV29UcFo5Vlh5ZDRoRXBDdEpTS2lFLUphN1ZLR01IX3pKUFNvWHZSWGVGVVdjUU9hdDV2SmREb0JoMVQzblN1QkE?oc=5",
        "fuente": "101TV"
       },
       {
-       "ref": "N24",
-       "titular": "El buceo protagoniza el primer Salón del Mar de Almuñécar",
-       "texto": "El primer Salón del Mar de Almuñécar ha dado protagonismo al buceo. La cita acerca al público el mundo submarino y los fondos marinos.",
-       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NQkNobXhyRTg5akVVcW55bWpYaXBpUU4zZGRySFhpLUh5UlZQNExreWZNbFRfUm4yZVdmdGs3NURKRDdCMkN3VFFmaG5ocHlFX1ZWN0hULVN1UHpvazFWUFZCQ3M4MGhFTmhfSFV6el8?oc=5",
-       "fuente": "GranadaDigital"
-      },
-      {
        "ref": "N26",
-       "titular": "Murcia, destacada como destino europeo de buceo",
-       "texto": "La Región de Murcia alberga un destino de buceo destacado por sus reservas y pecios históricos. Una propuesta cercana para planear escapadas de inmersión.",
+       "titular": "Murcia, reconocida como destino europeo de buceo",
+       "texto": "La región destaca por sus reservas y sus pecios históricos como destino para los aficionados al submarinismo.",
        "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPdWRfTVRFTjVKcnFTc3F0akd1bGJWS1FmbkRpUUV2WG9NNEJKWjJQek5aR1I1NFNCbURQbXNyWlJfU3FDT3hpTkwwcUZ3MENOalI0d05DRTBvU1Q2YWJkWGFHeHoxUE9rMlBzejFRenNlQ0NubkFmcW1QU1NuQjNQOFpidF9LM2RPZDE4bVVwci1LWjI0VDd6VmZvWjMyNW9xalp6MFVsM1d5aVNkVmtxUXB1bTBvelBUbmRxRHkwUG1YXzhYUzVPZWlRbWk0S1czVWkxYjhCUDRVVndSbE9oZUd3Y3NaV0XSAewBQVVfeXFMTi1JZUxQLTVXNzJaZUF5cFVUNHdlekdiRDk2M1ZDcFpGUzV5b0RtRkY4X3lwcGlDRVZVZnFyVUMxY1ZWakZ5bzlCWkJibE1SandCeW5kMVNOS2d2QzNMbXNDWjdOVjJ0NWlsc1ZRamd2TG1CdnRnaEZzNWNHRUU5ZjZidUFad1BnelFDTFM1WG5TT0xoSXRGVEdYZ3NteE1ubFplVklVQjRtTmt0a29hRGdUbjJmZXdHTGdtdGpTQjNjcFZlNkh3ejFpa29tWGdWQmZneVFXUU9tZ2FKQUZ2ZTZ5NEJpdE95amgtZ3A?oc=5",
        "fuente": "COPE"
       }
@@ -70,22 +334,22 @@
      "items": [
       {
        "ref": "N34",
-       "titular": "Elsinor gana la regata inclusiva de Vigo",
-       "texto": "Elsinor se ha coronado en la regata inclusiva de Vigo con Discamino. La ría acogió una competición que pone la vela al alcance de más personas.",
+       "titular": "Elsinor gana la regata inclusiva de Vigo con Discamino",
+       "texto": "El velero se impuso en una regata inclusiva celebrada en Vigo junto a Discamino.",
        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPLU5LY2tNdnZfZk42Sm9jbmJuRlp3TU0ySWxlV3N5M2JtVHZXRS1vNUNNQmFFOXJWQ2M4T3M2M1BVOEhDLXRIUUdwS3dKVk9HX2dndS1pUjRLM0tZaFkxNnh2UHNGbVJxTUg4dldJOTRKQnlpcnBvVTVRUGtzWU1ieGotVHFJdGFvNGNzQmZCLTFpMzVfa1ZmWEY5enBwMUJsZ2c?oc=5",
        "fuente": "Atlántico"
       },
       {
        "ref": "N37",
        "titular": "El mayor velero crucerista del mundo llega a Cádiz",
-       "texto": "El velero crucerista más grande del mundo ya está en Cádiz. Una escala llamativa para quienes siguen los grandes barcos de vela.",
+       "texto": "Cádiz recibe al velero crucerista más grande del mundo.",
        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQaUg3blNMdENFWlNzODN4U2ZaQzF2eDc2OFJJMDdLaTJBOHpIeUFJY3VSR3p0cTQxNW9UNklJb1lPTk15b1NGTmJzRzNBQ2N4aTVfUktrS3JGSURfQUlVUHE0VlhOdktiQlBIYkhJRGE3Z0dJWVBlOXJmQ1gwOENpX1dDYWhaa3pRcWRjcl9tSDFIM3PSAZgBQVVfeXFMT19DMmhlUkF2aFV5b0VRVzkyQzNidVF5cVRsajkweG9iV1VVTWR3cy1nNXF3X2tPOXdSY0lmejRYR3loWGEtQlM0U3doR2FpaE9VQThTbkdWWUxtR050MVllU0pxTmpmMlo4MWF5ejRadl85NnJjYzFMWjl2N0JDSjZLRFV6WXFwcHE2YkZ0OGxVSmFSS3oyZzI?oc=5",
        "fuente": "Diario de Cádiz"
       },
       {
        "ref": "N42",
-       "titular": "El mayor crucero de vela del mundo hace escala en Málaga",
-       "texto": "El mayor crucero con velas del mundo ha hecho escala en el puerto de Málaga. La visita lleva la gran navegación a nuestra costa.",
+       "titular": "El mayor crucero con velas del mundo hace escala en Málaga",
+       "texto": "El puerto de Málaga ha acogido la escala del mayor crucero con velas del mundo.",
        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdlVCMTNGQ3VKSDRNUE5UWE8tOWU4Z1FUX2FIN1BqeDNxZGl5Wlkwc0l4R01tMWZ2NFNGdDZ4cGdaWWc1VE1kLVl2RFROcEplQlZ4OF9Ia3VyY3RTaXZwRWh5RkduZUlLSTFuUlFKVXVPcVZMQmtEUGVTZFFBaTVvcGR0YTZyVlYwQkVSUHdYMlhGb3VrTk5IR1RBWEhEXzBIdE5F0gGoAUFVX3lxTFBtVEFObTRmSGJmako3dDdCT2RIMEhkNmZVemVINHhEVlZjX1RRbFRpdHZrbG5oRm53UzVSUXNRUlVyeWVWMldNU3JTckFsN09mNFB3VkpMcGxjT21aOWZqZEhYTE12aFVOUDBWaUc1Sk5QUkpMaXhCRUpvV1ZrbnAzNmVnX2lWcUhzTHpVcU54c2hRVjlFdmJ1bTRVWkstc2MtdEUxLXptaA?oc=5",
        "fuente": "Diario Sur"
       }
@@ -97,24 +361,24 @@
      "items": [
       {
        "ref": "N44",
-       "titular": "El Parlamento Europeo aprueba revisar el plan mediterráneo",
-       "texto": "El Parlamento Europeo ha aprobado un informe para reformar el Plan Plurianual del Mediterráneo. Es una noticia relevante para el futuro de la pesca en nuestras aguas.",
+       "titular": "El Parlamento Europeo aprueba revisar el plan del Mediterráneo",
+       "texto": "El Parlamento Europeo ha aprobado un informe para reformar el Plan Plurianual del Mediterráneo.",
        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNcFZFd1JzcjhGaGdCdTZybmN1VlprZi1KRy12bzJrRUN2ZXVkbFBpOFFQSlFMR2dJR1FEbGpQWnozdEZaOXFBLXlVYldMdWRxZDBWVXhna0dEMEtLRzd0ekNnemtkTmRjcWNNaFMwTzdGa2EwQTB1d25ENWZ6VVJMOUxuUGZocEJFVDFRSjVieng5aUxxa3VXVXAtOFFQc3E2aGNicVNHSFFnSTBoZVk2djRDMVdsdEkxQVRVMy1JbU51OHFFUUZTSy0wZVVjcUZ6eE5OdmZFeGFSQQ?oc=5",
        "fuente": "EPP Group in the European Parliament"
       },
       {
-       "ref": "N45",
-       "titular": "Bruselas abre la revisión de recortes para Castellón",
-       "texto": "Bruselas abre una vía para revisar los recortes que afectan a la pesca de Castellón. El debate vuelve a situar al Mediterráneo en el centro.",
-       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOdjNXOFh2Vlk4UFdJV1ktcjBlMWt4WV9sQUtuT01PdzUtODdPMGtycW53aE1pS3dIRFVoeHRaUFdEd0dvc3E0ZEx6RGJHd1pLcm56cm9pemE0Tm1YQVFpZndpOXh1TlpOMGFLeGVhT29OWFhGU0thamtOZkZlMlU4R3U3TmRSVTcxOTZMZFg2R3VSOFI2UUhmMWNWWXd1WVVKZkFBV1BnanVoZ0R5VE9ZOHhWTFdSV3lUZkNN0gHAAUFVX3lxTFAtSm10d0xpVm43WndEZ0h6WWEtbE1YNm96MFR2eTVXODYyZnV3YXc2U2VhUDg2Y0ZZZzNaWElLM0gzRHFtZW54VDlEN0lMR1Roc3RXb2g1Z0ZWVkJYZHNuODVvZldmMERuWmRBSlNiVDJVRUhKRmozUW1UVy1JSExyemxMelVBOVAtOE9iOVh6S0tXOXFoSFhmbVlFOURQc3dMaFNUVDhZQnd1U0hVTnZQVnRvaWxJaE5rclJHWk1KYg?oc=5",
-       "fuente": "El Periódico Mediterráneo"
-      },
-      {
        "ref": "N53",
-       "titular": "Intervenido un atún rojo de 250 kilos frente a Villajoyosa",
-       "texto": "La Guardia Civil ha intervenido un atún rojo de 250 kilos capturado presuntamente de forma furtiva frente a Villajoyosa. La noticia recuerda la importancia de respetar las normas de captura.",
+       "titular": "Intervienen un atún rojo capturado presuntamente de forma furtiva",
+       "texto": "La Guardia Civil ha intervenido frente a Villajoyosa un atún rojo de 250 kilos presuntamente capturado de forma furtiva.",
        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxON2pwTGNqN2pmVjNEUHA3X3BkRVdNYlR3Q2gxX0JUTzctZGhWNHNTcG5ZMkF4NkVaUndvWklMd3VsVmpOVGptbGRrYVFpS2RRZWVBLW5OZWFmN2pLMi1MODgxRENGUFhnUWVKWi1lc1hoQ3FMVWdDTmptTEVIcWFHRUQ5Z0xhbG95N2dmQTV5RVlHbDZ1VlJURHhBYTg0d3cyd3k5RlJ0ZGNCMVR4SE94VzZFZHM4S2lSYl9yUENBZkg2NTY1T0F6WkhMdG1KbjQ0TE15NmlCSQ?oc=5",
        "fuente": "Marina Baixa Digital"
+      },
+      {
+       "ref": "N56",
+       "titular": "Cartagena celebra su concurso infantil de pesca deportiva",
+       "texto": "Llega la 26 edición del Concurso de Pesca Deportiva Infantil PROLAM-ASIDO.",
+       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYTJEdklic2ZzRXB3QWUzdmlVTHIxSFhCdHJsTjJhWUNobkloOGlSNXB4LURrZnNQcUpGZExhNDFJelNnUHRqNjY3dnRRcThYU01hckF6d3hQOVlWNnpTLVhFQ01BSTJ5bDYyTVRCOTRvV21FNzEtUFE4TkxfNHV5VQ?oc=5",
+       "fuente": "Ayuntamiento de Cartagena"
       }
      ]
     },
@@ -123,18 +387,18 @@
      "titulo": "Viajes por mar",
      "items": [
       {
-       "ref": "N61",
-       "titular": "Atolones, tiburones ballena y villas sobre el agua",
-       "texto": "Un destino de luna de miel reúne villas sobre el agua, tiburones ballena y 26 atolones tropicales. Una imagen de mar lejano para soñar la próxima travesía.",
-       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUWtFaVluOGZTQnl3dTY4VGNMVTRrcGVEd09JYmFMUGJJa0hIOW5RSHlLV0NhUGZ1ZEtCMHRtQVU2Z0c2aTk0di1JOHRUX0F2WmU1bGg4U09Nalg5VDBZVXJ5b2hRUE5QbTh5SGEySnM1NzJSc0dvTmxaMlJmUUgyazJiRG1meXlnV19YMmtWUmVTQdIBlwFBVV95cUxNTkJFeGotc1hFZFJUQnVmb0E0aV9fMDBRR2xId0RSSEFMOWtLZDBPRk1sWFVaUm1OaHNYN25YdG5wTzB6RkFvNkw5VUhSVzA5Qmd3RmZtVzIySU9sYm5OVTc3VEhGaVl1UlJGLXdMc1haTGFPQU9HNFVWMkVud1cta0lHTFZ2NGl3SUNBNGE2NTN5YjJvX05j?oc=5",
-       "fuente": "Viajar"
-      },
-      {
        "ref": "N62",
-       "titular": "El Royal Clipper atraca en Ibiza",
-       "texto": "El Royal Clipper, velero de lujo de cinco mástiles y 134 metros, ha atracado en Ibiza. Una escala para admirar la presencia de la vela clásica a gran escala.",
+       "titular": "El Royal Clipper, atracado en Ibiza",
+       "texto": "El velero de lujo Royal Clipper, de cinco mástiles y 134 metros, ha atracado en Ibiza.",
        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaUJ1QTdKZkM3ekdXdkcwUEFqMHRfWWRZVDJuTkNqakNkM3pCQ3pTYjJEc25ZYVpBU2VNdXdCQ2JKcWdMaHRwc3J1THhSZG9tMnFxVDVuTDZWR2M0Nklmd3VuSktJZFNyX3hZSlF5UzNPeWd6cm5KZ2JDZ1g0ajJ5bldhdlRzdU9KVFZFQVRsTm5iUXJpUjdjSjNBT2VaNldFMHRyWjNqRHhOYm4xamRkbTdyMm5PbUsxZVNBdFo1bmJUWlZ2THc?oc=5",
        "fuente": "La Voz de Ibiza"
+      },
+      {
+       "ref": "N63",
+       "titular": "Una madrileña cambia la ciudad por un velero en Lanzarote",
+       "texto": "Elena dejó Madrid para vivir en un velero fondeado en Lanzarote.",
+       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQcEZKOEtEVDZodnZwYVNIZXc1WExtNnJQRnh0a09VMm5SaldqRFlyeWJiSXozd1pJcGRjd2FiWjE2dXd5UVY4TDdaTVhGZ3NiMjNRWGlSLVNtNFpyS2lRcWRWSGd4SHh4dmtwbEhlLVQ5clBHVnQtV3BTVzloZ3JYU1ZBRzJ3ZzhhNFN4bmdUVlAyVENDNlpKMUcwRFhCQktJWWxDMXIxWEFKVkJTSGFqQjVyOFJHY05QUm5BUFE3bVMyeEViMHM4dW9wUTZlUdIB4gFBVV95cUxPU2s0RjFTamNwdDdMWkREOFYtZ2RmZkp0VGFjM0FBZExKX2YxTGRKeWlmb0locHpLNG9Pbk1kODlaQmF6MnNwMTdnMmRpUzlEM3RYNW5kbnVJcFpzbmdNSGlRaXhVVW96aGNteGpxbEJHU3pfQk1rUlIwRkEtR1dhM1pJeE9FSUFHVzRNUGlIYjFOUUw3RDdPallTOFpTdHlpODNyRlVBX2NnM1lBNnJ4cEVybGFlSFpQQXFXalJOdVJaMnNLWUtFR0VSOUdEY05LejBRNXF4ZEhlb2VwcVUzMTJn?oc=5",
+       "fuente": "El HuffPost"
       }
      ]
     },
@@ -144,59 +408,55 @@
      "items": [
       {
        "ref": "N70",
-       "titular": "Descubren gusanos devoradores de huesos en el golfo de Cádiz",
-       "texto": "Han descubierto gusanos que devoran huesos en aguas del golfo de Cádiz. El hallazgo muestra cuánto queda por conocer de los ecosistemas cercanos.",
+       "titular": "Descubren gusanos devora-huesos en el golfo de Cádiz",
+       "texto": "El hallazgo en aguas del golfo de Cádiz pone el foco en una fauna marina poco conocida.",
        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTFlNcTd2Nk9TMmluT1dxcmFqbndKcHFrdGNuSWd1VTBxUGpmclhqaXRVaDc4aTJQZjBiQlpMWHFKbHlPeDJsMFVvcUhiNFdsMVBvc0dNdzNCeURPWlVlZTJYNjJhbHB1eElPbmt4TmU3UkM3VTNNNlU4eXhOa1loMV9XaVdiV2FWN3IyUjZJNkxRMVZ4MjNCS09haEpTajhsYUY0dWl30gGrAUFVX3lxTFAwRDBUVnQ2OXlySHk0Z1pNZlpaVWt3dlVXUWNkOTFIdjFmNWdVcDAyclJFdnBRWEVVc0NSUkZOblFrUnpjcXJ2ajBVSlgxRmlWZXBQdHhIVTdxT3NYYjRNdnpfWG9wbG1IWG8zakxJZjhaRUszQ1VsdDFTbGVSMWwzRHAtei1lNVZYLWRkcjc5bFAxcmtjMWV1NWtaZHR2NENOQnlkZUFSMHgxRQ?oc=5",
        "fuente": "Diario de Cádiz"
       },
       {
        "ref": "N78",
-       "titular": "Orcas golpean tres veleros en la costa gallega",
-       "texto": "Las orcas golpearon tres veleros en tres días consecutivos al oeste de Muros, Malpica y Muxía. Una situación que merece atención y navegación prudente.",
+       "titular": "Orcas golpean tres veleros en tres días frente a Galicia",
+       "texto": "Se han registrado golpes a tres veleros al oeste de Muros, Malpica y Muxía en días consecutivos.",
        "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQeUxXS0RVaXE2QkxGRlRZbmFxMV82cVpqU0otempxV2t6ZHBLWkttaEpvanRIU0ZXaXQxejA4QTBKSk1odU5YRmFteXlMOHVuTVFoQXh2azdGcG9zYWFPcnVnWEhaRUk3ZHZqMG5aMWJDZzBTd1pLc3E4Z0h2NmQ2cHlIN3Rsb184MzMxTUh5V0htSlNvY3B6dXhULWYxU0pFeGlIRXlFOG11ZVVKMU8tUnlKQXpOSlBlRVU2cGdheUNHSHJWT0thcGU0MGlxdW5JZF82NlVtdFBFQ19rWkdSY2N1enhCeUhYY1V1RjdTNzhBZ9IBjgJBVV95cUxObHo2Zk1HLUI4bjJUd21sdnR6eVNOWXpSN2lWVzMtRk9pQlIwRVhJV2JQakdMU2VTNU54NDlGdGlzRXkwY0pJY0dORnZ5RHQwVzk3V040eWkycXQzeWlMNDBueFFFX2VjaE40Vm5BcmY4ZTFMZU1aQnNtUmQ0T3F6S3hCRUN2TTBITlFEWlVNTDJDODNraVdjX0tRQlZpYU44aWgwSkJzZ3ZjOThoWS1zTExrdkctZ2ZjUUZVZDIxNEdWQnpYR0pzTkJ1RXByYjNyeHpwbGpjSldUQlFDeXNfUzIxNTdaMGtTODdTSFAxMEl6Y2hQeHhsbGhDT05qamYyRXpNQVpXOTBPcjVvQWc?oc=5",
        "fuente": "La Voz de Galicia"
       },
       {
        "ref": "N82",
-       "titular": "Buscan explicar la ausencia de ballenas azules en Galápagos",
-       "texto": "Científicos investigan la ausencia de ballenas azules en Galápagos ante el calentamiento del océano. El estudio conecta los cambios del mar con grandes especies.",
+       "titular": "Investigan la ausencia de ballenas azules en Galápagos",
+       "texto": "Científicos buscan explicar la ausencia de ballenas azules ante el calentamiento del océano.",
        "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNWGJ6R21ldkc3TnFwNlJrMXJGYUFPN2w0S2Y2SWxrUER4NlhWbXZWaDlXQXpXNDBYcHVHV0kyY0xLUmRlYkZSeUFWRkltMWVkQTcxbVg1TVEwbzZsaW96cGlDeUZBV0lzYmRDUjAtWTdIdWt2aTZGamlRbG9XeEJQSkNNN2JpcTh6aGxXV2RZMnlQRVdtc0R1djRuZndZRzQ2aEotVm4xN2tVNDZKVmZNX3NvU1dsYzNpUmY1ODd3TDlsQk1YblhEVDF1WjE2TmtST3NzWkFHVk1NRTdMWFlkbXI0RXotUUtYeU84bTZCZ2Ytd9IBjAJBVV95cUxPX0dVQUZCUEdsWndLdnpyd00wUW53UGJVSWJHTnh0czdzOHFONTk2UnNfT1N3NW5PTFBISW1nZVZIWVZZcVpxaXMxVklyTmdxUklEaEpKMVJ5YmNKSG51V0czREl3bS0xVVlNZ1R4dWJ6bXdCMGZLQ3lFTE5TVm1CX2FHOExMcERfdWpicTlTcm5sV3RJZGY5S3E2RFhmY2paaG00VjBlTi03UHdZTXB2YVpqRU5BdWppRjRCTWkyWUdxSDZ6OW9OMkxpcndrS1JvU1Y5RDVOS1NZYlIxRjJDSkI5c2RjVmp2YVBESTlodXdVcmVxRExxazQ2bWgzaVg1QnJTdzZvUDRIVy1o?oc=5",
        "fuente": "Infobae"
-      },
-      {
-       "ref": "N83",
-       "titular": "El calentamiento y las medusas amenazan al salmón",
-       "texto": "Investigadores estudian cómo el calentamiento del océano y la proliferación de medusas afectan a la salud del salmón. Es otra señal de la presión sobre la vida marina.",
-       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdEZkeHZJVnI4M1pfM1VGZ19PdHA1Q092cVZqVnQtRXk1VUQ3NVZicXNHaTJwcHB6VVNWQlFhekIxMU95WFRqVWZSSk1nWmM0MmpFYlYtcUoyZ0t2WURCVlpFalB6SmtYbHo1Y1pDZFl3WHVPbzhPSmtSZ2RBaFZkd0NOdUJQb3I0SEpYSVhFT21GSHBaZFNjWmswVFF0cVprMHJTV3VRT2lMeXdTYkppeFJpcXVNQ01JV01SN21qZ3EzWUVzY0dJNndWc2RpZkp4cVAtQWhwS1RSRm9FbHgyWUJocjk1anJhZWc?oc=5",
-       "fuente": "Gizmodo en Español"
       }
      ]
     }
    ]
   },
   "en": {
-   "asunto": "Warm 22.4°C water and a diving-led sea logbook",
-   "entradilla": "Comfortable water, remarkable dive stories and plenty to follow above and below the surface.",
-   "editorial": "The water has averaged 22.4°C, which is a very welcome temperature for extending the swimming and diving season. This issue looks below the surface in particular, with wrecks, reefs and wildlife worth knowing about.\n\nThere is sailing, fishing and ocean science here too, for a quiet read by the marina. If you fancy making the most of this warm spell at sea, I hope to see you aboard or underwater.",
-   "comentario_mar": "With water ranging from 21.4 to 23.6°C, swimming and diving remain comfortable, though a suitable suit makes longer dives more pleasant. Waves stayed below 1.1 m, while the 38 km/h peak gust is a good reason to choose the right shelter and timing; the first quarter and full moon are coming up for anglers who watch the tides.",
+   "asunto": "Sea temperature drops 1.5 °C during a fortnight of easterlies",
+   "entradilla": "The sea is still inviting, but the new data show an unusually sharp early-autumn cool-down.",
+   "editorial": "The standout story this fortnight is below the surface: sea temperature fell by 1.5 °C, three times the average drop for these dates over recent years. Warm days can make it feel like summer is lingering, but the sea is clearly beginning its seasonal turn.\n\nThere is plenty else worth watching, from Marbella’s La Bajadilla port plans to a deep bamboo coral forest in the South China Sea. If you would like to make the most of the mild days still ahead, come out on the water with me.",
+   "comentario_mar": "With an average of 22.4 °C and a low of 21.4 °C, the sea remains comfortable for swimming and diving with suitable exposure protection. A maximum wave of 1.1 m and a top gust of 38 km/h brought a few lively spells; first quarter is on 2026-10-19 and the full moon on 2026-10-26.",
+   "datos_titulo": "Water temperature fell 1.5 °C, three times the usual seasonal drop",
+   "datos_texto": "Copernicus Marine data show water temperature falling from 23.1 °C to 21.6 °C between 2026-09-29 and 2026-10-13, a drop of 1.5 °C. Over the same dates in the previous three years, the average change was -0.5 °C, making this a sharper cool-down than usual.\n\nThe biggest two-day fall was -0.6 °C from 2026-10-05 to 2026-10-07, with E winds of 8 km/h and NE winds of 13 km/h. In the longer record, easterlies tend to be followed by warming and westerlies by cooling, so this fortnight does not show a clear match to the usual pattern.",
+   "tiempo_comentario": "The fortnight was mainly easterly, with 8 easterly days against 2 westerly days, 1.8 of total rain and a peak gust of 46 km/h from the SW on 2026-10-07. Easterly winds of 25 km/h are forecast through 2026-10-15, followed by a cloudier, wetter spell with rain forecast from 2026-10-17 to 2026-10-20.",
    "secciones": [
     {
      "eje": "local",
      "titulo": "Marbella and the Costa del Sol",
      "items": [
       {
-       "ref": "N85",
-       "titular": "Robots are clearing cigarette butts from Spanish beaches",
-       "texto": "Robots are now clearing cigarette butts from Spanish beaches and are due to head for the streets next. Cleaner beaches matter to everyone who spends time on the coast.",
-       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMkM0ZEptX2daQm9PUl9UeEE5WlVCbzRsSU5FaERTOGNUU0JLWlhfZWdOc041a3hmb1FtQ1M4NXktUzVJRGUwRE1DSlZWZmg1NWhVNXhqdEg5aW1zbzRIVTBrV0pUVUlObFpjaDdEaEFBVTgwaXhlVnQ5SC1nTm1raklCM3ljZVNfLUJ1T2JNREtaaXFhRW9yNDkzUXkxS2VJcTN5NXJGNEdFT19veld0S3JxYU14NUJlakFIbWFtdWRpSXROMk9QRnFKMTZOa01C?oc=5",
-       "fuente": "Euro Weekly News"
-      },
-      {
        "ref": "N95",
        "titular": "Marbella plans La Bajadilla port renovation",
-       "texto": "Marbella is set to spend 200 million euros renovating La Bajadilla port. It is a major development for the town’s waterfront and boating community.",
+       "texto": "Marbella is to spend 200 million euros on renovating La Bajadilla port.",
        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORzFxR0JnUkNkdVZtWjFPUTZPTC1XZ3psWmtWeXl1ZEtJUFdtcXRucWduUkZzOWItYWRMaEx0VDZnT09odVZOYkp5bWZPYjkxWjQ3V0FReVF2QVNDa0E4ZldfMUtRRjBXZTVUWGxvMGZ3bzFTN2k4T1l6OTBLSk9aTmNxN1JESUpqWFpxeGxmaTVYa2tGbHFLWXN3?oc=5",
        "fuente": "Sur in English"
+      },
+      {
+       "ref": "N85",
+       "titular": "Robots begin clearing cigarette butts from Spanish beaches",
+       "texto": "Robots are now being used to clear cigarette butts from Spanish beaches, with plans to take them onto streets as well.",
+       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMkM0ZEptX2daQm9PUl9UeEE5WlVCbzRsSU5FaERTOGNUU0JLWlhfZWdOc041a3hmb1FtQ1M4NXktUzVJRGUwRE1DSlZWZmg1NWhVNXhqdEg5aW1zbzRIVTBrV0pUVUlObFpjaDdEaEFBVTgwaXhlVnQ5SC1nTm1raklCM3ljZVNfLUJ1T2JNREtaaXFhRW9yNDkzUXkxS2VJcTN5NXJGNEdFT19veld0S3JxYU14NUJlakFIbWFtdWRpSXROMk9QRnFKMTZOa01C?oc=5",
+       "fuente": "Euro Weekly News"
       }
      ]
     },
@@ -206,31 +466,24 @@
      "items": [
       {
        "ref": "N101",
-       "titular": "A 161m wreck dive on the Sultan Star",
-       "texto": "Wreckhunt looks at the Sultan Star as a 161m-deep dive. It is a reminder of the demanding depths involved in technical wreck exploration.",
+       "titular": "A 161m-deep wreck dive on the Sultan Star",
+       "texto": "Wreckhunt looks at a dive on the Sultan Star at a depth of 161m.",
        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZmFVMUhUdmVGX2hzbnB1Vk1iNTVmVHRULXR1cWFOeWp2enl4bmUzdmg4Z1lqV0VIRWl0c2tOWUpkd3pZc05qdGhPdkdKRzZPakp1TDEzM2I4aC1qRlJ1SGRoSDZpQkp6VmFLREdRaFVuV1p4Y3NjTTFTaDJEZHJNNFVDQWg?oc=5",
        "fuente": "Divernet"
       },
       {
        "ref": "N103",
-       "titular": "Liner with military past set to become a diving reef",
-       "texto": "A luxury liner with a secret military past is set to surpass a former US Navy carrier as the world’s largest artificial diving reef. A striking example of a vessel gaining a second life underwater.",
+       "titular": "Luxury liner set to become a major artificial diving reef",
+       "texto": "A luxury liner with a secret military past is set to surpass a former US Navy carrier as the world’s largest artificial diving reef.",
        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOFdGamo0WFU4TThCNXZKbjdoQnFJdk0yc3JYRmtHcFVUSmh1SVROQkFobXota21QREV0S0d1YV81aVV0TUxMMU1CWTNPNHZNcmlJYkpyeHBWOFlsZkJ6VEN1bTBmYXRfNlR1LVBuQmpENTN1X0t3ZE0ycFRFajQzbTdIeVcyOG1JaFhRbkViYmlMNVZ2T00yRXlQaDRmUzA?oc=5",
        "fuente": "Stars and Stripes"
       },
       {
        "ref": "N107",
        "titular": "Thousands of sharks filmed swimming like a river in Japan",
-       "texto": "Footage from Japan shows thousands of sharks swimming “like a mighty river”. It is an extraordinary wildlife scene from beneath the surface.",
+       "texto": "Remarkable footage shows thousands of sharks moving together in Japanese waters.",
        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNU2t2VFNabVhDS1FWdGlmTXZ1bkxreEVvVGt5eElmX0JFZm9HME5ZOWNIa1loVjUyb200cEVlOG9naC0zLUx2TDlWZEtrQ1BMSWctX3h2ZW1YQnJrRHBIY3FYeG9iWWpHUVpOSjQydVlqaDRVMmRNWGJ3OEhCanNneXdkaThBRVE2cFRodEhiMVJzTzA?oc=5",
        "fuente": "BBC Wildlife Magazine"
-      },
-      {
-       "ref": "N109",
-       "titular": "Turkey’s underwater plan for a Royal Navy graveyard",
-       "texto": "Turkey has an underwater plan to save a Royal Navy graveyard. The story brings conservation and maritime history together.",
-       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNU1FDZ0d3QUc1OFZfRDlYNVowT1VsbFdxb0VCNmJsaktPbG5LVGVPSXN4RDhVSzhuMXNTV2lWYjdGVjRVNVRmcnFrZUhFX0lFeVBNSUpUalUzRjlfTkRiZ1hLdTVObVBGNlJKVzdkWElBaDJsaVRFcHhPWHNYdUVVNDgwdWo0cFQyTTdmU1d3cTk4SHY0dUx5OHFnZFNHZHhSMlUtcEJn?oc=5",
-       "fuente": "The Telegraph"
       }
      ]
     },
@@ -240,22 +493,22 @@
      "items": [
       {
        "ref": "N112",
-       "titular": "Grand Soleil introduces an 80-foot offshore sailing yacht",
-       "texto": "Grand Soleil Yachts has introduced a new 80-foot offshore sailing yacht. A new design to watch for sailors interested in bluewater boats.",
+       "titular": "Grand Soleil unveils a new 80-foot offshore sailing yacht",
+       "texto": "Grand Soleil Yachts has introduced a new 80-foot offshore sailing yacht.",
        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONHkwekl2SVBHaV9OV2dOTXpCNkU3ZWwyYVRVRmhyX01aTm01MkczNUJXT1J6TVBISmlac19IUU9VQkE5cVhVR09RNjdQV0tqaTQ0SjhpZHZaMGhVbFhQZE9GNVpkSGM4cnpxbDFnZkx4djh5RlVZd0otU1IzVzJ2SUNvTEtfVTN3a0NGY0hoRFB0UTg3RzFXWk5icVp6bXBWc0wxRUNVcmJheUVnV0Y4UFpKV2V4NGNSMXh6ckxUN19obGhY?oc=5",
        "fuente": "Forbes"
       },
       {
        "ref": "N115",
-       "titular": "JFA launches its Long Island 87 sailing catamaran",
-       "texto": "JFA Yachts has launched the 26m Long Island 87 sailing catamaran. The launch adds another notable multihull to the water.",
+       "titular": "JFA launches the Long Island 87 sailing catamaran",
+       "texto": "The 26m Long Island 87 sailing catamaran from JFA Yachts has been launched.",
        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYk55OWFndkJaWnNTTnJVOHFMVGJ5cEhiUmFMN2lFdkYzeEhOUzhzcmNUQ010VVdZa3QyUllKQUJ3ZUNFWThaOENFYjE5SHBHOUdaLW56YnktS003S3NDbWVVR1FzaTNvX0xacVZFY2F4ZkNsdUp3VndVOEY5dzFqeHFCTDNEMXFLZTBzcDI0Nm9fNk50SjVHdHpCMA?oc=5",
        "fuente": "SuperYacht Times"
       },
       {
        "ref": "N119",
-       "titular": "Inside the AC75 and the fifth sailor’s role",
-       "texto": "America’s Cup looks inside the AC75 to explain what the fifth sailor actually does. A useful glimpse into the teamwork behind these extraordinary racing boats.",
+       "titular": "Inside the AC75: the role of the fifth sailor",
+       "texto": "America’s Cup takes a look at what the fifth sailor does aboard an AC75.",
        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZFhpOVAtai03dHl2S0pHdGZ5WElWaFRObko5andQeVpFOVloeFA1eXNxNDJYaU44emRPRGhobE9IeWFQdDdacFJ4N2dXb1dmYlNVcFFKVEU3Q2s3SXJPakh5M0Y3NkwwY2trQUhkaUc0QW9WSTRLSzY5T2p1VExvWEVDQ2hxUVlyZVptY3R3MTNvbWFpMU9V?oc=5",
        "fuente": "America's Cup"
       }
@@ -267,22 +520,22 @@
      "items": [
       {
        "ref": "N126",
-       "titular": "Sustainability ratings cut across UK sea fishing zones",
-       "texto": "The Good Fish Guide has downgraded sustainability ratings for 29 UK sea fishing zones. It is a timely prompt to consider where catches come from.",
+       "titular": "Sustainability ratings cut for 29 UK sea-fishing zones",
+       "texto": "The Good Fish Guide has downgraded sustainability ratings for 29 UK sea-fishing zones.",
        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQktBN1FTVmFGaThzOE9NV3B4VXBrQVpzUENxRmhoOTY2WUNMa01LR0RTblJfTWd3eEJ6a1czRVdyczE4blpoaHl6QlFINkJpZjNXdmRoa2p3VkN2enIwc3ZNSWQzeUJaaUtVV1lnYWczbHM0c0xrb1gtT1VmVVFRb2NqbUo2MlBKTkxVOE5KbGVRQXlzSk1ON2lpblA2T05XRGF0aTBaT1ZRSW50?oc=5",
        "fuente": "BusinessGreen"
       },
       {
        "ref": "N128",
-       "titular": "Return of tuna boosts Yorkshire’s angling community",
-       "texto": "The return of tuna is giving Yorkshire’s angling community a boost. Tuna continue to draw attention from recreational anglers.",
+       "titular": "Tuna return boosts Yorkshire’s angling community",
+       "texto": "The return of tuna is reported to be giving Yorkshire’s angling community a lift.",
        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZTdzSnpwb3lXcUVOUWJyTmQ0a2U4VENFTHVVSlhna05DWUlKVTdaVV8tRHJVYllYUGlNdFF5cGlWcFI5OUVuTFBObzdYNmFTbmVZbUx2eHgzcGUxb2FiR3hXVXFXcnQwZWVOMUpPbG9tS2ZublJwTnhZRnV2NkRyWmt6UVBtN2RCUm5ZbU5uV1lmemRvdzBVUWpfMlplWFpyRUdVVWoxSjBrMVpicERN?oc=5",
        "fuente": "Yorkshire Magazine"
       },
       {
        "ref": "N134",
        "titular": "People have harvested tuna for 44,000 years",
-       "texto": "A new look at tuna finds that people have harvested these ocean predators for 44,000 years. It adds a long historical perspective to a fish still central to many fisheries.",
+       "texto": "A study examines the long history of people harvesting tuna, stretching back 44,000 years.",
        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWmNLYkZlVkduYjZNbjhYTVAtYnYzTGY4OVdMUDl4dlFsRW9TZVdKQ2FhOFRwc3ZSVUVNQ3J2V3B4U1NsdWpvMjJqVjMtZjB1RGJoRElBWVdHSnRLNVdPaURGa1YzUWszVVBxaHpQV1N3MjVGVmV4c2dhS2ctdkRMNHFoaUJxZU1wRGtPLXZqcmlrZThnanhMeDQxRHRMb0N0VHliUkVJaGdKNlVKLXcxd18xYXJmSWs?oc=5",
        "fuente": "The Conversation"
       }
@@ -294,15 +547,15 @@
      "items": [
       {
        "ref": "N147",
-       "titular": "Livorno opens to superyachts",
-       "texto": "Livorno is opening to superyachts as Italy expands western Mediterranean cruising infrastructure. It may offer another option for longer Mediterranean passages.",
+       "titular": "Livorno opens further to superyachts",
+       "texto": "Livorno is opening to superyachts as Italy expands cruising infrastructure in the western Mediterranean.",
        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaklQVEdTNmFqaV9RdS1QUE9BaGc3TXFHWG1qQkVXM1dSeUxKVFM4bG50VWtycGNvNmZ4cGw0VGYzVWlkSjZmTDlCV0lHNEktVG9pOTMzLWc3TUF2OXhRc3ZQWjdILUpNSkRHTzd5bHlQUmdRcEdkRGhrZ255SEVmcVZtX2lkbFptdHBSaEM3ZmF6REsySVZqOEw5NlB5TXkwaXR2NXp6M0hDa25mY0ZON2p2Q1YwSFlXWWFCTk9odHFjZ3FqaUJ5bFJ3?oc=5",
        "fuente": "YACHT CHARTER"
       },
       {
        "ref": "N148",
-       "titular": "Lessons from living aboard an older yacht in the UK",
-       "texto": "A crew rented out their house to live aboard a 38-year-old yacht in the UK. Their experience offers a real-life angle on the liveaboard choice.",
+       "titular": "Lessons from living aboard a 38-year-old yacht",
+       "texto": "A couple share what happened after renting out their house to live aboard a 38-year-old yacht in the UK.",
        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOblhPUTA4TURaX2NBSVN3SE91ejZXZmdnclREUmtvNi1OX295U21BV2dhdDN3Q0lLYU9DTmhPNF96Rlc3UTF3Q09udzZSV01HbGg5RldKbDN5ZGgwYUJlNTgxRnhoU3dUcm1VZUQ5R1lobGNacEZXenRrdUQ5bHB4VXJRanRFNmJmN1FpdFM1bmVyM1dDa3pCNUZMUkY3LUUzajhoMG55UXB0bWxfLS1PRzNfaDdfTVpQWDhYRnhBVGNJWlgxbHBPTGZwTGQyLTZhdjNr?oc=5",
        "fuente": "Practical Boat Owner"
       }
@@ -315,28 +568,21 @@
       {
        "ref": "N149",
        "titular": "Hidden bamboo coral forest found in the South China Sea",
-       "texto": "Scientists have discovered a hidden bamboo coral forest nearly 1,400 metres below the surface in the South China Sea. The find reveals more of the life in the deep ocean.",
+       "texto": "Scientists have discovered a bamboo coral forest nearly 1,400 metres below the surface in the South China Sea.",
        "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNdlhrYkV3cEJZMG9ZMUR5dHRiNXc2QjNBcDlTLWE0ZDUtX2JfMDhld3dMN3V4alRXNlFodUxiaHoyS1BTSGY0N2xaSk0xSlZSWVBMTWxDczlOTVpLZTBpUFZYT0dNWWZqMmRyc3c3dDJqTW12N0U4b0JPYzRlNjhram9KeXg5YjJEU21La3dIWGhKdEpnRzJfT28wS2FyNHRET3RYSU9ZY2ctNnBBNHpoZDQ1SVMyLWFoOEd2NUtZb1RPaThGQWVUUWNDSEY2VXB6VWFXR1lMN2pXWDAtVlpxMFFkWTBoMV9TUGh1YTBWb0NmM1lqUUltLVpwT1Izb1dXZzNsd01NSS1adURJcHN5SVVZY9IBmAJBVV95cUxOTDhtMGhIVEJKbEVvRDhZSk9aNElOaU5VdjMza1Y0UXNTbWxnZzMwTE0ySzI1RmY0dF9mckZmR0YteUQ0YThWZG1WclN5V21kREVrVTU3aGZ5VWVpTlhCQVJITE5HbmxITGhSbVl4NEV2NjlqTWxGaUZVQlVkM1R1NlZxNTFobzRTOEY5X0hhMHhYUFhRd0tqNi1sZmJXMDhMNXF4U2EyY1E5aFBoT3czYzhoeDlzdDZJQ0JMUWtuQ3B4UU5hdms1bmZNNTRIdkd5bGRiWXA1MXdJTkpVbnVvdllJYjVKbk5PV0d3YmE5VlFySUc3Z0VPdkxXWDk0a2JqR3d1Vl9CejJxbE9lYlhOR0VFYlg2Tzlw?oc=5",
        "fuente": "The Times of India"
       },
       {
        "ref": "N153",
-       "titular": "Rare whale sighting in Cornwall raises concerns",
-       "texto": "An incredibly rare whale sighting in Cornwall has raised concerns. The report highlights how unusual encounters can also prompt questions about marine wildlife.",
+       "titular": "Rare whale sighting in Cornwall raises concern",
+       "texto": "An exceptionally rare whale sighting in Cornwall has raised concerns.",
        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE15V25oS0hOT1BabzJVbUNCeGlXS3BzQWZNNGJRRlFVTDIwbzc2QkhHcjNvaE5qanducnZzeGF2U09VaTMwZTZCSlc5S3FUbk0tVkdDZ19FTm42R00?oc=5",
        "fuente": "BBC"
       },
       {
-       "ref": "N159",
-       "titular": "New clues to tissue regrowth and immortality in the ocean",
-       "texto": "Scientists have found new clues to tissue regrowth and “immortality” in the ocean. Marine life continues to offer unusual routes for scientific discovery.",
-       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNU294VVdnWERzZWV4MWVGMVRHTHNJSDVnSnl1OHlaeGNlblU4R3N1MUFWa0tkNXpEWXdGbldhVVFhRGVCZk1iZXl3WW5uLWhsTWJDMUlESzl3UjN4ZjZGdVh0R0FoaVdKWEhtNC1VSGNsTnI3SVhoZnprRTlXcDJGeEZ5elljT25jWGowanh5Ylk3MEJtYWR0WWNGRFM0SUZfOWh3b2RmS3ozRVdpNVM1b29fRUM?oc=5",
-       "fuente": "SciTechDaily"
-      },
-      {
        "ref": "N162",
-       "titular": "Two giant creatures found lighting up the deep sea",
-       "texto": "Deep-sea scientists have found two “giant” creatures lighting up the dark depths. It is another glimpse of how little-known the deep ocean remains.",
+       "titular": "Giant creatures found lighting up the deep ocean",
+       "texto": "Deep-sea scientists have found two giant creatures illuminating the dark ocean depths.",
        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRGhQZ2hFRjNfM2thcEl2cmtZQm1DdDFreEw2bE1WX0ZyTUdsdWU4MFpiYnUwcEp0MEVlOTVvLV84c2dIN3JnOEVtYk55eFcwYzVscXdrT0lueW5kZWx5NDczM29KTHphNEtqb0lfdEctODJnV3VNSUtNWW9FWm1KdHJ0b3NaQWtmaDZ1RA?oc=5",
        "fuente": "BBC Wildlife Magazine"
       }
@@ -1158,6 +1404,6 @@
   }
  },
  "historial": [
-  "v1 · 2026-10-14 19:37 UTC · borrador"
+  "v1 · 2026-10-14 19:52 UTC · borrador"
  ]
 }
