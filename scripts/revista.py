@@ -210,7 +210,9 @@ def texto_mar(mar, lang):
 
 
 # ─────────────────────────────── noticias de la quincena ───────────────────────────────
-def noticias(numero, lang, por_eje=14):
+def noticias(numero, lang, refs, por_eje=14):
+    """Lista para la IA. Cada noticia lleva un código corto (N1, N2…) en vez del enlace: los enlaces de Google
+    Noticias pasan de 200 caracteres y la IA los copiaba con alguna letra cambiada. El enlace lo pone `resolver()`."""
     ini, fin = periodo(numero)
     ini = ini - datetime.timedelta(days=3)
     try:
@@ -220,9 +222,34 @@ def noticias(numero, lang, por_eje=14):
     lineas = []
     for eje in EJES:
         sel = [n for n in todas if n["lang"] == lang and n["eje"] == eje and ini.isoformat() <= n["fecha"] <= fin.isoformat()]
-        for i, n in enumerate(sel[:por_eje]):
-            lineas.append(f"[{eje}] {n['fecha']} · {n['fuente']} · {n['titular']} · {n['url']}")
+        for n in sel[:por_eje]:
+            ref = f"N{len(refs) + 1}"
+            refs[ref] = {"url": n["url"], "fuente": n["fuente"], "titular": n["titular"]}
+            lineas.append(f"[{eje}] {ref} · {n['fecha']} · {n['fuente']} · {n['titular']}")
     return "\n".join(lineas)
+
+
+def resolver(contenido, refs):
+    """Pone a cada noticia el enlace y la fuente exactos de su código. Una noticia sin código válido se queda sin
+    enlace (nunca con uno inventado); una sección que se queda vacía, desaparece."""
+    validas = {r["url"] for r in refs.values()}
+    avisos = []
+    for lang in IDIOMAS:
+        for s in contenido.get(lang, {}).get("secciones", []):
+            for i in s.get("items", []):
+                r = refs.get(str(i.get("ref", "")).strip())
+                if r:
+                    i["url"], i["fuente"] = r["url"], r["fuente"]
+                elif i.get("url") not in validas:
+                    if i.get("url"):
+                        avisos.append(f"{lang}: «{i.get('titular', '')[:60]}» sin enlace válido")
+                    i["url"] = ""
+            s["items"] = [i for i in s.get("items", []) if i.get("titular")]
+        if lang in contenido:
+            contenido[lang]["secciones"] = [s for s in contenido[lang].get("secciones", []) if s["items"]]
+    for a in avisos:
+        print("  aviso:", a)
+    return contenido
 
 
 # ─────────────────────────────── la IA ───────────────────────────────
@@ -243,11 +270,12 @@ def instrucciones(nombre):
 
 
 def redactar(numero, mar, notas=""):
+    refs = {}
     usuario = [f"NÚMERO: {numero}", f"NOTAS DE JOSE: {notas or '(ninguna)'}"]
     for lang in IDIOMAS:
         usuario += [f"\n=== IDIOMA {lang} ===", f"CIFRAS DEL MAR ({mar['desde']} a {mar['hasta']}): {texto_mar(mar, lang)}",
-                    f"NOTICIAS ({lang}; formato: [eje] fecha · fuente · titular · enlace):", noticias(numero, lang)]
-    return ia(instrucciones("redaccion"), "\n".join(usuario))
+                    f"NOTICIAS ({lang}; formato: [eje] código · fecha · fuente · titular):", noticias(numero, lang, refs)]
+    return resolver(ia(instrucciones("redaccion"), "\n".join(usuario)), refs), refs
 
 
 # ─────────────────────────────── la plantilla del correo ───────────────────────────────
@@ -414,8 +442,8 @@ def cmd_borrador(numero=None, notas=""):
         sys.exit(f"El número {numero} ya está publicado.")
     mar = datos_mar(numero)
     print("Mar:", texto_mar(mar, "es"))
-    contenido = redactar(numero, mar, notas)
-    e = {"numero": numero, "version": 1, "estado": "pendiente", "mar": mar, "contenido": contenido,
+    contenido, refs = redactar(numero, mar, notas)
+    e = {"numero": numero, "version": 1, "estado": "pendiente", "mar": mar, "contenido": contenido, "refs": refs,
          "historial": [f"v1 · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · borrador"]}
     guardar_estado(e)
     guardar_vista(e)
@@ -488,7 +516,7 @@ def cmd_revisar():
                "Escribe **OK** para enviar tal cual, o dime los cambios.")
         return
     e["version"] += 1
-    e["contenido"] = r["contenido"]
+    e["contenido"] = resolver(r["contenido"], e.get("refs", {}))
     cambios = r.get("cambios_aplicados") or []
     e["historial"].append(f"v{e['version']} · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · "
                           + "; ".join(cambios))

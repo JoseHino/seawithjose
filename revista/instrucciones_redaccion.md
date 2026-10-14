@@ -16,7 +16,7 @@ Devuelve SOLO este JSON:
     "comentario_mar": "dos frases comentando las cifras del mar que te doy",
     "secciones": [
       {"eje": "local|buceo|vela|pesca|viajes|ciencia", "titulo": "nombre de la sección",
-       "items": [{"titular": "...", "texto": "...", "url": "...", "fuente": "..."}]}
+       "items": [{"ref": "N12", "titular": "...", "texto": "..."}]}
     ]
   },
   "en": { … lo mismo, escrito en inglés … }
@@ -36,7 +36,8 @@ Reglas:
    muertes o accidentes). Evita la política, las noticias repetidas entre sí y las que no tengan que ver con el mar.
 4. NO INVENTES. Solo sabes lo que dice cada titular. «titular»: el titular reescrito corto (máx. 90 caracteres).
    «texto»: una o dos frases que lo expliquen y, si encaja, por qué le interesa al lector; sin añadir datos,
-   cifras, nombres ni fechas que no estén en el titular. «url» y «fuente»: copiados EXACTAMENTE de la lista.
+   cifras, nombres ni fechas que no estén en el titular. «ref»: el código de la noticia en la lista (N1, N2…), copiado tal cual; el enlace y la fuente los pone el
+   sistema a partir del código, así que no escribas enlaces.
 5. Las cifras del mar (agua, olas, viento, luna) solo pueden salir de las que te doy, sin redondear de otra forma.
    En «comentario_mar» no repitas la tabla: interprétala (si el agua está buena para bañarse o bucear con qué
    traje, si la quincena fue movida, qué luna viene para la pesca).

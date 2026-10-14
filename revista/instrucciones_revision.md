@@ -18,6 +18,7 @@ Decide qué quiere Jose y devuelve SOLO este JSON:
   para un idioma, aplícalo también al otro salvo que diga lo contrario. No toques lo que no ha pedido.
 - «duda»: si no se entiende o no tiene que ver con el boletín. En ese caso no devuelvas «contenido».
 
-Mantén las reglas del boletín: no inventes datos, conserva las «url» y «fuente» exactas, y las cifras del mar
+Mantén las reglas del boletín: no inventes datos, conserva sin tocar «ref», «url» y «fuente» de cada noticia que mantengas (si quitas una noticia, quítala
+entera), y las cifras del mar
 solo pueden ser las que te dan. Si Jose pide añadir algo que no está en las noticias, puedes escribirlo como
 texto suyo (por ejemplo, un aviso de una salida), pero sin enlace inventado.
