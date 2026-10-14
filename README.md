@@ -70,7 +70,7 @@ Necesita en GitHub (*Settings → Secrets and variables → Actions*):
 
 - Secretos: `OPENAI_API_KEY` y `BREVO_API_KEY`.
 - Variables: `BREVO_LISTA_ES` y `BREVO_LISTA_EN` (ID de cada lista de Brevo). Opcionales: `REVISTA_MODELO`
-  (por defecto `gpt-5.6-terra`), `REVISTA_REMITENTE` (por defecto `boletin@seawithjose.es`, dominio ya
+  (por defecto `gpt-5.6-terra`), `REVISTA_REMITENTE` (por defecto `jose@seawithjose.es`, dominio ya
   autenticado en Brevo) y `REVISTA_RESPONDER` (adonde van las respuestas de los lectores).
 - En `textos.py`, `REVISTA_FORMS`: el enlace del formulario de Brevo de cada idioma. Al confirmar, el formulario
   debe volver a `https://seawithjose.es/revista.html?suscripcion=pendiente` y `…?suscripcion=ok`.

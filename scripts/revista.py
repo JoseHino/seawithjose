@@ -21,7 +21,7 @@ El circuito, todo en GitHub Actions y sin servidor:
 
 Variables de entorno (secretos y variables del repositorio):
   OPENAI_API_KEY, REVISTA_MODELO (por defecto gpt-5.6-terra)
-  BREVO_API_KEY, BREVO_LISTA_ES, BREVO_LISTA_EN, REVISTA_REMITENTE (por defecto boletin@seawithjose.es)
+  BREVO_API_KEY, BREVO_LISTA_ES, BREVO_LISTA_EN, REVISTA_REMITENTE (por defecto jose@seawithjose.es), REVISTA_REMITENTE_NOMBRE
   GITHUB_TOKEN, GITHUB_REPOSITORY, REVISTA_EDITOR (por defecto el dueño del repositorio)
   ISSUE_NUMBER, ISSUE_TITLE, COMMENT_BODY   (los pone `revista-revision.yml`)
 """
@@ -50,7 +50,8 @@ IDIOMAS = ("es", "en")
 EJES = ("local", "buceo", "vela", "pesca", "viajes", "ciencia")
 
 MODELO = os.environ.get("REVISTA_MODELO") or "gpt-5.6-terra"
-REMITENTE = os.environ.get("REVISTA_REMITENTE") or "boletin@seawithjose.es"
+REMITENTE = os.environ.get("REVISTA_REMITENTE") or "jose@seawithjose.es"
+REMITENTE_NOMBRE = os.environ.get("REVISTA_REMITENTE_NOMBRE") or "Jose · Sea With Jose"
 
 COLOR = {"marino": "#0B2D52", "azul": "#1F4E9A", "amarillo": "#FFC20E", "rojo": "#D2232A", "tinta": "#0D1B2A",
          "gris": "#4E5F70", "cielo": "#E7F1F7", "linea": "#CFDCE5"}
@@ -559,7 +560,7 @@ def publicar(e):
         camp = brevo("/emailCampaigns", {
             "name": f"Bitácora {numero} ({lang})", "subject": c.get("asunto", TXT[lang]["nombre"]),
             "previewText": c.get("entradilla", "")[:150],
-            "sender": {"name": "Sea With Jose", "email": REMITENTE}, "replyTo": os.environ.get("REVISTA_RESPONDER", REMITENTE),
+            "sender": {"name": REMITENTE_NOMBRE, "email": REMITENTE}, "replyTo": os.environ.get("REVISTA_RESPONDER", REMITENTE),
             "recipients": {"listIds": [int(lista)]}, "mirrorActive": True,
             "htmlContent": montar(numero, e["version"], e["contenido"], e["mar"], lang, "brevo")})
         brevo(f"/emailCampaigns/{camp['id']}/sendNow")
