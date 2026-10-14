@@ -90,7 +90,7 @@
     const radio = form && form.querySelector(`input[name="tipo"][value="${a.dataset.tipo}"]`);
     if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', { bubbles: true })); }
   }));
-  const video = document.querySelector('.petit-video');
+  const video = document.querySelector('.barco-video');
   if (video) iniciarVideo(video);
   if (d.pagina === 'buceo') iniciarFiltros();
   if (d.pagina === 'gracias') pintarGracias(d);
