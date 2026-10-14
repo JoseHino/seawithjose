@@ -23,7 +23,7 @@ RAIZ = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, RAIZ)
 from textos import (T, IDIOMAS, WHATSAPP, WHATSAPP_VISIBLE, INSTAGRAM, EMAIL, DOMINIO,  # noqa: E402
                     PRECIO_COMPARTIDA, PRECIO_PRIVADA, PLAZAS, HORARIOS, DIAS_RESERVA, PAGOS, CAMARAS_EMBED,
-                    PARKING_MAPS, SENDA_AZUL, RESENAS, REVISTA_FORMS)
+                    PARKING_MAPS, SENDA_AZUL, RESENAS, REVISTA_FORMS, BARCO, BARCO_MAPS)
 CARTA = json.load(open(os.path.join(RAIZ, "fuentes", "carta.json"), encoding="utf-8"))
 MAPA = json.load(open(os.path.join(RAIZ, "fuentes", "mapa_banus.json"), encoding="utf-8"))
 VERSION = datetime.datetime.now().strftime("%Y%m%d%H%M")   # rompe la caché del CSS y el JS
@@ -228,8 +228,9 @@ def svg_carta(t):
 # ─────────────────────────────── el plano del parking ───────────────────────────────
 # Encuadre del plano (en coordenadas del lienzo de scripts/mapa.py) y el camino andando del parking al puerto
 VISTA_MAPA = (250, 40, 590, 600)
-CAMINO = [(556, 190), (566, 214), (585, 252), (560, 272)]
-EMBARQUE = (546, 290)
+# A pie del parking Cristamar al Petit (ruta de OSM, 720 m), en coordenadas del plano
+CAMINO = [(556, 190), (567, 193), (555, 209), (579, 238), (594, 250), (645, 308), (542, 455), (520, 490)]
+EMBARQUE = (516, 487)
 
 
 def svg_mapa(t):
@@ -247,7 +248,7 @@ def svg_mapa(t):
       <path class="mapa-edificios" d="{m["edificios"]}"/>
       {calles}{diques}
       <path class="mapa-camino" d="{camino}"/>
-      <text class="mapa-minutos" x="{CAMINO[2][0] + 14}" y="{CAMINO[2][1] - 10}">{esc(a["minutos"])}</text>
+      <text class="mapa-minutos" x="{CAMINO[5][0] + 14}" y="{CAMINO[5][1] + 6}">{esc(a["minutos"])}</text>
       <g class="mapa-parking" transform="translate({px:.0f} {py:.0f})"><rect x="-15" y="-15" width="30" height="30" rx="3"/>
         <text y="8" text-anchor="middle">P</text></g>
       <text class="mapa-rotulo" x="{px + 22:.0f}" y="{py - 6:.0f}">{esc(a["parking"])}</text>
@@ -357,7 +358,7 @@ def json_ld(t, lang):
         "description": t["description"], "telephone": "+" + WHATSAPP, "email": EMAIL,
         "address": {"@type": "PostalAddress", "streetAddress": "Puerto José Banús", "postalCode": "29660",
                     "addressLocality": "Marbella", "addressRegion": "Málaga", "addressCountry": "ES"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 36.4846, "longitude": -4.953},
+        "geo": {"@type": "GeoCoordinates", "latitude": BARCO[0], "longitude": BARCO[1]},
         "areaServed": "Marbella", "sameAs": [f"https://www.instagram.com/{INSTAGRAM}/"],
         "knowsLanguage": IDIOMAS,
         "makesOffer": [
@@ -700,7 +701,10 @@ def portada(lang):
     <div>
       <h2 id="llegar-titulo">{esc(t["llegar_h2"])}</h2>
       {"".join(f"<p>{esc(x)}</p>" for x in t["llegar_p"])}
-      <a class="boton boton-borde-azul" href="{PARKING_MAPS}" target="_blank" rel="noopener">{esc(t["llegar_enlace"])} ↗</a>
+      <div class="botones">
+        <a class="boton boton-azul" href="{BARCO_MAPS}" target="_blank" rel="noopener">{esc(t["llegar_barco"])} ↗</a>
+        <a class="boton boton-borde-azul" href="{PARKING_MAPS}" target="_blank" rel="noopener">{esc(t["llegar_enlace"])} ↗</a>
+      </div>
     </div>
   </div>
 </section>

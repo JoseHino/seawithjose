@@ -40,6 +40,9 @@ CAMARAS_EMBED = ["", "", ""]
 # Parking Cristamar (calle Francisco Villalón): gratis para quien sale en el barco
 PARKING = (36.49013, -4.95039)
 PARKING_MAPS = "https://www.google.com/maps/search/?api=1&query=36.49013%2C-4.95039"
+# Donde está amarrado el Petit en Puerto Banús (lo dio Jose el 14-10-2026)
+BARCO = (36.485170, -4.951185)
+BARCO_MAPS = "https://www.google.com/maps/search/?api=1&query=36.485170%2C-4.951185"
 
 # ─────────────────────────────── la Senda Azul ───────────────────────────────
 # Datos de «Málaga sumergida. Guía de buceo de la Senda Azul» (Turismo y Planificación Costa del Sol,
@@ -323,12 +326,13 @@ T["en"] = {
     "llegar_p": [
         "We leave from Puerto José Banús, in Marbella. When you book, I’ll send you the exact pontoon on WhatsApp.",
         ("If you’re coming by car, park at the Cristamar car park on Calle Francisco Villalón. It’s free if you’re "
-         "sailing with us, and it’s a 5-minute walk to the boat."),
+         "sailing with us, and it’s a 10-minute walk to the boat."),
     ],
-    "mapa": {"puerto": "Puerto José Banús", "parking": "Cristamar car park", "minutos": "5 min walk",
+    "mapa": {"puerto": "Puerto José Banús", "parking": "Cristamar car park", "minutos": "10 min walk",
              "aria": "Map of Puerto Banús with the Cristamar car park and the walk to the harbour",
              "fuente": "Map: © OpenStreetMap contributors (ODbL)"},
     "llegar_enlace": "Open the car park in Google Maps",
+    "llegar_barco": "Where the boat is",
     "buceo_h2": "Do you dive?",
     "buceo_lead": ("I’m also a FEDAS diving instructor. I’ll take you to the dive sites of Málaga’s Blue Path to suit "
                    "your level, or to your very first try dive."),
@@ -392,7 +396,7 @@ T["en"] = {
                                    "hours, for up to 11 people. Extras for private trips are priced separately."),
         ("Do I need to know how to sail?", "No, I sail the boat. If you like, I’ll show you how to steer."),
         ("Where do we meet?", "At Puerto José Banús. I’ll send you the exact pontoon on WhatsApp."),
-        ("Where can I park?", "At the Cristamar car park, a 5-minute walk from the boat. It’s free if you’re sailing "
+        ("Where can I park?", "At the Cristamar car park, a 10-minute walk from the boat. It’s free if you’re sailing "
                               "with us."),
         ("What should I bring?", "Swimsuit, towel, sunscreen and sunglasses."),
         ("What if the weather is bad?", "I only go out when the sea is right. If I cancel because of the weather, you "
@@ -671,12 +675,13 @@ T["es"] = {
     "llegar_p": [
         "Salimos de Puerto José Banús, en Marbella. Cuando reserves, te mando por WhatsApp el pantalán exacto.",
         ("Si vienes en coche, aparca en el parking Cristamar, en la calle Francisco Villalón. Si sales en el barco, "
-         "es gratis, y de ahí al barco hay 5 minutos andando."),
+         "es gratis, y de ahí al barco hay 10 minutos andando."),
     ],
-    "mapa": {"puerto": "Puerto José Banús", "parking": "Parking Cristamar", "minutos": "5 min andando",
+    "mapa": {"puerto": "Puerto José Banús", "parking": "Parking Cristamar", "minutos": "10 min andando",
              "aria": "Plano de Puerto Banús con el parking Cristamar y el camino andando hasta el puerto",
              "fuente": "Plano: © colaboradores de OpenStreetMap (ODbL)"},
     "llegar_enlace": "Abrir el parking en Google Maps",
+    "llegar_barco": "Dónde está el barco",
     "buceo_h2": "¿Buceas?",
     "buceo_lead": ("También soy instructor de buceo FEDAS. Te llevo a los puntos de la Senda Azul de Málaga según tu "
                    "nivel y, si nunca has buceado, a tu primer bautizo."),
@@ -744,7 +749,7 @@ T["es"] = {
                             "para hasta 11 personas. Los extras de las privadas van aparte."),
         ("¿Tengo que saber navegar?", "No, el barco lo llevo yo. Si quieres, te enseño a llevar el timón."),
         ("¿Dónde quedamos?", "En Puerto José Banús. Te mando el pantalán exacto por WhatsApp."),
-        ("¿Dónde aparco?", "En el parking Cristamar, a 5 minutos andando del barco. Si sales con nosotros, es gratis."),
+        ("¿Dónde aparco?", "En el parking Cristamar, a 10 minutos andando del barco. Si sales con nosotros, es gratis."),
         ("¿Qué llevo?", "Bañador, toalla, crema solar y gafas de sol."),
         ("¿Y si hace mal tiempo?", "Solo salgo si el mar está bien. Si cancelo por el tiempo, eliges otro día o te "
                                    "devuelvo el dinero."),
@@ -1026,12 +1031,13 @@ T["ru"] = {
     "llegar_p": [
         "Мы выходим из порта Пуэрто-Хосе-Банус в Марбелье. После бронирования я пришлю в WhatsApp точный причал.",
         ("Если вы на машине, оставьте её на парковке Cristamar на улице Франсиско Вильялон. Для гостей яхты она "
-         "бесплатная, а до яхты оттуда 5 минут пешком."),
+         "бесплатная, а до яхты оттуда 10 минут пешком."),
     ],
-    "mapa": {"puerto": "Пуэрто-Хосе-Банус", "parking": "Парковка Cristamar", "minutos": "5 минут пешком",
+    "mapa": {"puerto": "Пуэрто-Хосе-Банус", "parking": "Парковка Cristamar", "minutos": "10 минут пешком",
              "aria": "Карта Пуэрто-Бануса с парковкой Cristamar и пешим путём до порта",
              "fuente": "Карта: © участники OpenStreetMap (ODbL)"},
     "llegar_enlace": "Открыть парковку в Google Картах",
+    "llegar_barco": "Где стоит яхта",
     "buceo_h2": "Ныряете?",
     "buceo_lead": ("Я ещё и инструктор по дайвингу FEDAS. Отвезу вас к точкам «Голубой тропы» Малаги под ваш уровень, "
                    "а если вы никогда не ныряли, на первое пробное погружение."),
@@ -1102,7 +1108,7 @@ T["ru"] = {
                                "часа, до 11 человек. Дополнительные услуги оплачиваются отдельно."),
         ("Нужно ли уметь ходить под парусом?", "Нет, яхтой управляю я. Если захотите, научу держать штурвал."),
         ("Где встречаемся?", "В Пуэрто-Хосе-Банусе. Точный причал пришлю в WhatsApp."),
-        ("Где оставить машину?", "На парковке Cristamar, в 5 минутах пешком от яхты. Для гостей яхты она бесплатная."),
+        ("Где оставить машину?", "На парковке Cristamar, в 10 минутах пешком от яхты. Для гостей яхты она бесплатная."),
         ("Что взять с собой?", "Купальник, полотенце, солнцезащитный крем и солнечные очки."),
         ("А если погода плохая?", "Я выхожу в море, только когда оно спокойное. Если я отменю прогулку из-за погоды, "
                                   "выбирайте другой день или полный возврат денег."),
