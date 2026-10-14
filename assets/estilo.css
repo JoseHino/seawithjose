@@ -141,7 +141,24 @@ p { margin: 0 0 1em; }
 .panel ul { list-style: none; padding: 0; margin: 0 0 30px; border-top: 2px solid var(--marino); }
 .panel li { padding: 11px 0; border-bottom: 1px solid rgba(11, 45, 82, .22); }
 .panel .boton { margin-top: auto; align-self: flex-start; }
-.precios-nota { margin-top: 14px; }
+.precios-nota { margin: 18px 0 0; font-weight: 700; color: var(--marino); }
+/* el capitán, como la tarjeta de tripulación que se cuelga en el pantalán */
+.capitan {
+  display: flex; align-items: center; gap: 18px; margin-top: 28px; padding: 16px 20px 16px 16px;
+  border: 3px solid var(--marino); border-left-width: 10px; max-width: 640px;
+}
+.capitan-foto { width: 88px; height: 88px; object-fit: cover; object-position: 50% 30%; flex: none; }
+.capitan-titulo { font: 800 28px/1 var(--titular); text-transform: uppercase; color: var(--marino); margin: 0 0 8px; }
+.capitan-creds { list-style: none; padding: 0; margin: 0 0 8px; font-size: 16px; line-height: 1.45; }
+.capitan-enlace { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--marino); }
+.hero-idiomas { margin: 14px 0 0; font-size: 16px; font-weight: 700; color: var(--amarillo); }
+
+/* ───── reseñas ───── */
+.resenas-lista { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 3px solid var(--marino); }
+.resenas-lista li { padding: 22px 24px 22px 0; border-bottom: 1px solid var(--linea); }
+.resenas-lista blockquote { margin: 0; font-size: 18px; }
+.resena-autor { margin: 12px 0 0; font-weight: 800; color: var(--marino); }
+.resena-autor span { display: block; font-weight: 400; font-size: 14px; color: var(--gris); }
 
 /* ───── tira de fotos ───── */
 .tira { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -574,7 +591,7 @@ a.parada:hover { scale: 1.12; }
   .tira figure:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
   .salida-rejilla, .reservar-rejilla, .barco-rejilla, .jose-rejilla, .llegar-rejilla, .camaras, .indices,
   .notas-detalle, .buceo-rejilla, .faq-rejilla { grid-template-columns: minmax(0, 1fr); }
-  .ruta-carta { margin-inline: -8px; }
+  .resenas-lista { grid-template-columns: minmax(0, 1fr); }
   .sonda { font-size: 24px; }
   .rotulo-tierra { font-size: 21px; }
   .rotulo-puerto { font-size: 32px; }

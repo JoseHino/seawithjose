@@ -23,7 +23,7 @@ RAIZ = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, RAIZ)
 from textos import (T, IDIOMAS, WHATSAPP, WHATSAPP_VISIBLE, INSTAGRAM, EMAIL, DOMINIO,  # noqa: E402
                     PRECIO_COMPARTIDA, PRECIO_PRIVADA, PLAZAS, HORARIOS, DIAS_RESERVA, PAGOS, CAMARAS_EMBED,
-                    PARKING_MAPS, SENDA_AZUL)
+                    PARKING_MAPS, SENDA_AZUL, RESENAS)
 CARTA = json.load(open(os.path.join(RAIZ, "fuentes", "carta.json"), encoding="utf-8"))
 MAPA = json.load(open(os.path.join(RAIZ, "fuentes", "mapa_banus.json"), encoding="utf-8"))
 VERSION = datetime.datetime.now().strftime("%Y%m%d%H%M")   # rompe la caché del CSS y el JS
@@ -287,7 +287,7 @@ def cabeza(t, lang, prefijo, titulo, descripcion, ruta, extra=""):
 <meta property="og:image" content="{DOMINIO}/assets/compartir.jpg">
 <meta property="og:locale" content="{t['og_locale']}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0B2D52">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="{prefijo}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{prefijo}assets/icono-180.png">
 <link rel="preload" href="{prefijo}assets/fuentes/sofia-sans-extra-condensed-normal-700-900-{sub}.woff2" as="font" type="font/woff2" crossorigin>
@@ -516,6 +516,17 @@ def portada(lang):
     bitacora = "".join(f'<li><time>{a}</time><span>{esc(x)}</span></li>' for a, x in t["bitacora"])
     cerca = [x for x in SENDA_AZUL if x["banus"]]
     sitios_cerca = "".join(ficha_sitio(x, SENDA_AZUL.index(x) + 1, s, lang, mini=True) for x in cerca)
+    resenas = "" if not RESENAS else f"""
+<section class="seccion resenas" aria-labelledby="resenas-titulo">
+  <div class="contenedor">
+    <h2 id="resenas-titulo">{esc(t["resenas_h2"])}</h2>
+    <ul class="resenas-lista">{"".join(
+        f'<li><blockquote><p>{esc(x["texto"])}</p></blockquote><p class="resena-autor">{esc(x["nombre"])}'
+        f'{", " + esc(x["origen"]) if x.get("origen") else ""}<span>{esc(x.get("fuente", ""))}</span></p></li>'
+        for x in RESENAS)}</ul>
+  </div>
+</section>
+"""
     faq = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in t["faq"])
     precarga = (f'<link rel="preload" as="image" imagesrcset="{prefijo}assets/fotos/petit-atardecer-560.webp 560w, '
                 f'{prefijo}assets/fotos/petit-atardecer-1047.webp 1047w" imagesizes="(max-width: 900px) 100vw, 44vw">\n')
@@ -530,6 +541,7 @@ def portada(lang):
     {empavesado(t)}
     <h1 id="titulo">{esc(t["hero_h1"])}</h1>
     <p class="entradilla">{esc(t["hero_lead"])}</p>
+    <p class="hero-idiomas">{esc(t["hero_idiomas"])}</p>
     <dl class="hero-precios">{hero_precios}</dl>
     <div class="botones">
       <a class="boton boton-amarillo boton-grande" href="#reservar">{esc(t["hero_cta"])}{FLECHA}</a>
@@ -547,10 +559,18 @@ def portada(lang):
     <h2 id="precios-titulo">{esc(t["precios_h2"])}</h2>
     <div class="paneles">{panel("compartida")}{panel("privada")}
     </div>
-    <p class="nota precios-nota">{esc(t["precios_nota"])}</p>
+    <p class="precios-nota">{esc(t["precios_nota"])}</p>
+    <div class="capitan">
+      {imagen("jose-buceo", (520,), "", prefijo, "capitan-foto", "88px")}
+      <div>
+        <p class="capitan-titulo">{esc(t["capitan"]["titulo"])}</p>
+        <ul class="capitan-creds">{"".join(f"<li>{esc(x)}</li>" for x in t["capitan"]["creds"])}</ul>
+        <a class="capitan-enlace" href="#jose">{esc(t["capitan"]["enlace"])}{FLECHA}</a>
+      </div>
+    </div>
   </div>
 </section>
-
+{resenas}
 <div class="tira">{tira}</div>
 
 <section class="seccion salida" id="salida" aria-labelledby="salida-titulo">

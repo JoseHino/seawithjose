@@ -25,6 +25,9 @@ DIAS_RESERVA = 120                    # hasta cuántos días por delante se pued
 # Enlaces de pago de Stripe (Payment Links). Mientras estén vacíos, se reserva por WhatsApp.
 # compartida: {número de personas: enlace}; privada: un enlace.
 PAGOS = {"compartida": {}, "privada": ""}
+# Reseñas reales (Google, CheckYeti…), en su idioma original. Lista vacía = el bloque no sale en la web.
+# Formato: {"texto": "...", "nombre": "Anna", "origen": "Alemania", "fuente": "Google"}. Nunca inventarlas.
+RESENAS = []
 # Si SkylineWebcams o meteo365 autorizan a seawithjose.es, aquí va la dirección del reproductor de cada
 # cámara (mismo orden que en T[...]["mar"]["camaras"]) y la web la enseña en directo en vez del enlace.
 CAMARAS_EMBED = ["", "", ""]
@@ -125,9 +128,10 @@ T = {}
 # ───────────────────────────────── INGLÉS ─────────────────────────────────
 T["en"] = {
     "nombre_idioma": "English", "corto": "EN", "og_locale": "en_GB",
-    "title": "Sea With Jose · Sailing trips from Puerto Banús, Marbella",
-    "description": ("Sailing trips from Puerto Banús with Jose, yacht captain and oceanographer. A shared trip is "
-                    "€60 per person; a private one is €490 for the boat (2 hours, up to 11 guests)."),
+    "title": "Sailing trips from Puerto Banús, Marbella: dolphins and snorkelling · Sea With Jose",
+    "description": ("Two hours under sail from Puerto Banús with Jose, yacht captain and oceanographer: dolphins, a swim "
+                    "with mask and snorkel, drinks and nibbles included. Shared trip €60 per person; private €490 for "
+                    "the boat, up to 11 guests."),
     "saltar": "Skip to content",
     "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat", "mar": "Sea today",
             "llegar": "Getting here", "buceo": "Diving"},
@@ -138,6 +142,7 @@ T["en"] = {
     "hero_lead": ("I’m Jose, a yacht captain and oceanographer. I take people sailing for two hours along the Marbella "
                   "coast on the Petit, a 12-metre sailing yacht. We stop for a swim well away from the beach and, with a "
                   "bit of luck, we see dolphins."),
+    "hero_idiomas": "I speak English, Spanish and Russian.",
     "hero_precios": [("Shared", "€60", "per person"), ("Private", "€490", "the boat, 2 hours")],
     "hero_cta": "Book",
     "hero_cta2": "Message me on WhatsApp",
@@ -145,15 +150,21 @@ T["en"] = {
     "precios_h2": "Prices",
     "opciones": {
         "compartida": {"titulo": "Shared trip", "precio": "€60", "unidad": "per person",
-                       "puntos": ["Two hours under sail", "With other travellers, 11 people at most",
-                                  "A swim in open water if the sea allows", "Take the helm if you like"],
+                       "puntos": ["Two hours under sail, 11 people at most", "Water, soft drinks, beer and nibbles",
+                                  "A swim with mask and snorkel, and I’ll tell you what lives down there",
+                                  "Take the helm if you like", "Free cancellation up to 24 hours before"],
                        "cta": "Book a seat"},
         "privada": {"titulo": "Private trip", "precio": "€490", "unidad": "the whole boat, 2 hours",
                     "puntos": ["Just your group, up to 11 people", "You choose the time, sunset included",
-                               "Add food, drinks, decorations or a jet ski"],
+                               "Water, soft drinks, beer and nibbles", "A swim with mask and snorkel",
+                               "Add a paella, cocktails, decorations or a jet ski",
+                               "Free cancellation up to 48 hours before"],
                     "cta": "Book the boat"},
     },
-    "precios_nota": "I’m always your skipper.",
+    "precios_nota": "Nothing else to pay on board. Just bring a swimsuit, a towel and sun cream.",
+    "capitan": {"titulo": "Your skipper: Jose", "creds": ["Yacht captain", "Oceanographer", "FEDAS diving instructor"],
+                "enlace": "More about me"},
+    "resenas_h2": "What people say",
     "fotos_alt": {"petit-delfines": "Dolphins leaping in front of a sailing yacht",
                   "petit-banera": "The Petit’s cockpit under way",
                   "petit-proa": "The Petit’s teak foredeck"},
@@ -185,8 +196,8 @@ T["en"] = {
         "total": "Total", "detalle_compartida": "{n} × €60", "detalle_privada": "The whole boat, 2 hours",
         "pagar": "Pay {total}", "whatsapp": "Book on WhatsApp",
         "seguro": "Payment is handled by Stripe. Your card details never go through this website.",
-        "politica": ("You can cancel for free up to 48 hours before. If the sea isn’t good enough to go out, we change "
-                     "the day or I give you your money back."),
+        "politica": ("Free cancellation up to 24 hours before a shared trip and 48 hours before a private one. If the "
+                     "sea isn’t good enough to go out, we change the day or I give you your money back."),
         "sin_pago": "Card payment will be ready in a few days. For now, book on WhatsApp and I’ll confirm straight away.",
         "falta_fecha": "Choose a day.", "falta_hora": "Choose a time.", "falta_nombre": "Tell me your name.",
         "prevision": "AEMET forecast for that time: sailing {n}/10 ({banda})",
@@ -380,7 +391,9 @@ T["en"] = {
         ("What should I bring?", "Swimsuit, towel, sunscreen and sunglasses."),
         ("What if the weather is bad?", "I only go out when the sea is right. If I cancel because of the weather, you "
                                         "choose another day or I give you your money back."),
-        ("Can I cancel?", "Yes, for free up to 48 hours before."),
+        ("Can I cancel?", "Yes, for free up to 24 hours before a shared trip and 48 hours before a private one."),
+        ("What’s included?", "Water, soft drinks, beer, some nibbles and a mask and snorkel for everyone. Nothing "
+                             "else to pay on board."),
         ("Can children come?", "Of course. Tell me their ages when you book."),
         ("Which languages do you speak?", "English, Spanish and Russian."),
     ],
@@ -400,7 +413,8 @@ T["en"] = {
                                  "website never sees or stores your card details. Your booking is confirmed when I "
                                  "write to you on WhatsApp or by email. The prices shown are final prices. Extras for "
                                  "private trips are priced and paid separately."),
-        ("Cancellations", "You can cancel for free up to 48 hours before your trip and I’ll refund you in full. If I "
+        ("Cancellations", "You can cancel for free up to 24 hours before a shared trip, or 48 hours before a private "
+                          "one, and I’ll refund you in full. If I "
                           "cancel because of the state of the sea or for safety reasons, you choose another day or a "
                           "full refund. As this is a leisure activity on a specific date, the 14-day right of "
                           "withdrawal does not apply (article 103.l of the Spanish consumer protection law)."),
@@ -435,9 +449,10 @@ T["en"] = {
 # ───────────────────────────────── ESPAÑOL ─────────────────────────────────
 T["es"] = {
     "nombre_idioma": "Español", "corto": "ES", "og_locale": "es_ES",
-    "title": "Sea With Jose · Salidas en velero desde Puerto Banús, Marbella",
-    "description": ("Salidas en velero desde Puerto Banús con Jose, capitán de yate y oceanógrafo. La compartida, 60 € "
-                    "por persona; la privada, 490 € el barco (2 horas, hasta 11 personas)."),
+    "title": "Salidas en velero desde Puerto Banús, Marbella: delfines y snorkel · Sea With Jose",
+    "description": ("Dos horas a vela desde Puerto Banús con Jose, capitán de yate y oceanógrafo: delfines, baño con "
+                    "gafas y tubo, bebida y picoteo incluidos. Compartida 60 € por persona; privada 490 € el barco, "
+                    "hasta 11 personas."),
     "saltar": "Ir al contenido",
     "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco", "mar": "El mar hoy",
             "llegar": "Cómo llegar", "buceo": "Buceo"},
@@ -447,6 +462,7 @@ T["es"] = {
     "hero_h1": "Salidas en velero desde Puerto Banús",
     "hero_lead": ("Soy Jose, capitán de yate y oceanógrafo. Salgo a navegar dos horas por la costa de Marbella en el "
                   "Petit, un velero de 12 metros. Paramos a bañarnos lejos de la orilla y, con suerte, vemos delfines."),
+    "hero_idiomas": "Hablo español, inglés y ruso.",
     "hero_precios": [("Compartida", "60 €", "por persona"), ("Privada", "490 €", "el barco, 2 horas")],
     "hero_cta": "Reservar",
     "hero_cta2": "Escríbeme por WhatsApp",
@@ -454,15 +470,21 @@ T["es"] = {
     "precios_h2": "Precios",
     "opciones": {
         "compartida": {"titulo": "Salida compartida", "precio": "60 €", "unidad": "por persona",
-                       "puntos": ["Dos horas a vela", "Con otros viajeros, como mucho 11 personas",
-                                  "Baño en mar abierto si el mar lo permite", "Si quieres, llevas el timón"],
+                       "puntos": ["Dos horas a vela, como mucho 11 personas", "Agua, refrescos, cerveza y picoteo",
+                                  "Baño con gafas y tubo, y te cuento qué vive ahí abajo",
+                                  "Si quieres, llevas el timón", "Cancelación gratis hasta 24 horas antes"],
                        "cta": "Reservar plaza"},
         "privada": {"titulo": "Salida privada", "precio": "490 €", "unidad": "el barco entero, 2 horas",
                     "puntos": ["Solo tu grupo, hasta 11 personas", "Tú eliges la hora, también al atardecer",
-                               "Puedes añadir comida, bebida, decoración o una moto de agua"],
+                               "Agua, refrescos, cerveza y picoteo", "Baño con gafas y tubo",
+                               "Puedes añadir paella, cócteles, decoración o una moto de agua",
+                               "Cancelación gratis hasta 48 horas antes"],
                     "cta": "Reservar el barco"},
     },
-    "precios_nota": "El capitán siempre soy yo.",
+    "precios_nota": "Nada más que pagar a bordo. Solo trae bañador, toalla y crema solar.",
+    "capitan": {"titulo": "Tu capitán: Jose", "creds": ["Capitán de yate", "Oceanógrafo", "Instructor de buceo FEDAS"],
+                "enlace": "Más sobre mí"},
+    "resenas_h2": "Lo que cuentan",
     "fotos_alt": {"petit-delfines": "Delfines saltando delante de un velero",
                   "petit-banera": "La bañera del Petit navegando",
                   "petit-proa": "La cubierta de teca del Petit"},
@@ -494,8 +516,8 @@ T["es"] = {
         "total": "Total", "detalle_compartida": "{n} × 60 €", "detalle_privada": "El barco entero, 2 horas",
         "pagar": "Pagar {total}", "whatsapp": "Reservar por WhatsApp",
         "seguro": "El pago lo gestiona Stripe. Los datos de tu tarjeta no pasan por esta web.",
-        "politica": ("Puedes cancelar gratis hasta 48 horas antes. Si el mar no deja salir, cambiamos el día o te "
-                     "devuelvo el dinero."),
+        "politica": ("Cancelación gratis hasta 24 horas antes en la compartida y 48 horas en la privada. Si el mar no "
+                     "deja salir, cambiamos el día o te devuelvo el dinero."),
         "sin_pago": "El pago con tarjeta estará listo en unos días. Mientras, reserva por WhatsApp y te confirmo enseguida.",
         "falta_fecha": "Elige el día.", "falta_hora": "Elige la hora.", "falta_nombre": "Dime tu nombre.",
         "prevision": "Previsión de AEMET para esa hora: navegar {n}/10 ({banda})",
@@ -691,7 +713,9 @@ T["es"] = {
         ("¿Qué llevo?", "Bañador, toalla, crema solar y gafas de sol."),
         ("¿Y si hace mal tiempo?", "Solo salgo si el mar está bien. Si cancelo por el tiempo, eliges otro día o te "
                                    "devuelvo el dinero."),
-        ("¿Puedo cancelar?", "Sí, gratis hasta 48 horas antes."),
+        ("¿Puedo cancelar?", "Sí, gratis hasta 24 horas antes en la compartida y 48 horas en la privada."),
+        ("¿Qué incluye?", "Agua, refrescos, cerveza, algo de picoteo y gafas y tubo para todos. Nada más que pagar "
+                          "a bordo."),
         ("¿Pueden venir niños?", "Claro. Dime sus edades al reservar."),
         ("¿En qué idiomas hablas?", "Español, inglés y ruso."),
     ],
@@ -711,7 +735,8 @@ T["es"] = {
                              "esta web no ve ni guarda los datos de tu tarjeta. La reserva queda confirmada cuando te "
                              "escribo por WhatsApp o por correo. Los precios que ves son precios finales. Los extras de "
                              "las privadas se presupuestan y se pagan aparte."),
-        ("Cancelaciones", "Puedes cancelar gratis hasta 48 horas antes de la salida y te devuelvo todo el importe. Si "
+        ("Cancelaciones", "Puedes cancelar gratis hasta 24 horas antes de una salida compartida, o 48 horas antes de "
+                          "una privada, y te devuelvo todo el importe. Si "
                           "cancelo yo por el estado del mar o por seguridad, eliges otro día o la devolución íntegra. "
                           "Al tratarse de una actividad de ocio con fecha concreta, no se aplica el derecho de "
                           "desistimiento de 14 días (artículo 103.l de la Ley General para la Defensa de los "
@@ -746,9 +771,10 @@ T["es"] = {
 # ───────────────────────────────── RUSO ─────────────────────────────────
 T["ru"] = {
     "nombre_idioma": "Русский", "corto": "RU", "og_locale": "ru_RU",
-    "title": "Sea With Jose · прогулки под парусом из Пуэрто-Бануса, Марбелья",
-    "description": ("Прогулки под парусом из Пуэрто-Бануса с Хосе, капитаном яхты и океанографом. Групповая прогулка "
-                    "стоит 60 € с человека, индивидуальная 490 € за яхту (2 часа, до 11 гостей)."),
+    "title": "Прогулки под парусом из Пуэрто-Бануса, Марбелья: дельфины и снорклинг · Sea With Jose",
+    "description": ("Два часа под парусом из Пуэрто-Бануса с Хосе, капитаном яхты и океанографом: дельфины, купание "
+                    "с маской и трубкой, напитки и закуски включены. Групповая прогулка 60 € с человека, "
+                    "индивидуальная 490 € за яхту, до 11 гостей."),
     "saltar": "Перейти к содержанию",
     "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта", "mar": "Море сегодня",
             "llegar": "Как добраться", "buceo": "Дайвинг"},
@@ -759,6 +785,7 @@ T["ru"] = {
     "hero_lead": ("Меня зовут Хосе, я капитан яхты и океанограф. Два часа мы ходим под парусом вдоль побережья "
                   "Марбельи на «Пти», 12-метровой парусной яхте. Купаемся вдали от пляжа, а если повезёт, видим "
                   "дельфинов."),
+    "hero_idiomas": "Говорю по-русски, по-английски и по-испански.",
     "hero_precios": [("Групповая", "60 €", "с человека"), ("Индивидуальная", "490 €", "яхта, 2 часа")],
     "hero_cta": "Забронировать",
     "hero_cta2": "Написать в WhatsApp",
@@ -766,15 +793,21 @@ T["ru"] = {
     "precios_h2": "Цены",
     "opciones": {
         "compartida": {"titulo": "Групповая прогулка", "precio": "60 €", "unidad": "с человека",
-                       "puntos": ["Два часа под парусом", "С другими путешественниками, не больше 11 человек",
-                                  "Купание в открытом море, если позволяет погода", "Можно постоять за штурвалом"],
+                       "puntos": ["Два часа под парусом, не больше 11 человек", "Вода, газировка, пиво и закуски",
+                                  "Купание с маской и трубкой, и я расскажу, кто живёт на дне",
+                                  "Можно постоять за штурвалом", "Бесплатная отмена не позднее чем за 24 часа"],
                        "cta": "Забронировать место"},
         "privada": {"titulo": "Индивидуальная прогулка", "precio": "490 €", "unidad": "вся яхта, 2 часа",
                     "puntos": ["Только ваша компания, до 11 человек", "Время выбираете вы, в том числе закат",
-                               "Можно добавить еду, напитки, украшения или гидроцикл"],
+                               "Вода, газировка, пиво и закуски", "Купание с маской и трубкой",
+                               "Можно добавить паэлью, коктейли, украшения или гидроцикл",
+                               "Бесплатная отмена не позднее чем за 48 часов"],
                     "cta": "Забронировать яхту"},
     },
-    "precios_nota": "Капитан всегда я.",
+    "precios_nota": "На борту больше ничего платить не нужно. Возьмите купальник, полотенце и солнцезащитный крем.",
+    "capitan": {"titulo": "Ваш капитан: Хосе", "creds": ["Капитан яхты", "Океанограф", "Инструктор по дайвингу FEDAS"],
+                "enlace": "Обо мне"},
+    "resenas_h2": "Отзывы",
     "fotos_alt": {"petit-delfines": "Дельфины выпрыгивают перед парусной яхтой",
                   "petit-banera": "Кокпит «Пти» на ходу",
                   "petit-proa": "Тиковая палуба «Пти»"},
@@ -806,8 +839,8 @@ T["ru"] = {
         "total": "Итого", "detalle_compartida": "{n} × 60 €", "detalle_privada": "Вся яхта, 2 часа",
         "pagar": "Оплатить {total}", "whatsapp": "Забронировать через WhatsApp",
         "seguro": "Оплату проводит Stripe. Данные карты не проходят через этот сайт.",
-        "politica": ("Отменить можно бесплатно не позднее чем за 48 часов. Если море не позволяет выйти, перенесём "
-                     "день или я верну деньги."),
+        "politica": ("Бесплатная отмена не позднее чем за 24 часа для групповой прогулки и за 48 часов для "
+                     "индивидуальной. Если море не позволяет выйти, перенесём день или я верну деньги."),
         "sin_pago": "Оплата картой заработает через несколько дней. Пока бронируйте через WhatsApp, я сразу подтвержу.",
         "falta_fecha": "Выберите день.", "falta_hora": "Выберите время.", "falta_nombre": "Напишите своё имя.",
         "prevision": "Прогноз AEMET на это время: парус {n}/10 ({banda})",
@@ -1009,7 +1042,10 @@ T["ru"] = {
         ("Что взять с собой?", "Купальник, полотенце, солнцезащитный крем и солнечные очки."),
         ("А если погода плохая?", "Я выхожу в море, только когда оно спокойное. Если я отменю прогулку из-за погоды, "
                                   "выбирайте другой день или полный возврат денег."),
-        ("Можно ли отменить бронь?", "Да, бесплатно не позднее чем за 48 часов."),
+        ("Можно ли отменить бронь?", "Да, бесплатно не позднее чем за 24 часа для групповой прогулки и за 48 часов "
+                                     "для индивидуальной."),
+        ("Что включено?", "Вода, газировка, пиво, закуски, а также маска и трубка для каждого. На борту больше ничего "
+                          "платить не нужно."),
         ("Можно ли с детьми?", "Конечно. Укажите их возраст при бронировании."),
         ("На каких языках вы говорите?", "На русском, английском и испанском."),
     ],
@@ -1029,7 +1065,8 @@ T["ru"] = {
                                   "сайт не видит и не хранит данные вашей карты. Бронь подтверждается, когда я пишу вам "
                                   "в WhatsApp или по почте. Указанные цены окончательные. Дополнительные услуги для "
                                   "индивидуальных прогулок оцениваются и оплачиваются отдельно."),
-        ("Отмена", "Вы можете бесплатно отменить бронь не позднее чем за 48 часов до прогулки, и я верну всю сумму. "
+        ("Отмена", "Вы можете бесплатно отменить бронь не позднее чем за 24 часа до групповой прогулки или за 48 часов "
+                   "до индивидуальной, и я верну всю сумму. "
                    "Если прогулку отменяю я из-за состояния моря или по соображениям безопасности, вы выбираете "
                    "другой день или полный возврат. Поскольку это досуговая услуга на конкретную дату, 14-дневное "
                    "право на отказ не применяется (статья 103.l испанского закона о защите прав потребителей)."),
