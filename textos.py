@@ -28,6 +28,11 @@ PAGOS = {"compartida": {}, "privada": ""}
 # Reseñas reales (Google, CheckYeti…), en su idioma original. Lista vacía = el bloque no sale en la web.
 # Formato: {"texto": "...", "nombre": "Anna", "origen": "Alemania", "fuente": "Google"}. Nunca inventarlas.
 RESENAS = []
+
+# ─────────────────────────────── la Bitácora (revista quincenal) ───────────────────────────────
+# Formularios de suscripción de Brevo (Contactos > Formularios > Compartir), uno por idioma de la revista.
+# Mientras estén vacíos, la página invita a escribir por WhatsApp.
+REVISTA_FORMS = {"es": "", "en": ""}
 # Si SkylineWebcams o meteo365 autorizan a seawithjose.es, aquí va la dirección del reproductor de cada
 # cámara (mismo orden que en T[...]["mar"]["camaras"]) y la web la enseña en directo en vez del enlace.
 CAMARAS_EMBED = ["", "", ""]
@@ -134,7 +139,7 @@ T["en"] = {
                     "the boat, up to 11 guests."),
     "saltar": "Skip to content",
     "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat", "mar": "Sea today",
-            "llegar": "Getting here", "buceo": "Diving"},
+            "llegar": "Getting here", "buceo": "Diving", "revista": "Logbook"},
     "menu": "Menu", "whatsapp_corto": "WhatsApp", "reservar_corto": "Book",
     "wa_hola": "Hi Jose! I’d like to go sailing on the Petit.",
     "banderas_aria": "Sea With Jose spelt out in International Code of Signals flags",
@@ -444,6 +449,35 @@ T["en"] = {
     "volver": "Back to the home page",
     "e404_h1": "This page is off the chart",
     "e404_p": "The address may be wrong or the page has moved.",
+    "revista": {
+        "title": "The Sea Logbook: a free fortnightly magazine about the sea · Sea With Jose",
+        "description": ("Every fortnight, in your inbox: the water temperature off Marbella, and the most interesting news "
+                        "on diving, sailing, fishing, sea travel and the ocean. Written by Jose, captain and oceanographer."),
+        "eyebrow": "Free · every fortnight",
+        "h1": "The Sea Logbook",
+        "lead": ("Every fortnight I send a short magazine about the sea: how the water has been off Marbella, and the "
+                 "best news on diving, sailing, fishing and sea travel, picked and explained by me."),
+        "ejes_h": "What’s inside",
+        "ejes": [("mar", "The sea this fortnight", "Water temperature, waves and wind off Puerto Banús, and the moon for fishing."),
+                 ("buceo", "Diving", "New sites, marine life, courses and what’s happening under the water."),
+                 ("vela", "Sailing and boats", "Regattas, boats, seamanship and news from the marinas."),
+                 ("pesca", "Fishing", "Seasons, species and the rules for recreational fishing."),
+                 ("viajes", "Sea travel", "Destinations for diving and sailing, near and far."),
+                 ("ciencia", "Ocean news", "Discoveries, whales, sharks and the stories that make the headlines.")],
+        "susc_h": "Get it in your inbox",
+        "susc_p": "Choose your language. You’ll get an email to confirm, and you can unsubscribe with one click.",
+        "susc_es": "Subscribe in Spanish",
+        "susc_en": "Subscribe in English",
+        "susc_sin": "Subscriptions open very soon. Meanwhile, message me and I’ll add you.",
+        "susc_wa": "Hi Jose! I’d like to receive the Sea Logbook.",
+        "archivo_h": "Past issues",
+        "archivo_vacio": "The first issue is on its way.",
+        "archivo_idioma": {"es": "Spanish", "en": "English"},
+        "privacidad": ("Your email is only used to send you the Logbook, through Brevo (Sendinblue SAS, EU). "
+                       "You can unsubscribe at any time from any issue."),
+        "estado": {"pendiente": ("Check your inbox", "I’ve sent you an email with a link to confirm your subscription."),
+                   "ok": ("You’re in!", "The next issue of the Logbook will reach you in a few days.")},
+    },
 }
 
 # ───────────────────────────────── ESPAÑOL ─────────────────────────────────
@@ -455,7 +489,7 @@ T["es"] = {
                     "hasta 11 personas."),
     "saltar": "Ir al contenido",
     "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco", "mar": "El mar hoy",
-            "llegar": "Cómo llegar", "buceo": "Buceo"},
+            "llegar": "Cómo llegar", "buceo": "Buceo", "revista": "Bitácora"},
     "menu": "Menú", "whatsapp_corto": "WhatsApp", "reservar_corto": "Reservar",
     "wa_hola": "¡Hola Jose! Me gustaría salir a navegar en el Petit.",
     "banderas_aria": "Sea With Jose escrito con banderas del Código Internacional de Señales",
@@ -766,6 +800,35 @@ T["es"] = {
     "volver": "Volver al inicio",
     "e404_h1": "Esta página está fuera de la carta",
     "e404_p": "Puede que la dirección esté mal escrita o que la página haya cambiado de sitio.",
+    "revista": {
+        "title": "Bitácora del mar: revista quincenal gratuita sobre el mar · Sea With Jose",
+        "description": ("Cada quince días, en tu correo: la temperatura del agua en Marbella y lo más interesante del buceo, "
+                        "la vela, la pesca, los viajes por mar y el océano. La escribe Jose, capitán y oceanógrafo."),
+        "eyebrow": "Gratis · cada quince días",
+        "h1": "Bitácora del mar",
+        "lead": ("Cada quince días envío una revista corta sobre el mar: cómo ha estado el agua en Marbella y las mejores "
+                 "noticias de buceo, vela, pesca y viajes por mar, elegidas y explicadas por mí."),
+        "ejes_h": "Qué trae cada número",
+        "ejes": [("mar", "El mar en la quincena", "Temperatura del agua, oleaje y viento frente a Puerto Banús, y la luna para pescar."),
+                 ("buceo", "Buceo", "Inmersiones, fauna, cursos y lo que pasa bajo el agua."),
+                 ("vela", "Vela y barcos", "Regatas, barcos, náutica y novedades de los puertos."),
+                 ("pesca", "Pesca", "Temporadas, especies y normas de la pesca recreativa."),
+                 ("viajes", "Viajes por mar", "Destinos para bucear y navegar, cerca y lejos."),
+                 ("ciencia", "Noticias del océano", "Descubrimientos, ballenas, tiburones y las historias que dan que hablar.")],
+        "susc_h": "Recíbela en tu correo",
+        "susc_p": "Elige el idioma. Te llegará un correo para confirmar y puedes darte de baja con un clic.",
+        "susc_es": "Suscribirme en español",
+        "susc_en": "Suscribirme en inglés",
+        "susc_sin": "La suscripción se abre muy pronto. Mientras tanto, escríbeme y te apunto.",
+        "susc_wa": "¡Hola Jose! Me gustaría recibir la Bitácora del mar.",
+        "archivo_h": "Números publicados",
+        "archivo_vacio": "El primer número está en camino.",
+        "archivo_idioma": {"es": "Español", "en": "Inglés"},
+        "privacidad": ("Tu correo solo se usa para enviarte la Bitácora, a través de Brevo (Sendinblue SAS, UE). "
+                       "Puedes darte de baja cuando quieras desde cualquier número."),
+        "estado": {"pendiente": ("Revisa tu correo", "Te he enviado un mensaje con un enlace para confirmar la suscripción."),
+                   "ok": ("¡Ya estás dentro!", "El próximo número de la Bitácora te llegará en unos días.")},
+    },
 }
 
 # ───────────────────────────────── RUSO ─────────────────────────────────
@@ -777,7 +840,7 @@ T["ru"] = {
                     "индивидуальная 490 € за яхту, до 11 гостей."),
     "saltar": "Перейти к содержанию",
     "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта", "mar": "Море сегодня",
-            "llegar": "Как добраться", "buceo": "Дайвинг"},
+            "llegar": "Как добраться", "buceo": "Дайвинг", "revista": "Журнал"},
     "menu": "Меню", "whatsapp_corto": "WhatsApp", "reservar_corto": "Забронировать",
     "wa_hola": "Здравствуйте, Хосе! Хочу выйти в море на «Пти».",
     "banderas_aria": "Sea With Jose, написанное флагами Международного свода сигналов",
@@ -1097,4 +1160,33 @@ T["ru"] = {
     "volver": "На главную",
     "e404_h1": "Этой страницы нет на карте",
     "e404_p": "Возможно, адрес набран с ошибкой или страница переехала.",
+    "revista": {
+        "title": "Морской журнал: бесплатная рассылка раз в две недели · Sea With Jose",
+        "description": ("Раз в две недели на почту: температура воды в Марбелье и самое интересное о дайвинге, парусе, "
+                        "рыбалке, морских путешествиях и океане. Пишет Хосе, капитан и океанограф."),
+        "eyebrow": "Бесплатно · раз в две недели",
+        "h1": "Морской журнал",
+        "lead": ("Раз в две недели я отправляю короткий журнал о море: какой была вода в Марбелье и лучшие новости о "
+                 "дайвинге, парусе, рыбалке и морских путешествиях. Журнал выходит на английском и испанском."),
+        "ejes_h": "Что в каждом номере",
+        "ejes": [("mar", "Море за две недели", "Температура воды, волны и ветер у Пуэрто-Бануса и луна для рыбалки."),
+                 ("buceo", "Дайвинг", "Места погружений, морская жизнь, курсы."),
+                 ("vela", "Парус и яхты", "Регаты, яхты, морское дело и новости марин."),
+                 ("pesca", "Рыбалка", "Сезоны, виды рыб и правила любительской рыбалки."),
+                 ("viajes", "Морские путешествия", "Куда поехать нырять и ходить под парусом."),
+                 ("ciencia", "Новости океана", "Открытия, киты, акулы и громкие истории.")],
+        "susc_h": "Подписаться",
+        "susc_p": "Выберите язык. Вам придёт письмо для подтверждения; отписаться можно в один клик.",
+        "susc_es": "Подписаться (испанский)",
+        "susc_en": "Подписаться (английский)",
+        "susc_sin": "Подписка скоро откроется. А пока напишите мне, и я вас добавлю.",
+        "susc_wa": "Здравствуйте, Хосе! Хочу получать морской журнал.",
+        "archivo_h": "Вышедшие номера",
+        "archivo_vacio": "Первый номер уже готовится.",
+        "archivo_idioma": {"es": "Испанский", "en": "Английский"},
+        "privacidad": ("Ваш адрес используется только для рассылки журнала через Brevo (Sendinblue SAS, ЕС). "
+                       "Отписаться можно в любой момент из любого номера."),
+        "estado": {"pendiente": ("Проверьте почту", "Я отправил вам письмо со ссылкой для подтверждения подписки."),
+                   "ok": ("Вы подписаны!", "Следующий номер придёт через несколько дней.")},
+    },
 }

@@ -24,6 +24,7 @@ Eso regenera `index.html`, `es/`, `ru/`, las páginas legales, el 404, el
 | `scripts/carta.py` | Isobatas reales de EMODnet (CC BY 4.0) para la carta con la ruta → `fuentes/carta.json`. |
 | `scripts/mapa.py` | Plano de Puerto Banús con el parking Cristamar, de OpenStreetMap (ODbL) → `fuentes/mapa_banus.json`. |
 | `scripts/recursos.py` | Descarga las tipografías (servidas desde la propia web, sin cookies) y optimiza las fotos. |
+| `scripts/revista.py` | La Bitácora del mar: ver más abajo. |
 | `scripts/parte_mar.py` | Previsión de AEMET y notas del 1 al 10 para navegar, bucear y pescar → `datos/mar.json`. |
 
 ## El mar, ahora (parte, notas y cámaras)
@@ -51,6 +52,28 @@ Con eso la web pinta el parte de la portada y la sección «El mar, ahora»:
 
 Sin datos (AEMET caído), la portada enseña la puesta de sol, que se calcula en
 el navegador, y la sección invita a escribir por WhatsApp.
+
+## La Bitácora del mar (revista quincenal)
+
+Revista gratuita cada quince días, en español e inglés: el mar de la quincena frente a Puerto Banús (agua,
+olas, viento y luna) y lo más interesante de Marbella, buceo, vela y barcos, pesca, viajes por mar y el océano.
+Página: `revista.html` (EN), `es/revista.html`, `ru/revista.html`; números publicados en `revista/`.
+
+| Pieza | Qué hace |
+|---|---|
+| `revista-noticias.yml` → `scripts/revista_noticias.py` | Cada día guarda titulares de Google Noticias por eje e idioma en `datos/revista/noticias.json` (40 días). |
+| `revista-borrador.yml` → `scripts/revista.py borrador` | Días 1 y 16 (o a mano): cifras del mar (Open-Meteo y AEMET), la IA redacta los dos idiomas y se abre una incidencia con la etiqueta `revista` que menciona a Jose. |
+| `revista-revision.yml` → `scripts/revista.py revisar` | Cuando Jose contesta la incidencia (respondiendo al correo de GitHub): «OK» publica en la web y envía con Brevo; si pide cambios, la IA hace la versión siguiente. |
+| `revista/instrucciones_*.md` | Lo que se le pide a la IA. Se cambian aquí, sin tocar código. **La IA no escribe cifras**: la tabla del mar la monta el script. |
+
+Necesita en GitHub (*Settings → Secrets and variables → Actions*):
+
+- Secretos: `OPENAI_API_KEY` y `BREVO_API_KEY`.
+- Variables: `BREVO_LISTA_ES` y `BREVO_LISTA_EN` (ID de cada lista de Brevo). Opcionales: `REVISTA_MODELO`
+  (por defecto `gpt-5.6-terra`), `REVISTA_REMITENTE` (por defecto `boletin@seawithjose.es`, dominio ya
+  autenticado en Brevo) y `REVISTA_RESPONDER` (adonde van las respuestas de los lectores).
+- En `textos.py`, `REVISTA_FORMS`: el enlace del formulario de Brevo de cada idioma. Al confirmar, el formulario
+  debe volver a `https://seawithjose.es/revista.html?suscripcion=pendiente` y `…?suscripcion=ok`.
 
 ## Dominio
 

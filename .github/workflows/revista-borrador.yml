@@ -1,0 +1,54 @@
+name: Bitácora · borrador
+
+# Los días 1 y 16 prepara el número de la quincena y abre una incidencia para que Jose lo apruebe por correo.
+# A mano (Run workflow) se puede pedir un número concreto (AAAA-MM-1 o AAAA-MM-2) y dejar notas para la IA.
+on:
+  schedule:
+    - cron: "0 7 1,16 * *"
+  workflow_dispatch:
+    inputs:
+      numero:
+        description: "Número (AAAA-MM-1 primera quincena, AAAA-MM-2 segunda). Vacío = el que toca."
+        required: false
+      notas:
+        description: "Indicaciones para la IA (opcional)"
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: web
+  cancel-in-progress: false
+
+jobs:
+  borrador:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Noticias al día
+        run: python scripts/revista_noticias.py
+      - name: Redactar el borrador
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REVISTA_MODELO: ${{ vars.REVISTA_MODELO }}
+          REVISTA_NOTAS: ${{ inputs.notas }}
+        run: python scripts/revista.py borrador "${{ inputs.numero }}"
+      - name: Subir
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add revista datos/revista
+          git commit -m "Bitácora: borrador $(date -u +%Y-%m-%d)"
+          git pull --rebase
+          git push
+      - name: Abrir la incidencia para aprobarlo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVISTA_EDITOR: ${{ vars.REVISTA_EDITOR }}
+        run: python scripts/revista.py abrir

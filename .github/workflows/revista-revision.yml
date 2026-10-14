@@ -1,0 +1,56 @@
+name: Bitácora · revisión
+
+# Cuando Jose contesta a la incidencia del borrador (desde el correo de GitHub o en la web):
+# «OK» → se publica en la web y se envía con Brevo; otra cosa → la IA aplica los cambios y sale una versión nueva.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: web
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    if: >-
+      contains(github.event.issue.labels.*.name, 'revista') &&
+      github.event.issue.state == 'open' &&
+      github.event.comment.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Leer la respuesta
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REVISTA_MODELO: ${{ vars.REVISTA_MODELO }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LISTA_ES: ${{ vars.BREVO_LISTA_ES }}
+          BREVO_LISTA_EN: ${{ vars.BREVO_LISTA_EN }}
+          REVISTA_REMITENTE: ${{ vars.REVISTA_REMITENTE }}
+          REVISTA_RESPONDER: ${{ vars.REVISTA_RESPONDER }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: python scripts/revista.py revisar
+      - name: Subir
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A revista datos/revista index.html es ru revista.html sitemap.xml robots.txt 404.html buceo.html legal.html gracias.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Bitácora: revisión de la incidencia #${{ github.event.issue.number }}"
+          git pull --rebase
+          git push
+      - name: Contestar en la incidencia
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python scripts/revista.py comentar

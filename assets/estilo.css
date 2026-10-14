@@ -635,3 +635,34 @@ a.parada:hover { scale: 1.12; }
   .extra-nombre { font-size: 27px; }
   .final-fila { flex-direction: column; align-items: stretch; }
 }
+
+/* ───── la Bitácora del mar (revista) ───── */
+.revista-cabeza { background: var(--cielo); }
+.revista-cabeza h1 { font-size: clamp(64px, 10vw, 140px); }
+.revista-eyebrow { font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 15px; color: var(--rojo); margin: 0 0 14px; }
+.revista-estado { display: grid; gap: 2px; max-width: 60ch; margin-top: 26px; padding: 16px 20px; border-left: 6px solid var(--amarillo); background: var(--blanco); }
+.revista-estado strong { color: var(--marino); font-size: 19px; }
+.revista-ejes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 40px; border-top: 2px solid var(--marino); }
+.revista-eje { padding: 26px 24px 28px 0; border-bottom: 1px solid var(--linea); }
+.revista-eje .simbolo { color: var(--azul); margin-bottom: 12px; }
+.revista-eje h3 { color: var(--marino); margin-bottom: 6px; }
+.revista-eje p { margin: 0; color: var(--gris); font-size: 17px; }
+.revista-susc { background: var(--marino); color: #fff; }
+.revista-susc h2, .revista-susc h3 { color: #fff; }
+.revista-susc .intro, .revista-susc .nota { color: #C9D7E6; }
+.revista-susc-rejilla { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px 64px; align-items: start; }
+.revista-susc .boton-azul { background: #fff; color: var(--marino); }
+.revista-susc .boton-azul:hover { background: var(--cielo); color: var(--marino); }
+.revista-privacidad { margin-top: 22px; max-width: 56ch; font-size: 14px; }
+.revista-archivo { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid rgba(255,255,255,.25); }
+.revista-archivo li { display: grid; grid-template-columns: auto 1fr; gap: 2px 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.25); }
+.revista-num { grid-row: span 2; font: 800 22px/1 var(--titular); text-transform: uppercase; color: var(--amarillo); padding-top: 3px; }
+.revista-tit { font-weight: 700; }
+.revista-idiomas { font-size: 15px; }
+.revista-idiomas a { color: #fff; }
+.revista-susc h3 + .nota { margin-top: 14px; }
+@media (max-width: 900px) {
+  .revista-ejes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .revista-susc-rejilla { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) { .revista-ejes { grid-template-columns: 1fr; } }

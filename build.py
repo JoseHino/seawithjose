@@ -23,7 +23,7 @@ RAIZ = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, RAIZ)
 from textos import (T, IDIOMAS, WHATSAPP, WHATSAPP_VISIBLE, INSTAGRAM, EMAIL, DOMINIO,  # noqa: E402
                     PRECIO_COMPARTIDA, PRECIO_PRIVADA, PLAZAS, HORARIOS, DIAS_RESERVA, PAGOS, CAMARAS_EMBED,
-                    PARKING_MAPS, SENDA_AZUL, RESENAS)
+                    PARKING_MAPS, SENDA_AZUL, RESENAS, REVISTA_FORMS)
 CARTA = json.load(open(os.path.join(RAIZ, "fuentes", "carta.json"), encoding="utf-8"))
 MAPA = json.load(open(os.path.join(RAIZ, "fuentes", "mapa_banus.json"), encoding="utf-8"))
 VERSION = datetime.datetime.now().strftime("%Y%m%d%H%M")   # rompe la caché del CSS y el JS
@@ -302,7 +302,8 @@ def cabecera(t, lang, prefijo, pagina="index.html"):
     inicio = "" if pagina == "index.html" else f"{prefijo}{carpeta(lang)}"
     destino = {k: f"{inicio}#{k}" for k in t["nav"]}
     destino["buceo"] = f"{prefijo}{carpeta(lang)}buceo.html"
-    actual = {"buceo.html": "buceo"}.get(pagina)
+    destino["revista"] = f"{prefijo}{carpeta(lang)}revista.html"
+    actual = {"buceo.html": "buceo", "revista.html": "revista"}.get(pagina)
     enlaces = "".join(f'<li><a href="{destino[k]}"' + (' aria-current="page"' if k == actual else "")
                       + f'>{esc(v)}</a></li>' for k, v in t["nav"].items())
     ruta = "" if pagina in ("index.html", "404.html") else pagina
@@ -851,6 +852,113 @@ def pagina_buceo(lang):
     return cabeza(t, lang, prefijo, t["buceo_title"], t["buceo_description"], "buceo.html") + cuerpo
 
 
+# ─────────────────────────────── la Bitácora del mar (revista quincenal) ───────────────────────────────
+# Iconos de los ejes, con el mismo trazo que el resto de la web
+ICONOS_EJE = {
+    "mar": '<path d="M4 30c4-3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 8 3"/><path d="M4 22c4-3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 8 3"/><path d="M34 6v10M30 10h8"/>',
+    "buceo": '<path d="M8 14h36v12a6 6 0 0 1-6 6h-6l-4-5-4 5h-6a6 6 0 0 1-6-6z"/><path d="M44 18h4v18"/>',
+    "vela": '<path d="M26 4v30"/><path d="M26 6 10 30h16z"/><path d="M28 10l12 20H28z"/><path d="M6 36h40l-4 5H10z"/>',
+    "pesca": '<path d="M10 22c6-8 18-8 26 0-8 8-20 8-26 0z"/><path d="M36 22l8-6v12z"/><circle cx="17" cy="20" r="1.5"/>',
+    "viajes": '<circle cx="26" cy="22" r="16"/><path d="M10 22h32M26 6c-6 6-6 26 0 32M26 6c6 6 6 26 0 32"/>',
+    "ciencia": '<path d="M6 26c6-10 22-14 34-6l6-6v20l-6-6c-12 8-28 4-34-2z"/><circle cx="16" cy="24" r="1.5"/>',
+}
+INDICE_REVISTA = os.path.join(RAIZ, "revista", "index.json")
+
+
+def numeros_revista():
+    """Los números publicados, del más reciente al más antiguo (los escribe scripts/revista.py)."""
+    try:
+        lista = json.load(open(INDICE_REVISTA, encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    return sorted(lista, key=lambda x: x.get("numero", ""), reverse=True)
+
+
+def pagina_revista(lang):
+    t = T[lang]
+    prefijo = prefijo_de(lang)
+    r = t["revista"]
+    ejes = "".join(
+        f'<article class="revista-eje"><svg class="simbolo" viewBox="0 0 52 44" aria-hidden="true">{ICONOS_EJE[k]}</svg>'
+        f'<h3>{esc(a)}</h3><p>{esc(b)}</p></article>' for k, a, b in r["ejes"])
+    if any(REVISTA_FORMS.values()):
+        botones = "".join(
+            f'<a class="boton {"boton-amarillo" if i == 0 else "boton-azul"}" href="{esc(REVISTA_FORMS[l])}" '
+            f'target="_blank" rel="noopener">{esc(r["susc_" + l])}{FLECHA}</a>'
+            for i, l in enumerate(l for l in (["es", "en"] if lang == "es" else ["en", "es"]) if REVISTA_FORMS[l]))
+    else:
+        botones = (f'<p class="nota">{esc(r["susc_sin"])}</p>'
+                   f'<a class="boton boton-amarillo" href="{wa(r["susc_wa"])}">{ICONO_WA}WhatsApp</a>')
+    numeros = numeros_revista()
+    if numeros:
+        filas = []
+        for n in numeros:
+            enlaces = " · ".join(
+                f'<a href="{prefijo}revista/{esc(n["archivos"][l])}" lang="{l}">{esc(r["archivo_idioma"][l])}</a>'
+                for l in ("es", "en") if n.get("archivos", {}).get(l))
+            titulo = n.get("titulos", {}).get(lang if lang in ("es", "en") else "en") or n.get("titulos", {}).get("es", "")
+            filas.append(f'<li><span class="revista-num">{esc(n["fecha"].get(lang, n["fecha"].get("en", "")))}</span>'
+                         f'<span class="revista-tit">{esc(titulo)}</span><span class="revista-idiomas">{enlaces}</span></li>')
+        archivo = f'<ol class="revista-archivo">{"".join(filas)}</ol>'
+    else:
+        archivo = f'<p class="nota">{esc(r["archivo_vacio"])}</p>'
+    estados = json.dumps({k: list(v) for k, v in r["estado"].items()}, ensure_ascii=False)
+    datos_js = {"lang": lang, "prefijo": prefijo, "whatsapp": WHATSAPP, "pagina": "revista"}
+    cuerpo = f"""
+<body class="pagina-revista">
+{cabecera(t, lang, prefijo, "revista.html")}
+<main id="contenido">
+<section class="seccion revista-cabeza" aria-labelledby="revista-titulo">
+  <div class="contenedor">
+    <p class="revista-eyebrow">{esc(r["eyebrow"])}</p>
+    <h1 id="revista-titulo">{esc(r["h1"])}</h1>
+    <p class="intro">{esc(r["lead"])}</p>
+    <div class="revista-estado" role="status" hidden></div>
+    <div class="botones"><a class="boton boton-amarillo boton-grande" href="#suscribirse">{esc(r["susc_h"])}{FLECHA}</a></div>
+  </div>
+</section>
+
+<section class="seccion revista-ejes-seccion" aria-labelledby="ejes-titulo">
+  <div class="contenedor">
+    <h2 id="ejes-titulo">{esc(r["ejes_h"])}</h2>
+    <div class="revista-ejes">{ejes}</div>
+  </div>
+</section>
+
+<section class="seccion revista-susc" id="suscribirse" aria-labelledby="susc-titulo">
+  <div class="contenedor revista-susc-rejilla">
+    <div>
+      <h2 id="susc-titulo">{esc(r["susc_h"])}</h2>
+      <p class="intro">{esc(r["susc_p"])}</p>
+      <div class="botones">{botones}</div>
+      <p class="nota revista-privacidad">{esc(r["privacidad"])}</p>
+    </div>
+    <div>
+      <h3>{esc(r["archivo_h"])}</h3>
+      {archivo}
+    </div>
+  </div>
+</section>
+</main>
+{pie(t, lang, prefijo, "revista.html")}
+{datos_pagina(datos_js)}
+<script>
+(function () {{
+  var e = {estados}[new URLSearchParams(location.search).get("suscripcion")];
+  if (!e) return;
+  var c = document.querySelector(".revista-estado");
+  var b = document.createElement("strong"); b.textContent = e[0];
+  var p = document.createElement("span"); p.textContent = e[1];
+  c.appendChild(b); c.appendChild(p); c.hidden = false;
+}})();
+</script>
+<script src="{prefijo}assets/web.js?v={VERSION}" defer></script>
+</body>
+</html>
+"""
+    return cabeza(t, lang, prefijo, r["title"], r["description"], "revista.html") + cuerpo
+
+
 # ─────────────────────────────── páginas sencillas ───────────────────────────────
 def pagina_simple(lang, titulo, h1, contenido, ruta, datos=None, indexable=False, prefijo=None):
     t = T[lang]
@@ -911,6 +1019,7 @@ def main():
     for lang in IDIOMAS:
         escribir(f"{carpeta(lang)}index.html", portada(lang))
         escribir(f"{carpeta(lang)}buceo.html", pagina_buceo(lang))
+        escribir(f"{carpeta(lang)}revista.html", pagina_revista(lang))
         escribir(f"{carpeta(lang)}legal.html", legal(lang))
         escribir(f"{carpeta(lang)}gracias.html", gracias(lang))
     t = T[IDIOMAS[0]]
@@ -919,7 +1028,7 @@ def main():
                                        f'<p>{esc(t["e404_p"])}</p>', "404.html", prefijo="/"))
     hoy = datetime.date.today().isoformat()
     urls = []
-    for ruta in ("", "buceo.html"):
+    for ruta in ("", "buceo.html", "revista.html"):
         for lang in IDIOMAS:
             alternas = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{DOMINIO}/{carpeta(l)}{ruta}"/>'
                                for l in IDIOMAS)
@@ -927,7 +1036,7 @@ def main():
     escribir("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                             'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
     escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
-    print("Web generada:", ", ".join(f"/{carpeta(l)}" for l in IDIOMAS), "· portada, buceo, legal, gracias")
+    print("Web generada:", ", ".join(f"/{carpeta(l)}" for l in IDIOMAS), "· portada, buceo, revista, legal, gracias")
 
 
 if __name__ == "__main__":

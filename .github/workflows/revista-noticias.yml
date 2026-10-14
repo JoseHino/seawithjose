@@ -1,0 +1,35 @@
+name: Bitácora · noticias
+
+# Cada día guarda las noticias de cada eje (buceo, vela, pesca, viajes, océano y Marbella) en español e inglés.
+# Los RSS solo devuelven unos días, por eso se acumulan en datos/revista/noticias.json (40 días).
+on:
+  schedule:
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: web
+  cancel-in-progress: false
+
+jobs:
+  noticias:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/revista_noticias.py
+      - name: Publicar si ha cambiado
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/revista/noticias.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Bitácora: noticias $(date -u +%Y-%m-%d)"
+          git pull --rebase
+          git push

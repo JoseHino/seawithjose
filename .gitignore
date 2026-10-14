@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 fuentes/emodnet_marbella.tif
 fuentes/osm_banus.json
+.revista_salida.json
