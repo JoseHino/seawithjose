@@ -44,6 +44,7 @@ INDICE = os.path.join(CARPETA, "index.json")
 NOTICIAS = os.path.join(RAIZ, "datos", "revista", "noticias.json")
 PARTE = os.path.join(RAIZ, "datos", "mar.json")
 SALIDA_TMP = os.path.join(RAIZ, ".revista_salida.json")
+ULTIMO_TMP = os.path.join(RAIZ, ".revista_ultimo")
 DOMINIO = "https://seawithjose.es"
 LAT, LON = 36.47, -4.95                       # frente a Puerto Banús
 IDIOMAS = ("es", "en")
@@ -562,13 +563,13 @@ def cmd_borrador(numero=None, notas=""):
          "historial": [f"v1 · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · borrador"]}
     guardar_estado(e)
     guardar_vista(e)
+    with open(ULTIMO_TMP, "w", encoding="utf-8") as f:     # para que «abrir» abra justo este número
+        f.write(numero)
     print("Borrador listo:", numero, enlaces_vista(e))
 
 
 def cmd_abrir():
-    estados = [json.load(open(os.path.join(BORRADORES, f), encoding="utf-8"))
-               for f in os.listdir(BORRADORES) if f.endswith(".json")]
-    e = max((x for x in estados if x["estado"] == "pendiente"), key=lambda x: x["numero"])
+    e = json.load(open(ruta_estado(open(ULTIMO_TMP, encoding="utf-8").read().strip()), encoding="utf-8"))
     v = enlaces_vista(e)
     asunto_es = e["contenido"]["es"].get("asunto", "")
     cuerpo = (f"@{editor()} ya está el borrador de la **Bitácora del mar nº {e['numero']}** "
