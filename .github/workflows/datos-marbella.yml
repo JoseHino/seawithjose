@@ -1,0 +1,49 @@
+name: Datos oficiales de Marbella
+
+# Observación horaria de AEMET en Marbella (estaciones 6076X «Marbella, Puerto» y 6083X «Marbella»).
+# AEMET solo da las últimas 24 h, así que se acumula cada tres horas en datos/marbella/horario.json.
+# A mano, con «historico», rellena los valores diarios desde 2004 (datos/marbella/diario.json).
+on:
+  schedule:
+    - cron: "25 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      historico:
+        description: "Rellenar también el histórico diario desde 2004"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: web
+  cancel-in-progress: false
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Observación horaria
+        env:
+          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+        run: python scripts/datos_marbella.py
+      - name: Histórico diario
+        if: ${{ inputs.historico }}
+        env:
+          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+        run: python scripts/datos_marbella.py historico
+      - name: Publicar si ha cambiado
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/marbella
+          git diff --cached --quiet && exit 0
+          git commit -m "Datos de Marbella $(date -u +%Y-%m-%dT%H:%M)"
+          git pull --rebase
+          git push
