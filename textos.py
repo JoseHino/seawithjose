@@ -230,10 +230,10 @@ T["en"] = {
     "extras_precio": "on request",
     "extras_cta": "Book a private trip",
     "barco_h2": "The Petit",
-    "barco_sub": "Her name is P’tit Mousse, but everyone calls her the Petit.",
+    "barco_sub": "His name is P’tit Mousse, but everyone calls him the Petit.",
     "barco_p": [
-        "She’s a centre-cockpit Jeanneau Sun Odyssey 42: 12.3 metres, a teak deck and a bimini that shades the cockpit.",
-        "She’s stable and comfortable, with room for eleven guests plus the skipper.",
+        "He’s a centre-cockpit Jeanneau Sun Odyssey 42: 12.3 metres, a teak deck and a bimini that shades the cockpit.",
+        "He’s stable and comfortable, with room for eleven guests plus the skipper.",
     ],
     "barco_datos": [("Model", "Jeanneau Sun Odyssey 42 CC"), ("Length", "12.3 m"), ("Guests", "11 + skipper"),
                     ("Berth", "Puerto José Banús")],
@@ -1012,7 +1012,7 @@ T["ru"] = {
     "extras_precio": "по запросу",
     "extras_cta": "Забронировать индивидуальную прогулку",
     "barco_h2": "«Пти»",
-    "barco_sub": "Её зовут P’tit Mousse, но все называют её просто «Пти».",
+    "barco_sub": "Его зовут P’tit Mousse, но все называют его просто «Пти».",
     "barco_p": [
         "Это Jeanneau Sun Odyssey 42 с центральным кокпитом: 12,3 метра, тиковая палуба и бимини, которое даёт тень.",
         "Яхта устойчивая и удобная, на борту помещаются одиннадцать гостей и капитан.",
