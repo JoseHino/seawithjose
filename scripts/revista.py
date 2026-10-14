@@ -600,7 +600,8 @@ def limpiar_respuesta(texto):
     lineas = []
     for l in (texto or "").splitlines():
         # la cabecera de la cita («El mié, 14 oct 2026 a las 22:08, … escribió:») a veces se parte en dos líneas
-        if l.startswith(">") or re.match(r"^(El|On) \S+.*20\d\d", l.strip()) or re.search(r"(escribió|wrote):\s*$", l):
+        if (l.startswith(">") or re.match(r"^(El|On) \S+.*\d{4}", l.strip())
+                or re.search(r"(escribió|wrote):\s*$", l)):
             break
         lineas.append(l)
     return "\n".join(lineas).strip()
