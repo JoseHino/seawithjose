@@ -418,7 +418,8 @@ T["en"] = {
         ("Who runs this website", "Sea With Jose is the personal brand of José María Hinojosa Figueira, based in "
                                   "Marbella (Málaga, Spain). Contact: {email} · WhatsApp {tel}."),
         ("What this website does", "It shows my sailing trips on the Petit and the extras for private trips, and "
-                                   "lets you book and pay for them online."),
+                                   "lets you book and pay for them online. It also publishes the Sea Logbook, my fortnightly magazine, "
+                                   "and official weather data for Marbella."),
         ("Bookings and payment", "Trips are paid in advance by card through Stripe, which processes the payment: this "
                                  "website never sees or stores your card details. Your booking is confirmed when I "
                                  "write to you on WhatsApp or by email. The prices shown are final prices. Extras for "
@@ -435,6 +436,12 @@ T["en"] = {
                       "Stripe processes payment data as an independent controller (stripe.com/privacy). You can ask "
                       "me at any time to see, correct or delete your data by writing to {email}, and you can complain "
                       "to the Spanish Data Protection Agency (aepd.es)."),
+        ("The Sea Logbook (newsletter)", "If you subscribe to the Logbook, I only use your email address (and your name, "
+         "if you give it) to send you the magazine every fortnight, on the basis of the consent you give in the form "
+         "and confirm by email (double opt-in). The list is kept by Brevo (Sendinblue SAS, France, EU) as data "
+         "processor; Brevo records whether each issue is opened, only to measure the newsletter. Every issue has an "
+         "unsubscribe link and I delete your data when you unsubscribe. You can also ask me to see, correct or delete "
+         "it at {email}."),
         ("Cookies", "This website uses no cookies and no analytics. While you book, your browser keeps the details of "
                     "your booking so they can be shown again when you come back from the payment page. Fonts and "
                     "images are served from the site itself."),
@@ -442,7 +449,7 @@ T["en"] = {
                           "for security. The WhatsApp, Instagram, Google Maps and webcam links take you to those "
                           "services, which have their own privacy policies."),
         ("Credits", "Bathymetry: EMODnet Bathymetry Consortium, CC BY 4.0. Map of Puerto Banús: © OpenStreetMap "
-                    "contributors, ODbL. Forecasts: information prepared by the Spanish State Meteorological Agency "
+                    "contributors, ODbL. Forecasts and Marbella weather data: information prepared by the Spanish State Meteorological Agency "
                     "(AEMET). Dive sites: “Málaga sumergida. Guía de buceo de la Senda Azul”, Turismo y "
                     "Planificación Costa del Sol."),
     ],
@@ -454,6 +461,40 @@ T["en"] = {
     "volver": "Back to the home page",
     "e404_h1": "This page is off the chart",
     "e404_p": "The address may be wrong or the page has moved.",
+    "datos": {
+        "title": "Official weather data in Marbella, hour by hour · Sea With Jose",
+        "description": ("Wind, gusts, direction, rain, temperature and humidity measured by AEMET at Marbella marina, hour "
+                        "by hour, with records back to 2004. Interactive charts and variable cross-checks."),
+        "eyebrow": "Official data · AEMET",
+        "h1": "Marbella weather, reading by reading",
+        "lead": ("What the official AEMET stations in Marbella measure: wind, gusts, direction, rain, temperature and "
+                 "humidity. You start with the last week; zoom out to the whole record and cross one variable with another."),
+        "ahora_h": "Right now",
+        "serie_h": "Over time",
+        "var1": "Variable", "var2": "Compare with", "ninguna": "None",
+        "rangos": {"7": "7 days", "30": "30 days", "365": "1 year", "todo": "All"},
+        "zoom": "Reset zoom", "csv": "Download CSV",
+        "zoom_ayuda": "Mouse wheel or pinch to zoom; drag to move.",
+        "cruce_h": "Cross variables",
+        "cruce_p": ("Pick two variables and see how they relate over the period chosen above. If one is wind direction, "
+                    "you get the average of the other by where the wind blows from."),
+        "eje_x": "X variable", "eje_y": "Y variable", "estacion": "Station",
+        "estaciones": {"6076X": "Marbella, Marina (6076X)", "6083X": "Marbella (6083X)"},
+        "nota": ("Hourly data since 14 October 2026, when I started saving it (AEMET only publishes the last 24 hours); "
+                 "before that, one value per day. Wind is measured 10 m above ground."),
+        "fuente": ("Source: Spanish State Meteorological Agency (AEMET), conventional observations and daily climate "
+                   "values from its stations in the municipality of Marbella. © AEMET."),
+        "error": "I couldn’t load the data. Please try again in a few minutes.",
+        "js": {"vars": {"viento": "Mean wind", "racha": "Strongest gust", "dir": "Wind direction",
+                        "lluvia": "Rain", "temp": "Air temperature", "humedad": "Humidity"},
+               "rumbos": ["N", "NE", "E", "SE", "S", "SW", "W", "NW"],
+               "diario": "daily average", "media": "Average", "actualizado": "Latest reading:",
+               "ultima_hora": "in the last hour",
+               "cruce_rumbo": "Average by direction, {n} data pairs.",
+               "cruce_r": "Correlation r = {r} ({lectura}), {n} data pairs.",
+               "fuerte": "strong", "moderada": "moderate", "debil": "weak or none",
+               "pocos": "Not enough data in this period."},
+    },
     "revista": {
         "title": "The Sea Logbook: a free fortnightly magazine about the sea · Sea With Jose",
         "description": ("Every fortnight, in your inbox: the water temperature off Marbella, and the most interesting news "
@@ -770,7 +811,8 @@ T["es"] = {
         ("Titular", "Sea With Jose es la marca personal de José María Hinojosa Figueira, con domicilio en Marbella "
                     "(Málaga). Contacto: {email} · WhatsApp {tel}."),
         ("Qué hace esta web", "Enseña mis salidas en velero en el Petit y los extras de las salidas privadas, y "
-                              "permite reservarlas y pagarlas."),
+                              "permite reservarlas y pagarlas. También publica la Bitácora del mar, mi revista quincenal, y los "
+                              "datos oficiales del tiempo en Marbella."),
         ("Reservas y pagos", "Las salidas se pagan por adelantado con tarjeta a través de Stripe, que procesa el pago: "
                              "esta web no ve ni guarda los datos de tu tarjeta. La reserva queda confirmada cuando te "
                              "escribo por WhatsApp o por correo. Los precios que ves son precios finales. Los extras de "
@@ -787,6 +829,12 @@ T["es"] = {
                       "obligatorio. Stripe trata los datos del pago como responsable independiente "
                       "(stripe.com/privacy). Puedes pedirme en cualquier momento verlos, corregirlos o borrarlos "
                       "escribiendo a {email}, y reclamar ante la Agencia Española de Protección de Datos (aepd.es)."),
+        ("La Bitácora del mar (boletín)", "Si te suscribes a la Bitácora, uso tu correo (y tu nombre, si lo das) solo "
+         "para enviarte la revista cada quince días, con la base del consentimiento que das en el formulario y "
+         "confirmas por correo (doble confirmación). La lista la guarda Brevo (Sendinblue SAS, Francia, UE) como "
+         "encargado del tratamiento; Brevo registra si se abre cada número, solo para medir el boletín. Cada número "
+         "trae un enlace para darte de baja y borro tus datos cuando te das de baja. También puedes pedirme verlos, "
+         "corregirlos o borrarlos en {email}."),
         ("Cookies", "Esta web no usa cookies ni herramientas de analítica. Mientras reservas, tu navegador guarda los "
                     "datos de la reserva para enseñártelos al volver de la página de pago. Las tipografías y las "
                     "imágenes se sirven desde la propia web."),
@@ -794,7 +842,7 @@ T["es"] = {
                      "visitas por seguridad. Los enlaces de WhatsApp, Instagram, Google Maps y las cámaras te llevan a "
                      "esos servicios, que tienen sus propias políticas de privacidad."),
         ("Créditos", "Batimetría: EMODnet Bathymetry Consortium, CC BY 4.0. Plano de Puerto Banús: © colaboradores de "
-                     "OpenStreetMap, ODbL. Previsiones: información elaborada por la Agencia Estatal de Meteorología "
+                     "OpenStreetMap, ODbL. Previsiones y datos del tiempo en Marbella: información elaborada por la Agencia Estatal de Meteorología "
                      "(AEMET). Puntos de buceo: «Málaga sumergida. Guía de buceo de la Senda Azul», Turismo y "
                      "Planificación Costa del Sol."),
     ],
@@ -806,6 +854,41 @@ T["es"] = {
     "volver": "Volver al inicio",
     "e404_h1": "Esta página está fuera de la carta",
     "e404_p": "Puede que la dirección esté mal escrita o que la página haya cambiado de sitio.",
+    "datos": {
+        "title": "Datos oficiales del tiempo en Marbella, hora a hora · Sea With Jose",
+        "description": ("Viento, rachas, dirección, lluvia, temperatura y humedad medidos por AEMET en el puerto de Marbella, "
+                        "hora a hora y con el histórico desde 2004. Gráficas interactivas y cruce de variables."),
+        "eyebrow": "Datos oficiales · AEMET",
+        "h1": "El tiempo en Marbella, dato a dato",
+        "lead": ("Lo que miden las estaciones oficiales de AEMET en Marbella: viento, rachas, dirección, lluvia, temperatura "
+                 "y humedad. Por defecto ves la última semana; puedes ampliar hasta todo el histórico y cruzar unas "
+                 "variables con otras."),
+        "ahora_h": "Ahora mismo",
+        "serie_h": "Evolución",
+        "var1": "Variable", "var2": "Comparar con", "ninguna": "Ninguna",
+        "rangos": {"7": "7 días", "30": "30 días", "365": "1 año", "todo": "Todo"},
+        "zoom": "Quitar el zoom", "csv": "Descargar CSV",
+        "zoom_ayuda": "Rueda del ratón o pellizco para acercar; arrastra para moverte.",
+        "cruce_h": "Cruzar variables",
+        "cruce_p": ("Elige dos variables y mira cómo se relacionan en el periodo elegido arriba. Si una es la dirección "
+                    "del viento, verás la media de la otra según de dónde sopla."),
+        "eje_x": "Variable X", "eje_y": "Variable Y", "estacion": "Estación",
+        "estaciones": {"6076X": "Marbella, Puerto (6076X)", "6083X": "Marbella (6083X)"},
+        "nota": ("Datos por horas desde el 14 de octubre de 2026, cuando empecé a guardarlos (AEMET solo publica las "
+                 "últimas 24 horas); antes, un valor por día. El viento se mide a 10 m de altura."),
+        "fuente": ("Fuente: Agencia Estatal de Meteorología (AEMET), observación convencional y valores climatológicos "
+                   "diarios de sus estaciones en el término municipal de Marbella. © AEMET."),
+        "error": "No he podido cargar los datos. Prueba de nuevo en unos minutos.",
+        "js": {"vars": {"viento": "Viento medio", "racha": "Racha máxima", "dir": "Dirección del viento",
+                        "lluvia": "Lluvia", "temp": "Temperatura del aire", "humedad": "Humedad"},
+               "rumbos": ["N", "NE", "E", "SE", "S", "SO", "O", "NO"],
+               "diario": "media del día", "media": "Media de", "actualizado": "Última medida:",
+               "ultima_hora": "en la última hora",
+               "cruce_rumbo": "Media por rumbo con {n} pares de datos.",
+               "cruce_r": "Correlación r = {r} ({lectura}), con {n} pares de datos.",
+               "fuerte": "relación fuerte", "moderada": "relación moderada", "debil": "relación débil o nula",
+               "pocos": "No hay suficientes datos en este periodo."},
+    },
     "revista": {
         "title": "Bitácora del mar: revista quincenal gratuita sobre el mar · Sea With Jose",
         "description": ("Cada quince días, en tu correo: la temperatura del agua en Marbella y lo más interesante del buceo, "
@@ -1130,7 +1213,8 @@ T["ru"] = {
         ("Владелец сайта", "Sea With Jose, личный бренд Хосе Марии Инохосы Фигейры (José María Hinojosa Figueira), "
                            "Марбелья (Малага, Испания). Контакты: {email} · WhatsApp {tel}."),
         ("Назначение сайта", "Сайт рассказывает о прогулках под парусом на «Пти» и дополнительных услугах для "
-                             "индивидуальных прогулок и позволяет забронировать и оплатить их."),
+                             "индивидуальных прогулок и позволяет забронировать и оплатить их. Здесь также выходит «Морской "
+                             "журнал» и публикуются официальные данные о погоде в Марбелье."),
         ("Бронирование и оплата", "Прогулки оплачиваются заранее картой через Stripe, который проводит платёж: этот "
                                   "сайт не видит и не хранит данные вашей карты. Бронь подтверждается, когда я пишу вам "
                                   "в WhatsApp или по почте. Указанные цены окончательные. Дополнительные услуги для "
@@ -1148,6 +1232,12 @@ T["ru"] = {
                         "(stripe.com/privacy). В любой момент вы можете попросить показать, исправить или удалить ваши "
                         "данные, написав на {email}, а также подать жалобу в Испанское агентство по защите данных "
                         "(aepd.es)."),
+        ("Морской журнал (рассылка)", "Если вы подписались на журнал, я использую ваш email (и имя, если вы его "
+         "указали) только для отправки журнала раз в две недели, на основании согласия, которое вы даёте в форме и "
+         "подтверждаете по почте (двойное подтверждение). Список хранит Brevo (Sendinblue SAS, Франция, ЕС) как "
+         "обработчик данных; Brevo отмечает, открыт ли номер, только для статистики рассылки. В каждом номере есть "
+         "ссылка для отписки, и после отписки я удаляю ваши данные. Также можно попросить показать, исправить или "
+         "удалить их по адресу {email}."),
         ("Cookies", "Сайт не использует cookies и аналитику. Пока вы бронируете, браузер хранит данные брони, чтобы "
                     "показать их вам после возвращения со страницы оплаты. Шрифты и изображения загружаются с самого "
                     "сайта."),
@@ -1167,6 +1257,40 @@ T["ru"] = {
     "volver": "На главную",
     "e404_h1": "Этой страницы нет на карте",
     "e404_p": "Возможно, адрес набран с ошибкой или страница переехала.",
+    "datos": {
+        "title": "Официальные данные о погоде в Марбелье по часам · Sea With Jose",
+        "description": ("Ветер, порывы, направление, осадки, температура и влажность по данным AEMET в порту Марбельи, "
+                        "по часам и с архивом с 2004 года. Интерактивные графики и сравнение показателей."),
+        "eyebrow": "Официальные данные · AEMET",
+        "h1": "Погода в Марбелье: все измерения",
+        "lead": ("Что измеряют официальные станции AEMET в Марбелье: ветер, порывы, направление, осадки, температуру и "
+                 "влажность. Сначала видна последняя неделя; можно открыть весь архив и сравнить показатели между собой."),
+        "ahora_h": "Сейчас",
+        "serie_h": "Динамика",
+        "var1": "Показатель", "var2": "Сравнить с", "ninguna": "Нет",
+        "rangos": {"7": "7 дней", "30": "30 дней", "365": "1 год", "todo": "Всё"},
+        "zoom": "Сбросить масштаб", "csv": "Скачать CSV",
+        "zoom_ayuda": "Колесо мыши или щипок — масштаб; перетаскивание — сдвиг.",
+        "cruce_h": "Сравнить показатели",
+        "cruce_p": ("Выберите два показателя и посмотрите, как они связаны за выбранный выше период. Если один из них — "
+                    "направление ветра, вы увидите среднее значение другого по направлениям."),
+        "eje_x": "Показатель X", "eje_y": "Показатель Y", "estacion": "Станция",
+        "estaciones": {"6076X": "Марбелья, порт (6076X)", "6083X": "Марбелья (6083X)"},
+        "nota": ("Почасовые данные с 14 октября 2026 года, когда я начал их сохранять (AEMET публикует только последние "
+                 "24 часа); раньше — одно значение в день. Ветер измеряется на высоте 10 м."),
+        "fuente": ("Источник: Государственное метеорологическое агентство Испании (AEMET), наблюдения и суточные "
+                   "климатические данные станций в муниципалитете Марбелья. © AEMET."),
+        "error": "Не удалось загрузить данные. Попробуйте через несколько минут.",
+        "js": {"vars": {"viento": "Средний ветер", "racha": "Макс. порыв", "dir": "Направление ветра",
+                        "lluvia": "Осадки", "temp": "Температура воздуха", "humedad": "Влажность"},
+               "rumbos": ["С", "СВ", "В", "ЮВ", "Ю", "ЮЗ", "З", "СЗ"],
+               "diario": "среднее за день", "media": "Среднее:", "actualizado": "Последнее измерение:",
+               "ultima_hora": "за последний час",
+               "cruce_rumbo": "Среднее по направлениям, пар данных: {n}.",
+               "cruce_r": "Корреляция r = {r} ({lectura}), пар данных: {n}.",
+               "fuerte": "сильная связь", "moderada": "умеренная связь", "debil": "слабая или нет",
+               "pocos": "Недостаточно данных за этот период."},
+    },
     "revista": {
         "title": "Морской журнал: бесплатная рассылка раз в две недели · Sea With Jose",
         "description": ("Раз в две недели на почту: температура воды в Марбелье и самое интересное о дайвинге, парусе, "

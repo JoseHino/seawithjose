@@ -63,7 +63,7 @@ TXT = {
            "ola": "Ola más alta", "viento": "Racha más fuerte", "luna": "Luna", "hoy": "Agua hoy (AEMET)",
            "fases": {"nueva": "Luna nueva", "llena": "Luna llena", "creciente": "Cuarto creciente", "menguante": "Cuarto menguante"},
            "fuentes": "Datos: Open-Meteo (Copernicus Marine, ERA5) y AEMET, frente a Puerto Banús.",
-           "leer": "Leer en", "web": "Ver en la web", "baja": "Darse de baja",
+           "leer": "Leer en", "web": "Ver en la web", "datos": "Ver todos los datos de Marbella, hora a hora", "baja": "Darse de baja",
            "pie": "Recibes la Bitácora porque te suscribiste en seawithjose.es.", "salidas": "Salir a navegar, bucear o pescar conmigo",
            "aviso": "Borrador para tu aprobación · versión {v}",
            "aviso_p": "Responde «OK» al correo de GitHub (o comenta en la incidencia) y se publica y se envía. Si quieres cambios, escríbelos en tu respuesta."},
@@ -74,7 +74,7 @@ TXT = {
            "ola": "Highest wave", "viento": "Strongest gust", "luna": "Moon", "hoy": "Water today (AEMET)",
            "fases": {"nueva": "New moon", "llena": "Full moon", "creciente": "First quarter", "menguante": "Last quarter"},
            "fuentes": "Data: Open-Meteo (Copernicus Marine, ERA5) and AEMET, off Puerto Banús.",
-           "leer": "Read on", "web": "View on the website", "baja": "Unsubscribe",
+           "leer": "Read on", "web": "View on the website", "datos": "See all the Marbella data, hour by hour", "baja": "Unsubscribe",
            "pie": "You get the Logbook because you subscribed at seawithjose.es.", "salidas": "Come sailing, diving or fishing with me",
            "aviso": "Draft for your approval · version {v}",
            "aviso_p": "Reply “OK” to the GitHub email (or comment on the issue) and it will be published and sent."},
@@ -377,6 +377,7 @@ def montar(numero, version, contenido, mar, lang, modo):
     <div style="font:800 13px/1 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:{COLOR["rojo"]};margin:0 5px 12px;border-top:3px solid {COLOR["marino"]};padding-top:14px;">{esc(t["mar_h"])}</div>
     {bloque_mar(mar, lang)}
     {f'<p style="margin:12px 5px 0;font:15px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{texto_html(c.get("comentario_mar"))}</p>' if c.get("comentario_mar") else ""}
+    <p style="margin:14px 5px 0;"><a href="{DOMINIO}/{"es/" if lang == "es" else ""}datos.html" style="color:{COLOR["azul"]};font:700 15px/1.4 Arial,Helvetica,sans-serif;">{esc(t["datos"])} →</a></p>
   </td></tr>
   {"".join(secciones)}
   <tr><td style="padding:10px 30px 30px;" align="left">

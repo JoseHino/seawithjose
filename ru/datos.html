@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Официальные данные о погоде в Марбелье по часам · Sea With Jose</title>
+<meta name="description" content="Ветер, порывы, направление, осадки, температура и влажность по данным AEMET в порту Марбельи, по часам и с архивом с 2004 года. Интерактивные графики и сравнение показателей.">
+<link rel="canonical" href="https://seawithjose.es/ru/datos.html">
+<link rel="alternate" hreflang="en" href="https://seawithjose.es/datos.html"><link rel="alternate" hreflang="es" href="https://seawithjose.es/es/datos.html"><link rel="alternate" hreflang="ru" href="https://seawithjose.es/ru/datos.html"><link rel="alternate" hreflang="x-default" href="https://seawithjose.es/datos.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sea With Jose">
+<meta property="og:title" content="Официальные данные о погоде в Марбелье по часам · Sea With Jose">
+<meta property="og:description" content="Ветер, порывы, направление, осадки, температура и влажность по данным AEMET в порту Марбельи, по часам и с архивом с 2004 года. Интерактивные графики и сравнение показателей.">
+<meta property="og:url" content="https://seawithjose.es/ru/datos.html">
+<meta property="og:image" content="https://seawithjose.es/assets/compartir.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icono-180.png">
+<link rel="preload" href="../assets/fuentes/sofia-sans-extra-condensed-normal-700-900-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fuentes/sofia-sans-normal-400-800-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fuentes.css?v=202610141849">
+<link rel="stylesheet" href="../assets/estilo.css?v=202610141849">
+</head>
+<body class="pagina-datos">
+<a class="saltar" href="#contenido">Перейти к содержанию</a>
+<header class="cabecera">
+  <div class="contenedor cabecera-fila">
+    <a class="marca" href="../ru/"><span class="banderas" aria-hidden="true"><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#1F4E9A"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><path d="M0 0H30V20Z" fill="#D2232A"/><path d="M0 0V20H30Z" fill="#F5C400"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="10" y="5" width="10" height="10" fill="#1F4E9A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="10" fill="#1F4E9A"/><rect y="10" width="30" height="10" fill="#D2232A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg></span><span>Sea With Jose</span></a>
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+      <span class="menu-raya" aria-hidden="true"></span><span class="visualmente-oculto">Меню</span>
+    </button>
+    <nav id="navegacion" class="navegacion" aria-label="Меню">
+      <ul><li><a href="../ru/#precios">Цены</a></li><li><a href="../ru/#salida">Прогулка</a></li><li><a href="../ru/#barco">Яхта</a></li><li><a href="../ru/#mar">Море сегодня</a></li><li><a href="../ru/#llegar">Как добраться</a></li><li><a href="../ru/buceo.html">Дайвинг</a></li><li><a href="../ru/revista.html">Журнал</a></li></ul>
+      <div class="idiomas"><a href="../datos.html" lang="en" hreflang="en" title="English">EN</a><a href="../es/datos.html" lang="es" hreflang="es" title="Español">ES</a><a href="../ru/datos.html" lang="ru" hreflang="ru" aria-current="true" title="Русский">RU</a></div>
+      <a class="boton boton-amarillo boton-pequeno" href="../ru/#reservar">Забронировать</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+<section class="seccion revista-cabeza" aria-labelledby="datos-titulo">
+  <div class="contenedor">
+    <p class="revista-eyebrow">Официальные данные · AEMET</p>
+    <h1 id="datos-titulo">Погода в Марбелье: все измерения</h1>
+    <p class="intro">Что измеряют официальные станции AEMET в Марбелье: ветер, порывы, направление, осадки, температуру и влажность. Сначала видна последняя неделя; можно открыть весь архив и сравнить показатели между собой.</p>
+    <label class="campo campo-estacion"><span>Станция</span><select id="sel-est"><option value="6076X">Марбелья, порт (6076X)</option><option value="6083X">Марбелья (6083X)</option></select></label>
+  </div>
+</section>
+
+<section class="seccion datos-seccion" aria-labelledby="ahora-titulo">
+  <div class="contenedor">
+    <div class="datos-cabeza"><h2 id="ahora-titulo">Сейчас</h2><p class="nota" id="datos-hora"></p></div>
+    <div class="datos-ahora" id="datos-ahora"></div>
+    <p class="nota" id="datos-error" hidden>Не удалось загрузить данные. Попробуйте через несколько минут.</p>
+
+    <h2 class="datos-h2">Динамика</h2>
+    <div class="datos-controles">
+      <label class="campo"><span>Показатель</span><select id="sel-v1"><option value="viento" selected>Средний ветер</option><option value="racha">Макс. порыв</option><option value="dir">Направление ветра</option><option value="lluvia">Осадки</option><option value="temp">Температура воздуха</option><option value="humedad">Влажность</option></select></label>
+      <label class="campo"><span>Сравнить с</span><select id="sel-v2"><option value="">Нет</option><option value="viento">Средний ветер</option><option value="racha" selected>Макс. порыв</option><option value="dir">Направление ветра</option><option value="lluvia">Осадки</option><option value="temp">Температура воздуха</option><option value="humedad">Влажность</option></select></label>
+      <div class="filtros datos-rangos" role="group"><button type="button" class="filtro" data-rango="7" aria-pressed="true">7 дней</button><button type="button" class="filtro" data-rango="30" aria-pressed="false">30 дней</button><button type="button" class="filtro" data-rango="365" aria-pressed="false">1 год</button><button type="button" class="filtro" data-rango="todo" aria-pressed="false">Всё</button></div>
+    </div>
+    <div class="datos-grafica"><canvas id="grafica-serie" aria-label="Динамика"></canvas></div>
+    <div class="datos-pie">
+      <p class="nota">Колесо мыши или щипок — масштаб; перетаскивание — сдвиг.</p>
+      <div class="datos-botones">
+        <button type="button" class="boton boton-borde-azul boton-pequeno" id="boton-zoom">Сбросить масштаб</button>
+        <button type="button" class="boton boton-borde-azul boton-pequeno" id="boton-csv">Скачать CSV</button>
+      </div>
+    </div>
+
+    <h2 class="datos-h2">Сравнить показатели</h2>
+    <p class="intro">Выберите два показателя и посмотрите, как они связаны за выбранный выше период. Если один из них — направление ветра, вы увидите среднее значение другого по направлениям.</p>
+    <div class="datos-controles">
+      <label class="campo"><span>Показатель X</span><select id="sel-x"><option value="viento">Средний ветер</option><option value="racha">Макс. порыв</option><option value="dir" selected>Направление ветра</option><option value="lluvia">Осадки</option><option value="temp">Температура воздуха</option><option value="humedad">Влажность</option></select></label>
+      <label class="campo"><span>Показатель Y</span><select id="sel-y"><option value="viento" selected>Средний ветер</option><option value="racha">Макс. порыв</option><option value="dir">Направление ветра</option><option value="lluvia">Осадки</option><option value="temp">Температура воздуха</option><option value="humedad">Влажность</option></select></label>
+    </div>
+    <div class="datos-grafica"><canvas id="grafica-cruce" aria-label="Сравнить показатели"></canvas></div>
+    <p class="datos-lectura" id="cruce-texto" aria-live="polite"></p>
+
+    <p class="nota datos-nota">Почасовые данные с 14 октября 2026 года, когда я начал их сохранять (AEMET публикует только последние 24 часа); раньше — одно значение в день. Ветер измеряется на высоте 10 м.</p>
+    <p class="nota datos-nota"><strong>Источник: Государственное метеорологическое агентство Испании (AEMET), наблюдения и суточные климатические данные станций в муниципалитете Марбелья. © AEMET.</strong></p>
+  </div>
+</section>
+</main>
+<footer class="pie">
+  <div class="contenedor pie-rejilla">
+    <div>
+      <p class="pie-marca"><span class="banderas" aria-hidden="true"><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#1F4E9A"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><path d="M0 0H30V20Z" fill="#D2232A"/><path d="M0 0V20H30Z" fill="#F5C400"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="10" y="5" width="10" height="10" fill="#1F4E9A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="10" fill="#1F4E9A"/><rect y="10" width="30" height="10" fill="#D2232A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg></span><span>Sea With Jose</span></p>
+      <p>Пуэрто-Хосе-Банус, 29660 Марбелья (Малага), Испания</p>
+    </div>
+    <div>
+      <p><a href="https://wa.me/34665092090?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A5%D0%BE%D1%81%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%D1%8B%D0%B9%D1%82%D0%B8%20%D0%B2%20%D0%BC%D0%BE%D1%80%D0%B5%20%D0%BD%D0%B0%20%C2%AB%D0%9F%D1%82%D0%B8%C2%BB.">WhatsApp +34 665 09 20 90</a><br>
+      <a href="https://www.instagram.com/seawithjose/">Instagram @seawithjose</a><br>
+      <a href="mailto:josemariahf612@gmail.com">josemariahf612@gmail.com</a></p>
+    </div>
+    <div>
+      <p><a href="../datos.html" lang="en">English</a> · <a href="../es/datos.html" lang="es">Español</a> · <a href="../ru/datos.html" lang="ru">Русский</a></p>
+      <p><a href="../ru/legal.html">Правовая информация, бронирование и конфиденциальность</a></p>
+      <p class="pie-creditos">Фото: «Пти» · Карты: EMODnet (CC BY 4.0) и OpenStreetMap (ODbL) · Прогноз: AEMET · © 2026 Sea With Jose</p>
+    </div>
+  </div>
+</footer>
+<script type="application/json" id="datos-pagina">{"lang": "ru", "prefijo": "../", "whatsapp": "34665092090", "pagina": "datos", "datos": {"vars": {"viento": "Средний ветер", "racha": "Макс. порыв", "dir": "Направление ветра", "lluvia": "Осадки", "temp": "Температура воздуха", "humedad": "Влажность"}, "rumbos": ["С", "СВ", "В", "ЮВ", "Ю", "ЮЗ", "З", "СЗ"], "diario": "среднее за день", "media": "Среднее:", "actualizado": "Последнее измерение:", "ultima_hora": "за последний час", "cruce_rumbo": "Среднее по направлениям, пар данных: {n}.", "cruce_r": "Корреляция r = {r} ({lectura}), пар данных: {n}.", "fuerte": "сильная связь", "moderada": "умеренная связь", "debil": "слабая или нет", "pocos": "Недостаточно данных за этот период."}}</script>
+<script src="../assets/vendor/chart.umd.js"></script>
+<script src="../assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="../assets/vendor/hammer.min.js"></script>
+<script src="../assets/vendor/chartjs-plugin-zoom.min.js"></script>
+<script src="../assets/datos.js?v=202610141849" defer></script>
+<script src="../assets/web.js?v=202610141849" defer></script>
+</body>
+</html>

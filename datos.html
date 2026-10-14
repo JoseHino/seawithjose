@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Official weather data in Marbella, hour by hour · Sea With Jose</title>
+<meta name="description" content="Wind, gusts, direction, rain, temperature and humidity measured by AEMET at Marbella marina, hour by hour, with records back to 2004. Interactive charts and variable cross-checks.">
+<link rel="canonical" href="https://seawithjose.es/datos.html">
+<link rel="alternate" hreflang="en" href="https://seawithjose.es/datos.html"><link rel="alternate" hreflang="es" href="https://seawithjose.es/es/datos.html"><link rel="alternate" hreflang="ru" href="https://seawithjose.es/ru/datos.html"><link rel="alternate" hreflang="x-default" href="https://seawithjose.es/datos.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sea With Jose">
+<meta property="og:title" content="Official weather data in Marbella, hour by hour · Sea With Jose">
+<meta property="og:description" content="Wind, gusts, direction, rain, temperature and humidity measured by AEMET at Marbella marina, hour by hour, with records back to 2004. Interactive charts and variable cross-checks.">
+<meta property="og:url" content="https://seawithjose.es/datos.html">
+<meta property="og:image" content="https://seawithjose.es/assets/compartir.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icono-180.png">
+<link rel="preload" href="assets/fuentes/sofia-sans-extra-condensed-normal-700-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fuentes/sofia-sans-normal-400-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fuentes.css?v=202610141849">
+<link rel="stylesheet" href="assets/estilo.css?v=202610141849">
+</head>
+<body class="pagina-datos">
+<a class="saltar" href="#contenido">Skip to content</a>
+<header class="cabecera">
+  <div class="contenedor cabecera-fila">
+    <a class="marca" href=""><span class="banderas" aria-hidden="true"><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#1F4E9A"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><path d="M0 0H30V20Z" fill="#D2232A"/><path d="M0 0V20H30Z" fill="#F5C400"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="10" y="5" width="10" height="10" fill="#1F4E9A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="10" fill="#1F4E9A"/><rect y="10" width="30" height="10" fill="#D2232A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg></span><span>Sea With Jose</span></a>
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+      <span class="menu-raya" aria-hidden="true"></span><span class="visualmente-oculto">Menu</span>
+    </button>
+    <nav id="navegacion" class="navegacion" aria-label="Menu">
+      <ul><li><a href="#precios">Prices</a></li><li><a href="#salida">The trip</a></li><li><a href="#barco">The boat</a></li><li><a href="#mar">Sea today</a></li><li><a href="#llegar">Getting here</a></li><li><a href="buceo.html">Diving</a></li><li><a href="revista.html">Logbook</a></li></ul>
+      <div class="idiomas"><a href="datos.html" lang="en" hreflang="en" aria-current="true" title="English">EN</a><a href="es/datos.html" lang="es" hreflang="es" title="Español">ES</a><a href="ru/datos.html" lang="ru" hreflang="ru" title="Русский">RU</a></div>
+      <a class="boton boton-amarillo boton-pequeno" href="#reservar">Book</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+<section class="seccion revista-cabeza" aria-labelledby="datos-titulo">
+  <div class="contenedor">
+    <p class="revista-eyebrow">Official data · AEMET</p>
+    <h1 id="datos-titulo">Marbella weather, reading by reading</h1>
+    <p class="intro">What the official AEMET stations in Marbella measure: wind, gusts, direction, rain, temperature and humidity. You start with the last week; zoom out to the whole record and cross one variable with another.</p>
+    <label class="campo campo-estacion"><span>Station</span><select id="sel-est"><option value="6076X">Marbella, Marina (6076X)</option><option value="6083X">Marbella (6083X)</option></select></label>
+  </div>
+</section>
+
+<section class="seccion datos-seccion" aria-labelledby="ahora-titulo">
+  <div class="contenedor">
+    <div class="datos-cabeza"><h2 id="ahora-titulo">Right now</h2><p class="nota" id="datos-hora"></p></div>
+    <div class="datos-ahora" id="datos-ahora"></div>
+    <p class="nota" id="datos-error" hidden>I couldn’t load the data. Please try again in a few minutes.</p>
+
+    <h2 class="datos-h2">Over time</h2>
+    <div class="datos-controles">
+      <label class="campo"><span>Variable</span><select id="sel-v1"><option value="viento" selected>Mean wind</option><option value="racha">Strongest gust</option><option value="dir">Wind direction</option><option value="lluvia">Rain</option><option value="temp">Air temperature</option><option value="humedad">Humidity</option></select></label>
+      <label class="campo"><span>Compare with</span><select id="sel-v2"><option value="">None</option><option value="viento">Mean wind</option><option value="racha" selected>Strongest gust</option><option value="dir">Wind direction</option><option value="lluvia">Rain</option><option value="temp">Air temperature</option><option value="humedad">Humidity</option></select></label>
+      <div class="filtros datos-rangos" role="group"><button type="button" class="filtro" data-rango="7" aria-pressed="true">7 days</button><button type="button" class="filtro" data-rango="30" aria-pressed="false">30 days</button><button type="button" class="filtro" data-rango="365" aria-pressed="false">1 year</button><button type="button" class="filtro" data-rango="todo" aria-pressed="false">All</button></div>
+    </div>
+    <div class="datos-grafica"><canvas id="grafica-serie" aria-label="Over time"></canvas></div>
+    <div class="datos-pie">
+      <p class="nota">Mouse wheel or pinch to zoom; drag to move.</p>
+      <div class="datos-botones">
+        <button type="button" class="boton boton-borde-azul boton-pequeno" id="boton-zoom">Reset zoom</button>
+        <button type="button" class="boton boton-borde-azul boton-pequeno" id="boton-csv">Download CSV</button>
+      </div>
+    </div>
+
+    <h2 class="datos-h2">Cross variables</h2>
+    <p class="intro">Pick two variables and see how they relate over the period chosen above. If one is wind direction, you get the average of the other by where the wind blows from.</p>
+    <div class="datos-controles">
+      <label class="campo"><span>X variable</span><select id="sel-x"><option value="viento">Mean wind</option><option value="racha">Strongest gust</option><option value="dir" selected>Wind direction</option><option value="lluvia">Rain</option><option value="temp">Air temperature</option><option value="humedad">Humidity</option></select></label>
+      <label class="campo"><span>Y variable</span><select id="sel-y"><option value="viento" selected>Mean wind</option><option value="racha">Strongest gust</option><option value="dir">Wind direction</option><option value="lluvia">Rain</option><option value="temp">Air temperature</option><option value="humedad">Humidity</option></select></label>
+    </div>
+    <div class="datos-grafica"><canvas id="grafica-cruce" aria-label="Cross variables"></canvas></div>
+    <p class="datos-lectura" id="cruce-texto" aria-live="polite"></p>
+
+    <p class="nota datos-nota">Hourly data since 14 October 2026, when I started saving it (AEMET only publishes the last 24 hours); before that, one value per day. Wind is measured 10 m above ground.</p>
+    <p class="nota datos-nota"><strong>Source: Spanish State Meteorological Agency (AEMET), conventional observations and daily climate values from its stations in the municipality of Marbella. © AEMET.</strong></p>
+  </div>
+</section>
+</main>
+<footer class="pie">
+  <div class="contenedor pie-rejilla">
+    <div>
+      <p class="pie-marca"><span class="banderas" aria-hidden="true"><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#1F4E9A"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><path d="M0 0H30V20Z" fill="#D2232A"/><path d="M0 0V20H30Z" fill="#F5C400"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="10" y="5" width="10" height="10" fill="#1F4E9A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg><svg viewBox="0 0 30 20" width="18" height="12" aria-hidden="true"><rect width="30" height="10" fill="#1F4E9A"/><rect y="10" width="30" height="10" fill="#D2232A"/><rect x=".5" y=".5" width="29" height="19" fill="none" stroke="#000" stroke-opacity=".18"/></svg></span><span>Sea With Jose</span></p>
+      <p>Puerto José Banús, 29660 Marbella (Málaga), Spain</p>
+    </div>
+    <div>
+      <p><a href="https://wa.me/34665092090?text=Hi%20Jose%21%20I%E2%80%99d%20like%20to%20go%20sailing%20on%20the%20Petit.">WhatsApp +34 665 09 20 90</a><br>
+      <a href="https://www.instagram.com/seawithjose/">Instagram @seawithjose</a><br>
+      <a href="mailto:josemariahf612@gmail.com">josemariahf612@gmail.com</a></p>
+    </div>
+    <div>
+      <p><a href="datos.html" lang="en">English</a> · <a href="es/datos.html" lang="es">Español</a> · <a href="ru/datos.html" lang="ru">Русский</a></p>
+      <p><a href="legal.html">Legal notice, bookings and privacy</a></p>
+      <p class="pie-creditos">Photos: the Petit · Charts: EMODnet (CC BY 4.0) and OpenStreetMap (ODbL) · Forecast: AEMET · © 2026 Sea With Jose</p>
+    </div>
+  </div>
+</footer>
+<script type="application/json" id="datos-pagina">{"lang": "en", "prefijo": "", "whatsapp": "34665092090", "pagina": "datos", "datos": {"vars": {"viento": "Mean wind", "racha": "Strongest gust", "dir": "Wind direction", "lluvia": "Rain", "temp": "Air temperature", "humedad": "Humidity"}, "rumbos": ["N", "NE", "E", "SE", "S", "SW", "W", "NW"], "diario": "daily average", "media": "Average", "actualizado": "Latest reading:", "ultima_hora": "in the last hour", "cruce_rumbo": "Average by direction, {n} data pairs.", "cruce_r": "Correlation r = {r} ({lectura}), {n} data pairs.", "fuerte": "strong", "moderada": "moderate", "debil": "weak or none", "pocos": "Not enough data in this period."}}</script>
+<script src="assets/vendor/chart.umd.js"></script>
+<script src="assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="assets/vendor/hammer.min.js"></script>
+<script src="assets/vendor/chartjs-plugin-zoom.min.js"></script>
+<script src="assets/datos.js?v=202610141849" defer></script>
+<script src="assets/web.js?v=202610141849" defer></script>
+</body>
+</html>

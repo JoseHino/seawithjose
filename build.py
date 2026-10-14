@@ -918,7 +918,8 @@ def pagina_revista(lang):
     <h1 id="revista-titulo">{esc(r["h1"])}</h1>
     <p class="intro">{esc(r["lead"])}</p>
     <div class="revista-estado" role="status" hidden></div>
-    <div class="botones"><a class="boton boton-amarillo boton-grande" href="#suscribirse">{esc(r["susc_h"])}{FLECHA}</a></div>
+    <div class="botones"><a class="boton boton-amarillo boton-grande" href="#suscribirse">{esc(r["susc_h"])}{FLECHA}</a>
+      <a class="boton boton-borde-azul boton-grande" href="{prefijo}{carpeta(lang)}datos.html">{esc(t["datos"]["h1"])}</a></div>
   </div>
 </section>
 
@@ -961,6 +962,84 @@ def pagina_revista(lang):
 </html>
 """
     return cabeza(t, lang, prefijo, r["title"], r["description"], "revista.html") + cuerpo
+
+
+# ─────────────────────────────── datos oficiales de Marbella (AEMET) ───────────────────────────────
+def pagina_datos(lang):
+    t = T[lang]
+    prefijo = prefijo_de(lang)
+    d = t["datos"]
+    opciones = "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in d["js"]["vars"].items())
+
+    def selector(id_, etiqueta, valor, ninguna=False):
+        ops = (f'<option value="">{esc(d["ninguna"])}</option>' if ninguna else "") + opciones
+        ops = ops.replace(f'value="{valor}"', f'value="{valor}" selected', 1)
+        return f'<label class="campo"><span>{esc(etiqueta)}</span><select id="{id_}">{ops}</select></label>'
+
+    estaciones = "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in d["estaciones"].items())
+    rangos = "".join(f'<button type="button" class="filtro" data-rango="{k}" aria-pressed="{str(k == "7").lower()}">'
+                     f'{esc(v)}</button>' for k, v in d["rangos"].items())
+    datos_js = {"lang": lang, "prefijo": prefijo, "whatsapp": WHATSAPP, "pagina": "datos", "datos": d["js"]}
+    cuerpo = f"""
+<body class="pagina-datos">
+{cabecera(t, lang, prefijo, "datos.html")}
+<main id="contenido">
+<section class="seccion revista-cabeza" aria-labelledby="datos-titulo">
+  <div class="contenedor">
+    <p class="revista-eyebrow">{esc(d["eyebrow"])}</p>
+    <h1 id="datos-titulo">{esc(d["h1"])}</h1>
+    <p class="intro">{esc(d["lead"])}</p>
+    <label class="campo campo-estacion"><span>{esc(d["estacion"])}</span><select id="sel-est">{estaciones}</select></label>
+  </div>
+</section>
+
+<section class="seccion datos-seccion" aria-labelledby="ahora-titulo">
+  <div class="contenedor">
+    <div class="datos-cabeza"><h2 id="ahora-titulo">{esc(d["ahora_h"])}</h2><p class="nota" id="datos-hora"></p></div>
+    <div class="datos-ahora" id="datos-ahora"></div>
+    <p class="nota" id="datos-error" hidden>{esc(d["error"])}</p>
+
+    <h2 class="datos-h2">{esc(d["serie_h"])}</h2>
+    <div class="datos-controles">
+      {selector("sel-v1", d["var1"], "viento")}
+      {selector("sel-v2", d["var2"], "racha", True)}
+      <div class="filtros datos-rangos" role="group">{rangos}</div>
+    </div>
+    <div class="datos-grafica"><canvas id="grafica-serie" aria-label="{esc(d["serie_h"])}"></canvas></div>
+    <div class="datos-pie">
+      <p class="nota">{esc(d["zoom_ayuda"])}</p>
+      <div class="datos-botones">
+        <button type="button" class="boton boton-borde-azul boton-pequeno" id="boton-zoom">{esc(d["zoom"])}</button>
+        <button type="button" class="boton boton-borde-azul boton-pequeno" id="boton-csv">{esc(d["csv"])}</button>
+      </div>
+    </div>
+
+    <h2 class="datos-h2">{esc(d["cruce_h"])}</h2>
+    <p class="intro">{esc(d["cruce_p"])}</p>
+    <div class="datos-controles">
+      {selector("sel-x", d["eje_x"], "dir")}
+      {selector("sel-y", d["eje_y"], "viento")}
+    </div>
+    <div class="datos-grafica"><canvas id="grafica-cruce" aria-label="{esc(d["cruce_h"])}"></canvas></div>
+    <p class="datos-lectura" id="cruce-texto" aria-live="polite"></p>
+
+    <p class="nota datos-nota">{esc(d["nota"])}</p>
+    <p class="nota datos-nota"><strong>{esc(d["fuente"])}</strong></p>
+  </div>
+</section>
+</main>
+{pie(t, lang, prefijo, "datos.html")}
+{datos_pagina(datos_js)}
+<script src="{prefijo}assets/vendor/chart.umd.js"></script>
+<script src="{prefijo}assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="{prefijo}assets/vendor/hammer.min.js"></script>
+<script src="{prefijo}assets/vendor/chartjs-plugin-zoom.min.js"></script>
+<script src="{prefijo}assets/datos.js?v={VERSION}" defer></script>
+<script src="{prefijo}assets/web.js?v={VERSION}" defer></script>
+</body>
+</html>
+"""
+    return cabeza(t, lang, prefijo, d["title"], d["description"], "datos.html") + cuerpo
 
 
 # ─────────────────────────────── páginas sencillas ───────────────────────────────
@@ -1024,6 +1103,7 @@ def main():
         escribir(f"{carpeta(lang)}index.html", portada(lang))
         escribir(f"{carpeta(lang)}buceo.html", pagina_buceo(lang))
         escribir(f"{carpeta(lang)}revista.html", pagina_revista(lang))
+        escribir(f"{carpeta(lang)}datos.html", pagina_datos(lang))
         escribir(f"{carpeta(lang)}legal.html", legal(lang))
         escribir(f"{carpeta(lang)}gracias.html", gracias(lang))
     t = T[IDIOMAS[0]]
@@ -1032,7 +1112,7 @@ def main():
                                        f'<p>{esc(t["e404_p"])}</p>', "404.html", prefijo="/"))
     hoy = datetime.date.today().isoformat()
     urls = []
-    for ruta in ("", "buceo.html", "revista.html"):
+    for ruta in ("", "buceo.html", "revista.html", "datos.html"):
         for lang in IDIOMAS:
             alternas = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{DOMINIO}/{carpeta(l)}{ruta}"/>'
                                for l in IDIOMAS)

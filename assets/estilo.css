@@ -666,3 +666,24 @@ a.parada:hover { scale: 1.12; }
   .revista-susc-rejilla { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) { .revista-ejes { grid-template-columns: 1fr; } }
+
+/* ───── datos de Marbella (AEMET) ───── */
+.campo { display: grid; gap: 4px; font-size: 15px; font-weight: 700; color: var(--marino); }
+.campo select { font: 500 17px var(--texto); padding: 10px 12px; border: 2px solid var(--marino); border-radius: 4px; background: #fff; color: var(--tinta); min-width: 220px; }
+.campo-estacion { margin-top: 26px; max-width: 320px; }
+.datos-seccion { padding-top: clamp(40px, 5vw, 64px); }
+.datos-cabeza { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+.datos-h2 { margin-top: clamp(48px, 6vw, 80px); }
+.datos-ahora { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 24px; border-top: 2px solid var(--marino); }
+.dato { display: grid; gap: 2px; padding: 18px 16px 20px 0; border-bottom: 1px solid var(--linea); }
+.dato-etiqueta { font-size: 14px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--gris); }
+.dato-valor { font: 800 clamp(40px, 5vw, 60px)/1 var(--titular); color: var(--marino); }
+.dato-extra { font-size: 15px; color: var(--gris); }
+.datos-controles { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 20px; margin: 24px 0 18px; }
+.datos-rangos { margin: 0; }
+.datos-grafica { position: relative; height: clamp(320px, 45vw, 460px); border: 1px solid var(--linea); padding: 12px; }
+.datos-pie { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; }
+.datos-botones { display: flex; gap: 10px; flex-wrap: wrap; }
+.datos-lectura { font-size: 19px; font-weight: 700; color: var(--marino); margin-top: 14px; }
+.datos-nota { margin-top: 18px; max-width: 80ch; }
+@media (max-width: 760px) { .datos-ahora { grid-template-columns: repeat(2, minmax(0, 1fr)); } .campo select { min-width: 0; width: 100%; } .campo { flex: 1 1 100%; } }
