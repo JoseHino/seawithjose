@@ -64,6 +64,7 @@ Página: `revista.html` (EN), `es/revista.html`, `ru/revista.html`; números pub
 | `revista-noticias.yml` → `scripts/revista_noticias.py` | Cada día guarda titulares de Google Noticias por eje e idioma en `datos/revista/noticias.json` (40 días). |
 | `revista-borrador.yml` → `scripts/revista.py borrador` | Días 1 y 16 (o a mano): cifras del mar (Open-Meteo y AEMET), la IA redacta los dos idiomas y se abre una incidencia con la etiqueta `revista` que menciona a Jose. |
 | `revista-revision.yml` → `scripts/revista.py revisar` | Cuando Jose contesta la incidencia (respondiendo al correo de GitHub): «OK» publica en la web y envía con Brevo; si pide cambios, la IA hace la versión siguiente. |
+| `scripts/gmail_bitacora.gs` | Apps Script de Gmail: un correo a `josemariahf612+bitacora@gmail.com` pide un borrador en cualquier momento (evento `revista`); el texto del correo llega a la IA como notas. Sin número en el asunto, sale un especial `AAAA-MM-DD`. |
 | `revista/instrucciones_*.md` | Lo que se le pide a la IA. Se cambian aquí, sin tocar código. **La IA no escribe cifras**: la tabla del mar la monta el script. |
 
 Necesita en GitHub (*Settings → Secrets and variables → Actions*):
