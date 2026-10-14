@@ -599,7 +599,8 @@ def limpiar_respuesta(texto):
     """Quita la cita del correo original (GitHub ya suele hacerlo)."""
     lineas = []
     for l in (texto or "").splitlines():
-        if l.startswith(">") or re.match(r"^(El|On) .+(escribió|wrote):\s*$", l.strip()):
+        # la cabecera de la cita («El mié, 14 oct 2026 a las 22:08, … escribió:») a veces se parte en dos líneas
+        if l.startswith(">") or re.match(r"^(El|On) \S+.*20\d\d", l.strip()) or re.search(r"(escribió|wrote):\s*$", l):
             break
         lineas.append(l)
     return "\n".join(lineas).strip()
@@ -644,9 +645,9 @@ def cmd_revisar():
            + f"\n\n- Español: {v['es']}\n- Inglés: {v['en']}\n\nResponde **OK** para enviar, o más cambios.")
 
 
-def brevo(ruta, datos=None):
+def brevo(ruta, datos=None, metodo="POST"):
     return pedir_json(f"https://api.brevo.com/v3{ruta}", datos,
-                      {"api-key": os.environ["BREVO_API_KEY"], "Accept": "application/json"}, "POST")
+                      {"api-key": os.environ["BREVO_API_KEY"], "Accept": "application/json"}, metodo)
 
 
 def publicar(e):
@@ -665,10 +666,22 @@ def publicar(e):
     escribir(INDICE, json.dumps(indice, ensure_ascii=False, indent=1))
     subprocess.run([sys.executable, os.path.join(RAIZ, "build.py")], check=True)
     enviados = []
+    hechos = e.setdefault("enviados", {})          # idioma → campaña: lo ya enviado no se repite nunca
     for lang in IDIOMAS:
         lista = os.environ.get(f"BREVO_LISTA_{lang.upper()}")
+        if hechos.get(lang):
+            enviados.append(f"{lang}: ya enviado antes (campaña {hechos[lang]})")
+            continue
         if not (lista and os.environ.get("BREVO_API_KEY")):
             enviados.append(f"{lang}: sin lista o sin clave de Brevo, no enviado")
+            continue
+        try:
+            info = brevo(f"/contacts/lists/{int(lista)}", metodo="GET")
+            suscritos = info.get("uniqueSubscribers", info.get("totalSubscribers", 0))
+        except Exception:  # noqa: BLE001
+            suscritos = None
+        if suscritos == 0:
+            enviados.append(f"{lang}: la lista {lista} aún no tiene suscriptores, no enviado")
             continue
         c = e["contenido"][lang]
         camp = brevo("/emailCampaigns", {
@@ -678,7 +691,10 @@ def publicar(e):
             "recipients": {"listIds": [int(lista)]}, "mirrorActive": True,
             "htmlContent": montar(numero, e["version"], e["contenido"], e["mar"], lang, "brevo")})
         brevo(f"/emailCampaigns/{camp['id']}/sendNow")
-        enviados.append(f"{lang}: campaña {camp['id']} enviada a la lista {lista}")
+        hechos[lang] = camp["id"]
+        guardar_estado(e)
+        enviados.append(f"{lang}: campaña {camp['id']} enviada a la lista {lista}"
+                        + (f" ({suscritos} suscriptores)" if suscritos else ""))
     e["estado"] = "publicado"
     e["historial"].append(f"v{e['version']} · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · "
                           "aprobado y publicado · " + " · ".join(enviados))
