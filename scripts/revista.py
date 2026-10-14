@@ -64,6 +64,13 @@ TXT = {
            "ola": "Ola más alta", "viento": "Racha más fuerte", "luna": "Luna", "hoy": "Agua hoy (AEMET)",
            "fases": {"nueva": "Luna nueva", "llena": "Luna llena", "creciente": "Cuarto creciente", "menguante": "Cuarto menguante"},
            "fuentes": "Datos: Open-Meteo (Copernicus Marine, ERA5) y AEMET, frente a Puerto Banús.",
+           "datos_h": "Lo que dicen los datos", "tiempo_h": "El tiempo en Marbella",
+           "ultimos": "Los últimos 15 días", "proximos": "Los próximos 7 días (previsión de AEMET)",
+           "t_max": "Máxima", "t_min": "Mínima", "t_lluvia": "Lluvia", "t_racha": "Racha más fuerte", "t_viento": "Viento",
+           "dias_lluvia": "{n} día(s) de lluvia", "levante_poniente": "{l} días de levante · {p} de poniente",
+           "dias_sem": "lun mar mié jue vie sáb dom".split(),
+           "graf_alt": "Gráfica: temperatura del agua y viento en la quincena, y cambio medio del agua según la dirección del viento",
+           "fuentes_tiempo": "Datos: AEMET, estación Marbella Puerto (6076X) y predicción para Marbella. Agua: Copernicus Marine (satélite y modelo de la UE).",
            "leer": "Leer en", "web": "Ver en la web", "datos": "Ver todos los datos de Marbella, hora a hora", "baja": "Darse de baja",
            "pie": "Recibes la Bitácora porque te suscribiste en seawithjose.es.", "salidas": "Salir a navegar, bucear o pescar conmigo",
            "aviso": "Borrador para tu aprobación · versión {v}",
@@ -75,6 +82,13 @@ TXT = {
            "ola": "Highest wave", "viento": "Strongest gust", "luna": "Moon", "hoy": "Water today (AEMET)",
            "fases": {"nueva": "New moon", "llena": "Full moon", "creciente": "First quarter", "menguante": "Last quarter"},
            "fuentes": "Data: Open-Meteo (Copernicus Marine, ERA5) and AEMET, off Puerto Banús.",
+           "datos_h": "What the data say", "tiempo_h": "Marbella weather",
+           "ultimos": "The last 15 days", "proximos": "The next 7 days (AEMET forecast)",
+           "t_max": "High", "t_min": "Low", "t_lluvia": "Rain", "t_racha": "Strongest gust", "t_viento": "Wind",
+           "dias_lluvia": "{n} rainy day(s)", "levante_poniente": "{l} easterly days · {p} westerly",
+           "dias_sem": "Mon Tue Wed Thu Fri Sat Sun".split(),
+           "graf_alt": "Chart: water temperature and wind this fortnight, and average change in the water by wind direction",
+           "fuentes_tiempo": "Data: AEMET, Marbella Marina station (6076X) and Marbella forecast. Water: Copernicus Marine (EU satellite and model).",
            "leer": "Read on", "web": "View on the website", "datos": "See all the Marbella data, hour by hour", "baja": "Unsubscribe",
            "pie": "You get the Logbook because you subscribed at seawithjose.es.", "salidas": "Come sailing, diving or fishing with me",
            "aviso": "Draft for your approval · version {v}",
@@ -290,6 +304,9 @@ def redactar(numero, mar, notas=""):
     for lang in IDIOMAS:
         usuario += [f"\n=== IDIOMA {lang} ===", f"CIFRAS DEL MAR ({mar['desde']} a {mar['hasta']}): {texto_mar(mar, lang)}",
                     f"NOTICIAS ({lang}; formato: [eje] código · fecha · fuente · titular):", noticias(numero, lang, refs)]
+    if mar.get("hechos"):
+        usuario += ["\n=== HECHOS CALCULADOS (para «datos_titulo», «datos_texto» y «tiempo_comentario», en los dos idiomas) ===",
+                    mar["hechos"]]
     return resolver(ia(instrucciones("redaccion"), "\n".join(usuario)), refs), refs
 
 
@@ -329,6 +346,65 @@ def bloque_mar(mar, lang):
         filas.append("<tr>" + fila[0] + '<td width="50%"></td></tr>')
     return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{"".join(filas)}</table>'
             f'<p style="margin:10px 5px 0;font:12px/1.5 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};">{esc(t["fuentes"])}</p>')
+
+
+def titulo_seccion(texto):
+    return (f'<div style="font:800 13px/1 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;'
+            f'color:{COLOR["rojo"]};margin-bottom:12px;border-top:3px solid {COLOR["marino"]};padding-top:14px;">{esc(texto)}</div>')
+
+
+def bloque_analisis(c, mar, lang):
+    t = TXT[lang]
+    if not (c.get("datos_texto") or mar.get("graficas")):
+        return ""
+    img = mar.get("graficas", {}).get(lang)
+    return (f'<tr><td style="padding:26px 30px 0;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
+            + titulo_seccion(t["datos_h"])
+            + (f'<div style="font:800 19px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin-bottom:8px;">{esc(c["datos_titulo"])}</div>' if c.get("datos_titulo") else "")
+            + "".join(f'<p style="margin:0 0 12px;">{texto_html(p)}</p>' for p in str(c.get("datos_texto", "")).split("\n\n") if p.strip())
+            + (f'<img src="{esc(img)}" width="580" alt="{esc(t["graf_alt"])}" style="display:block;width:100%;max-width:580px;height:auto;border:1px solid {COLOR["linea"]};">' if img else "")
+            + "</td></tr>")
+
+
+def bloque_tiempo(c, mar, lang):
+    t, q, prev = TXT[lang], mar.get("tiempo") or {}, mar.get("prevision") or []
+    if not (q or prev):
+        return ""
+    def dia(f):
+        d = datetime.date.fromisoformat(f)
+        return f"{t['dias_sem'][d.weekday()]} {d.day}/{d.month}"
+    celdas = []
+    if "tmax" in q:
+        celdas.append((t["t_max"], f"{fmt(q['tmax'], lang)} °C", dia(q["tmax_dia"])))
+    if "tmin" in q:
+        celdas.append((t["t_min"], f"{fmt(q['tmin'], lang)} °C", dia(q["tmin_dia"])))
+    if "lluvia_total" in q:
+        celdas.append((t["t_lluvia"], f"{fmt(q['lluvia_total'], lang)} mm", t["dias_lluvia"].format(n=q["dias_lluvia"])))
+    if "racha_max" in q:
+        celdas.append((t["t_racha"], f"{q['racha_max']} km/h", f"{q.get('racha_dir', '')} · {dia(q['racha_dia'])}"))
+    tarjetas = "".join(
+        f'<td width="25%" valign="top" style="padding:4px;"><div style="background:{COLOR["cielo"]};padding:12px;font-family:Arial,Helvetica,sans-serif;">'
+        f'<div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:{COLOR["gris"]};font-weight:700;">{esc(a)}</div>'
+        f'<div style="font-size:20px;font-weight:800;color:{COLOR["marino"]};margin-top:3px;">{esc(b)}</div>'
+        f'<div style="font-size:12px;color:{COLOR["gris"]};margin-top:2px;">{esc(x)}</div></div></td>' for a, b, x in celdas)
+    extra = (f'<p style="margin:8px 4px 0;font:13px/1.5 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};">'
+             f'{esc(t["levante_poniente"].format(l=q["dias_levante"], p=q["dias_poniente"]))}</p>') if "dias_levante" in q else ""
+    filas = "".join(
+        f'<tr><td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};font-weight:700;color:{COLOR["marino"]};">{esc(dia(p["fecha"]))}</td>'
+        f'<td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};">{esc(p.get("cielo") or "")}</td>'
+        f'<td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};white-space:nowrap;">{p["tmax"] if p.get("tmax") is not None else "–"}° / {p["tmin"] if p.get("tmin") is not None else "–"}°</td>'
+        f'<td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};white-space:nowrap;">{"" if p.get("lluvia") is None else str(p["lluvia"]) + " %"}</td>'
+        f'<td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};white-space:nowrap;">{esc(p.get("viento_dir") or "")} {p.get("viento") or ""}{" km/h" if p.get("viento") else ""}</td></tr>'
+        for p in prev)
+    return (f'<tr><td style="padding:26px 30px 0;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
+            + titulo_seccion(t["tiempo_h"])
+            + (f'<p style="margin:0 0 12px;">{texto_html(c["tiempo_comentario"])}</p>' if c.get("tiempo_comentario") else "")
+            + (f'<div style="font:700 14px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin:4px 0 6px;">{esc(t["ultimos"])}</div>'
+               f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>{tarjetas}</tr></table>{extra}' if celdas else "")
+            + (f'<div style="font:700 14px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin:18px 0 4px;">{esc(t["proximos"])}</div>'
+               f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font:13px/1.4 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{filas}</table>' if prev else "")
+            + f'<p style="margin:10px 0 0;font:12px/1.5 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};">{esc(t["fuentes_tiempo"])}</p>'
+            + "</td></tr>")
 
 
 def texto_html(s):
@@ -394,7 +470,9 @@ def montar(numero, version, contenido, mar, lang, modo):
     {f'<p style="margin:12px 5px 0;font:15px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{texto_html(c.get("comentario_mar"))}</p>' if c.get("comentario_mar") else ""}
     <p style="margin:14px 5px 0;"><a href="{DOMINIO}/{"es/" if lang == "es" else ""}datos.html" style="color:{COLOR["azul"]};font:700 15px/1.4 Arial,Helvetica,sans-serif;">{esc(t["datos"])} →</a></p>
   </td></tr>
+  {bloque_analisis(c, mar, lang)}
   {"".join(secciones)}
+  {bloque_tiempo(c, mar, lang)}
   <tr><td style="padding:10px 30px 30px;" align="left">
     <a href="{DOMINIO}/{"es/" if lang == "es" else ""}" style="display:inline-block;background:{COLOR["amarillo"]};color:{COLOR["marino"]};font:700 16px/1 Arial,Helvetica,sans-serif;text-decoration:none;padding:15px 22px;">{esc(t["salidas"])} →</a>
   </td></tr>
@@ -452,12 +530,33 @@ def editor():
 
 
 # ─────────────────────────────── órdenes ───────────────────────────────
+def analizar(numero, mar):
+    """Análisis, tiempo de la quincena y previsión (scripts/revista_datos.py), y la gráfica de cada idioma."""
+    import revista_datos as rd
+    ini, fin = periodo(numero)
+    for clave, funcion in (("tiempo", lambda: rd.tiempo_quincena(ini, fin)), ("prevision", rd.prevision),
+                           ("analisis", lambda: rd.analisis(ini, fin))):
+        try:
+            mar[clave] = funcion()
+        except Exception as e:  # noqa: BLE001
+            print(f"  {clave}: {e}")
+    if mar.get("analisis"):
+        mar["hechos"] = rd.texto_analisis(mar["analisis"], mar.get("tiempo"), mar.get("prevision"))
+        for lang in IDIOMAS:
+            try:
+                rd.grafica(mar["analisis"], os.path.join(CARPETA, "graficas", f"{numero}-{lang}.png"), lang)
+                mar.setdefault("graficas", {})[lang] = f"{DOMINIO}/revista/graficas/{numero}-{lang}.png"
+            except Exception as e:  # noqa: BLE001
+                print(f"  gráfica {lang}: {e}")
+
+
 def cmd_borrador(numero=None, notas=""):
     numero = numero or numero_de(datetime.date.today() + datetime.timedelta(days=1))
     if os.path.exists(ruta_estado(numero)) and json.load(open(ruta_estado(numero), encoding="utf-8"))["estado"] == "publicado":
         sys.exit(f"El número {numero} ya está publicado.")
     mar = datos_mar(numero)
     print("Mar:", texto_mar(mar, "es"))
+    analizar(numero, mar)
     contenido, refs = redactar(numero, mar, notas)
     e = {"numero": numero, "version": 1, "estado": "pendiente", "mar": mar, "contenido": contenido, "refs": refs,
          "historial": [f"v1 · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · borrador"]}

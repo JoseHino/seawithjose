@@ -3,6 +3,7 @@
 
     python scripts/datos_marbella.py              -> añade las últimas 24 h a datos/marbella/horario.json
     python scripts/datos_marbella.py historico    -> rellena datos/marbella/diario.json desde 2004 (una vez)
+    python scripts/datos_marbella.py recientes    -> actualiza los diarios de los dos últimos meses (cada día)
 
 Estaciones de AEMET en el término municipal:
   6076X  Marbella, Puerto   (puerto deportivo)
@@ -93,13 +94,14 @@ def horario():
     escribir("horario.json", total)
 
 
-def historico(desde=2004):
-    """Valores diarios, en tramos de seis meses (AEMET no da más de una vez)."""
+def historico(desde=None):
+    """Valores diarios, en tramos de seis meses (AEMET no da más de una vez). Sin `desde`, solo los dos
+    últimos meses: es lo que hace la Action cada día, porque AEMET publica los diarios con unos días de retraso."""
     total = leer("diario.json", {"fuente": "AEMET OpenData, valores climatológicos diarios", "estaciones": {}})
     hoy = datetime.date.today()
     for idema, nombre in ESTACIONES.items():
         est = total["estaciones"].setdefault(idema, {"nombre": nombre, "dias": {}})
-        ini = datetime.date(desde, 1, 1)
+        ini = datetime.date(desde, 1, 1) if desde else hoy - datetime.timedelta(days=60)
         while ini <= hoy:
             fin = min(datetime.date(ini.year + (ini.month + 5) // 12, (ini.month + 5) % 12 + 1, 1)
                       - datetime.timedelta(days=1), hoy)
@@ -129,4 +131,9 @@ def historico(desde=2004):
 if __name__ == "__main__":
     if not os.environ.get("AEMET_API_KEY"):
         sys.exit("Falta AEMET_API_KEY")
-    historico() if sys.argv[1:] == ["historico"] else horario()
+    if sys.argv[1:] == ["historico"]:
+        historico(2004)
+    elif sys.argv[1:] == ["recientes"]:
+        historico()
+    else:
+        horario()

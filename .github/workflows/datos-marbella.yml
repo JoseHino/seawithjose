@@ -33,6 +33,13 @@ jobs:
         env:
           AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
         run: python scripts/datos_marbella.py
+      - name: Diarios recientes (una vez al día, en la pasada de las 6 UTC, o a mano)
+        env:
+          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+        run: |
+          if [ "$(date -u +%H)" = "06" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python scripts/datos_marbella.py recientes
+          fi
       - name: Histórico diario
         if: ${{ inputs.historico }}
         env:

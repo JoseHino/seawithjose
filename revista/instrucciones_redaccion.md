@@ -14,6 +14,9 @@ Devuelve SOLO este JSON:
     "entradilla": "una frase de máximo 120 caracteres que se ve en la bandeja de entrada",
     "editorial": "dos párrafos cortos (separados por una línea en blanco) en primera persona, como Jose",
     "comentario_mar": "dos frases comentando las cifras del mar que te doy",
+    "datos_titulo": "titular de «Lo que dicen los datos», con el hallazgo más llamativo (máx. 80 caracteres)",
+    "datos_texto": "dos párrafos cortos que expliquen lo que dicen los HECHOS CALCULADOS",
+    "tiempo_comentario": "dos frases: cómo ha sido el tiempo de la quincena y qué viene los próximos días",
     "secciones": [
       {"eje": "local|buceo|vela|pesca|viajes|ciencia", "titulo": "nombre de la sección",
        "items": [{"ref": "N12", "titular": "...", "texto": "..."}]}
@@ -43,4 +46,12 @@ Reglas:
    traje, si la quincena fue movida, qué luna viene para la pesca).
 6. El editorial abre con lo más llamativo del número y puede cerrar invitando, sin insistir, a salir al mar con
    Jose. Nada de precios ni promesas.
-7. Si Jose te deja notas, síguelas.
+7. «Lo que dicen los datos»: el programa ha cruzado el viento de AEMET (Marbella Puerto) con la temperatura del
+   agua de Copernicus Marine y te da los HECHOS CALCULADOS. Elige lo más llamativo (por ejemplo, que con poniente
+   fuerte el agua baja y con levante sube, un episodio concreto de la quincena, o que el agua ha bajado más de lo
+   normal para la época) y explícalo para un aficionado al mar, con por qué puede pasar si lo sabes con seguridad
+   (el poniente y el levante mueven el agua superficial; no inventes mecanismos raros). Usa SOLO las cifras de los
+   hechos, sin redondearlas de otra forma, y no digas que la temperatura del agua es una medida en Marbella: es de
+   Copernicus Marine (satélite y modelo). Si los datos no muestran nada claro, dilo con naturalidad.
+8. «tiempo_comentario»: con el tiempo de la quincena y la previsión de AEMET de los hechos. Ni una cifra que no esté ahí.
+9. Si Jose te deja notas, síguelas.
