@@ -142,8 +142,8 @@ T["en"] = {
                     "with mask and snorkel, drinks and nibbles included. Shared trip €60 per person; private €490 for "
                     "the boat, up to 11 guests."),
     "saltar": "Skip to content",
-    "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat", "mar": "Sea today",
-            "llegar": "Getting here", "buceo": "Diving", "revista": "Logbook"},
+    "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat",
+            "llegar": "Getting here", "revista": "Logbook"},
     "menu": "Menu", "whatsapp_corto": "WhatsApp", "reservar_corto": "Book",
     "wa_hola": "Hi Jose! I’d like to go sailing on the Petit.",
     "banderas_aria": "Sea With Jose spelt out in International Code of Signals flags",
@@ -180,17 +180,16 @@ T["en"] = {
     "salida_h2": "What the trip is like",
     "pasos": [
         ("0:00", "We meet at the pontoon in Puerto Banús, 15 minutes before. I’ll send you the spot on WhatsApp."),
-        ("0:15", "We motor out and hoist the sails once we’re past the harbour entrance. Take the helm if you fancy it."),
-        ("0:45", "We anchor off San Pedro for a swim."),
-        ("1:15", "We sail further out, where the dolphins usually turn up."),
-        ("2:00", "We sail back to Banús."),
+        ("0:15", "We motor out and hoist the sails past the harbour entrance. Then we head west or east, depending on the wind. Take the helm if you fancy it."),
+        ("1:00", "Out at sea, far from the beach, we stop the boat for a swim with mask and snorkel."),
+        ("2:00", "We sail back to Banús, closing the loop."),
     ],
     "salida_nota": "That’s the usual route. The wind and the sea decide the rest.",
     "carta_aria": ("Nautical chart of the coast between San Pedro Alcántara and Marbella, with the usual route of the "
                    "trip from Puerto Banús"),
     "carta": {"banus": "Puerto José Banús", "sanpedro": "San Pedro Alcántara", "marbella": "Marbella",
-              "galeon": "The Galleon · 8–10 m", "rioverde": "Río Verde", "alboran": "Alboran Sea", "oeste": "W",
-              "norte": "N", "ruta": "Usual route"},
+              "bano": "Swim", "rioverde": "Río Verde", "alboran": "Alboran Sea", "oeste": "W",
+              "norte": "N", "ruta": "Depending on the wind"},
     "reserva_h2": "Booking",
     "reserva_intro": "Choose the day, the time and how many of you are coming. I’ll confirm on WhatsApp.",
     "form": {
@@ -446,12 +445,11 @@ T["en"] = {
                     "your booking so they can be shown again when you come back from the payment page. Fonts and "
                     "images are served from the site itself."),
         ("Third parties", "The site is hosted on GitHub Pages (GitHub Inc.), which may record visitors’ IP addresses "
-                          "for security. The WhatsApp, Instagram, Google Maps and webcam links take you to those "
+                          "for security. The WhatsApp, Instagram and Google Maps links take you to those "
                           "services, which have their own privacy policies."),
         ("Credits", "Bathymetry: EMODnet Bathymetry Consortium, CC BY 4.0. Map of Puerto Banús: © OpenStreetMap "
                     "contributors, ODbL. Forecasts and Marbella weather data: information prepared by the Spanish State Meteorological Agency "
-                    "(AEMET). Dive sites: “Málaga sumergida. Guía de buceo de la Senda Azul”, Turismo y "
-                    "Planificación Costa del Sol."),
+                    "(AEMET)."),
     ],
     "gracias": {"title": "Booking received · Sea With Jose", "h1": "Booking received",
                 "p": "Thank you. As soon as I see your payment, I’ll confirm your trip on WhatsApp.",
@@ -534,8 +532,8 @@ T["es"] = {
                     "gafas y tubo, bebida y picoteo incluidos. Compartida 60 € por persona; privada 490 € el barco, "
                     "hasta 11 personas."),
     "saltar": "Ir al contenido",
-    "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco", "mar": "El mar hoy",
-            "llegar": "Cómo llegar", "buceo": "Buceo", "revista": "Bitácora"},
+    "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco",
+            "llegar": "Cómo llegar", "revista": "Bitácora"},
     "menu": "Menú", "whatsapp_corto": "WhatsApp", "reservar_corto": "Reservar",
     "wa_hola": "¡Hola Jose! Me gustaría salir a navegar en el Petit.",
     "banderas_aria": "Sea With Jose escrito con banderas del Código Internacional de Señales",
@@ -571,17 +569,16 @@ T["es"] = {
     "salida_h2": "Así es la salida",
     "pasos": [
         ("0:00", "Nos vemos en el pantalán de Puerto Banús un cuarto de hora antes. Te mando la ubicación por WhatsApp."),
-        ("0:15", "Salimos a motor y, pasada la bocana, izamos velas. Si te apetece, llevas el timón."),
-        ("0:45", "Fondeamos frente a San Pedro para bañarnos."),
-        ("1:15", "Navegamos mar adentro, que es donde suelen aparecer los delfines."),
-        ("2:00", "Volvemos a Banús a vela."),
+        ("0:15", "Salimos a motor y, pasada la bocana, izamos velas. Según el viento, vamos hacia un lado o hacia el otro. Si te apetece, llevas el timón."),
+        ("1:00", "Mar adentro, lejos de la playa, paramos el barco y nos damos un baño con gafas y tubo."),
+        ("2:00", "Volvemos a Banús a vela, cerrando la vuelta."),
     ],
     "salida_nota": "Es la ruta habitual. El viento y el mar deciden el resto.",
     "carta_aria": ("Carta náutica de la costa entre San Pedro Alcántara y Marbella, con la ruta habitual de la salida "
                    "desde Puerto Banús"),
     "carta": {"banus": "Puerto José Banús", "sanpedro": "San Pedro Alcántara", "marbella": "Marbella",
-              "galeon": "El Galeón · 8–10 m", "rioverde": "Río Verde", "alboran": "Mar de Alborán", "oeste": "O",
-              "norte": "N", "ruta": "Ruta habitual"},
+              "bano": "Baño", "rioverde": "Río Verde", "alboran": "Mar de Alborán", "oeste": "O",
+              "norte": "N", "ruta": "Según el viento"},
     "reserva_h2": "Reserva",
     "reserva_intro": "Elige el día, la hora y cuántos sois. Te confirmo por WhatsApp.",
     "form": {
@@ -839,12 +836,11 @@ T["es"] = {
                     "datos de la reserva para enseñártelos al volver de la página de pago. Las tipografías y las "
                     "imágenes se sirven desde la propia web."),
         ("Terceros", "La web está alojada en GitHub Pages (GitHub Inc.), que puede registrar las direcciones IP de las "
-                     "visitas por seguridad. Los enlaces de WhatsApp, Instagram, Google Maps y las cámaras te llevan a "
+                     "visitas por seguridad. Los enlaces de WhatsApp, Instagram y Google Maps te llevan a "
                      "esos servicios, que tienen sus propias políticas de privacidad."),
         ("Créditos", "Batimetría: EMODnet Bathymetry Consortium, CC BY 4.0. Plano de Puerto Banús: © colaboradores de "
                      "OpenStreetMap, ODbL. Previsiones y datos del tiempo en Marbella: información elaborada por la Agencia Estatal de Meteorología "
-                     "(AEMET). Puntos de buceo: «Málaga sumergida. Guía de buceo de la Senda Azul», Turismo y "
-                     "Planificación Costa del Sol."),
+                     "(AEMET)."),
     ],
     "gracias": {"title": "Reserva recibida · Sea With Jose", "h1": "Reserva recibida",
                 "p": "Gracias. En cuanto vea el pago, te confirmo la salida por WhatsApp.",
@@ -928,8 +924,8 @@ T["ru"] = {
                     "с маской и трубкой, напитки и закуски включены. Групповая прогулка 60 € с человека, "
                     "индивидуальная 490 € за яхту, до 11 гостей."),
     "saltar": "Перейти к содержанию",
-    "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта", "mar": "Море сегодня",
-            "llegar": "Как добраться", "buceo": "Дайвинг", "revista": "Журнал"},
+    "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта",
+            "llegar": "Как добраться", "revista": "Журнал"},
     "menu": "Меню", "whatsapp_corto": "WhatsApp", "reservar_corto": "Забронировать",
     "wa_hola": "Здравствуйте, Хосе! Хочу выйти в море на «Пти».",
     "banderas_aria": "Sea With Jose, написанное флагами Международного свода сигналов",
@@ -966,17 +962,16 @@ T["ru"] = {
     "salida_h2": "Как проходит прогулка",
     "pasos": [
         ("0:00", "Встречаемся на причале в Пуэрто-Банусе за 15 минут до выхода. Точное место пришлю в WhatsApp."),
-        ("0:15", "Выходим из порта на моторе и сразу за входом поднимаем паруса. Хотите, вставайте за штурвал."),
-        ("0:45", "Встаём на якорь у Сан-Педро и купаемся."),
-        ("1:15", "Уходим мористее, там обычно и появляются дельфины."),
-        ("2:00", "Под парусом возвращаемся в Банус."),
+        ("0:15", "Выходим из порта на моторе и сразу за входом поднимаем паруса. Куда пойдём, на запад или на восток, решает ветер. Хотите, вставайте за штурвал."),
+        ("1:00", "В открытом море, вдали от пляжа, останавливаемся и купаемся с маской и трубкой."),
+        ("2:00", "Под парусом возвращаемся в Банус, замыкая круг."),
     ],
     "salida_nota": "Это обычный маршрут, остальное решают ветер и море.",
     "carta_aria": ("Морская карта побережья между Сан-Педро-Алькантара и Марбельей с обычным маршрутом прогулки из "
                    "Пуэрто-Бануса"),
     "carta": {"banus": "Пуэрто-Хосе-Банус", "sanpedro": "Сан-Педро-Алькантара", "marbella": "Марбелья",
-              "galeon": "«Галеон» · 8–10 м", "rioverde": "Рио-Верде", "alboran": "Море Альборан", "oeste": "W",
-              "norte": "N", "ruta": "Обычный маршрут"},
+              "bano": "Купание", "rioverde": "Рио-Верде", "alboran": "Море Альборан", "oeste": "W",
+              "norte": "N", "ruta": "По ветру"},
     "reserva_h2": "Бронирование",
     "reserva_intro": "Выберите день, время и сколько вас будет. Я подтвержу в WhatsApp.",
     "form": {
@@ -1242,12 +1237,11 @@ T["ru"] = {
                     "показать их вам после возвращения со страницы оплаты. Шрифты и изображения загружаются с самого "
                     "сайта."),
         ("Третьи лица", "Сайт размещён на GitHub Pages (GitHub Inc.), который может записывать IP-адреса посетителей "
-                        "в целях безопасности. Ссылки на WhatsApp, Instagram, Google Карты и веб-камеры ведут на эти "
+                        "в целях безопасности. Ссылки на WhatsApp, Instagram и Google Карты ведут на эти "
                         "сервисы, у которых свои правила конфиденциальности."),
         ("Источники", "Батиметрия: EMODnet Bathymetry Consortium, CC BY 4.0. Карта Пуэрто-Бануса: © участники "
                       "OpenStreetMap, ODbL. Прогнозы: информация Государственного метеорологического агентства Испании "
-                      "(AEMET). Точки погружений: «Málaga sumergida. Guía de buceo de la Senda Azul», Turismo y "
-                      "Planificación Costa del Sol."),
+                      "(AEMET)."),
     ],
     "gracias": {"title": "Бронь получена · Sea With Jose", "h1": "Бронь получена",
                 "p": "Спасибо! Как только я увижу оплату, подтвержу прогулку в WhatsApp.",

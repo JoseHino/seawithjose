@@ -155,7 +155,11 @@ def borde_graduado(W, H, B, c):
 
 
 # La ruta habitual de la salida: Banús → velas arriba → fondeo frente a San Pedro → mar abierto → vuelta
-WAYPOINTS = [(-4.9530, 36.4846), (-4.9480, 36.4700), (-4.9850, 36.4700), (-4.9650, 36.4480), (-4.9300, 36.4650)]
+# Dos vueltas desde Banús: hacia poniente o hacia levante según el viento; el baño, en la parte más alejada de tierra
+BANUS = (-4.9530, 36.4846)
+VUELTAS = [[(-4.9590, 36.4720), (-4.9680, 36.4600), (-4.9790, 36.4560), (-4.9850, 36.4630), (-4.9780, 36.4730)],
+           [(-4.9470, 36.4720), (-4.9380, 36.4600), (-4.9260, 36.4560), (-4.9190, 36.4650), (-4.9270, 36.4750)]]
+BANOS = [(-4.9790, 36.4560), (-4.9260, 36.4560)]
 
 
 def curva(puntos):
@@ -186,15 +190,17 @@ def svg_carta(t):
         f'style="--i:{profundidades.index(i["m"])}" d="{i["d"]}"/>' for i in CARTA["isobatas"]) + "</g>")
     out.append('<g class="carta-tierra">' + "".join(f'<path d="{d}"/>' for d in CARTA["tierra"]) + "</g>")
     bx, by = L["banus"]
-    gx, gy = L["galeon"]
     ax, ay = W * 0.70, H - 26
-    pts = [proyectar(*p) for p in WAYPOINTS]
+    origen = proyectar(*BANUS)
+    vueltas = [[origen] + [proyectar(*p) for p in v] + [origen] for v in VUELTAS]
+    banos = [proyectar(*p) for p in BANOS]
+    rx, ry = origen[0], banos[0][1] + 92          # «según el viento», entre las dos vueltas
     # Cajas que ocupan los rótulos y la ruta: ahí no se pintan sondas
     cajas = [(bx - 16, by - 24, bx + 26 + len(c["banus"]) * 13, by + 40),
-             (gx - 20, gy - 22, gx + 30 + len(c["galeon"]) * 11.5, gy + 16),
-             (ax - len(c["alboran"]) * 11, ay - 30, ax + len(c["alboran"]) * 11, ay + 12)]
-    cajas += [(x - 26, y - 26, x + 26, y + 26) for x, y in pts]
-    cajas.append((pts[3][0] - 30 - len(c["ruta"]) * 12, pts[3][1] + 20, pts[3][0] - 20, pts[3][1] + 56))
+             (ax - len(c["alboran"]) * 11, ay - 30, ax + len(c["alboran"]) * 11, ay + 12),
+             (rx - len(c["ruta"]) * 7, ry - 30, rx + len(c["ruta"]) * 7, ry + 10)]
+    cajas += [(x - 26, y - 26, x + 26, y + 26) for v in vueltas for x, y in v]
+    cajas += [(x - 40, y - 26, x + 40, y + 60) for x, y in banos]
     libres = [s for s in CARTA["sondas"]
               if not any(x0 <= s["x"] <= x1 and y0 <= s["y"] <= y1 for x0, y0, x1, y1 in cajas)]
     out.append('<g class="carta-sondas" aria-hidden="true">' + "".join(
@@ -207,18 +213,16 @@ def svg_carta(t):
                f'text-anchor="middle">{esc(c["rioverde"])}</text>'
                f'<g class="simbolo-puerto" transform="translate({bx} {by})"><path d="M0-15V0H-9Z M2-11 9 0H2Z M-12 3H12L8 7H-8Z"/></g>'
                f'<text class="rotulo-puerto" x="{bx + 18}" y="{by - 2}">{esc(c["banus"])}</text>'
-               # Pecio no peligroso (INT1 K29): línea con tres trazos
-               f'<g class="simbolo-pecio" transform="translate({gx} {gy})"><path d="M-14 0H14 M-7-6V6 M0-6V6 M7-6V6"/></g>'
-               f'<text class="rotulo-pecio" x="{gx + 22}" y="{gy + 6}">{esc(c["galeon"])}</text>'
                f'<text class="rotulo-mar" x="{ax:.0f}" y="{ay:.0f}" text-anchor="middle">{esc(c["alboran"])}</text>'
                "</g>")
-    ida = curva(pts + [pts[0]])
-    out.append(f'<g class="derrota"><path class="ruta-estela" d="{ida}"/><path class="ruta-linea" pathLength="1" d="{ida}"/>'
-               + "".join(f'<g class="ruta-punto" transform="translate({x:.0f} {y:.0f})">'
-                         f'<circle r="17"/><text dy="6" text-anchor="middle">{n + 1}</text></g>'
-                         for n, (x, y) in enumerate(pts))
-               + f'<text class="ruta-rotulo" x="{pts[3][0] - 24:.0f}" y="{pts[3][1] + 46:.0f}" text-anchor="end">{esc(c["ruta"])}</text>'
-               + "</g>")
+    trazos = "".join(f'<path class="ruta-estela" d="{curva(v)}"/><path class="ruta-linea" pathLength="1" d="{curva(v)}"/>'
+                     for v in vueltas)
+    # El baño: un círculo con dos olas
+    banos_svg = "".join(f'<g class="ruta-punto ruta-bano" transform="translate({x:.0f} {y:.0f})"><circle r="19"/>'
+                        '<path d="M-10-3q2.5-4 5 0t5 0 5 0 5 0M-10 5q2.5-4 5 0t5 0 5 0 5 0"/>'
+                        f'<text y="50" text-anchor="middle">{esc(c["bano"])}</text></g>' for x, y in banos)
+    out.append(f'<g class="derrota">{trazos}{banos_svg}'
+               f'<text class="ruta-rotulo" x="{rx:.0f}" y="{ry:.0f}" text-anchor="middle">{esc(c["ruta"])}</text></g>')
     out.append("</g>")                      # fin del recorte
     out.append(borde_graduado(W, H, B, c))
     out.append("</svg>")
@@ -302,9 +306,8 @@ def cabecera(t, lang, prefijo, pagina="index.html"):
     """En la portada, los enlaces son anclas; en el resto de páginas apuntan a la portada (salvo Buceo)."""
     inicio = "" if pagina == "index.html" else f"{prefijo}{carpeta(lang)}"
     destino = {k: f"{inicio}#{k}" for k in t["nav"]}
-    destino["buceo"] = f"{prefijo}{carpeta(lang)}buceo.html"
     destino["revista"] = f"{prefijo}{carpeta(lang)}revista.html"
-    actual = {"buceo.html": "buceo", "revista.html": "revista"}.get(pagina)
+    actual = {"revista.html": "revista"}.get(pagina)
     enlaces = "".join(f'<li><a href="{destino[k]}"' + (' aria-current="page"' if k == actual else "")
                       + f'>{esc(v)}</a></li>' for k, v in t["nav"].items())
     ruta = "" if pagina in ("index.html", "404.html") else pagina
@@ -567,7 +570,6 @@ def portada(lang):
       <div>
         <p class="capitan-titulo">{esc(t["capitan"]["titulo"])}</p>
         <ul class="capitan-creds">{"".join(f"<li>{esc(x)}</li>" for x in t["capitan"]["creds"])}</ul>
-        <a class="capitan-enlace" href="#jose">{esc(t["capitan"]["enlace"])}{FLECHA}</a>
       </div>
     </div>
   </div>
@@ -679,21 +681,6 @@ def portada(lang):
   </div>
   <div class="contenedor mosaico">{mosaico}</div>
 </section>
-{seccion_mar(t)}
-<section class="seccion jose" id="jose" aria-labelledby="jose-titulo">
-  <div class="contenedor jose-rejilla">
-    <figure class="jose-fotos">
-      {imagen("jose-buceo", (520, 1040), t["jose_foto"], prefijo, "jose-foto", "(max-width: 900px) 100vw, 40vw")}
-      {imagen("jose-lancha", (520, 1040), "", prefijo, "jose-foto-2", "(max-width: 900px) 50vw, 18vw")}
-    </figure>
-    <div class="jose-texto">
-      <h2 id="jose-titulo">{esc(t["jose_h2"])}</h2>
-      {"".join(f"<p>{esc(x)}</p>" for x in t["jose_p"])}
-      <h3>{esc(t["cuaderno"])}</h3>
-      <ol class="bitacora">{bitacora}</ol>
-    </div>
-  </div>
-</section>
 
 <section class="seccion llegar" id="llegar" aria-labelledby="llegar-titulo">
   <div class="contenedor llegar-rejilla">
@@ -709,18 +696,6 @@ def portada(lang):
   </div>
 </section>
 
-<section class="seccion buceo-portada" id="buceo" aria-labelledby="buceo-titulo">
-  <div class="contenedor">
-    <h2 id="buceo-titulo">{BANDERA_ALFA}{esc(t["buceo_h2"])}</h2>
-    <p class="intro">{esc(t["buceo_lead"])}</p>
-    <div class="sitios sitios-mini">{sitios_cerca}
-    </div>
-    <div class="botones">
-      <a class="boton boton-amarillo" href="buceo.html">{esc(t["buceo_cta"])}{FLECHA}</a>
-      <a class="boton boton-borde" href="{wa(t["buceo_wa"])}">{ICONO_WA}{esc(t["buceo_wa_cta"])}</a>
-    </div>
-  </div>
-</section>
 
 <section class="pesca" aria-labelledby="pesca-titulo">
   <div class="contenedor pesca-fila">
@@ -1101,7 +1076,6 @@ def escribir(ruta, texto):
 def main():
     for lang in IDIOMAS:
         escribir(f"{carpeta(lang)}index.html", portada(lang))
-        escribir(f"{carpeta(lang)}buceo.html", pagina_buceo(lang))
         escribir(f"{carpeta(lang)}revista.html", pagina_revista(lang))
         escribir(f"{carpeta(lang)}datos.html", pagina_datos(lang))
         escribir(f"{carpeta(lang)}legal.html", legal(lang))
@@ -1112,7 +1086,7 @@ def main():
                                        f'<p>{esc(t["e404_p"])}</p>', "404.html", prefijo="/"))
     hoy = datetime.date.today().isoformat()
     urls = []
-    for ruta in ("", "buceo.html", "revista.html", "datos.html"):
+    for ruta in ("", "revista.html", "datos.html"):
         for lang in IDIOMAS:
             alternas = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{DOMINIO}/{carpeta(l)}{ruta}"/>'
                                for l in IDIOMAS)
@@ -1120,7 +1094,7 @@ def main():
     escribir("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                             'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
     escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
-    print("Web generada:", ", ".join(f"/{carpeta(l)}" for l in IDIOMAS), "· portada, buceo, revista, legal, gracias")
+    print("Web generada:", ", ".join(f"/{carpeta(l)}" for l in IDIOMAS), "· portada, revista, legal, gracias")
 
 
 if __name__ == "__main__":

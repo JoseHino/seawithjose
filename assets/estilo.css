@@ -193,6 +193,8 @@ p { margin: 0 0 1em; }
 .ruta-linea { fill: none; stroke: var(--rojo); stroke-width: 3; stroke-dasharray: .011 .007; stroke-linecap: round; }
 .ruta-punto circle { fill: var(--blanco); stroke: var(--rojo); stroke-width: 3; }
 .ruta-punto text { font: 800 21px var(--titular); fill: var(--rojo); }
+.ruta-bano path { fill: none; stroke: var(--rojo); stroke-width: 2.4; stroke-linecap: round; }
+.ruta-bano text { text-transform: uppercase; }
 .ruta-rotulo { font: 800 26px var(--titular); text-transform: uppercase; fill: var(--rojo); }
 @media (prefers-reduced-motion: no-preference) {
   .iso { stroke-dasharray: 1; stroke-dashoffset: 1; }
