@@ -32,7 +32,8 @@ RESENAS = []
 # ─────────────────────────────── la Bitácora (revista quincenal) ───────────────────────────────
 # Formularios de suscripción de Brevo (Contactos > Formularios > Compartir), uno por idioma de la revista.
 # Mientras estén vacíos, la página invita a escribir por WhatsApp.
-REVISTA_FORMS = {"es": "", "en": ""}
+REVISTA_FORMS = {"es": "https://24245cf8.sibforms.com/serve/MUIFAEmrpgChojMxJoy6P68lKnQH8Pdwr-1qUUHTz8eTHIz24_MokRkUUTL0Ddciyszt54Yy99S_mMPS4bzUsIa7bEnnK8uvHB7nZ3c1f3yjoMEvqG08nNosjRxRZGX-vZ8G_-YIc53MvrryVad9DcENcjd453jnG93gUSwdNseQz5Q7NfYePWa7uxB1Bq0XP5XDpgBcI6zk7awFXQ==",
+                 "en": "https://24245cf8.sibforms.com/serve/MUIFAGrp6bXc-oWNuS0KXY4QRMBPDp2h17wWmvHhWyUffszoJi_RXKH3zXxd2RbImGjurzL10dDJgqhF2065Ydktwj50RXJy7du_Jvrlx7q9eiq4sTLFaVVHzEpeS3B--_12xGm2hbkJBz1I2kxtel95Qm-eWnQ6hgA7lcLN4XyyTvVzkMzLMHsmSWCEcfUiuAyxLvswzC2SqtxKfQ=="}
 # Si SkylineWebcams o meteo365 autorizan a seawithjose.es, aquí va la dirección del reproductor de cada
 # cámara (mismo orden que en T[...]["mar"]["camaras"]) y la web la enseña en directo en vez del enlace.
 CAMARAS_EMBED = ["", "", ""]
