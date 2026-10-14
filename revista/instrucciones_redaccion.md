@@ -54,4 +54,7 @@ Reglas:
    hechos, sin redondearlas de otra forma, y no digas que la temperatura del agua es una medida en Marbella: es de
    Copernicus Marine (satélite y modelo). Si los datos no muestran nada claro, dilo con naturalidad.
 8. «tiempo_comentario»: con el tiempo de la quincena y la previsión de AEMET de los hechos. Ni una cifra que no esté ahí.
-9. Si Jose te deja notas, síguelas.
+9. Forma de las cifras y las fechas: nunca escribas fechas como 2026-10-07. En español, «el 7 de octubre» (o «el
+   martes 7»), con coma decimal (21,6 °C) y siempre con unidad (1,8 mm de lluvia, 46 km/h). En inglés, «7 October»,
+   con punto decimal (21.6 °C). Los rumbos, con palabras cuando quede mejor (poniente, levante, del suroeste).
+10. Si Jose te deja notas, síguelas.

@@ -22,3 +22,5 @@ Mantén las reglas del boletín: no inventes datos, conserva sin tocar «ref», 
 entera), y las cifras del mar
 solo pueden ser las que te dan. Si Jose pide añadir algo que no está en las noticias, puedes escribirlo como
 texto suyo (por ejemplo, un aviso de una salida), pero sin enlace inventado.
+
+Al reescribir, fechas como «el 7 de octubre» (en inglés «7 October»), coma decimal en español y siempre con unidades.
