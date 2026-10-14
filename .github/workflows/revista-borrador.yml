@@ -5,6 +5,8 @@ name: Bitácora · borrador
 on:
   schedule:
     - cron: "0 7 1,16 * *"
+  repository_dispatch:            # lo lanza el correo a la dirección de la Bitácora (Apps Script de Gmail)
+    types: [revista]
   workflow_dispatch:
     inputs:
       numero:
@@ -37,8 +39,8 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           REVISTA_MODELO: ${{ vars.REVISTA_MODELO }}
-          REVISTA_NOTAS: ${{ inputs.notas }}
-        run: python scripts/revista.py borrador "${{ inputs.numero }}"
+          REVISTA_NOTAS: ${{ inputs.notas || github.event.client_payload.notas }}
+        run: python scripts/revista.py borrador "${{ inputs.numero || github.event.client_payload.numero }}"
       - name: Subir
         run: |
           git config user.name  "github-actions[bot]"

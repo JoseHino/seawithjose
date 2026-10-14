@@ -104,16 +104,31 @@ def numero_de(fecha):
     return f"{fecha.year}-{fecha.month:02d}-{1 if fecha.day < 16 else 2}"
 
 
+def salida_de(numero):
+    """AAAA-MM-1 y AAAA-MM-2 salen el 1 y el 16; AAAA-MM-DD (DD de dos cifras) es un número especial de ese día."""
+    a, m, q = numero.split("-")
+    a, m = int(a), int(m)
+    if len(q) == 2:
+        return datetime.date(a, m, int(q)), True
+    return datetime.date(a, m, 1 if q == "1" else 16), False
+
+
 def periodo(numero):
-    """Días que cubre un número: la quincena ANTERIOR a su salida (sale el 1 y el 16)."""
-    a, m, q = (int(x) for x in numero.split("-"))
-    salida = datetime.date(a, m, 1 if q == 1 else 16)
+    """Días que cubre un número: la quincena anterior a su salida (los especiales, los 15 días anteriores)."""
+    salida, especial = salida_de(numero)
     fin = salida - datetime.timedelta(days=1)
+    if especial:
+        return fin - datetime.timedelta(days=14), fin
     ini = fin.replace(day=16) if fin.day > 15 else fin.replace(day=1)
     return ini, fin
 
 
 def titulo_fecha(numero, lang):
+    salida, especial = salida_de(numero)
+    if especial:
+        mes = TXT[lang]["meses"][salida.month - 1]
+        return (f"Especial · {salida.day} de {mes} de {salida.year}" if lang == "es"
+                else f"Special · {salida.day} {mes} {salida.year}")
     a, m, q = (int(x) for x in numero.split("-"))
     t = TXT[lang]
     mes = t["meses"][m - 1]
@@ -187,8 +202,7 @@ def datos_mar(numero):
     except Exception:  # noqa: BLE001
         pass
     # la luna de la quincena que empieza ahora, que es la que le sirve a quien sale a pescar
-    a, m, q = (int(x) for x in numero.split("-"))
-    salida = datetime.date(a, m, 1 if q == 1 else 16)
+    salida, _ = salida_de(numero)
     out["luna"] = [(d.isoformat(), f) for d, f in fases_luna(salida, salida + datetime.timedelta(days=15))]
     return out
 
@@ -492,7 +506,7 @@ def limpiar_respuesta(texto):
 
 
 def cmd_revisar():
-    m = re.search(r"nº (\d{4}-\d{2}-[12])", os.environ.get("ISSUE_TITLE", ""))
+    m = re.search(r"nº (\d{4}-\d{2}-(?:\d{2}|[12]))", os.environ.get("ISSUE_TITLE", ""))
     if not m or not os.path.exists(ruta_estado(m.group(1))):
         salida("No encuentro el borrador de esta incidencia.")
         return
