@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-15T15:37:23Z",
+ "generado": "2026-10-15T20:21:56Z",
  "elaborado": {
   "playa": "2026-10-15T08:51:16",
-  "horas": "2026-10-15T15:05:08"
+  "horas": "2026-10-15T19:15:09"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,13 +27,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 21,
-     "racha": 37,
+     "viento": 20,
+     "racha": null,
      "dir": "E",
-     "lluvia": 15,
+     "lluvia": null,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "nubes_altas",
+     "cielo": null,
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -45,7 +45,7 @@
        "m": "marejada"
       },
       "bucear": {
-       "n": 3,
+       "n": 4,
        "m": "marejada"
       },
       "pescar": {
@@ -57,21 +57,21 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 26,
-     "racha": 43,
+     "viento": 25,
+     "racha": 40,
      "dir": "E",
      "lluvia": 5,
      "tormenta": 5,
      "niebla": 0,
      "cielo": "nubes_altas",
      "fondo": false,
-     "fuerza": 6,
+     "fuerza": null,
      "aviso": false,
      "mar": 3,
      "agua": 23,
      "notas": {
       "navegar": {
-       "n": 1,
+       "n": 3,
        "m": "mar_fuerte"
       },
       "bucear": {
@@ -107,15 +107,15 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 13,
-     "racha": 31,
-     "dir": "E",
+     "viento": 10,
+     "racha": 28,
+     "dir": "SE",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
      "cielo": "nubes_altas",
-     "fondo": false,
-     "fuerza": 6,
+     "fondo": true,
+     "fuerza": 5,
      "aviso": false,
      "mar": 3,
      "agua": 23,
@@ -129,7 +129,7 @@
        "m": "mar_fuerte"
       },
       "pescar": {
-       "n": 1,
+       "n": 2,
        "m": "mar_fuerte"
       }
      }
@@ -137,30 +137,30 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 17,
-     "racha": 34,
+     "viento": 19,
+     "racha": 36,
      "dir": "SE",
      "lluvia": 45,
      "tormenta": 45,
      "niebla": 0,
-     "cielo": "intervalos",
-     "fondo": false,
-     "fuerza": null,
+     "cielo": "nubes_altas",
+     "fondo": true,
+     "fuerza": 5,
      "aviso": false,
-     "mar": 2,
+     "mar": 3,
      "agua": 23,
      "notas": {
       "navegar": {
-       "n": 3,
-       "m": "tormenta"
+       "n": 1,
+       "m": "mar_fuerte"
       },
       "bucear": {
-       "n": 2,
-       "m": "marejada"
+       "n": 1,
+       "m": "mar_fuerte"
       },
       "pescar": {
-       "n": 2,
-       "m": "marejada"
+       "n": 1,
+       "m": "mar_fuerte"
       }
      }
     }
@@ -187,13 +187,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 5,
-     "racha": null,
+     "viento": 4,
+     "racha": 21,
      "dir": "NO",
      "lluvia": 65,
-     "tormenta": 0,
+     "tormenta": 65,
      "niebla": 0,
-     "cielo": "lluvia",
+     "cielo": "lluvia_escasa",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -201,25 +201,25 @@
      "agua": 22,
      "notas": {
       "navegar": {
-       "n": 5,
-       "m": "poco_viento"
+       "n": 1,
+       "m": "sin_viento"
       },
       "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 3,
+       "m": "tormenta"
       },
       "pescar": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 3,
+       "m": "tormenta"
       }
      }
     },
     {
      "de": 14,
      "a": 20,
-     "viento": 0,
+     "viento": 15,
      "racha": null,
-     "dir": "C",
+     "dir": "SE",
      "lluvia": 100,
      "tormenta": 0,
      "niebla": 0,
@@ -231,11 +231,11 @@
      "agua": 22,
      "notas": {
       "navegar": {
-       "n": 2,
-       "m": "sin_viento"
+       "n": 8,
+       "m": "lluvia"
       },
       "bucear": {
-       "n": 8,
+       "n": 7,
        "m": "lluvia"
       },
       "pescar": {
@@ -249,20 +249,20 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "E y NE 3 a 5 localmente 6 en el este, temporalmente N 1 a 3 durante la noche. Marejada o fuerte marejada.",
-  "elaborado": "2026-10-15T12:00:00",
-  "inicio": "2026-10-15T12:00:00",
-  "fin": "2026-10-16T12:00:00",
+  "texto": "E y NE 4 a 5 amainando a componente N 2 a 3 a partir de la madrugada. Marejada a fuerte marejada disminuyendo a marejadilla. Mar de fondo del E de 1 m.",
+  "elaborado": "2026-10-15T20:00:00",
+  "inicio": "2026-10-15T20:00:00",
+  "fin": "2026-10-16T20:00:00",
   "fuerza": [
-   1,
-   6
+   2,
+   5
   ],
   "mar": [
-   2,
+   1,
    3
   ],
-  "fondo": false,
-  "fondo_m": null,
+  "fondo": true,
+  "fondo_m": 1,
   "aviso": null
  }
 }
