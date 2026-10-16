@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-16T11:53Z",
+ "actualizado": "2026-10-16T12:11Z",
  "noticias": [
   {
    "fecha": "2026-10-16",
@@ -168,6 +168,30 @@
    "fuente": "BBC",
    "titular": "Orcas v great white sharks: The brutal battle between the ocean's top predators",
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWDlqdGdjUHpZeXdoNXFPb0ViSVFmTHl2X3NxUWw3aHJ5blI5RklUQXUxMERoWVRvamZYTldhTEd4YUJ0QndUUWpfaDhQYUt0MG02ak5wZVRBaTFHRk1Md3JLeUxKbDRWXzM5bmttTTRobkdjTXYxeGVTSW1SMnRiVm9pTVJKbjJuT0ZBTTVIdXBOejN5eklsX0VxZEJncHp5dDgyVXB3ci1zS0E1c0NlMnhzTXRaM1lxZ3B1RTNCSE9hc3RZUEE?oc=5"
+  },
+  {
+   "fecha": "2026-10-16",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "Hardware Premium",
+   "titular": "Casio vende ya en Reino Unido sus relojes de buceo con bisel de aluminio, a 85 libras",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZE5ZOEhZR2FQUUxtbTJvc1JlbXBfc1ZheVhtLTdyLUVZRkU1YjlxR0pXNmlUNkxaaExDS0Fad0JEbFNBcVN0MVdYbUFFZ2VHR0dQWDhzTkk1ck13V3dCdGczUjFCZXFIR2ItN093YnN0OVNkTk82Z2NBSzZsTmNiaGRHVEpmbXk1SXB0SFpmY2g4QmR5?oc=5"
+  },
+  {
+   "fecha": "2026-10-16",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "SuperYacht Times",
+   "titular": "47m Perini Navi sailing yacht Andromeda La Dea sold",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZGNoWEZpc05peW5NN25SQTY2dllZOUhxSDhvcFN6UVI2NWtaS05jVVVRdWNhOE1YZXpjOG5tbExOLXJocVc4MzJ6c1RMRW1hY3V2amIwWTVTTHpUc2psWEh6UENLdjRQY000SDdmUDJmOHdQNTBGdGdacGxQVDloY2htNzMtSGM2UXc?oc=5"
+  },
+  {
+   "fecha": "2026-10-16",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "Sail-World.com",
+   "titular": "Spirit of Malta - Champions, challengers and a new generation",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbWo5VHZvYm85a0tUX2tjSDBFRGF0aXc3N05kNlhwRFdnX1FkTVQ5U2xlcFg3ZUo3NVVRTU5VUkpjRWswVF9nbXdEd0IzdUxhOUhkdWpXUGRrVHdQWFFqVmRoRHRoQWpnSURCRm5DNE9RbUVBUkFhVFN5ZG1HRjE5RWNZVjNrbXRr?oc=5"
   },
   {
    "fecha": "2026-10-15",
@@ -616,6 +640,22 @@
    "fuente": "Computer Weekly",
    "titular": "ORCA launches PT-3 quantum computer in London datacentre",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZWVsdzA1aXNERG5ac0xpa2tPRE1KUkliRl9ZY1FHSkhYckFNTzRpd19EZHI4WGc0WDROWVBqODMzc2xTRHNSdTNMLXVfYzVFYktvdl95TVM4dHZVMUtfR21DUjBHQ29sUTdkbGJfNHFFNHBEbzdBOWN5ci1iRmlRY2tUbkNpNUc2ejM3MW5YeGZzVlhFVm5zVDV3LTlVYko3X0gwdg?oc=5"
+  },
+  {
+   "fecha": "2026-10-15",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "La Diversiva",
+   "titular": "Del chiringuito al beach club familiar en Marbella, el plan de otoño para comer y jugar con niños frente al mar",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4yTmNZbnFnLU1MSXFsR21MM1Y3dVVfLWd2Tkh2cmdMS2tvakxGYkc2alB4M0dKUld5alVIbDEybFRRaUR3S2R5dGhOM3dPeWpUUXJOMGdSNnA0TEk1Yi05RVE4WFFmTjR4Y3BV?oc=5"
+  },
+  {
+   "fecha": "2026-10-15",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Al Sol de la Costa",
+   "titular": "Costa del Sol inicia una campaña para reivindicar el papel de los chiringuitos en la identidad de Málaga",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPS2VDTTNVWV84SkRHWUt4UFFkdDl0WE03OE5VQTEzckJFV2l6Y3NaNFA2TnNuSU4zR0RVb09IZEVDVk02OWM2UVM0YXNUeWZleUNVOUNlX2NuMExZUTUyRk5WMU9TYVV1MkdPVHMwV0pUVzF5YUVKSjg1WE00Ri15ZU5IbjcxaFltOVNqYmhWWmprazFBM3hqb2xqMFZWOVJxTzMwXzZMYkhMeEwyQkZ6MWx4ZnFjYzRfZE5ULVByNWZ0Qkg0Um1KLVA1UVo?oc=5"
   },
   {
    "fecha": "2026-10-14",
@@ -3050,6 +3090,14 @@
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5va2JqNFpLUUExdlFfMWxNY0hYZXhTQjVpVXQzZjlRWGVkYllQS0pPcEhNVWJoTDhWU2hIdXR2SFlfbENuaXVqZGMwNlJUd3RNMUw0SU9KamhCLTdvR3pKVEZIOFI0YXZxTXFsNjNTajg?oc=5"
   },
   {
+   "fecha": "2026-10-09",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Federación Española de Triatlón",
+   "titular": "FETRI lanza el calendario de competiciones nacionales e internacionales en el año 2027",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSi1pRVdfSzdBS2djN2VodUZGYV81T0ZSNFNTZlozZUV3VTQzckZGeVM0QThrdk5VWGQ2aFMtYTZCai1MVHRLODhzMHBOUC1kT2JVSnRVVkJsX3lncTZTd1hEcEk5S3h6aXFRYmg3M2VXQ1FWTU9QR1dMQ21VSnZGcVdEV18wVllTUzQ0MFBxRmxXdk4wZVIyMDVGdG9yM01fYm5VcEJ5cnoyUVVWcnZxUFVmRkhfUkQ0?oc=5"
+  },
+  {
    "fecha": "2026-10-08",
    "eje": "local",
    "lang": "es",
@@ -3624,6 +3672,14 @@
    "fuente": "The Straits Times",
    "titular": "S’pore to contribute marine expertise, international connections to global ocean protection: Gan Kim Yong",
    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQMkpKdmhWVk5tTF8xLUJQSnZBLXNnMnZXMEl6anRPUURZTEplay1UZS1nVzk0TWVma0ZDR0xXZlQzOEVkSDFvYjVlMjNtTVJGVmxTczZEdFpBNGRBbnR1WmRNUWRpcmdSNDJ0Ny1uM2Q2Y2xWSGg1NXdveDg3MVoxd2N5VHc3cTlZd3l4X2ZycXlHN0VmaTRXVWZ6Ulc2bXBQSVZIak5vX2lTWVI3dWduMURHcnNJRDU4RGMwbTFVdjhzcGNTMDh3S2laY01Yc3puaDFvUmY3XzIzc1E0WFE1a1RR?oc=5"
+  },
+  {
+   "fecha": "2026-10-07",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "boote-magazin.de",
+   "titular": "Chartering in Croatia: Experience, Accidents and Weather Warnings",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPU3FNRzVQRDUyMkVNWTRjTTJhclpRcFNDTHcybVhYbG02cmVMNVl0OXJRT1B2MkJpMUcyX2F1bkxMZGhKTHEybUJHaFNHWXFuLW5rUmdRU29ONHZxVnZGRDkxSTloSTl4NHc2c3dGR29OeW5SV0Rna3FmeDJNNzdfalRudHhXM0VaQzJ0aHVkLVNBMzZOSzZzVVR5T1NtcDlfZ3h6SGNWNGM2ZThGaHdVcnlOdURnaVZZVnhLaUFZcDVtanM?oc=5"
   },
   {
    "fecha": "2026-10-06",

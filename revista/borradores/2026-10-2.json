@@ -5,13 +5,13 @@
  "mar": {
   "desde": "2026-10-01",
   "hasta": "2026-10-15",
-  "agua": 22.2,
+  "agua": 22.4,
   "agua_min": 21.4,
   "agua_max": 23.5,
-  "ola_max": 1.3,
-  "agua_dif": 0.3,
-  "racha_max": 38,
-  "agua_hoy": 22,
+  "ola_max": 1.2,
+  "agua_dif": 0.5,
+  "racha_max": 42,
+  "agua_hoy": 23,
   "luna": [
    [
     "2026-10-19",
@@ -21,32 +21,317 @@
     "2026-10-26",
     "llena"
    ]
-  ]
+  ],
+  "tiempo": {
+   "desde": "2026-10-01",
+   "hasta": "2026-10-15",
+   "dias_con_datos": 13,
+   "tmax": 27.0,
+   "tmax_dia": "2026-10-07",
+   "tmin": 18.3,
+   "tmin_dia": "2026-10-11",
+   "lluvia_total": 1.8,
+   "dias_lluvia": 1,
+   "racha_max": 46,
+   "racha_dia": "2026-10-07",
+   "racha_dir": "SO",
+   "viento_medio": 15,
+   "dir_dominante": "NE",
+   "dias_levante": 9,
+   "dias_poniente": 1
+  },
+  "prevision": [
+   {
+    "fecha": "2026-10-16",
+    "cielo": "Intervalos nubosos con lluvia escasa",
+    "tmax": 28,
+    "tmin": 20,
+    "lluvia": 60,
+    "viento": 10,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-17",
+    "cielo": "Cubierto con lluvia",
+    "tmax": 26,
+    "tmin": 19,
+    "lluvia": 100,
+    "viento": 0,
+    "viento_dir": "calma",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-18",
+    "cielo": "Muy nuboso con lluvia",
+    "tmax": 24,
+    "tmin": 18,
+    "lluvia": 100,
+    "viento": 5,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-19",
+    "cielo": "Intervalos nubosos con lluvia",
+    "tmax": 24,
+    "tmin": 17,
+    "lluvia": 100,
+    "viento": 10,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-20",
+    "cielo": "Intervalos nubosos con lluvia escasa",
+    "tmax": 25,
+    "tmin": 17,
+    "lluvia": 90,
+    "viento": 15,
+    "viento_dir": "SO",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-21",
+    "cielo": "Intervalos nubosos",
+    "tmax": 25,
+    "tmin": 15,
+    "lluvia": 25,
+    "viento": 20,
+    "viento_dir": "SO",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-22",
+    "cielo": "Intervalos nubosos",
+    "tmax": 24,
+    "tmin": 15,
+    "lluvia": 25,
+    "viento": 10,
+    "viento_dir": "S",
+    "racha": null
+   }
+  ],
+  "analisis": {
+   "pares_historicos": 1284,
+   "desde_historico": "2022-11-23",
+   "por_sector": {
+    "NE": {
+     "media": 0.14,
+     "n": 30
+    },
+    "E": {
+     "media": 0.09,
+     "n": 132
+    },
+    "SE": {
+     "media": 0.14,
+     "n": 21
+    },
+    "S": {
+     "media": -0.01,
+     "n": 7
+    },
+    "SO": {
+     "media": -0.21,
+     "n": 169
+    },
+    "O": {
+     "media": -0.17,
+     "n": 30
+    }
+   },
+   "tramos": {
+    "poniente": {
+     "flojo (<10 km/h)": {
+      "media": -0.02,
+      "n": 192
+     },
+     "moderado (10-20 km/h)": {
+      "media": -0.13,
+      "n": 207
+     },
+     "fuerte (>20 km/h)": {
+      "media": -0.22,
+      "n": 121
+     }
+    },
+    "levante": {
+     "flojo (<10 km/h)": {
+      "media": 0.08,
+      "n": 221
+     },
+     "moderado (10-20 km/h)": {
+      "media": 0.11,
+      "n": 221
+     },
+     "fuerte (>20 km/h)": {
+      "media": 0.15,
+      "n": 86
+     }
+    }
+   },
+   "quincena": [
+    {
+     "fecha": "2026-10-01",
+     "agua": 23.1,
+     "viento": 4,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-02",
+     "agua": 23.0,
+     "viento": 20,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-03",
+     "agua": 22.9,
+     "viento": 21,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-04",
+     "agua": 22.9,
+     "viento": 20,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-05",
+     "agua": 22.7,
+     "viento": 8,
+     "dir": "E"
+    },
+    {
+     "fecha": "2026-10-06",
+     "agua": 22.5,
+     "viento": 13,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-07",
+     "agua": 22.1,
+     "viento": 16,
+     "dir": "SO"
+    },
+    {
+     "fecha": "2026-10-08",
+     "agua": 22.1,
+     "viento": 5,
+     "dir": "NE"
+    },
+    {
+     "fecha": "2026-10-09",
+     "agua": 21.8,
+     "viento": 18,
+     "dir": "E"
+    },
+    {
+     "fecha": "2026-10-10",
+     "agua": 21.7,
+     "viento": 10,
+     "dir": "SE"
+    },
+    {
+     "fecha": "2026-10-11",
+     "agua": 21.8,
+     "viento": 11,
+     "dir": "N"
+    },
+    {
+     "fecha": "2026-10-12",
+     "agua": 21.7,
+     "viento": null,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-13",
+     "agua": 21.6,
+     "viento": null,
+     "dir": null
+    },
+    {
+     "fecha": "2026-10-14",
+     "agua": 22.6,
+     "viento": 23,
+     "dir": "E"
+    },
+    {
+     "fecha": "2026-10-15",
+     "agua": 23.1,
+     "viento": 21,
+     "dir": "E"
+    }
+   ],
+   "mayor_bajada_2_dias": {
+    "desde": "2026-10-05",
+    "hasta": "2026-10-07",
+    "cambio": -0.6,
+    "vientos": [
+     [
+      "E",
+      8
+     ],
+     [
+      "NE",
+      13
+     ]
+    ]
+   },
+   "mayor_subida_2_dias": {
+    "desde": "2026-10-13",
+    "hasta": "2026-10-15",
+    "cambio": 1.5,
+    "vientos": [
+     [
+      null,
+      null
+     ],
+     [
+      "E",
+      23
+     ]
+    ]
+   },
+   "agua_inicio": 23.1,
+   "agua_fin": 23.1,
+   "cambio_quincena": 0.0,
+   "cambio_normal": -1.0,
+   "anios_normal": 3
+  },
+  "hechos": "Histórico: 1284 días desde 2022-11-23 con viento de AEMET (Marbella Puerto) y temperatura del agua de Copernicus Marine.\nCambio medio del agua al día siguiente con viento medio ≥ 15 km/h, por dirección: NE +0.14 °C (30 días); E +0.09 °C (132 días); SE +0.14 °C (21 días); S -0.01 °C (7 días); SO -0.21 °C (169 días); O -0.17 °C (30 días)\nCon poniente: flojo (<10 km/h) -0.02 °C (192 días); moderado (10-20 km/h) -0.13 °C (207 días); fuerte (>20 km/h) -0.22 °C (121 días)\nCon levante: flojo (<10 km/h) +0.08 °C (221 días); moderado (10-20 km/h) +0.11 °C (221 días); fuerte (>20 km/h) +0.15 °C (86 días)\nQuincena día a día (fecha: agua °C · viento medio km/h · dirección): 10-01: 23.1 · 4 · None; 10-02: 23.0 · 20 · NE; 10-03: 22.9 · 21 · None; 10-04: 22.9 · 20 · NE; 10-05: 22.7 · 8 · E; 10-06: 22.5 · 13 · NE; 10-07: 22.1 · 16 · SO; 10-08: 22.1 · 5 · NE; 10-09: 21.8 · 18 · E; 10-10: 21.7 · 10 · SE; 10-11: 21.8 · 11 · N; 10-12: 21.7 · None · None; 10-13: 21.6 · None · None; 10-14: 22.6 · 23 · E; 10-15: 23.1 · 21 · E\nEl agua pasó de 23.1 a 23.1 °C en la quincena (+0.0 °C); en las mismas fechas de los 3 años anteriores cambió de media -1.0 °C (lo normal por la época)\nMayor bajada en 2 días: -0.6 °C del 2026-10-05 al 2026-10-07, con viento E 8 km/h, NE 13 km/h\nMayor subida en 2 días: +1.5 °C del 2026-10-13 al 2026-10-15, con viento None None km/h, E 23 km/h\nTiempo de la quincena (AEMET Marbella Puerto): {\"desde\": \"2026-10-01\", \"hasta\": \"2026-10-15\", \"dias_con_datos\": 13, \"tmax\": 27.0, \"tmax_dia\": \"2026-10-07\", \"tmin\": 18.3, \"tmin_dia\": \"2026-10-11\", \"lluvia_total\": 1.8, \"dias_lluvia\": 1, \"racha_max\": 46, \"racha_dia\": \"2026-10-07\", \"racha_dir\": \"SO\", \"viento_medio\": 15, \"dir_dominante\": \"NE\", \"dias_levante\": 9, \"dias_poniente\": 1}\nPrevisión AEMET Marbella próximos días: [{\"fecha\": \"2026-10-16\", \"cielo\": \"Intervalos nubosos con lluvia escasa\", \"tmax\": 28, \"tmin\": 20, \"lluvia\": 60, \"viento\": 10, \"viento_dir\": \"SE\", \"racha\": null}, {\"fecha\": \"2026-10-17\", \"cielo\": \"Cubierto con lluvia\", \"tmax\": 26, \"tmin\": 19, \"lluvia\": 100, \"viento\": 0, \"viento_dir\": \"calma\", \"racha\": null}, {\"fecha\": \"2026-10-18\", \"cielo\": \"Muy nuboso con lluvia\", \"tmax\": 24, \"tmin\": 18, \"lluvia\": 100, \"viento\": 5, \"viento_dir\": \"SE\", \"racha\": null}, {\"fecha\": \"2026-10-19\", \"cielo\": \"Intervalos nubosos con lluvia\", \"tmax\": 24, \"tmin\": 17, \"lluvia\": 100, \"viento\": 10, \"viento_dir\": \"SE\", \"racha\": null}, {\"fecha\": \"2026-10-20\", \"cielo\": \"Intervalos nubosos con lluvia escasa\", \"tmax\": 25, \"tmin\": 17, \"lluvia\": 90, \"viento\": 15, \"viento_dir\": \"SO\", \"racha\": null}, {\"fecha\": \"2026-10-21\", \"cielo\": \"Intervalos nubosos\", \"tmax\": 25, \"tmin\": 15, \"lluvia\": 25, \"viento\": 20, \"viento_dir\": \"SO\", \"racha\": null}, {\"fecha\": \"2026-10-22\", \"cielo\": \"Intervalos nubosos\", \"tmax\": 24, \"tmin\": 15, \"lluvia\": 25, \"viento\": 10, \"viento_dir\": \"S\", \"racha\": null}]",
+  "graficas": {
+   "es": "https://seawithjose.es/revista/graficas/2026-10-2-es.png",
+   "en": "https://seawithjose.es/revista/graficas/2026-10-2-en.png"
+  }
  },
  "contenido": {
   "es": {
-   "asunto": "Un pecio romano, delfines liberados y pesca campeona",
-   "entradilla": "El mar sigue cálido, la pesca de Marbella gana y el fondo marino trae hallazgos notables.",
-   "editorial": "Esta quincena me quedo con dos imágenes muy distintas: una familia de delfines y cientos de peces luna liberados en Ceuta, y un barco romano que ha mantenido intacto su cargamento durante siglos. El mar siempre tiene historias nuevas, incluso cuando creemos conocerlo bien.\n\nTambién hay una alegría cerca de casa: la Sociedad de Pesca Marbella ha ganado el Provincial mar-costa por clubes. Con el agua todavía amable, octubre sigue siendo buen momento para navegar, bucear o salir a pescar con calma.",
-   "comentario_mar": "El agua ha mantenido una temperatura muy agradable para bañarse y bucear, aunque ya conviene llevar una protección térmica adecuada a cada persona. La mar no ha estado especialmente dura, pero las rachas piden revisar bien la previsión antes de salir; el cuarto creciente abre además una buena referencia para planear las próximas jornadas de pesca.",
+   "asunto": "El agua se mantuvo en 23,1 °C contra la bajada habitual de octubre",
+   "entradilla": "El mar aguantó su temperatura, mientras el levante volvió a marcar el ritmo de la quincena.",
+   "editorial": "Esta quincena el agua ha hecho algo poco habitual para octubre: terminó en 23,1 °C, exactamente donde empezó. Es una buena ventana para seguir disfrutando del mar, aunque conviene mirar el viento antes de decidir el plan.\n\nTambién me quedo con un Mediterráneo que los científicos describen como más dinámico de lo que se pensaba. En un mar tan cercano, siempre hay algo que observar; si os apetece hacerlo desde el agua, nos vemos en Puerto Banús.",
+   "comentario_mar": "Con 22,4 °C de media y una máxima de ola de 1,2 m, han salido días muy agradables para bañarse y bucear con traje fino. Las rachas de hasta 42 km/h aconsejaron elegir bien las horas, y el cuarto creciente del 19 de octubre abre paso a la luna llena del 26 de octubre para quien siga las mareas de pesca.",
+   "datos_titulo": "El agua acabó igual que empezó, frente a la bajada habitual de -1,0 °C",
+   "datos_texto": "La temperatura de Copernicus Marine pasó de 23,1 °C a 23,1 °C entre el 1 y el 15 de octubre: un cambio de +0,0 °C. En esas mismas fechas de los tres años anteriores, el cambio medio fue de -1,0 °C, la bajada normal de la época.\n\nEl repunte más claro fue de +1,5 °C del 13 al 15 de octubre, coincidiendo con levante de 23 km/h el último día. En el histórico, los días de levante fuerte se asocian a un cambio medio al día siguiente de +0,15 °C; levante y poniente mueven el agua superficial, aunque estos datos de Copernicus Marine proceden de satélite y modelo, no de una medición en Marbella.",
+   "tiempo_comentario": "En los 13 días con datos, la quincena dejó 1,8 mm de lluvia en un día, predominio de nordeste y nueve días de levante; la máxima fue de 27,0 °C el 7 de octubre y la racha máxima, 46 km/h del suroeste ese mismo día. Del 16 al 20 de octubre se esperan cielos nubosos o cubiertos con lluvia, con probabilidades entre el 60 % y el 100 % y viento del sureste que girará al suroeste.",
    "secciones": [
     {
      "eje": "local",
      "titulo": "Marbella y la Costa del Sol",
      "items": [
       {
-       "titular": "La Sociedad de Pesca Marbella gana el Provincial por clubes",
-       "texto": "La Sociedad de Pesca Marbella se ha impuesto en el Provincial mar-costa por clubes. Un resultado que pone en valor el nivel de la pesca deportiva local.",
+       "ref": "N7",
+       "titular": "La Sociedad de Pesca Marbella gana el Provincial mar-costa por clubes",
+       "texto": "La Sociedad de Pesca Marbella se ha impuesto en el Provincial mar-costa por clubes.",
        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRlI3M0syUnBrWUNlTTZiQmM0Q3VobDhPS0kyWkJXZU5Ha0FNR1pFT284a1VPSWJTcHJmSHIyZFBzU0VyMkxVdm50a2VFQk0wMm9INjlXRmdoVloyS1dISWNPTDdWT3FMSHdfRklDZjZJdkhLLTBDZFZ0Rk1adzF2aWNfUDN4Q1g0aGFQLUtROU9Pc0Q5RGV3WFZsZjNwM0dCVzlfRkFHd25VMl93Z0RGS3p2QmpRQQ?oc=5",
-       "fuente": "Marbella24horas",
-       "ref": "N1"
+       "fuente": "Marbella24horas"
       },
       {
-       "titular": "San Pedro Alcántara, entre mar, arte y gastronomía",
-       "texto": "Un recorrido pone el foco en San Pedro Alcántara y en su vínculo con el mar, el arte y la gastronomía de Marbella.",
-       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPVjVUZ00tdGZHQmg4Z1JpVHVsWVJqYW1zT1NyVmptUFlLVHpsenYzQ2d0dnhyTWpVMWEyaG5XRjk0amlHY29Ec2ZjQVJ5RzJzYVJEZ3M5ams2UnpoWXdMVkZZZm9PZVBnVFNmb0FQNnBiakV4NnFUM0tTaFpXakc5b1J3R2l4TzEyVDZUX0ZmOXBQWWc0TmJoRnJQZHNnSERZck5HMmM1ck1vNVMyZGpDS1huSkFDSEZ4Zm1LTDIyMXBiTjgySzlPUUw4eHpTcTZwV1lnV2RaMlNtVDlaY09oLWxaa0lCZjEzMm5KUtIB7AFBVV95cUxPSVJQSDZKQkpoX0FkMnRwN0Y2U1BabHd0U1pPT2dJTXphcjdJeTdfT19jNFBPdWlXMHBsVEZib3dSSHJvcjZhVHlZdE1aQlJsbVVyRzBhRU5RdTdGdzlRS0ozU3NQNWVrZ0hMZmFQb1JPS2RwM0YwMkhYeU9HUzR3YmNZTmpCS1g1bkszb1l4bTVpemxNbnE4S0pKRkpRMzdzZWlCUGtpaTZpV3lVTm5jcEptOGJyaS1nUWxMdU5LeFRpSW9KWlBNaU53S2I2cWxIeEszS1JqanFodWVHZGR4dXBfUzJMb0pCVzFQYw?oc=5",
-       "fuente": "Onda Cero",
-       "ref": "N2"
+       "ref": "N13",
+       "titular": "El RCM Sotogrande mantiene su formación náutica en invierno",
+       "texto": "El Real Club Marítimo Sotogrande seguirá con la formación náutica durante el invierno junto a Puerto Sotogrande.",
+       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQdGNzY0NzVmxHaV9SNUw3cTBGaUxOMVNaa2dFNnpteUdDU21Wd1BVQU1BZGJzaTlQcHhVemcxWVJpNGc3U2NOb2ttVHhhbF93d2ltdFJoMzFKNTJ3cGxvaXUyRV8wTzE0TjlQVkpTSU9YVU53VF9EZ21QV3IxcS1SQUJLR3VrREk0RjZreXd1eDRBYXZHWVpyWFIweGxFRHRUdWRWVXlJSWFKWi05WXJDZm9WWWRKNjk0bmVJc0UtOWV2YnpPRHZDZmFtb3ZiYm1ERHRiTWZJSHVyOHpHWHQzd2xNc3VRN0lFR29R?oc=5",
+       "fuente": "Al Sol de la Costa"
       }
      ]
     },
@@ -55,18 +340,18 @@
      "titulo": "Buceo",
      "items": [
       {
-       "titular": "Rescatan seis delfines y más de 300 peces luna en Ceuta",
-       "texto": "Seis delfines y más de 300 peces luna fueron rescatados tras quedar atrapados accidentalmente en la Almadrabeta.",
+       "ref": "N20",
+       "titular": "Liberan delfines y peces luna atrapados en la Almadrabeta",
+       "texto": "Seis delfines y más de 300 peces luna fueron rescatados tras quedar atrapados accidentalmente en la Almadrabeta de Ceuta.",
        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNDJMaWpsMUV4blVrQldQUExMMUw3WDh6bmJUWWlFVWJLZU1oWG8zUU5WUkhVbFV6QlV5LThMb0xBRENNRk1FelEtaEQ3NjMzNGpaNE1PeldUdlQwbmZJV3IzaWJwNlRkeDJEc2lxRnFJM05maVJ1ZVJ5M0JjYWtobXNSbzRmbnBsa0Z2TF9Vek9zVW5JWXA3U2g0ZnFaUFlRakp3MmNEVVd2RFVnNnBHWlYtTWtISW9nNUNXeG1Tb1JOSHlUUU9mMWh6MnQ1YS05bF83WThB0gHbAUFVX3lxTE5BODFUQzEwUDBwai1aSkpCVEdpelZJMDZYVGFfS25NUlZwd1NSOXpSdkxNNk1XQlhaUDhzWm53dU4zZG5QOVBvcnBNYy11cWJoODFhZDJNTWlRZFlYTHI5aFhvbzI4S1lhckVzX1BhWlVfR0tSbkY2WXU3U3lnZW81NXlXV050ajZVbDUyOVpOenZRbUxrTVJjblQ5UWI3UkhjeUVENUFsMW9hOXhVNklRNTc2Q1JEZ0tEN2cwTzNESnJkQ2prcXhxY25TWTVZMVlmOFBYZmdFclZsbw?oc=5",
-       "fuente": "Ceuta al Día",
-       "ref": "N3"
+       "fuente": "Ceuta al Día"
       },
       {
-       "titular": "Hallan un barco romano con un cargamento intacto",
-       "texto": "El pecio, hundido hace 2.100 años, conserva un cargamento de más de 6 mil piezas de vajilla de lujo.",
+       "ref": "N26",
+       "titular": "Hallado un barco romano con un cargamento de vajilla intacto",
+       "texto": "Han encontrado un barco romano hundido hace 2.100 años con más de 6 mil piezas de vajilla de lujo como cargamento.",
        "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRd9IBigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRdw?oc=5",
-       "fuente": "Infobae",
-       "ref": "N4"
+       "fuente": "Infobae"
       }
      ]
     },
@@ -75,18 +360,18 @@
      "titulo": "Vela y barcos",
      "items": [
       {
-       "titular": "Cartagena acoge la XXXII Regata Navegante Juan Fernández",
-       "texto": "El Puerto de Cartagena recibe una nueva edición de la Regata Navegante Juan Fernández.",
-       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOTTNrTXViNUZTQ2plcGxsVWVEamZHYmFndjJ3aG44VThZbHlVODEtS1cyWU9tNUhwOWthQlU4YmtwZEpjSHhsUHlZcjdxQ3hrNFZyNUd4YUN3ZHVfN0d5elhPQUpTZUFMNFNhVmluYVN2OEJHbEprOEdJOEF3dThxdmdXTHB0dV9GQTJsWko2QTZUNEFZc29nSnlsNHpOeURGNnZ2NWo3WkhUUVNkaUcycS1JMUpjVDEyd2VQMEI2aHVRQTgyZTI5ZjN1eWJtaXEyM0lFTkpCNzItSW54cVHSAeMBQVVfeXFMT0M1Y0ZPbWUyckx5TEQ1ZzRId0pSX29qTVRWWXRRNE80b2UzLVo2dDlWajNMbnB1dklRX0RqMmtNSkdFaGJMa1p6b0ZLMnZXZG0ya1d4M2VQdnl4SXRaZXBNeXBzNGNGZG45Vlg5SG9sYmZYZU91dEo3SVhoOHVSb05tUENyN3F1THJrWDFoRHM5eWJIdEY5WC1NYUFQMGV5YWlZa1Nuc1l0UjdmVEFNaDZ2d0p4TC1MY21iOTE2WnFtWGphME53U2htV1dOeWh0M09mUnJWdzBxeWdPTGduZ1F3Wm8?oc=5",
-       "fuente": "Cartagena Actualidad",
-       "ref": "N5"
+       "ref": "N29",
+       "titular": "El Salón Náutico de Barcelona crece y se transforma",
+       "texto": "El Salón Náutico de Barcelona afronta una edición marcada por el crecimiento y la transformación.",
+       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdzVxSFdkd2dod1JGV0lZYWZKMXhMVU9YdjBVLUdxV3h6SU9ENFJZR0NCV3J2NGZNZGJmUGlPMGlrZ0JtSkNoRXRuVUJUb0pOOUFHbVVDNW5HaWppTW1iYjJYdmdob0t2YzVheHFYZ3F1aDZaYzg2NEQxOWxaNHRfRVpEV1RJcDBaSjRLZmF5ZmxjdGlJUVhyMzRIbms4VGIyUWMySjFndHlxdmwxUmsxemdtSUZmVEF0ZzltSWRqVjhYeFBtMU5aZUVkZ3Z1SUJtOHpfaV8xQ0FSUdIB3wFBVV95cUxQU2hLSk5fbVI5ZU84M1E3YzJYWFFVZVNUSkxuQnQ5M1VhMFhmdU5LVlJIcjE1d29HNnpGbzgzalJkczEwRWxOLV9UN1lSeDc5WXhPc1ctWnVXdzVwdEhBaGpyMzRmV3NOamozZXZXOUlZMnJUakxSUzU1N0d2YzNoc0t6WXU3b3JWakc2aUhZMFZZSTczcFp2amQ1NVhpN1hGUHdKVkdmLWdFdEVxUWszZHJTSE9JOHdzRzdvQ2piQXFScUNvRDA1SFpfeTVVV1ljS0J1WVZHSjBxaU9rMXBr?oc=5",
+       "fuente": "La Vanguardia"
       },
       {
-       "titular": "Las esponjas marinas, aliadas de la calidad del agua náutica",
-       "texto": "Las esponjas marinas se plantean como una vía para mejorar la calidad del agua en instalaciones náuticas.",
+       "ref": "N42",
+       "titular": "Esponjas marinas para mejorar el agua en instalaciones náuticas",
+       "texto": "Las esponjas marinas se plantean como una vía de futuro para mejorar la calidad del agua en instalaciones náuticas.",
        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPRUpPT3FEVFU1WmFuQTREVHNBV0FJSzlkZlNYaXVRY3l4Tl80MnlDVG1rR2lQRlliOW1jQ0FPeml5ZFdZbjJRWWZFR09pb3ZxVnA4RUpXNWNzeVlZbkJQVWpRRHAwbnJmSV93MHluR1B6anN1YWdpckxyMXJuU0gtU2VCbGMxbXZfaXNFeVQ5Z3RiWk9tZUlLdnVqN0haMHd2OFhHZVRCTjhnYWE5dWQ0aC1SNTBBcFVTVm9WWW9ybWVmRm14anFtNUU5MGs4N1Q1bjR2a0EyTEx6dHdac1pYaURIMC0zakZoM2dVLUQtQjJGaWfSAfMBQVVfeXFMT0VKT09xRFRVNVphbkE0RFRzQVdBSUs5ZGZTWGl1UWN5eE5fNDJ5Q1Rta0dpUEZZYjltY0NBT3ppeWRXWW4yUVlmRUdPaW92cVZwOEVKVzVjc3lZWW5CUFVqUURwMG5yZklfdzB5bkdQempzdWFnaXJMcjFyblNILVNlQmxjMW12X2lzRXlUOWd0YlpPbWVJS3Z1ajdIWjB3djhYR2VUQk44Z2FhOXVkNGgtUjUwQXBVU1ZvVllvcm1lZkZteGpxbTVFOTBrODdUNW40dmtBMkxMenR3WnNaWGlESDAtM2pGaDNnVS1ELUIyRmln?oc=5",
-       "fuente": "Cadena SER",
-       "ref": "N6"
+       "fuente": "Cadena SER"
       }
      ]
     },
@@ -95,18 +380,18 @@
      "titulo": "Pesca",
      "items": [
       {
-       "titular": "Juan Carmona luchará por el Mundial de pesca deportiva",
-       "texto": "El cartagenero llegará al Campeonato del Mundo tras conquistar dos medallas nacionales.",
-       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOMWJndGlCYUpUM0lfNFJEZHpVVGZVZGJxemhBb3dmVGVGbUh4cEZpSDZKYkV4Sm5GMmdaQTdzWXZxQTE1ZnZqY2FMaThRdTBFU2trQXg2S0RGaTNKUnpUTGd6SFFvQy1TbnBLcEd6VS1SYzVkWkZxSlduSkhsRlRTNVZmREs5SWQ5LWlwTXg4VThhbUdOMFpyN1ZjNEN4WVhzNnU2NlJjY0IwQkROTHJ4LUdtWDZWZkdfcmlqVGk0ZVJvYm9TZEdCY2FsZ3lwYUxXekRMbnMtbDlhM05lRzUtRkZyZ2lkTEFkd2d0a3B5aTUtVjBxb3ItaDZNWHpRakkwRmpwbDgzSVZ2ZjRPQ1B2SmFnWQ?oc=5",
-       "fuente": "Cartagena Actualidad",
-       "ref": "N7"
+       "ref": "N44",
+       "titular": "Armadores piden revisar el plan del Mediterráneo",
+       "texto": "Armadores reclaman una revisión del plan del Mediterráneo tras el apoyo de la Eurocámara.",
+       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcHBhUkUxR1R2eGdjaG9tSFRrbWZMZlBxZmxxNWFLTjVEeVgxMnhBMmlDT0toRUk3YVE3d0xOdkVkdjJHaFQ1WWZQSDc3eklOOW5zUUtwM0ZiSDN6amRXMlozQlZOSGVxYWhOSmRLUzlXSmt4STBwdV9VTjJHcEk4Y3lQajktNTNPeTJYQjhmR09BSTlXMzBRcTJOMmwySEgyMlRqU0NYN2x4bHc1cHc?oc=5",
+       "fuente": "Ruta Pesquera"
       },
       {
-       "titular": "Bruselas abre la revisión de los recortes pesqueros",
-       "texto": "Una vía europea permite revisar los recortes que afectan a la pesca de Castellón.",
-       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOdjNXOFh2Vlk4UFdJV1ktcjBlMWt4WV9sQUtuT01PdzUtODdPMGtycW53aE1pS3dIRFVoeHRaUFdEd0dvc3E0ZEx6RGJHd1pLcm56cm9pemE0Tm1YQVFpZndpOXh1TlpOMGFLeGVhT29OWFhGU0thamtOZkZlMlU4R3U3TmRSVTcxOTZMZFg2R3VSOFI2UUhmMWNWWXd1WVVKZkFBV1BnanVoZ0R5VE9ZOHhWTFdSV3lUZkNN0gHAAUFVX3lxTFAtSm10d0xpVm43WndEZ0h6WWEtbE1YNm96MFR2eTVXODYyZnV3YXc2U2VhUDg2Y0ZZZzNaWElLM0gzRHFtZW54VDlEN0lMR1Roc3RXb2g1Z0ZWVkJYZHNuODVvZldmMERuWmRBSlNiVDJVRUhKRmozUW1UVy1JSExyemxMelVBOVAtOE9iOVh6S0tXOXFoSFhmbVlFOURQc3dMaFNUVDhZQnd1U0hVTnZQVnRvaWxJaE5rclJHWk1KYg?oc=5",
-       "fuente": "El Periódico Mediterráneo",
-       "ref": "N8"
+       "ref": "N49",
+       "titular": "Juan Carmona luchará por el Mundial de pesca deportiva",
+       "texto": "El cartagenero Juan Carmona competirá por el Campeonato del Mundo tras conseguir dos medallas nacionales.",
+       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOMWJndGlCYUpUM0lfNFJEZHpVVGZVZGJxemhBb3dmVGVGbUh4cEZpSDZKYkV4Sm5GMmdaQTdzWXZxQTE1ZnZqY2FMaThRdTBFU2trQXg2S0RGaTNKUnpUTGd6SFFvQy1TbnBLcEd6VS1SYzVkWkZxSlduSkhsRlRTNVZmREs5SWQ5LWlwTXg4VThhbUdOMFpyN1ZjNEN4WVhzNnU2NlJjY0IwQkROTHJ4LUdtWDZWZkdfcmlqVGk0ZVJvYm9TZEdCY2FsZ3lwYUxXekRMbnMtbDlhM05lRzUtRkZyZ2lkTEFkd2d0a3B5aTUtVjBxb3ItaDZNWHpRakkwRmpwbDgzSVZ2ZjRPQ1B2SmFnWQ?oc=5",
+       "fuente": "Cartagena Actualidad"
       }
      ]
     },
@@ -115,18 +400,18 @@
      "titulo": "Viajes por mar",
      "items": [
       {
+       "ref": "N59",
        "titular": "Una familia cruza el Pacífico en velero sin escalas",
-       "texto": "La familia argentina de El Barco Amarillo lleva ocho años viviendo en un velero y cruzó el Pacífico en 28 días sin escalas.",
+       "texto": "La familia de El Barco Amarillo lleva ocho años viviendo en un velero y cruzó el Pacífico en 28 días sin escalas.",
        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNY2daRkFyTEtDODRlYUtVMWNPZk93MlYzQmJpYU9FVVE0R1RsMEN0WWpyS3MwMF96RjB5RUhGa0hOQll1cHNjU1Boa2puTHNic1JWYXhMUk1CMkpuYU9BbmdPYUo4eGxxdXhZUlhIRkpIWG02RHVXMFdoVURBMXJHT2w0bGxaaGNlMHQwSHFFWnZyV1dyM0tlZmc4WmJNS3hTNzdvTHpSd2dJU1kyUkNZZm5XVnM2cXFvdllQdXBVSUU3OUF3cDA3OEhoQXd6bUNVQVJteFB0ck5reERMN0c4MGh3?oc=5",
-       "fuente": "Paralelo32",
-       "ref": "N9"
+       "fuente": "Paralelo32"
       },
       {
-       "titular": "El Royal Clipper atraca en Ibiza",
-       "texto": "El velero de lujo de cinco mástiles y 134 metros ha atracado en Ibiza.",
+       "ref": "N66",
+       "titular": "El Royal Clipper, un velero de cinco mástiles, atraca en Ibiza",
+       "texto": "El Royal Clipper, velero de lujo de cinco mástiles y 134 metros, ha atracado en Ibiza.",
        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaUJ1QTdKZkM3ekdXdkcwUEFqMHRfWWRZVDJuTkNqakNkM3pCQ3pTYjJEc25ZYVpBU2VNdXdCQ2JKcWdMaHRwc3J1THhSZG9tMnFxVDVuTDZWR2M0Nklmd3VuSktJZFNyX3hZSlF5UzNPeWd6cm5KZ2JDZ1g0ajJ5bldhdlRzdU9KVFZFQVRsTm5iUXJpUjdjSjNBT2VaNldFMHRyWjNqRHhOYm4xamRkbTdyMm5PbUsxZVNBdFo1bmJUWlZ2THc?oc=5",
-       "fuente": "La Voz de Ibiza",
-       "ref": "N10"
+       "fuente": "La Voz de Ibiza"
       }
      ]
     },
@@ -135,46 +420,49 @@
      "titulo": "Noticias del océano",
      "items": [
       {
-       "titular": "Descubren 57 especies desconocidas en el fondo atlántico",
-       "texto": "Un estudio ha identificado 57 especies desconocidas en el fondo del Atlántico, incluida una criatura llamada Loki.",
-       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNN21kOXN2UVdLNkJaQ2RrUVUzUzlUUS1hSm9VS3RubG9tZ1B1THEtMGNWU0psOGlfTWtEcW5ySnd5T3Jnbl9tdGhLckhkZm5Da2t4MlFzVjNhdjZqVmxYVWtkZ3doUUdmZkFNUFp4UXNIRjhjVnViVUlWT2JFTFR3azYtNUZ4a0kxNlpTWXdWUkxFZ0k0X29jbmxmaWs1c1VkeGV4UTVMLWxvWTgxOUFzcmZIY29nODlRa3dOWmhCeUsteUJIaFNwZklUN21pUUJEUGpkdi1OekR1dlpEaWhRTFd3?oc=5",
-       "fuente": "Gizmodo en Español",
-       "ref": "N11"
+       "ref": "N71",
+       "titular": "Un estudio retrata un Mediterráneo más dinámico de lo previsto",
+       "texto": "Un nuevo estudio concluye que el mar Mediterráneo se mueve mucho más de lo que se creía.",
+       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbF9zRGs4b2VGSDQ4cmJDSlFOd2ZycDBoWTFTdGFhY0JPUXlvREVQWFVFY3pETUtSbjloSzE1THduNC1OR3BQWWxRZmZvZ1dzWXkwcUVQVGVxZ3VDb3VxMXRlNWUwRFpsX3FEZXAtSlFoWDhkUG1UcmhlalozV0ZiWndqSnkwN2F1bVJ1WFU1QWFWYU5Ec0lXcHI4V3g2alp2TXc5RVp6MG5iSXA3SGFvc1JnSDFBSHFoNVZDWXBCVk5WWFBpOE5nUFUtcHlSU243OElV0gHuAUFVX3lxTE1qdmFQbm9KMkhheHQyaWFQeEZUMXpiVVB2aGNaQUxMTHpTMlJqckRGamZqOGZWSEltN2g4X2M1VTRqNTh1NjJNX1JaWHdhOGQtZDdjWjZOQkFOY2lsQ1pkNEtIRkNGV1RpSnpjMlRsbXZNa0hTT0FPQUxCb1BhX0dKT09KSll6cnZ5Y3YyRlpUYVJpaUx1cWpDUzROWEs2Y1kwTThxYjFaZ25lVU5FTGdOdVJfTW9zSS1tQmNodFVtOVlleVJHc0FLdnE4WXpaWkpHWUJraUw0aXNPS1RQcUpxR3pLV3ZBUmY2cjBOR3c?oc=5",
+       "fuente": "Infobae"
       },
       {
-       "titular": "Encuentran gusanos devora huesos en el golfo de Cádiz",
-       "texto": "Se ha descubierto una nueva especie de gusano devora huesos sin boca ni intestino en aguas del golfo de Cádiz.",
-       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaUQwTVB3YkNSeWFiVVNaTklBWHBVUnczWXhRUzQ3VkJkdkJvVk1PWGtrS0VpTndldjhaX1FxeVk0TFUtbm1ReDJXcTZZLW93UVUxeUJtZ3NDSmdzc0k3TjJjVzdrQkktZUh0TEQ3Y2pxenB6bHdfT0t0Wl96aUI4REhxVGFYQzJzZmJBOW5YLVhJci1OdkQtcnJZb005aDJUX2JzaXp3aF84d3U0cVhkQdIBtgFBVV95cUxNXzNWWGRfNEZSeHMyMDBzV0JzMVc3bDVGaEV0c3BsaXJlOVRGaF9NNHRuY1JzRzhpb0FfWnJWRXd5MmhLRU1ZVENNckJBVTdCbXhYczE0bHF1YjNteUlsYktNZGxoLXVKajJra3Y0dXB6VEhJeE83UXd1X2g1WU1iWjEtWDROeURLaW5PcE5YVEtta1hPNWxoWGdTeGVTajRpVlQ5RWFxTkRvUjFCQVNvejExeVpSQQ?oc=5",
-       "fuente": "La Voz Digital",
-       "ref": "N12"
+       "ref": "N76",
+       "titular": "Descubren en España tres gusanos que devoran huesos bajo el mar",
+       "texto": "Han descubierto tres gusanos sin boca ni intestino que sobreviven gracias a bacterias y devoran huesos bajo el mar.",
+       "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOMzUtaHBDYUFaajI5RE1kRUlWcmVUWXp5aE9YbnhLRFFpSGxjS2hyN0JvMDRJVTNGNWRIUEZKa1RlVGtvZTR2SThzLVZid3dMOWItMzBpUVFQa21hTTZKWDkzT3ktZWx3Y2VwWEZvWVREYjEwalo3S2o1RXNIc1RXb1JHbk9wWjFrUllvdzBpODdwcHRzbURRbW1RSFhUYmNpSW1qMnlsQkpmOXo4cWFHY3N0TDMzWEJRRGRUMkJ6RnY1Zmd5QXZuVHpESXZsSzE0bTR3MG1Ga3BkeHV1SklLSW5LVHRjUzctaGdwYThwLThYQkd1OGc0T3lFRQ?oc=5",
+       "fuente": "Gizmodo en Español"
       }
      ]
     }
    ]
   },
   "en": {
-   "asunto": "Ancient wreck, freed dolphins and an autumn sea",
-   "entradilla": "Warm water, manageable seas and a remarkable fortnight of discoveries below the surface.",
-   "editorial": "The oldest shipwreck in the world has been found off Turkey, while deep-sea research continues to reveal creatures and habitats we had not known before. Those stories are a good reminder that the sea is still far larger than our charts and routines.\n\nHere in Marbella, the water remains inviting even as autumn settles in. It is a fine time to slow down, check the forecast properly and make the most of a day afloat or underwater.",
-   "comentario_mar": "Average water temperature has stayed very comfortable for swimming and diving, though the right exposure protection now makes the difference on a long dive. Seas have been generally manageable, but the strongest gusts are a reminder to choose the right window; the first quarter is also a useful marker for planning the next fishing trips.",
+   "asunto": "Sea temperature held at 23.1 °C against October’s usual fall",
+   "entradilla": "The water held its ground while easterlies once again set the tone offshore.",
+   "editorial": "The standout this fortnight is that the water finished at 23.1 °C, exactly where it started. That is unusual for October and gives us a fine opportunity to keep enjoying the sea, provided we keep an eye on the wind before making a plan.\n\nI am also struck by how dynamic the Mediterranean is proving to be. There is always something worth noticing on a sea this close to home; if you would like to see it from the water, I will be in Puerto Banús.",
+   "comentario_mar": "With an average water temperature of 22.4 °C and a maximum wave of 1.2 m, there were plenty of pleasant days for swimming and diving in a light wetsuit. Gusts of up to 42 km/h made timing and shelter important, while the first quarter on 19 October leads towards the full moon on 26 October for anglers watching the tides.",
+   "datos_titulo": "Water ended unchanged, rather than the usual -1.0 °C October drop",
+   "datos_texto": "Copernicus Marine water temperature went from 23.1 °C to 23.1 °C between 1 and 15 October, a change of +0.0 °C. Over the same dates in the previous three years, the average change was -1.0 °C, the usual seasonal decline.\n\nThe sharpest rise was +1.5 °C from 13 to 15 October, with an easterly of 23 km/h on the final day. In the historical data, strong easterlies are associated with an average next-day change of +0.15 °C; easterlies and westerlies shift surface water, though these Copernicus Marine figures come from satellite and model data, not a measurement in Marbella.",
+   "tiempo_comentario": "Across the 13 days with data, the fortnight brought 1.8 mm of rain on one day, mainly north-easterly winds and nine easterly days; the high was 27.0 °C on 7 October, when a south-westerly gust reached 46 km/h. From 16 to 20 October, cloudy or overcast skies with rain are expected, with probabilities from 60% to 100% and south-easterlies turning south-westerly.",
    "secciones": [
     {
      "eje": "buceo",
      "titulo": "Diving",
      "items": [
       {
-       "titular": "World's oldest shipwreck found off Turkey",
-       "texto": "Divers have found what is described as the world's oldest shipwreck off Kekova Island in Turkey.",
-       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8tNmZPcWV1R09qOUJLd3Q3eFJHUkhxWnZHNTlKcU8waWZyTmZsblNHcnlyV0RndTVvMDhvdjNqU1VaRHBMZ3d0OERHeE1zeWpja0tyMlllODVoSUp1bVE?oc=5",
-       "fuente": "BBC",
-       "ref": "N13"
+       "ref": "N99",
+       "titular": "Turkish divers investigate a possible 4,700-year-old wreck",
+       "texto": "Divers in Turkey are investigating a shipwreck that may be 4,700 years old.",
+       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQS0JRWFQ2MS0zVV9QX29YbVI4Z2RvdXlDRnFmN0Rza3o5aWJQZVhuOTNZY25tWkl6aUhwNmJ0RUdJLXVIMEJGOG40OWlSb0JHeFdfNDk3b2Exa29wc0Flal90SUUtR1lfRUdZc3BnS0FvQzNwaGV1YjdtZFlqcWhpWlVjNl9xaXF5RVpSRGxrUEszWHJDXzFqNDZjelNNUnNfeXc?oc=5",
+       "fuente": "Divernet"
       },
       {
+       "ref": "N102",
        "titular": "Vilamendhoo welcomes divers back to South Ari Atoll",
        "texto": "Vilamendhoo is set to welcome divers back to South Ari Atoll in November.",
        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUGJ3ZmxWNWVYV2doS1d2bWxJcnhpVVdvVXByMWdBU2RjVklvQmJkalhYMzRCYVBEeW5EWFhMNHpKUnljaHd1MUlaUEhrZDFQTzVQVkFHWmxiU0U1NUhWcDBXeTZBak83Nm5mX0VKWURDVm8zVWp3OExqOUVPNHFCZkdCaF83VDMwV2JkZDB5VXpIclJtWFFWVzFxbTk?oc=5",
-       "fuente": "Divernet",
-       "ref": "N14"
+       "fuente": "Divernet"
       }
      ]
     },
@@ -183,18 +471,18 @@
      "titulo": "Sailing and boats",
      "items": [
       {
-       "titular": "Alinghi announces women's and youth squads",
-       "texto": "TUDOR TEAM ALINGHI has announced its women's and youth squads.",
-       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ0dQWHR0WnYxSVdCbnQyaTM3bUZpMlJ1WHZkZGVXbVFDckVLdUZjeUFtU0VmbEgyRDVsdHJLWlljQWlNOC10dDdhNXVhR195ZUxzeWFvYmNXNm9ZVTFWTUNta3NlVWZFTEo0QkFpVy1lb1lhRDVBSU51ZVJqaUphMWJZODZOQnFic1JQdkVyZUE5dw?oc=5",
-       "fuente": "America's Cup",
-       "ref": "N15"
+       "ref": "N116",
+       "titular": "Classic yachts shine at Vela Clásica Menorca",
+       "texto": "Classic yachts that dominated the 22nd Copa del Rey at Vela Clásica Menorca have been showcased in photographs.",
+       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeXptSkJxYWt5VE5OMG1qMDNhdkRYcmViZW1iaHRmU2ZuNEJ2Nmt3eWtZNlBDaUZDMWltSk9ZWGxXbEUzMzZ6VzFTZ3ppR3dpeDhTVm9vZVV4Y2ZaYl9LZ2NYOHlFWDdRZl9ub1F4QzFybUpMRTJob2tDNW9kbHdqNmtiMDFGSUkzdUp5cm9QQVRDczVBcDVkcXBiXzVWUlNZWUxqS19vWklfSkxsUHptbDNSNEhMNVNHYWM1RnRwM295TjdNQUNnMA?oc=5",
+       "fuente": "Classic Boat Magazine"
       },
       {
-       "titular": "JFA Yachts launches a 26m sailing catamaran",
-       "texto": "JFA Yachts has launched the Long Island 87 sailing catamaran.",
-       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYk55OWFndkJaWnNTTnJVOHFMVGJ5cEhiUmFMN2lFdkYzeEhOUzhzcmNUQ010VVdZa3QyUllKQUJ3ZUNFWThaOENFYjE5SHBHOUdaLW56YnktS003S3NDbWVVR1FzaTNvX0xacVZFY2F4ZkNsdUp3VndVOEY5dzFqeHFCTDNEMXFLZTBzcDI0Nm9fNk50SjVHdHpCMA?oc=5",
-       "fuente": "SuperYacht Times",
-       "ref": "N16"
+       "ref": "N121",
+       "titular": "Tudor Team Alinghi announces women’s and youth squads",
+       "texto": "Tudor Team Alinghi has announced its women’s and youth squads.",
+       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ0dQWHR0WnYxSVdCbnQyaTM3bUZpMlJ1WHZkZGVXbVFDckVLdUZjeUFtU0VmbEgyRDVsdHJLWlljQWlNOC10dDdhNXVhR195ZUxzeWFvYmNXNm9ZVTFWTUNta3NlVWZFTEo0QkFpVy1lb1lhRDVBSU51ZVJqaUphMWJZODZOQnFic1JQdkVyZUE5dw?oc=5",
+       "fuente": "America's Cup"
       }
      ]
     },
@@ -203,18 +491,18 @@
      "titulo": "Fishing",
      "items": [
       {
-       "titular": "Sustainability ratings downgraded in 29 UK sea fishing zones",
-       "texto": "The Good Fish Guide has downgraded sustainability ratings for 29 UK sea fishing zones.",
-       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQktBN1FTVmFGaThzOE9NV3B4VXBrQVpzUENxRmhoOTY2WUNMa01LR0RTblJfTWd3eEJ6a1czRVdyczE4blpoaHl6QlFINkJpZjNXdmRoa2p3VkN2enIwc3ZNSWQzeUJaaUtVV1lnYWczbHM0c0xrb1gtT1VmVVFRb2NqbUo2MlBKTkxVOE5KbGVRQXlzSk1ON2lpblA2T05XRGF0aTBaT1ZRSW50?oc=5",
-       "fuente": "BusinessGreen",
-       "ref": "N17"
+       "ref": "N129",
+       "titular": "Why octopus numbers are rising again in Brixham",
+       "texto": "Brixham is seeing another surge in octopus numbers.",
+       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMTUwN2xPRzF3S0N0LWFiRDNaXzhFWmJMaGd0LTVtNjMydmE3RHU0Vk1iR1RYUzIwMDkxdGc1T2hVbnVmcV9WbS1pckhKX3BpTjJRNU4yRUNQbGRYR1k4LUxTbkV6WVRNSVZ5VmhKX0FKSVJKekNqUWNiTTF6dGlQYXpsUlJIdlg0ZGRCdDFHZEV4bVAxLUlCSjFB?oc=5",
+       "fuente": "Torbay Weekly"
       },
       {
-       "titular": "The return of tuna boosts Yorkshire angling",
-       "texto": "The return of tuna is reported to be supporting Yorkshire's angling community.",
-       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZTdzSnpwb3lXcUVOUWJyTmQ0a2U4VENFTHVVSlhna05DWUlKVTdaVV8tRHJVYllYUGlNdFF5cGlWcFI5OUVuTFBObzdYNmFTbmVZbUx2eHgzcGUxb2FiR3hXVXFXcnQwZWVOMUpPbG9tS2ZublJwTnhZRnV2NkRyWmt6UVBtN2RCUm5ZbU5uV1lmemRvdzBVUWpfMlplWFpyRUdVVWoxSjBrMVpicERN?oc=5",
-       "fuente": "Yorkshire Magazine",
-       "ref": "N18"
+       "ref": "N135",
+       "titular": "Sustainability ratings cut for 29 UK sea fishing zones",
+       "texto": "The Good Fish Guide has downgraded sustainability ratings for 29 UK sea fishing zones.",
+       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQktBN1FTVmFGaThzOE9NV3B4VXBrQVpzUENxRmhoOTY2WUNMa01LR0RTblJfTWd3eEJ6a1czRVdyczE4blpoaHl6QlFINkJpZjNXdmRoa2p3VkN2enIwc3ZNSWQzeUJaaUtVV1lnYWczbHM0c0xrb1gtT1VmVVFRb2NqbUo2MlBKTkxVOE5KbGVRQXlzSk1ON2lpblA2T05XRGF0aTBaT1ZRSW50?oc=5",
+       "fuente": "BusinessGreen"
       }
      ]
     },
@@ -223,18 +511,18 @@
      "titulo": "Sea travel",
      "items": [
       {
-       "titular": "Galileo moves to Tahiti for winter charters",
-       "texto": "The superyacht Galileo is relocating to Tahiti for winter 2026/2027 charters.",
+       "ref": "N142",
+       "titular": "Superyacht Galileo moves to Tahiti for winter charters",
+       "texto": "The superyacht Galileo is relocating to Tahiti for winter 2026/2027 yacht charters.",
        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQa3NyZ3FNcDBpSVdacHBTcE4tN3pBcFY5WGg0a1dzaU95NnctcUxKMHQ4Ui1QUS13Y1ZNM2JqOS1QUkR1Y2pvZ2N0UVVyWlYydDBGalUyd3B6SnA4TnBic1cyR2g2ckl1VC1rVUN0bWQzQW5kLU50eFpNcG80LUY1WTJTVlN0ZExDVnZfRHE2cnRBQW9SMWVvTklFUGRxbjdXay1qYjVJeFhsdGpJa0RvTVhfU0xVakV4WXJ6bA?oc=5",
-       "fuente": "YACHT CHARTER",
-       "ref": "N19"
+       "fuente": "YACHT CHARTER"
       },
       {
-       "titular": "Livorno opens to superyachts",
-       "texto": "Livorno is opening to superyachts as Italy expands cruising infrastructure in the western Mediterranean.",
-       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaklQVEdTNmFqaV9RdS1QUE9BaGc3TXFHWG1qQkVXM1dSeUxKVFM4bG50VWtycGNvNmZ4cGw0VGYzVWlkSjZmTDlCV0lHNEktVG9pOTMzLWc3TUF2OXhRc3ZQWjdILUpNSkRHTzd5bHlQUmdRcEdkRGhrZ255SEVmcVZtX2lkbFptdHBSaEM3ZmF6REsySVZqOEw5NlB5TXkwaXR2NXp6M0hDa25mY0ZON2p2Q1YwSFlXWWFCTk9odHFjZ3FqaUJ5bFJ3?oc=5",
-       "fuente": "YACHT CHARTER",
-       "ref": "N20"
+       "ref": "N150",
+       "titular": "Croatia chartering: experience, accidents and weather warnings",
+       "texto": "A report on chartering in Croatia looks at experience, accidents and weather warnings.",
+       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPU3FNRzVQRDUyMkVNWTRjTTJhclpRcFNDTHcybVhYbG02cmVMNVl0OXJRT1B2MkJpMUcyX2F1bkxMZGhKTHEybUJHaFNHWXFuLW5rUmdRU29ONHZxVnZGRDkxSTloSTl4NHc2c3dGR29OeW5SV0Rna3FmeDJNNzdfalRudHhXM0VaQzJ0aHVkLVNBMzZOSzZzVVR5T1NtcDlfZ3h6SGNWNGM2ZThGaHdVcnlOdURnaVZZVnhLaUFZcDVtanM?oc=5",
+       "fuente": "boote-magazin.de"
       }
      ]
     },
@@ -243,137 +531,862 @@
      "titulo": "Ocean news",
      "items": [
       {
-       "titular": "Scientists find a new genus of deep-sea spaghetti worms",
-       "texto": "Scientists have discovered a new genus of deep-sea spaghetti worms with suction cups.",
-       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcDJJd21MRHdjRVVsMDhMSkxBbmI5YjZWQjZJMFNvbDZ4UFBCSFI3VzE0Mk55OEVRb0hYMjNYU2x1c3pRWmRhUXdFVFphbjFjOVU4Rl9QbnBodFVoSTNRVmZJUHNjNFpraEtqN21ZZkdvZ0hVVE5OTkp1WjZrTGg5MG1tYw?oc=5",
-       "fuente": "Yahoo News New Zealand",
-       "ref": "N21"
+       "ref": "N156",
+       "titular": "Nearly 12,000 unknown viruses found on the Pacific seafloor",
+       "texto": "Scientists have discovered nearly 12,000 previously unknown viruses on the Pacific Ocean floor.",
+       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQjlUSndONmU3VVdxZUtJX0MxLVZOX3I2c0Q1YjQ5cExoUTkwWTh2NDNjems5QTFVc05ybFpaYXJndlJrc3ZqX0RxaERVdmltaFhOTHNoY05GQlBoVHVIQXhfNjVWNUZGbF9UNF93b3NBUzEwZ0lsc2dMYkZBRXJSQkMtWVp3QQ?oc=5",
+       "fuente": "AOL.com"
       },
       {
-       "titular": "Bamboo coral forest found deep in the South China Sea",
-       "texto": "Scientists have found a hidden bamboo coral forest nearly 1,400 metres below the surface.",
-       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNdlhrYkV3cEJZMG9ZMUR5dHRiNXc2QjNBcDlTLWE0ZDUtX2JfMDhld3dMN3V4alRXNlFodUxiaHoyS1BTSGY0N2xaSk0xSlZSWVBMTWxDczlOTVpLZTBpUFZYT0dNWWZqMmRyc3c3dDJqTW12N0U4b0JPYzRlNjhram9KeXg5YjJEU21La3dIWGhKdEpnRzJfT28wS2FyNHRET3RYSU9ZY2ctNnBBNHpoZDQ1SVMyLWFoOEd2NUtZb1RPaThGQWVUUWNDSEY2VXB6VWFXR1lMN2pXWDAtVlpxMFFkWTBoMV9TUGh1YTBWb0NmM1lqUUltLVpwT1Izb1dXZzNsd01NSS1adURJcHN5SVVZY9IBmAJBVV95cUxOTDhtMGhIVEJKbEVvRDhZSk9aNElOaU5VdjMza1Y0UXNTbWxnZzMwTE0ySzI1RmY0dF9mckZmR0YteUQ0YThWZG1WclN5V21kREVrVTU3aGZ5VWVpTlhCQVJITE5HbmxITGhSbVl4NEV2NjlqTWxGaUZVQlVkM1R1NlZxNTFobzRTOEY5X0hhMHhYUFhRd0tqNi1sZmJXMDhMNXF4U2EyY1E5aFBoT3czYzhoeDlzdDZJQ0JMUWtuQ3B4UU5hdms1bmZNNTRIdkd5bGRiWXA1MXdJTkpVbnVvdllJYjVKbk5PV0d3YmE5VlFySUc3Z0VPdkxXWDk0a2JqR3d1Vl9CejJxbE9lYlhOR0VFYlg2Tzlw?oc=5",
-       "fuente": "The Times of India",
-       "ref": "N22"
+       "ref": "N165",
+       "titular": "How shark ecotourism can support long-term conservation",
+       "texto": "New research examines how shark ecotourism can encourage long-term conservation.",
+       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5IeC04Vmp0dHMxblY4SUgtdkxlT3RLU3RkOTFoejR5YWJWdzhMOEl6SEJPZTd0RGh4bVRSRzNWXzF2d1FScWJaSGtkajF1QUE4anp2S1pRZWtrQTYtMjRqSVQzVEMyZXM?oc=5",
+       "fuente": "Phys.org"
       }
      ]
     }
    ]
   }
  },
- "historial": [
-  "v1 · 2026-10-14 16:14 UTC · borrador"
- ],
  "refs": {
   "N1": {
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRlI3M0syUnBrWUNlTTZiQmM0Q3VobDhPS0kyWkJXZU5Ha0FNR1pFT284a1VPSWJTcHJmSHIyZFBzU0VyMkxVdm50a2VFQk0wMm9INjlXRmdoVloyS1dISWNPTDdWT3FMSHdfRklDZjZJdkhLLTBDZFZ0Rk1adzF2aWNfUDN4Q1g0aGFQLUtROU9Pc0Q5RGV3WFZsZjNwM0dCVzlfRkFHd25VMl93Z0RGS3p2QmpRQQ?oc=5",
-   "fuente": "Marbella24horas",
-   "titular": "La Sociedad de Pesca Marbella gana el Provincial mar-costa por clubes"
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRXNkZkhwZ0JIMHcydnRMWnRkZTNGa1RNNW9BaVphNDFlT3RuaDg2by1ydnNFU2lIV2ZySEkwS0I5V0d1cUtNdGlNSFRwZWVMNjYybXVHQ3BXdTR4Sm9XcXpkcDR2MDNkU0c2NVZkdDFoWUt5TC1kZXpjaEtuN2gzeml1NDNESFIxWG0zZHVSV1JWZ0JBTVpFZHFlVzY4UFhuTEVoakZoQXU3SU80ZnphUElJX3JESElr?oc=5",
+   "fuente": "Al Sol de la Costa",
+   "titular": "La industria mundial del reciclaje se da cita en Málaga para definir el futuro del sector"
   },
   "N2": {
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQSndadkM4MXV5UHU3QV9sTXdzMUZOemkxZFU0OHlwbEt3RFZYY3BQRktxWHVjejlZRDJzX1hINUdlQWo0azBWWkM3a003dDlWbkFadnc2VkpuaHpXdjA2TXNPLWFvQTE3bktnLTkzQlQ3TWhtN3BMbnpGOXR4UmZOaEVKQ3pyT1F6VU55SGFjZlo3VGlxUF9mZ1RjT3ZRT3FQeEJkdjI2d05MUnJnaS1FbU02aUgxdE1Ed3kzcURvOWRzN2JPT2J2TEFtS2lrVXY3MkVsMmRKZFNOUFdrNkRjbXdfZFhLSENhMHfSAeoBQVVfeXFMUEp3WnZDODF1eVB1N0FfbE13czFGTnppMWRVNDh5cGxLd0RWWGNwUEZLcVh1Y3o5WUQyc19YSDVHZUFqNGswVlpDN2tNN3Q5Vm5BWnZ3NlZKbmh6V3YwNk1zTy1hb0ExN25LZy05M0JUN01obTdwTG56Rjl0eFJmTmhFSkN6ck9RelVOeUhhY2ZaN1RpcVBfZmdUY092UU9xUHhCZHYyNndOTFJyZ2ktRW1NNmlIMXRNRHd5M3FEbzlkczdiT09idkxBbUtpa1V2NzJFbDJkSmRTTlBXazZEY213X2RYS0hDYTB3?oc=5",
+   "fuente": "Teleprensa",
+   "titular": "El Cardiomaratón del 061 entrena a 1.400 jóvenes malagueños en técnicas de reanimación cardíaca"
+  },
+  "N3": {
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPRDJYTWRCb2M2MWkzLUhnSEVFeGI1U1U4ZWZrUVp4cmlrOE14LWRmZHZZN1pfN0tSeEZtV3JqeVZjalBEem5hOGtlSFQ1SVYxVHItY1VGeFo4UzhZaGVWUERxdWU5T29KeHFaQ09ITXFRQnoybjJrWEc0WmFpYThhc09XOWtXbmdnWEZfbkRUMzVwbUNUMG1yUmczWEdSbkwwVVRnYjZOdEF1WHZWUS1NT3JhVDdfM2VXdFFTVXMxeHdUZHlkU1ZwaVB5RUt2WlJoOXlCaDF0ZGlBRkxpSm9TbldKMkhZTWVkQ3NBYVlVSnI?oc=5",
+   "fuente": "Noticias del Vino",
+   "titular": "El pequeño pueblo donde Joaquín Sánchez dio sus primeras patadas al balón antes de ser una estrella"
+  },
+  "N4": {
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4yTmNZbnFnLU1MSXFsR21MM1Y3dVVfLWd2Tkh2cmdMS2tvakxGYkc2alB4M0dKUld5alVIbDEybFRRaUR3S2R5dGhOM3dPeWpUUXJOMGdSNnA0TEk1Yi05RVE4WFFmTjR4Y3BV?oc=5",
+   "fuente": "La Diversiva",
+   "titular": "Del chiringuito al beach club familiar en Marbella, el plan de otoño para comer y jugar con niños frente al mar"
+  },
+  "N5": {
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPS2VDTTNVWV84SkRHWUt4UFFkdDl0WE03OE5VQTEzckJFV2l6Y3NaNFA2TnNuSU4zR0RVb09IZEVDVk02OWM2UVM0YXNUeWZleUNVOUNlX2NuMExZUTUyRk5WMU9TYVV1MkdPVHMwV0pUVzF5YUVKSjg1WE00Ri15ZU5IbjcxaFltOVNqYmhWWmprazFBM3hqb2xqMFZWOVJxTzMwXzZMYkhMeEwyQkZ6MWx4ZnFjYzRfZE5ULVByNWZ0Qkg0Um1KLVA1UVo?oc=5",
+   "fuente": "Al Sol de la Costa",
+   "titular": "Costa del Sol inicia una campaña para reivindicar el papel de los chiringuitos en la identidad de Málaga"
+  },
+  "N6": {
    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPVjVUZ00tdGZHQmg4Z1JpVHVsWVJqYW1zT1NyVmptUFlLVHpsenYzQ2d0dnhyTWpVMWEyaG5XRjk0amlHY29Ec2ZjQVJ5RzJzYVJEZ3M5ams2UnpoWXdMVkZZZm9PZVBnVFNmb0FQNnBiakV4NnFUM0tTaFpXakc5b1J3R2l4TzEyVDZUX0ZmOXBQWWc0TmJoRnJQZHNnSERZck5HMmM1ck1vNVMyZGpDS1huSkFDSEZ4Zm1LTDIyMXBiTjgySzlPUUw4eHpTcTZwV1lnV2RaMlNtVDlaY09oLWxaa0lCZjEzMm5KUtIB7AFBVV95cUxPSVJQSDZKQkpoX0FkMnRwN0Y2U1BabHd0U1pPT2dJTXphcjdJeTdfT19jNFBPdWlXMHBsVEZib3dSSHJvcjZhVHlZdE1aQlJsbVVyRzBhRU5RdTdGdzlRS0ozU3NQNWVrZ0hMZmFQb1JPS2RwM0YwMkhYeU9HUzR3YmNZTmpCS1g1bkszb1l4bTVpemxNbnE4S0pKRkpRMzdzZWlCUGtpaTZpV3lVTm5jcEptOGJyaS1nUWxMdU5LeFRpSW9KWlBNaU53S2I2cWxIeEszS1JqanFodWVHZGR4dXBfUzJMb0pCVzFQYw?oc=5",
    "fuente": "Onda Cero",
    "titular": "\"Onda viajera\" descubre San Pedro Alcántara: mar, arte y gastronomía en Marbella"
   },
-  "N3": {
+  "N7": {
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRlI3M0syUnBrWUNlTTZiQmM0Q3VobDhPS0kyWkJXZU5Ha0FNR1pFT284a1VPSWJTcHJmSHIyZFBzU0VyMkxVdm50a2VFQk0wMm9INjlXRmdoVloyS1dISWNPTDdWT3FMSHdfRklDZjZJdkhLLTBDZFZ0Rk1adzF2aWNfUDN4Q1g0aGFQLUtROU9Pc0Q5RGV3WFZsZjNwM0dCVzlfRkFHd25VMl93Z0RGS3p2QmpRQQ?oc=5",
+   "fuente": "Marbella24horas",
+   "titular": "La Sociedad de Pesca Marbella gana el Provincial mar-costa por clubes"
+  },
+  "N8": {
+   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPZUI5TktoVURPLUhUaDVvRTF6WnhnMWVrTm9UNkZhaE1wWDY1SE9HUVA5d3NpaUQ2Q2l4TDU1TW1udU5pT1hZZmoyX2o1SUV2cVZaRURMeEY4dEI1TGlubVZoNG00bU9kWXFUR29IY21vZHJKZ3E3VlpUUFUyMEVpdDRESml5bXBPT3NHbE1mTDBRalBqZjROZ0xfc3B6ZzVNa1F4WFhIemRGdGU0Y0dCV3FBVEpZdENvU0RKU1M0bW83SzUwb2lvR1FNM2JnWll5RWtMQVd5N3BpUnlSbjlpYUstMTVIN1VYc2tocHpOcUFzdFFJZmxicDZDTFljVG9GMXc?oc=5",
+   "fuente": "www.marbella.es",
+   "titular": "El Ayuntamiento entrega a Fundatul un cheque de 1.200 euros recaudados con los..."
+  },
+  "N9": {
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPREo2Y3N3WU9ET1RpOFZaRHM0a3hVQlE0TF9tajNEUW9LMG9LUnBBanZyWkZ2WnZDbGN3VDFncmFMWXpMeHNXaERhX09qTl9RS052NmhaekdydGtSejFTUUxPZnV2emNNaWdaY2dEUWlFNGxqOTdwNVgxazVjbU9VX3o2V0x3WVFuSGNRdTU4SFlISFpjeVNKTXNhNko3OVdNaDJYUExrVGszdzdOYzM1N1RvclnSAcgBQVVfeXFMTTFQQzZYeUw5RkRvMVdXOEczOUNtX0FJQWlpZkp5WVlnU18zN1hsenJaZHpmX3JLOV9fakt0aE80U1JqS1luSEpFQ0N6S28zUUs5Nms3U0NncjlWTEpvUDAyVHROY2FFY3V5eWl2Um93LVo0MlZYa0pIY3dGMHE0emhQbm1adjgybmNVaXZGSXZyVm5oN2pIMXE1Z19iYUlqcmk4ZEJ6bFFVOERSX1B5d05NanJLVjZEVVh5d2pGTGstekZUSGpULW4?oc=5",
+   "fuente": "Cadena SER",
+   "titular": "La Costa del Sol acogerá la VI Les Roches Schools World Cup"
+  },
+  "N10": {
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWTYteUVzOGN1MXNHWHBUcmlmTllDbjVKMTk1VGNZUHZqVGRtOU5uSVFhcml2eklqdnZwZUJwUG1LVEVHSU03N3YyVlRzQjNueUNaSWJ0dTJXMWs2RlRib25aVFpmOXpIbF9wajluVVZqaV9jbEt3bTJ5VE1ERkRhX3FwUlg2U21qbldoUw?oc=5",
+   "fuente": "Malagaes",
+   "titular": "AGENDA DE ACTIVIDADES MUNICIPALES EN MARBELLA (MÁLAGA)"
+  },
+  "N11": {
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBWS3JndlFZa0dFNjl1QzRfWFRlbzd1TFNXWWhtbGFqck5KY1pfNVpCclNOcHd5cm1FV20wSEVvcWdFNmpGaHo2N01zZWpTUzhFdFQwQVNTNkRRbFRHclVrSlZnaVF1dHhYOTRuTUZYQmdvS0YzRVVJ?oc=5",
+   "fuente": "Noticias del Vino",
+   "titular": "Qué ver en Estepona en 1 día: murales, casco antiguo y paseo junto al mar"
+  },
+  "N12": {
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNV2x4ekZmSDlZV25aYVY2eGxoWjRKTkJFdmJTelJ4bmVYTVd3YlJ5Um14YmJzVkFHYWFGYWlpRmZubFoyNWRsa0lad1NPTVhTelh2bGtfX1pzcWJqak5QbndrUmQwV25CTlU4M3E1RlpvSWhNLU9IUmpDejR3TmRtR3I1QlRuTndVaDRhNFN6X0lGRDBodnFnVnhKUnRwbkt6WVNBdGRUWkdzUDdtT1Bta2cycHBjTWc4aDdpYkJ3?oc=5",
+   "fuente": "Aemet",
+   "titular": "Weather observations: Marbella, Puerto - State Meteorological Agency - AEMET - Spanish Government"
+  },
+  "N13": {
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQdGNzY0NzVmxHaV9SNUw3cTBGaUxOMVNaa2dFNnpteUdDU21Wd1BVQU1BZGJzaTlQcHhVemcxWVJpNGc3U2NOb2ttVHhhbF93d2ltdFJoMzFKNTJ3cGxvaXUyRV8wTzE0TjlQVkpTSU9YVU53VF9EZ21QV3IxcS1SQUJLR3VrREk0RjZreXd1eDRBYXZHWVpyWFIweGxFRHRUdWRWVXlJSWFKWi05WXJDZm9WWWRKNjk0bmVJc0UtOWV2YnpPRHZDZmFtb3ZiYm1ERHRiTWZJSHVyOHpHWHQzd2xNc3VRN0lFR29R?oc=5",
+   "fuente": "Al Sol de la Costa",
+   "titular": "Real Club Marítimo Sotogrande mantiene activa la formación náutica durante el invierno con la colaboración de Puerto Sotogrande"
+  },
+  "N14": {
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSW5aelV0am5DVVZ1YlRUMl9OQy1oQ2dBN0Yzd0xWVW1yVUg4c1RFWXh4THhqTzlDX2txM1FsWVhrYjc3MFdMb3EzazVtVVJvclBYU2VCRGcwLXNqRU9kX2hFUHozdkZQQ2JwYmtvM3NjeUoyTm5uQmNCa2FUSW14NnhvSjE3U1JncDNHbGhJUy0?oc=5",
+   "fuente": "Fotocasa",
+   "titular": "139 Casas y pisos con 4 habitaciones de alquiler en Marbella"
+  },
+  "N15": {
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNR0MyVjlLcmdRUDU4QmF0Z01YMk9zQmhqa2J1YnNycGhGaml4UmRQbi14N25mZlhoaWV0OUdzRGQ2RGFQMHFGb1BKNV8wOEJiLVg1T3FmeUZUYnRRblNqcU9uVEVZeFlKaUpKaFhrYUxLdFFvMGlPV1lZUWRQWUJzdVFpUlllTmVOVklmcE5JMmViSUZEVXFmVkg3OEhqQ1ZCVi00eFRZOXRRS0pWVmZTdUZjWm9sVHd5djdCcXE4Zw?oc=5",
+   "fuente": "Expreso - Diario de viajes y turismo",
+   "titular": "Tahití, destino líder de buceo de Oceanía en los World Travel Awards 2026"
+  },
+  "N16": {
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZHJJVmtRb2Zrc0dxMGU1UHJ2Z3hBbGQ4ZmhmQk5LOUdrMkFnY3ZjQWNUdlo4azN1T1BLZFpVdmViMTE3LXp5X1R5WnUyWGxSeVg4Y0NGcUhkZGlUM0xCUW5Ic29LY1pmcFYyODJGVGdMNlBHQ0Q0VHRiMnZIdmdmRXFFUlpGMnNMTFdlNlZFMlo2eWZlUjVva1ZlQVRzTVlEQzl4akpmb3pJcndYckd0UWxjNjJGUXdPYVdxbUdKeHZ1R2pqdHFlSHhpYUxTRFJuNFg1MGF6cXkxYVdBNXNWclJOSUkwV0ZSZWNjcm1fWUnSAfABQVVfeXFMUGRySVZrUW9ma3NHcTBlNVBydmd4QWxkOGZoZkJOSzlHazJBZ2N2Y0FjVHZaOGszdU9QS2RaVXZlYjExNy16eV9UeVp1MlhsUnlYOGNDRnFIZGRpVDNMQlFuSHNvS2NaZnBWMjgyRlRnTDZQR0NENFR0YjJ2SHZnZkVxRVJaRjJzTExXZTZWRTJaNnlmZVI1b2tWZUFUc01ZREM5eGpKZm96SXJ3WHJHdFFsYzYyRlF3T2FXcW1HSnh2dUdqanRxZUh4aWFMU0RSbjRYNTBhenF5MWFXQTVzVnJSTklJMFdGUmVjY3JtX1lJ?oc=5",
+   "fuente": "La Vanguardia",
+   "titular": "La historia de la pareja española que dejó la informática para hacer del mar Rojo su forma de vida"
+  },
+  "N17": {
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5fc2ZQTHNSUUUxVk5sdHNDQnJpcHpZc1dRaGUtWE1MVTc0Q1R5V3hFSzZTMDZISUJPYV9DLVpxNXBpUkkzbDN3dUdtVGdNeGZMNzVLNkZVeUFXTXRXb3RUXzBTaGkyTHdELTVfdnNHRjVuYkllbjZERw?oc=5",
+   "fuente": "Canarias en Pleno",
+   "titular": "El Tecelana ya está en Puerto de Las Palmas: Samper Divers refuerza su flota en Canarias"
+  },
+  "N18": {
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQY0lVT0JwVjBpTVVlSEprdXpTa2gxWFo2N0Q0aDJqSUlON3hQS0FIdkQ3MEdDSEN5dnRzcGxYS1Uyc19QbDZNODE2VG94TTRhcFZvM0VsRGRENnRHdUNXaTJnVEI1VndzNkRFRXpDTTZkVU04UENqMEh1UGQzLUxKM3VhLVBWMkFKNnJ5R1RaTVRqNmQtbXBmU05Mckg1eXFGVWZwRWVHSkI4Rk1iZHR4eGRBaGtUaUUwZ1FtRng2ZkVfUVN4R1Jpck1SeTYwM1k0ZVhWTlo0MWRlRzdQeDFDdjhvSVVjUmx6ZDRYZGhxTGRpQQ?oc=5",
+   "fuente": "PressDigital",
+   "titular": "El buque de salvamento y rescate 'Neptuno' refuerza la vigilancia y protección del lecho marino en el litoral valenciano"
+  },
+  "N19": {
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR1IwNHFkcnNQdE51MTdDY1FBZUMxX1hvbHhvb05WUnNtdFJDeF9Ma3FLZnExMTdoRWdBVWQtelp5WDMtZ29VMzR6bnNuLWZuNXVtQjN5T0ZrTTlQNlkyMUJlcHdzWlRkVVBHb0JVS01zTUp6SmMtc0RXMGZTUjM5ejdtUzdIeVBEN1B4QlkzWjBCS1J3dThvLU91Z1dRYUJTUldtQW9wQlhzS1BXTTJGM1RhQ1c1aklTMGd2Yy1SQ0kzVkFRcHJz?oc=5",
+   "fuente": "Mazarron Hoy",
+   "titular": "Mazarrón reivindica sus fondos marinos como uno de los grandes atractivos para el buceo en la Región"
+  },
+  "N20": {
    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNDJMaWpsMUV4blVrQldQUExMMUw3WDh6bmJUWWlFVWJLZU1oWG8zUU5WUkhVbFV6QlV5LThMb0xBRENNRk1FelEtaEQ3NjMzNGpaNE1PeldUdlQwbmZJV3IzaWJwNlRkeDJEc2lxRnFJM05maVJ1ZVJ5M0JjYWtobXNSbzRmbnBsa0Z2TF9Vek9zVW5JWXA3U2g0ZnFaUFlRakp3MmNEVVd2RFVnNnBHWlYtTWtISW9nNUNXeG1Tb1JOSHlUUU9mMWh6MnQ1YS05bF83WThB0gHbAUFVX3lxTE5BODFUQzEwUDBwai1aSkpCVEdpelZJMDZYVGFfS25NUlZwd1NSOXpSdkxNNk1XQlhaUDhzWm53dU4zZG5QOVBvcnBNYy11cWJoODFhZDJNTWlRZFlYTHI5aFhvbzI4S1lhckVzX1BhWlVfR0tSbkY2WXU3U3lnZW81NXlXV050ajZVbDUyOVpOenZRbUxrTVJjblQ5UWI3UkhjeUVENUFsMW9hOXhVNklRNTc2Q1JEZ0tEN2cwTzNESnJkQ2prcXhxY25TWTVZMVlmOFBYZmdFclZsbw?oc=5",
    "fuente": "Ceuta al Día",
    "titular": "EN VÍDEO ▶️ Rescatan a seis delfines y más de 300 peces luna atrapados accidentalmente en la Almadrabeta"
   },
-  "N4": {
+  "N21": {
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZk53Z1ZFQlJDSUtxTU5WMnFuRV9nUFdCdDdqbWNZTG13WllSMVRKekloX24wTjEzRFZWNFlvdU5qbUdHYWIyMHpubjhpZXZWTmFtcVowNHlDX204dzVaWWhkZEwwd0dHOWpGcURFQlBrSzN2cnh2VXA0eDVGVUVRVnlZYjJUN1NTY2hN0gGLAUFVX3lxTFBmTndnVkVCUkNJS3FNTlYycW5FX2dQV0J0N2ptY1lMbXdaWVIxVEp6SWhfbjBOMTNEVlY0WW91TmptR0dhYjIwem5uOGlldlZOYW1xWjA0eUNfbTh3NVpZaGRkTDB3R0c5akZxREVCUGtLM3ZyeHZVcDR4NUZVRVFWeVliMlQ3U1NjaE0?oc=5",
+   "fuente": "El Faro de Ceuta",
+   "titular": "Liberan a una familia de 6 delfines y a unos 300 peces luna en la Almadrabeta de Ceuta"
+  },
+  "N22": {
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeks0R3FsNXlsbFJLVGRIdmJPT3AtbVQwVFJFd2VRMy1xdXdIaWd3a1JHYndZdURXWEN2d2VKbEFzLUF1OXI4dlJtYk9DZ1IwWVNacmx5SHVRZ1E5V3hCbjA1Q2RMWUhReGMyZzlZaWswVFRVRENIRllBQkU4NUt0bVl6YVk0Y2tGSUJLWTl6OVJtUjJDVE5UX2I0cENMV0wtY09FU3Bnc0xvbnNjMFY1cVZHWTVlRk9mbnUxcdIBwgFBVV95cUxNY2RucHBwaG5MWmFacnF4cENMU1JYaEk4OElZMk1OZkRxMTdvUUpiMVByTERrMmZLUU50YzNBYXJzbnloN0t0VXhhU3Z3cEU3Q3M3aTBlNVhRR3ZiYW4wLVZ0Q1RIcDdxTVI0QU1OWnZ2SlppNVhRdnFQMHEzVGJCR2c4TWNPNUt5V3FSUWdydGpPZ3pWd29ERWtwTmdsWDBPa3hLenZvVXFvaU9mWUJLMVZuMWNxME1EckJXeHM4c253dw?oc=5",
+   "fuente": "Diario Sexitano",
+   "titular": "El Salón del Mar de Almuñécar reúne a más de 1.500 personas en su primera edición"
+  },
+  "N23": {
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOUnJoZVBKMXJiZmx1RnNHRHQ0c0wwRy1jNHUtZG9tTDV2V2gxbHZzUnNwQUFLcGVYQnV1dGdpZWFTVVpqUWRpTW9uM1BVd1pjU1EyVUs2RXFjbURLS19MYV9qa0hqOXd4b2hEeEk2WkZfS0VyeWtZVldWdFZNcnlmU243T240X2RleHhyaHZEM1Z4OU40YXdzZDB6LXZ0NDYwTFV2V29DRlJRMTN5Z3prRGZ6T05XS19BSkEtdGFEZTZlc3hnc3ZxYmlsTWxhVUZSZXVtUGRFN19rVGh2YjlqWXA3NGpvQWxiSTVYSVgtONIB7wFBVV95cUxOUnJoZVBKMXJiZmx1RnNHRHQ0c0wwRy1jNHUtZG9tTDV2V2gxbHZzUnNwQUFLcGVYQnV1dGdpZWFTVVpqUWRpTW9uM1BVd1pjU1EyVUs2RXFjbURLS19MYV9qa0hqOXd4b2hEeEk2WkZfS0VyeWtZVldWdFZNcnlmU243T240X2RleHhyaHZEM1Z4OU40YXdzZDB6LXZ0NDYwTFV2V29DRlJRMTN5Z3prRGZ6T05XS19BSkEtdGFEZTZlc3hnc3ZxYmlsTWxhVUZSZXVtUGRFN19rVGh2YjlqWXA3NGpvQWxiSTVYSVgtOA?oc=5",
+   "fuente": "Ceuta Actualidad",
+   "titular": "Liberan seis delfines comunes y unos 300 peces luna atrapados en la Almadrabeta de Ceuta"
+  },
+  "N24": {
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZWoweTh0MHlBdWFHckJIeC05WU5LamIweXZSc2NSOWYzSWxpVS1pTW1sYmpkQkptSXVjcmdaSVllSkhiYURZQWx0bTVIMDJoWFFOS2ZueVVLblNYSFVCaXhqc2l3dEJ3YXVtYlNicVZRSGNITnlaQjN5WHdpQnR1UjhFSzdYWmF2REc3RkctaGk3bjZ1THFoTExIRVZzcFppQ1JiTElNSDV0OEI4N01xcg?oc=5",
+   "fuente": "El Faro Motril",
+   "titular": "El I Salón del Mar de Almuñécar reúne a más de 1.500 personas en su primera edición"
+  },
+  "N25": {
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZmFrN29NSjlmdlRQaXpqYUhoYlZRLTFkMUhka3RZUktRNHJwSHVMM1FoVjlmV3VBVWJ0TFhJQWxDdUM0NU9hb2xVZHNCTllQbS1LN3NLVlk1c3VLVGZpTS0yX0lHR09FbzVKdW9ycEE0RXFBX2lxbFJPb2VsYVpfS1RJdFVXS0lBeXFwNkpPQjRPVjlxQTZHbWZaSlkyY3RfcWdYWDBTalJFdnIyYlhSTGptTGFUdzJRMXRIZmdn0gHSAUFVX3lxTE5jc0FJNDVRUU5kTFQ0aXR6NXpEbzBHNkxJRG9sUTUwaXBpbUZkSWNVdmpEOFBnc19WYVZUQlVmX3pZZ3NNS1hVRDRFQTlMZXU4Ukh6SGxYeFM5eG41MXdabUdOT1RIQ1VueGJFNktXdkpKQ0djSDg0ZkZBQkVyUnhnMXR2TFFiSVV4ZEIxY0hvbll4dXRGQlpFdXZpTDgwOHBfSFZiYmVKeHVFUlp3VFFwcm9TT21lN3VXUkMzdjk0cXlpbGpTd0lKcFdXVFJfVVRoUQ?oc=5",
+   "fuente": "Diario AS",
+   "titular": "La autopsia dice que los científicos fallecidos en Maldivas se ahogaron"
+  },
+  "N26": {
    "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRd9IBigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRdw?oc=5",
    "fuente": "Infobae",
    "titular": "Hallan un barco romano hundido hace 2.100 años con un cargamento intacto de más de 6 mil piezas de vajilla de lujo"
   },
-  "N5": {
+  "N27": {
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNZ214V0FpSUxIdEM0MVl0VUx6QlVYamttekVwaS05cmYxVUtoci1jQVVRbW94VWpNaDBpbW1UQnhSZzNMbXROU1MwcmxuZTAyMUQzZXVNY2s3aWRGM0Z1cThCdnJrOFVNZ3d0VTZrTDJhbGNMZFlhMGNyY2lVaEtDeEl5RVVRRDgyOGtIekhsQjEwOGFYQk00ZlZFNk1xemJOM1JPWG92bzFiV0xuVGsxR1kyeGRmUnM2Rkhvd2RfRXlBelRmNVhBRnBqd0t3bWZHajhwY0FQbC1iNGhhM2JPQ2I1a1ZfYkJQQmRtNUE2Y9IBigJBVV95cUxQQTFiU196QU00QjdhZjB2bTRodWwtbXZ2LTBGck1fUXllZHhqczhXZlJpX21FcUh3Uk5UMXllelZzWGFMS0Y4a3RuNi1ST3dzemtocnhkVWF4aXZaX2lKalpoRXkxajQxYzBETUtCbDlwXy1TRHBNYVpNcXpGM1FIMEVUaFB3dWV0cVRxbFVDc1hsZl9VRGhmUjBtZktvd2d3UEZKa3Z1ODNPNGdwUnJtQjJQaVdRUWVTak1UeTV4dDBOQ0dwTUVaWWJRTF9PVWtvbW9PSlVRMU01cm1tT2FhZ0JNM3Braml2YnRmNVdWUExzZF9CTFV2NFUxRmtkeGxBUE05WVlaRXpRdw?oc=5",
+   "fuente": "Infobae",
+   "titular": "El misterio del barco romano hundido hace 2.100 años con un cargamento intacto de más de 6 mil piezas de vajilla de lujo"
+  },
+  "N28": {
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOU3JUWmpmZUVSMWZWZUF0ZzRYUHNVQUZ2dGhOM2gzQkNyX3p6d29iWGRQNlZ4d2RRSVRzQVpVX0FGdU92QlFpWWRrcFh4elBZUGh3d3kydnFnZWZlZEZMeUxsQXBHMm8tbnpXRUx3SmZiOVV6d1F6NTBSOUlZenM1c2UtMk8tZVl1VDFNaHUyOUR0Y1lYMGh6OXJR?oc=5",
+   "fuente": "MotorVSMotor",
+   "titular": "Filtro De Buceo De 67mm, Color Púrpura (Rojo Para Submarino), Mejora El Contraste Y Los Colores Bajo El Agua, Para Cámaras Y Videocámaras, Incluye Estuche Accesorio Fotografía Acuática"
+  },
+  "N29": {
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdzVxSFdkd2dod1JGV0lZYWZKMXhMVU9YdjBVLUdxV3h6SU9ENFJZR0NCV3J2NGZNZGJmUGlPMGlrZ0JtSkNoRXRuVUJUb0pOOUFHbVVDNW5HaWppTW1iYjJYdmdob0t2YzVheHFYZ3F1aDZaYzg2NEQxOWxaNHRfRVpEV1RJcDBaSjRLZmF5ZmxjdGlJUVhyMzRIbms4VGIyUWMySjFndHlxdmwxUmsxemdtSUZmVEF0ZzltSWRqVjhYeFBtMU5aZUVkZ3Z1SUJtOHpfaV8xQ0FSUdIB3wFBVV95cUxQU2hLSk5fbVI5ZU84M1E3YzJYWFFVZVNUSkxuQnQ5M1VhMFhmdU5LVlJIcjE1d29HNnpGbzgzalJkczEwRWxOLV9UN1lSeDc5WXhPc1ctWnVXdzVwdEhBaGpyMzRmV3NOamozZXZXOUlZMnJUakxSUzU1N0d2YzNoc0t6WXU3b3JWakc2aUhZMFZZSTczcFp2amQ1NVhpN1hGUHdKVkdmLWdFdEVxUWszZHJTSE9JOHdzRzdvQ2piQXFScUNvRDA1SFpfeTVVV1ljS0J1WVZHSjBxaU9rMXBr?oc=5",
+   "fuente": "La Vanguardia",
+   "titular": "El Salón Náutico de Barcelona afronta una edición marcada por el crecimiento y la transformación"
+  },
+  "N30": {
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVjZEN3gzazRtalBzald0YUM4NVFiZGM3WVpQMEZhOUNxdkhGSFE0YUZYcTFwQk5QQ210aGVrQ3hDQXhKR3RNWkZ3RHk4ZjMwRjAzVkVORlA0VGg5d01CT3JDNE42RVR3NTBYY1lBRjFSTDZCeGVEWUpEb0VsbS1lYjRXalhZd292UzV4QU1kZUh4TDZTc0JyeW1PN2F1LURhV1F1RVY2QjJZZUVVX2JjNlMteGFQa0FNRXNsS0t4cWloMFprWWxWWGZn0gHeAUFVX3lxTE9FdUhiRXhzNDZ6ODhid2FQRTVQc25BSlFMZWhXSGdKRUw2ci1INXkwVnQ3Z2t1RTdTWjFyTFFkeUZMTWJFeVdBdHNyX2lLRGQzVFIzWXZkRGVwUUdINDAtN1A3eEliTlhvWFVva25qNVVHRHoteEQzcjNKTS15Q2FLLTJzdEdqWmVrRWItSlVJZF9lZWZVcXN6eXBqazUwbFdmR19kR1VPLUx1QlVoS3VEV0ZqaWxBQmNvZVNzN0FzR0N6dkgzcUhtMjl0Ti1PMUdjYUI4RFVBOExYT011dw?oc=5",
+   "fuente": "La Razón",
+   "titular": "El Salón Náutico de Barcelona abre las puertas de su 63ª edición, la \"más completa\""
+  },
+  "N31": {
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVDFmb3pQVWctc2pGWUVpY0l3SUNNUmItYmE4RnNQaE1MYUlZODQyZm5YTHVXd0dMMl9pcnNSMkhsMW02WWNnLWhva1hWTmg0TG96bUJxRFBQcG0xTVdQc3M1WTU5eFdqR0xrRnluWHF3M0l5TFlOWi0yZjJYZDN3WGE0NmR5MVNFdEYxb1hOVnZ2YlFBVm5OWXBxQWpiSFBBc3VKVm56MUVBb3pGT0d3NEw2S2NRZU96SVNrbUZGaE1aTi1LWjZnaHo0YUxoSjBXNHc?oc=5",
+   "fuente": "El Diario Montañés",
+   "titular": "El Puerto encarga al Instituto de Hidráulica una metodología para obtener infraestructuras resilientes al cambio climático"
+  },
+  "N32": {
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUWktdmJhN2gtUEFnWGNEQmtOR1JsN015TVZZaEhEVUFWamVJamJrR1BaQ3hyNjVhaUFzZDYzVWl5RVg4cjlfeW5fMm9Gbml6d1IzWjE3aWltamhmbkgzRUpsZW5HdU5MSXhUNDdYTEtJSmJKaG54dHVQSUNVOV96ay1md2k3WWxjNHI3U2FvYWFPRmVVeEdjZ0VrY19lOEVGemJTb0tMNG9hMVhpcjgxOXFlb0E4SHc2ZlJ3bWJta0dYRVVYUFpiV1NVZkpfTWgxN3VOdjZTc0pKYzF0cW1NeNIB4AFBVV95cUxPUWktdmJhN2gtUEFnWGNEQmtOR1JsN015TVZZaEhEVUFWamVJamJrR1BaQ3hyNjVhaUFzZDYzVWl5RVg4cjlfeW5fMm9Gbml6d1IzWjE3aWltamhmbkgzRUpsZW5HdU5MSXhUNDdYTEtJSmJKaG54dHVQSUNVOV96ay1md2k3WWxjNHI3U2FvYWFPRmVVeEdjZ0VrY19lOEVGemJTb0tMNG9hMVhpcjgxOXFlb0E4SHc2ZlJ3bWJta0dYRVVYUFpiV1NVZkpfTWgxN3VOdjZTc0pKYzF0cW1NeA?oc=5",
+   "fuente": "La Voz de Galicia",
+   "titular": "Juan Carlos I regresa a Sanxenxo para la regata de octubre en la ría de Pontevedra"
+  },
+  "N33": {
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeUNIRzVhTVJJRi1Wb3JJMFZoU2QxVXhoYTVaRGh4c19wdTlEXzFmcWRadWlKX3BpVlhIUjBwZGpvNmlDS3hnNF9TRkQ2Nk5QZktGR00xRnY3WGlRX2tVV3l1OFg3WU1HQ2dRcEx0bTU3bU1aTGpBNWh5NzJzby1kS21VaWl3UDFSd3NkdHBlaDFoZGxZVEk0S1BSMmV1bWw5RzBXWU5seGJRdUgyUERfVlZ30gG3AUFVX3lxTE81bDlMME13TTlaT1V2eUQ2ZGJfdkhKMlloTXFGZEw0WGJvd3J6V0lvNW9VR2Z4Y1ViT2NrVDloRENzY3U3TXRfOW5lMzBIMDBKc3lwTW83SkdzZzJoSWM3TjJnbnhFQ0pmaUlnWTRpaV9jVmJWSkMtY2NiUjNYMDdNb09uNUUyUHprMHFrWDdSSG13SzMzUENaaHZyWTRZa3EyNFJfT1VQNmx3akJmUDlES19SV0w0aw?oc=5",
+   "fuente": "La Vanguardia",
+   "titular": "Los puertos buscan la mixtura de usos para abrirse a las ciudades"
+  },
+  "N34": {
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNejNfSS11NTFYMDczNHEyR0x1aDNRekJFa3BjODRlN0lxNHVEaW1hakpVSTUycXBLenBVaE1jM0Zka3ZweFpVRVdMdkdSSEMxeExaOHJPZUF6RVBwYUJ2OG5MWDhia1dNNjlLZnktYTNKLWk1aUEtU0NWMmZ2SzNweUNiTzJzZHdYZ2NQTFMwbEVsWkFCZkJEMXRuUWNUWmp2MUU3T1h3?oc=5",
+   "fuente": "El Canal Marítimo y Logístico",
+   "titular": "Delta Ebre Port acerca la Ruta dels Poetes al Salón Náutico de Barcelona"
+  },
+  "N35": {
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOck05NTJCWnZaeDNDam9lUVBuYm9kWVlLSkladFdVd0Y3TkozNkJESWRrU0VwWlBwNU9yWXVRQ0t5MVJlVm9CdzRkWm5XMGxwNW1wb2xzWjI4UEtHSUxVOE1tcGdDOGEtY2RabTFQX1h6YmxOQ3FVbC1BZTlRalgzTW9yRDB1eG1pNERVT1NHTVlKZWJTSm40Tlg3eV8tSkQ0MWNTWWJ2WVlZdmZ0ekE5ZA?oc=5",
+   "fuente": "Ruta Pesquera",
+   "titular": "Salón Náutico abre las puertas de una edición marcada por las marcas de alta gama"
+  },
+  "N36": {
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOTTNrTXViNUZTQ2plcGxsVWVEamZHYmFndjJ3aG44VThZbHlVODEtS1cyWU9tNUhwOWthQlU4YmtwZEpjSHhsUHlZcjdxQ3hrNFZyNUd4YUN3ZHVfN0d5elhPQUpTZUFMNFNhVmluYVN2OEJHbEprOEdJOEF3dThxdmdXTHB0dV9GQTJsWko2QTZUNEFZc29nSnlsNHpOeURGNnZ2NWo3WkhUUVNkaUcycS1JMUpjVDEyd2VQMEI2aHVRQTgyZTI5ZjN1eWJtaXEyM0lFTkpCNzItSW54cVHSAeMBQVVfeXFMT0M1Y0ZPbWUyckx5TEQ1ZzRId0pSX29qTVRWWXRRNE80b2UzLVo2dDlWajNMbnB1dklRX0RqMmtNSkdFaGJMa1p6b0ZLMnZXZG0ya1d4M2VQdnl4SXRaZXBNeXBzNGNGZG45Vlg5SG9sYmZYZU91dEo3SVhoOHVSb05tUENyN3F1THJrWDFoRHM5eWJIdEY5WC1NYUFQMGV5YWlZa1Nuc1l0UjdmVEFNaDZ2d0p4TC1MY21iOTE2WnFtWGphME53U2htV1dOeWh0M09mUnJWdzBxeWdPTGduZ1F3Wm8?oc=5",
    "fuente": "Cartagena Actualidad",
    "titular": "El Puerto de Cartagena acoge la XXXII Regata Navegante Juan Fernández"
   },
-  "N6": {
+  "N37": {
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnJUaUV4TGZnM1ZxT0QyN1MzU0VodXFMRGFRa2pSd2lHSldMOTFVeTJ3ZXNsMW9vUTk2SWdsajAtRE5jd2w1YUhWenpEWElaMVpfOUZWN0d5RnZ3V3FBMHZXMm1uT0FENDdmbDBKeDJFZndwMWptOGZPeG9qbldfX0NHS1lzWGgtWklVV0RKWlpLUk84Ujl6V3NEUUZ2ekVVbmZOa1ZBS0h2czZhVG4ycXJiRQ?oc=5",
+   "fuente": "El Canal Marítimo y Logístico",
+   "titular": "El Àgora Port se presenta como el espacio de debate del Salón Náutico de Barcelona"
+  },
+  "N38": {
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNc1hhTWNCR0x4OXE0V3hRZW5jRVBrRE02QWpzT2ZKTVpYUEdJbUtCWkFaS3RUZFcwSDljVHA5YTVBZk84bnllNzFpOHFWZmZyMWFOb3J2TDEwXzJEY3J6WFNNaVFvSk8zVk45MWFWRjNmLVNrR2VDQW5FUDhnNWNzSVlKR0dvMG5wNER5SmFFdnprYUVXZ3RRLUFkYWg2LWp1c2wzVE1pVWlRc0NRSlNhM3p3U1Z1T3ZPVU1JQmRHbUc3WERrTGE5N2pjbjRjaEUwTmRMSkxWaEhBLWw2MUHSAd4BQVVfeXFMTXNYYU1jQkdMeDlxNFd4UWVuY0VQa0RNNkFqc09mSk1aWFBHSW1LQlpBWkt0VGRXMEg5Y1RwOWE1QWZPOG55ZTcxaThxVmZmcjFhTm9ydkwxMF8yRGNyelhTTWlRb0pPM1ZOOTFhVkYzZi1Ta0dlQ0FuRVA4ZzVjc0lZSkdHbzBucDREeUphRXZ6a2FFV2d0US1BZGFoNi1qdXNsM1RNaVVpUXNDUUpTYTN6d1NWdU92T1VNSUJkR21HN1hEa0xhOTdqY240Y2hFME5kTEpMVmhIQS1sNjFB?oc=5",
+   "fuente": "El Periódico",
+   "titular": "El Salón Náutico de Barcelona zarpa en el Port Vell con el reto de escalar posiciones en el ránking internacional"
+  },
+  "N39": {
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQempJQy1xSTVkUngxZVVuSUhGcUYtZnRHU3ZUNkxUM093NDR4WXhaRGcxWGZvdmdkTjMxZWNJZnlIYmxLczBqZW05NXpFNnExOUR5U1dwazhHUVhoNGEyVlZnMzhrZzBjbUlMWW0zcFVXR2tJakJxOHl4T3ZwSUJUWjcyWDR5N212RVVmeGlWUF9lSlZFMVBhVUxjQW04N3JFWk0tbzFvM1BiTDQ?oc=5",
+   "fuente": "Naucher",
+   "titular": "El Salón Náutico arranca su 63 edición con altas expectativas de público y calidad"
+  },
+  "N40": {
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOV2lSb2VWd3lBNTdNZlh3TFBSNVJ3V253U0Z4MnVBTG95WWZzQ2F6N280OW1kN0p0RHNkRkJQOGtLYmZGSTJUMi1weHd5U3J1VkU5Y3pUblhEWHRxaWE0REJVeUg5ZkhWdF9fSndpSmV2SF9SRy15OW5NSngxaXRNRnhnVjlqczdTS2xpMmc3bnRoV09yNlNYZdIBpgFBVV95cUxPN25ndnlOZjh6MW15LVpTY1dJTC1fT2s1eVpWYURBcHB3WEtieThlSm1vZXNpQnhqcGN2dm5xRldxSWNmN1prY2N4NkF2QklCRXhxTHllV2YxTUVjcjFPUElOV0RqcEJFR0lwa3RSNHVGaUhzTlJUS2RlOTJweUx4S3JEZzRyQThDM2dsaTBjVlNmRE9xbHpHam5lbjZRMWFQSkxpXy13?oc=5",
+   "fuente": "Mundo Deportivo",
+   "titular": "Luis Conde: \"Va a ser un Salón Náutico de mucha calidad\""
+  },
+  "N41": {
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8yQTh0QVFqaDdJZ2d1V3QxdlF2U2tSRkdzUGVTZUxTYm1TQWxydjAxNlgyOWlxSVYwSUpwQXRGSzlSZm5nTkw1c2dYSTZaZw?oc=5",
+   "fuente": "Interempresas Media",
+   "titular": "El Salón Náutico abre sus puertas en Barcelona"
+  },
+  "N42": {
    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPRUpPT3FEVFU1WmFuQTREVHNBV0FJSzlkZlNYaXVRY3l4Tl80MnlDVG1rR2lQRlliOW1jQ0FPeml5ZFdZbjJRWWZFR09pb3ZxVnA4RUpXNWNzeVlZbkJQVWpRRHAwbnJmSV93MHluR1B6anN1YWdpckxyMXJuU0gtU2VCbGMxbXZfaXNFeVQ5Z3RiWk9tZUlLdnVqN0haMHd2OFhHZVRCTjhnYWE5dWQ0aC1SNTBBcFVTVm9WWW9ybWVmRm14anFtNUU5MGs4N1Q1bjR2a0EyTEx6dHdac1pYaURIMC0zakZoM2dVLUQtQjJGaWfSAfMBQVVfeXFMT0VKT09xRFRVNVphbkE0RFRzQVdBSUs5ZGZTWGl1UWN5eE5fNDJ5Q1Rta0dpUEZZYjltY0NBT3ppeWRXWW4yUVlmRUdPaW92cVZwOEVKVzVjc3lZWW5CUFVqUURwMG5yZklfdzB5bkdQempzdWFnaXJMcjFyblNILVNlQmxjMW12X2lzRXlUOWd0YlpPbWVJS3Z1ajdIWjB3djhYR2VUQk44Z2FhOXVkNGgtUjUwQXBVU1ZvVllvcm1lZkZteGpxbTVFOTBrODdUNW40dmtBMkxMenR3WnNaWGlESDAtM2pGaDNnVS1ELUIyRmln?oc=5",
    "fuente": "Cadena SER",
    "titular": "Esponjas marinas, el futuro para mejorar la calidad del agua en las instalaciones náuticas"
   },
-  "N7": {
+  "N43": {
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOM28tcVB4cFNFVE5rNlhvbGVkTjNJM1MwN3dqV2EyLTNVUDBxMjZqdUstdm5VT3NvTHhxWnQyZTBBWnNKbE5zVU16Z0J5SHU2ck9VXzJ2R19PMjAzVjdYTTlCak0yQU93WEl5c3pGcmVjYkc2T1ZYeGhWV2lEVF9mSXZrRjM4akVPaUNVQmgyMWkwSEJwRVFPbzUyeHhUd3Y5ZTlfZ2NST0ZHTE9IQjhZTTFRYjVzZ19yTmhGY3lPVS01QkVFc05WLWE3SENqNnZsSjdPbHM1a3BjYVh1dllOZmk0V0o2eW1tVWlnMNIB7AFBVV95cUxOM28tcVB4cFNFVE5rNlhvbGVkTjNJM1MwN3dqV2EyLTNVUDBxMjZqdUstdm5VT3NvTHhxWnQyZTBBWnNKbE5zVU16Z0J5SHU2ck9VXzJ2R19PMjAzVjdYTTlCak0yQU93WEl5c3pGcmVjYkc2T1ZYeGhWV2lEVF9mSXZrRjM4akVPaUNVQmgyMWkwSEJwRVFPbzUyeHhUd3Y5ZTlfZ2NST0ZHTE9IQjhZTTFRYjVzZ19yTmhGY3lPVS01QkVFc05WLWE3SENqNnZsSjdPbHM1a3BjYVh1dllOZmk0V0o2eW1tVWlnMA?oc=5",
+   "fuente": "La Voz de Galicia",
+   "titular": "Guillermo Oubiña: «Se ve que hay un relevo generacional en la pesca deportiva»"
+  },
+  "N44": {
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcHBhUkUxR1R2eGdjaG9tSFRrbWZMZlBxZmxxNWFLTjVEeVgxMnhBMmlDT0toRUk3YVE3d0xOdkVkdjJHaFQ1WWZQSDc3eklOOW5zUUtwM0ZiSDN6amRXMlozQlZOSGVxYWhOSmRLUzlXSmt4STBwdV9VTjJHcEk4Y3lQajktNTNPeTJYQjhmR09BSTlXMzBRcTJOMmwySEgyMlRqU0NYN2x4bHc1cHc?oc=5",
+   "fuente": "Ruta Pesquera",
+   "titular": "Armadores piden una revisión del plan del Mediterráneo tras apoyo de Eurocámara"
+  },
+  "N45": {
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcllaTjhXR2JxSG5zRUhleERBTmpDNHU3Y3hJMVFUTGc5b01Zc05rQS1xYTBQamQtZmdoelJoQmpOLVdfRmJQNkU2ZEdOeDVhWW5mLXdPOEZyelFMYnE1Q1BWcE9sMFNRSWl6VDBEUEJPQVpFQXZfZnVIZWF1MjQwWFZMUjFZbDFjSWZpWThRUEFqejlvVDFTVnFUNHNuRVpuNG1EVVY5eWhWNUp3Z1ZybFBtM3RKdEY4TGRFNzJFX1hQcUJfQXp1c0l0aw?oc=5",
+   "fuente": "San Martín a Diario",
+   "titular": "Ya se pueden comprar online los permisos para la temporada de pesca deportiva"
+  },
+  "N46": {
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOTXE0bXpWVURYV2V5SXItOGFLSHJteTlJSmF4Y1BmNS1NckpSSFB6NmkzWE05Zl9scnJaQ2RkeGxscEZLRzFaWERBLU5wUlEzM051T1VlYVNxT2J0TkhQclliS0lVVFpWQUxMb240SjRsb2ZocFluNC1IZ1lHNUZQMjNwcVBSbDVQWXdSaTlKVXFxVFhYdkpsb2hRbnRCLXB6U25LOGM5OWlQR2Q5Y1Bjb01HQ0o3YmxZQjhnd2lnZVAwblZfdF9IYUxlTmF3RC1FRGRyQldn0gHbAUFVX3lxTE9HbERDZFk0bWJiSkZibTV0S29FOXU1ek1VVWJDeE4taUFXZHlsVmkzajlxMzMtYzFaUm51Y3JIeHJCZElVOTlLS0ZEeVZ3c3YzZnNCdHROVG1WeS1paGpTSkpENUV0dEh6QnRQVDJvR0hpRkhYS216ejh5ZFBnb0ZibmgtcVV3cHdiM0dQRktRVjNjZ3U5WkREb1VIcmpTVUwxemtoZkx2UF9TUW16TVRyUTRvaElLTi04di1VS1ZtZVJkVE1GdVU4bHVFLW1BNHM3eV9FbmNXbk44WQ?oc=5",
+   "fuente": "DiarioAndino",
+   "titular": "Neuquén habilitó la venta de permisos para la nueva temporada de pesca deportiva"
+  },
+  "N47": {
+   "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOSWpxVWNEMkNnNElaX2lQbENmS2NJTGI0RklXU3RSTHVSMUQ1QkxfTzVPYzkwWkVVQ3RxWVZnOVVIN19aUFc4NURiOXhqS3A1TmhpRVBldFlVMDgwMzg4Zk1RN2xoakdpRmtRN1FhNzc4RnVDVzBITmNkQmk4YXhTTHJVQWR5djc5ZE5FLVV5OHRhT3ZvclN5dG5VRHRxMW41c1ZnZ1VmX0xUemliTDBINzY1Xy1RQ1o1SFRvaDZ1akw2cUtiUHQwWmlFQlhfMWlRU1ZOU1V0S2ljVHFCMEZ6OFhkQXNEYnBTcGI0TXQ5dFpJUTNTalhDR2tRQ3d6c2VsczgxN1VOdGM2UkdqZmp6ZHpn?oc=5",
+   "fuente": "Gizmodo en Español",
+   "titular": "Italia lleva décadas intentando frenar a un invasor llegado de América. Ahora ha descubierto que uno de sus peores enemigos ya vivía en el Mediterráneo"
+  },
+  "N48": {
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRWhDbC04bVR3eUljRFRtREpfa2tnVGRnTXFveFM4NFJKSmZ0N0Q5WHY0RS1ockhsRnRzTWZGcElEN2RsVEoxY05qRzJyc3M5aFdnVjNPX3B6dC1BYmhJdnM3N0wwaXc3OWpoRzNaZ0s4cGtxRC1ESzR5U0ptbTYtZlI2a2psbHBfSllnZFJ4Wk4wMWpidk54VUF6VWTSAaIBQVVfeXFMTVZnTVF0TEM1MjhuWm1LbDVhMndnUTI3VTVJb3dEbjF4QkZ5SEFPc09SSjduLUotMUw5SjV5VUNDZEVqUlRVZlRsX1pDS1NwbW5TeU5JUGVkbTA0QU5IWks4UEQyNHM3M3AzU3F1ekVEV1VrNmc3dVU3cVJEbkFGWjZUTUtabktmY1d0STFBUS1nc2N4bm13akUxNW1uN3FWZlhR?oc=5",
+   "fuente": "Diario de Ibiza",
+   "titular": "Lucas Guasch, una vida dedicada a la pesca de Ibiza: \"Antes era más difícil ganar un campeonato de Baleares que de España\""
+  },
+  "N49": {
    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOMWJndGlCYUpUM0lfNFJEZHpVVGZVZGJxemhBb3dmVGVGbUh4cEZpSDZKYkV4Sm5GMmdaQTdzWXZxQTE1ZnZqY2FMaThRdTBFU2trQXg2S0RGaTNKUnpUTGd6SFFvQy1TbnBLcEd6VS1SYzVkWkZxSlduSkhsRlRTNVZmREs5SWQ5LWlwTXg4VThhbUdOMFpyN1ZjNEN4WVhzNnU2NlJjY0IwQkROTHJ4LUdtWDZWZkdfcmlqVGk0ZVJvYm9TZEdCY2FsZ3lwYUxXekRMbnMtbDlhM05lRzUtRkZyZ2lkTEFkd2d0a3B5aTUtVjBxb3ItaDZNWHpRakkwRmpwbDgzSVZ2ZjRPQ1B2SmFnWQ?oc=5",
    "fuente": "Cartagena Actualidad",
    "titular": "El cartagenero Juan Carmona luchará por el Campeonato del Mundo de pesca deportiva tras conquistar dos medallas nacionales"
   },
-  "N8": {
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOdjNXOFh2Vlk4UFdJV1ktcjBlMWt4WV9sQUtuT01PdzUtODdPMGtycW53aE1pS3dIRFVoeHRaUFdEd0dvc3E0ZEx6RGJHd1pLcm56cm9pemE0Tm1YQVFpZndpOXh1TlpOMGFLeGVhT29OWFhGU0thamtOZkZlMlU4R3U3TmRSVTcxOTZMZFg2R3VSOFI2UUhmMWNWWXd1WVVKZkFBV1BnanVoZ0R5VE9ZOHhWTFdSV3lUZkNN0gHAAUFVX3lxTFAtSm10d0xpVm43WndEZ0h6WWEtbE1YNm96MFR2eTVXODYyZnV3YXc2U2VhUDg2Y0ZZZzNaWElLM0gzRHFtZW54VDlEN0lMR1Roc3RXb2g1Z0ZWVkJYZHNuODVvZldmMERuWmRBSlNiVDJVRUhKRmozUW1UVy1JSExyemxMelVBOVAtOE9iOVh6S0tXOXFoSFhmbVlFOURQc3dMaFNUVDhZQnd1U0hVTnZQVnRvaWxJaE5rclJHWk1KYg?oc=5",
-   "fuente": "El Periódico Mediterráneo",
-   "titular": "Bruselas abre una vía para revisar los recortes que ahogan a la pesca de Castellón"
+  "N50": {
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPQ3VtamROZ1hlSzZWNGNxY0phV25BdDVXYmc2RTZ3eTd5QmM0MWZQSWVVQnBGT3NxX0hJb0lpM1VEX29mcmRLS05rUk42WnBGbHJobTlVTVpPWTczNTlHXzNHSzdtNFgyLWNrbWFuZWJMVDRteV9xbnVIYTJfX2tGalhxeWh2WUIxcGV1ODlWejB3bFdKNGo2WUxmSjZadHhuby1abldVZk9MM2FITHNIWkp1d2xiRmQ0QlhCdnUzTFgzRFBKTm9aX3c2SVY?oc=5",
+   "fuente": "Diario Siglo XXI",
+   "titular": "Cepesca y Europêche instan a la Comisión a revisar ya el plan del Mediterráneo Occidental"
   },
-  "N9": {
+  "N51": {
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMWFDWGJmRzlFb0wtcHdNR0F5VW1uSzZqd056MzhEZ2luNGNlQzI2VHV2OWFTaVdXelpNZ1NFYU9tMUZsamdBZEJnOVc2WnRVcllGM0VLWDJsR2Z1U1FrNVhmc0FzRGpla1JUbWZGNzZKcTJURGx3eXMxYW9sc2s3MmxHU2ZuNHJrTWFlaWxuX2h3MlhkaTRVNg?oc=5",
+   "fuente": "Informat.ro",
+   "titular": "La UE adopta nuevas reglas de control para la pesca del espadín y el rodaballo en el mar Negro"
+  },
+  "N52": {
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOU2lSSWxrSjNLUzlxb1VvQUU5NWM0aHpkRTJwQ3plMktwcnFjdEJYQ0k2am1rYkRWVUwtRFd6QXhjZDVQejFzTFgxQVpnSGdyUFBHOU5KOFN6VDBraEVNOHo1NHYwelotV3U1RWJJXzBzeE1kWGxJeXFpU29oV3RYeFdSXzV1S2IzUXh5WU9sam1RYzNabkRSYzBsVGJtQXJSekpscGtzMEFhMDJ5eFE1QkdsLXd3LU9PeHRpcXFmVnZTZjhpNkpKN2s0RzIyRE9GV2tYeHBMalFHMnNMWXgzeHlIdVg4Zw?oc=5",
+   "fuente": "La Vanguardia Noticias - Caleta Olivia",
+   "titular": "Pesca deportiva en Santa Cruz: controles, permisos y multas de hasta $400.000 por pescar sin carnet"
+  },
+  "N53": {
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYk1TcFJVamdPUktUZE9TWVNlLTVBMmtMcmU2Mm5uTkh4OUJ4ZGFkVVFHNDF0RXJ4UUZYS01KZ19sdDhFTEZLdndEbHk2djNVZXRtWmJiNDlwMTBYUkJtQy1Xc0QzTjhLenc2WDJGWmcyTXJucDVlRG0zMENGcl82OU1kN3NOc1haS1h2M3NEZFVGTnRNaTRUWVMwV2dXekZpcFZIS0RmbFFUODhzOHh3S3ZYUjhsOXNSSXU1QzBKa05uZlU?oc=5",
+   "fuente": "H. XV Ayuntamiento de Los Cabos",
+   "titular": "Refrenda Gobierno de Los Cabos compromiso con la pesca deportiva en arranque de Bisbee's Offshore"
+  },
+  "N54": {
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVVQzVWpCelhvbGpTMFMzMVhLMzlfdXotZ1NBS21KMkQ1cHFVbXZpaDZrUGVLSTdxdXcyZ0ZNbFRzMklyRTNVWl9qSGtqNm9TTE02enpFX3BUdFhDRzN0VE0tRHUwdWRqbjhJMVZ5STNZYXkwWEZ6SUdXamJpWGNKNjNDdkpCT0cyZU9FbGYzeHNtN09EcG5mNHYwUUpuMGFvNDYwX29oOGExelhmaWlDZ29rNnQtcnN3TGFERQ?oc=5",
+   "fuente": "La Plana al Dia",
+   "titular": "José Moliní del Club de Pesca Deportiva de Alcora, subcampeón de España"
+  },
+  "N55": {
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObkhrSlNWY1JuOXJGRkpnMzF2ZkV3c29nc0kxTEJoOS02aUNyUUN2SUNfd0FwU1BXUkJVQzZNZENwWGdGTGV1MkRwZ3NVUzkwa3M3WXYzWUx5NHRNNHZob3o3eWRSZ3JlQUdmWXFCV08tWGlFZklKVktpYlkyb29hUXBFMDVkaWpBRTR3OXV5QWpDdnFXRWNBUkF3bHRLS3V6cUE?oc=5",
+   "fuente": "Sernapesca",
+   "titular": "Comenzó la temporada de pesca recreativa en la región de Aysén"
+  },
+  "N56": {
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNcFZFd1JzcjhGaGdCdTZybmN1VlprZi1KRy12bzJrRUN2ZXVkbFBpOFFQSlFMR2dJR1FEbGpQWnozdEZaOXFBLXlVYldMdWRxZDBWVXhna0dEMEtLRzd0ekNnemtkTmRjcWNNaFMwTzdGa2EwQTB1d25ENWZ6VVJMOUxuUGZocEJFVDFRSjVieng5aUxxa3VXVXAtOFFQc3E2aGNicVNHSFFnSTBoZVk2djRDMVdsdEkxQVRVMy1JbU51OHFFUUZTSy0wZVVjcUZ6eE5OdmZFeGFSQQ?oc=5",
+   "fuente": "EPP Group in the European Parliament",
+   "titular": "El Parlamento Europeo aprueba por amplia mayoría el informe de Carmen Crespo para reformar el Plan Plurianual del Mediterráneo"
+  },
+  "N57": {
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObzQ5djY0ZmxyeG53blRpU3kwSUFXb0N2LXFLODNJdlFZSEdaNjc3TzNpMXpFWXhzMUN5M0k0YURTSUpUTk1vY1hTSFMtMHJTS1BxYWptR0RKTXRVd1haSWVCcFFKZll1RXZSUDlHUmZQeUZuaWxnWXk5RXZKcUdyLXBCODRaUDdCektfaUdVaGVMNjNsak9KV3hfT3YtUVdZZllfbWtXa09BRG5lTHRaSQ?oc=5",
+   "fuente": "Clarin.com",
+   "titular": "Los riesgos del viaje del papa León XIV: los vuelos, la altitud y la exposición a multitudes"
+  },
+  "N58": {
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSHFWbWZDZUJiS19qTTdjeVlJR1F5SzJTR1pzZ2Y2YVFJRlR4TnZVdkhmOVAyR2swckRPNnZTQ2tMbk1YNVAwN2VpeFZzWTZLeVpNRFU0MURhSmNaSE9scFJZMTRWSHpfWTJuZmNzTEpObDhUNHNHVmtlNDNwTG1BMFA0clFSbGhGM0ZxRVR0NUN0SXEyVXBCYlN5aF8?oc=5",
+   "fuente": "Ecos Diarios Necochea",
+   "titular": "Los riesgos médicos que enfrenta el papa León XIV tras su cirugía pulmonar"
+  },
+  "N59": {
    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNY2daRkFyTEtDODRlYUtVMWNPZk93MlYzQmJpYU9FVVE0R1RsMEN0WWpyS3MwMF96RjB5RUhGa0hOQll1cHNjU1Boa2puTHNic1JWYXhMUk1CMkpuYU9BbmdPYUo4eGxxdXhZUlhIRkpIWG02RHVXMFdoVURBMXJHT2w0bGxaaGNlMHQwSHFFWnZyV1dyM0tlZmc4WmJNS3hTNzdvTHpSd2dJU1kyUkNZZm5XVnM2cXFvdllQdXBVSUU3OUF3cDA3OEhoQXd6bUNVQVJteFB0ck5reERMN0c4MGh3?oc=5",
    "fuente": "Paralelo32",
    "titular": "El Barco Amarillo: la familia argentina que vive en un velero hace ocho años y cruzó el Pacífico en 28 días sin escalas"
   },
-  "N10": {
+  "N60": {
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPTDZpa2NQeFE3UlBUaGluOXZQMW5kdVpIa1lWMnpZTGw0WEl6bDVtN1JfUUVHdTJjUjhzZXNoTXFMQU1kcGtNV1pFNWxWYlV1c3JmUjZJMnBsNUx0ZEJNN2VNN0hFZ1Npa0NWUldPbGwxUXN4N1NNMm8xelA1UGNOeldiM0U1U19wV1VaQ2J2a0FMRW4xWXVFRUhZTHV0RnNQZnBYX3JxZWdDNkhGV3NDTU5JLTBwRk80UUFDcGUwQlhOWGI4OUlfUUR2VVPSAfABQVVfeXFMTVoyS09CbUxzcFR1MUs5aTM1dW51ZEVBb2daQlVwX1h5c19Nb1pjTlNBY0h3SnFhMk94WHpoR08xb2NUcUJKdkZtMTRHdFBPdHVac3VHWFhkSDBfeVdWd1k2cGFyY1lSdUtKbWttUy1FYlBiT1dRMWRMQ2hwWGZTbW1Bcmd4VzFYNkVjN3MxWGgxOC1sUjA2Xy00d0FlenpMajBoV05QM2UwYmlKWGV4WmRSMV9Ka1dPUDctX3VjRGU3bDRyVkg1MkdrbEtLQUZac3lJeks2WE9vS2hjQ0I1VWpnNnVZRGp3bU4tSFh2OHRh?oc=5",
+   "fuente": "Montevideo Portal",
+   "titular": "Tocaba en La Sandonga, dejó Uruguay y se mudó a una isla de Brasil donde no hay autos"
+  },
+  "N61": {
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWVlSeTlUWjNHOVhwRjdMX0JNVTItME8tYlBWT0Z3UmJIS2lOeEx3MVhLdmtkMzRyZlk0QTFwN2VVWTdfTHRwRm1jcnZkSGZTV1lZaXlyUmRjcmxvTTBQUS16YUlNVXpjOXo0RzJfZXZORHdaYXhjenRwUUJmcDJEcGFJMTN5Q1k?oc=5",
+   "fuente": "LaPrensa.hn",
+   "titular": "Guanaja, el paraíso para los buceadores"
+  },
+  "N62": {
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYnZYcF9QcGJ5Sll0QUZsS1I0cnJVaXpNQjJ5SXd5ei1nSVpIZVUtWFZFbTZuaDZtdmc0OWo3TjVaZDg0eFJ4RERhelpFTHVaTXVEeXdjaGRaeW5abEdpajY2b3BheDk2YTFBRFVVWkdfaVlGeHk5TE5hb21yN0NORFhCckM1bnhnTWFRXzVtamFhZWJMLXNmeGNJR0M3VEFiMVE4YllZZEM3YW5Cb1NTTXpwbTM2ZTByVV9QQV9wOFhRZ9IBxwFBVV95cUxPekxPNGRZdS1IcW5aRkhHTm9QWU1lZFNoSEZvRm9GMXJlbTJZSm80MTQxVXdHTllzemhTNFBCZmQwRmdyNEFHZDJBZDNXbXk3dk9EWXN4eDRuN3FYYlAyUENxNnZKWHBNZDU5bzdMVmtzZnEtcXllTDBvUzJGbjdNZm51a0IwOWxaNjNvaERzcUZSWGtMU2hueVFvU3EwQ2w0cjV6UlM1S2ZXN0ZXNzJyVUxrbTdjUzJvSG5VaTY3R3ZnQnA1bVo4?oc=5",
+   "fuente": "OkDiario",
+   "titular": "Adiós al crucero tradicional: las vacaciones que prometen ser tendencia en 2027 entre los viajeros españoles"
+  },
+  "N63": {
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQWRVM0Z0NGhjajZ2Wnl6cXA2M09WWXB2WnhHaERfUGo1bWtpU2dObnczaG9LSkNhN2U0WTV4Z3lXZFlvTFpNUmdaZHlpekZ5STBBMURSb0ZWRXhoaGM5TVAtR2Fzd0Z6MFdlVGxKeDg4YVlmN0h6NmdYcFltUWttVUZhZmxSeDJJUlo0MG53QnBzaUxaRHFocFpEallyMW9pQmtuWWRBVTVQaFRNajhkdHJ3UGFkRnZFZC10NmFsS3dyOWNjNGNv0gHPAUFVX3lxTE1tNVZwaE51SWtkVHd6d0FjZVlXS0hQZXpON1JhNXBKN191QjNNOWplNENwWk9nTFpiTG43VFc0TXdQYXNmNkk3cVdBZDd4TjZ6TWplR01ISm91eWFCWUh1OGN4b096bS16VXlEaHVQMU5VOGVtaFFScGlOMU9JQXk1UzFWVlJiZVIxRXdDNUI5T1hLYlNMM2JRS1hpRC0tb0pBQmRDRHBZTkJOTzhGLTlmZzlqOV9ZNG5qZFdVLXBGSUNhVGcxd1pWaWRPRHAzQQ?oc=5",
+   "fuente": "Diario Río Negro",
+   "titular": "Comodoro Rivadavia presenta la nueva temporada: mar, meseta y mucho por descubrir"
+  },
+  "N64": {
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNQWpXV3M1dGI5Y0p4M2lZTm1aTUxialRYVHo5VkwzUkJpQm82X3hwYjJqUHZyUW5GVV95S19kX2xJSVFxdEFnZ05sQ180Nk1PdHd6QmNaYmVkSHNfN2V6QWFEdlpDbkhSbi1GS3U1ZFliLXJQRnMtVkl0M0dBZ0ZJMlhZNjRyVFJRdHlMNk1VX0tIVW9VNkR5cVV3dDVmRW1rV1V0TkRFQkUtek1STmhzSmx1LXJMdXo4QzgwTVlYdU1rWkw4WTJmZ0I5V3IxZmd5WkF3YS1LbUZ5VGZtd05vZVRR?oc=5",
+   "fuente": "Revista Semana",
+   "titular": "‘Pacífico’: Los riesgos del buceo en la fantástica Malpelo enmarcan este intenso thriller oceánico"
+  },
+  "N65": {
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUWtFaVluOGZTQnl3dTY4VGNMVTRrcGVEd09JYmFMUGJJa0hIOW5RSHlLV0NhUGZ1ZEtCMHRtQVU2Z0c2aTk0di1JOHRUX0F2WmU1bGg4U09Nalg5VDBZVXJ5b2hRUE5QbTh5SGEySnM1NzJSc0dvTmxaMlJmUUgyazJiRG1meXlnV19YMmtWUmVTQdIBlwFBVV95cUxNTkJFeGotc1hFZFJUQnVmb0E0aV9fMDBRR2xId0RSSEFMOWtLZDBPRk1sWFVaUm1OaHNYN25YdG5wTzB6RkFvNkw5VUhSVzA5Qmd3RmZtVzIySU9sYm5OVTc3VEhGaVl1UlJGLXdMc1haTGFPQU9HNFVWMkVud1cta0lHTFZ2NGl3SUNBNGE2NTN5YjJvX05j?oc=5",
+   "fuente": "Viajar",
+   "titular": "Uno de los destinos más codiciados para una luna de miel: villas sobre el agua, tiburones ballena y 26 atolones tropicales"
+  },
+  "N66": {
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaUJ1QTdKZkM3ekdXdkcwUEFqMHRfWWRZVDJuTkNqakNkM3pCQ3pTYjJEc25ZYVpBU2VNdXdCQ2JKcWdMaHRwc3J1THhSZG9tMnFxVDVuTDZWR2M0Nklmd3VuSktJZFNyX3hZSlF5UzNPeWd6cm5KZ2JDZ1g0ajJ5bldhdlRzdU9KVFZFQVRsTm5iUXJpUjdjSjNBT2VaNldFMHRyWjNqRHhOYm4xamRkbTdyMm5PbUsxZVNBdFo1bmJUWlZ2THc?oc=5",
    "fuente": "La Voz de Ibiza",
    "titular": "Así es el Royal Clipper, el velero de lujo de cinco mástiles y 134 metros atracado en Ibiza"
   },
-  "N11": {
+  "N67": {
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQcEZKOEtEVDZodnZwYVNIZXc1WExtNnJQRnh0a09VMm5SaldqRFlyeWJiSXozd1pJcGRjd2FiWjE2dXd5UVY4TDdaTVhGZ3NiMjNRWGlSLVNtNFpyS2lRcWRWSGd4SHh4dmtwbEhlLVQ5clBHVnQtV3BTVzloZ3JYU1ZBRzJ3ZzhhNFN4bmdUVlAyVENDNlpKMUcwRFhCQktJWWxDMXIxWEFKVkJTSGFqQjVyOFJHY05QUm5BUFE3bVMyeEViMHM4dW9wUTZlUdIB4gFBVV95cUxPU2s0RjFTamNwdDdMWkREOFYtZ2RmZkp0VGFjM0FBZExKX2YxTGRKeWlmb0locHpLNG9Pbk1kODlaQmF6MnNwMTdnMmRpUzlEM3RYNW5kbnVJcFpzbmdNSGlRaXhVVW96aGNteGpxbEJHU3pfQk1rUlIwRkEtR1dhM1pJeE9FSUFHVzRNUGlIYjFOUUw3RDdPallTOFpTdHlpODNyRlVBX2NnM1lBNnJ4cEVybGFlSFpQQXFXalJOdVJaMnNLWUtFR0VSOUdEY05LejBRNXF4ZEhlb2VwcVUzMTJn?oc=5",
+   "fuente": "El HuffPost",
+   "titular": "Elena, madrileña, dejó la ciudad para vivir en un velero fondeado en Lanzarote: \"La mayoría de las cosas que hacemos en tierra no son necesarias\""
+  },
+  "N68": {
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPNjZiZ01UV21TZDk2OEE1bm96ZDlUbHZDOE1Ya2RVbjZqQlRLTGU0alN3SVpkbC1qU0U3UVI5MFV5bVhTN0dtMjhGNHJIUmtobV9ScjNLNU4ycTFndkFiSy1Zc0h4UVVfaFRKcmZyZ3REb215OVlwQ3dEeEpUaGhtRThidUlvRDNiMHZKRkxhN0xVZjduak5ob0YtXzc4UTVoQkVzNmFPU2tsRFVhYUNrT1ljb3dueER4aTUxUGFxZk91RUNqSmfSAcsBQVVfeXFMTW83dnVRYlcxTDQ0ZWVwbDNDdnVGVGZ0SWt6M0kzZmVvQzBnZzJ3MldoYmlHMWRKSVFYdWxnelROVnE4OENXelJJNE5ib09tMHNuZUdSZ2lvWnpydmpCVFA2RjEyOURiVlN3aHZnbmZZX1oxaERaY3RmM0FwVFFJTkFUS1R1UmtkWUZhX3oxSGlHcjJfSnN0ZEQ2RERZV2p5NDZwN0RHQ2JVY0lUQ2lpdEI3b2E0bERUM0dDS0ZoUlFiVGlfMkYzUzR1MVk?oc=5",
+   "fuente": "Fox News",
+   "titular": "El caso de Lynette Hooker está lejos de «darse por zanjado» seis meses después, mientras las autoridades federales reconstruyen discretamente la escena del crimen: según un exagente de la FBI"
+  },
+  "N69": {
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV0pydnkyOURDRE9zdzJIeS1ERTZCWElqUHRORXR0WlNfa2hOenJTQ1pyT1BJRHB5S2g2UEl4Q0FjMEVGd0Q2T0NGQXpEVWpic2prX3h2cmExcTNfckt3NUZkQ25COG1MNVRLTDZrZUZpemltRnhBUkpVX05maHhYTXRLVnR5RXhTd09Tc1RuZGdfZ3VzSlRQMzJfTDNZMmhfRFN0THpId0TSAcMBQVVfeXFMT2RZcnhSb19uVFplM1JvdjNrU0lBS0VyeWZERjk2WFhRMl81ZjRWVTBTTnNWWWZjcVYtQjZQSXJuZlp6b2xnTVlqTDJXZnVoSDk2V29JcThwTW9NbWU5LWw5WFUzTXBNSXVldHJYWXJPTjNCaHpxbGlJTlZwUFJxa1dPb2J2dlR5dUtpZFlqYjY3TjNpVWY3M0xHZWdfTW5kc2Zja0ZTUW1SZ1R4M2JaYWt1RkRFZmpScGpjVmdGRFNGbTJF?oc=5",
+   "fuente": "Infobae",
+   "titular": "Las Estacas: el parque natural que le gana terreno a las playas"
+  },
+  "N70": {
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBTYVZsdDNlSnBkMjhrWjMzZk1UN3ljMm5ha0stRl9aMVNQT0ZPNHNpb2Z3NGhVOFJrZEJyTkpVQ3FKeGp0SkJCRjJuVEVQNl93TjFvOVhIS1FZYkJKMEZ4dA?oc=5",
+   "fuente": "es.qz.com",
+   "titular": "Los 10 mejores destinos del mundo según Tripadvisor en 2026"
+  },
+  "N71": {
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbF9zRGs4b2VGSDQ4cmJDSlFOd2ZycDBoWTFTdGFhY0JPUXlvREVQWFVFY3pETUtSbjloSzE1THduNC1OR3BQWWxRZmZvZ1dzWXkwcUVQVGVxZ3VDb3VxMXRlNWUwRFpsX3FEZXAtSlFoWDhkUG1UcmhlalozV0ZiWndqSnkwN2F1bVJ1WFU1QWFWYU5Ec0lXcHI4V3g2alp2TXc5RVp6MG5iSXA3SGFvc1JnSDFBSHFoNVZDWXBCVk5WWFBpOE5nUFUtcHlSU243OElV0gHuAUFVX3lxTE1qdmFQbm9KMkhheHQyaWFQeEZUMXpiVVB2aGNaQUxMTHpTMlJqckRGamZqOGZWSEltN2g4X2M1VTRqNTh1NjJNX1JaWHdhOGQtZDdjWjZOQkFOY2lsQ1pkNEtIRkNGV1RpSnpjMlRsbXZNa0hTT0FPQUxCb1BhX0dKT09KSll6cnZ5Y3YyRlpUYVJpaUx1cWpDUzROWEs2Y1kwTThxYjFaZ25lVU5FTGdOdVJfTW9zSS1tQmNodFVtOVlleVJHc0FLdnE4WXpaWkpHWUJraUw0aXNPS1RQcUpxR3pLV3ZBUmY2cjBOR3c?oc=5",
+   "fuente": "Infobae",
+   "titular": "El mar Mediterráneo ‘se mueve’ mucho más de lo que creían los científicos, según un nuevo estudio"
+  },
+  "N72": {
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQSzgtbjBxQTFKaW1rUVNrWE52YWtYZGJCV2xmVHdRcXdyRkNMLWxfTHJKTWZMc0ctaGl0SENQaWlvRW5VaExaeTFJWFpuUDNUbVhpTndUUmpxWmpaTVJjVVhvVDJ6OHlEMWxMX0locDEyNmNrd0hJNWYzazgwemk5UEMxRlRtcUMwLXV5VnBZdzdDdW5iQXgzOWVaazZRWWt2VXdpR3E5WHNvdzFnRlBGX0ZDeVQ4Rld5VlV6S2IyREJOeTlpeFlWZ1A2UWhzLWMweU1PYUhKNTFfNFJKYUpHMHVncm44YmctYmNYUg?oc=5",
+   "fuente": "Gizmodo en Español",
+   "titular": "El océano tiene memoria y los científicos lanzan una advertencia: los efectos de El Niño podrían prolongarse durante siglos"
+  },
+  "N73": {
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUkN2Uy1FWmVHeUo1SWVETzZva2hRTGxSLVI5UE0xb0ZfLXBRNERJM0VDS3dsZzAyVDZfd1FiRWlST3NsbU5sS3kxRlo5OERPNTZpNE5iUHlQR1BjUUF2b2h5Z3otMEJSUGQ4a2tBQWNqSlFkOEFBbE1VYU5FWWJKOEJUcW5QTXh6Uk5HeUlUcHRDanBkYVBUaFFTMkNwOW51MS1mclBRRU9OTWFTWjJRVjE2cHRieTJzeFduQ0xNUV9qNGpOM3ZHVnY2dEUxaW4wUG0zLWpTRF_SAfMBQVVfeXFMTlVMXzBQa2NDR2xISldyT1ZRbG04SVpHdjZBeFUyUlZaTVAwTHdvMW9veHhIak1seEQzTmVMbUZieWJmdlJUbmhoZ0RXQnNLbGRRUGZkMDVzRWJqVGRWd1FLVU43c2YtNXJYcFZ5TnFxTDJwOFphYzhkcWVsWnBPUS1wdEJTSUxpYkt3YUkwbVRfV3hlN1J0ZlBSeGc5YVRRel9GTmdJbE8xSk91eDkycEFQUzZ0Q3BaeXhJLVdYTHRncmJlTlBTSEdwTXMxZmRJclJvUFRCZ1hzcVViSDkwVnM0MkFEMWxTRzR6bFNLWjJCa0x3?oc=5",
+   "fuente": "Infobae",
+   "titular": "Un estudio descubre que el Mediterráneo es un mar mucho más dinámico de lo que se conocía"
+  },
+  "N74": {
+   "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPbWl3WGdleTZnZXJSUnUza0c2Q1BGSW5TYVBMQ0NuRUFmY2h1d2tmaXBFalpfLWk4eTFUdHotYXJHeEhueFNaZkRwSmVuX3lUTDlINVJZb3JhTGRISXZNVVZDOU0xeFRZWldXNzJyZjlCd0J1VUxHRC0tOTlkX0ZUR3BOVThaYWxWWUtWV050Z2JWbjc0OTV3UFZnRS1EbEd5aS1YaDNpcXVuaWp1Y2RiSmFtbV9Td0N1N19zUGJLdmE4dksxNU8yUURuTmxQREtVZmN1THJDMl9zcFJqaE9YRzRCWGNlT0hEQ3FUZVBJTHpsMnRzb3BRTTI4dU7SAZcCQVVfeXFMTmpIS282ci1QZzltS295dVU4Q0FaTEo3RVk0M3dSbk9BUC1Bci1sQW50bFk0UEwtWXRTeWc3VktwQXZ0eEQ4M2hJM0hnQ3FUYV9vbEFvZGhZMWt1NlRINXF6aFNueDcyMFU5NVMwT3BCeGdsdDZpNWlDWXNWS1dnd3EtblpBb2xNWWVwUkFNaW12VXpDaFJid2FGcGNJOHBYdWc0N05GWlFsZloxaHZIZ3dQa1Y2WDVFUHUtQVZrUGhHQVFtU3FFaFdjaVp4NkpVQ3k5MkhaUjFCdFBhNjkzLTM3NFh6alpLa2thcTQ3UmV4Ym11cURELVBFSWtYUzlqYzJ2ZWxLMzZKQnRTQTZHcWtTV3JucUZz?oc=5",
+   "fuente": "Infobae",
+   "titular": "Alerta en Costa Rica: fenómeno de El Niño amenaza con destruir arrecifes de coral por el calentamiento del océano Pacífico"
+  },
+  "N75": {
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTUlabVIycFMzQmlLWGRFSnhUcGVXN3pPelZja3J6ZUN0UlRkWnI1dDVULWszQWl1Z1d2OFhBeTNEZ1VjNEhxelpFaVl0ZjlucnNFcjNndDV6SHd2dHRtc0w5OTU0ZVRfd3YydV93RTdYSnN3aERIQlROU3Rwc1YyR2tHTl9MTlAtTW5wWkUxdUN3T3EwOXFN?oc=5",
+   "fuente": "Me gusta el cine",
+   "titular": "CRÍTICA: La caída de la ballena – Austin Abrams la pasa mal (otra vez)"
+  },
+  "N76": {
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOMzUtaHBDYUFaajI5RE1kRUlWcmVUWXp5aE9YbnhLRFFpSGxjS2hyN0JvMDRJVTNGNWRIUEZKa1RlVGtvZTR2SThzLVZid3dMOWItMzBpUVFQa21hTTZKWDkzT3ktZWx3Y2VwWEZvWVREYjEwalo3S2o1RXNIc1RXb1JHbk9wWjFrUllvdzBpODdwcHRzbURRbW1RSFhUYmNpSW1qMnlsQkpmOXo4cWFHY3N0TDMzWEJRRGRUMkJ6RnY1Zmd5QXZuVHpESXZsSzE0bTR3MG1Ga3BkeHV1SklLSW5LVHRjUzctaGdwYThwLThYQkd1OGc0T3lFRQ?oc=5",
+   "fuente": "Gizmodo en Español",
+   "titular": "Descubren tres extraños gusanos en España que devoran huesos bajo el mar: no tienen boca ni intestino y sobreviven gracias a bacterias"
+  },
+  "N77": {
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUFZFbnk5aURZbUN2NHVOdFptcjhCMzVoekh1OC1WQVVvSU55T2NIeF9sU2Ffb0llNDBRc3hEN29oNHBKQUlDX1NWUzdRS0JQdEcyaTdFWUpHblhURm4zOGg5TFRJa3lyVi1uSHcxSUNnVmlVUmoyWnBkTnZqcjNfZHFkZzhPSE95dWk1UTBINE5VU0VZSGFScVg0Yl9pLVpoRTJrX0xjS3B4d9IBqgFBVV95cUxQUFZFbnk5aURZbUN2NHVOdFptcjhCMzVoekh1OC1WQVVvSU55T2NIeF9sU2Ffb0llNDBRc3hEN29oNHBKQUlDX1NWUzdRS0JQdEcyaTdFWUpHblhURm4zOGg5TFRJa3lyVi1uSHcxSUNnVmlVUmoyWnBkTnZqcjNfZHFkZzhPSE95dWk1UTBINE5VU0VZSGFScVg0Yl9pLVpoRTJrX0xjS3B4dw?oc=5",
+   "fuente": "El Periódico",
+   "titular": "Crítica de 'Whalefall': los esfuerzos de un joven para sobrevivir tras ser engullido vivo por una gigantesca ballena"
+  },
+  "N78": {
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONS1wZGpCY1g0SWF3VFBIcmxaYVEzUUg5ZGUzRWFfdldjOXlLRmZPV0pTZnp0N3duZzFkMXVrVkJnOGxfdEdUQXNvNzdfTTM1ZWVMUWR0MTFMVnNvQ3RON1Nuakp3Rk9tTjVNSTV6ZXJXckZEUzJ6bjZRTWRTY0x2ZnVQMWZMbm5sbEpvVnBRYUhsRVlULWJHc204OUNwMG5RT2NMSjdQdnlMeDd3R0RCeHlsNUdoZ9IBuwFBVV95cUxNbFEtU0VQc0xycTNfTEprNHhqa19YcXZCdkdqRDdxbWxzNUpyck51YWRfN01zNnMwUFlLUEp6dFZ4dXluYzlDVjhXUmNhbmJBODYtaDlPdGJLRXZxT0JnQUZVa1R2RFpuM0taWk0ybmhpQXBPNGVfcGlrSE1fTklyclRQMXVtQkg2bEw0ODI4YjZYTjFZZFd1RkE0UXpDQW1FdVcxdFRrUEY3cE1RLU0zaDFOM2lVSklRUGdj?oc=5",
+   "fuente": "Diario de Cádiz",
+   "titular": "Chipiona proyecta la construcción de 75 viviendas protegidas en Costa Ballena"
+  },
+  "N79": {
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPSGZCYTR3allhay1yT3RhLU9KV19WdUdvME1qOTlibHl1a0htem05U2xxMkktNWxqR3FEdnBEYlR0U2FCRkE0WWQyZ2NqT19xbDduclA1UU5RNW5XRzR6c1hUZEJ6WUp4S3RmOV82empnVDU5b3E4ZEt1cHo1RU1CWFRCRVZYOU1WZ0VPSHRaM3dJX3hXTzZiNlJTZDk0UXJYbnpHU0pyNmZteEFOeXNoMzBKUmFwU1lRdm1LbU0yYTItekQzdUtlREtCQWhQVE9yU3RvU2F4OHhsaWdLMVFiWWJR?oc=5",
+   "fuente": "La Nación",
+   "titular": "La caída de la ballena: una asfixiante aventura que destaca por su despliegue visual antes que por su profundidad dramática"
+  },
+  "N80": {
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQVAyd1VtUVZGcF9aWjFXb3doMW1iMFo4eThWbWFrZU9YN1NqSXNhT2htV3F0S3ZvUkQxN1BUd2NONy00ZHVPRnJpTHFVa0hXVTdOZnRlSldLeUE5aFdQaGxySi1mcWpsVllSV0phV3lxSFl4TFlOZ1dZU2hyNkQ5Wk1VZXM3UERiRERXWWlFbGlTNXlfN2FHeVVjQ3ZkbWxGWTdSVjZIY3hlNG5ERzUyTjIzaU82VDJnSGRhUGhBS0s2WUFHbC1qQVF4Ukx3QQ?oc=5",
+   "fuente": "Azərtac",
+   "titular": "Estudio: Cada año, 1,58 millones de kilómetros cuadrados del océano sufren contaminación por petróleo"
+  },
+  "N81": {
    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNN21kOXN2UVdLNkJaQ2RrUVUzUzlUUS1hSm9VS3RubG9tZ1B1THEtMGNWU0psOGlfTWtEcW5ySnd5T3Jnbl9tdGhLckhkZm5Da2t4MlFzVjNhdjZqVmxYVWtkZ3doUUdmZkFNUFp4UXNIRjhjVnViVUlWT2JFTFR3azYtNUZ4a0kxNlpTWXdWUkxFZ0k0X29jbmxmaWs1c1VkeGV4UTVMLWxvWTgxOUFzcmZIY29nODlRa3dOWmhCeUsteUJIaFNwZklUN21pUUJEUGpkdi1OekR1dlpEaWhRTFd3?oc=5",
    "fuente": "Gizmodo en Español",
    "titular": "Descubren 57 especies desconocidas en el fondo del Atlántico: una criatura llamada “Loki” sorprende a los científicos"
   },
-  "N12": {
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaUQwTVB3YkNSeWFiVVNaTklBWHBVUnczWXhRUzQ3VkJkdkJvVk1PWGtrS0VpTndldjhaX1FxeVk0TFUtbm1ReDJXcTZZLW93UVUxeUJtZ3NDSmdzc0k3TjJjVzdrQkktZUh0TEQ3Y2pxenB6bHdfT0t0Wl96aUI4REhxVGFYQzJzZmJBOW5YLVhJci1OdkQtcnJZb005aDJUX2JzaXp3aF84d3U0cVhkQdIBtgFBVV95cUxNXzNWWGRfNEZSeHMyMDBzV0JzMVc3bDVGaEV0c3BsaXJlOVRGaF9NNHRuY1JzRzhpb0FfWnJWRXd5MmhLRU1ZVENNckJBVTdCbXhYczE0bHF1YjNteUlsYktNZGxoLXVKajJra3Y0dXB6VEhJeE83UXd1X2g1WU1iWjEtWDROeURLaW5PcE5YVEtta1hPNWxoWGdTeGVTajRpVlQ5RWFxTkRvUjFCQVNvejExeVpSQQ?oc=5",
-   "fuente": "La Voz Digital",
-   "titular": "Descubren en el golfo de Cádiz una nueva especie de gusano que devora huesos y no tiene boca ni intestino"
+  "N82": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMzFGVDlmZDRxeUprYVp6YVgydDMySnNLVmhuSEg4WE16WTlPbjJtSDVQY2gwSUJEbDJTYVIzM2VLd013WHUzWGJDQTdUb0lTbzNkT25tSFVFbVNwaFlrd0s2VVZoa3NfbENQeFpuQ3pLXzdqQU4zWWcweXBwWmVpaTI4VHdTallvZUVWTFptUjMzNHk2aUEyNXQ4ZEt5amdkOGlKNdIBqgFBVV95cUxOZlBRbTFuczFvWk9Ud3BaOGZKYnp4eDhrZVE1b3hJWEpiak1fS2RTSDB3a3plNWZfdk80SU1CcC1FaGsxQVRQQU1VNkV2aXV3YWVrRlhOdEtRXzZLTHF4elE1LV80UHVJU3QtVGctanBrX0w3eGpZQ2t3ZVRsRXpScnZQZkw4cTNhZ01uekctTXI1blNpVzFsUnQtWU0zVnRnQzI0dkJLQ3BWZw?oc=5",
+   "fuente": "La Provincia",
+   "titular": "Inesperada visita a la playa de Las Canteras: varias crías de tiburón martillo sorprenden a los bañistas"
   },
-  "N13": {
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8tNmZPcWV1R09qOUJLd3Q3eFJHUkhxWnZHNTlKcU8waWZyTmZsblNHcnlyV0RndTVvMDhvdjNqU1VaRHBMZ3d0OERHeE1zeWpja0tyMlllODVoSUp1bVE?oc=5",
-   "fuente": "BBC",
-   "titular": "World's oldest shipwreck found off Kekova Island in Turkey"
+  "N83": {
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQYThJcWMxcGkyT3pLUUx0OGZnLXl2eG5Kc1RTMENjUEhXZU1uMWp0WFExcVRCR0t0Vm1MNWFQYWs5cFM2UzJUTWN4MlVCQ3ZmckpGS2tRb0l5WWI4cHpwREZNRFlHejFTYTFGV0F3T1k4MlZsUXhibU9hR0RsdjhrOHkzc09YMHg5NnQtMHBsZnlJVldDa01ibjdjcDEwMjVGOFF1cnUxeXc0Q1p5QVdMcHNTSmhZRTVQOWI2cHBUZUtkZllOOENLcnVkOHh2bU1MWFRuVGp0S1RIRmJnMkZGTFNxQ0E0ZlJQQ3hJ0gHwAUFVX3lxTE5tLTVZQUZRcEl3UGY1em00bHdmd1FpTVljX1JlYl9pZERKcmdQZlNRWExFOGR3YVF1WUdnMFJ5NjlBT1AxeDIzaTBPTmlnYXhKTmY4YkV2TE5pcUhEeXVJc3FfWl9PUGJ1QmJpNWZDZHVSS3FlRklCbWFZV0d3bTJpSkQ3RkFuZ250R1lUdm9zckZSSS1kdi1aOUhjUWF4b0hMdDZZYmFMeEZJRVg1VFZEUXpGbWpudVBzVmZQeFRyNzJQdHJtZmxGRXdWTzJQZEFnNVZLZVQ4NzZ2d2xuTnZtanVGRXZwM1VzWGJRRGxfWg?oc=5",
+   "fuente": "Andalucía Información",
+   "titular": "Chipiona proyecta construir 75 viviendas protegidas en alquiler en Costa Ballena"
   },
-  "N14": {
+  "N84": {
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPclg0bkhDbFMtRUlRcmdGS1hMaDBNRjd5ZHVkZVhJN2lMSTR6RTdWVGNkaXdXTVB2YlBqYzV6RE1QLTZmNGtHWmROREc4eVkyY1NQZGtsSklXWWRuRWtyZVIzaXJkUklJUnFTNGpJUXI3SnRPOVdCekFxM3MzWUs3TUZiVTNPbnM4VmdrUFV4LXd2SHhQcWVnLUxFaVpSRkdZYzFtN3JhWnZPTVFIY252NmI3aGFMdnpseHfSAboBQVVfeXFMT3JYNG5IQ2xTLUVJUXJnRktYTGgwTUY3eWR1ZGVYSTdpTEk0ekU3VlRjZGl3V01QdmJQamM1ekRNUC02ZjRrR1pkTkRHOHlZMmNTUGRrbEpJV1lkbkVrcmVSM2lyZFJJSVJxUzRqSVFyN0p0TzlXQnpBcTNzM1lLN01GYlUzT25zOFZna1BVeC13dkh4UHFlZy1MRWlaUkZHWWMxbTdyYVp2T01RSGNudjZiN2hhTHZ6bHh3?oc=5",
+   "fuente": "OkDiario",
+   "titular": "Rescatan a contrarreloj a seis delfines y 300 peces luna atrapados en una red de pesca en Ceuta"
+  },
+  "N85": {
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ0pHeDZseW1tTlpnQjF5c1gwTDlFZUpLbFBwczFYWU9pMWpSckRocEowWWp1UmNKMkRzdEdNcVNfMU16c1NsaHkyVnV6XzhsSDRRc1dzOWo3c3Bla2haVEpzSnhVMW0wN1R5bURYVHJxazRtcUdkZkdrVWdEeWF6am8tRTQ4eF9TY2JmeV9qNkpJY25TYm9B?oc=5",
+   "fuente": "La Revue des Hôtels",
+   "titular": "The Oakmond Marbella resort, the former Incosol, will open in 2029 around a 10,000 m² clinic"
+  },
+  "N86": {
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSVh0bDJTYTJXWVRrWWJNcFN0TjJhYWJHZThha3poNzFzV2s3TmJTZ0tjSTRRaHJfd0hrUUlXY0VkUXI0RFRfT3B6QmQ3WlNnd3AtakdnQVRaaWhOajR3aDRGd0hDYkJjV1Z3Q29fSWN5M3hMUERseTZKMlQ4MXp3RDJVcXR2OEdoaXRobldLVkh6cmozZFI4?oc=5",
+   "fuente": "Golf Digest Middle East",
+   "titular": "Six Days on the Costa del Sol: A Golfer’s Perfect Week in Sotogrande"
+  },
+  "N87": {
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdjhLdXIzYURmX0JhdlEyY3F4dWpmQWp1QmM2cnZsQk16SVhNVUJfVUdMeEQ1NnhjY0o2dGhEb0RUNng3dUpOR1FySDgxaUlIT2d1eTh1TDFGRGJaV20zUWI1ZlQwUFV0a2p0WjA4THBQUFJwenFENnRUcHZaRzUyWW9JWF9pQnV4MmhnUVFHZExrUWpXVUE2Um9KSQ?oc=5",
+   "fuente": "The Irish Sun",
+   "titular": "Inside Haaland's property empire as Man City star adds island pad to portfolio"
+  },
+  "N88": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZnZPNGtrckItdFh6TmRpdkJVUzBySXNid1VqdldLdUgtS1NGd0duZUcyc1l1VU5Lb2N4aVdsUWc5ZXc5ZnU1RWUzaWFDSTBTWEFTVGE2MWtsWWhWR1ZCN3R5WmhBTWJVTEpLdVNzYjFQVE9RaG5yTTFuYjdZWE56cUV5S3lrcHZJWHJMQzJWX0lmQ3pJM1RMX2FzSFAxRHlwVzE5R9IBqgFBVV95cUxNT1NoUFh5QndQOWthbVJvUXFCdUVEVGhqMXBaNnIwY3hua1dTemt4TzFiS1ZHenEzbWRsR1dYRFdVTGFobGZmbjZRV3JYLUNtZkt2SVdieDdPUUNnbnJrT0hzZkwwOWFGd19yN0otQmNteHJVQ0hVYTJkZjd5Q1pvVER5dkJpemV0LWl2cm9wWDRudDdTU05qX05qT29jVUZaMW15LUhXMk1EUQ?oc=5",
+   "fuente": "Daily Mail",
+   "titular": "Three British teenage youths amassed arsenal of guns and machetes and planned to steal drugs from Costa del Sol crime gang in violent raid"
+  },
+  "N89": {
+   "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNNVE2aEVsRkJ0a1hsVklDS2xRYTd0Zk5wYk96bWNxVU84ZTk4ZDE3NV90eTA1cDBRWXNzN3Z3U3ZDbXU5Wk1UMkwtekxkRzRFVFc0c0ExanZOZlJGUmpZM3hXV0pWM0VfWl9IeXVKVldQSy04QWdYYkRoZTE4SV9GZkliTkdyTjRMbkFNbms5TEpKOEpKb2c1R3dnWWEwdlAwX3I1aUF6bEt1TzFDVEpVS0RZUjB4X2RLMTBNTmFOR2ZVZk03NHJXODB6YnVpcFAyRWhJY2tBdGxOMTVLR1NfSGNlTGZiYjJOZVoxODlUdTJBVjlES1VZOHV3cGp1S0FQcjNzRlFjSdIBjAJBVV95cUxQUkdQNXE2VExXZXZXanhxcGZWZWViZEFBNFZweHdrMUNDZjRQVkJ5VVRSLWhpWW85dnptWFA5WUlnRDNwMVlOejRhUWZxRHNBV1NsbWg0MWxXbVV4UGcyQ3RpdkY1TFlzUS1KT0sxMmhDekpNTzdRVEtsTjlNODI2eWNLZWlhNmhKZVdoaE5mRUJOcjFTano2TlBWSk0tdDl5SHF4bTlVNzJnSS1mRGFZX3l1bDFaX2JuTE5vblBvRFFrNnVPWGVfS0FmMGpLZU5VN0MxamF2Skp5UU5xTEVkNnZLXzM3ODUwM1BXNUlzeGNKakxWbkVMRHplbW45STU0MUt6QXRrbUtBTVZp?oc=5",
+   "fuente": "Demócrata",
+   "titular": "The Board dismisses damage to the image of the Costa del Sol due to the closure of beaches and maintains that there has not been a crisis."
+  },
+  "N90": {
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcFV0blA4cWdSYlU2bWdadDYtS18xanN2LWpxQTllcVdFYVhqbWxUTlNmWEhQSDJtN3JpYzNrMW1DanNnQkJBYm5DRHNDS1dRZndsSkQxRXdUSlY5U25iSnp1QnBoYlZpYTZFcGQ0bzUzVHE0Yi1iazBuQWpLRzRGaTNWRVduMko3S2R2NFIzOUFfR3ltTHpMVnF3dWZIdVpRU05V?oc=5",
+   "fuente": "Travel Weekly - Home",
+   "titular": "Mar-Bella Collection expands with first address in Crete"
+  },
+  "N91": {
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQ0FOTHBZZ2c0VnpLM1Racmp6UF9ybXNfVkx3eTl2ZFZBTUlBVVhQSjRpRDZXcDI2TXBhZUx5cjhhWnhNSmFXQkZ5YzR1d2Jrc3U1cUNKZDVtdS10NFI5R2RjN0dFankyTE5uekFqVzF1SzdWeFliQkM2ajBPbUlIWGw4RDRJRnpKbFVvMENBMldMamQ4aXFKWVZFQjZ0SEE?oc=5",
+   "fuente": "Fakti.bg",
+   "titular": "Roman Abramovich bought 100 acres with two beaches in Turkey ᐉ News from Fakti.bg - World"
+  },
+  "N92": {
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQTE1lR0NHWWlucWdfRzBtR2JDUkpXY2Jfb3VkN1VMNXl2UWQxcmZ4TVpMTFBJQU40Sl9iY2NjaWVoNjQ5NTQ5T0Z2YjY1X1I0Q1B6a010ZlBnem9Od0d6UlVlUGRVTF9JVWZpbXNVcnNJRFprNzYzcFRmbmhORHJwRlVCZ2k?oc=5",
+   "fuente": "The Sun",
+   "titular": "October half-term foreign hols you won’t believe the price of - ALL under £334pp"
+  },
+  "N93": {
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeGxHZGNyYkp4Mll2OG10dm9ZOFZJa0NwN25xZ3JHcFFNWDM2QS04V1JlNFJBdlVtV25SRlJ4b045V2RyMGFEazhZUlhaVUtFb1VXMGtiVDB0bngyZ0xOQl9sSm16MkJiZC13Vi1LSTlFR0pVMlQ1SmttdFExazh6WVQwNzlmQUhpUmpVaHJEcnNBeEFWSWg2VDNlam3SAaIBQVVfeXFMUGxiOWJFQnVXajc2RVBwSmJRek92ejRjdnNOSGlEVUlnZWplSjgxR1RRODl3MVRMZVpTcmdnRVdhWVotclVxQWJRQXZZNWFhaE5rRGItZ3JQTVJXXzZDVUY0VVM4UUEzVUhSeE81aXhjcGllZGF2OTJvSE5EZjhmWGEzM2ktcHloTkFCbW5rMnBQaHNhZXdCYjRpdzJ6Y1YxSjFn?oc=5",
+   "fuente": "Metro.co.uk",
+   "titular": "Spanish holidays are about to get more expensive from December 1"
+  },
+  "N94": {
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZ1gxUkIwTHVXUW0wYlk0U3FpQmktcnpEZDBYOGwxYnBoLXhPYjNPSmgyNC1JcXVpeVNROGxzR0N5R0xwbmZvSXEzN3ZfVTZwaTRDcFZkdnZDSHR0UVkwS2xUWkdPM1lTaTkybVVTVndlTTFOS3Rfb0xReGpMTU1OMTBMQVNEMXNqVmZCVEVzblZtNnlPX21iUkN1bUh2SWtidWZVNl8zeGxJUkpHLWhad0IwQXFqeFJ0?oc=5",
+   "fuente": "Rus Tourism News",
+   "titular": "9 Beautiful Small Towns in Spain for Retirement, From €703 per Square Metre"
+  },
+  "N95": {
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNT0k5YXNhQXdIUW1FWk1IcHRiQnotdnJzNWEtc2kyejduMWlrZUJDNUUwcTI5dnFqRmFNWXRFeFN3N3Z2MzNPWWF6cEF5WGtGOVM3Wjdzc19udWtkN1lzamVJRWpRLWxSZHNxTjZvM05seVhuTnpTQmRsZi1CbFVHTnVKb1dtNjdvQWJzYTVGRmhtRGdhXzQ0Q3hVRnlkaWc?oc=5",
+   "fuente": "Olive Press News Spain",
+   "titular": "Costa del Sol is the 'Champions League' of organised crime"
+  },
+  "N96": {
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbzZadkpZd0N0WjlXUUtFejZBc2R1VUEwZUFyUTRVb0x4YlBmYWNjTVlPRXNSQS1fcXZxN09nZ3ROM0lHRXJaRUcyZjB2aVFyaE9jNmo5TnpBb3ZSQ19qMlNnb0NUSEh3aFdZdmZDaTdxa25nZ2tsUHJxU2lLRGFDR3RYbUpxRlJfQlVSR0c2WFlNYnRjMEE?oc=5",
+   "fuente": "Realtor.com",
+   "titular": "1417 NW 26th Ave, Delray Beach, FL 33445"
+  },
+  "N97": {
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMkM0ZEptX2daQm9PUl9UeEE5WlVCbzRsSU5FaERTOGNUU0JLWlhfZWdOc041a3hmb1FtQ1M4NXktUzVJRGUwRE1DSlZWZmg1NWhVNXhqdEg5aW1zbzRIVTBrV0pUVUlObFpjaDdEaEFBVTgwaXhlVnQ5SC1nTm1raklCM3ljZVNfLUJ1T2JNREtaaXFhRW9yNDkzUXkxS2VJcTN5NXJGNEdFT19veld0S3JxYU14NUJlakFIbWFtdWRpSXROMk9QRnFKMTZOa01C?oc=5",
+   "fuente": "Euro Weekly News",
+   "titular": "Robots now clearing cigarette butts from Spanish beaches, and they’re heading for the streets next"
+  },
+  "N98": {
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORHFSX0VrcENReGNjWFA4WERrNTc1Sm9JWTJpLWFKbS03U3JCT0lhQjNnN2ZSSWk0RWZkdmQtYm5vMzVqdnVoMkQzVU8tekQteGNyVVpTemFJSEVjN1lFUWNHMWVjNFhoNGJnaUlTcVZ1bXdoUE1CT1NKaHhZYzR1QVVSVzdVdU5hY2toWE12ZDFSd9IBlwFBVV95cUxNSWt5d05nRXNzX0dUVTVsTHdPc1pMeGxGSWdHejdIOWdna2RNbEJXZFNzblFHdldzaHY3eTFGMS1DOGRHSXRnUnhlaF9wYkJEQWR1TTV6dmZsWFVkeXl4WUx0SUZ6SDBRNU8wNTFlNzlPWm82VWlqT004MFBDMm54STlETTc3NTlmN19saHFnUkh5X2lrb3I4?oc=5",
+   "fuente": "Daily Mail",
+   "titular": "Forget the Costa del Sol! Spain's best retirement towns revealed - with low living costs and relaxed lifestyle"
+  },
+  "N99": {
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQS0JRWFQ2MS0zVV9QX29YbVI4Z2RvdXlDRnFmN0Rza3o5aWJQZVhuOTNZY25tWkl6aUhwNmJ0RUdJLXVIMEJGOG40OWlSb0JHeFdfNDk3b2Exa29wc0Flal90SUUtR1lfRUdZc3BnS0FvQzNwaGV1YjdtZFlqcWhpWlVjNl9xaXF5RVpSRGxrUEszWHJDXzFqNDZjelNNUnNfeXc?oc=5",
+   "fuente": "Divernet",
+   "titular": "Turkish divers investigate potential 4,700-year-old shipwreck"
+  },
+  "N100": {
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOd3VESm5DQTFjSWkxVWtUM2k0dHprVUJvMFlYa19DeFduTmU1c0NOREVvVy1vSmVjMV95VHZfNHNta1NYb2xaV09qdFh3WEJ6M3RYRDVsSmstYmREc3lmVEJvZ3AwZnBqY3NnVzZiLUJzbmhJa1dQYnR6UUNNc1o1T094NXBPVER3bUFPNGppSVZ6UWtYc0I5b2w4WVdFQQ?oc=5",
+   "fuente": "DeeperBlue.com",
+   "titular": "Science Diver Meets Great White Sharks, Cores For Carbon In The Seabed"
+  },
+  "N101": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUUI3S2NIWlpzdXVPcVkwSzFPd2R6RmhYYy1UYTFxc1hWZkJYRVZfNk85OTZXLVJkWmxLdVhhMjJtdnItbVZGUlpVWHcyX2E3UUJ6SnFRS0RNQ2FVOTJMWkxTdE1YcThnNzIwczQ4WUZ5d3FKTFhvQU1uRFdjWW9sa0s3Zi1tQWU5eWJLdGctZk8zUXpKamdNNmYyNng3ZG44aXR0Y9IBqgFBVV95cUxOVVZ5R3pBR3J1SWsxeFM5V3Y0R3prckp6Y0Y4Unkwb0twUWJ0djJvZTF3UngwMDN4Qm9XREtPekItZW81c202Z1BaQkhCYXpEVFZmQjRiOE0tdThEcWtzZHRSYUJWeUUweDZMNG1qbmxULTZiVEJCNGJHU1JCQ0xFQXdMaEtqVGc2eGsxREdzc1ZnamV1UjZfLUFMYXRWQTgzS1VoVDRKMHowUQ?oc=5",
+   "fuente": "ABC News - Breaking News, Latest News and Videos",
+   "titular": "Maldives military diver dies while trying to recover scuba diving victims in underwater cave: Officials"
+  },
+  "N102": {
    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUGJ3ZmxWNWVYV2doS1d2bWxJcnhpVVdvVXByMWdBU2RjVklvQmJkalhYMzRCYVBEeW5EWFhMNHpKUnljaHd1MUlaUEhrZDFQTzVQVkFHWmxiU0U1NUhWcDBXeTZBak83Nm5mX0VKWURDVm8zVWp3OExqOUVPNHFCZkdCaF83VDMwV2JkZDB5VXpIclJtWFFWVzFxbTk?oc=5",
    "fuente": "Divernet",
    "titular": "Vilamendhoo Welcomes Divers Back to South Ari Atoll This November"
   },
-  "N15": {
+  "N103": {
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNTM5S0RKY1JpWkxRaF9sU09fbXRJNWcxR1A0bkFWb29BV0VweVFjWkhJSklld241aGNBeFZqMUp2MndtbnVCSXR6RzRiV1RvZ21maG14dE8yT3dBb3F3QUt5YUZmWmtHN04tRVF1cFkwMUZKNDJ0am1uWVJ2ck9xRUdoVWJUUnpqRXJKRkVTYW5ELU9DaUtoMDVOYk5LQkpaZEYycEtrVQ?oc=5",
+   "fuente": "Euronews.com",
+   "titular": "Divers find world's oldest shipwreck off Turkish coast"
+  },
+  "N104": {
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTV93cXlYT0ZGSEt2N3FCSktWbkk4MHExMXVLOVZVMEhyakFjOHY1M3F2SEE0ZXNHTlZ1aV9uX2lOb0FKTUhyaEFnaTZDY0o5N0ZxZ3lyTDFrWUJxMHZLVkxPTU5GS3RzTG93RVBmZ1hVR1NsOEFaUm92QjNrbDJYRkJhLUJoZEFYX3UyM2lzYnpfU1lGa2tvUlBiSFTSAaIBQVVfeXFMUElqdzdDLWdzQkdlQTBodlRYdWVtVzV0VnVGNFZMekNNb29mRTZPTjZ6OVZCeXpqMTMyTVVENjQwODlsSGFodUpjTnZHa24tTV9JMWdmcDBFU1hOYzh5U1ZzMkNvQnhPT0NWcWw2TThvTlRMLWZUVm9lWlpWOXlLOGh2QjF5dlNZUUNoZ2UzQzVtZTVDZjBEeWUzaDN6VXFjQ3l3?oc=5",
+   "fuente": "Metro.co.uk",
+   "titular": "World's oldest shipwreck found off coast of holiday hotspot"
+  },
+  "N105": {
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8tNmZPcWV1R09qOUJLd3Q3eFJHUkhxWnZHNTlKcU8waWZyTmZsblNHcnlyV0RndTVvMDhvdjNqU1VaRHBMZ3d0OERHeE1zeWpja0tyMlllODVoSUp1bVE?oc=5",
+   "fuente": "BBC",
+   "titular": "World's oldest shipwreck found off Kekova Island in Turkey"
+  },
+  "N106": {
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5FdnlheFU3YTViZzU0UXFGelpyTllmU2t5eVZucmxOOXg1VWNRMjFnalE5SDVhdmx0djh6Yl9ZMUVnTVdGUlpIeTF4dlgycVlpZHJxTkwtV0w0SDFUMjNpS09xbU5mSFFTR1hqVUlyZUFJNXM?oc=5",
+   "fuente": "IMDb",
+   "titular": "\"Detective Conan\" Scuba Diving Murder Case: Part 1 (TV Episode 1998) - Videos"
+  },
+  "N107": {
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQem9BTDlGUTAxMWJXT3Q1di1RQ1lUZzcwVzcwTVlKRW9waU9vRWZ4Tm9zZHA1OHpnMkpadmJFeDlDLW9qcDBuSWVzdEtOOGs3Tl9aYlBGOVlfQXA0RUNvdVlYZ1ZndkFSWEptVDB3YVNYSHFYa01NRDk1UmswYUpCNG5HZUJXalZQakNQbUIwTHVZTG1lS2lTX1p2bkVrTk5FRzhXalkwRFNQR3c?oc=5",
+   "fuente": "DIVE Magazine",
+   "titular": "Divemaster missing after dive boat sinks in Komodo National Park"
+  },
+  "N108": {
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1LeHc4VGVoUGF2bWdfR0ZPYzBNSWpHZGNzVU1ueVBaVmNCLWV4VmRTYU5mMGN6N211ank4alVHMl9mTTU3c1NzcWRTY1gxMFludXFhSFpDalBxcU9H?oc=5",
+   "fuente": "YouTube",
+   "titular": "Lost at Sea | Diving the Hurricane wreck | Rosebud, Port Phillip Bay 2026"
+  },
+  "N109": {
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNDh5NVN5QmFEanlPWGluYzFTQ04tcjI4VzlUamtYTHFDMEpXN0dLQ245b1VjUl9CMTBLX2FueXNsY25wMnFQc2o0Rm5BdGptSmdfdjRMMTU4VHRxSE1NWERpVi1IUVp2U2JwRjd1cHFjMm1pRFVqdjVDQzhfMDQ1VXVTbmdBSGpUdVRkdm80N0ZyWnVwRTV5YVRB?oc=5",
+   "fuente": "People.com",
+   "titular": "Amy Schumer’s Turks & Caicos Getaway: From Scuba Diving to Crashing a Stranger’s Wedding (Exclusive)"
+  },
+  "N110": {
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdE1QS1JjZWFUUkZwcDJKRnVEZ1BYNlllNW9mUC01WERsSkNyd040XzNRZjJQc3A1WUtia2NKRWNqU2c1cUdKU2x0NHZVYTZRdTljeGdJNTBVdzV4N0hhWE8tVWxPVldQcHBmV0kzSVBQdFYxYXZoaUgzNWxxX2kzZ0xWSjJkRVFUaHliV1lycw?oc=5",
+   "fuente": "Divernet",
+   "titular": "The Travel Expert: Connecting Australia and the Pacific"
+  },
+  "N111": {
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTGwtRGN4bU12ZDdUYW5QS09zREdGUFhfWm52S1BhZ2tfeThtdV96Z2pDSGV4cE5wNEhVRXZodzQxRGo1Y29XdDRYeGl3VHZCVElwNC1CajFWSEdrSDBxX2dtYkRPSklWZFdEX0tpdE9kRFdneXAzQWhwVUgyM2t0UjAwekNzY2hSWkJhd2Fmek9EcktfSFFndmZMOThmdUJ6?oc=5",
+   "fuente": "InStyle",
+   "titular": "Amy Schumer, 45, Goes Scuba Diving in a Lingerie-Inspired Floral Swimsuit"
+  },
+  "N112": {
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE54WjhDTk5hV2hMQkhfbThxOWdvazZvckdwX3hWOWpnQldhakl0NFdBMjQ1QWduNnJPNkZ5Mm91YzhqNlZFSjhnZHlVb2E4LXg4T0JwTmhHUWdEOEpqc0lWUnBWSEZWY3QybjlBMkYxLW1jNlJOTXMw?oc=5",
+   "fuente": "DeeperBlue.com",
+   "titular": "Freediving’s ‘Me Too’ Moment: Women Speak Out on Harassment and Assault"
+  },
+  "N113": {
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOb3hZQnpITzZUREo1eHRfeFJiMWpISjgtWkpXQS1yQ19iU1RuMUk4QUU0ZTY5X3NlU01nZTJ0RGtaaEtQUGc5aUtlaDdkeG1tZGhUSXlZSUlFOVNHMS1WNEdTMGUxVEc3QzRpajdXNFFBYnNBV3NSTlRhMjZ6b2YyT25SRQ?oc=5",
+   "fuente": "SuperYacht Times",
+   "titular": "27m Baltic sailing yacht Shaya up for auction"
+  },
+  "N114": {
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOazdOMWc5azJJYmJGMG12cVY3V0c0ZXU3MW42OEFDMUVOVjNJWTB2YmIyT1lMNC1DZXlRMEFoaGdjRjJ4c04wcU5pUHZ4OFI2UE1hdkhUbktIM29rdUtmX0NLZDROUEpid3Qtc1QyaXBuTEdyTmdESU1DVTVOU1hueHJ6QWRyaHNrdzQwV2VB?oc=5",
+   "fuente": "The Harvard Crimson",
+   "titular": "Harvard Sailing Navigates Rough Waters in Four-Regatta Weekend"
+  },
+  "N115": {
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE44eVVuc3BKcUlvallKUndkWnotZmxpRHBOc0MtS2hGRUU5cWt4X01Falg1eTExcmhsazlwNDJDWFl1N1IwNmg3Nm0zQ3BVRlpIV1NCWjVCaTR5YzNrZzJzc1J0cmVuNUVTeWdZX0p2UDFjZWNGOHdv?oc=5",
+   "fuente": "SuperYacht Times",
+   "titular": "Andromeda La Dea: A rare beauty restored"
+  },
+  "N116": {
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeXptSkJxYWt5VE5OMG1qMDNhdkRYcmViZW1iaHRmU2ZuNEJ2Nmt3eWtZNlBDaUZDMWltSk9ZWGxXbEUzMzZ6VzFTZ3ppR3dpeDhTVm9vZVV4Y2ZaYl9LZ2NYOHlFWDdRZl9ub1F4QzFybUpMRTJob2tDNW9kbHdqNmtiMDFGSUkzdUp5cm9QQVRDczVBcDVkcXBiXzVWUlNZWUxqS19vWklfSkxsUHptbDNSNEhMNVNHYWM1RnRwM295TjdNQUNnMA?oc=5",
+   "fuente": "Classic Boat Magazine",
+   "titular": "Classic Yachts that Dominated the Vela Clásica Menorca 2026 - Photos From the 22nd Copa Del Rey"
+  },
+  "N117": {
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB2a3hZVEtjTU5MSVNfUTg3UEFwcjJ2N1piV3ZtY0g1bTROSEF1bEhpNDF0OU1DMFFONVVEZExPNW1renFiTTVwcTFPY1l3ZTVDank5Yk1adWx6cWRXU25uY05rcWFpeVdEclpHNnY2dXFmQW1SZ3pj?oc=5",
+   "fuente": "Time Magazine",
+   "titular": "Sailing Yacht Zero: The Best Inventions of 2026"
+  },
+  "N118": {
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQdlJRQ3VyLUpXcXllMFNVYTlHV2ZPaHAybkZqZWdUXzNpSnVoNnBTa3lLM21Fdml0Y3dJXzRka2ZyWkg3T2x4YmVMaU5kdmtQZ1c5MjFTMDRySVRSX0x6RzRwUW4yUkR1eGdEck85MFprXy1DRHVheGdPVFNrVHYtb0xuZXlLOWhXakVITWM5UUs?oc=5",
+   "fuente": "SuperYacht Times",
+   "titular": "AMAALA Yacht Club: The gateway to the Red Sea"
+  },
+  "N119": {
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRUlieFVGSjlIU2lxSXdyZWxtRXgxU0gxYVNXa3J3alc3U2hpSHJLbk9ScHZRRl9ZOXhUVWhJNGZISGYwclRqWXplSVFZM095d1BGaHdDWHBNeFB5OHZiYnVocHB6djRfbXYzZG5YeTBfbzBWZnVwWGxTTmhkSE1UazZsUHJ5WGdUQUd3cmstWlk4WmJnd1I0bFhoWGV4cHpXSWFN?oc=5",
+   "fuente": "The Ocean Race",
+   "titular": "Part 1: The Long Fight | An Epic Transatlantic Race"
+  },
+  "N120": {
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa3ZPdk1uaG1ReFVRcWtRemgxSm9CSy15THE0VG9QY1NkclVGZkM1QUR3OUVKWnlJd2M3UnhVejc2cmFoc00zMTNoZVN2TmRYNW50Zm5IT1E3RjAzYTVVVENLTTlJQXlObW9HR1d2X0Y1Uy1wRFlkNktUblZzem9CZXU1Y3pFVkdEdzAzbmFEcUhKREF0dWNGeHJnbEpQVng3VlkxTFpSaw?oc=5",
+   "fuente": "Superyacht News",
+   "titular": "The Superyacht Forum reveals ‘Accelerate the Evolution’ programme"
+  },
+  "N121": {
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ0dQWHR0WnYxSVdCbnQyaTM3bUZpMlJ1WHZkZGVXbVFDckVLdUZjeUFtU0VmbEgyRDVsdHJLWlljQWlNOC10dDdhNXVhR195ZUxzeWFvYmNXNm9ZVTFWTUNta3NlVWZFTEo0QkFpVy1lb1lhRDVBSU51ZVJqaUphMWJZODZOQnFic1JQdkVyZUE5dw?oc=5",
    "fuente": "America's Cup",
    "titular": "TUDOR TEAM ALINGHI ANNOUNCE WOMEN AND YOUTH SQUADS"
   },
-  "N16": {
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYk55OWFndkJaWnNTTnJVOHFMVGJ5cEhiUmFMN2lFdkYzeEhOUzhzcmNUQ010VVdZa3QyUllKQUJ3ZUNFWThaOENFYjE5SHBHOUdaLW56YnktS003S3NDbWVVR1FzaTNvX0xacVZFY2F4ZkNsdUp3VndVOEY5dzFqeHFCTDNEMXFLZTBzcDI0Nm9fNk50SjVHdHpCMA?oc=5",
-   "fuente": "SuperYacht Times",
-   "titular": "26m JFA Yachts Long Island 87 sailing catamaran launched"
+  "N122": {
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQeWZ1dkctME43Qld4ZVllVVZUZkZrZUJMNFZqbmZvRWdTS2VkQ0ZQMlA0dFZxSWVQb08yUWJLbC01VzBvQ25PcF8zZUtSS2FvVFpuNzc2d0VCdDdsZnd1VTBweERvdlpzYWhfVjhSZVJzcFFtOHIyTXRxQzRLX3RFaE9PQ3g1Zw?oc=5",
+   "fuente": "Sail-World.com",
+   "titular": "Allspars Final Fling Dinghy Regatta 2026 will be the best ever"
   },
-  "N17": {
+  "N123": {
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT1RNbUdpY0czMk4xaFNxdEs3Q1hhVE42RGVYMFh4WWM1YUE1X1JETzNJcnV4Q3g0b3FtMjVlcnkxMjFlVnVBb0JmdFp6ektJa3R1aFVGeVRHWGpWd1FlMGQwdEhFWWt5eG4zQms4N0VGVnV2S1dZaTFPdHRPelU3T0U3LWZIRTdJajV6bGRySFFiSllxTzA5WlhLU0VVeDRWejdSdnluQUdWOGc?oc=5",
+   "fuente": "Marine Industry News",
+   "titular": "Bermuda reports record superyacht season as Monaco presence helps drive growth"
+  },
+  "N124": {
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaFJGRGVRT2JzMzRmWHMxM0tyYkFpYTBsSldleDEyVnpQT2hXOHMzZVhuZzZEeGxFSXlBSG1QbHphNGY4REIyaFlfeFpGTkpfc2xWbzkxZy1KUGpWU0VZSUVyaTN0MzRUVEF0ZUM4ZEFLSlEyYVJhSHJfRjE3OEY0dHhVbw?oc=5",
+   "fuente": "Sail-World.com",
+   "titular": "Step aboard Encore - the Stradivarius of superyachts"
+  },
+  "N125": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxORExRS01OYU9ESGZGRDBBS1hyVjZyTzFWS0NGWHROZTdGRTVncllyYkk5YnFydU9kUGdlWU1ENjJSWU5raDJFZGphc2JpNGVjdjlnaFJiTXBtbWNiZm5rX2pKcjdMTmtPVUpaRV9nc3lWRjhINlFIQ2dpQi1qVXJQVFhlZ1hVSU0zVTU0XzF5MUMzOVVvTl9YOTJpR1AzYkJyVWVvbQ?oc=5",
+   "fuente": "America's Cup",
+   "titular": "WHY ARE ETNZ TESTING THEIR NEW M2-1 MAINSAIL IN LIGHT CONDITIONS?"
+  },
+  "N126": {
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa3ZPdk1uaG1ReFVRcWtRemgxSm9CSy15THE0VG9QY1NkclVGZkM1QUR3OUVKWnlJd2M3UnhVejc2cmFoc00zMTNoZVN2TmRYNW50Zm5IT1E3RjAzYTVVVENLTTlJQXlObW9HR1d2X0Y1Uy1wRFlkNktUblZzem9CZXU1Y3pFVkdEdzAzbmFEcUhKREF0dWNGeHJnbEpQVng3VlkxTFpSaw?oc=5",
+   "fuente": "Superyacht News",
+   "titular": "Business - The Superyacht Forum reveals 'Accelerate the Evolution’ programme"
+  },
+  "N127": {
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE96d1dwUm9kTTdlMm1hVldpUlFFdGZwMjRZS09VMUU3RGl1QXcyN2ZVM0ZCWnR6RWFZNE9YOEJNaUhjU0pUQ1BmR0g0V2k3M0FaUlRWcFNNM3RUd1ZtZWNKTTJKVVRQNGFxcHNMRWY5cnl4V2RC?oc=5",
+   "fuente": "Angling Times",
+   "titular": "15lb 10oz PB Barbel Caught on River Trent During Harvest Moon"
+  },
+  "N128": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMkZuNFB0TDJBYlVJVVhDWlJfcHJGYzNmT2lEeHR2dVhfSm1SMjc1QjFTcUhTVkQxVDlZeHNTeXZnWm1CTFRvRnh0djc2bUh1ZzJERkZjTmVhZzNIYUwwMTdxVjY3X25UOTJTU3IwUk4wTUJlYnRhYzNubGRpN3RxRVYxcVlMcDN1NlZsNnVwdUtybkVJTHhlYm9RY0p6NmVjWlRRdg?oc=5",
+   "fuente": "Angling Times",
+   "titular": "A blank carp session ended with a record-breaking 12lb giant"
+  },
+  "N129": {
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMTUwN2xPRzF3S0N0LWFiRDNaXzhFWmJMaGd0LTVtNjMydmE3RHU0Vk1iR1RYUzIwMDkxdGc1T2hVbnVmcV9WbS1pckhKX3BpTjJRNU4yRUNQbGRYR1k4LUxTbkV6WVRNSVZ5VmhKX0FKSVJKekNqUWNiTTF6dGlQYXpsUlJIdlg0ZGRCdDFHZEV4bVAxLUlCSjFB?oc=5",
+   "fuente": "Torbay Weekly",
+   "titular": "Brixham’s octopus surge: why numbers are rising again"
+  },
+  "N130": {
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQOExmZTN0OFhrRnZHdGEyN0ZDQkNEcGZKVXQxaHpPWml2dF9BNGo3X2RzNm9HWHNiTzAxTWg4UlV1VW8xU2cxSU05dmcyeVh0MEQ5Vk41dW80VDh4YXJTZ0xrN0c1TnRvOFM3aHRIS0o0RjZRWGRrXzdmWHY1dkNYWDBhcm9CVkZXYlRXaWU4bldLV1hQbXZTWUg4MmNYRGtHQ2s4cUdKeXgweEV1clZ6OFRibHhHekd5RzVlUENR?oc=5",
+   "fuente": "The Scarborough News",
+   "titular": "Ian Thompson's sea angling column – Ben Birch’s double delight"
+  },
+  "N131": {
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSll1NlpHS3lmNEZSbk44Tk5JMGlmWWtaMko2b3JIeWMzN3Y1ZmhLZ2VvWFFocE5kaWRQTi02SGtnM2JhNzE4bWp1OEZFV3FsX3V4d0RieTJwWGNha2RNX0J5dkNNaVRDRVBua3N1aVcyZGptRnV5N3FsVXVxbG9wbHhzZ0hlZTA1YzdoRU9jbVBuMVhqZnR6QjFZektQbnNOV2hB?oc=5",
+   "fuente": "Angling International",
+   "titular": "Angling Direct continues UK growth but Europe a concern"
+  },
+  "N132": {
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeFY3WWRocWdSenJKMGthQ2o1MzM2Q21tYnJxSF9VdGtET2pkbXo0REFTZnR3Ty1lS3NFdEZGVEJXRU9CUUlrUGlMb0hGWVdvd3hXZWtpbWk0VHF6bkFKQy1oRi01MU9LMHhpeHVXQ3ZoaDlYYTZRWlF5NVYwVXhoNm5FS3dZVHlrM0Jv?oc=5",
+   "fuente": "EDP24",
+   "titular": "Angling resumes at fishing lake after fears for fish amid low oxygen crisis"
+  },
+  "N133": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOGdJdTBnbE1NVjh3V0ZvT1QzODRhRHdZN2hXYzA1WVh1S05xMTExOEFfbUxfdjNOTHpWSDVDVk00NERpUDNNTnhDUktkcGdHWHNxRU9tbVVjRDMwUGVYQkhuaEhDM2s3djNYN1V4UGVySGh2cWpxQjVCNkpWc3dpSjJhV1ktckRwYXJBY0V4TmcxY2FDT0RmOC1rcDR1RnprTS1Oaw?oc=5",
+   "fuente": "Angling International",
+   "titular": "Korth Group continues fishing tackle portfolio expansion"
+  },
+  "N134": {
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORVM2bTh6OGFaUDAyZkRBWTVKUHlnWHFhWWpXMlZoNjctckVHQnlhX3BqWHVzbU9Ga2RiYjBnNmRjUm94Qmk3QmxSb2x4TWtiQXZORXBjNGhISXMxRC16T0ZxbDV6RXlXVlNwTmRMZGNNV29yNlVHSEMtNVBSMWVMMnBrMm9kazNSMXI3al9Na3BuV2Flb1FINDZWMUdJWDlG?oc=5",
+   "fuente": "Your Gibraltar TV",
+   "titular": "ESG And GONHS Raise Concerns Over Bluefin Tuna Fishing Season"
+  },
+  "N135": {
    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQktBN1FTVmFGaThzOE9NV3B4VXBrQVpzUENxRmhoOTY2WUNMa01LR0RTblJfTWd3eEJ6a1czRVdyczE4blpoaHl6QlFINkJpZjNXdmRoa2p3VkN2enIwc3ZNSWQzeUJaaUtVV1lnYWczbHM0c0xrb1gtT1VmVVFRb2NqbUo2MlBKTkxVOE5KbGVRQXlzSk1ON2lpblA2T05XRGF0aTBaT1ZRSW50?oc=5",
    "fuente": "BusinessGreen",
    "titular": "Good Fish Guide: Sustainability ratings downgraded for 29 UK sea fishing zones"
   },
-  "N18": {
+  "N136": {
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYmtUQ3VOSkpJYlUxQ19hOUNqUXpaMjlJN2U0S1I3N1dPMmRSanBhbzFPOUdFZFhrNE9DWkYtQVAtYVhMUmNRNzdLZDU5RXRHOUdTV0lMWFlURDZ5SEk1TGFjOTl0OHpodDJ1MnE5b2VmMV90YmE5UDVQaGctRXVpZmg3bzNHX0U?oc=5",
+   "fuente": "Yahoo Finance UK",
+   "titular": "Angling Direct H1 Revenue Rises 5.1% to £56.4 Million as Adjusted EBITDA Increases 11.9%"
+  },
+  "N137": {
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZTdzSnpwb3lXcUVOUWJyTmQ0a2U4VENFTHVVSlhna05DWUlKVTdaVV8tRHJVYllYUGlNdFF5cGlWcFI5OUVuTFBObzdYNmFTbmVZbUx2eHgzcGUxb2FiR3hXVXFXcnQwZWVOMUpPbG9tS2ZublJwTnhZRnV2NkRyWmt6UVBtN2RCUm5ZbU5uV1lmemRvdzBVUWpfMlplWFpyRUdVVWoxSjBrMVpicERN?oc=5",
    "fuente": "Yorkshire Magazine",
    "titular": "Return of Tuna Offers a Boost to Yorkshire’s Angling Community"
   },
-  "N19": {
+  "N138": {
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBEN0JOWUJXdFFmY1VEbkpvVWQ0c2pBY19wOGZtVDFNd2ZfVlFjS3N1UDZJZkJUUEhWX1JoNUZvOVpiSFZoT2tRck5CX3N1U3NBa0F1ZDJHcVk0NlBTMFlSc09lajZQMEZKOTdVOHpfZ3ZNVXNwLWdvaQ?oc=5",
+   "fuente": "Down News",
+   "titular": "ASDA Supports Young People In Angling Charity"
+  },
+  "N139": {
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOS0UxWEZJTnNhSFVvenBUWlE2b2xvQnl5YVJEbGRGUGM3dzVoR1VfTmlmTlJIdDVpNkdrcGkwTW12bjIxUVNvOGJmNnRMSWowUlBqVHpnSnk3SmJLOVRQMUFjb2RwZHRRV2szLTZDWVZTdmtVdHVrNG41Z2JJdUtPY1Q3ZHNldDI0bzdpUFp1ODNmMWowRS1JQjNrb1U5V3hHT2FnRXBSaWg3eFJGaW1HWFBnNA?oc=5",
+   "fuente": "Edinburgh News",
+   "titular": "Ferguson edges Edinburgh angling title, but it was close"
+  },
+  "N140": {
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObVVyNzl1WnZfN2pXc0FnTWo4Q3pqLXZkb3RyTmFyMWZadmdzTW9ZWGYwVTVIcmxtTC1TUTYteVZwaXhicElLeHdWMDh6aVZ1blhsRHhtX0V2QS1TclFZUk5KRERHRzMza010WlpRRkh5a0FUbVlBUmhoM01WcnI1Y2ctUjVwdlpJX0wzYXpNd254TzlRaklNSUdPS2NRTVVoLUFYdVdmel9lUm52cjlkRWZYU3hvUmc?oc=5",
+   "fuente": "Retail Bulletin",
+   "titular": "Angling Direct revenue up 5.1% to £56.4m in first half"
+  },
+  "N141": {
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSGtrbFdtQzNVVFhLVlptT3J4THE4YnZqQjRJemdfQ0VJdE40bV9DREU3QXFPTnpEenNxclFzYktBMUtseEVscE5JQTZPNzMtV3ZQdHdVUE0ybzNNYURYSDZaUzBKMmx1ZkR3SEhZblQxTXNSMTdrdExyNUtJT3BDVGRteVF2VEQ3c1RpOQ?oc=5",
+   "fuente": "YACHT CHARTER",
+   "titular": "Luxury Yacht Charter XOXO Unveils New Imagery"
+  },
+  "N142": {
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQa3NyZ3FNcDBpSVdacHBTcE4tN3pBcFY5WGg0a1dzaU95NnctcUxKMHQ4Ui1QUS13Y1ZNM2JqOS1QUkR1Y2pvZ2N0UVVyWlYydDBGalUyd3B6SnA4TnBic1cyR2g2ckl1VC1rVUN0bWQzQW5kLU50eFpNcG80LUY1WTJTVlN0ZExDVnZfRHE2cnRBQW9SMWVvTklFUGRxbjdXay1qYjVJeFhsdGpJa0RvTVhfU0xVakV4WXJ6bA?oc=5",
    "fuente": "YACHT CHARTER",
    "titular": "Superyacht Rental GALILEO Relocates to Tahiti for Winter 2026/2027 Yacht Charters"
   },
-  "N20": {
+  "N143": {
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMnB6azdOYzFISDVwZERVak1KWTE3UllLMEJpX0RiQWNwSXlkdG9SX0JCYmxoNDJwa0hGamVjRnNnM1F0ckFHM2JBYUtJY3RtOWNvQ0pJOTBzM3hCWkFFRC1wM3JjZmdVSXFfTHFBTlgtNTRCTzBUU1pyNmJ4NUlVVjBpdmVMR2s?oc=5",
+   "fuente": "Unisba Media",
+   "titular": "5 Boats You Can Live On Without Going Broke Poland (022LXw33IS)"
+  },
+  "N144": {
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMEtsNWczWXJhSy1jQ09XTG0zMjRtWWFUbk1aZmF1TnhJT1dQZDFxUVBodWlrV0JXVmE1aWxUX0NTQy0yajF0YkVwYk4zSmdrRldpQldIQ3Z5RXZINlJYREtTRXVFTWZ0NDRZTVpmLTNYRlM2MDlmYnhCZGowMHdJa1MtMkFQakhjSnpleU41OFlfZnhRTXNfTm8xTjhkQmRiVTlpQVFmLTlucHFvSlQ5bXQ4Y202XzJMOEZxQ1BHcHhydHF2cjlpX1pEalVpVkE?oc=5",
+   "fuente": "YACHT CHARTER",
+   "titular": "Wynn Marina Set to Bring Superyachts and Luxury Yacht Charters to Wynn Al Marjan Island in 2027"
+  },
+  "N145": {
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPaWgweTh0ck9nd2VFNkRZLV91ZDJTSEp4S0lVblJhTzl5SmZ1ajNJamMxaFg4eEYyM3MwaC13TW9LSWVQTmx4ZmdyaFd2Vnd0M0txeE9HSDdYWjlnZ0NLeEJKdk5ocUtJYi1uSDVmR3BRaHJUcFE1dXNPc0Y4elFrWE9QZnFWbXR5bk1VN2czcXJPQkxNMFlNNW0yUDJNVkNaVDV4eHNkUUd5bTZyRUVKdXFfLVVfZmlXbVNsQ0JER3p1VkNVZWRYNE8ybEZtVmpsbXpqWFd0RXdsYy1ncllv?oc=5",
+   "fuente": "StreetInsider",
+   "titular": "The Yacht Club Indonesia Adds Kailana Premier to Its Luxury Yacht Charter Indonesia Collection"
+  },
+  "N146": {
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOUxDMGZ0SkFXaktZLXdlRWthTGY3QVJxckNFTjc1LXZsQUpWX1Q1eWI1cHc1cmFtdDBoMW1CTEp0MlB6RmpVSk8tNnFRd3lLbmhzaDdyMmktM05rVGtWOFRtaml1dElRWUdsWVJGd2ZJeDFYdzNuOFJaZ0poTXNZUWVGUjQ1NVdiQWdSbkdOdTFfd0pGMzVRbUtuaFM4VzRDN1FJb1NvaENpNG1oYVI4S19hVzNfZU9wRjVycHU4ZEw2TE1zN0ZkSENB?oc=5",
+   "fuente": "DivePhotoGuide",
+   "titular": "ADEX Big Blue Legacy 33rd Edition (Singapore Ocean Week) 2027"
+  },
+  "N147": {
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQndmeUNrcE12N2RiMXdCbHRQaUZ0VGJTTWp5bXRESFczUzFGV1haLWtpdzVBR3pwX1JkbG5RNlJHOTRlSXY2T20yMV9GbVIxOGZDR3pOVXFTWUR0bkFjUlU1VDNZZFJjZ0pWaWt5dHRNdXd1MVUtMWEtdnVQYjJkWGItdmt6YTBPaF9WUktBd0o3eXZiM2gwcXJwWll1OXJwMkFnZ1BKOFVaZGlZNUlrMU5wbTBJMXRhd0RwOVAxOWpzTFEtN1Y4cHB1R08?oc=5",
+   "fuente": "YACHT CHARTER",
+   "titular": "Superyacht rental IRON BLONDE opens bookings for South East Asia yacht charters in winter 2026"
+  },
+  "N148": {
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNcW94R29DWUJfdUhkSTRkOHJ5R1Bpek8td2FXNk5fcVdNTlRnMG1jdFJHWFE1VmRENGdoVVdVbkNHTjY0WDVMZzJ5RFRSTFBGcVpIWTVOUjhWODFOTXlTOHVwXzVzOGF5ZXp6aU5xZTJXX0hCUzZEd3c4SXh4YVdwQlc0Y3p1M2tqa3A5Y29UR0k0dklZRldWaV83cDk3bGxFdjlVZVduYklEMEFsM25KaXFZM2EtR2tpcnlRbk5XN2RtMzktU25RbnUzUzBCZkF5dHRUS2luWmp6NnlOeDE4emM3ZU5YMjlZaGhraHVn?oc=5",
+   "fuente": "The Courier-Journal",
+   "titular": "Rosedale Travel Expands Luxury Travel Advisory Services with Wellness and Yacht Charter Offerings"
+  },
+  "N149": {
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ1FFSmxJU3BhcmppVlVrMlVJVFhjOFBNTjdXSlo2WU5HUDNYaG9uelFORkFJQTVNeDV2S0FDYnZZQ0sxU21JUDc2bHcxRnV1MWVRZS05X0I3V2FWQjhJZzZ2b2J4TDJVWlhGWmVnVDJObnpaNUsxTjc3R01xSE9zMGUtblphUzRkQWZpNDVpcDY5RUoyOGZqeHZPRUpDUnctVG5XdDRPVFFhMUxENmpKTldud2g?oc=5",
+   "fuente": "YACHT CHARTER",
+   "titular": "FLIBS 2026: Superyacht charter STELLAMAR joins attending fleet for show debut"
+  },
+  "N150": {
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPU3FNRzVQRDUyMkVNWTRjTTJhclpRcFNDTHcybVhYbG02cmVMNVl0OXJRT1B2MkJpMUcyX2F1bkxMZGhKTHEybUJHaFNHWXFuLW5rUmdRU29ONHZxVnZGRDkxSTloSTl4NHc2c3dGR29OeW5SV0Rna3FmeDJNNzdfalRudHhXM0VaQzJ0aHVkLVNBMzZOSzZzVVR5T1NtcDlfZ3h6SGNWNGM2ZThGaHdVcnlOdURnaVZZVnhLaUFZcDVtanM?oc=5",
+   "fuente": "boote-magazin.de",
+   "titular": "Chartering in Croatia: Experience, Accidents and Weather Warnings"
+  },
+  "N151": {
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ1JYOHVVb190eUFVc2JfSi1mVmkySUZNWkRCTWtXOFc0Smhfb1RxUWJlc09yeW1ic2FpdXpYOVp3TmxQWXFzdnZFR3RrNmxPNkJIcUZiaHM0TlJnRVk4WEpMaGlEMko1dFZ1SFJ0bHNQaVlvdkNZRWM2THAyZHZPd1NWd3N3NjJycTE5Q3NLZHltS0UweVNWeTRnUGFIU0ZITUs5QlNmdFVubmgyNnZYNU5JRTZ5RmlGR0M0?oc=5",
+   "fuente": "Baltimore Sun",
+   "titular": "NASA says astronauts are returning to Earth after nearly eight months in space"
+  },
+  "N152": {
    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaklQVEdTNmFqaV9RdS1QUE9BaGc3TXFHWG1qQkVXM1dSeUxKVFM4bG50VWtycGNvNmZ4cGw0VGYzVWlkSjZmTDlCV0lHNEktVG9pOTMzLWc3TUF2OXhRc3ZQWjdILUpNSkRHTzd5bHlQUmdRcEdkRGhrZ255SEVmcVZtX2lkbFptdHBSaEM3ZmF6REsySVZqOEw5NlB5TXkwaXR2NXp6M0hDa25mY0ZON2p2Q1YwSFlXWWFCTk9odHFjZ3FqaUJ5bFJ3?oc=5",
    "fuente": "YACHT CHARTER",
    "titular": "Livorno opens to superyachts as Italy expands Western Mediterranean cruising infrastructure"
   },
-  "N21": {
+  "N153": {
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOblhPUTA4TURaX2NBSVN3SE91ejZXZmdnclREUmtvNi1OX295U21BV2dhdDN3Q0lLYU9DTmhPNF96Rlc3UTF3Q09udzZSV01HbGg5RldKbDN5ZGgwYUJlNTgxRnhoU3dUcm1VZUQ5R1lobGNacEZXenRrdUQ5bHB4VXJRanRFNmJmN1FpdFM1bmVyM1dDa3pCNUZMUkY3LUUzajhoMG55UXB0bWxfLS1PRzNfaDdfTVpQWDhYRnhBVGNJWlgxbHBPTGZwTGQyLTZhdjNr?oc=5",
+   "fuente": "Practical Boat Owner",
+   "titular": "Liveaboard Lessons: We Rented Our House to Live on a 38-Year-Old Yacht in the UK (Here's What Happened)"
+  },
+  "N154": {
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5xM0RpLVBzV1NCTmtyUUZmX2I0SDhtU3gxclREcldWM0FyUnNMaDlLQ0R2QTZ0YkdVdWxpQURBbjRWVjVpRWhySjV4b3VYbXpMVS1NS3dra1NyeDVXQ2c?oc=5",
+   "fuente": "BBC",
+   "titular": "Orwell River dolphin in 'critical' recovery period"
+  },
+  "N155": {
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1Qd1hGamFHN200ZHZuVE5GenNUM01qWmFud2p2cUNweHVMUG13RFZBQVFJU05uVEtPR1Y0MjY2N29GeXVJRFdUd0x3ekw0MWg0X3dONjhTcFRwNFhXa0NDRDhjck5yZV94YkFub0h3UmFGUUVTbWc?oc=5",
+   "fuente": "The Guardian",
+   "titular": "Whalefall review – slimy survival thriller traps us in a whale and struggles to make it digestible"
+  },
+  "N156": {
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQjlUSndONmU3VVdxZUtJX0MxLVZOX3I2c0Q1YjQ5cExoUTkwWTh2NDNjems5QTFVc05ybFpaYXJndlJrc3ZqX0RxaERVdmltaFhOTHNoY05GQlBoVHVIQXhfNjVWNUZGbF9UNF93b3NBUzEwZ0lsc2dMYkZBRXJSQkMtWVp3QQ?oc=5",
+   "fuente": "AOL.com",
+   "titular": "Scientists discover nearly 12,000 unknown viruses hiding on the Pacific Ocean floor"
+  },
+  "N157": {
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQWpsWHlmQ0xBcUNzbHNqd2lzdWI5cndhRXJSWkpnQzZtSW9sMDJoOS04Q3VmbUtqZmp6aGRqTFdVOC1jbDFwRGZod3cwQm1rdldMRFRPUG4xRXdlakhqVEhueDV2b2N1dUVMbzdnWVZEZGVjT0VPSFJ3YUFyQ21LUmVLbHlMQl80dnlQNUk2eWZ4NklWVmlibmdRMGxLY0NBMGxJQkhHdExzQXkxcDExSzdrVGpQN2Y2MmRpZE1hTW5fMXM5enk2WHhtZklkczJJQ2dZQU1R?oc=5",
+   "fuente": "The Brighter Side of News",
+   "titular": "Scientists discover a way to reverse coral bleaching, one of the ocean’s biggest environmental threats"
+  },
+  "N158": {
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPc3A3azFnaXZoX2dYWXA1MmVGYzNhM1FidktRdzBNcGxfN3lITWNoZXlaeFBkUWtHZ0ZpdGlIcXIwVExVdHdPZnVZeHA5NG9URlBVUWF2UXhieTUzTXRMbFJqNWtyTzVHdElMUlkybFZnaS1fUnZVc29ReGQ5N1AzZ2ZuOGFhZUh6T2dMMUF3YzVZbU9oUjRGWHdNa3FieFpqUTFyTjUtZDY2X01KeVdkMVFjMEhZei05?oc=5",
+   "fuente": "SciTechDaily",
+   "titular": "Scientists Discover a Mysterious Giant Deep-Sea Creature Hiding in Plain Sight for 40 Years"
+  },
+  "N159": {
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYWFYZzdHa01CdnlybU5fTGMzVkM2cFpZMms1NU1YLVFmNWdOTjVUMnlfTmpkOE1nYndwV3l0bDdzcXo4OUxmV2tHSl9nNnIteEFaeGNlZjB1U1pGSm91a25SQ1VSczlTTFFLSG1tRDBmMkZXdm5VNndlM2RHXzhRYWRENks3RTR4TXkyLXJUZFg5Yk5wc3ROWWZqUzJvaEJwY0djRUZ6VHg3NTJ6VHgxag?oc=5",
+   "fuente": "New Scientist",
+   "titular": "Whalefall review: Worth watching for the bits inside a sperm whale"
+  },
+  "N160": {
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNXFQdFpuODgwTTdLMkdyS1ZPek1YVm1CSkw5ZFIzX3VyUFRVbFoyU2pPTkNtcUtNQTl1aDhneUZsY08xVE4zekgyZlNXVHROQVhrQ1pKR0V5cmd0aVZNOXcyRjM1VkVsSXRKaDhIUmYyT25HcWZZeDhib2FubHRBMkp4Y0lZMkJlSjlCV3RmV2duV2ROV2tn?oc=5",
+   "fuente": "BBC Wildlife Magazine",
+   "titular": "Hundreds of baby whales are washing ashore dead – and the suspected cause is horrifying"
+  },
+  "N161": {
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZWVsdzA1aXNERG5ac0xpa2tPRE1KUkliRl9ZY1FHSkhYckFNTzRpd19EZHI4WGc0WDROWVBqODMzc2xTRHNSdTNMLXVfYzVFYktvdl95TVM4dHZVMUtfR21DUjBHQ29sUTdkbGJfNHFFNHBEbzdBOWN5ci1iRmlRY2tUbkNpNUc2ejM3MW5YeGZzVlhFVm5zVDV3LTlVYko3X0gwdg?oc=5",
+   "fuente": "Computer Weekly",
+   "titular": "ORCA launches PT-3 quantum computer in London datacentre"
+  },
+  "N162": {
    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcDJJd21MRHdjRVVsMDhMSkxBbmI5YjZWQjZJMFNvbDZ4UFBCSFI3VzE0Mk55OEVRb0hYMjNYU2x1c3pRWmRhUXdFVFphbjFjOVU4Rl9QbnBodFVoSTNRVmZJUHNjNFpraEtqN21ZZkdvZ0hVVE5OTkp1WjZrTGg5MG1tYw?oc=5",
    "fuente": "Yahoo News New Zealand",
    "titular": "Scientists discover whole new genus of deep-sea ‘spaghetti worms’ with suction cups"
   },
-  "N22": {
-   "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNdlhrYkV3cEJZMG9ZMUR5dHRiNXc2QjNBcDlTLWE0ZDUtX2JfMDhld3dMN3V4alRXNlFodUxiaHoyS1BTSGY0N2xaSk0xSlZSWVBMTWxDczlOTVpLZTBpUFZYT0dNWWZqMmRyc3c3dDJqTW12N0U4b0JPYzRlNjhram9KeXg5YjJEU21La3dIWGhKdEpnRzJfT28wS2FyNHRET3RYSU9ZY2ctNnBBNHpoZDQ1SVMyLWFoOEd2NUtZb1RPaThGQWVUUWNDSEY2VXB6VWFXR1lMN2pXWDAtVlpxMFFkWTBoMV9TUGh1YTBWb0NmM1lqUUltLVpwT1Izb1dXZzNsd01NSS1adURJcHN5SVVZY9IBmAJBVV95cUxOTDhtMGhIVEJKbEVvRDhZSk9aNElOaU5VdjMza1Y0UXNTbWxnZzMwTE0ySzI1RmY0dF9mckZmR0YteUQ0YThWZG1WclN5V21kREVrVTU3aGZ5VWVpTlhCQVJITE5HbmxITGhSbVl4NEV2NjlqTWxGaUZVQlVkM1R1NlZxNTFobzRTOEY5X0hhMHhYUFhRd0tqNi1sZmJXMDhMNXF4U2EyY1E5aFBoT3czYzhoeDlzdDZJQ0JMUWtuQ3B4UU5hdms1bmZNNTRIdkd5bGRiWXA1MXdJTkpVbnVvdllJYjVKbk5PV0d3YmE5VlFySUc3Z0VPdkxXWDk0a2JqR3d1Vl9CejJxbE9lYlhOR0VFYlg2Tzlw?oc=5",
-   "fuente": "The Times of India",
-   "titular": "Scientists discover hidden bamboo coral forest in the South China Sea nearly 1,400 metres below the surfa"
+  "N163": {
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZkxuWVRPb2JyNThOYURVOG5QRTNrRnZpU3ZpeXFjRWdvdlVJVXBsTENHb3o5U2NPX3UtTWxJSlZjN1ZLclVNWFE5R3ItNlp1aG94NTgwNXpVYk8teWhVZmI4UFVJR3VQVWdXTUtiMUQ1Q1JxTHZhY1IzdVlDb05Ob2doUlhMQlNLT2twLW54WjNoV2VmZGM0ag?oc=5",
+   "fuente": "Interesting Engineering",
+   "titular": "Scientists discover 11,742 deep-sea viruses with 99% new to science"
+  },
+  "N164": {
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNWlA3c1FoSWVQQ0ZrVHd2NkZyQ21ReDNRcXNtSkpyY0FxS0l3eFphWnFGVjJPRDdVOTJCTDdSQ05pWWRUZ2d0eXB5V0ZaLVVMRmZJTll4RDNTXzBnZ2NIWUxRT3Z0UW82WHk0V0RrNzFtWVhLRi1XaXVfWEd4R3dOT203SFJ0bnpnbmJsWnA0ODZIYlNselcxRjNmNnctZ1lXb0dFXzRMTi05eXVkY1Bmd2t6WDVES3lDd0I1TTIwMGlJWHR3Z2x5TXFiOXh0NWxvWXQycWpURkZZdmI4MUdQUnM3Z25iR1h1RGtsRFYtOTVWY1A4QTd4RWVKR1M4c1dmczgxM1RyNUlCQQ?oc=5",
+   "fuente": "Network Rail media centre",
+   "titular": "Passengers advised to plan ahead as £27.8m Dolphin Junction upgrade takes place to improve journeys on route to London Paddington"
+  },
+  "N165": {
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5IeC04Vmp0dHMxblY4SUgtdkxlT3RLU3RkOTFoejR5YWJWdzhMOEl6SEJPZTd0RGh4bVRSRzNWXzF2d1FScWJaSGtkajF1QUE4anp2S1pRZWtrQTYtMjRqSVQzVEMyZXM?oc=5",
+   "fuente": "Phys.org",
+   "titular": "How shark ecotourism sparks long-term conservation"
+  },
+  "N166": {
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1la2w3THhGSFN4akg0TzR3YXJLbUM5djJmaGtlNU9oZ3kzTmNIaU0wZGR2dlJrTnRCbkUyODl5X1pzdEFKTTh0VUxpT29JR2ZsbjBSeWh1X3Fmc2drT2l2NGdzLVJhWkVLQ1VEM2Uzc19YMWs?oc=5",
+   "fuente": "EcoPortal.net",
+   "titular": "Scientists discover nine new Alaskan deep-sea sponges, including one unusual enough to require an entirely new genus"
+  },
+  "N167": {
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5RSElVYUJTcWhmNEFTcEZDUU1GRXZjZ3JRZUhFaEJyeTBhb0Z2WlZzeXZTWXNQajVESkRJSVRCcVpmenhyVTg0QTl2VXFRcFFZUjltQnhDM0dSUTg?oc=5",
+   "fuente": "BBC",
+   "titular": "Dolphin swimming in Ipswich river freed by fire crews and divers"
   }
- }
+ },
+ "historial": [
+  "v1 · 2026-10-16 12:12 UTC · borrador"
+ ]
 }
