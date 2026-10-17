@@ -1,91 +1,11 @@
 {
- "generado": "2026-10-17T17:18:34Z",
+ "generado": "2026-10-17T22:23:13Z",
  "elaborado": {
   "playa": "2026-10-17T08:51:15",
-  "horas": "2026-10-17T13:07:08"
+  "horas": "2026-10-17T20:53:07"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
-  {
-   "fecha": "2026-10-17",
-   "cielo": [
-    "despejado",
-    "muy nuboso"
-   ],
-   "viento": [
-    "flojo",
-    "flojo"
-   ],
-   "oleaje": [
-    "débil",
-    "débil"
-   ],
-   "agua": 22,
-   "maxima": 26,
-   "uv": 4,
-   "tramos": [
-    {
-     "de": 8,
-     "a": 14,
-     "viento": 8,
-     "racha": 20,
-     "dir": "SO",
-     "lluvia": 85,
-     "tormenta": 60,
-     "niebla": 0,
-     "cielo": "lluvia_escasa",
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 1,
-     "agua": 22,
-     "notas": {
-      "navegar": {
-       "n": 2,
-       "m": "poco_viento"
-      },
-      "bucear": {
-       "n": 3,
-       "m": "tormenta"
-      },
-      "pescar": {
-       "n": 3,
-       "m": "tormenta"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 8,
-     "racha": 19,
-     "dir": "S",
-     "lluvia": 100,
-     "tormenta": 65,
-     "niebla": 0,
-     "cielo": "lluvia_escasa",
-     "fondo": false,
-     "fuerza": 3,
-     "aviso": false,
-     "mar": 1,
-     "agua": 22,
-     "notas": {
-      "navegar": {
-       "n": 2,
-       "m": "poco_viento"
-      },
-      "bucear": {
-       "n": 3,
-       "m": "tormenta"
-      },
-      "pescar": {
-       "n": 3,
-       "m": "tormenta"
-      }
-     }
-    }
-   ]
-  },
   {
    "fecha": "2026-10-18",
    "cielo": [
@@ -107,15 +27,15 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 9,
-     "racha": 32,
-     "dir": "N",
+     "viento": 10,
+     "racha": 33,
+     "dir": "NO",
      "lluvia": 100,
      "tormenta": 75,
      "niebla": 0,
      "cielo": "tormenta",
      "fondo": false,
-     "fuerza": 3,
+     "fuerza": 4,
      "aviso": false,
      "mar": 1,
      "agua": 23,
@@ -137,15 +57,15 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 11,
-     "racha": 24,
-     "dir": "S",
+     "viento": 15,
+     "racha": 32,
+     "dir": "N",
      "lluvia": 100,
      "tormenta": 60,
      "niebla": 0,
      "cielo": "lluvia_escasa",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 4,
      "aviso": false,
      "mar": 1,
      "agua": 23,
@@ -187,11 +107,11 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": null,
-     "dir": "SE",
-     "lluvia": 100,
-     "tormenta": 60,
+     "viento": 6,
+     "racha": 25,
+     "dir": "NO",
+     "lluvia": 90,
+     "tormenta": 80,
      "niebla": 0,
      "cielo": "tormenta",
      "fondo": false,
@@ -201,8 +121,8 @@
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 3,
-       "m": "tormenta"
+       "n": 2,
+       "m": "poco_viento"
       },
       "bucear": {
        "n": 3,
@@ -217,13 +137,13 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 10,
-     "racha": null,
-     "dir": "SE",
-     "lluvia": 95,
-     "tormenta": 0,
+     "viento": 8,
+     "racha": 20,
+     "dir": "S",
+     "lluvia": 100,
+     "tormenta": 70,
      "niebla": 0,
-     "cielo": "lluvia",
+     "cielo": "lluvia_escasa",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -231,16 +151,16 @@
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "lluvia"
+       "n": 2,
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 8,
-       "m": "lluvia"
+       "n": 3,
+       "m": "tormenta"
       },
       "pescar": {
-       "n": 8,
-       "m": "lluvia"
+       "n": 3,
+       "m": "tormenta"
       }
      }
     }
@@ -249,16 +169,16 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "Variable 2 tendiendo a E y SE 2 a 3. Rizada o marejadilla. Temporalmente regular. Aguaceros y tormentas.",
-  "elaborado": "2026-10-17T12:00:00",
-  "inicio": "2026-10-17T12:00:00",
-  "fin": "2026-10-18T12:00:00",
+  "texto": "Componente E 2 a 4. Marejadilla. Aguaceros y tormentas. Temporalmente regular.",
+  "elaborado": "2026-10-17T20:00:00",
+  "inicio": "2026-10-17T20:00:00",
+  "fin": "2026-10-18T20:00:00",
   "fuerza": [
    2,
-   3
+   4
   ],
   "mar": [
-   0,
+   1,
    1
   ],
   "fondo": false,
