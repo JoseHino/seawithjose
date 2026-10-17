@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-17T09:26:13Z",
+ "generado": "2026-10-17T14:13:58Z",
  "elaborado": {
   "playa": "2026-10-17T08:51:15",
-  "horas": "2026-10-17T08:59:07"
+  "horas": "2026-10-17T13:07:08"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -34,8 +34,8 @@
      "tormenta": 60,
      "niebla": 0,
      "cielo": "lluvia_escasa",
-     "fondo": true,
-     "fuerza": 3,
+     "fondo": false,
+     "fuerza": null,
      "aviso": false,
      "mar": 1,
      "agua": 22,
@@ -64,7 +64,7 @@
      "tormenta": 65,
      "niebla": 0,
      "cielo": "lluvia_escasa",
-     "fondo": true,
+     "fondo": false,
      "fuerza": 3,
      "aviso": false,
      "mar": 1,
@@ -115,7 +115,7 @@
      "niebla": 0,
      "cielo": "tormenta",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 3,
      "aviso": false,
      "mar": 1,
      "agua": 23,
@@ -249,10 +249,10 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "Variable 2 tendiendo a E y SE 2 a 3. Rizada o marejadilla. Mar de fondo del E de 1 m disminuyendo. Temporalmente regular. Algún aguacero o tormenta.",
-  "elaborado": "2026-10-16T20:00:00",
-  "inicio": "2026-10-16T20:00:00",
-  "fin": "2026-10-17T20:00:00",
+  "texto": "Variable 2 tendiendo a E y SE 2 a 3. Rizada o marejadilla. Temporalmente regular. Aguaceros y tormentas.",
+  "elaborado": "2026-10-17T12:00:00",
+  "inicio": "2026-10-17T12:00:00",
+  "fin": "2026-10-18T12:00:00",
   "fuerza": [
    2,
    3
@@ -261,8 +261,8 @@
    0,
    1
   ],
-  "fondo": true,
-  "fondo_m": 1,
+  "fondo": false,
+  "fondo_m": null,
   "aviso": null
  }
 }
