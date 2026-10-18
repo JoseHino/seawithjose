@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-17T22:23:13Z",
+ "generado": "2026-10-18T09:40:16Z",
  "elaborado": {
-  "playa": "2026-10-17T08:51:15",
-  "horas": "2026-10-17T20:53:07"
+  "playa": "2026-10-18T08:51:15",
+  "horas": "2026-10-18T08:55:09"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -10,7 +10,7 @@
    "fecha": "2026-10-18",
    "cielo": [
     "nuboso",
-    "nuboso"
+    "chubascos"
    ],
    "viento": [
     "flojo",
@@ -20,29 +20,29 @@
     "débil",
     "débil"
    ],
-   "agua": 23,
+   "agua": 22,
    "maxima": 23,
    "uv": 4,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": 33,
+     "viento": 8,
+     "racha": 35,
      "dir": "NO",
-     "lluvia": 100,
-     "tormenta": 75,
+     "lluvia": 95,
+     "tormenta": 80,
      "niebla": 0,
      "cielo": "tormenta",
      "fondo": false,
      "fuerza": 4,
      "aviso": false,
      "mar": 1,
-     "agua": 23,
+     "agua": 22,
      "notas": {
       "navegar": {
-       "n": 3,
-       "m": "tormenta"
+       "n": 2,
+       "m": "poco_viento"
       },
       "bucear": {
        "n": 3,
@@ -57,18 +57,18 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 15,
-     "racha": 32,
-     "dir": "N",
+     "viento": 10,
+     "racha": 23,
+     "dir": "E",
      "lluvia": 100,
-     "tormenta": 60,
+     "tormenta": 70,
      "niebla": 0,
-     "cielo": "lluvia_escasa",
+     "cielo": "lluvia",
      "fondo": false,
      "fuerza": 4,
      "aviso": false,
      "mar": 1,
-     "agua": 23,
+     "agua": 22,
      "notas": {
       "navegar": {
        "n": 3,
@@ -89,8 +89,8 @@
   {
    "fecha": "2026-10-19",
    "cielo": [
-    "muy nuboso",
-    "chubascos"
+    "nuboso",
+    "muy nuboso"
    ],
    "viento": [
     "flojo",
@@ -100,17 +100,17 @@
     "débil",
     "débil"
    ],
-   "agua": 21,
-   "maxima": 23,
+   "agua": 20,
+   "maxima": 22,
    "uv": 4,
    "tramos": [
     {
      "de": 8,
      "a": 14,
      "viento": 6,
-     "racha": 25,
+     "racha": 17,
      "dir": "NO",
-     "lluvia": 90,
+     "lluvia": 95,
      "tormenta": 80,
      "niebla": 0,
      "cielo": "tormenta",
@@ -118,7 +118,7 @@
      "fuerza": null,
      "aviso": false,
      "mar": 1,
-     "agua": 21,
+     "agua": 20,
      "notas": {
       "navegar": {
        "n": 2,
@@ -137,8 +137,8 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 8,
-     "racha": 20,
+     "viento": 7,
+     "racha": 19,
      "dir": "S",
      "lluvia": 100,
      "tormenta": 70,
@@ -148,7 +148,7 @@
      "fuerza": null,
      "aviso": false,
      "mar": 1,
-     "agua": 21,
+     "agua": 20,
      "notas": {
       "navegar": {
        "n": 2,
@@ -161,6 +161,86 @@
       "pescar": {
        "n": 3,
        "m": "tormenta"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "cielo": [
+    "despejado",
+    "despejado"
+   ],
+   "viento": [
+    "flojo",
+    "flojo"
+   ],
+   "oleaje": [
+    "débil",
+    "débil"
+   ],
+   "agua": 20,
+   "maxima": 25,
+   "uv": 4,
+   "tramos": [
+    {
+     "de": 8,
+     "a": 14,
+     "viento": 20,
+     "racha": null,
+     "dir": "SO",
+     "lluvia": 60,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "lluvia_escasa",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 20,
+     "notas": {
+      "navegar": {
+       "n": 9,
+       "m": "buen_viento"
+      },
+      "bucear": {
+       "n": 8,
+       "m": "viento"
+      },
+      "pescar": {
+       "n": 9,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 20,
+     "racha": null,
+     "dir": "SO",
+     "lluvia": 10,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "intervalos",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 20,
+     "notas": {
+      "navegar": {
+       "n": 10,
+       "m": "buen_viento"
+      },
+      "bucear": {
+       "n": 8,
+       "m": "viento"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
