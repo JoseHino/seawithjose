@@ -17,8 +17,8 @@ DOMINIO = "https://seawithjose.es"
 IDIOMAS = ["en", "es", "ru"]          # el primero va en la raíz
 
 # ─────────────────────────────── salidas en el Petit ───────────────────────────────
-PRECIO_COMPARTIDA = 60                # € por persona
-PRECIO_PRIVADA = 490                  # € por el barco entero, 2 horas
+PRECIO_COMPARTIDA = 50                # € por persona
+PRECIO_PRIVADA = 350                  # € por el barco entero, 2 horas
 PLAZAS = 11                           # pasajeros como máximo, más el capitán
 HORARIOS = ["10:30", "13:00", "15:30", "atardecer"]   # «atardecer»: puesta de sol − 1 h 45 min, la calcula la web
 DIAS_RESERVA = 120                    # hasta cuántos días por delante se puede reservar
@@ -139,7 +139,7 @@ T["en"] = {
     "nombre_idioma": "English", "corto": "EN", "og_locale": "en_GB",
     "title": "Sailing trips from Puerto Banús, Marbella: dolphins and snorkelling · Sea With Jose",
     "description": ("Two hours under sail from Puerto Banús with Jose, yacht captain and oceanographer: dolphins, a swim "
-                    "with mask and snorkel, drinks and nibbles included. Shared trip €60 per person; private €490 for "
+                    "with mask and snorkel, drinks and nibbles included. Shared trip €50 per person; private €350 for "
                     "the boat, up to 11 guests."),
     "saltar": "Skip to content",
     "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat",
@@ -148,29 +148,32 @@ T["en"] = {
     "wa_hola": "Hi Jose! I’d like to go sailing on the Petit.",
     "banderas_aria": "Sea With Jose spelt out in International Code of Signals flags",
     "hero_h1": "Sailing trips from Puerto Banús",
-    "hero_lead": ("I’m Jose, a yacht captain and oceanographer. I take people sailing for two hours along the Marbella "
-                  "coast on the Petit, a 12-metre sailing yacht. We stop for a swim well away from the beach and, with a "
-                  "bit of luck, we see dolphins."),
+    "hero_lead": ("I’m Jose, from Marbella, and the sea has always been my thing. What I enjoy most is taking people "
+                  "out on the Petit and seeing them come back ashore wanting to do it again."),
     "hero_idiomas": "I speak English, Spanish and Russian.",
-    "hero_precios": [("Shared", "€60", "per person"), ("Private", "€490", "the boat, 2 hours")],
+    "hero_precios": [("Shared", "€50", "per person"), ("Private", "€350", "the whole boat")],
+    "hero_parking": "Free parking, 10 minutes’ walk from the boat",
     "hero_cta": "Book",
     "hero_cta2": "Message me on WhatsApp",
     "hero_foto_alt": "The Petit at anchor at sunset",
     "precios_h2": "Prices",
     "opciones": {
-        "compartida": {"titulo": "Shared trip", "precio": "€60", "unidad": "per person",
+        "compartida": {"titulo": "Shared trip", "precio": "€50", "unidad": "per person",
                        "puntos": ["Two hours under sail, 11 people at most", "Water, soft drinks, beer and nibbles",
                                   "A swim with mask and snorkel, and I’ll tell you what lives down there",
-                                  "Take the helm if you like", "Free cancellation up to 24 hours before"],
+                                  "Take the helm if you like", "Free parking at Cristamar", "Free cancellation up to 24 hours before"],
                        "cta": "Book a seat"},
-        "privada": {"titulo": "Private trip", "precio": "€490", "unidad": "the whole boat, 2 hours",
+        "privada": {"titulo": "Private trip", "precio": "€350", "unidad": "the whole boat, 2 hours",
                     "puntos": ["Just your group, up to 11 people", "You choose the time, sunset included",
-                               "Water, soft drinks, beer and nibbles", "A swim with mask and snorkel",
-                               "Add a paella, cocktails, decorations or a jet ski",
+                               "Water, soft drinks, beer and nibbles", "A swim with mask and snorkel", "Free parking at Cristamar",
+                               "Add paella, sushi, cocktails, a jet ski or a taxi",
                                "Free cancellation up to 48 hours before"],
                     "cta": "Book the boat"},
     },
     "precios_nota": "Nothing else to pay on board. Just bring a swimsuit, a towel and sun cream.",
+    "parking": {"titulo": "Free parking", "texto": ("Leave the car at the Cristamar car park, on Calle Francisco Villalón, "
+                "and walk to the boat in 10 minutes. It’s free for everyone sailing with me, so you don’t have to "
+                "pay for parking in the port."), "enlace": "How to get there"},
     "capitan": {"titulo": "Your skipper: Jose", "creds": ["Yacht captain", "Oceanographer", "FEDAS diving instructor"],
                 "enlace": "More about me"},
     "resenas_h2": "What people say",
@@ -194,14 +197,14 @@ T["en"] = {
     "reserva_intro": "Choose the day, the time and how many of you are coming. I’ll confirm on WhatsApp.",
     "form": {
         "tipo": "Trip", "tipos": {"compartida": "Shared", "privada": "Private"},
-        "tipos_sub": {"compartida": "€60 per person", "privada": "€490 the boat"},
+        "tipos_sub": {"compartida": "€50 per person", "privada": "€350 the boat"},
         "fecha": "Day", "hora": "Time", "atardecer": "Sunset",
         "personas": "People", "menos": "One person fewer", "mas": "One person more", "max": "11 at most",
         "nombre": "Your name", "nombre_ph": "",
         "extras": "Extras for private trips",
         "extras_nota": "Extras are priced separately. I’ll send you the price on WhatsApp before the trip.",
         "otra": "Anything else?",
-        "total": "Total", "detalle_compartida": "{n} × €60", "detalle_privada": "The whole boat, 2 hours",
+        "total": "Total", "detalle_compartida": "{n} × €50", "detalle_privada": "The whole boat, 2 hours",
         "pagar": "Pay {total}", "whatsapp": "Book on WhatsApp",
         "seguro": "Payment is handled by Stripe. Your card details never go through this website.",
         "politica": ("Free cancellation up to 24 hours before a shared trip and 48 hours before a private one. If the "
@@ -221,10 +224,12 @@ T["en"] = {
     "extras": [
         {"id": "buffet", "titulo": "Buffet on board", "texto": "Nibbles, fruit and something sweet for everyone."},
         {"id": "paella", "titulo": "Paella", "texto": "To eat at anchor."},
+        {"id": "sushi", "titulo": "Sushi", "texto": "Fresh trays to share on deck."},
         {"id": "cocteles", "titulo": "Cocktails", "texto": "And cava for a toast."},
         {"id": "tarta", "titulo": "Cake", "texto": "Your birthday or celebration cake."},
         {"id": "decoracion", "titulo": "Decorations", "texto": "Balloons, flowers and bunting, the way you want."},
         {"id": "moto", "titulo": "Jet ski", "texto": "For a spin during the trip."},
+        {"id": "taxi", "titulo": "Taxi", "texto": "From your hotel to the port and back again."},
         {"id": "otra", "titulo": "Something else", "texto": "Music, a photographer, a surprise… just ask."},
     ],
     "extras_precio": "on request",
@@ -391,7 +396,7 @@ T["en"] = {
     "pesca_wa": "Hi Jose! I’d like to know more about your fishing trips.",
     "faq_h2": "Questions",
     "faq": [
-        ("How much does it cost?", "A shared trip is €60 per person. A private trip is €490 for the whole boat for two "
+        ("How much does it cost?", "A shared trip is €50 per person. A private trip is €350 for the whole boat for two "
                                    "hours, for up to 11 people. Extras for private trips are priced separately."),
         ("Do I need to know how to sail?", "No, I sail the boat. If you like, I’ll show you how to steer."),
         ("Where do we meet?", "At Puerto José Banús. I’ll send you the exact pontoon on WhatsApp."),
@@ -529,7 +534,7 @@ T["es"] = {
     "nombre_idioma": "Español", "corto": "ES", "og_locale": "es_ES",
     "title": "Salidas en velero desde Puerto Banús, Marbella: delfines y snorkel · Sea With Jose",
     "description": ("Dos horas a vela desde Puerto Banús con Jose, capitán de yate y oceanógrafo: delfines, baño con "
-                    "gafas y tubo, bebida y picoteo incluidos. Compartida 60 € por persona; privada 490 € el barco, "
+                    "gafas y tubo, bebida y picoteo incluidos. Compartida 50 € por persona; privada 350 € el barco, "
                     "hasta 11 personas."),
     "saltar": "Ir al contenido",
     "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco",
@@ -538,28 +543,32 @@ T["es"] = {
     "wa_hola": "¡Hola Jose! Me gustaría salir a navegar en el Petit.",
     "banderas_aria": "Sea With Jose escrito con banderas del Código Internacional de Señales",
     "hero_h1": "Salidas en velero desde Puerto Banús",
-    "hero_lead": ("Soy Jose, capitán de yate y oceanógrafo. Salgo a navegar dos horas por la costa de Marbella en el "
-                  "Petit, un velero de 12 metros. Paramos a bañarnos lejos de la orilla y, con suerte, vemos delfines."),
+    "hero_lead": ("Soy Jose, de Marbella, y el mar es lo mío desde siempre. Lo que más disfruto es salir con gente en "
+                  "el Petit y que vuelva a tierra con ganas de repetir."),
     "hero_idiomas": "Hablo español, inglés y ruso.",
-    "hero_precios": [("Compartida", "60 €", "por persona"), ("Privada", "490 €", "el barco, 2 horas")],
+    "hero_precios": [("Compartida", "50 €", "por persona"), ("Privada", "350 €", "el barco entero")],
+    "hero_parking": "Parking gratis a 10 minutos andando del barco",
     "hero_cta": "Reservar",
     "hero_cta2": "Escríbeme por WhatsApp",
     "hero_foto_alt": "El Petit fondeado al atardecer",
     "precios_h2": "Precios",
     "opciones": {
-        "compartida": {"titulo": "Salida compartida", "precio": "60 €", "unidad": "por persona",
+        "compartida": {"titulo": "Salida compartida", "precio": "50 €", "unidad": "por persona",
                        "puntos": ["Dos horas a vela, como mucho 11 personas", "Agua, refrescos, cerveza y picoteo",
                                   "Baño con gafas y tubo, y te cuento qué vive ahí abajo",
-                                  "Si quieres, llevas el timón", "Cancelación gratis hasta 24 horas antes"],
+                                  "Si quieres, llevas el timón", "Parking gratis en Cristamar", "Cancelación gratis hasta 24 horas antes"],
                        "cta": "Reservar plaza"},
-        "privada": {"titulo": "Salida privada", "precio": "490 €", "unidad": "el barco entero, 2 horas",
+        "privada": {"titulo": "Salida privada", "precio": "350 €", "unidad": "el barco entero, 2 horas",
                     "puntos": ["Solo tu grupo, hasta 11 personas", "Tú eliges la hora, también al atardecer",
-                               "Agua, refrescos, cerveza y picoteo", "Baño con gafas y tubo",
-                               "Puedes añadir paella, cócteles, decoración o una moto de agua",
+                               "Agua, refrescos, cerveza y picoteo", "Baño con gafas y tubo", "Parking gratis en Cristamar",
+                               "Puedes añadir paella, sushi, cócteles, moto de agua o taxi",
                                "Cancelación gratis hasta 48 horas antes"],
                     "cta": "Reservar el barco"},
     },
     "precios_nota": "Nada más que pagar a bordo. Solo trae bañador, toalla y crema solar.",
+    "parking": {"titulo": "Parking gratis", "texto": ("Deja el coche en el parking Cristamar, en la calle Francisco "
+                "Villalón, y en 10 minutos andando estás en el barco. Es gratis para todos los que salen conmigo, así "
+                "que no tienes que pagar parking en el puerto."), "enlace": "Cómo llegar"},
     "capitan": {"titulo": "Tu capitán: Jose", "creds": ["Capitán de yate", "Oceanógrafo", "Instructor de buceo FEDAS"],
                 "enlace": "Más sobre mí"},
     "resenas_h2": "Lo que cuentan",
@@ -583,14 +592,14 @@ T["es"] = {
     "reserva_intro": "Elige el día, la hora y cuántos sois. Te confirmo por WhatsApp.",
     "form": {
         "tipo": "Salida", "tipos": {"compartida": "Compartida", "privada": "Privada"},
-        "tipos_sub": {"compartida": "60 € por persona", "privada": "490 € el barco"},
+        "tipos_sub": {"compartida": "50 € por persona", "privada": "350 € el barco"},
         "fecha": "Día", "hora": "Hora", "atardecer": "Atardecer",
         "personas": "Personas", "menos": "Una persona menos", "mas": "Una persona más", "max": "Como mucho 11",
         "nombre": "Tu nombre", "nombre_ph": "",
         "extras": "Extras para la privada",
         "extras_nota": "Los extras van aparte. Te paso el precio por WhatsApp antes de la salida.",
         "otra": "¿Algo más?",
-        "total": "Total", "detalle_compartida": "{n} × 60 €", "detalle_privada": "El barco entero, 2 horas",
+        "total": "Total", "detalle_compartida": "{n} × 50 €", "detalle_privada": "El barco entero, 2 horas",
         "pagar": "Pagar {total}", "whatsapp": "Reservar por WhatsApp",
         "seguro": "El pago lo gestiona Stripe. Los datos de tu tarjeta no pasan por esta web.",
         "politica": ("Cancelación gratis hasta 24 horas antes en la compartida y 48 horas en la privada. Si el mar no "
@@ -609,10 +618,12 @@ T["es"] = {
     "extras": [
         {"id": "buffet", "titulo": "Buffet a bordo", "texto": "Picoteo, fruta y algo dulce para todo el grupo."},
         {"id": "paella", "titulo": "Paella", "texto": "Para comer fondeados."},
+        {"id": "sushi", "titulo": "Sushi", "texto": "Bandejas recién hechas para compartir en cubierta."},
         {"id": "cocteles", "titulo": "Cócteles", "texto": "Y cava para brindar."},
         {"id": "tarta", "titulo": "Tarta", "texto": "La de tu cumpleaños o la de tu celebración."},
         {"id": "decoracion", "titulo": "Decoración", "texto": "Globos, flores y banderines, como tú quieras."},
         {"id": "moto", "titulo": "Moto de agua", "texto": "Para dar una vuelta durante la salida."},
+        {"id": "taxi", "titulo": "Taxi", "texto": "Del hotel al puerto y de vuelta."},
         {"id": "otra", "titulo": "Otra idea", "texto": "Música, fotógrafo, una sorpresa… Pídemelo."},
     ],
     "extras_precio": "a consultar",
@@ -783,7 +794,7 @@ T["es"] = {
     "pesca_wa": "¡Hola Jose! Me gustaría saber más sobre las salidas de pesca.",
     "faq_h2": "Preguntas",
     "faq": [
-        ("¿Cuánto cuesta?", "La compartida, 60 € por persona. La privada, 490 € por el barco entero durante dos horas, "
+        ("¿Cuánto cuesta?", "La compartida, 50 € por persona. La privada, 350 € por el barco entero durante dos horas, "
                             "para hasta 11 personas. Los extras de las privadas van aparte."),
         ("¿Tengo que saber navegar?", "No, el barco lo llevo yo. Si quieres, te enseño a llevar el timón."),
         ("¿Dónde quedamos?", "En Puerto José Banús. Te mando el pantalán exacto por WhatsApp."),
@@ -921,8 +932,8 @@ T["ru"] = {
     "nombre_idioma": "Русский", "corto": "RU", "og_locale": "ru_RU",
     "title": "Прогулки под парусом из Пуэрто-Бануса, Марбелья: дельфины и снорклинг · Sea With Jose",
     "description": ("Два часа под парусом из Пуэрто-Бануса с Хосе, капитаном яхты и океанографом: дельфины, купание "
-                    "с маской и трубкой, напитки и закуски включены. Групповая прогулка 60 € с человека, "
-                    "индивидуальная 490 € за яхту, до 11 гостей."),
+                    "с маской и трубкой, напитки и закуски включены. Групповая прогулка 50 € с человека, "
+                    "индивидуальная 350 € за яхту, до 11 гостей."),
     "saltar": "Перейти к содержанию",
     "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта",
             "llegar": "Как добраться", "revista": "Журнал"},
@@ -930,29 +941,32 @@ T["ru"] = {
     "wa_hola": "Здравствуйте, Хосе! Хочу выйти в море на «Пти».",
     "banderas_aria": "Sea With Jose, написанное флагами Международного свода сигналов",
     "hero_h1": "Прогулки под парусом из Пуэрто-Бануса",
-    "hero_lead": ("Меня зовут Хосе, я капитан яхты и океанограф. Два часа мы ходим под парусом вдоль побережья "
-                  "Марбельи на «Пти», 12-метровой парусной яхте. Купаемся вдали от пляжа, а если повезёт, видим "
-                  "дельфинов."),
+    "hero_lead": ("Меня зовут Хосе, я из Марбельи, и море всегда было моей жизнью. Больше всего я люблю выходить "
+                  "на «Пти» с гостями и видеть, как они возвращаются на берег с желанием повторить."),
     "hero_idiomas": "Говорю по-русски, по-английски и по-испански.",
-    "hero_precios": [("Групповая", "60 €", "с человека"), ("Индивидуальная", "490 €", "яхта, 2 часа")],
+    "hero_precios": [("Групповая", "50 €", "с человека"), ("Индивидуальная", "350 €", "вся яхта")],
+    "hero_parking": "Бесплатная парковка в 10 минутах пешком от яхты",
     "hero_cta": "Забронировать",
     "hero_cta2": "Написать в WhatsApp",
     "hero_foto_alt": "«Пти» на якоре на закате",
     "precios_h2": "Цены",
     "opciones": {
-        "compartida": {"titulo": "Групповая прогулка", "precio": "60 €", "unidad": "с человека",
+        "compartida": {"titulo": "Групповая прогулка", "precio": "50 €", "unidad": "с человека",
                        "puntos": ["Два часа под парусом, не больше 11 человек", "Вода, газировка, пиво и закуски",
                                   "Купание с маской и трубкой, и я расскажу, кто живёт на дне",
-                                  "Можно постоять за штурвалом", "Бесплатная отмена не позднее чем за 24 часа"],
+                                  "Можно постоять за штурвалом", "Бесплатная парковка Cristamar", "Бесплатная отмена не позднее чем за 24 часа"],
                        "cta": "Забронировать место"},
-        "privada": {"titulo": "Индивидуальная прогулка", "precio": "490 €", "unidad": "вся яхта, 2 часа",
+        "privada": {"titulo": "Индивидуальная прогулка", "precio": "350 €", "unidad": "вся яхта, 2 часа",
                     "puntos": ["Только ваша компания, до 11 человек", "Время выбираете вы, в том числе закат",
-                               "Вода, газировка, пиво и закуски", "Купание с маской и трубкой",
-                               "Можно добавить паэлью, коктейли, украшения или гидроцикл",
+                               "Вода, газировка, пиво и закуски", "Купание с маской и трубкой", "Бесплатная парковка Cristamar",
+                               "Можно добавить паэлью, суши, коктейли, гидроцикл или такси",
                                "Бесплатная отмена не позднее чем за 48 часов"],
                     "cta": "Забронировать яхту"},
     },
     "precios_nota": "На борту больше ничего платить не нужно. Возьмите купальник, полотенце и солнцезащитный крем.",
+    "parking": {"titulo": "Бесплатная парковка", "texto": ("Оставьте машину на парковке Cristamar на улице "
+                "Франсиско Вильялон, и через 10 минут пешком вы у яхты. Для всех, кто выходит со мной, она бесплатная, "
+                "так что платить за парковку в порту не нужно."), "enlace": "Как добраться"},
     "capitan": {"titulo": "Ваш капитан: Хосе", "creds": ["Капитан яхты", "Океанограф", "Инструктор по дайвингу FEDAS"],
                 "enlace": "Обо мне"},
     "resenas_h2": "Отзывы",
@@ -976,14 +990,14 @@ T["ru"] = {
     "reserva_intro": "Выберите день, время и сколько вас будет. Я подтвержу в WhatsApp.",
     "form": {
         "tipo": "Прогулка", "tipos": {"compartida": "Групповая", "privada": "Индивидуальная"},
-        "tipos_sub": {"compartida": "60 € с человека", "privada": "490 € за яхту"},
+        "tipos_sub": {"compartida": "50 € с человека", "privada": "350 € за яхту"},
         "fecha": "День", "hora": "Время", "atardecer": "Закат",
         "personas": "Гостей", "menos": "На одного меньше", "mas": "На одного больше", "max": "Не больше 11",
         "nombre": "Ваше имя", "nombre_ph": "",
         "extras": "Дополнительно к индивидуальной прогулке",
         "extras_nota": "Дополнительные услуги оплачиваются отдельно. Цену пришлю в WhatsApp до прогулки.",
         "otra": "Что-то ещё?",
-        "total": "Итого", "detalle_compartida": "{n} × 60 €", "detalle_privada": "Вся яхта, 2 часа",
+        "total": "Итого", "detalle_compartida": "{n} × 50 €", "detalle_privada": "Вся яхта, 2 часа",
         "pagar": "Оплатить {total}", "whatsapp": "Забронировать через WhatsApp",
         "seguro": "Оплату проводит Stripe. Данные карты не проходят через этот сайт.",
         "politica": ("Бесплатная отмена не позднее чем за 24 часа для групповой прогулки и за 48 часов для "
@@ -1003,10 +1017,12 @@ T["ru"] = {
     "extras": [
         {"id": "buffet", "titulo": "Фуршет на борту", "texto": "Закуски, фрукты и что-нибудь сладкое на всех."},
         {"id": "paella", "titulo": "Паэлья", "texto": "Чтобы пообедать на якоре."},
+        {"id": "sushi", "titulo": "Суши", "texto": "Свежие сеты, чтобы угощаться на палубе."},
         {"id": "cocteles", "titulo": "Коктейли", "texto": "И кава, чтобы поднять бокалы."},
         {"id": "tarta", "titulo": "Торт", "texto": "Ко дню рождения или к празднику."},
         {"id": "decoracion", "titulo": "Украшения", "texto": "Шары, цветы и флажки, как вам нравится."},
         {"id": "moto", "titulo": "Гидроцикл", "texto": "Прокатиться во время прогулки."},
+        {"id": "taxi", "titulo": "Такси", "texto": "От отеля до порта и обратно."},
         {"id": "otra", "titulo": "Другая идея", "texto": "Музыка, фотограф, сюрприз… Просто скажите."},
     ],
     "extras_precio": "по запросу",
@@ -1182,7 +1198,7 @@ T["ru"] = {
     "pesca_wa": "Здравствуйте, Хосе! Хотел(а) бы узнать подробнее о морской рыбалке.",
     "faq_h2": "Вопросы",
     "faq": [
-        ("Сколько это стоит?", "Групповая прогулка стоит 60 € с человека. Индивидуальная, 490 € за всю яхту на два "
+        ("Сколько это стоит?", "Групповая прогулка стоит 50 € с человека. Индивидуальная, 350 € за всю яхту на два "
                                "часа, до 11 человек. Дополнительные услуги оплачиваются отдельно."),
         ("Нужно ли уметь ходить под парусом?", "Нет, яхтой управляю я. Если захотите, научу держать штурвал."),
         ("Где встречаемся?", "В Пуэрто-Хосе-Банусе. Точный причал пришлю в WhatsApp."),

@@ -71,19 +71,6 @@ def banderas_jose():
     return '<span class="banderas" aria-hidden="true">' + "".join(bandera(l, 18) for l in "JOSE") + "</span>"
 
 
-def empavesado(t):
-    """«SEA WITH JOSE» izado con banderas del Código, como se engalana un barco en fiesta."""
-    piezas, k = [], 0
-    for palabra in ("SEA", "WITH", "JOSE"):
-        if piezas:
-            piezas.append('<span class="hueco"></span>')
-        for letra in palabra:
-            piezas.append(f'<span class="colgada" style="--k:{k}">{bandera(letra, 44)}<b>{letra}</b></span>')
-            k += 1
-    return (f'<div class="empavesado" role="img" aria-label="{esc(t["banderas_aria"])}">'
-            f'<span class="driza" aria-hidden="true"></span>{"".join(piezas)}</div>')
-
-
 # Iconos de la personalización y de la pesca, con trazo
 ICONO_WA = ('<svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 '
             '15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1'
@@ -318,7 +305,7 @@ def cabecera(t, lang, prefijo, pagina="index.html"):
     return f"""<a class="saltar" href="#contenido">{esc(t["saltar"])}</a>
 <header class="cabecera">
   <div class="contenedor cabecera-fila">
-    <a class="marca" href="{prefijo}{carpeta(lang)}">{banderas_jose()}<span>Sea With Jose</span></a>
+    <a class="marca" href="{prefijo}{carpeta(lang)}"><span>Sea With Jose</span></a>
     <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
       <span class="menu-raya" aria-hidden="true"></span><span class="visualmente-oculto">{esc(t["menu"])}</span>
     </button>
@@ -543,11 +530,11 @@ def portada(lang):
 
 <section class="hero" aria-labelledby="titulo">
   <div class="hero-texto">
-    {empavesado(t)}
     <h1 id="titulo">{esc(t["hero_h1"])}</h1>
     <p class="entradilla">{esc(t["hero_lead"])}</p>
     <p class="hero-idiomas">{esc(t["hero_idiomas"])}</p>
     <dl class="hero-precios">{hero_precios}</dl>
+    <a class="hero-parking" href="#llegar"><span class="letra-p" aria-hidden="true">P</span>{esc(t["hero_parking"])}</a>
     <div class="botones">
       <a class="boton boton-amarillo boton-grande" href="#reservar">{esc(t["hero_cta"])}{FLECHA}</a>
       <a class="boton boton-borde" href="{wa(t["wa_hola"])}">{ICONO_WA}{esc(t["hero_cta2"])}</a>
@@ -565,11 +552,12 @@ def portada(lang):
     <div class="paneles">{panel("compartida")}{panel("privada")}
     </div>
     <p class="precios-nota">{esc(t["precios_nota"])}</p>
-    <div class="capitan">
-      {imagen("jose-buceo", (520,), "", prefijo, "capitan-foto", "88px")}
+    <div class="parking-gratis">
+      <span class="letra-p" aria-hidden="true">P</span>
       <div>
-        <p class="capitan-titulo">{esc(t["capitan"]["titulo"])}</p>
-        <ul class="capitan-creds">{"".join(f"<li>{esc(x)}</li>" for x in t["capitan"]["creds"])}</ul>
+        <p class="parking-titulo">{esc(t["parking"]["titulo"])}</p>
+        <p>{esc(t["parking"]["texto"])}</p>
+        <a class="parking-enlace" href="#llegar">{esc(t["parking"]["enlace"])}{FLECHA}</a>
       </div>
     </div>
   </div>
