@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-21T15:58:41Z",
+ "generado": "2026-10-21T20:39:30Z",
  "elaborado": {
   "playa": "2026-10-21T08:51:15",
-  "horas": "2026-10-21T14:41:08"
+  "horas": "2026-10-21T19:15:09"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,13 +27,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 6,
-     "racha": 15,
-     "dir": "N",
-     "lluvia": 0,
+     "viento": 5,
+     "racha": null,
+     "dir": "SE",
+     "lluvia": null,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "nubes_altas",
+     "cielo": null,
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -57,30 +57,30 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 8,
-     "racha": 23,
-     "dir": "SE",
+     "viento": 9,
+     "racha": 27,
+     "dir": "S",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "despejado",
+     "cielo": "poco_nuboso",
      "fondo": false,
-     "fuerza": 6,
+     "fuerza": null,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 2,
+       "n": 8,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 3,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 3,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
@@ -108,28 +108,28 @@
      "de": 8,
      "a": 14,
      "viento": 6,
-     "racha": 17,
+     "racha": 20,
      "dir": "N",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": 6,
+     "fuerza": 5,
      "aviso": false,
      "mar": 2,
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 2,
+       "n": 4,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 3,
+       "n": 5,
        "m": "marejada"
       },
       "pescar": {
-       "n": 3,
+       "n": 5,
        "m": "marejada"
       }
      }
@@ -137,30 +137,30 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 7,
-     "racha": 21,
+     "viento": 8,
+     "racha": 19,
      "dir": "S",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 5,
      "aviso": false,
-     "mar": 1,
+     "mar": 2,
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 6,
+       "n": 4,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 5,
+       "m": "marejada"
       },
       "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
+       "n": 5,
+       "m": "marejada"
       }
      }
     }
@@ -187,13 +187,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": null,
-     "dir": "S",
-     "lluvia": 10,
+     "viento": 6,
+     "racha": 15,
+     "dir": "N",
+     "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "intervalos",
+     "cielo": "nubes_altas",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -201,7 +201,7 @@
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 8,
+       "n": 6,
        "m": "poco_viento"
       },
       "bucear": {
@@ -217,7 +217,7 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 10,
+     "viento": 5,
      "racha": null,
      "dir": "S",
      "lluvia": 0,
@@ -231,7 +231,7 @@
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 8,
+       "n": 6,
        "m": "poco_viento"
       },
       "bucear": {
@@ -249,13 +249,13 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "SW 4 a 6 amainando a componente N y NW 1 a 3. Marejada dsiminuyendo a marejadilla.",
-  "elaborado": "2026-10-21T12:00:00",
-  "inicio": "2026-10-21T12:00:00",
-  "fin": "2026-10-22T12:00:00",
+  "texto": "Componente W 3 a 4 localmente 5 al principio, temporalmente variable 2 a 3 a mediodía. Marejada disminuyendo a marejadilla.",
+  "elaborado": "2026-10-21T20:00:00",
+  "inicio": "2026-10-21T20:00:00",
+  "fin": "2026-10-22T20:00:00",
   "fuerza": [
-   1,
-   6
+   2,
+   5
   ],
   "mar": [
    1,
