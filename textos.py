@@ -139,7 +139,7 @@ T["en"] = {
     "nombre_idioma": "English", "corto": "EN", "og_locale": "en_GB",
     "title": "Sailing trips from Puerto Banús, Marbella: dolphins and snorkelling · Sea With Jose",
     "description": ("Two hours under sail from Puerto Banús with Jose, yacht captain and oceanographer: dolphins, a swim "
-                    "with mask and snorkel, drinks and nibbles included. Shared trip €50 per person; private €350 for "
+                    "with mask and fins, drinks, snacks and fruit included. Shared trip €50 per person; private €350 for "
                     "the boat, up to 11 guests."),
     "saltar": "Skip to content",
     "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat",
@@ -157,17 +157,19 @@ T["en"] = {
     "hero_cta2": "Message me on WhatsApp",
     "hero_foto_alt": "The Petit at anchor at sunset",
     "precios_h2": "Prices",
+    "incluye_titulo": "Included",
     "opciones": {
         "compartida": {"titulo": "Shared trip", "precio": "€50", "unidad": "per person",
-                       "puntos": ["Two hours under sail, 11 people at most", "Water, soft drinks, beer and nibbles",
-                                  "A swim with mask and snorkel, and I’ll tell you what lives down there",
-                                  "Take the helm if you like", "Free parking at Cristamar", "Free cancellation up to 24 hours before"],
+                       "incluye": ["Drinks: water, soft drinks, beer and wine", "Snacks (crisps) and fruit",
+                                   "Snorkel mask and fins"],
+                       "letra": ["Free cancellation up to 24 hours before"],
+                       "parking": "Free parking at Cristamar",
                        "cta": "Book a seat"},
         "privada": {"titulo": "Private trip", "precio": "€350", "unidad": "the whole boat, 2 hours",
-                    "puntos": ["Just your group, up to 11 people", "You choose the time, sunset included",
-                               "Water, soft drinks, beer and nibbles", "A swim with mask and snorkel", "Free parking at Cristamar",
-                               "Add paella, sushi, cocktails, a jet ski or a taxi",
-                               "Free cancellation up to 48 hours before"],
+                    "incluye": ["Drinks: water, soft drinks, beer and wine", "Snacks (crisps) and fruit",
+                                "Snorkel mask and fins"],
+                    "letra": ["11 guests at most", "Free cancellation up to 48 hours before"],
+                    "parking": "Free parking at Cristamar",
                     "cta": "Book the boat"},
     },
     "precios_nota": "Nothing else to pay on board. Just bring a swimsuit, a towel and sun cream.",
@@ -406,7 +408,7 @@ T["en"] = {
         ("What if the weather is bad?", "I only go out when the sea is right. If I cancel because of the weather, you "
                                         "choose another day or I give you your money back."),
         ("Can I cancel?", "Yes, for free up to 24 hours before a shared trip and 48 hours before a private one."),
-        ("What’s included?", "Water, soft drinks, beer, some nibbles and a mask and snorkel for everyone. Nothing "
+        ("What’s included?", "Water, soft drinks, beer and wine, crisps and fruit, and a snorkel mask and fins for everyone. Nothing "
                              "else to pay on board."),
         ("Can children come?", "Of course. Tell me their ages when you book."),
         ("Which languages do you speak?", "English, Spanish and Russian."),
@@ -534,7 +536,7 @@ T["es"] = {
     "nombre_idioma": "Español", "corto": "ES", "og_locale": "es_ES",
     "title": "Salidas en velero desde Puerto Banús, Marbella: delfines y snorkel · Sea With Jose",
     "description": ("Dos horas a vela desde Puerto Banús con Jose, capitán de yate y oceanógrafo: delfines, baño con "
-                    "gafas y tubo, bebida y picoteo incluidos. Compartida 50 € por persona; privada 350 € el barco, "
+                    "gafas y aletas, bebida, snacks y fruta incluidos. Compartida 50 € por persona; privada 350 € el barco, "
                     "hasta 11 personas."),
     "saltar": "Ir al contenido",
     "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco",
@@ -552,17 +554,19 @@ T["es"] = {
     "hero_cta2": "Escríbeme por WhatsApp",
     "hero_foto_alt": "El Petit fondeado al atardecer",
     "precios_h2": "Precios",
+    "incluye_titulo": "Incluye",
     "opciones": {
         "compartida": {"titulo": "Salida compartida", "precio": "50 €", "unidad": "por persona",
-                       "puntos": ["Dos horas a vela, como mucho 11 personas", "Agua, refrescos, cerveza y picoteo",
-                                  "Baño con gafas y tubo, y te cuento qué vive ahí abajo",
-                                  "Si quieres, llevas el timón", "Parking gratis en Cristamar", "Cancelación gratis hasta 24 horas antes"],
+                       "incluye": ["Bebida: agua, refrescos, cerveza y vino", "Snacks (patatas) y fruta",
+                                   "Gafas y aletas de snorkel"],
+                       "letra": ["Cancelación gratis hasta 24 horas antes"],
+                       "parking": "Parking gratis en Cristamar",
                        "cta": "Reservar plaza"},
         "privada": {"titulo": "Salida privada", "precio": "350 €", "unidad": "el barco entero, 2 horas",
-                    "puntos": ["Solo tu grupo, hasta 11 personas", "Tú eliges la hora, también al atardecer",
-                               "Agua, refrescos, cerveza y picoteo", "Baño con gafas y tubo", "Parking gratis en Cristamar",
-                               "Puedes añadir paella, sushi, cócteles, moto de agua o taxi",
-                               "Cancelación gratis hasta 48 horas antes"],
+                    "incluye": ["Bebida: agua, refrescos, cerveza y vino", "Snacks (patatas) y fruta",
+                                "Gafas y aletas de snorkel"],
+                    "letra": ["Máximo 11 personas", "Cancelación gratis hasta 48 horas antes"],
+                    "parking": "Parking gratis en Cristamar",
                     "cta": "Reservar el barco"},
     },
     "precios_nota": "Nada más que pagar a bordo. Solo trae bañador, toalla y crema solar.",
@@ -803,7 +807,7 @@ T["es"] = {
         ("¿Y si hace mal tiempo?", "Solo salgo si el mar está bien. Si cancelo por el tiempo, eliges otro día o te "
                                    "devuelvo el dinero."),
         ("¿Puedo cancelar?", "Sí, gratis hasta 24 horas antes en la compartida y 48 horas en la privada."),
-        ("¿Qué incluye?", "Agua, refrescos, cerveza, algo de picoteo y gafas y tubo para todos. Nada más que pagar "
+        ("¿Qué incluye?", "Agua, refrescos, cerveza y vino, patatas y fruta, y gafas y aletas de snorkel para todos. Nada más que pagar "
                           "a bordo."),
         ("¿Pueden venir niños?", "Claro. Dime sus edades al reservar."),
         ("¿En qué idiomas hablas?", "Español, inglés y ruso."),
@@ -932,7 +936,7 @@ T["ru"] = {
     "nombre_idioma": "Русский", "corto": "RU", "og_locale": "ru_RU",
     "title": "Прогулки под парусом из Пуэрто-Бануса, Марбелья: дельфины и снорклинг · Sea With Jose",
     "description": ("Два часа под парусом из Пуэрто-Бануса с Хосе, капитаном яхты и океанографом: дельфины, купание "
-                    "с маской и трубкой, напитки и закуски включены. Групповая прогулка 50 € с человека, "
+                    "с маской и ластами, напитки, закуски и фрукты включены. Групповая прогулка 50 € с человека, "
                     "индивидуальная 350 € за яхту, до 11 гостей."),
     "saltar": "Перейти к содержанию",
     "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта",
@@ -950,17 +954,19 @@ T["ru"] = {
     "hero_cta2": "Написать в WhatsApp",
     "hero_foto_alt": "«Пти» на якоре на закате",
     "precios_h2": "Цены",
+    "incluye_titulo": "Включено",
     "opciones": {
         "compartida": {"titulo": "Групповая прогулка", "precio": "50 €", "unidad": "с человека",
-                       "puntos": ["Два часа под парусом, не больше 11 человек", "Вода, газировка, пиво и закуски",
-                                  "Купание с маской и трубкой, и я расскажу, кто живёт на дне",
-                                  "Можно постоять за штурвалом", "Бесплатная парковка Cristamar", "Бесплатная отмена не позднее чем за 24 часа"],
+                       "incluye": ["Напитки: вода, газировка, пиво и вино", "Закуски (чипсы) и фрукты",
+                                   "Маска и ласты для снорклинга"],
+                       "letra": ["Бесплатная отмена не позднее чем за 24 часа"],
+                       "parking": "Бесплатная парковка Cristamar",
                        "cta": "Забронировать место"},
         "privada": {"titulo": "Индивидуальная прогулка", "precio": "350 €", "unidad": "вся яхта, 2 часа",
-                    "puntos": ["Только ваша компания, до 11 человек", "Время выбираете вы, в том числе закат",
-                               "Вода, газировка, пиво и закуски", "Купание с маской и трубкой", "Бесплатная парковка Cristamar",
-                               "Можно добавить паэлью, суши, коктейли, гидроцикл или такси",
-                               "Бесплатная отмена не позднее чем за 48 часов"],
+                    "incluye": ["Напитки: вода, газировка, пиво и вино", "Закуски (чипсы) и фрукты",
+                                "Маска и ласты для снорклинга"],
+                    "letra": ["Не больше 11 гостей", "Бесплатная отмена не позднее чем за 48 часов"],
+                    "parking": "Бесплатная парковка Cristamar",
                     "cta": "Забронировать яхту"},
     },
     "precios_nota": "На борту больше ничего платить не нужно. Возьмите купальник, полотенце и солнцезащитный крем.",
@@ -1208,7 +1214,7 @@ T["ru"] = {
                                   "выбирайте другой день или полный возврат денег."),
         ("Можно ли отменить бронь?", "Да, бесплатно не позднее чем за 24 часа для групповой прогулки и за 48 часов "
                                      "для индивидуальной."),
-        ("Что включено?", "Вода, газировка, пиво, закуски, а также маска и трубка для каждого. На борту больше ничего "
+        ("Что включено?", "Вода, газировка, пиво и вино, чипсы и фрукты, а также маска и ласты для каждого. На борту больше ничего "
                           "платить не нужно."),
         ("Можно ли с детьми?", "Конечно. Укажите их возраст при бронировании."),
         ("На каких языках вы говорите?", "На русском, английском и испанском."),

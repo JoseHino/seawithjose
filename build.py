@@ -478,14 +478,16 @@ def portada(lang):
         <h3>{esc(o["titulo"])}</h3>
         <p class="panel-precio">{esc(o["precio"])}</p>
         <p class="panel-unidad">{esc(o["unidad"])}</p>
-        <ul>{"".join(f"<li>{esc(x)}</li>" for x in o["puntos"])}</ul>
+        <p class="panel-incluye-titulo">{esc(t["incluye_titulo"])}</p>
+        <ul class="panel-incluye">{"".join(f"<li>{esc(x)}</li>" for x in o["incluye"])}</ul>
+        <a class="panel-parking" href="#llegar"><span class="letra-p" aria-hidden="true">P</span>{esc(o["parking"])}</a>
+        <ul class="panel-letra">{"".join(f"<li>{esc(x)}</li>" for x in o["letra"])}</ul>
         <a class="boton {"boton-azul" if tipo == "privada" else "boton-amarillo"}" href="#reservar" data-tipo="{tipo}">{esc(o["cta"])}{FLECHA}</a>
       </article>"""
 
     tira = "".join(f'<figure>{imagen(n, anchos, t["fotos_alt"][n], prefijo, "", "(max-width: 700px) 100vw, 34vw")}</figure>'
                    for n, anchos in (("petit-delfines", (640, 1136)), ("petit-banera", (800, 1600)),
                                      ("petit-proa", (800, 1600))))
-    pasos = "".join(f'<li><span class="paso-hora">{esc(h)}</span><p>{esc(x)}</p></li>' for h, x in t["pasos"])
     horas = "".join(f'<label class="chip"><input type="radio" name="hora" value="{h}">'
                     + (f'<span>{esc(f["atardecer"])} <b class="hora-atardecer"></b></span>' if h == "atardecer"
                        else f"<span>{h}</span>") + "</label>" for h in HORARIOS)
@@ -564,17 +566,6 @@ def portada(lang):
 </section>
 {resenas}
 <div class="tira">{tira}</div>
-
-<section class="seccion salida" id="salida" aria-labelledby="salida-titulo">
-  <div class="contenedor salida-rejilla">
-    <div class="ruta-carta">{svg_carta(t)}</div>
-    <div>
-      <h2 id="salida-titulo">{esc(t["salida_h2"])}</h2>
-      <ol class="pasos">{pasos}</ol>
-      <p class="nota">{esc(t["salida_nota"])}</p>
-    </div>
-  </div>
-</section>
 
 <section class="seccion reservar" id="reservar" aria-labelledby="reservar-titulo">
   <div class="contenedor">
