@@ -1,6 +1,102 @@
 {
- "actualizado": "2026-10-23T12:03Z",
+ "actualizado": "2026-10-24T11:35Z",
  "noticias": [
+  {
+   "fecha": "2026-10-24",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Marbella Directo",
+   "titular": "Marbella impulsa la vela de crucero con la celebración de la I Travesía Puerto Deportivo Virgen del Carmen",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNS196S3hwdW11Wk1Yc1JnMGRCUWlQaW9rOUYxcTQ5WnFyT0RiTWszTDd6N2s0X1JDMmNpSUJFRm1abWpqZFJIU3p1THE3bnNrMGNnaHRNZy1NdzZFNTJLRy1rTlNDMW1ybW1vcVdKb0ZCQS1zRC1iV3EtRU5OU3RmNU9YVkZRMXZEbDlHS2lPSXNpcmhOOGhhM3NWdDAwcGoySDYwaGVRVDlTTVAwdld0Yk5oYXdReFU4NUYzNXUzMTI0dTlaNWVnSU1heTAyOWlp?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Área Costa del Sol",
+   "titular": "Una nueva cita con la vela aspira a consolidarse en el calendario náutico de Marbella",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaUxQLXZIU2dfR2hNOHpfQ1YwU1VkVW9qelN1U0NzYW5XMEE2YTVJLUdiTm9hWU1jbU1VeHZMVFRQbm9udzl3VUY3TjdvUXdjNjJsTGgwWDBJMmx6c2dFNXROMkJPa0hwb1NnRWdKQmdPYUZ4VVVKb2VsNkpRLTdZQnFFNmRCMXVlZHNDXzhwN003aDNBbXU2c1lMdEVJZXc?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "OkDiario",
+   "titular": "Pablo Motos (61 años): «Llevo cinco operaciones, alguna bastante seria que he tenido haciendo el gamba. Per...",
+   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPajFMWDNlUGtYbXVFTk12OTN1SVJwZl9hbDBCV3RfVVVZYkxfdGVjd3FITFZCVDEyclZrcy1FLS1BcnFJV0RPQlZkenhVVjhENDRISlBqckFDczIxazA4U0Rnc3F6UFJOVWRCVlhNRG1SOE5JSDAwSzlpT1JvQTRUcTRjbHY5Nml1Sm5iZVFLTlRUeHVQY0dTV0hpX2tRSEt4cVRwS3E2azVyQWdEOWN0SmF1a1J4V2duVUVyUkRGeHRmRTR2bWVtQUNFSl9LeFctc21wYU11RDkyX0d1Qjlnd3N0VDRXLW5rY0pWbnZEOWhNTF8xUkx2aUZqUlV2N3U1a05ibHZpZWjSAYgCQVVfeXFMT2oxTFgzZVBrWG11RU5NdjkzdUlScGZfYWwwQld0X1VVWWJMX3RlY3dxSExWQlQxMnJWa3MtRS0tQXJxSVdET0JWZHp4VVY4RDQ0SEpQanJBQ3MyMWswOFNEZ3NxelBSTlVkQlZYTURtUjhOSUgwMEs5aU9Sb0E0VHE0Y2x2OTZpdUpuYmVRS05UVHh1UGNHU1dIaV9rUUhLeHFUcEtxNms1ckFnRDljdEphdWtSeFdnblVFclJERnh0ZkU0dm1lbUFDRUpfS3hXLXNtcGFNdUQ5Ml9HdUI5Z3dzdFQ0Vy1ua2NKVm52RDloTUxfMVJMdmlGalJVdjd1NWtOYmx2aWVo?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "Atlántico",
+   "titular": "San Adrián de Cobres pone en marcha la segunda regata",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSTd2aFhjQU9pOGo2aVpETUtGWGU4cjZhSE9BelNDanE5cERMa29ScEFBcV9CakQ2ZU0tQ1YyMENoTGxFTjc5T0JTcnRXZU9LSUt3QTlJZmZpZDFIQWkwT2xheDltaVZPMW9tU25zcGdFMzFKNjBneFFsTFBQcU0wMjVKb0s2Q2xxb1Nid2c0TU16dGpFdUZUZw?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "La Voz de Galicia",
+   "titular": "Porto Si Mortos Non pide una reunión con la presidenta de Portos de Galicia",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOYmpVeTRweEN4ZzdwQXY4NXVFcUhSZXFxSVBxZmdjWm9DUV9hYzI4WVZWckJ2Qlo4Ukp5VUtvRGdtZ1M4TjBod2tDTmU0U25ZcEFpRWlRUDVzZDAtY0lobjR0QWx5MmQxYWVOTXBfNk1aNkZqeW1oRVhSYlhyOTBFZ1lYbGRCMzJGbXNLbzFMTjNDcHhQc05rc24tWFp2NlJGUzk3WGVtbjlrY19DcGdJZVhFNG1Scm5DRjFxeXRCaUJFNmt6WnBhcDg5cHh3TFhxWTFRSHJ5REItRFRLM01aN01CZWhkbXo0Mk80NVBtY9IB7wFBVV95cUxOYmpVeTRweEN4ZzdwQXY4NXVFcUhSZXFxSVBxZmdjWm9DUV9hYzI4WVZWckJ2Qlo4Ukp5VUtvRGdtZ1M4TjBod2tDTmU0U25ZcEFpRWlRUDVzZDAtY0lobjR0QWx5MmQxYWVOTXBfNk1aNkZqeW1oRVhSYlhyOTBFZ1lYbGRCMzJGbXNLbzFMTjNDcHhQc05rc24tWFp2NlJGUzk3WGVtbjlrY19DcGdJZVhFNG1Scm5DRjFxeXRCaUJFNmt6WnBhcDg5cHh3TFhxWTFRSHJ5REItRFRLM01aN01CZWhkbXo0Mk80NVBtYw?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Comunica GVA",
+   "titular": "Agricultura defiende ampliar los días de faena para la pesca mediterránea tras la propuesta europea de alcanzar los 180 en 2027",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE02RlRmQ3pCcC1vVVo0V0VsbEd1cEY1Y2RWV21nT0VEQ1NNWDAzMmxrc3hFU0hLNWpMS3Y4d0FpME9nNnFpVnpGV1J5WlZmcTUzcGxwbFpmVE1tODJneFgtMVlSZDhSMXE4VzJFU2c5Yw?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Valencia News",
+   "titular": "Agricultura defiende que la pesca mediterránea alcance los 180 días de faena en 2027",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQUVlzclBZRTBTYnh6cE5Wal9uaWVNRDhGbkliZl81NnhORUxiM0c1eGQyblNCWlJ1ZFdRMWpZNmdkSzA2OHgtNjNFQXFHQ2R1am82SERrdl9CTHcwbHY5MkpWV1dqZV9XR055N1FUYUpHVTJVbkhHcFpzV2tYWVVBQ3NXaUpLdHlLNWl1ZQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Actualidad Valencia",
+   "titular": "La Comunitat Valenciana impulsa en la UE ampliar a 180 los días de faena de la flota mediterránea",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbmpxM1NqVEtjT2c5QnoxSndpZElfc2hZeXk0REhsMlkyUXowdE1ubnNFamlHeDc2YWFxQjAxdmxzNmNyTHRuRWlkUU5xSm8yQXByVWZkdEloM1F0RGs4b25rcmpEeEltdHhKQ2txaEFhcm1yS29VRnZ4VW5iYmloZldQelZUUy1DOUluWA?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Actualidad Castellón",
+   "titular": "La Comunitat Valenciana impulsa en la UE más días de faena para la flota mediterránea",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdHNGV2w0WlBNQ2lTeThpM1dmTThSQ19sMDZwREJYVGNuSTRpU3J4OVNYRnpKUTlES1o2cGJwdUFJS1NuZEFvZWpBTkg3SGNMQmVHZEprTWhvd1BwNW5uUGpiTUZId0NXa3ZyNGt3ak9HODVzZ09CRWs3a2tJMWVEVA?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Castelló Extra",
+   "titular": "Pesca pide adaptar la normativa europea a la flota mediterránea para alcanzar 180 días de actividad",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOWjdUQXJ0SDVvUTk5UWZ4WmctWXdESDRpMjM2ajdvam5uajU1SFVLb3lYODg0Y1hkbmtPRXM0SGV5VmRRQ1pJUmFNS3JtTDBQXzk0cXlVcVlXdlZ3T2ZOdlhyaXZEakxSQ1hEdUl1dEUxVzQyRG12VTh2alA5d3VYa1VTTnE0U3ZXTXhlN3NtWnhFUWw3NVpZd0lVeXFIdVprbVprUWZXQmt3VkpIaTRGd0kyOW9qOWpPRXRqWHVCSlp5NDYtOWRUN1hrZEhSYmk1ZFg3OURITFViMy1YMzRQNzY0Mk1mZ1It?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "buceo",
+   "lang": "en",
+   "fuente": "The Times of India",
+   "titular": "In 2025, Turkey sank a 45-ton M62 tank off Gökçetepe to boost diving tourism and support marine biodivers",
+   "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxPU2dtZFBiZ1VITVQ4enFqTzZtTmZaS1pUZDg0REZjRFI3Rkc3dGhDZm1oQnRuelFidnVvemM0SEtyQkNheDVfZnVYTkZGS2FWZVRpM29KRVJ3R21WM2xPTXZyVmFMd21vaF9QZDlXbGFycW15dnRwWDVOcEY1NmdQSG9QZmdTZ3l0TWJvRndPcUhsb0tBT2FZa1JkVXVyVzdZa3o4dXc1VXRmSXpaQjZ0T0VIT0FGaXNFM0FaOTFBNXVpWDdjTUNJZ244U1lGSU1qS0RRRHBxNlp6WjB2QW5tQjM3VzRiaEdsTVpuQ1p3ZWVHWDNVR0cxSXFWQ2dNTGJINnNCMGcwVWRtblpaM3VCalZGbDdYbFRyWmpCczBhcHZYQ3Ewa0VsOEFlZmxpNmZJd1VOcDdGOUgxT2NxZ29senNTV3UtN3NydHBVcTRrSjZxWkwyQXB1VWxUYW9TUWFYSGdRUkVUUDJvb2pfZkk2V2xXYU5KMzlVYzVaQmtfONIBhANBVV95cUxQejFDVXYtZElBVndZSjlncGlqak9NVEJGcFFNamhSanBOdlRSR0llcTVvSkxwSDJnYVptSmNtZEVScU9yN0dUQ01WVjJkeUxtVFB3MzdlaF96Q20yYnlnUmhwNnppR19ldFcxNVFPczByeDA5ZVNiWXBpWnBJdmFlWXBDZEdRWEhBVUhFdXk0cXAwbDR3MUFyMk9RVThaLXlydG92TzVsWnVGZHRHWXc1QzhxcFBvVmFBbVByZzJUYS1Gbk1GdXg4NEZyaVV5WUduSVVOR0dTOHNldng5OGx6Q0Zwb282Tmk2ZzgxMHZHZWlwSlI4N0NSeFRZQjBLSklhYjlSTUppQTI1b2JWUGN4NVY4dDE3WmxlTXhsMWlLU3lEc0xhanM4OGJRS0Y5ZWZDTGRNTGJ0ZGp0NG1aQnJfU0YxZVNlSmxLWGkzcUF0SW1uWHR4Y05uZFpKX2NyUl9vODhsM0dCQ1gxeEdsc1hJWXpCTU5iOHFlSlg1djR5X3I1Qm9w?oc=5"
+  },
+  {
+   "fecha": "2026-10-24",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "Financial Times",
+   "titular": "The cut-price route to buying your own yacht in the Med",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHUXBNS1hFbkNENUdCRXFldHVUR1JWUzhkZnFnaHV3RDlIQTFOMm5NY3BXV2c0dlY1N18yN1FwUHNnMkRUd2Vqd3VmR3FRdWJZT293R1NjMlNkaHVUS2hjODhUMTZxU09iMnJzWXZ4WXE?oc=5"
+  },
   {
    "fecha": "2026-10-23",
    "eje": "buceo",
@@ -160,6 +256,238 @@
    "fuente": "The Guardian",
    "titular": "Decomposing whale near Sydney’s Coogee beach should be towed out to sea, Indigenous rangers say",
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQYmVBc3IzQ2I4NVJsLVhheE1PZ19VLXItSTJDV1EyUi02V29LQ3ZQYUxLRmItOXBUNVRweE5hRTBPc3ZDcUFCT3R2d0VzQVhmR0Y1MThfQUR0dmIxRDFWUEhXZkNDQkxTNG5fQlZxOUx6THBLcmtTay13c0h0MGxOSXg5WTdmZlRyamtIUWh5TTd4aU9wZVpMZ1M0eS1JWm8wOV9kYUd6WHdNMEJWMXJXTFlkRHN4UnRmcHpXa1d1YUE2RkoyZ09oTDRjVkpEcFUyVmxwNFFpMGxwT21GdkE?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "www.marbella.es",
+   "titular": "Marbella celebrará el próximo 31 de octubre la I Travesía Puerto Deportivo...",
+   "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNSlNadWhlaGNTR2RBOTJTQ1ZZWEdpTWNmVnZyOXdWb0wxMnBfTHpTZFdpMjhWMk9ZQ1FSY3A4Y0ZLMUZTdDNQRW8xdzFxeEUzRm5FVUItZFRMUUV4Q2RUcEhYTzhjRjN1WDRQS1p4eGpqR21UYjJFU0UycWlRUGNaaFJ5N0hCQWpyWWVXRDZKRDZwVVYxWS1XN0NlV2FuLVRJVGxHVExRdmVTMnpXTzFYNV8wZFkxdlQzWVJnTmhhWHdjUkkyOTRBdWNRLWlxMEJ3MVV4RVhPOXVLcjJaeXlkZWVBX0tZQVkxUTUwUnMyT2k4aExIOFlJY0N2c0dmeXVIQ2Izbg?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Ayuntamiento de Guillena",
+   "titular": "Los mayores disfrutan del viaje a Marbella y Puerto Banus",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZEhneFJ3LTl4T2h4VjdYOG9fUmRuamdlQkMtOWtzQ0RyNnNSZ2JtdHhQRE8tVVJFTUZVTzVYb21jaGhVLWpTZ0pIZExvTDV2VC1aNkNYUHZMUng2MTVRTVBGZFFsS0xqVGI5UXRveTRHQ3EzTGdqa3JvLVJISFFzR3p3MzZ4Zw?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Aemet",
+   "titular": "Weather observations: Marbella, Puerto - State Meteorological Agency - AEMET - Spanish Government",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUFJJSTlsOE5Wa2huMjkyc05ycmQxWjZhTnZxU0dYM3BtQmxwQWJpaEFCRW83VkR2NmJzeGdxUnVpMnFTMHNjdlhiM0RlanprVV9VQ3gxMUdIWURTdTlhN0RXSDFwZXRIWWFLQkZIMV9lcmN0NnN6RlJiVUVsWHJGZWpvY2dfamdzcFZWcWtUMFBtb1VtQWRwaFZIcS0yS0JKX2IxbGVTbnZrVXJBa09aLWRmM1V4ZlZESHdLTXloQjZFZw?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Malaga Actualidad",
+   "titular": "Marbella domenta la vela de crucero en la I Travesía Puerto Deportivo Virgen del Carmen",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNeFk3a1VxSC04b3lKdktsWTVDYkRGUW1wLTZzdkplVzd6RGJqSGtjRnBUeURFTnl4QjdObDRXcS13TWRoV2dHMWdzSzJ3UHY4anpzMWlza01rNjlFUDEtQW02NktaWEtqMUVlelVHVlUzNzdzU3N0amh2N2h3LVMyZHlpbGVKVkpYU2lTeEpQeUxzQXhhSlVMTXp2ckd3MzJNejFXeGhYajRWMnI0dnFrZUNFU256V0d5a01zamh0LTh0d3hLREV1dWZ0MGVEbzg?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Al Sol de la Costa",
+   "titular": "Puerto Sotogrande participa en Melilla en el III Encuentro Marítimo Suncruise 2026",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOekNuZ01sOUtIT2ZFTWZPV2paRDBGeDhnTnU2UnljVzRiSjdZUmlVOFNKanFQZ3IzbUlEUzkwLXZfTzBHMGx4MGpZVnJ2WGQ3RV9WTG1xUFduWklJc0VfemRqQnFzRU8wdE9PMTFhMFBQczVrbFloMlM1cDQxclVaM0xZZ005cGNHQzJiRy11SVRTYjM1YVdtSTBZazR1Z0IzbEdvMm02cGRJMDZNZElR?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Al Sol de la Costa",
+   "titular": "El municipio de San Roque renueva sus cuatro Banderas Ecoplayas 2027",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNHVCcVpNT0M2QzBSaFVkUnRycDdiWWR6Q0dCYzNGQzJNR0VzeGdXVXhvMnRlNkpEdEpqOWZxeVBlVWpXTmlaSG5xX0dHTVl6OVV3emVRYTVzdDFNZkxIVmFZZjJsTUxYcnFMaFBDQWZlME1Lem5PNWljVTF1N2xVeHNOMFJrX1Y0bm9CR1E0Mjh6TlZKaUlVQlczeEw?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Al Sol de la Costa",
+   "titular": "STRAIT+ ya está disponible en la App Store: StraitMagazine lleva el Estrecho de Gibraltar al iPhone",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbWZqallUUnBsRmJJOXlDR0ZOTVJwNk5iN29aVkkzVFdJVGFvZnNUWFh3dVEzc2ZRRFVrVmdXM3RXS0xiN0h6U2JOU2ZxWURRLXMtaFJMMGRBN01aSnhVT0xOcjE3dGJjMmpMU084M2hGVXREUFRfeFQ1LWN4ZEhGZVFFdzBmOFJ4dXlBb3doa0dpQXc5SlhENWdadW1MZ3kyNmx1YVY5azdBeFRrWEdrR1h1N193WDRXNzRkSm5nVXp6dlk?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Noticias del Vino",
+   "titular": "El pequeño pueblo donde Joaquín Sánchez dio sus primeras patadas al balón antes de ser una estrella",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxORGlBM2xaeFBIYjNxQkxkRkZhU0FPQk9lTnhBOHRVaFBrcWZjTHkzN096amF0bXBOUHZONWo4SWFwck1kcEVvZnBvTFZRUUtHbjRqUmZfQ1hoa2JPeEtBSmNuZ3hGX2VFWTlZMUlBUmJlYXg2bTVrWGthbklWdDdVaXVjNUpkaGt5YlNRblR3clNILWZNX2VjbkIzX0xJbWtXZnU2RVhkTFhlclM1QjNteUJfRUFnY2QycDFCZ3djQWhhSWpGQmh1Mm9BX2ZIcmlXcS16VDNaZHkyMHpEdnUxR2hqekFtNkVub2lWM00teEY?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Área Costa del Sol",
+   "titular": "Aparcar en el centro de Marbella por menos de un euro al día: así puedes conseguirlo con este carnet",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdFU4LXNpNVpuMElKcnAxYXh0U3hJbVE3bEdmUWQwRFRpM2EyMW94cGtyaWxSemJ5bXFzMjI0MVhTWHhjdWpWSzE2SEd0RWwtM0s1X1gwZndEQlQ1aG9GTVYzX0JIbU5OaGVLUXozanBLQjFSek4yQkdBLWthZ3RNdWR5ZXdpc3FFa0JQODhybmw1VGVkX1NFTEREbWluQ2dlb1JDZ0E4MkpMNlE3cmw5SlFyMF9YN2l4SHh2VUE3VVNRQTNrbklkb3JOaXBFQXVRdmlhSURFYnY?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "AZ Costa del Sol",
+   "titular": "Marbella celebrará el próximo 31 de octubre la I Travesía Puerto Deportivo Virgen del Carmen para impulsar la vela de crucero",
+   "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNWFFoOVBjLUpiM2JqQjltN0ZkTkhIQTZ5bURseGpwZWFaNTFxRmdLTFBLczFUMmp2Vy1XUUpNRkhtTF9USXpKRGZxNklfRmsyQngzWWZFSkZwQ0o5REt5SUd3dGhPZUFseXBwQS1XcU0wZnE3UG9HS09pXzM3Y3NJcXZISVh0dWM1R1p2STR1Z3RET1FJWHFYZmgyYVBvMVJYaXNuck1fWm1UUUF1M19abWVKcG9HcmEtMDE5TWVRMHEyTF9ranZ1cE1Bdk92d1VVMDRmNXgxSnZZa3FQN1dPLTZ1LVBQOWFNcHk4RlRicUNQOUZiMDNtRg?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "AZ Costa del Sol",
+   "titular": "INFOCA y Bomberos Mijas colaboran en una nueva quema preventiva en El Chaparral",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSkZhaEdiVm5KazlWclpBYmxGYUcwX3EzVm9FcEIyWHVXc2lHeGdUZGdNeUZWWHhXcHNlT0FHR2ZLcmJFcmhwUFdVdXMzZkN2SzdYNGVES1B2aUczdGZDbEZYZjVoYS1PXzFLLWRscDZGU2VrRnlnMUlSMmYxby11Rm1zUHZ3b2RKV2YwMUFYdklUNkNQMFNfUmdjNnl5cmNmQzVjeWRHUHdRLVFrYU1ubW9LaWhUU1E?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "MotorVSMotor",
+   "titular": "OBEST Mini Cámara Deportiva 4K 360° Con Accesorios Magnéticos - Impermeable 30m, WiFi, Batería 800mAh, Para Moto, Buceo Y Vlogging (Blanco)",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNjhPU3VpOWVmQnlwYkFCYm5PNHBrZmJkUFBqVEJYT3QtYTZUUk12QU5mWW93dnd4QTVMcmVvU1pUTjhxV0hhNUpHWE9KME9uejJJTWpUWHFsUmpBaXFBZHVLenE2RDU0aFBSdjYxQWVlR1htRDFFMTZ3YUdjMWFQUXVqUXNjRXZ6UEYwbVZ1bVBxd0RjM3hncFl3?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "Periódico de Ibiza y Formentera",
+   "titular": "SCUBAWEEK 2026 incorpora un certamen de fotografía submarina y estrena una exposición en Sa Peixateria",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNanZfNGpTNG44VEZkUExTZ1BjZ0I2bzY5WGFZQzNud0lhaTJJRDF6OGYwUVVuTnRnUHZUeERzUW9XaW5VQlZtNEJ4cDdIY2VPc2UyNV9jelpTWjFmMks3Zm9oZ0pVOWRXVEdPdWRSWG5WQXRWZGRTcVZGN2dDeEtxX1hjdy12YThGTElWbC1ZeElDWnhoZzlNcFBLWVpRNlpuMzhNQWZ6S0xvM1ROV0daaHFzYnozRmd5SEpGSm5jTnA2Z0xYQVRQNG42OTh4RXhTb1VpcnAySUE1T1pzbWJndFhfNkItNjZJNFlv0gHrAUFVX3lxTE1qdl80alM0bjhURmRQTFNnUGNnQjZvNjlYYVlDM253SWFpMklEMXo4ZjBRVW5OdGdQdlR4RHNRb1dpblVCVm00QnhwN0hjZU9zZTI1X2N6WlNaMWYySzdmb2hnSlU5ZFdUR091ZFJYblZBdFZkZFNxVkY3Z0N4S3FfWGN3LXZhOEZMSVZsLVl4SUNaeGhnOU1wUEtZWlE2Wm4zOE1BZnpLTG8zVE5XR1pocXNiejNGZ3lISkZKbmNOcDZnTFhBVFA0bjY5OHhFeFNvVWlycDJJQTVPWnNtYmd0WF82Qi02Nkk0WW8?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Heraldo de León",
+   "titular": "Galería de fotos | Semana de la trucha",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTUs4M0VlVmUxUlQtczE0TFNaTTkwRnUzbkN6dlZjb3BycXRUa1dOVXc1SnJxYUFxWm1TQWRqbjNQaUpVSnZFZU1WRk94VEtqZVB2eUIyby1Ca3JnSkl3UUVWVnR0Tk5lbjJRVWpkYjRkOHh1MEh5TFVWWFN0N0xuZ290QnV6ZWxEeTNPWWZ1dl8wWXZXYUlualhFTWpzV2hzT1cwV1h4T041TzjSAasBQVVfeXFMTk1LODNFZVZlMVJULXMxNExTWk05MEZ1M25DenZWY29wcnF0VGtXTlV3NUpycWFBcVptU0Fkam4zUGlKVUp2RWVNVkZPeFRLamVQdnlCMm8tQmtyZ0pJd1FFVlZ0dE5OZW4yUVVqZGI0ZDh4dTBIeUxVVlhTdDdMbmdvdEJ1emVsRHkzT1lmdXZfMFl2V2FJbmpYRU1qc1doc09XMFdYeE9ONU84?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "ciencia",
+   "lang": "es",
+   "fuente": "La Vanguardia",
+   "titular": "El tiempo en Playa de la Ballena hoy",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBrWUtpU09Gak5XOC0yYkVqUHl4WkJQaWN0RnEwWUZDNW9OeGR0Q2V0dkdDQzBSZ2NiaWRwYUl6S2h1czlYSXpHaXNMYlJnQmRRNXJDZS1GTHRfeDhQeXpXQ0RyRHc5NXR4?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "en",
+   "fuente": "Metro.co.uk",
+   "titular": "The UK is about to get new flights to three spectacular Spanish cities for £30",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVVRFN2VhTHppZDRINHhBSEh1LUVDTDVCN1d2QlJXcVBqZ0Z3eDdKNTNuVmlRTlktVHdXVVhkVlBXeDZ6TmxoeTJtTVQ0S2VhOGx4OFROdXExVXpDREdGU2REY3IxdVJpN1ZqdFZBLVo0R3FORTRVc1FBZGdiUmpfM1RwUXpNaGV0WmtPcmRzRkloWHptb1pLT3pCZ9IBoAFBVV95cUxOUHFPUzdQT2tiekNvckhfV2R4UUxaWU9vU1doeklOLUJMS2xlNWZGbEtkeTUwWG1BWVB5UUl0LU9oR3lldWlHVTBMb0duc0RSQXYwZEd5bUFJSHI1c3lzVUN1Z1FMXzlSMHV6MW9WYkczTXhqbzM2aEhGYkVpZC0yQ2lCVnJ4MUhnOWxsS2pZM2poQ0ZRSHVHOU9vWUUzVEla?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "local",
+   "lang": "en",
+   "fuente": "StreetInsider",
+   "titular": "Balcón del Mediterráneo; A New Benchmark for Mediterranean Luxury in Southern Europe",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNRVFfdllOTmRmUWl3Unh4LTdwaDQzT1hGckc5dThKRHoydDJnVklPdWd3aWpZc1pmQlF5MGtVSXJFQzJ2N1c2dmFjVFBVMVFwSl9BbFhRQjJIVjF0cnBFbWJfQkpDcDd0QWhqRmctemN4dS1lbWFSRzlsMHpSLWtWNE12c3NUMllGQ3FIRFJpWUxZbzNFelktQ2pxTU9maUdWQ0JFS05QeHVzRzJfTUdSREo3RlBpbkZXR0RqdTl6UEZ3Vml0YnNWd2lnYmQ4eHljYW1DNHMzOWIzcHEyc1NfbVJ3?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "buceo",
+   "lang": "en",
+   "fuente": "DIVE Magazine",
+   "titular": "Polish cave diver breaks world scuba depth record with 338m descent",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRkQ5ZDdwbUl4SzBQNllqd2p2c18zRU9tYjhfM0ViR1dvdVZNLU1lMVU5My1zNk5kT1phVDZ3bXZyUlBoM3YtWW5oSDlkT0VqeHRrNVRqVGFrQ053M2FNRTRubzlab0FWakY2T0duZEFWT0lSWlljQ1VxRDVQZWIxbERUM1pJN2k1MmxXLVRHNnJSY21Nd05GbEpyTzRSbW9sYWxESTVMOE42dVZHdWdr?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "buceo",
+   "lang": "en",
+   "fuente": "Monochrome Watches",
+   "titular": "Just Because: More Than Timekeepers - Diving With Doxa in the Gulf",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQc09oVFVxMDBuT0RtZ3g5ZlYyNWVJZWt3VWdJZk9kU1VMblVHR3hwZHI4TUVfdi10TlpTMUQ4YjdvYlVaYWJEVzlxNW9fTktITEx0RmNpWjJQeHpGSThKeWtZQlJuano5SHlVNVlxRjBVTDJpdkhrajJCYkV6RG1CRkVRcWY1VE5SNEE?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "buceo",
+   "lang": "en",
+   "fuente": "Facebook",
+   "titular": "Canadian high diver Molly Carlson became the first woman to dive off an iceberg after a four-year search for the perfect spot led her to Twillingate Harbour, Newfoundland, in June.",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQUE1DMjJNbkxNejR6WUxDS3NZeHhidzVkZzhGWXJidU9oUERUVzhmRkwxQ3BsbEotWGlpNTEwVDZaQlhyN3VhUFVGR0gwZFhISG1VbEs3anI5c3RLWXdaVlg1XzlxVnFiYUZ3QnlHUkJjZ0o0TlRNU2VtREpKLThJTzdhV3k2TmNKUlg1Z20tNWVsYnpEbWhhdTV4bk5NdWFzUkUzSkg4ZlhZQzI0OGhWQkJpX0lrSTlJaXBPQ0VvcUFiaDlzd3Q2cDBsQzRWdHcwYk90UVdEWDNCTy12VWg0?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "buceo",
+   "lang": "en",
+   "fuente": "DIVEIN.com",
+   "titular": "Garmin Adds MARQ Diver to Its Gen 3 Watch Collection",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdHY2OUQ5c3F0bzlqa2haSVVpRk5VbHNVMmhwcUYzUzctM3B6MVNoYy1aUHRqMGZ6ckctQjB3cUFuOVdKZlZEbi11Sk5LOE5pR3dLRGhUVGZRa0IwbnViQjNjb2htMGp5cFJsWk5FVk9QdFNPRVV4aVJSQTUzcGxSQ041a2xiZEFj?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "BOAT International",
+   "titular": "Inside the Oyster community: Owners share their experiences at the annual Oyster Palma Regatta",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTGVKb3d5bmFJTmpvT3U1VzFGT1RSVGlOcHY5YjJFVExya1BXLTlkU0p1VUhQVFpDN3dJemlZZ1BLNjZPV2dNbU1JWEZSakoyc1RfbnQtS2xFTXdzTzN2OUJjSnVxbndEM1dqaVhnR1NLdkd3TlBIaXVCOHk1d0FxX3V0M0tzaU8ycTNiLURTMThfc3F6VHk4LWRpOFVJUGVCQ0VLUy1GRQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "Yachts and Yachting Online",
+   "titular": "America's Cup: A solid week for the Kiwis",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaWxOQjdNZnRIamJNaHFhSzM3aGtmeEh3cXBjeUpxOWxDalg5UmZra2xZdnhpVDh5M0tVeWF2bDB5MjMyR3N1cWJfRE5DZEtkR0tCWnZjakpBN0VlSU9PMG56eDZSSnhOX2NadzhkSUNwZWZoeUFGdzdvVDNRaThpSk00a2dwUS14QUdYbDZtYm5qckF2dFE?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "pesca",
+   "lang": "en",
+   "fuente": "Angling International",
+   "titular": "Fisheries experts call for zero catch for Northern Shelf cod",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTzdTelduUWQxaGR5ek1yNkJORzJBR1RhWHBSWTdoVDlmWTNMeDJEU0RPWG1zRy1HdlZiQ21JeFNlVFJrWlEyRXJIaFQ4aDBCWjg4LXZlcEFtMTVIZ0J0ZWpVbFdZaVF5WEpOOENFaVE1UnBPOTlvdkFpbGxsdm5tMWtxZk9mcXRBb05pREpzXzlYTWtlS1Q1Q3AyVUxOMGRmV0tvRUloMEVHdw?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "pesca",
+   "lang": "en",
+   "fuente": "Angling International",
+   "titular": "Award-winning Svivlo brand bought out of bankruptcy by entrepreneur",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQXZNRUdocm9najA5WW5wTWl5SHkzYUZ6aDdFaVpRVDdkVWs1T1R6aUNIeXZmTHpYZ1RmVVV3WU1BbVhhOTJKRjJ6b1VEVmJZemdUT1VKQnZ2MWt3SzNsQzBnOGJIQzNSU0VubFdycUVhSDJDY3hWc09XUEJTcFdnbTIxVWdHY3NnUkZkVVU3VERqVDkzcV9yQlo4V3BnZlRVSDVTUEM2cXBRWGNhSmFTOEtLQQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "pesca",
+   "lang": "en",
+   "fuente": "Your Gibraltar TV",
+   "titular": "ESG And GONHS Raise Concerns Over Bluefin Tuna Fishing Season",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORVM2bTh6OGFaUDAyZkRBWTVKUHlnWHFhWWpXMlZoNjctckVHQnlhX3BqWHVzbU9Ga2RiYjBnNmRjUm94Qmk3QmxSb2x4TWtiQXZORXBjNGhISXMxRC16T0ZxbDV6RXlXVlNwTmRMZGNNV29yNlVHSEMtNVBSMWVMMnBrMm9kazNSMXI3al9Na3BuV2Flb1FINDZWMUdJWDlG?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "YACHT CHARTER",
+   "titular": "Top yacht charter destinations for 2027",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQU1I1T24wVldrNkFFamNEbmxiWkd6dU1RZ196SGUwSDcyU0dISDVyN1poTUllc0h0bHVNVEk2QlB5N3pPQl9nYnVibmItMkdmWHVac2U2blFsampCakFtQWlfVVU0T2hEUnh3TjRFVVA3Q19RYmpTX3hzTnZpNnE4YWNwRGI3TlMyUm1tb1M5M3lZSHdXbFNBZmtQSmhXa1lwX1g0bWZB?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "BBC Wildlife Magazine",
+   "titular": "Underwater robot stumbles across thousands of sharks all packed together and asleep on the seabed – stunning scientists",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ2hpS1VPVDdQRjRqMXh1Ny1MdHoxZmg4eEh1Z2ZNUmVNSHdrZlV3Y3pGVkE0QlVLWE1iLWlic1l2RHZIZzAyTzN4QlZoQUh5UzNFMVBJR2tlcVVVYjhUNTNESl9pYzBYZEY4VUZfb3NqbXFlVjd5eHprOXVuM29jUThITXVIc1JkOTYxS1NqOWtOVUZxdWxQSDlYOTBhdw?oc=5"
+  },
+  {
+   "fecha": "2026-10-23",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "The Ecologist",
+   "titular": "Must whale sanctuary mean the sea?",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5YNmpzZ0RmVHd1R3FacGJEYUhtUTM2QkRmVzdHMXd5N3g3LWFMM0QyMjVObndWTE9CQXVYTGZ6QzRWZnNORm5LNEdYeUJVVUN0Rk9ZcDNTdWhQM2FtWTRMZUZBWDFnU0JRMnRQY3M3U0E2QUZk?oc=5"
   },
   {
    "fecha": "2026-10-22",
@@ -536,6 +864,54 @@
    "fuente": "Auto Express",
    "titular": "I’ve driven the BYD Shark pick-up and it's great, if you ignore one problem",
    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE50WWtSaHJiZDFYVFFLeWNLc1EtdWVGRWtWdkRBd0VqN2xObFg3enBFeFBNQ2MtZ2pSbGw4b2duQ3hBM283bENOUk96TjVkRTU4?oc=5"
+  },
+  {
+   "fecha": "2026-10-22",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Europa Press",
+   "titular": "Junta destaca el fin al \"largo bloqueo\" para transformar el puerto de Bajadilla de Marbella (Málaga) y generar riqueza",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNWnJVSWlCYThlRnZNbHFjNW5TN29HSGV2NGhzMU1sWmNxTXVfUk5yZm1WZ1FuWjhna2JrQkZCVkJSTkxZWjU0ZVdkQ2xaeVVtY0hFYmtTRU9jY2IzOVNuZm1JV0xpNWlBbHZCX0ZoNDZUTDQzdldaVU0wMFIxS1ZSRTFReFprZGQ2dlpERjJwMFp6ZW1zWC1DeFhUTUc2SHdoOUd1UG5oaW1WQWxobmVRV3pzdnRJNzZ5ZVFzY05PSzV4bVRrOVUxc0NmbVBmWXlON3VzeFQtRkI2a2VDdjVPeTc4X0RUbV95TnpKUkRNYzdmbnJoTFNHT1R3?oc=5"
+  },
+  {
+   "fecha": "2026-10-22",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Noticias del Vino",
+   "titular": "Qué ver en Estepona en 1 día: murales, casco antiguo y paseo junto al mar",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Gc01maHJWbzl1NU9SVVVkLTlQWUQtbmI1V09kbmRHOTM1MDZvY2JJbDQ3VEpNbXNfZ0xDXzc1RUlENXNQRmt6ZGE2dUsxM0JYc0M0ZnJqc0RhTmxIMkVyU2Q3blFWT3FhcnB4bjhTbUk4eVB1S0FN?oc=5"
+  },
+  {
+   "fecha": "2026-10-22",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "Travel Daily News International",
+   "titular": "St Barts by Yacht for the Winter Season",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeVAxNWJzLVp2NzhPMVludFdlWEhTRHFKUHRmRE5pcWF4WG5PMnpwd09UbkFXY3hxY2NRRklka25QdWwwYlI0NEc4Y1lGTTcxOU5Tb2dNVEU3VkUxNC10RU9IeldNdFRvalExdjg5a25ueERwMXRZZUNJLV9QTkFSbFFhOG1vc3VaWnVCaTRRM1k5TGI3Mm9CLU91LXdhNC1lYnc?oc=5"
+  },
+  {
+   "fecha": "2026-10-22",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "Data Portuaria",
+   "titular": "Global Yacht Charter Market Projected to Hit USD 12.69 Billion by 2031",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQT055M3BFcEdJVDBNQUxxNUthbDlpdGpVM1J3cVNYd1pYTXZPM0dITlh5VVRvRzl2eWlSN0Z3YnhBTFM4VEMzdHBQWDlZQ3dYdjY4SmxOOVJKR01NYTVWUVRNWF9QZUtET2xqU3BmVUhZMC1rc3NTZmpPd1RlR2xmNlQ1VExkVU1oaXZUYnQ2OWhKTWJjTm1TUW8tdW1aeW9adGlMM2lTS1FGdVJpN0p0QkFxZEF0LXhXLUw3REV2NTZhWnF2ODlV?oc=5"
+  },
+  {
+   "fecha": "2026-10-22",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "Yacht Charter Fleet",
+   "titular": "FLIBS 2026: The Largest Attending Charter Yachts",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSHhtQS1Eb0d1aHIwVnAtdDVyOXZtMVpPcXVLZm5lblVLRUlTVDNFVUpLd3dSeTBSZzU1dmR2Z1hLdV8tTU5Ga0txTXlSX2M2TWVhVldnUURLUXN5TXpmS0hSWUxYTGQ5c1JmWVNIM2QtZHNIbVN4TWMxRk9URzF0UVpnQ3c0dW1UNkVqc2k0NA?oc=5"
+  },
+  {
+   "fecha": "2026-10-22",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "Indy100",
+   "titular": "Scientists dumbstruck by discovery of 'strange underwater road'",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2ZRcHlGbS1CS2tURVpHTnJwVURjVWcxNTJqYlR0SzdSbWhadkNjZGlUTlRIVVRRd2pwZ0JHTFhXazRhcmpFLUFUQUhSc1ZGb1FjQTd1ZlFLLWxyMWJJcVd0OVR6OXE5VVhpV0t3YmFkS0o3WXVLUTYzcGtGQy1Xd25fZUNWMW53bjNOeDVlY1locEk?oc=5"
   },
   {
    "fecha": "2026-10-21",
@@ -1074,6 +1450,62 @@
    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPVVRzanZNUGk3aVNrbzFkOTE4THExcUtWMkZBd1lMWjlxV3BUejVqaW81Q0wycUhoWkczcXd0Q2J4cTE3c1YxcVRXbWZlYWViVlA3X0xpZFBRamVoSHZFQUVzT0QzSUxRTWdXSU1DcjEySXBqajQ2eXhhbE1iV3RWbGNvRVppaE9MMnJwRmhjQTJTOVhWWVZrcXdkN1lWVTJURjlwTU9zUlpQT0ZPbEduWkMzaUFuRDI4OUliSExJanp6bDNwX29XUTNmNXc3NUdVTVhHSmpMTlNuYjJ2R1dVTHBWZ9IB6AFBVV95cUxNU3pfUHV5TXJDcHVJZWUtcmFWVUhYSDFpNlNVSlRzNEEyLUhoNFlzSTZrZ1VSRmoxR0E1b0o1X3VWSFJfLW9wUzljRklOc1B4T1hjNHRCbU8yTVRQdUx6UjNkRlZhdUFSLVpsZU9KREh3U1FLYmFIekt1RmhldkRQQUpBOWt0STBmYU54M2xxU0M5MGFnLVRfdTYzd0VEcWR3cnhYNVR1ODZZSktfX0xNTmtEY2JZeEoyNnN0QnFRRFh6cV9qeWhoOFdvRDUzTng3TG9MRE12dlI1ZTI2Z2x3dVlxcVdubzJN?oc=5"
   },
   {
+   "fecha": "2026-10-21",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "IPac Acuicultura",
+   "titular": "El Igafa continuará como centro de referencia nacional en acuicultura y buceo al menos hasta 2028",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPb1dsVUdLTXpISDBtWlQ2UzJIVS03aEhKX3VtZFpaR194TjhUNUdqTXJCYzhpUkVUZDNrYmxoSFFndWtpa0dqcWR4cGJTRmp0X0ZoblJFdnRUVjJ5SnozcDQ4YXkyR0xGV1g1R294NHg0S0x6bjRlWHMzUlF3MFc4VmFHTkZBR1E?oc=5"
+  },
+  {
+   "fecha": "2026-10-21",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "3DJuegos México",
+   "titular": "Crimson Desert recibe un DLC que finalmente añade el buceo y más historias a su de por sí enorme aventura: todo lo que llega al juego con Charting the Unknown",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOTEJnYjhaUWtJVUpPdEp0UmtWYWRCcXlqU21kbWEtV2tseC1OdEk1LXpNQ21yNUxaYjdqZE9GUXM0eThwYmU5ODBVWlZMb05kdmRmU1ZzYkpvV0tSMzF1LUZibjNtV1BLQ2tYU2EyX29Gbm9oRWNxOUIwR3NYcm1BUVNzTzZ0c18yQ1hiTVBINXkwT1hKdFlIczhLRWg1Qzh4M2FrRjFGZ3ZXNWp0NjdpTmtSVG4xb1VrNDItLWhnbnFzaG11RFd0NlhwZVpMSEFDVkl6NFZSSk5yd3lQVXQxLXh2am5YS211V05jZTA4M1kxUdIB9wFBVV95cUxOLXU5U3R0WnlRYVBHUEFUd0ktdV9SZFhrcmF4V3A5c3ZQcDNQamhQZmE2TnBOUFlwNkpCYThCb0sxNW95WkRKM1N5WWhxTktBSmZzZkRyYkRuTGZ6UTlEYTRQam12WHBfenNfUE5wdVR5eFF5eUR3WU55LXNOQTVzaGpkZC16S0JHTHhLampqeDRsMlE4aXhpRi1OckFRRGFBR0VjUWx2UU0waHV4bXFnQ1JzdVJyd2laNFRGUWZYM0pjR09FMWcxb0VaNUdGN1RzOWJsTGk2TTZuQTNLLVV3SE4zVFlGbXExSGpyR2pWU0ZjS2FoZ3Br?oc=5"
+  },
+  {
+   "fecha": "2026-10-21",
+   "eje": "ciencia",
+   "lang": "es",
+   "fuente": "El Món",
+   "titular": "Detectan una planta invasora del mar Rojo en Baleares por primera vez",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZjRMRlhBMjlnR3Q5d0pWY0FOOHJTRVpoM2YzbGVFblF5VGRyS2VCNjFuemZZNGFpSmsyNTBEaHVjWDF6eGM1czFhUnY2NW1aY0ZTM1lHbjFEVGRndXNGWXNqdlp0ZkhkLXFLcmJQWVlLVnE3M19UY05uNDJtSTJ2UnN6Z3Nrd0tCWjFHUmI5TWh5akx4ZjBsQ1JUckxKaWJkYWdzSkgzY3YtZWcwMzVJSXFOQzVIckhQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-21",
+   "eje": "ciencia",
+   "lang": "es",
+   "fuente": "EL PAÍS",
+   "titular": "Exposición de tiburones en Cosmocaixa: necesitará un barco más grande",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPM21TdUVQaWk4aFhDM3ZaMWhkOTJEY1JlN1ZPWUtVN1l5VGUyZlI3aURZSEVXM09FTWxkMlZVNFFzTVhqSy1BR2VIX0hCMjB4QXJIbUIxemtFZDNuMVl5a2RuUm9HZnUwRWF2bkVsa1lLRjZDR2NGWFc5WVpDWVlBSWlSN1BKMHpZN1VrYS1LMTJZelN3Tno4MVh0SW5MZjlIaXRBam5CQ1VTY0NNOUhYUGp3U0lqeFpFV0h2dNIB0AFBVV95cUxNNDFzU2NwY0FkSkpxdjc5QUU2ZXVlbzB1MUFUN0F4bGVtMWtBN3QzVmVSdkplQWZVLTVJNEpEaWtUcTFkQ3pYTE9KeXl0ZHZpT1puSmdyMU1Ya2tNcEVXRm5MYmw0X2FNSHdzQjFsc0w2ZnVUd1FadktKbTNsSFJ3V2NSRTd5MGtfVjY4WHNRLV9HU1FBUEZCNElzZ2oyTkM1MWRtb1h3c2VwRXU4SkRDYWx6WUp0R1Y3bzBFelJSQnQta0MtQzRHMmNfdE56Vnha?oc=5"
+  },
+  {
+   "fecha": "2026-10-21",
+   "eje": "local",
+   "lang": "en",
+   "fuente": "Realtor.com",
+   "titular": "14790 Bonaire Blvd Apt 202, Delray Beach, FL 33446",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQW9NM3VZQWtUcURwRldiU3dLODVGenVhVmp1N21CeVF0MXlWZHpxRDh1cHRpdzBkRnpwV1ZRS0taczlrM1lCUGxxakh6RDU2TjB6djM5cDhxYkxEeXV1S3BtVmZ0NENjN3Z6M0ZObjZGa1hNb1YtSlc4U0I1X1pQZnMxYzVzdU9iS0dTMTlISTZGeUdHNGFwNlVYNUtSN1A5Z1k4?oc=5"
+  },
+  {
+   "fecha": "2026-10-21",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "The Guardian",
+   "titular": "The night watch: the YouTubers who are guardians of a shark stuck in a South Korean canal",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZDBOM20tY01USzRneVZsNk1XVmZRN1BLc25KVklNSk50S3R5WDlidDktYy1wVHRHUVoxdGhLdEpFMS1xdXNoOVJxN1JlWWJxRkFfMTFOMHdGVnNfVkIza1d3Z3ZQNDJHUnpwSFhnMWdyMUlxVXQxY1N4Z2FFMWRGSkVISnRXeERCbDNvMzh5eUxFWWo0V2MtUnBsTWJ2MDJJOGx5OVl5SFJfd2JaeWc?oc=5"
+  },
+  {
+   "fecha": "2026-10-21",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "BBC",
+   "titular": "Huge crowds visit shark stranded in South Korean canal",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1PRkRUTVpCTnByLVd1LWt1OUNWRjI3MTNBbzBXc0N1N2Z5Wkxxc2MwNUY0d04xOVlRNDZfajFYaE5RaUtzR0VUVFA4c0tjaU4yQkxLaWlpMmJMTm8?oc=5"
+  },
+  {
    "fecha": "2026-10-20",
    "eje": "local",
    "lang": "es",
@@ -1144,14 +1576,6 @@
    "fuente": "Cadena SER",
    "titular": "El remero malagueño Adrián Miramón y el cuatro mixto español, quintos del mundo en beach sprint",
    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOeWtkM0hlbWhJdmhJQkw5eTNxV1RoUkQwc2h5R3FXaF9TZE5rdnV6SjVIYk5BdUc2MUtqZ1ZadnYtbk5qeHV5N0d3RkVTd1N3YkdiTkVKdmh4bE5aQXJjTHk2YVBhbl94VlhQZTh2czJBbGpCSjRIVzZmRl9zVU1oTGNOOUF4ZlN5SzNrSXpUVzF6ejctaTlmM1kwb0o5Z2gxNEp5Yktkam1PVXNMRU14dW5xazhQMm82Ty1RU0V0c0trOEMtb210UGJGWTlnLWxrTzdjWjVqMVRuX3d2TE5UdW52c9IB9wFBVV95cUxQTDRVX1NTQmFIZjctUFlZNXRmbzVhaVMxTXBYNmdJaURzZGl3UXZHek8wQXhWRURhZmxZYV93N0g2S3V5aTdHU1pjUzJWWUhjZ1J1TTlnX2M1NnoyYzlnTXJsTUxmT2x5ZVc3UnNKRk1vMHNfbjdEcTgyX01UZHM3SE5BTEZ2OWJUQ005eGpvZkV2TXY5WUcxakg0X0hVekRNek9MdHZxR292bThsODdkRzZCOXZ3LUpuRTZDbjRYOFpzel9hcGNJWm1mcmRDOXI4ejF3WmFJOVdqQXNvUjNMMmx6NE1KVDRtWk43ZlloeFAyS0I2aDBZ?oc=5"
-  },
-  {
-   "fecha": "2026-10-20",
-   "eje": "buceo",
-   "lang": "es",
-   "fuente": "IPac Acuicultura",
-   "titular": "El Igafa continuará como centro de referencia nacional en acuicultura y buceo al menos hasta 2028",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9nVjFmV1BlZTdVaVlPd09ybDU2dXVFclo5X3A5QnZIZGRKRDNjTUxKNzMzU1ZfODVmUzBLSUNlTUMzWDRmTnlXa2FjNUlDbDdJeXJ1eFh3ZTQ2RlRtN3ZybzBSOF9DWkplQUVVNjNhTElKb3ZwbmFB?oc=5"
   },
   {
    "fecha": "2026-10-20",
@@ -1336,14 +1760,6 @@
    "fuente": "BBC",
    "titular": "Moment giant fin whale caught feeding on off Pembrokeshire coast",
    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBhUTZZV1hPSXd4WFdvdlRGeThtLW85SmdnYmMtdnh4Skc2R2JZMGtRanc0MmdHSDdHbXhWUlFqcnRBWWJqc1A5TXdISFNQdlBBQURhM2lzY0xXZ2xQbnc?oc=5"
-  },
-  {
-   "fecha": "2026-10-20",
-   "eje": "local",
-   "lang": "es",
-   "fuente": "Aemet",
-   "titular": "Weather observations: Marbella, Puerto - State Meteorological Agency - AEMET - Spanish Government",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPaEZMU0tiQXJJWXkxQ2o4MjJUYkNnUm9EdVFuekN0U094YVhDNUpIal9acVVRZEFRY18wQTFRMEdPZ2draWRrNkd2WUctM1dPcU9nSFVWUGg2eEJ4ZWhuNmtUN3dzUFV1bEtvbWJEdzI1b1pjVG9vSFp5WlNZX3g0MlVUQlRkbFFPazBjNkpQaDBCZUctX05wMEFhaHg3NzZv?oc=5"
   },
   {
    "fecha": "2026-10-20",
@@ -1659,19 +2075,67 @@
   },
   {
    "fecha": "2026-10-20",
-   "eje": "ciencia",
-   "lang": "en",
-   "fuente": "The Guardian",
-   "titular": "The night watch: the YouTubers who are guardians of a shark stuck in a South Korean canal",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZDBOM20tY01USzRneVZsNk1XVmZRN1BLc25KVklNSk50S3R5WDlidDktYy1wVHRHUVoxdGhLdEpFMS1xdXNoOVJxN1JlWWJxRkFfMTFOMHdGVnNfVkIza1d3Z3ZQNDJHUnpwSFhnMWdyMUlxVXQxY1N4Z2FFMWRGSkVISnRXeERCbDNvMzh5eUxFWWo0V2MtUnBsTWJ2MDJJOGx5OVl5SFJfd2JaeWc?oc=5"
-  },
-  {
-   "fecha": "2026-10-20",
    "eje": "local",
    "lang": "en",
    "fuente": "Sur in English",
    "titular": "Storm Adam leaves five dead and 1,000 rescued across Mediterranean coast",
    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZWFSTkxpaWRTS3NCOUpsZS1CQnR5VXJGd3VTM244Tk5pNUxiN19FNkFIOHRwT1lQRmZUbXlXdXZMRERmSXM0Y2hVTk1HdFMwS3lmMDI3LVRIMHBUU0hiWm9hd2RlTUpfV3hlS3QtMlBRXzBJUm5KOW9oa1NCRUJHYg?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "El Español",
+   "titular": "La marca hotelera St. Regis desembarcará en Marbella con un resort de lujo y 151 residencias frente al mar",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOLXBzVTcweVI2bGluMURRZEFZN2t0QnZ3bjRXSFpjY0djbk1OcjBqX1VreFgxMjVqUHgtdGpyVGltZUgwVnItbjFrdVc2c21VMUxnamNoR3cwbnFEdkxJYjBJQmdBOER0TU1RTlBwSEtOdFplTDhMZFJhbnRLcGdTVXM4dVpQT3lhdFNnbEVYWl9WRmNWaWV0WHZLMlVUWV91VUEyNXB1dDhaSnFVZVJ4UmdPZURBQ3FFTm43UUh0Uy1udVFoR3hvMHl2TzAtOWFVRlZvRXM0bXBiZ3B4aHdaTDFDOFdHaFHSAewBQVVfeXFMTVVUOUFVa0dFLWtfSTJSNVBndTJUdUc5WFlSclRjZDRub1g1OWFPUnphWlhIMWpXSU9TSndiMkh6RWdLYVhENjctN0FjYmhhQUswTElocXRQMU5QdGNzeUc3eUZvSjRxeUV6emI1bjNQQi0wMDRDdi1vOGs4N21xdjlYeXFvSUNGcTRpZUtHbmRKVXpheVFobkpTNlVCS3ZCWlhXQnU1eTJ2RkR2bEh4SUM3X3pxZXh6MFhoREJtY01ZVy1oY3RsQ0FNU0VKVmFsV0RZLVJ5LUtwdzVjNHhPZkhHaUN3MGFCY2FnSWY?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "www.marbella.es",
+   "titular": "La alcaldesa destaca que el complejo hotelero y residencial St. Regis, que...",
+   "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxQZkhCZjMtOWx0U2ZZZ1lndWttLVRkcFk3T0puVWk1Nm9sQ1ZmbVJjajAzWXlRNDJvN01nbkItZENpeWpCU3FzRWZkdXIzRHd1dWdGWm1SNmdITE94UHNIS1NFOGJxUDZDUFY4eWhBSnkyV3VWQXJfcHpVMDhqZWxoMDZISkFmbnhGcTZRNF9fcGJsYm1DNTFhbHBRWWg1QWo5M29GaHBMaUtCc3JTcW8xQlh3T2llYjFxYzB0UC1OM2trQXpEajNmTk9VanJuSTRKbGJsT3pQMDJZX0dmOV9FRFY2a3RCei1aVVM3Xzd2d2ZhLUlVRFJzR2l0bFBqRTYyUFF2ZzNYVDFOeDY0U3JFQjZzMkNLbnJ6RWZLX1ZueWdrQWFoY25HTmNPcU1YNVBfSjR4RDdaT1RFSzlQMGMwX1U1eTN6TkJaVzJJenVaT2NpZXJiWUlBRU84eUlTbS1j?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "AZ Costa del Sol",
+   "titular": "Adrián Miramón y el cuatro mixto español, quintos del mundo en beach sprint",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQTUZwekN6TW9zRHdkNHA5ZzhQbFZHcVFmOHVBR1JNYXF2SWs4MGY4M0V1X2xMQWp2bHNSRVRBb1pSYkhYbVNfTjBhUHh2UDBMMDB3cWphMjc3SmhvZGdRTEpoQXlFMWFYR3ZkTGRiU1FWQThuaXRxdFJVMzV1YzlENTljQk5ncjFEWFpOaF8tZlpJai1SWFBBcElpaThFTVpsazN6dENtZF9QZndJajdkcDhUT0I0TElTWUtXa09XOA?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "ciencia",
+   "lang": "es",
+   "fuente": "Telecinco",
+   "titular": "Muere una mujer al ser atacada por un tiburón en una playa de Sudáfrica, pese a llevar un dispositivo contra ellos",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbURYVjhoTFVpa0xhSmloZlA0TkdxTTVLSzJtOFZqQ1Z1SEhkOUxQZTZGOThuOHo4LWlUaWlRMkwtUFpUREszMEtkTGxrNDM1V0EzT2U1VHRlYzhDVHoyNVh2eVQ2UXVHVENnZWZ5ZlJfbkJVXzR1aW1aSVdaanpPbmkzTURiakk2UDVxb3RIZS1OSnFhckdnRWdVTkswYVV2R3NsM3o4MDhveGFtbjNsaG5ja3A?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "local",
+   "lang": "en",
+   "fuente": "Olive Press News Spain",
+   "titular": "Chaos in Malaga as torrential burst of rain floods homes and causes health centre roof to cave in",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVjFQVnJQajZnM1BDYkFaeWpkODR3TVRfOW5UYVlWdXRHTVY1b0VRSjMzczA0V3dZV1JkbWRrMVoyLVdNcDFyUExFVFFwWTlUTWNqY2ZzWGdQZF9JRldmWkdUX01oc1RXUUxHUXJoXzkwcE5QYjdWVmxOUGFaV0JaclVMdVFMWUJfOVBhZDlUQQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "Yacht Charter Fleet",
+   "titular": "Final Winter 2027 Charter Availability Announced For Benetti Superyacht SYMMETRY",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQalVXdnFjWlBpbVFDUFhZeWxJeW1DRW4tejNXT0lwZHNuckRoS0NkbHhPdzE3WktVYWNmRkVqN2gxQXpVVVdWZHp2Yi1WaGRQQk9NMldQRHhfY2pwOEVFaVRBWEpwZnJwaTJwM0JIV2FLOUxsWU9wUjRMVUlSWXJmVWVaUU93RTFuaFpPb1dXMmdUUzluczdMQi1hcEY0VFFXTnh2V1Zvc3NGYXlCRTA0b3BRMV9kTXJlRFlr?oc=5"
+  },
+  {
+   "fecha": "2026-10-20",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "BBC Wildlife Magazine",
+   "titular": "Underwater recorders capture sound of mysterious, 10m-long giant off Australian coast | Discover Wildlife",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb0ZzS29FakF5cWxfQXg3cHpmUkY1WnlOWlNCdndnRy1GU2xHQkhRVDJ1Q19TLXdrZUhqbjlLaGprUmNVUkR6bzdkaHZUazRlZXFRNkVmMTlWVjF6Y2d5N3k4anVBUW5lT0lpNlplTzFrX0JGVHlfeGRCRjVLWS05Y0ZMUnBtbDVG?oc=5"
   },
   {
    "fecha": "2026-10-19",
@@ -2258,6 +2722,22 @@
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQczZxT09fUlRBendEcE4xSDNvZWNzYnNLM3dZZnFveVk2Y1pTY0l2WmFPWkw5eXlCV2ZQdkUtUnNNNmdFUUhLb01lQ19xSXEwUmJDandfdXpRdHZxNXNadnNMdk5tYUpKY1lJSmVmWE1MYkZVTzA0aGVEWmdtczctNXhKN3NCbnRRNWJwcXFRa3VCUHZkMVc1SU04OXVzczZwMkJ3d0lPOFltWUFiQWdxUjYza1o?oc=5"
   },
   {
+   "fecha": "2026-10-19",
+   "eje": "ciencia",
+   "lang": "es",
+   "fuente": "Inspenet",
+   "titular": "Descubrimiento de gas en Noruega por Vår Energi y Equinor",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1qQWxzcTVkakFQLXUxZUNJUUM1ajR5MTFZMGVqX1NOX1BHcGVNRzhGMnpUTkZCT0lxbC1BQ3JlUDZoQzl1TmNqNlk1OWU1Wm9mUHdOZXNtSE5CeGduOHBLd0hFZFFjdy16OW15eXVTOWpjV21l?oc=5"
+  },
+  {
+   "fecha": "2026-10-19",
+   "eje": "ciencia",
+   "lang": "en",
+   "fuente": "The Independent",
+   "titular": "I tested Shark’s new air purifier against pet hair, cooking fumes and renovation dust",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQa1ZueTEtYTREdEhoYkJBQmhBbGZYTWxXSmFzWGNMajhtWldaVHlJaXVvWFp4alFOVG5LTXVXaU8xYU9VVWlkVzBpLVJKczJONi1UVWh3akhWREhfai1KUGxpRTBpZHRfajRaMHFiTFVucTJBXzhaZVZEZm9Ya0Vwa05oYWViRVQ3cENRQ00wTlZSQ1RSNllHRWkycHpYcy1XVDdSNWVuRkZVQlVKMDVSc1NaVjl3bWVKOHd6aWY4QWZRT1BzamszdFFUY1VLT2RkX0NtUHZVR3A4NF9KeG5oRW5GbG8?oc=5"
+  },
+  {
    "fecha": "2026-10-18",
    "eje": "local",
    "lang": "es",
@@ -2578,20 +3058,44 @@
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUkdsS0NyNTRRWlMzbU1ER0ZCWnJlQlNjMWJSaWNLdEhIMnNwNktnUWtvdWtfdkhvTlBkUmc0ZFFQaklxU3Rwa2ZSYXUwb3M0b0l6VC1hVmVZMFdxRXV5NEdvRG5KX3ZBX0M2b0lSSnkwcUNaY2NsS1lMWVJGeGlRQ21CblUtd0FhRHVUSUFBWU9jZHozNk9QY1pENERHdDMtOXdZTldFZkFzMjJVWkRV0gGvAUFVX3lxTE9xaWVUaFNXeFJQeXNDT3NoWXA3UlIySjFvQ2s3MHNXRWJQMzZQal9keXc4UUo2S2w4eVRuLWxwRy0tV3FmeUNxZ2pQSFdhZXY2RERiZnR3aGdnU2ZYZHd2dXphODh3VzZQcThaUFh3aUxSYmRmQmQ1VV9vYXM5cFZzcUZwZHg1Rk01aDhXQWg5Wk1nSEpmbXFZSVpmQUtOUm1kZk9UYVhwM1B6WGRTZjQ?oc=5"
   },
   {
+   "fecha": "2026-10-18",
+   "eje": "local",
+   "lang": "es",
+   "fuente": "Al Sol de la Costa",
+   "titular": "Costa del Sol impulsa el golf femenino internacional con el Andalucía Costa del Sol Open de España presented by Oysho",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPeHF2Y182ZDdSQmc1VTJBcDZtb3Y1UUhjSnhQdmZscm1zNUszUGlPbkZEZHFuOVRrcE95Uks2aU5QUzJNMmZOZGhRWkNlUWg5ZEZhOEJVVFJOeWVHVU5BREx2dFZBNTNHN29aVUxaY2ZXd2lvNDRKckljR3V6YndoNVpXUmx5SFNLWDFCa1JFbmFETXV3X2RqYXJPX3A5LVNjeWtMNGZTYzZ4d1NiMDNTUVJNRUhjbTVsdjVobkRvOVVCbGpGODlrZ3J4RVFKUUVxNmJSNVg1SEJ3cEdOalE?oc=5"
+  },
+  {
+   "fecha": "2026-10-18",
+   "eje": "viajes",
+   "lang": "es",
+   "fuente": "Maldives Traveller",
+   "titular": "¿Dónde se encuentran las Maldivas? y perfil del país",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9sR2s1b2RLMDZNVmNObEhBMjgzWVBiTlR4VGNXNU5vTm5tTVFxREMwSFVmVG9Ua2ZVYm5RU0wxRW1JRGREdzh4M1FNUmZHcnN5RWhPb1VfRkV6YWQ2MWNHRHBZc1d3SlExTS1TZlVoTXNyZw?oc=5"
+  },
+  {
+   "fecha": "2026-10-18",
+   "eje": "local",
+   "lang": "en",
+   "fuente": "Olive Press News Spain",
+   "titular": "Torremolinos before the boom: Dutch pioneer who arrived in 1963 puts his 1960s aerial photos of the town on show",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMFJldEtpNTJDMzVuMms3TWVRcThNYTFtSWFQTEQ3R1ZIaHRwNlRIRmdNTTU3Z1JPd0g4WlZ0bTZ1QWRjeWN1OFI5QzEtRFBIZUZaMjBvWG9TeFBMalcxSWx5UV9QMC1EYXhMSkE3ZTV0dmN2d2NBU1I3VWE5X01mbzFrR2JGWUtMR0hOa0thTVM0azFtM0pNNw?oc=5"
+  },
+  {
+   "fecha": "2026-10-18",
+   "eje": "buceo",
+   "lang": "en",
+   "fuente": "The Star",
+   "titular": "Haze: Tourists urged not to insist on sea trips when conditions are unsafe, says Scuba Association",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPZWx1UXBnUGdPajlZZU92VmVKVTNsc2puTUJoRy14bHJtdUFCUmo1VUZUdWRxRllFQURIb2lia0RFZ0ZVVWlvX2dwYXpGWmtZTlNya1NoVzF2TEhRTFNFdV9vblJYbGxpalNTTU1tOXRoanVVUk9tQURDWThVWWl2eEREd0otOHJObmVHUHRvY3NCSjlCbkwzVlRhQmphVV9ZYUhzanVxTkR6WDRwbG5NOGFONlF2aW5xWWJQWGRoVk1oQTU3SHh3VXhnSEdzNDZfMmFiZXh4Rl9sNUtGWTRJ?oc=5"
+  },
+  {
    "fecha": "2026-10-17",
    "eje": "local",
    "lang": "es",
    "fuente": "Aemet",
    "titular": "Hoy y últimos días: Marbella, Puerto",
    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1md1oteVB5YWNKT1gxNkVrdlNHZGNmR1JtNmhsSHhIMXY3allmWTZDNjZLcTRTRFBZcmI5b1RtaGJIUTg3cklSMkFxbDI4b1hWeGpUaWZvMzdzYlJCMUNMOU0zcHVNazdJNEdiUmRONGs4MVdPOXd5LQ?oc=5"
-  },
-  {
-   "fecha": "2026-10-17",
-   "eje": "local",
-   "lang": "es",
-   "fuente": "Al Sol de la Costa",
-   "titular": "Puerto Sotogrande participa en Melilla en el III Encuentro Marítimo Suncruise 2026",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOekNuZ01sOUtIT2ZFTWZPV2paRDBGeDhnTnU2UnljVzRiSjdZUmlVOFNKanFQZ3IzbUlEUzkwLXZfTzBHMGx4MGpZVnJ2WGQ3RV9WTG1xUFduWklJc0VfemRqQnFzRU8wdE9PMTFhMFBQczVrbFloMlM1cDQxclVaM0xZZ005cGNHQzJiRy11SVRTYjM1YVdtSTBZazR1Z0IzbEdvMm02cGRJMDZNZElR?oc=5"
   },
   {
    "fecha": "2026-10-17",
@@ -2688,14 +3192,6 @@
    "fuente": "Málaga Hoy",
    "titular": "Marbella despide al conde Rudi, referente de su promoción turística: \"Deja una huella imborrable\"",
    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQU2ctTXl4di11ejVrdFkwc3BmTF94NElUVXJXT0dhdDJuWWI0bmZPUTZzbUVXOGJ6NmZ2YWlmUU1pUm5OeDZLWmc2Zng4Y0RzRUhwVjEzc1FNTWJ1Zmd1MWpWRzJmcS1EUnhZbHhBcWpQdV9QOWtjelhFUXlrMXEtdGR2VVhFQlNkanBic2VWbWNMMDFwWlA5WWJyQk03V0JOS0FObThDX3o2Z0RQb1JGN3hVMNIBswFBVV95cUxQU2ctTXl4di11ejVrdFkwc3BmTF94NElUVXJXT0dhdDJuWWI0bmZPUTZzbUVXOGJ6NmZ2YWlmUU1pUm5OeDZLWmc2Zng4Y0RzRUhwVjEzc1FNTWJ1Zmd1MWpWRzJmcS1EUnhZbHhBcWpQdV9QOWtjelhFUXlrMXEtdGR2VVhFQlNkanBic2VWbWNMMDFwWlA5WWJyQk03V0JOS0FObThDX3o2Z0RQb1JGN3hVMA?oc=5"
-  },
-  {
-   "fecha": "2026-10-17",
-   "eje": "local",
-   "lang": "es",
-   "fuente": "Noticias del Vino",
-   "titular": "Qué ver en Estepona en 1 día: murales, casco antiguo y paseo junto al mar",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1fcFdPT2hpWEJvUnpLbklJWTFRb05TRDBLOWFUQmd1S082Tk5vVGt4Wi03LTlMLU1TT1ZQLXROejhWdnBaendvMERmSXV0RDV2Z3V0RWhRRHNObkw4RzIxeFkydk9KSGo5LWlKVG41NjNVU3NwWmdn?oc=5"
   },
   {
    "fecha": "2026-10-17",
@@ -3610,6 +4106,22 @@
    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOdDJ1cjdlcndQODFMWlhvN3NqdTR6dmRKQWd2N2V4b2liRlkxRFhXdTNJMjFDaTFSR1NvVy12NmxWeDA3Q1ZOaUdhTEVQOU1xeGhVdTJWdEtNU2tOWm9ueXJ0clo4MGgzdUZkZF96VVVZNGRhVFRxXzhaUTFtcVp4QW1wQnF3ZkFFWE83M1ZfY3V3OHNHU1g5YklfdFY3b3pqMnBiNHZKZzdzWkl2OEhKaDJhLS1wTjhaNmY3SnJJUENmellCUmVPMzBYbXJEeFVldkVXRFk4SE4zVkJycXVEMGV5amdfWGJVM3pBSV9n?oc=5"
   },
   {
+   "fecha": "2026-10-16",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "Cadena SER",
+   "titular": "Hypersail, el velero de Ferrari capaz de volar sobre las olas del mar a más de 100 kilómetros por hora",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNSkhwZlZUdXFxeThsTWVKRWVEVlJXOTMwTTNjbExpZHNJd1FlQnBfWUk4Wms1a3JLY3pET2hnejRHQkhuRXhQX01LQkl3OER2YjRRN29ENFlZWDdvbm5zYjJaS2dCejB5djVrTWNUZ1JkbkRFRjRQTGtvSmhwaVN3em5WOVR5OUozUV9iZDgzc3RZTmxsWHktWWZaT2ZETEo0T1EyLUF3ZW4zZkpIUW4tUHRFVmpSTkdnVXVsQk1PWHZSN0RWX3hCZjYySFdpekN0RGRHMzdyN3k0dGxidXJ3eHAtalhoZlhwTFNF0gH_AUFVX3lxTE84ZktxYy1hR0RaellqODF1anQ0cmxBdlRtNmRkZXBTM2F3TGZKbTQybEF2d1lXRnJzRndHQU5yWVdFUGVmRG03dlh1SW1ZLU4zejdEd01XYjZSSWJXNnRkcm5CaGJndXZLTHpBYXJQSFVjbHA1dm9wbkMybHc0dVF2SU01VlhhdFhmV1pvUW13TTFZQjZ6NE5ucW9DRGwtUEphSm9FNmw4SWZlSkNXZFp3QkhqMFFsd1RsYXNlSHc0SWlCQ3ZSX3NlVWVXa1FqN1RJZklWSGVMLVZ4YWI0S1o0VDl5bF9pLTNFNkJlb2hxMllWYzRxc3VMM1RELUdrQQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-16",
+   "eje": "pesca",
+   "lang": "es",
+   "fuente": "Sur54",
+   "titular": "Por segundo año consecutivo, realizarán una prueba piloto de pesca deportiva en el río Grande",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQSHptdUhaOXNhcDdRc2JUQmpwLVN6eXgzWW84LTYySG9tdENCaXlYaXphVkpIOVQ5OGE1N08yMzdlRHNCbnJWQ05FX3NFdnd3X2JBa0NMVWVjaGkzTU5feHg0ODBLUGs2cEJ2UmJLQ2x4UmxyV01VN05uSnF3RmRpdlVmdGZMc2xuWmNSTVJ0S0NsSGQ3ZHVHeDFFRmMxRXZZMHdaN3dBd1hMZ2lxdGRTVlgwSW5ONTVpYlZuMEdsTmxTbm5JbWw2QUFzTXh6THhpOU9DLXBPdEzSAd4BQVVfeXFMUHpyd2drSU9FNjFyZ1Bad3BmVkFJSDdMOUV6Z1BJUHVwaXF1ZXhmQjU5UEVEcFY5YXlTcmtrVE1wY0F5dHo1NEl4Zll5SUVMZDRuY1VxV3B1TzhzRnZvb3REQjVwWkJPSVNSX0pCM214dkZsS21BZ1lOT1RZOFlmMFZFN2Mzai1BVnBRQmZoVmNhV0wxa1Z1a3RLR0xaM2QtMUpyUEQ5VWZERXViZkZkMVFIcjJCUjA3eUs1Vm5zZnhCVFNzT21pNXRPVVFJcjZwVGVWN1o5NVJEc0dWQkdR?oc=5"
+  },
+  {
    "fecha": "2026-10-15",
    "eje": "buceo",
    "lang": "es",
@@ -3808,14 +4320,6 @@
    "fuente": "Teleprensa",
    "titular": "El Cardiomaratón del 061 entrena a 1.400 jóvenes malagueños en técnicas de reanimación cardíaca",
    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQSndadkM4MXV5UHU3QV9sTXdzMUZOemkxZFU0OHlwbEt3RFZYY3BQRktxWHVjejlZRDJzX1hINUdlQWo0azBWWkM3a003dDlWbkFadnc2VkpuaHpXdjA2TXNPLWFvQTE3bktnLTkzQlQ3TWhtN3BMbnpGOXR4UmZOaEVKQ3pyT1F6VU55SGFjZlo3VGlxUF9mZ1RjT3ZRT3FQeEJkdjI2d05MUnJnaS1FbU02aUgxdE1Ed3kzcURvOWRzN2JPT2J2TEFtS2lrVXY3MkVsMmRKZFNOUFdrNkRjbXdfZFhLSENhMHfSAeoBQVVfeXFMUEp3WnZDODF1eVB1N0FfbE13czFGTnppMWRVNDh5cGxLd0RWWGNwUEZLcVh1Y3o5WUQyc19YSDVHZUFqNGswVlpDN2tNN3Q5Vm5BWnZ3NlZKbmh6V3YwNk1zTy1hb0ExN25LZy05M0JUN01obTdwTG56Rjl0eFJmTmhFSkN6ck9RelVOeUhhY2ZaN1RpcVBfZmdUY092UU9xUHhCZHYyNndOTFJyZ2ktRW1NNmlIMXRNRHd5M3FEbzlkczdiT09idkxBbUtpa1V2NzJFbDJkSmRTTlBXazZEY213X2RYS0hDYTB3?oc=5"
-  },
-  {
-   "fecha": "2026-10-15",
-   "eje": "local",
-   "lang": "es",
-   "fuente": "Noticias del Vino",
-   "titular": "El pequeño pueblo donde Joaquín Sánchez dio sus primeras patadas al balón antes de ser una estrella",
-   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPRDJYTWRCb2M2MWkzLUhnSEVFeGI1U1U4ZWZrUVp4cmlrOE14LWRmZHZZN1pfN0tSeEZtV3JqeVZjalBEem5hOGtlSFQ1SVYxVHItY1VGeFo4UzhZaGVWUERxdWU5T29KeHFaQ09ITXFRQnoybjJrWEc0WmFpYThhc09XOWtXbmdnWEZfbkRUMzVwbUNUMG1yUmczWEdSbkwwVVRnYjZOdEF1WHZWUS1NT3JhVDdfM2VXdFFTVXMxeHdUZHlkU1ZwaVB5RUt2WlJoOXlCaDF0ZGlBRkxpSm9TbldKMkhZTWVkQ3NBYVlVSnI?oc=5"
   },
   {
    "fecha": "2026-10-15",
@@ -4232,6 +4736,30 @@
    "fuente": "Yacht Charter Fleet",
    "titular": "Time To Get Festive: Seven Charter Yachts Offering Christmas Availability in 2026",
    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQnVibGN2VjFvV3NwOHQ4NFZjdlRkNE5fYkVkaHUwLXJVY0hrMWttZVRuZHc3SzNzUnBoNHJsanRQR3lKRU5uLVNNYnRjOUxfNDJjaDM5XzJ6LTlmUmVXR1lYNURPbkt3ZlJ5QTkzLTM0SFBUVHkxVmZhZ0VQUjJrV2tGTklxeFFYVTBzZDhzMHhCeXZkR05HYmhwaWdGUDFlNWJFRUNKaFkyRXhXYzZDZm5zWlZZWG51Z1VB?oc=5"
+  },
+  {
+   "fecha": "2026-10-15",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "Onda Vasca",
+   "titular": "El IV Trofeo Social de Vela decide sus vencedores este sábado",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMklCV2phZkxIN1VHejdFZVNRZTZSakNDOV93STlBQ3Ezb0lEbk1ydzQyUW5zSXlCYWJoSllFUXBkT2dSNWE4cGNYNjlVcHZfQl9ZbHdXMThLRGJET1NSNGt4M3U4M0xtYnBhMl9qa29fSERINFozblJkVG5laWNnR2Uycy0zTnhPc25LTzlWcnFmQdIBlwFBVV95cUxOWlMwLThPOENEMXh2T1ZaUTQ1ZUZQS1NlMkpkVjJLVlZfenduYkpLcnlqbGVUU1hXbE9UeDB0NEs1bDh1MmhfMlJlbVJ3Z0t3cEF4ank4VXh4ZE1tckxsTWNZM3c4YlNtb2Y4YmRiejNHbkVEUkhMTkhuakZzMDBtVko3dE1qZk0wRGU0dXotOVV5V1oteTM0?oc=5"
+  },
+  {
+   "fecha": "2026-10-15",
+   "eje": "ciencia",
+   "lang": "es",
+   "fuente": "El Mundo",
+   "titular": "Una bacteria, posible causa del récord de muertes de crías de ballena en la Patagonia argentina",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wOWNKQWN5YzlxMEhuTXZ3cmVFZGFlQnVMNWhHR01hT1Z4Znk1ZkVUMlExa3lRTkw3NVN0aGdEa3Z5bVJDVE02ZU5SdkFKaEN1VVBxbXNJUDM2RFRxSmJYMDlyQzR5dHRqTWNKbmNRR2FGanFYT2VWTUFoONIBe0FVX3lxTE1BLTBFOFIyZUVOSU5QaHNBTEt2Qm9nZXVqN0NSLTE0Ym9GY0JtSDFwUmVrNjU2WkJacVEyV3hEZ0Fid0UwcEoxZnNKbHpFcWpRSE9iMWUzTTU5Mm1vbmJIbGhERnc1d0Z1cGJ3Yzl0dDQ5LWdHVjV6Tjg1RQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-15",
+   "eje": "viajes",
+   "lang": "en",
+   "fuente": "Divernet",
+   "titular": "Komodo dive-boat sinks with divemaster thought trapped inside",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNQnV4SGpJdXNxdmI0OU1BUEJBRHBJQmNoYzdrN0pEUTd4bEJJS1JMcmhIYjBnSGNMUXZ1QU5CLTNHb0ZGaHBKUTR0Z3dlZVdMYTdNc2ItQ2NhYlRabzhpMTU2M1JoODZHZVNsWXJDN2NhZ2JHS2x2OUo2Y3RwVlZvVkR0Rlg5VmdfODNIN09FSG9mbEJGOW9KcjZic3pjN280Yzk5U01vRWJvXzdPdjk0bkNQdGdFbG9WQlE?oc=5"
   },
   {
    "fecha": "2026-10-14",
@@ -4741,14 +5269,6 @@
    "fecha": "2026-10-14",
    "eje": "ciencia",
    "lang": "es",
-   "fuente": "El Mundo",
-   "titular": "Una bacteria, posible causa del récord de muertes de crías de ballena en la Patagonia argentina",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wOWNKQWN5YzlxMEhuTXZ3cmVFZGFlQnVMNWhHR01hT1Z4Znk1ZkVUMlExa3lRTkw3NVN0aGdEa3Z5bVJDVE02ZU5SdkFKaEN1VVBxbXNJUDM2RFRxSmJYMDlyQzR5dHRqTWNKbmNRR2FGanFYT2VWTUFoONIBe0FVX3lxTE1BLTBFOFIyZUVOSU5QaHNBTEt2Qm9nZXVqN0NSLTE0Ym9GY0JtSDFwUmVrNjU2WkJacVEyV3hEZ0Fid0UwcEoxZnNKbHpFcWpRSE9iMWUzTTU5Mm1vbmJIbGhERnc1d0Z1cGJ3Yzl0dDQ5LWdHVjV6Tjg1RQ?oc=5"
-  },
-  {
-   "fecha": "2026-10-14",
-   "eje": "ciencia",
-   "lang": "es",
    "fuente": "3DJuegos",
    "titular": "Que te trague una ballena no estaba en tu lista de miedos, pero este estreno va a cambiar eso. Crítica de Whalefall",
    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPc2V5TmlMd1VaU2pUTjBScDMzRzgybWtCTHZFTnYwblRUb3ZvVjhYUkhnXzNKRUJKNUFqU3JNTWdTU1hGQUNqMkZLREtlZzFsTDhLR184cU5LcVBhN2V6WHBrMVJvd0RlNk1sRXBRMkkzOTl4M3JGOTN1QTVaa2wtd2pucFJVZjUtMmN4dGNWc0NlMzV3SkFBVEpXOTg1OVYwdVNVZWY1RHJOLWhrSmRVWE1ybzllMGRjOE5LTmllRzRlOGpuV3VvdUNCNF8zUnVja3oyc0V30gHbAUFVX3lxTE9kVDFCRjdqbF9JZE9oNmFhSmlyaXZqVlhGZTM1d2N1NzBUWV9KTG5aN2JQTEFjT29OR0VuUU1ISkladTVadm5vdXI1TWVCYXhDTURuS1RnN0RYbUZEM19Ga1hqVWx2SkYwOVpRaTN3OWRmVi1qaVZsclRwWFlyemU3Q2IyU0I5OThacG5zSGkzdHowWjJtbzZUbGJ6UXRNdmNBZ18yYVdCT001SXZibUVmUVlqU0xCOVVOLWFTcEl4dlRhY1Fxekh0YzRnNER6VkdUVGxVUjcyVmVMWQ?oc=5"
@@ -4851,14 +5371,6 @@
   },
   {
    "fecha": "2026-10-14",
-   "eje": "pesca",
-   "lang": "en",
-   "fuente": "Your Gibraltar TV",
-   "titular": "ESG And GONHS Raise Concerns Over Bluefin Tuna Fishing Season",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORVM2bTh6OGFaUDAyZkRBWTVKUHlnWHFhWWpXMlZoNjctckVHQnlhX3BqWHVzbU9Ga2RiYjBnNmRjUm94Qmk3QmxSb2x4TWtiQXZORXBjNGhISXMxRC16T0ZxbDV6RXlXVlNwTmRMZGNNV29yNlVHSEMtNVBSMWVMMnBrMm9kazNSMXI3al9Na3BuV2Flb1FINDZWMUdJWDlG?oc=5"
-  },
-  {
-   "fecha": "2026-10-14",
    "eje": "buceo",
    "lang": "en",
    "fuente": "Smithsonian Magazine",
@@ -4928,6 +5440,22 @@
    "fuente": "Yacht Charter Fleet",
    "titular": "Luxury Yacht Rental OASIS Offers Extended Yacht Charters in Greece for 2027",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdzl5VU5INExQbTVjdlJ1SWxlUVVyOXNLdGZqMVdBRFFORldIVjZEeFBBanVMWmRERktVMFFMUERodlR6NWxmTkdaVkhFLVZNMXI4VVRYb0puTTM1TDJOOEFqS2RYZHMxRlZ1bHNTN3dJUmtqVlpHUjA4cmRmOWswSkI1ZHhuVXN6bGJHcHhFSUNLMEhFQllvYTJPczZpUUs2QmJ6RTZ2WWtFcGt2Tjg4dHB0anQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-14",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "Kent Online",
+   "titular": "Crew set to make history for Kent town in historic race around the Med",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVTJhWUFlSFZqZ0d6Tl8yZzhyWkY1Wi12SnJ3QkRReml5VFg5Y2NBdVRNdlV3MVhCQTB4eUF3SERDbU5XNFlESnJPTnVfSUlSaXdOT3dYUEJaRTdqOFB3QTZTWDNJdDFPa0hEZHFKSEdNMlVhNFJXYXF3WUVFUl9IU0pmbzNRU1k4cVlyRGMyU0lRMldManpUUjJ4Mm92SWpvbURtaXlCNEdTQ1BRNXZlOGNFUQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-14",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "Luxurylaunches",
+   "titular": "Middle East royals have spent billions buying megayachts from Europe, so this Dubai shipyard is designing superyachts tailored to them, with a majlis, shisha lounge, a prayer room, hammam and air conditioning designed to chill even at 120-degree desert he",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPandvZVBKS3Vlb2xGMFVSWFd1WXZTVXJJYzVhV1ZJR1J1QjczUENxek5hX3c2OTlCV21oWkk4OFBnVkJHRlZiSFQwRzF6MzF0MmQwcGNLdUliaXQzcThmRGxRZ0ZIWTZCVFZhNVFTMDZXcmhzSWNaTVNoVGxhUGJaVDJtdmxPdC1aYUpQck9Cc0szUDI0WGpj?oc=5"
   },
   {
    "fecha": "2026-10-13",
@@ -5546,6 +6074,14 @@
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTy1WNnZSQ2hUWGhOQzZ5UkI5ZC1rNjlxWlF5Q25TdFlidEYtcFIzZnVyX1NWQXE0UTRKQnU5ZnlySVJHa3k3Uk1QUFhCVTllR200aGZkVzFWb2hzQjRJb3F5bUk2SEszMDVfSHV1YS1QLVdxa19QU0liaEpoV0E5WVdFS1RyWFdnQm93SWxTVGdsYzYwNkU3d01tdWplR1NDSWwyRA?oc=5"
   },
   {
+   "fecha": "2026-10-13",
+   "eje": "buceo",
+   "lang": "es",
+   "fuente": "El Heraldo de México",
+   "titular": "Segundo congreso internacional de buceo llega a Cozumel con la tecnología como tema central",
+   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZDR1TER1Nzlodmpfck4wUVJJNy16WjhCQ3o1MXY3akxQMHFWaGo2b2o4ZWh6cDBzLVA1elF2cEI0NnpCUmxKZ3hVN0ZYY0tmdTNwb2l1cU9uUHV2WlRLZTZTRzVuNkF4aTJUb3hmVU13c1dkdmZ6UkRUUFZKNzEwTDlGc1JZMmo1MDQwb0dka292TkxfU2RmYnB2blhTcWw0TXNuZUxvVjQ4OGNkd28yV1lqQVFSTkRibUpnRy1qQVJMU095OVZFei1sZmpENENtX0h6M0lUX1dTTUJPTmJZTl9mNFRNNkd0SUlhU0MydllZMGVY?oc=5"
+  },
+  {
    "fecha": "2026-10-12",
    "eje": "local",
    "lang": "es",
@@ -5954,6 +6490,14 @@
    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZGJYdFkxaFpRN09CdFdaT1lhcm93WjhZalprVU5zMnhnUXh3RUl1b3RlVWJtbjF3amRVcXREUjZoTVh2RGdQYWcxd1FKNjVveEp5cUh6ZVhJWWRDM3NiWGFQbGxTWlllam8xTjZUejdSMTBfYmlvSDNMWTBOTi1vR1FKZGF5Zw?oc=5"
   },
   {
+   "fecha": "2026-10-12",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "Noudiari.es",
+   "titular": "Jeffertje 3 gana la regata Jornadas Náuticas Pitiusas",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUkNJR25SU28xazJRMTdNblcwUXlhU2FSa1JWOFVtOEU1cktPb0c3WEtzUG91NWVVU24teWF3a3NhaS1md3pFbWY3TkNUeUUtSTZvMXpVRzltdDF1dGhOLXA1S2NjUnJWQTY1VDJkTkVVVFEzYm91VmdpV0h3aUJjYzRlaGs5T0U3Sk9YTDhQVlI3anRFM0FIZW1xUXZiZHpqSnlCOHhfMm5FYl9MUzBoYXB3?oc=5"
+  },
+  {
    "fecha": "2026-10-11",
    "eje": "local",
    "lang": "es",
@@ -6160,6 +6704,30 @@
    "fuente": "BernamaBiz",
    "titular": "Budget 2027: MSDA Ready To Partner MOTAC In Strengthening Marine Tourism, Conservation",
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB3MzdYVUM3ZEY0NFVFWEF4OUJrd2lqS295RkRxNWZVdEtMbjViV3RNRzJZOFNWdGQ5bTFWVzFjeE00eUxiWkZlUV83SlpNc0stcURHQQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-11",
+   "eje": "vela",
+   "lang": "es",
+   "fuente": "La Vanguardia",
+   "titular": "El velero con sistema eléctrico y paneles solares para llevar la navegación eficiente a otro nivel",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPX1RwalFhS29hN3NuclBCckFlazdRRC1GRkJTQmhsSkFtdE5XSmpram0xZ0lXTTNGYmFZX013bEZtWmtiYnoyQldyaTlJbWl0QVBkNDA5akVPNHlEMUZJSVplS2E1aDRHUTFPM056Z3puYmtUZWZsckJoODJCMFJGR2pFcnpiYWJnems4anRMUTE2M1ZER2g2ZHFFUjN2ODVSdGVLa3lwVWlkT0JuWE5NYk9pUW9JMEplNFJPc2xvb21tdTQydDJxUdIBzgFBVV95cUxNRXBQRFF6OE51WmF1eTVRbEtubHVFUWFPY2xDNFB5ZG1pbGJMUzFYMHJRd1FFZUNZSlNVVWU2aUhIYmdTWlZ6MUhuTmxRUFY3TkJMdExvTkowcGpObFVtUXBvV2JXcHg1azQyWEJXVFZKekVXNV9rZ1dJTXNKenNUTUVQWXJmTjhpN2xCdXFRSmJFR3N5cU5uRDY2RkNQTV9FQkkxVFlFUXIwVmdtVmFfdnZHdHkzQmFmeUR6bmlJbF84eHRBTFgxeHNsWlhwUQ?oc=5"
+  },
+  {
+   "fecha": "2026-10-11",
+   "eje": "viajes",
+   "lang": "es",
+   "fuente": "El HuffPost",
+   "titular": "Pablo Berruezo, el catalán que lleva más de 600 días dando la vuelta al mundo en velero en solitario: \"Cuando estás navegando solo, descansas cuando puedes y no cuando quieres\"",
+   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOSEhQamQwSEtKb20tNFlxOEJLSjBiSnZqVVhGWUxyakhhbmlXTTcxd0tpOHZLVEtOckRzMGxlQjlJOG1lVXYyOXA1Wl9iRlh1RVVIb1JBNTBPTHdRVWJuWGZDN0RpRG5UcjJXaG9vSXZEQ2Mtb2c2MHhnNWc0ZTVkOG9RbGM3ZGo5RFBsRTVobHJhUXU0T1M2dGpaYzRzR1liR2t5bzAzUkJJVDcySi14OTZpRGpPWWU3NDFwcXIydDVaRHlKWERYYXg3TkZCYUVWampWa18yZ0JVZ05uSi1YR0lnRkRYU0luNnU5ZzFyalRRREE0bzJEUGFIUnBMd9IBkgJBVV95cUxNNFNQSTJYeFJRZUxFU2loSGxveWpkY2E1SjZTellCLW1GaXZLbFdxM0NQTm1qVDI2MmFvY3Rad2NDNkFwR0FMYmJxdzFrOXZkc3lEOEJCaDRaS2tkZ21UR1JFcU1RS29wRjBSNWZKbWM0VkZHeFJCRVFLWmMwc2J4Nk9YT1NDRXFZaXdyN2FWTzhKcnhjVWx4TXF3ai0zbS1RaHRDQkl4bTF4SVdUVlR4MWJkUHU2bmE3cVdnNGFmajVucGJzQ2VCNm5Mc0Q5QTFzU0lsQUI5ajFBWm9Ld3FWNVZnNXhJbWJqSkNxNFZYd0oxRkU4M1NnZkpoa1VkdUNsRU9GSzd4QjNjcHZCTlVXdUZn?oc=5"
+  },
+  {
+   "fecha": "2026-10-11",
+   "eje": "vela",
+   "lang": "en",
+   "fuente": "Reuters Connect",
+   "titular": "Licensable picture: The Barcolana, the largest sailing regatta in the world",
+   "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQY3luTVRwSmFxaVV5b1lsd0hESXBPWXdSOTl1Q1VrV284ZkNuOFVHcDFTYUFVRjAyLW5WZ1Bqb2FWV0RtUnhQUzFqRWxnRHpKQUN2NUhSTzBqRmhVeWFfaHBEblhDdmNMbWdQbmUyaElzZTEzVDZCMlB6NXdyMXpxeVRWdWtDTjhHWlZiLS00VzhiVlNmXzZvWVNzVGhVY2M3S3pOb3haRmFCM2djRWlfLWdoZ3p0N19yRHhwS2E0cFM2UmQ1VGEyYl9QOWVrZDMtOVcwRGdZQlJNSVJ1UlVoNUs3SVp2RzdXNk1OZVVOaFpqNWhDYWEyYlBRQkc0ZS0xcUVMdVIzYW8xOUpBMnVYUkpORjJrdUt6TFg2V1lZZWI2YlU4NmNaSmR1MzRNVHRJcTZDRmlYcGlmUS1uU2tvdXVIdnhEc3hpejR1b2pR?oc=5"
   },
   {
    "fecha": "2026-10-10",
@@ -7864,14 +8432,6 @@
    "fuente": "Al Sol de la Costa",
    "titular": "El Puerto de Málaga refuerza vínculos comerciales con el sector frutícola de Chile",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdlBzQURrRUdZbG02cEpzUVVkM0tIdm42WHlvblpGOFA1ZGcwLWY4aG9qNXZXdjhwU05kdDh4RmpReElBdnp6NlhpYXctR1VsMEhVLXVhM3lRMU5zTHBCY3E1dV9zUDNGQlItUTYzeHFEblJoS0tfUDAwSElMY3ZReXhRVDN2b3otaVpXaXZpRU9pQUpHRlo1bXZSN2lENEpoSVZ5cXI2VnpDZW9MazBB?oc=5"
-  },
-  {
-   "fecha": "2026-10-06",
-   "eje": "local",
-   "lang": "es",
-   "fuente": "Al Sol de la Costa",
-   "titular": "Costa del Sol impulsa el golf femenino internacional con el Andalucía Costa del Sol Open de España presented by Oysho",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPeHF2Y182ZDdSQmc1VTJBcDZtb3Y1UUhjSnhQdmZscm1zNUszUGlPbkZEZHFuOVRrcE95Uks2aU5QUzJNMmZOZGhRWkNlUWg5ZEZhOEJVVFJOeWVHVU5BREx2dFZBNTNHN29aVUxaY2ZXd2lvNDRKckljR3V6YndoNVpXUmx5SFNLWDFCa1JFbmFETXV3X2RqYXJPX3A5LVNjeWtMNGZTYzZ4d1NiMDNTUVJNRUhjbTVsdjVobkRvOVVCbGpGODlrZ3J4RVFKUUVxNmJSNVg1SEJ3cEdOalE?oc=5"
   },
   {
    "fecha": "2026-10-06",
