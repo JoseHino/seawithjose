@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-24T09:35:26Z",
+ "generado": "2026-10-24T14:35:44Z",
  "elaborado": {
   "playa": "2026-10-24T08:51:15",
-  "horas": "2026-10-24T09:15:10"
+  "horas": "2026-10-24T13:47:08"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -35,22 +35,22 @@
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": 5,
+     "fuerza": null,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 4,
+       "n": 6,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 5,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     },
@@ -65,22 +65,22 @@
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": 5,
+     "fuerza": 4,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "marejada"
+       "n": 8,
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 5,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
@@ -115,7 +115,7 @@
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 4,
      "aviso": false,
      "mar": 1,
      "agua": 20,
@@ -249,17 +249,17 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "W y NW 3 a 5 amainando a N 2 a 3 de madrugada y rolando a componente E durante la mañana. Marejadilla o marejada.",
-  "elaborado": "2026-10-23T20:00:00",
-  "inicio": "2026-10-23T20:00:00",
-  "fin": "2026-10-24T20:00:00",
+  "texto": "N o NE 1 a 3 rolando a SW 2 a 4 al final. Marejadilla temporalmente rizada por la noche. Temporalmente regular por la noche.",
+  "elaborado": "2026-10-24T12:00:00",
+  "inicio": "2026-10-24T12:00:00",
+  "fin": "2026-10-25T12:00:00",
   "fuerza": [
-   2,
-   5
+   1,
+   4
   ],
   "mar": [
-   1,
-   2
+   0,
+   1
   ],
   "fondo": false,
   "fondo_m": null,
