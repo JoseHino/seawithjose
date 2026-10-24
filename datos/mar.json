@@ -1,96 +1,16 @@
 {
- "generado": "2026-10-23T20:29:31Z",
+ "generado": "2026-10-24T09:35:26Z",
  "elaborado": {
-  "playa": "2026-10-23T08:51:16",
-  "horas": "2026-10-23T19:19:08"
+  "playa": "2026-10-24T08:51:15",
+  "horas": "2026-10-24T09:15:10"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
   {
-   "fecha": "2026-10-23",
-   "cielo": [
-    "nuboso",
-    "muy nuboso"
-   ],
-   "viento": [
-    "flojo",
-    "flojo"
-   ],
-   "oleaje": [
-    "débil",
-    "débil"
-   ],
-   "agua": 21,
-   "maxima": 24,
-   "uv": 4,
-   "tramos": [
-    {
-     "de": 8,
-     "a": 14,
-     "viento": 0,
-     "racha": null,
-     "dir": "C",
-     "lluvia": null,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": null,
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 1,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 4,
-       "m": "sin_viento"
-      },
-      "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
-      },
-      "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 4,
-     "racha": 13,
-     "dir": "SE",
-     "lluvia": 0,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": "nubes_altas",
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 1,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 4,
-       "m": "sin_viento"
-      },
-      "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
-      },
-      "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
-      }
-     }
-    }
-   ]
-  },
-  {
    "fecha": "2026-10-24",
    "cielo": [
     "despejado",
-    "nuboso"
+    "despejado"
    ],
    "viento": [
     "flojo",
@@ -107,9 +27,39 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 12,
-     "racha": 33,
+     "viento": 8,
+     "racha": 29,
      "dir": "N",
+     "lluvia": 0,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "despejado",
+     "fondo": false,
+     "fuerza": 5,
+     "aviso": false,
+     "mar": 2,
+     "agua": 21,
+     "notas": {
+      "navegar": {
+       "n": 4,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 5,
+       "m": "marejada"
+      },
+      "pescar": {
+       "n": 5,
+       "m": "marejada"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 12,
+     "racha": 29,
+     "dir": "E",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
@@ -133,36 +83,6 @@
        "m": "marejada"
       }
      }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 21,
-     "racha": 34,
-     "dir": "SE",
-     "lluvia": 0,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": "despejado",
-     "fondo": false,
-     "fuerza": 5,
-     "aviso": false,
-     "mar": 2,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 8,
-       "m": "marejada"
-      },
-      "bucear": {
-       "n": 3,
-       "m": "marejada"
-      },
-      "pescar": {
-       "n": 5,
-       "m": "marejada"
-      }
-     }
     }
    ]
   },
@@ -170,7 +90,7 @@
    "fecha": "2026-10-25",
    "cielo": [
     "despejado",
-    "nuboso"
+    "despejado"
    ],
    "viento": [
     "flojo",
@@ -180,16 +100,16 @@
     "débil",
     "débil"
    ],
-   "agua": 21,
-   "maxima": 24,
+   "agua": 20,
+   "maxima": 25,
    "uv": 4,
    "tramos": [
     {
      "de": 8,
      "a": 14,
      "viento": 7,
-     "racha": 19,
-     "dir": "N",
+     "racha": 20,
+     "dir": "SO",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -198,7 +118,7 @@
      "fuerza": null,
      "aviso": false,
      "mar": 1,
-     "agua": 21,
+     "agua": 20,
      "notas": {
       "navegar": {
        "n": 6,
@@ -217,9 +137,59 @@
     {
      "de": 14,
      "a": 20,
+     "viento": 8,
+     "racha": 18,
+     "dir": "SO",
+     "lluvia": null,
+     "tormenta": null,
+     "niebla": 0,
+     "cielo": "despejado",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 20,
+     "notas": {
+      "navegar": {
+       "n": 6,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "fecha": "2026-10-26",
+   "cielo": [
+    "despejado",
+    "despejado"
+   ],
+   "viento": [
+    "flojo",
+    "flojo"
+   ],
+   "oleaje": [
+    "débil",
+    "débil"
+   ],
+   "agua": 22,
+   "maxima": 26,
+   "uv": 4,
+   "tramos": [
+    {
+     "de": 8,
+     "a": 14,
      "viento": 10,
      "racha": null,
-     "dir": "SO",
+     "dir": "SE",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
@@ -228,7 +198,37 @@
      "fuerza": null,
      "aviso": false,
      "mar": 1,
-     "agua": 21,
+     "agua": 22,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 10,
+     "racha": null,
+     "dir": "SE",
+     "lluvia": 0,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "despejado",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 22,
      "notas": {
       "navegar": {
        "n": 8,
