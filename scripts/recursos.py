@@ -47,7 +47,6 @@ FOTOS = {
     # Fotos del 26-10-2026 en Banús (subcarpeta 261026): sustituyen a las que no dejaban ver bien el barco
     # editada por el usuario; el editor cambió el rótulo del casco y se le devolvió el «42CC» de la foto original
     "petit-puerto": (os.path.join(BARCO, "261026", "Velero Jeanneau al atardecer en el puerto (editada, rotulo 42CC).png"), None, (600, 1086)),
-    "petit-popa": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.27 (4).jpeg"), None, (600, 1200)),
     "petit-ocaso": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.28.jpeg"), (0.0, 0.33, 1.0, 1.0), (800, 1200)),
     "petit-torre": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.28 (2).jpeg"), (0.0, 0.22, 1.0, 1.0), (800, 1200)),
 }
