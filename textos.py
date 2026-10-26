@@ -501,11 +501,11 @@ T["en"] = {
                "pocos": "Not enough data in this period."},
     },
     "revista": {
-        "title": "The Sea Logbook: a free fortnightly magazine about the sea · Sea With Jose",
+        "title": "Newsletter: a free fortnightly magazine about the sea · Sea With Jose",
         "description": ("Every fortnight, in your inbox: the water temperature off Marbella, and the most interesting news "
                         "on diving, sailing, fishing, sea travel and the ocean. Written by Jose, captain and oceanographer."),
         "eyebrow": "Free · every fortnight",
-        "h1": "The Sea Logbook",
+        "h1": "Newsletter",
         "lead": ("Every fortnight I send a short magazine about the sea: how the water has been off Marbella, and the "
                  "best news on diving, sailing, fishing and sea travel, picked and explained by me."),
         "ejes_h": "What’s inside",
@@ -516,18 +516,19 @@ T["en"] = {
                  ("viajes", "Sea travel", "Destinations for diving and sailing, near and far."),
                  ("ciencia", "Ocean news", "Discoveries, whales, sharks and the stories that make the headlines.")],
         "susc_h": "Get it in your inbox",
+        "susc_corto": "Subscribe",
         "susc_p": "Choose your language. You’ll get an email to confirm, and you can unsubscribe with one click.",
         "susc_es": "Subscribe in Spanish",
         "susc_en": "Subscribe in English",
         "susc_sin": "Subscriptions open very soon. Meanwhile, message me and I’ll add you.",
-        "susc_wa": "Hi Jose! I’d like to receive the Sea Logbook.",
+        "susc_wa": "Hi Jose! I’d like to receive your newsletter.",
         "archivo_h": "Past issues",
         "archivo_vacio": "The first issue is on its way.",
         "archivo_idioma": {"es": "Spanish", "en": "English"},
-        "privacidad": ("Your email is only used to send you the Logbook, through Brevo (Sendinblue SAS, EU). "
+        "privacidad": ("Your email is only used to send you the newsletter, through Brevo (Sendinblue SAS, EU). "
                        "You can unsubscribe at any time from any issue."),
         "estado": {"pendiente": ("Check your inbox", "I’ve sent you an email with a link to confirm your subscription."),
-                   "ok": ("You’re in!", "The next issue of the Logbook will reach you in a few days.")},
+                   "ok": ("You’re in!", "The next issue of the newsletter will reach you in a few days.")},
     },
 }
 
@@ -901,11 +902,11 @@ T["es"] = {
                "pocos": "No hay suficientes datos en este periodo."},
     },
     "revista": {
-        "title": "Bitácora del mar: revista quincenal gratuita sobre el mar · Sea With Jose",
+        "title": "Newsletter: revista quincenal gratuita sobre el mar · Sea With Jose",
         "description": ("Cada quince días, en tu correo: la temperatura del agua en Marbella y lo más interesante del buceo, "
                         "la vela, la pesca, los viajes por mar y el océano. La escribe Jose, capitán y oceanógrafo."),
         "eyebrow": "Gratis · cada quince días",
-        "h1": "Bitácora del mar",
+        "h1": "Newsletter",
         "lead": ("Cada quince días envío una revista corta sobre el mar: cómo ha estado el agua en Marbella y las mejores "
                  "noticias de buceo, vela, pesca y viajes por mar, elegidas y explicadas por mí."),
         "ejes_h": "Qué trae cada número",
@@ -916,18 +917,19 @@ T["es"] = {
                  ("viajes", "Viajes por mar", "Destinos para bucear y navegar, cerca y lejos."),
                  ("ciencia", "Noticias del océano", "Descubrimientos, ballenas, tiburones y las historias que dan que hablar.")],
         "susc_h": "Recíbela en tu correo",
+        "susc_corto": "Suscríbete",
         "susc_p": "Elige el idioma. Te llegará un correo para confirmar y puedes darte de baja con un clic.",
         "susc_es": "Suscribirme en español",
         "susc_en": "Suscribirme en inglés",
         "susc_sin": "La suscripción se abre muy pronto. Mientras tanto, escríbeme y te apunto.",
-        "susc_wa": "¡Hola Jose! Me gustaría recibir la Bitácora del mar.",
+        "susc_wa": "¡Hola Jose! Me gustaría recibir tu newsletter.",
         "archivo_h": "Números publicados",
         "archivo_vacio": "El primer número está en camino.",
         "archivo_idioma": {"es": "Español", "en": "Inglés"},
-        "privacidad": ("Tu correo solo se usa para enviarte la Bitácora, a través de Brevo (Sendinblue SAS, UE). "
+        "privacidad": ("Tu correo solo se usa para enviarte la newsletter, a través de Brevo (Sendinblue SAS, UE). "
                        "Puedes darte de baja cuando quieras desde cualquier número."),
         "estado": {"pendiente": ("Revisa tu correo", "Te he enviado un mensaje con un enlace para confirmar la suscripción."),
-                   "ok": ("¡Ya estás dentro!", "El próximo número de la Bitácora te llegará en unos días.")},
+                   "ok": ("¡Ya estás dentro!", "El próximo número de la newsletter te llegará en unos días.")},
     },
 }
 
@@ -1308,11 +1310,11 @@ T["ru"] = {
                "pocos": "Недостаточно данных за этот период."},
     },
     "revista": {
-        "title": "Морской журнал: бесплатная рассылка раз в две недели · Sea With Jose",
+        "title": "Рассылка о море раз в две недели, бесплатно · Sea With Jose",
         "description": ("Раз в две недели на почту: температура воды в Марбелье и самое интересное о дайвинге, парусе, "
                         "рыбалке, морских путешествиях и океане. Пишет Хосе, капитан и океанограф."),
         "eyebrow": "Бесплатно · раз в две недели",
-        "h1": "Морской журнал",
+        "h1": "Рассылка",
         "lead": ("Раз в две недели я отправляю короткий журнал о море: какой была вода в Марбелье и лучшие новости о "
                  "дайвинге, парусе, рыбалке и морских путешествиях. Журнал выходит на английском и испанском."),
         "ejes_h": "Что в каждом номере",
@@ -1323,11 +1325,12 @@ T["ru"] = {
                  ("viajes", "Морские путешествия", "Куда поехать нырять и ходить под парусом."),
                  ("ciencia", "Новости океана", "Открытия, киты, акулы и громкие истории.")],
         "susc_h": "Подписаться",
+        "susc_corto": "Подписаться",
         "susc_p": "Выберите язык. Вам придёт письмо для подтверждения; отписаться можно в один клик.",
         "susc_es": "Подписаться (испанский)",
         "susc_en": "Подписаться (английский)",
         "susc_sin": "Подписка скоро откроется. А пока напишите мне, и я вас добавлю.",
-        "susc_wa": "Здравствуйте, Хосе! Хочу получать морской журнал.",
+        "susc_wa": "Здравствуйте, Хосе! Хочу получать вашу рассылку.",
         "archivo_h": "Вышедшие номера",
         "archivo_vacio": "Первый номер уже готовится.",
         "archivo_idioma": {"es": "Испанский", "en": "Английский"},

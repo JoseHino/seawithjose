@@ -838,14 +838,12 @@ def pagina_revista(lang):
     ejes = "".join(
         f'<article class="revista-eje"><svg class="simbolo" viewBox="0 0 52 44" aria-hidden="true">{ICONOS_EJE[k]}</svg>'
         f'<h3>{esc(a)}</h3><p>{esc(b)}</p></article>' for k, a, b in r["ejes"])
+    orden = ["es", "en"] if lang == "es" else ["en", "es"]
     if any(REVISTA_FORMS.values()):
-        botones = "".join(
-            f'<a class="boton {"boton-amarillo" if i == 0 else "boton-azul"}" href="{esc(REVISTA_FORMS[l])}" '
-            f'target="_blank" rel="noopener">{esc(r["susc_" + l])}{FLECHA}</a>'
-            for i, l in enumerate(l for l in (["es", "en"] if lang == "es" else ["en", "es"]) if REVISTA_FORMS[l]))
+        botones = "".join(f'<a href="{esc(REVISTA_FORMS[l])}" target="_blank" rel="noopener" lang="{l}">'
+                          f'{esc(T[l]["nombre_idioma"])}</a>' for l in orden if REVISTA_FORMS[l])
     else:
-        botones = (f'<p class="nota">{esc(r["susc_sin"])}</p>'
-                   f'<a class="boton boton-amarillo" href="{wa(r["susc_wa"])}">{ICONO_WA}WhatsApp</a>')
+        botones = f'<a href="{wa(r["susc_wa"])}">WhatsApp</a>'
     numeros = numeros_revista()
     if numeros:
         filas = []
@@ -871,8 +869,8 @@ def pagina_revista(lang):
     <h1 id="revista-titulo">{esc(r["h1"])}</h1>
     <p class="intro">{esc(r["lead"])}</p>
     <div class="revista-estado" role="status" hidden></div>
-    <div class="botones"><a class="boton boton-amarillo boton-grande" href="#suscribirse">{esc(r["susc_h"])}{FLECHA}</a>
-      <a class="boton boton-borde-azul boton-grande" href="{prefijo}{carpeta(lang)}datos.html">{esc(t["datos"]["h1"])}</a></div>
+    <p class="susc-mini" id="suscribirse"><span>{esc(r["susc_corto"])}</span>{botones}</p>
+    <p class="nota revista-privacidad">{esc(r["privacidad"])}</p>
   </div>
 </section>
 
@@ -880,21 +878,9 @@ def pagina_revista(lang):
   <div class="contenedor">
     <h2 id="ejes-titulo">{esc(r["ejes_h"])}</h2>
     <div class="revista-ejes">{ejes}</div>
-  </div>
-</section>
-
-<section class="seccion revista-susc" id="suscribirse" aria-labelledby="susc-titulo">
-  <div class="contenedor revista-susc-rejilla">
-    <div>
-      <h2 id="susc-titulo">{esc(r["susc_h"])}</h2>
-      <p class="intro">{esc(r["susc_p"])}</p>
-      <div class="botones">{botones}</div>
-      <p class="nota revista-privacidad">{esc(r["privacidad"])}</p>
-    </div>
-    <div>
-      <h3>{esc(r["archivo_h"])}</h3>
-      {archivo}
-    </div>
+    <h3 class="revista-archivo-h">{esc(r["archivo_h"])}</h3>
+    {archivo}
+    <p class="revista-datos"><a href="{prefijo}{carpeta(lang)}datos.html">{esc(t["datos"]["h1"])}</a></p>
   </div>
 </section>
 </main>
