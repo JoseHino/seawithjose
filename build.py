@@ -503,9 +503,9 @@ def portada(lang):
         <li><p class="extra-linea"><span class="extra-nombre">{esc(e["titulo"])}</span><span class="extra-puntos" aria-hidden="true"></span><span class="extra-precio">{esc(t["extras_precio"])}</span></p>
           <p class="extra-texto">{esc(e["texto"])}</p></li>""" for e in t["extras"])
     mosaico = "".join(f'<figure class="m{i}">{imagen(n, anchos, t["galeria"][n], prefijo, "", "(max-width: 700px) 100vw, 40vw")}</figure>'
-                      for i, (n, anchos) in enumerate((("petit-azul", (800, 1600)), ("petit-fondeado", (634,)),
-                                                        ("petit-cubierta", (800, 1600)), ("petit-pantalan", (640, 1024)),
-                                                        ("petit-bimini", (800, 1600)))))
+                      for i, (n, anchos) in enumerate((("petit-azul", (800, 1600)), ("petit-concha", (600, 1200)),
+                                                        ("petit-ocaso", (800, 1200)), ("petit-pantalan", (640, 1024)),
+                                                        ("petit-torre", (800, 1200)))))
     datos_barco = "".join(f"<div><dt>{esc(a)}</dt><dd>{esc(c)}</dd></div>" for a, c in t["barco_datos"])
     bitacora = "".join(f'<li><time>{a}</time><span>{esc(x)}</span></li>' for a, x in t["bitacora"])
     cerca = [x for x in SENDA_AZUL if x["banus"]]
@@ -522,8 +522,8 @@ def portada(lang):
 </section>
 """
     faq = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in t["faq"])
-    precarga = (f'<link rel="preload" as="image" imagesrcset="{prefijo}assets/fotos/petit-atardecer-560.webp 560w, '
-                f'{prefijo}assets/fotos/petit-atardecer-1047.webp 1047w" imagesizes="(max-width: 900px) 100vw, 44vw">\n')
+    precarga = (f'<link rel="preload" as="image" imagesrcset="{prefijo}assets/fotos/petit-banus-600.webp 600w, '
+                f'{prefijo}assets/fotos/petit-banus-1200.webp 1200w" imagesizes="(max-width: 900px) 100vw, 44vw">\n')
 
     cuerpo = f"""
 <body class="portada">
@@ -543,8 +543,7 @@ def portada(lang):
     </div>
   </div>
   <figure class="hero-foto">
-    {imagen("petit-atardecer", (560, 1047), t["hero_foto_alt"], prefijo, "", "(max-width: 900px) 100vw, 44vw", "eager")}
-    <figcaption>{esc(t["hero_foto_alt"])}</figcaption>
+    {imagen("petit-banus", (600, 1200), t["hero_foto_alt"], prefijo, "", "(max-width: 900px) 100vw, 44vw", "eager")}
   </figure>
 </section>
 

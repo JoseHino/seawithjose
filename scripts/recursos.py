@@ -39,15 +39,16 @@ FOTOS = {
     "tiburon": (os.path.join(BUCEO, "grupo-tiburon.jpg"), None, (520, 1040)),
     "timon": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.25.jpeg"), (0.40, 0.0, 1.0, 1.0), (640, 960)),
     # El Petit (fotos de la carpeta del chárter; las de bandera francesa a la vista no se usan)
-    "petit-atardecer": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.57.jpeg"), (0.0, 0.0, 1.0, 0.94), (560, 1047)),
     "petit-delfines": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.17.jpeg"), None, (640, 1136)),
     "petit-banera": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.25.jpeg"), None, (800, 1600)),
-    "petit-fondeado": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.42.42.jpeg"), (0.0, 0.0, 0.62, 1.0), (634,)),
     "petit-pantalan": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.41.51.jpeg"), None, (640, 1024)),
     "petit-proa": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.45.jpeg"), None, (800, 1600)),
     "petit-azul": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.44.53.jpeg"), None, (800, 1600)),
-    "petit-cubierta": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.43.28.jpeg"), None, (800, 1600)),
-    "petit-bimini": (os.path.join(BARCO, "WhatsApp Image 2026-07-03 at 16.46.03.jpeg"), None, (800, 1600)),
+    # Fotos del 26-10-2026 en Banús (subcarpeta 261026): sustituyen a las que no dejaban ver bien el barco
+    "petit-banus": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.27 (2).jpeg"), None, (600, 1200)),
+    "petit-concha": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.27 (3).jpeg"), None, (600, 1200)),
+    "petit-ocaso": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.28.jpeg"), (0.0, 0.33, 1.0, 1.0), (800, 1200)),
+    "petit-torre": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.28 (2).jpeg"), (0.0, 0.22, 1.0, 1.0), (800, 1200)),
 }
 VIDEO = os.path.join(BARCO, "WhatsApp Video 2026-07-03 at 16.43.47.mp4")
 
