@@ -142,7 +142,7 @@ T["en"] = {
                     "with mask and fins, drinks, snacks and fruit included. Shared trip €50 per person; private €350 for "
                     "the boat, up to 11 guests."),
     "saltar": "Skip to content",
-    "nav": {"precios": "Prices", "salida": "The trip", "barco": "The boat",
+    "nav": {"precios": "Prices", "barco": "The boat",
             "llegar": "Getting here", "revista": "Logbook"},
     "menu": "Menu", "whatsapp_corto": "WhatsApp", "reservar_corto": "Book",
     "wa_hola": "Hi Jose! I’d like to go sailing on the Petit.",
@@ -539,7 +539,7 @@ T["es"] = {
                     "gafas y aletas, bebida, snacks y fruta incluidos. Compartida 50 € por persona; privada 350 € el barco, "
                     "hasta 11 personas."),
     "saltar": "Ir al contenido",
-    "nav": {"precios": "Precios", "salida": "La salida", "barco": "El barco",
+    "nav": {"precios": "Precios", "barco": "El barco",
             "llegar": "Cómo llegar", "revista": "Bitácora"},
     "menu": "Menú", "whatsapp_corto": "WhatsApp", "reservar_corto": "Reservar",
     "wa_hola": "¡Hola Jose! Me gustaría salir a navegar en el Petit.",
@@ -939,7 +939,7 @@ T["ru"] = {
                     "с маской и ластами, напитки, закуски и фрукты включены. Групповая прогулка 50 € с человека, "
                     "индивидуальная 350 € за яхту, до 11 гостей."),
     "saltar": "Перейти к содержанию",
-    "nav": {"precios": "Цены", "salida": "Прогулка", "barco": "Яхта",
+    "nav": {"precios": "Цены", "barco": "Яхта",
             "llegar": "Как добраться", "revista": "Журнал"},
     "menu": "Меню", "whatsapp_corto": "WhatsApp", "reservar_corto": "Забронировать",
     "wa_hola": "Здравствуйте, Хосе! Хочу выйти в море на «Пти».",
