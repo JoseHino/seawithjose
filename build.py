@@ -504,7 +504,7 @@ def portada(lang):
         <li><p class="extra-linea"><span class="extra-nombre">{esc(e["titulo"])}</span><span class="extra-puntos" aria-hidden="true"></span><span class="extra-precio">{esc(t["extras_precio"])}</span></p>
           <p class="extra-texto">{esc(e["texto"])}</p></li>""" for e in t["extras"])
     mosaico = "".join(f'<figure class="m{i}">{imagen(n, anchos, t["galeria"][n], prefijo, "", "(max-width: 700px) 100vw, 40vw")}</figure>'
-                      for i, (n, anchos) in enumerate((("petit-azul", (800, 1600)), ("petit-concha", (600, 1200)),
+                      for i, (n, anchos) in enumerate((("petit-azul", (800, 1600)), ("petit-popa", (600, 1200)),
                                                         ("petit-ocaso", (800, 1200)), ("petit-pantalan", (640, 1024)),
                                                         ("petit-torre", (800, 1200)))))
     datos_barco = "".join(f"<div><dt>{esc(a)}</dt><dd>{esc(c)}</dd></div>" for a, c in t["barco_datos"])
