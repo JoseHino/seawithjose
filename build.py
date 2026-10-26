@@ -501,7 +501,7 @@ def portada(lang):
                   f'<button class="boton boton-azul boton-pagar" type="submit" form="reserva">{ICONO_WA}'
                   f'<span>{esc(f["whatsapp"])}</span></button>')
     carta_extras = "".join(f"""
-        <li><p class="extra-linea"><span class="extra-nombre">{esc(e["titulo"])}</span><span class="extra-puntos" aria-hidden="true"></span><span class="extra-precio">{esc(t["extras_precio"])}</span></p>
+        <li><p class="extra-linea"><span class="extra-nombre">{esc(e["titulo"])}</span><span class="extra-puntos" aria-hidden="true"></span><span class="extra-precio">{esc(e.get("precio", t["extras_precio"]))}</span></p>
           <p class="extra-texto">{esc(e["texto"])}</p></li>""" for e in t["extras"])
     mosaico = "".join(f'<figure class="m{i}">{imagen(n, anchos, t["galeria"][n], prefijo, "", "(max-width: 700px) 100vw, 40vw")}</figure>'
                       for i, (n, anchos) in enumerate((("petit-azul", (800, 1600)), ("petit-torre", (800, 1200)),
