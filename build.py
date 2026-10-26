@@ -524,7 +524,7 @@ def portada(lang):
 """
     faq = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in t["faq"])
     precarga = (f'<link rel="preload" as="image" imagesrcset="{prefijo}assets/fotos/petit-banus-600.webp 600w, '
-                f'{prefijo}assets/fotos/petit-banus-1200.webp 1200w" imagesizes="(max-width: 900px) 100vw, 44vw">\n')
+                f'{prefijo}assets/fotos/petit-banus-1086.webp 1086w" imagesizes="(max-width: 900px) 100vw, 44vw">\n')
 
     cuerpo = f"""
 <body class="portada">
@@ -544,7 +544,7 @@ def portada(lang):
     </div>
   </div>
   <figure class="hero-foto">
-    {imagen("petit-banus", (600, 1200), t["hero_foto_alt"], prefijo, "", "(max-width: 900px) 100vw, 44vw", "eager")}
+    {imagen("petit-banus", (600, 1086), t["hero_foto_alt"], prefijo, "", "(max-width: 900px) 100vw, 44vw", "eager")}
   </figure>
 </section>
 
