@@ -291,7 +291,8 @@ def cabeza(t, lang, prefijo, titulo, descripcion, ruta, extra=""):
 
 def cabecera(t, lang, prefijo, pagina="index.html"):
     """En la portada, los enlaces son anclas; en el resto de páginas apuntan a la portada (salvo Buceo)."""
-    inicio = "" if pagina == "index.html" else f"{prefijo}{carpeta(lang)}"
+    portada = f"{prefijo}{carpeta(lang)}" or "./"     # en inglés (raíz) quedaría vacío y apuntaría a la propia página
+    inicio = "" if pagina == "index.html" else portada
     destino = {k: f"{inicio}#{k}" for k in t["nav"]}
     destino["revista"] = f"{prefijo}{carpeta(lang)}revista.html"
     actual = {"revista.html": "revista"}.get(pagina)
@@ -305,7 +306,7 @@ def cabecera(t, lang, prefijo, pagina="index.html"):
     return f"""<a class="saltar" href="#contenido">{esc(t["saltar"])}</a>
 <header class="cabecera">
   <div class="contenedor cabecera-fila">
-    <a class="marca" href="{prefijo}{carpeta(lang)}"><span>Sea With Jose</span></a>
+    <a class="marca" href="{portada}"><span>Sea With Jose</span></a>
     <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
       <span class="menu-raya" aria-hidden="true"></span><span class="visualmente-oculto">{esc(t["menu"])}</span>
     </button>
@@ -996,7 +997,7 @@ def pagina_simple(lang, titulo, h1, contenido, ruta, datos=None, indexable=False
   <article class="contenedor texto-legal">
     <h1>{esc(h1)}</h1>
     {contenido}
-    <p><a class="boton boton-borde-azul" href="{prefijo}{carpeta(lang)}">{esc(t["volver"])}</a></p>
+    <p><a class="boton boton-borde-azul" href="{prefijo}{carpeta(lang) or './'}">{esc(t["volver"])}</a></p>
   </article>
 </main>
 {pie(t, lang, prefijo, ruta)}
