@@ -245,7 +245,7 @@ def svg_mapa(t):
       <text class="mapa-rotulo" x="{px + 22:.0f}" y="{py - 6:.0f}">{esc(a["parking"])}</text>
       <g class="mapa-barco" transform="translate({ex} {ey})"><circle r="16"/>
         <path d="M-1-10V3H-8Z M1-7 7 3H1Z M-10 5H10L7 9H-7Z"/></g>
-      <text class="mapa-puerto" x="{ex - 60}" y="{ey + 150}" text-anchor="middle">{esc(a["puerto"])}</text>
+      <text class="mapa-puerto" x="{ex + 34}" y="{ey + 100}" text-anchor="start">{esc(a["puerto"])}</text>
     </svg>"""
 
 
