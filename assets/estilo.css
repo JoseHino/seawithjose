@@ -109,11 +109,11 @@ p { margin: 0 0 1em; }
 .hero h1 { font-size: clamp(56px, 7.6vw, 122px); line-height: .86; color: #fff; margin: 0 0 28px; text-wrap: balance; }
 .entradilla { font-size: clamp(19px, 1.55vw, 22px); line-height: 1.5; color: #D5E3EE; max-width: 44ch; margin: 0; }
 .hero-precios { display: flex; flex-wrap: wrap; gap: 0; margin: 34px 0 0; }
-.hero-precios div { padding: 0 28px 0 0; margin-right: 28px; border-right: 2px solid rgba(255, 255, 255, .25); }
+.hero-precios div { padding: 0 24px 0 0; margin-right: 24px; border-right: 2px solid rgba(255, 255, 255, .25); }
 .hero-precios div:last-child { border-right: 0; margin-right: 0; }
 .hero-precios dt { font-size: 14px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--amarillo); }
-.hero-precios dd { margin: 2px 0 0; font-size: 17px; color: #D5E3EE; }
-.hero-precios b { font: 800 56px/1 var(--titular); color: #fff; margin-right: 4px; }
+.hero-precios dd { margin: 2px 0 0; font-size: 16px; color: #D5E3EE; }
+.hero-precios b { display: block; font: 800 52px/1 var(--titular); color: #fff; white-space: nowrap; }
 /* el parking gratis, con la P de las señales de aparcamiento */
 .letra-p {
   display: inline-grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 4px;
@@ -128,12 +128,20 @@ p { margin: 0 0 1em; }
 .hero-foto { position: relative; margin: 0; min-height: 320px; }
 .hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
 
-/* ───── precios: dos paneles dentro de un marco, como la pizarra del pantalán ───── */
-.paneles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 36px; border: 3px solid var(--marino); }
+/* ───── precios: tres paneles dentro de un marco, como la pizarra del pantalán ───── */
+.paneles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 36px; border: 3px solid var(--marino); }
 .panel { display: flex; flex-direction: column; padding: clamp(26px, 4vw, 48px); }
 .panel-privada { background: var(--amarillo); border-left: 3px solid var(--marino); }
+/* el día entero, en azul: la opción grande */
+.panel-dia { background: var(--marino); border-left: 3px solid var(--marino); }
+.panel.panel-dia h3, .panel-dia .panel-precio, .panel-dia .panel-unidad, .panel-dia .panel-incluye li, .panel-dia .panel-letra { color: #fff; }
+.panel-dia .panel-precio { color: var(--amarillo); }
+.panel-dia .panel-incluye-titulo, .panel-dia .panel-incluye li::before { color: var(--amarillo); }
+.panel-dia .panel-incluye { border-top-color: var(--amarillo); }
+.panel-dia .panel-incluye li { border-bottom-color: rgba(255, 255, 255, .2); }
+.panel-dia .panel-parking { background: var(--amarillo); color: var(--marino); }
 .panel h3 { font: 800 30px/1 var(--titular); text-transform: uppercase; letter-spacing: .02em; color: var(--marino); }
-.panel-precio { font: 800 clamp(104px, 12.5vw, 176px)/.82 var(--titular); color: var(--marino); margin: 18px 0 0; }
+.panel-precio { font: 800 clamp(72px, 7.6vw, 112px)/.82 var(--titular); white-space: nowrap; color: var(--marino); margin: 18px 0 0; }
 .panel-unidad { font-size: 20px; font-weight: 700; margin: 8px 0 22px; }
 /* lo que entra en el precio, bien grande; las condiciones, en letra pequeña */
 .panel-incluye-titulo { margin: 0 0 6px; font-size: 14px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--rojo); }
@@ -151,6 +159,7 @@ p { margin: 0 0 1em; }
   .panel-parking { animation: llamar 2.6s ease-in-out infinite; transform-origin: 20% 100%; }
   .panel-parking .letra-p { animation: latir-p 2.6s ease-in-out infinite; }
   .panel-privada .panel-parking, .panel-privada .panel-parking .letra-p { animation-delay: .4s; }
+  .panel-dia .panel-parking, .panel-dia .panel-parking .letra-p { animation-delay: .8s; }
 }
 @keyframes llamar {
   0%, 55%, 100% { transform: translateY(0) rotate(0); }
@@ -246,13 +255,13 @@ p { margin: 0 0 1em; }
 }
 .campo textarea { resize: vertical; }
 .campo .nota { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--marino); }
-.tipos-opciones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tipos-opciones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .tipo input, .chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .tipo span {
   display: flex; flex-direction: column; gap: 2px; height: 100%; padding: 14px 16px; cursor: pointer;
   background: var(--blanco); border: 2px solid var(--marino); border-radius: 4px;
 }
-.tipo strong { font: 800 28px/1 var(--titular); text-transform: uppercase; color: var(--marino); }
+.tipo strong { font: 800 24px/1 var(--titular); text-transform: uppercase; color: var(--marino); }
 .tipo small { font-size: 15px; color: var(--gris); }
 .tipo input:checked + span { background: var(--marino); }
 .tipo input:checked + span strong { color: var(--amarillo); }
@@ -605,7 +614,8 @@ a.parada:hover { scale: 1.12; }
   .hero-foto img { object-position: 50% 74%; }
   .hero-texto { padding: 40px 16px 56px; }
   .paneles { grid-template-columns: minmax(0, 1fr); }
-  .panel-privada { border-left: 0; border-top: 3px solid var(--marino); }
+  .panel-privada, .panel-dia { border-left: 0; border-top: 3px solid var(--marino); }
+  .panel-precio { font-size: 104px; }
   .tira { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tira figure:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
   .salida-rejilla, .reservar-rejilla, .barco-rejilla, .jose-rejilla, .llegar-rejilla, .camaras, .indices,
@@ -641,9 +651,10 @@ a.parada:hover { scale: 1.12; }
   body { font-size: 17px; }
   .marca { font-size: 23px; }
   .hero-precios { flex-wrap: nowrap; }
-  .hero-precios div { padding-right: 18px; margin-right: 18px; }
-  .hero-precios b { display: block; font-size: 46px; }
-  .hero-precios dd { font-size: 16px; }
+  .hero-precios div { padding-right: 12px; margin-right: 12px; }
+  .hero-precios dt { font-size: 12px; letter-spacing: .05em; white-space: nowrap; }
+  .hero-precios b { font-size: 34px; }
+  .hero-precios dd { font-size: 14px; }
   .parking-gratis { gap: 14px; padding: 18px 16px 18px 14px; }
   .parking-gratis .letra-p { width: 44px; height: 44px; font-size: 32px; }
   .botones .boton { flex: 1 1 100%; }

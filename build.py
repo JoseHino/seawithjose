@@ -22,7 +22,7 @@ import urllib.parse
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, RAIZ)
 from textos import (T, IDIOMAS, WHATSAPP, WHATSAPP_VISIBLE, INSTAGRAM, EMAIL, DOMINIO,  # noqa: E402
-                    PRECIO_COMPARTIDA, PRECIO_PRIVADA, PLAZAS, HORARIOS, DIAS_RESERVA, PAGOS, CAMARAS_EMBED,
+                    PRECIO_COMPARTIDA, PRECIO_PRIVADA, PRECIO_DIA, PLAZAS, HORARIOS, DIAS_RESERVA, PAGOS, CAMARAS_EMBED,
                     PARKING_MAPS, SENDA_AZUL, RESENAS, REVISTA_FORMS, BARCO, BARCO_MAPS)
 CARTA = json.load(open(os.path.join(RAIZ, "fuentes", "carta.json"), encoding="utf-8"))
 MAPA = json.load(open(os.path.join(RAIZ, "fuentes", "mapa_banus.json"), encoding="utf-8"))
@@ -357,6 +357,8 @@ def json_ld(t, lang):
              "priceCurrency": "EUR", "url": f"{DOMINIO}/{carpeta(lang)}#reservar"},
             {"@type": "Offer", "name": t["opciones"]["privada"]["titulo"], "price": str(PRECIO_PRIVADA),
              "priceCurrency": "EUR", "url": f"{DOMINIO}/{carpeta(lang)}#reservar"},
+            {"@type": "Offer", "name": t["opciones"]["dia"]["titulo"], "price": str(PRECIO_DIA),
+             "priceCurrency": "EUR", "url": f"{DOMINIO}/{carpeta(lang)}#reservar"},
         ],
         "founder": {"@type": "Person", "name": "José María Hinojosa Figueira",
                     "jobTitle": "Yacht captain, oceanographer and diving instructor"},
@@ -464,7 +466,7 @@ def portada(lang):
     prefijo = prefijo_de(lang)
     f, r, s = t["form"], t["resumen"], t["senda"]
     datos_js = {"lang": lang, "prefijo": prefijo, "whatsapp": WHATSAPP, "pagina": "portada",
-                "precios": {"compartida": PRECIO_COMPARTIDA, "privada": PRECIO_PRIVADA}, "plazas": PLAZAS,
+                "precios": {"compartida": PRECIO_COMPARTIDA, "privada": PRECIO_PRIVADA, "dia": PRECIO_DIA}, "plazas": PLAZAS,
                 "dias": DIAS_RESERVA, "pagos": PAGOS, "form": f, "resumen": r,
                 "extras": {e["id"]: e["titulo"] for e in t["extras"]},
                 "mar": {k: v for k, v in t["mar"].items() if k not in SOLO_HTML}}
@@ -494,7 +496,7 @@ def portada(lang):
                        else f"<span>{h}</span>") + "</label>" for h in HORARIOS)
     extras_form = "".join(f'<label class="chip"><input type="checkbox" name="extras" value="{e["id"]}">'
                           f'<span>{esc(e["titulo"])}</span></label>' for e in t["extras"] if e["id"] != "otra")
-    hay_pago = bool(PAGOS.get("privada") or PAGOS.get("compartida"))
+    hay_pago = bool(PAGOS.get("privada") or PAGOS.get("dia") or PAGOS.get("compartida"))
     boton_pago = (f'<button class="boton boton-azul boton-pagar" type="submit" form="reserva">{ICONO_TARJETA}'
                   f'<span class="pagar-texto">{esc(f["pagar"].format(total="—"))}</span></button>'
                   if hay_pago else
@@ -550,7 +552,7 @@ def portada(lang):
 <section class="seccion precios" id="precios" aria-labelledby="precios-titulo">
   <div class="contenedor">
     <h2 id="precios-titulo">{esc(t["precios_h2"])}</h2>
-    <div class="paneles">{panel("compartida")}{panel("privada")}
+    <div class="paneles">{panel("compartida")}{panel("privada")}{panel("dia")}
     </div>
     <p class="precios-nota">{esc(t["precios_nota"])}</p>
     <div class="parking-gratis">
@@ -579,6 +581,8 @@ def portada(lang):
               <span><strong>{esc(f["tipos"]["compartida"])}</strong><small>{esc(f["tipos_sub"]["compartida"])}</small></span></label>
             <label class="tipo"><input type="radio" name="tipo" value="privada">
               <span><strong>{esc(f["tipos"]["privada"])}</strong><small>{esc(f["tipos_sub"]["privada"])}</small></span></label>
+            <label class="tipo"><input type="radio" name="tipo" value="dia">
+              <span><strong>{esc(f["tipos"]["dia"])}</strong><small>{esc(f["tipos_sub"]["dia"])}</small></span></label>
           </div>
         </fieldset>
         <div class="fila-2">

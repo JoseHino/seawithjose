@@ -107,8 +107,9 @@
     const pagos = d.pagos || {};
     const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
     const formatoHora = new Intl.DateTimeFormat(d.lang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Madrid' });
-    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
-    const CODIGOS = { buffet: 'bu', paella: 'pa', cocteles: 'co', tarta: 'ta', decoracion: 'de', otra: 'ot' };
+    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' }).format(n);
+    const CODIGOS = { buffet: 'bu', paella: 'pa', sushi: 'su', cocteles: 'co', tarta: 'ta', decoracion: 'de', moto: 'mo', taxi: 'tx', otra: 'ot' };
+    const LETRA = { compartida: 'C', privada: 'P', dia: 'D' };
     let datos = null;
     promesa.then(x => { datos = x; pintar(); });
 
@@ -124,10 +125,12 @@
       const dia = fecha.value;
       const horaV = form.elements.hora.value;
       const n = Math.min(d.plazas, Math.max(1, parseInt(personas.value, 10) || 1));
-      const extras = tipo === 'privada' ? [...form.querySelectorAll('input[name="extras"]:checked')].map(x => x.value) : [];
-      const otra = tipo === 'privada' ? form.elements.otra.value.trim() : '';
-      const hora = horaV === 'atardecer' ? (dia ? horaAtardecer(dia) : '') : horaV;
-      const total = tipo === 'privada' ? d.precios.privada : d.precios.compartida * n;
+      const privada = tipo !== 'compartida';     // la privada y el día entero: el barco para el grupo, con extras
+      const extras = privada ? [...form.querySelectorAll('input[name="extras"]:checked')].map(x => x.value) : [];
+      const otra = privada ? form.elements.otra.value.trim() : '';
+      // el día entero no tiene turnos: la hora de salida la confirmo por WhatsApp
+      const hora = tipo === 'dia' ? f.todo_dia : horaV === 'atardecer' ? (dia ? horaAtardecer(dia) : '') : horaV;
+      const total = privada ? d.precios[tipo] : d.precios.compartida * n;
       return { tipo, dia, horaV, hora, n, extras, otra, nombre: form.elements.nombre.value.trim(), total };
     }
 
@@ -136,7 +139,7 @@
 
     function referencia(e) {
       const extras = [...e.extras, e.otra ? 'otra' : ''].filter(Boolean).map(x => CODIGOS[x]).join('');
-      return [e.tipo === 'privada' ? 'P' : 'C', e.dia.replaceAll('-', ''), e.hora.replace(':', ''), `${e.n}p`, extras]
+      return [LETRA[e.tipo], e.dia.replaceAll('-', ''), e.tipo === 'dia' ? '' : e.hora.replace(':', ''), `${e.n}p`, extras]
         .filter(Boolean).join('-');
     }
 
@@ -153,13 +156,13 @@
     }
 
     function enlacePago(e) {
-      return e.tipo === 'privada' ? (pagos.privada || '') : ((pagos.compartida || {})[String(e.n)] || '');
+      return e.tipo === 'compartida' ? ((pagos.compartida || {})[String(e.n)] || '') : (pagos[e.tipo] || '');
     }
 
     function prevision(e) {
       const p = form.querySelector('.prevision');
       p.hidden = true;
-      if (!datos || !e.dia || !e.hora) return;
+      if (!datos || !e.dia || !e.hora || e.tipo === 'dia') return;
       const dia = (datos.dias || []).find(x => x.fecha === e.dia);
       const h = parseInt(e.hora, 10);
       const tramo = dia && (dia.tramos || []).find(t => t.notas && h >= t.de - 1 && h < t.a);
@@ -171,7 +174,8 @@
 
     function pintar() {
       const e = estado();
-      form.querySelector('.extras-form').hidden = e.tipo !== 'privada';
+      form.querySelector('.extras-form').hidden = e.tipo === 'compartida';
+      form.querySelector('.horas').hidden = e.tipo === 'dia';
       campo('tipo').textContent = f.tipos[e.tipo];
       campo('fecha').textContent = e.dia ? formatoFecha.format(new Date(`${e.dia}T12:00:00Z`)) : '—';
       campo('hora').textContent = e.hora || '—';
@@ -179,7 +183,7 @@
       zona.querySelector('.resumen-extras').hidden = !textoExtras(e);
       campo('extras').textContent = textoExtras(e) || '—';
       campo('total').textContent = euros(e.total);
-      campo('detalle').textContent = e.tipo === 'privada' ? f.detalle_privada : f.detalle_compartida.replace('{n}', e.n);
+      campo('detalle').textContent = e.tipo === 'compartida' ? f.detalle_compartida.replace('{n}', e.n) : f[`detalle_${e.tipo}`];
       const pagar = zona.querySelector('.pagar-texto');
       if (pagar) pagar.textContent = f.pagar.replace('{total}', euros(e.total));
       const atardecer = form.querySelector('.hora-atardecer');
@@ -201,7 +205,7 @@
       ev.preventDefault();
       const e = estado();
       const error = form.querySelector('.error');
-      const falta = !e.dia ? ['fecha', f.falta_fecha] : !e.horaV ? ['hora', f.falta_hora] : null;
+      const falta = !e.dia ? ['fecha', f.falta_fecha] : !e.horaV && e.tipo !== 'dia' ? ['hora', f.falta_hora] : null;
       if (falta) {
         error.textContent = falta[1];
         error.hidden = false;
@@ -272,7 +276,7 @@
     }
     if (!r) { document.querySelector('.gracias-sin').hidden = false; return; }
     const f = d.form, b = d.resumen;
-    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' }).format(n);
     const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' });
     const extras = [...(r.extras || []).map(x => d.extras[x]), r.otra ? `${d.extras.otra}: ${r.otra}` : ''].filter(Boolean).join(', ');
     const filas = [[b.salida, f.tipos[r.tipo]], [b.fecha, formatoFecha.format(new Date(`${r.dia}T12:00:00Z`))],
