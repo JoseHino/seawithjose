@@ -1,7 +1,7 @@
 {
  "numero": "2026-10-27",
  "version": 1,
- "estado": "pendiente",
+ "estado": "publicado",
  "mar": {
   "desde": "2026-10-20",
   "hasta": "2026-10-26",
@@ -962,6 +962,11 @@
  },
  "refs": {},
  "historial": [
-  "v1 · 2026-10-27 10:31 UTC · borrador"
- ]
+  "v1 · 2026-10-27 10:31 UTC · borrador",
+  "v1 · 2026-10-27 10:37 UTC · aprobado y publicado · es: campaña 10 programada para el 27/10 a las 14:00 a la lista 7 (3 suscriptores) · en: campaña 11 programada para el 27/10 a las 14:00 a la lista 8 (1 suscriptores)"
+ ],
+ "enviados": {
+  "es": 10,
+  "en": 11
+ }
 }
