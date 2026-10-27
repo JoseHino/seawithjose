@@ -279,6 +279,38 @@
       "alba_ocaso": false
      }
     ],
+    "amanecer": "07:38",
+    "ocaso": "18:28",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "00:42",
+      "hasta": "02:42",
+      "centro": "01:42",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "08:40",
+      "hasta": "09:40",
+      "centro": "09:10",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "13:12",
+      "hasta": "15:12",
+      "centro": "14:12",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "18:37",
+      "hasta": "19:37",
+      "centro": "19:07",
+      "alba_ocaso": true
+     }
+    ],
     "mareas": [
      {
       "tipo": "pleamar",
@@ -343,6 +375,38 @@
       "alba_ocaso": false
      }
     ],
+    "amanecer": "07:38",
+    "ocaso": "18:27",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "01:42",
+      "hasta": "03:42",
+      "centro": "02:42",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "09:55",
+      "hasta": "10:55",
+      "centro": "10:25",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "14:13",
+      "hasta": "16:13",
+      "centro": "15:13",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "19:28",
+      "hasta": "20:28",
+      "centro": "19:58",
+      "alba_ocaso": false
+     }
+    ],
     "mareas": [
      {
       "tipo": "pleamar",
@@ -374,7 +438,7 @@
     "racha": 34,
     "dir": "E",
     "ola": 0.7,
-    "lluvia": 40,
+    "lluvia": 50,
     "mm": 0.0,
     "temp_max": 23,
     "agua": 20.6,
@@ -414,6 +478,38 @@
       "alba_ocaso": false
      }
     ],
+    "amanecer": "07:39",
+    "ocaso": "18:26",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "02:45",
+      "hasta": "04:45",
+      "centro": "03:45",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "11:06",
+      "hasta": "12:06",
+      "centro": "11:36",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "15:18",
+      "hasta": "17:18",
+      "centro": "16:18",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "20:29",
+      "hasta": "21:29",
+      "centro": "20:59",
+      "alba_ocaso": false
+     }
+    ],
     "mareas": [
      {
       "tipo": "pleamar",
@@ -445,7 +541,7 @@
     "racha": 24,
     "dir": "SE",
     "ola": 0.6,
-    "lluvia": 0,
+    "lluvia": 4,
     "mm": 0.0,
     "temp_max": 22,
     "agua": 20.7,
@@ -473,6 +569,38 @@
       "desde": "12:08",
       "hasta": "13:08",
       "centro": "12:38",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "07:40",
+    "ocaso": "18:25",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "03:50",
+      "hasta": "05:50",
+      "centro": "04:50",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "12:08",
+      "hasta": "13:08",
+      "centro": "12:38",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "16:22",
+      "hasta": "18:22",
+      "centro": "17:22",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "21:38",
+      "hasta": "22:38",
+      "centro": "22:08",
       "alba_ocaso": false
      }
     ],
@@ -546,6 +674,38 @@
       "alba_ocaso": false
      }
     ],
+    "amanecer": "07:41",
+    "ocaso": "18:24",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "04:53",
+      "hasta": "06:53",
+      "centro": "05:53",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "13:00",
+      "hasta": "14:00",
+      "centro": "13:30",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "17:23",
+      "hasta": "19:23",
+      "centro": "18:23",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "menor",
+      "desde": "22:51",
+      "hasta": "23:51",
+      "centro": "23:21",
+      "alba_ocaso": false
+     }
+    ],
     "mareas": [
      {
       "tipo": "pleamar",
@@ -603,6 +763,31 @@
       "hasta": "14:42",
       "centro": "14:12",
       "alba_ocaso": false
+     }
+    ],
+    "amanecer": "07:42",
+    "ocaso": "18:23",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "05:52",
+      "hasta": "07:52",
+      "centro": "06:52",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "menor",
+      "desde": "13:42",
+      "hasta": "14:42",
+      "centro": "14:12",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "18:19",
+      "hasta": "20:19",
+      "centro": "19:19",
+      "alba_ocaso": true
      }
     ],
     "mareas": [
@@ -676,6 +861,38 @@
       "alba_ocaso": false
      }
     ],
+    "amanecer": "07:43",
+    "ocaso": "18:22",
+    "periodos": [
+     {
+      "tipo": "menor",
+      "desde": "00:03",
+      "hasta": "01:03",
+      "centro": "00:33",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "06:46",
+      "hasta": "08:46",
+      "centro": "07:46",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "menor",
+      "desde": "14:17",
+      "hasta": "15:17",
+      "centro": "14:47",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "19:11",
+      "hasta": "21:11",
+      "centro": "20:11",
+      "alba_ocaso": false
+     }
+    ],
     "mareas": [
      {
       "tipo": "bajamar",
@@ -701,7 +918,7 @@
     "carrera_cm": 41
    }
   ],
-  "hechos_salir": "Notas por actividad entre las 9:00 y las 20:00 (0 no aconsejable, 1 regular, 2 bueno, 3 muy bueno), con viento medio y máximo, racha, dirección dominante, ola máxima (m), probabilidad máxima de lluvia (%) y lluvia (mm):\n2026-10-27: vela no aconsejable (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 3 km/h (máx 5), racha 12 km/h, del S, ola 0.3 m, lluvia 10 % (0.0 mm), 22 °C, agua 20.7 °C · actividad de peces 4/4 · mejores horas de pesca: 13:12-15:12 (mayor), 08:40-09:40 (menor) · mareas: pleamar 02:51, bajamar 08:30, pleamar 15:00, bajamar 21:03 (carrera 79 cm)\n2026-10-28: vela regular (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 5 km/h (máx 8), racha 17 km/h, del SE, ola 0.2 m, lluvia 0 % (0.0 mm), 23 °C, agua 20.7 °C · actividad de peces 3/4 · mejores horas de pesca: 14:13-16:13 (mayor), 09:55-10:55 (menor) · mareas: pleamar 03:35, bajamar 09:15, pleamar 15:40, bajamar 21:52 (carrera 77 cm)\n2026-10-29: vela regular (probable lluvia); pesca a fondo regular (rachas fuertes, mar movida, probable lluvia); curricán regular (rachas fuertes, probable lluvia) · viento 12 km/h (máx 18), racha 34 km/h, del E, ola 0.7 m, lluvia 40 % (0.0 mm), 23 °C, agua 20.6 °C · actividad de peces 3/4 · mejores horas de pesca: 15:18-17:18 (mayor), 11:06-12:06 (menor) · mareas: pleamar 04:12, bajamar 09:55, pleamar 16:22, bajamar 22:30 (carrera 68 cm)\n2026-10-30: vela bueno; pesca a fondo bueno; curricán bueno · viento 8 km/h (máx 12), racha 24 km/h, del SE, ola 0.6 m, lluvia 0 % (0.0 mm), 22 °C, agua 20.7 °C · actividad de peces 2/4 · mejores horas de pesca: 16:22-18:22 (mayor), 12:08-13:08 (menor) · mareas: pleamar 05:04, bajamar 10:42, pleamar 17:12, bajamar 23:30 (carrera 58 cm)\n2026-10-31: vela regular (probable lluvia); pesca a fondo regular (mar movida, probable lluvia); curricán regular (mar movida, probable lluvia) · viento 8 km/h (máx 11), racha 23 km/h, del E, ola 0.9 m, lluvia 50 % (0.0 mm), 22 °C, agua 20.7 °C · actividad de peces 3/4 · mejores horas de pesca: 17:23-19:23 (mayor, con el alba o el ocaso), 13:00-14:00 (menor) · mareas: pleamar 06:10, bajamar 11:42, pleamar 18:18 (carrera 41 cm)\n2026-11-01: vela no aconsejable (mar movida, probable lluvia); pesca a fondo no aconsejable (mar movida, probable lluvia); curricán no aconsejable (mar movida, probable lluvia) · viento 13 km/h (máx 15), racha 31 km/h, del E, ola 1.7 m, lluvia 95 % (0.0 mm), 21 °C, agua 20.6 °C · actividad de peces 2/4 · mejores horas de pesca: 13:42-14:42 (menor) · mareas: bajamar 00:30, pleamar 07:18, bajamar 13:00, pleamar 19:30 (carrera 44 cm)\n2026-11-02: vela no aconsejable (mar movida, probable lluvia); pesca a fondo no aconsejable (mar movida, probable lluvia); curricán no aconsejable (mar movida, probable lluvia) · viento 12 km/h (máx 15), racha 30 km/h, del E, ola 2.0 m, lluvia 90 % (0.0 mm), 21 °C, agua 20.5 °C · actividad de peces 2/4 · mejores horas de pesca: 06:46-08:46 (mayor, con el alba o el ocaso), 14:17-15:17 (menor) · mareas: bajamar 01:50, pleamar 08:50, bajamar 14:30, pleamar 21:00 (carrera 41 cm)",
+  "hechos_salir": "Notas por actividad entre las 9:00 y las 20:00 (0 no aconsejable, 1 regular, 2 bueno, 3 muy bueno), con viento medio y máximo, racha, dirección dominante, ola máxima (m), probabilidad máxima de lluvia (%) y lluvia (mm):\n2026-10-27: vela no aconsejable (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 3 km/h (máx 5), racha 12 km/h, del S, ola 0.3 m, lluvia 10 % (0.0 mm), 22 °C, agua 20.7 °C · actividad de peces 4/4 · mejores horas de pesca: 13:12-15:12 (mayor), 08:40-09:40 (menor) · mareas: pleamar 02:51, bajamar 08:30, pleamar 15:00, bajamar 21:03 (carrera 79 cm)\n2026-10-28: vela regular (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 5 km/h (máx 8), racha 17 km/h, del SE, ola 0.2 m, lluvia 0 % (0.0 mm), 23 °C, agua 20.7 °C · actividad de peces 3/4 · mejores horas de pesca: 14:13-16:13 (mayor), 09:55-10:55 (menor) · mareas: pleamar 03:35, bajamar 09:15, pleamar 15:40, bajamar 21:52 (carrera 77 cm)\n2026-10-29: vela regular (probable lluvia); pesca a fondo regular (rachas fuertes, mar movida, probable lluvia); curricán regular (rachas fuertes, probable lluvia) · viento 12 km/h (máx 18), racha 34 km/h, del E, ola 0.7 m, lluvia 50 % (0.0 mm), 23 °C, agua 20.6 °C · actividad de peces 3/4 · mejores horas de pesca: 15:18-17:18 (mayor), 11:06-12:06 (menor) · mareas: pleamar 04:12, bajamar 09:55, pleamar 16:22, bajamar 22:30 (carrera 68 cm)\n2026-10-30: vela bueno; pesca a fondo bueno; curricán bueno · viento 8 km/h (máx 12), racha 24 km/h, del SE, ola 0.6 m, lluvia 4 % (0.0 mm), 22 °C, agua 20.7 °C · actividad de peces 2/4 · mejores horas de pesca: 16:22-18:22 (mayor), 12:08-13:08 (menor) · mareas: pleamar 05:04, bajamar 10:42, pleamar 17:12, bajamar 23:30 (carrera 58 cm)\n2026-10-31: vela regular (probable lluvia); pesca a fondo regular (mar movida, probable lluvia); curricán regular (mar movida, probable lluvia) · viento 8 km/h (máx 11), racha 23 km/h, del E, ola 0.9 m, lluvia 50 % (0.0 mm), 22 °C, agua 20.7 °C · actividad de peces 3/4 · mejores horas de pesca: 17:23-19:23 (mayor, con el alba o el ocaso), 13:00-14:00 (menor) · mareas: pleamar 06:10, bajamar 11:42, pleamar 18:18 (carrera 41 cm)\n2026-11-01: vela no aconsejable (mar movida, probable lluvia); pesca a fondo no aconsejable (mar movida, probable lluvia); curricán no aconsejable (mar movida, probable lluvia) · viento 13 km/h (máx 15), racha 31 km/h, del E, ola 1.7 m, lluvia 95 % (0.0 mm), 21 °C, agua 20.6 °C · actividad de peces 2/4 · mejores horas de pesca: 13:42-14:42 (menor) · mareas: bajamar 00:30, pleamar 07:18, bajamar 13:00, pleamar 19:30 (carrera 44 cm)\n2026-11-02: vela no aconsejable (mar movida, probable lluvia); pesca a fondo no aconsejable (mar movida, probable lluvia); curricán no aconsejable (mar movida, probable lluvia) · viento 12 km/h (máx 15), racha 30 km/h, del E, ola 2.0 m, lluvia 90 % (0.0 mm), 21 °C, agua 20.5 °C · actividad de peces 2/4 · mejores horas de pesca: 06:46-08:46 (mayor, con el alba o el ocaso), 14:17-15:17 (menor) · mareas: bajamar 01:50, pleamar 08:50, bajamar 14:30, pleamar 21:00 (carrera 41 cm)",
   "graficas": {
    "semana": {
     "es": "https://seawithjose.es/revista/graficas/2026-10-27-semana-es.png",
@@ -710,35 +927,41 @@
    "plan": {
     "es": "https://seawithjose.es/revista/graficas/2026-10-27-plan-es.png",
     "en": "https://seawithjose.es/revista/graficas/2026-10-27-plan-en.png"
+   },
+   "pesca": {
+    "es": "https://seawithjose.es/revista/graficas/2026-10-27-pesca-es.png",
+    "en": "https://seawithjose.es/revista/graficas/2026-10-27-pesca-en.png"
    }
   }
  },
  "contenido": {
   "es": {
-   "asunto": "El agua perdió 1,8 °C en una semana de ponientes",
-   "entradilla": "Mar en calma estos días; el levante y la lluvia ganan terreno desde el fin de semana.",
-   "editorial": "Esta semana hemos tenido un mar muy manejable, pero el agua ha dado un bajón poco habitual para estas fechas. Aprovecharía la primera mitad de la semana para salir y dejaría el fin de semana para mirar el parte con calma; si os apetece navegar, bucear o pescar, nos vemos en Puerto Banús.",
-   "tiempo_comentario": "La semana ha sido seca, con 0 mm de lluvia y una máxima de 25 °C el 24 de octubre. El viento medio fue de 9 km/h, dominante del N, aunque hubo cuatro días de poniente y una racha máxima de 48 km/h del O el 20 de octubre. La mar se mantuvo muy contenida, con una ola máxima de 0,6 m.",
-   "datos_titulo": "El agua bajó 1,8 °C cuando en estas fechas suele subir 0,2 °C",
-   "datos_texto": "El primer descenso coincidió con poniente moderado: tras el viento del O de 14 km/h del 20 de octubre, el agua bajó 0,5 °C al día siguiente, de 22,5 °C a 22,0 °C. En el histórico, los ponientes moderados de 10 a 20 km/h se asocian a un descenso medio de 0,13 °C al día siguiente, en 210 días. El resto de la bajada llegó con vientos flojos de NO y N, así que no conviene atribuir todo el enfriamiento a un solo viento.",
-   "prevision_comentario": "El martes estará cubierto, con SO de 10 km/h y un 10 % de probabilidad de lluvia; el miércoles se espera despejado, con SE de 15 km/h. Desde el jueves domina el levante: E de 15 km/h el 29 y el 31 de octubre, y un episodio más incómodo el 1 y 2 de noviembre, con lluvia del 95 % y 90 %, respectivamente. El domingo se esperan E de 25 km/h y rachas de 50 km/h.",
-   "salir_comentario": "Para vela, elegiría el viernes 30: tiene la mejor valoración, con viento del SE de 8 km/h, ola de 0,6 m y sin lluvia prevista, aunque será una jornada de brisa suave. Para pesca a fondo, el mejor plan es el martes 27, con mar de 0,3 m y actividad solunar orientativa de 4/4; la ventana principal va de 13:12 a 15:12, cerca de la pleamar prevista a las 15:00. Para curricán también me quedaría con el martes y saldría a primera hora, de 08:40 a 09:40, con mar muy llana. Evitaría el domingo 1 y el lunes 2: el levante, las rachas, la lluvia probable y olas de hasta 1,7 m y 2,0 m no compensan.",
-   "comentario_mar": "El agua ha promediado 21,5 °C, con valores entre 20,6 °C y 22,6 °C; para bañarse sigue siendo agradable si uno está acostumbrado, y para bucear ya conviene contar con traje. La luna entra en cuarto menguante el 3 de noviembre y será nueva el 10 de noviembre."
+   "asunto": "El agua cae 1,8 °C pese al final tranquilo",
+   "entradilla": "Dos días muy buenos para pescar antes del levante y la lluvia.",
+   "editorial": "He visto una semana seca y tranquila, pero con un enfriamiento claro del agua. Aprovecharía el martes 27 o el miércoles 28 antes de que entre el levante.",
+   "tiempo_comentario": "Semana seca, con máximas de 25 °C y una racha de O de 48 km/h. Predominaron vientos flojos del N, tras cuatro días de poniente.",
+   "datos_titulo": "El agua bajó 1,8 °C cuando lo normal era subir 0,2 °C",
+   "datos_texto": "El agua pasó de 22,5 a 20,7 °C durante la semana. En estas fechas, los tres años anteriores subió de media 0,2 °C. El poniente moderado suele bajar 0,13 °C al día siguiente, en 210 días, pero esta caída fue mayor y continuó con viento del N.",
+   "prevision_comentario": "El levante gana fuerza desde el jueves 29 y trae lluvia el fin de semana. El domingo 1 y lunes 2 apuntan a mar movida, con 95 % y 90 % de lluvia.",
+   "pesca_comentario": "El martes 27 es el mejor: actividad 4/4, ola de 0,3 m y de 13:12 a 15:12. Sirve para fondo y curricán. El miércoles 28, de 14:13 a 16:13, mantiene mar casi plana y actividad 3/4. El domingo 1 y lunes 2 no merece la pena: habrá ola, lluvia y rachas.",
+   "salir_comentario": "El viernes 30 es el mejor para vela, con SE de 8 km/h y ola de 0,6 m. Me quedaría en puerto el domingo 1 y lunes 2 por levante, lluvia y olas de hasta 1,7 m y 2,0 m.",
+   "comentario_mar": "El agua, según Copernicus, terminó en 20,7 °C. El cuarto menguante llega el martes 3 de noviembre."
   },
   "en": {
-   "asunto": "Sea temperature fell 1.8 °C in a week of westerlies",
-   "entradilla": "Calm seas for now, with easterlies and rain building from the weekend.",
-   "editorial": "We have had very manageable seas this week, but the water has cooled far more than usual for the time of year. I would make the most of the first half of the week and watch the forecast carefully for the weekend; if you fancy sailing, diving or fishing, I’ll see you in Puerto Banús.",
-   "tiempo_comentario": "It was a dry week, with 0 mm of rain and a high of 25 °C on 24 October. Average wind was 9 km/h, mainly from the N, although there were four westerly days and a peak gust of 48 km/h from the W on 20 October. Seas stayed very slight, with a maximum wave height of 0.6 m.",
-   "datos_titulo": "Water fell 1.8 °C when it normally rises 0.2 °C",
-   "datos_texto": "The first drop coincided with a moderate westerly: after 14 km/h from the W on 20 October, water temperature fell 0.5 °C the following day, from 22.5 °C to 22.0 °C. In the record, moderate westerlies of 10–20 km/h are followed by an average fall of 0.13 °C, based on 210 days. The rest of the cooling came with light NW and N winds, so it would be wrong to put the whole change down to one wind pattern.",
-   "prevision_comentario": "Tuesday will be overcast, with a 10 km/h SW wind and a 10% chance of rain; Wednesday looks clear, with a 15 km/h SE wind. Easterlies take over from Thursday, at 15 km/h from the E on 29 and 31 October, before a less comfortable spell on 1 and 2 November, with rain chances of 95% and 90%. Sunday is expected to bring 25 km/h easterlies and gusts of 50 km/h.",
-   "salir_comentario": "For sailing, I would choose Friday 30th: it has the best rating, with an 8 km/h SE wind, 0.6 m waves and no rain forecast, although it will be a light-wind day. For bottom fishing, Tuesday 27th is the best option, with 0.3 m seas and traditional solunar activity rated 4/4; the main window is from 13:12 to 15:12, close to the predicted high tide at 15:00. For trolling, Tuesday is also the pick, leaving early between 08:40 and 09:40 while the sea is very flat. I would avoid Sunday 1st and Monday 2nd: easterlies, gusts, likely rain and waves up to 1.7 m and 2.0 m make them poor days afloat.",
-   "comentario_mar": "Water averaged 21.5 °C, ranging from 20.6 °C to 22.6 °C; it is still pleasant for a swim if you are used to it, while divers will now want a wetsuit. The moon reaches its last quarter on 3 November and is new on 10 November."
+   "asunto": "Water drops 1.8 °C despite calm finish",
+   "entradilla": "Two very good fishing days before easterlies and rain arrive.",
+   "editorial": "I saw a dry, calm week, but the water cooled noticeably. I would use Tuesday 27th or Wednesday 28th before the easterly sets in.",
+   "tiempo_comentario": "It was dry, with highs of 25 °C and a 48 km/h westerly gust. Light northerly winds dominated after four westerly days.",
+   "datos_titulo": "Water fell 1.8 °C when it usually rises 0.2 °C",
+   "datos_texto": "Water went from 22.5 to 20.7 °C during the week. Over these dates, it rose by 0.2 °C on average in the previous three years. Moderate westerlies usually cool it by 0.13 °C next day, across 210 days, but this drop was greater and continued under northerlies.",
+   "prevision_comentario": "Easterlies strengthen from Thursday 29th and bring rain over the weekend. Sunday 1st and Monday 2nd look rough, with 95% and 90% rain chances.",
+   "pesca_comentario": "Tuesday 27th is best: fish activity is 4/4, waves reach 0.3 m, and the best window is 13:12–15:12. Bottom fishing and trolling both suit it. Wednesday 28th, from 14:13–16:13, stays almost flat with 3/4 activity. Sunday 1st and Monday 2nd are not worth it: waves, rain and gusts.",
+   "salir_comentario": "Friday 30th is best for sailing, with a 8 km/h SE wind and 0.6 m waves. I would stay in port on Sunday 1st and Monday 2nd because of easterlies, rain, and waves up to 1.7 m and 2.0 m.",
+   "comentario_mar": "Copernicus puts the water at 20.7 °C by week’s end. Last quarter arrives on Tuesday 3rd November."
   }
  },
  "refs": {},
  "historial": [
-  "v1 · 2026-10-27 10:10 UTC · borrador"
+  "v1 · 2026-10-27 10:31 UTC · borrador"
  ]
 }
