@@ -50,8 +50,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add revista
           git commit -m "Bitácora: borrador $(date -u +%Y-%m-%d)"
-          git pull --rebase
-          git push
+          # si mientras tanto alguien ha subido algo, gana el borrador recién hecho (-X theirs, en un rebase,
+          # es el commit de esta tarea); y se reintenta por si dos tareas suben a la vez
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; git rebase --abort 2>/dev/null; sleep 5; done
+          exit 1
       - name: Abrir la incidencia para aprobarlo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

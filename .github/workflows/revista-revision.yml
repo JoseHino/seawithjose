@@ -46,8 +46,8 @@ jobs:
           git add -A              # todo lo que haya generado build.py (con una lista fija, un fichero borrado lo rompía)
           git diff --cached --quiet && exit 0
           git commit -m "Bitácora: revisión de la incidencia #${{ github.event.issue.number }}"
-          git pull --rebase
-          git push
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; git rebase --abort 2>/dev/null; sleep 5; done
+          exit 1
       - name: Contestar en la incidencia
         if: always()
         env:
