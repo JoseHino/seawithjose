@@ -664,6 +664,12 @@ def es_ok(texto):
                                                  "envía", "envia", "enviar", "publica", "publicar", "sí", "si", "perfecto"}
 
 
+def hora_pedida(texto):
+    """«OK 18:30», «ok a las 19», «vale 9.15h» → (18, 30)…; sin hora, None (sale a la HORA_ENVIO)."""
+    m = re.search(r"\b([01]?\d|2[0-3])(?:[:.h]([0-5]\d))?\s*(?:h|horas?)?\b", texto)
+    return (int(m.group(1)), int(m.group(2) or 0)) if m else None
+
+
 def limpiar_respuesta(texto):
     """Quita la cita del correo original (GitHub ya suele hacerlo)."""
     lineas = []
@@ -694,7 +700,7 @@ def cmd_revisar():
         salida("Tu respuesta llegó vacía. Escribe **OK** para enviar o los cambios que quieras.")
         return
     if es_ok(respuesta):
-        publicar(e)
+        publicar(e, hora_pedida(respuesta))
         return
     r = ia(instrucciones("revision"), json.dumps({"contenido": e["contenido"], "cifras_es": texto_mar(e["mar"], "es"),
                                                   "cifras_en": texto_mar(e["mar"], "en"), "tiempo_ultimos_dias": e["mar"].get("tiempo"),
@@ -702,7 +708,7 @@ def cmd_revisar():
                                                   "plan_para_salir": e["mar"].get("hechos_salir"), "respuesta_de_jose": respuesta},
                                                  ensure_ascii=False))
     if r.get("decision") == "aprobado":
-        publicar(e)
+        publicar(e, hora_pedida(respuesta))
         return
     if r.get("decision") != "correcciones" or not r.get("contenido"):
         salida(f"No tengo claro qué quieres cambiar ({r.get('comentario', 'sin explicación')}). "
@@ -726,7 +732,9 @@ def brevo(ruta, datos=None, metodo="POST"):
                       {"api-key": os.environ["BREVO_API_KEY"], "Accept": "application/json"}, metodo)
 
 
-def publicar(e):
+def publicar(e, hora=None):
+    """`hora`: (h, m) si Jose pide otra hora al aprobar; si no, la HORA_ENVIO del día del número. Si esa hora ya ha
+    pasado, el envío sale en el momento."""
     numero = e["numero"]
     for lang in IDIOMAS:
         escribir(os.path.join(CARPETA, f"{numero}-{lang}.html"), montar(numero, e["version"], e["contenido"], e["mar"], lang, "web"))
@@ -744,7 +752,11 @@ def publicar(e):
     enviados = []
     hechos = e.setdefault("enviados", {})          # idioma → campaña: lo ya enviado no se repite nunca
     cuando = envio(numero)
-    programar = cuando > datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=5)
+    if hora:
+        from zoneinfo import ZoneInfo
+        hoy = datetime.datetime.now(ZoneInfo("Europe/Madrid")).date()
+        cuando = datetime.datetime.combine(max(hoy, salida_de(numero)), datetime.time(*hora), ZoneInfo("Europe/Madrid"))
+    programar =cuando > datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=5)
     for lang in IDIOMAS:
         lista = os.environ.get(f"BREVO_LISTA_{lang.upper()}")
         if hechos.get(lang):
