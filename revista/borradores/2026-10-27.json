@@ -1,0 +1,138 @@
+{
+ "numero": "2026-10-27",
+ "version": 1,
+ "estado": "pendiente",
+ "mar": {
+  "desde": "2026-10-20",
+  "hasta": "2026-10-26",
+  "agua": 21.5,
+  "agua_min": 20.6,
+  "agua_max": 22.6,
+  "ola_max": 0.6,
+  "agua_dif": -0.7,
+  "racha_max": 40,
+  "agua_hoy": 20,
+  "luna": [
+   [
+    "2026-11-03",
+    "menguante"
+   ],
+   [
+    "2026-11-10",
+    "nueva"
+   ]
+  ],
+  "tiempo": {
+   "desde": "2026-10-20",
+   "hasta": "2026-10-26",
+   "dias_con_datos": 7,
+   "tmax": 25.0,
+   "tmax_dia": "2026-10-24",
+   "tmin": 15.4,
+   "tmin_dia": "2026-10-21",
+   "lluvia_total": 0,
+   "dias_lluvia": 0,
+   "racha_max": 48,
+   "racha_dia": "2026-10-20",
+   "racha_dir": "O",
+   "viento_medio": 9,
+   "dir_dominante": "N",
+   "dias_levante": 0,
+   "dias_poniente": 4
+  },
+  "prevision": [
+   {
+    "fecha": "2026-10-27",
+    "cielo": "Cubierto",
+    "tmax": 25,
+    "tmin": 18,
+    "lluvia": 10,
+    "viento": 10,
+    "viento_dir": "SO",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-28",
+    "cielo": "Despejado",
+    "tmax": 27,
+    "tmin": 18,
+    "lluvia": 0,
+    "viento": 15,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-29",
+    "cielo": "Intervalos nubosos",
+    "tmax": 26,
+    "tmin": 19,
+    "lluvia": 40,
+    "viento": 15,
+    "viento_dir": "E",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-30",
+    "cielo": "Poco nuboso",
+    "tmax": 25,
+    "tmin": 18,
+    "lluvia": 0,
+    "viento": 10,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-10-31",
+    "cielo": "Intervalos nubosos con lluvia escasa",
+    "tmax": 25,
+    "tmin": 18,
+    "lluvia": 50,
+    "viento": 15,
+    "viento_dir": "E",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-01",
+    "cielo": "Intervalos nubosos con lluvia",
+    "tmax": 24,
+    "tmin": 18,
+    "lluvia": 95,
+    "viento": 25,
+    "viento_dir": "E",
+    "racha": 50
+   },
+   {
+    "fecha": "2026-11-02",
+    "cielo": "Intervalos nubosos con lluvia",
+    "tmax": 24,
+    "tmin": 18,
+    "lluvia": 90,
+    "viento": 20,
+    "viento_dir": "E",
+    "racha": null
+   }
+  ]
+ },
+ "contenido": {
+  "es": {
+   "asunto": "El levante y la lluvia se afianzan desde el fin de semana",
+   "entradilla": "Tras una semana seca y de mar muy llano, el domingo llega con levante de hasta 25 km/h y lluvia.",
+   "editorial": "Cerramos una semana muy agradecida en el agua, con poco oleaje y días cálidos. Conviene aprovechar los huecos de mitad de semana antes de que el levante y la lluvia ganen terreno el fin de semana.",
+   "tiempo_comentario": "La semana ha sido seca, sin lluvia, y con predominio de vientos del norte y cuatro días de poniente. El termómetro llegó a 25,0 °C el 24 de octubre y la mínima fue de 15,4 °C el 21; la racha más fuerte alcanzó 48 km/h del oeste el 20.",
+   "prevision_comentario": "El miércoles 28 y el viernes 30 pintan como las jornadas más cómodas para salir, sin probabilidad de lluvia y con viento de 15 km/h o menos. El levante se instala desde el jueves, con un 40 % de probabilidad de lluvia, y empeora durante el fin de semana: el domingo 1 hay un 95 % de probabilidad, viento del este de 25 km/h y rachas de 50 km/h; el lunes 2 mantiene un 90 %.",
+   "comentario_mar": "El agua de Copernicus Marine ha promediado 21,5 °C, entre 20,6 °C y 22,6 °C, 0,7 °C por debajo de hace un año; la ola máxima fue de solo 0,6 m. Tras estos días de mar llano, el cuarto menguante llega el 3 de noviembre y la luna nueva el 10."
+  },
+  "en": {
+   "asunto": "Easterly winds and rain build from the weekend",
+   "entradilla": "After a dry week with very slight seas, Sunday brings easterlies up to 25 km/h and rain.",
+   "editorial": "We are coming out of a very pleasant week on the water, with little swell and warm days. It is worth making the most of the midweek windows before easterly winds and rain take hold over the weekend.",
+   "tiempo_comentario": "The week was dry, with no rain, mainly northerly winds and four days of westerlies. Temperatures reached 25.0 °C on 24 October, while the low was 15.4 °C on the 21st; the strongest gust was a 48 km/h westerly on the 20th.",
+   "prevision_comentario": "Wednesday 28th and Friday 30th look like the most comfortable days to head out, with no rain probability and winds of 15 km/h or less. Easterlies set in from Thursday, with a 40% chance of rain, then conditions worsen over the weekend: Sunday 1st has a 95% chance of rain, easterly winds at 25 km/h and gusts of 50 km/h, while Monday 2nd stays at 90%.",
+   "comentario_mar": "Copernicus Marine puts the average water temperature at 21.5 °C, ranging from 20.6 °C to 22.6 °C, 0.7 °C cooler than a year ago; the highest wave was just 0.6 m. After these calm sea days, the last quarter falls on 3 November and the new moon on the 10th."
+  }
+ },
+ "refs": {},
+ "historial": [
+  "v1 · 2026-10-27 09:54 UTC · borrador"
+ ]
+}
