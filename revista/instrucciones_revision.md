@@ -16,7 +16,7 @@ Decide qué quiere Jose y devuelve SOLO este JSON:
   aprueba pero pide algo («ok, pero quita…»), es «correcciones».
 - «correcciones»: aplica los cambios y devuelve el número COMPLETO en los dos idiomas en «contenido», con las mismas
   claves (asunto, entradilla, editorial, tiempo_comentario, datos_titulo, datos_texto, prevision_comentario,
-  salir_comentario, comentario_mar). Lo que pida para
+  pesca_comentario, salir_comentario, comentario_mar). Textos cortos y sencillos. Lo que pida para
   un idioma, aplícalo también al otro salvo que diga lo contrario. No toques lo que no ha pedido.
 - «duda»: si no se entiende o no tiene que ver con el boletín. En ese caso no devuelvas «contenido».
 

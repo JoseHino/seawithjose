@@ -79,6 +79,8 @@ TXT = {
            "fuentes_tiempo": "Datos: AEMET, estación Marbella Puerto (6076X) y predicción para Marbella. Agua: Copernicus Marine (satélite y modelo de la UE).",
            "leer": "Leer en", "web": "Ver en la web", "datos": "Ver todos los datos de Marbella, hora a hora", "baja": "Darse de baja",
            "pie": "Recibes la Bitácora porque te suscribiste en seawithjose.es.", "salidas": "Salir a navegar, bucear o pescar conmigo",
+           "pesca_h": "La pesca esta semana", "actividad": ["", "baja", "media", "alta", "muy alta"],
+           "graf_pesca_alt": "Gráfica: las mejores horas para pescar cada día de la semana que viene y la actividad de los peces",
            "salir_h": "¿Cuándo salir al mar?", "c_dia": "Día", "c_vela": "Vela", "c_fondo": "Pesca a fondo",
            "c_currican": "Curricán", "c_peces": "Peces", "c_horas": "Mejores horas de pesca", "c_mareas": "Mareas",
            "notas": ["No", "Regular", "Bueno", "Muy bueno"], "pleamar": "Pleamar", "bajamar": "Bajamar",
@@ -106,6 +108,8 @@ TXT = {
            "fuentes_tiempo": "Data: AEMET, Marbella Marina station (6076X) and Marbella forecast. Water: Copernicus Marine (EU satellite and model).",
            "leer": "Read on", "web": "View on the website", "datos": "See all the Marbella data, hour by hour", "baja": "Unsubscribe",
            "pie": "You get the Logbook because you subscribed at seawithjose.es.", "salidas": "Come sailing, diving or fishing with me",
+           "pesca_h": "Fishing this week", "actividad": ["", "low", "fair", "high", "very high"],
+           "graf_pesca_alt": "Chart: the best hours to fish each day of the week ahead and fish activity",
            "salir_h": "When to go out to sea?", "c_dia": "Day", "c_vela": "Sailing", "c_fondo": "Bottom fishing",
            "c_currican": "Trolling", "c_peces": "Fish", "c_horas": "Best fishing hours", "c_mareas": "Tides",
            "notas": ["No", "Fair", "Good", "Very good"], "pleamar": "High tide", "bajamar": "Low tide",
@@ -307,7 +311,7 @@ def redactar(numero, mar, notas=""):
     if mar.get("hechos"):
         usuario += ["\n=== HECHOS CALCULADOS: EL AGUA FRENTE AL VIENTO (para «datos_titulo» y «datos_texto») ===", mar["hechos"]]
     if mar.get("hechos_salir"):
-        usuario += ["\n=== PLAN PARA SALIR AL MAR LA SEMANA QUE VIENE (para «salir_comentario» y «prevision_comentario») ===",
+        usuario += ["\n=== PLAN PARA SALIR AL MAR LA SEMANA QUE VIENE (para «pesca_comentario», «salir_comentario» y «prevision_comentario») ===",
                     mar["hechos_salir"]]
     return ia(instrucciones("redaccion"), "\n".join(usuario)), {}
 
@@ -397,7 +401,19 @@ def bloque_tiempo(c, mar, lang):
                 f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font:13px/1.4 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{filas}</table>'
                 + f'<p style="margin:10px 0 0;font:12px/1.5 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};">{esc(t["fuentes_tiempo"])}</p>'
                 + "</td></tr>") if prev else ""
-    return ultimos + bloque_datos(c, mar, lang) + proximos + bloque_salir(c, mar, lang)
+    return ultimos + bloque_datos(c, mar, lang) + proximos + bloque_pesca(c, mar, lang) + bloque_salir(c, mar, lang)
+
+
+def bloque_pesca(c, mar, lang):
+    """La pesca esta semana: el comentario y la gráfica de las mejores horas de cada día."""
+    t = TXT[lang]
+    if not (c.get("pesca_comentario") or (mar.get("graficas") or {}).get("pesca")):
+        return ""
+    return (f'<tr><td style="padding:26px 30px 0;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
+            + titulo_seccion(t["pesca_h"])
+            + "".join(f'<p style="margin:0 0 12px;">{texto_html(p)}</p>' for p in str(c.get("pesca_comentario", "")).split("\n\n") if p.strip())
+            + imagen(mar, "pesca", lang, t["graf_pesca_alt"])
+            + "</td></tr>")
 
 
 def imagen(mar, nombre, lang, alt):
@@ -444,7 +460,8 @@ def bloque_salir(c, mar, lang):
             f'<td style="{celda}" align="center">{nota(d["notas"]["vela"])}</td>'
             f'<td style="{celda}" align="center">{nota(d["notas"]["fondo"])}</td>'
             f'<td style="{celda}" align="center">{nota(d["notas"]["currican"])}</td>'
-            f'<td style="{celda}color:{COLOR["azul"]};white-space:nowrap;letter-spacing:1px;" align="center">{peces}</td>'
+            f'<td style="{celda}color:{COLOR["azul"]};white-space:nowrap;letter-spacing:1px;" align="center">{peces}'
+            f'<br><span style="letter-spacing:0;font-size:10px;color:{COLOR["gris"]};">{esc(t["actividad"][d.get("actividad_peces") or 0])}</span></td>'
             f'<td style="{celda}white-space:nowrap;">{horas}</td>'
             f'<td style="{celda}white-space:nowrap;color:{COLOR["gris"]};">{mareas}</td></tr>')
     cabecera = "".join(f'<th style="padding:6px 4px;border-bottom:2px solid {COLOR["marino"]};font-size:10px;letter-spacing:.06em;'
@@ -590,7 +607,8 @@ def analizar(numero, mar):
         print(f"  plan: {e}")
     for lang in IDIOMAS:
         for nombre, hacer in (("semana", lambda r, l: rs.grafica_semana(mar["analisis"]["quincena"], r, l) if mar.get("analisis") else None),
-                              ("plan", lambda r, l: rs.grafica_plan(horas, None, r, l) if horas else None)):
+                              ("plan", lambda r, l: rs.grafica_plan(horas, None, r, l) if horas else None),
+                              ("pesca", lambda r, l: rs.grafica_pesca(mar["plan"], r, l) if mar.get("plan") else None)):
             ruta = os.path.join(CARPETA, "graficas", f"{numero}-{nombre}-{lang}.png")
             try:
                 hacer(ruta, lang)

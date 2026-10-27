@@ -211,13 +211,14 @@ def plan(hs, sol, mar, aemet=None):
             r["lluvia"] = max(r["lluvia"] or 0, lluvia_aemet[dia])
         s = sol.get(dia, {})
         notas = {a: nota(a, r) for a in UMBRALES}
-        # la pesca también depende de la actividad solunar: un día de luna alta sube medio punto
+        # mejores horas de pesca: los periodos solunares con luz, primero los mayores y los que caen con el alba o el ocaso
         mejores = [p for p in s.get("periodos", [])
                    if s.get("amanecer") and s.get("ocaso") and s["amanecer"] <= p["centro"] <= s["ocaso"]]
         mejores.sort(key=lambda p: (p["tipo"] != "mayor", not p["alba_ocaso"]))
         dias.append({"fecha": dia, **r, "notas": {a: n for a, (n, _) in notas.items()},
                      "motivos": {a: m for a, (_, m) in notas.items()},
                      "actividad_peces": s.get("actividad"), "horas_pesca": mejores[:2],
+                     "amanecer": s.get("amanecer"), "ocaso": s.get("ocaso"), "periodos": s.get("periodos", []),
                      "mareas": (mar.get(dia) or {}).get("extremos", []), "carrera_cm": (mar.get(dia) or {}).get("carrera_cm")})
     return dias
 
@@ -246,9 +247,23 @@ def texto_plan(dias):
 
 
 # ─────────────────────────────── gráficas ───────────────────────────────
+DIAS_SEM = {"es": "lun mar mié jue vie sáb dom".split(), "en": "Mon Tue Wed Thu Fri Sat Sun".split()}
+ACTIVIDAD = {"es": ["", "Baja", "Media", "Alta", "Muy alta"], "en": ["", "Low", "Fair", "High", "Very high"]}
+
+
 def _estilo(ax):
     ax.tick_params(labelsize=7)
     ax.spines["top"].set_visible(False)
+
+
+def etiqueta_dia(d, lang, salto=True):
+    """«mié 28/10»: el día de la semana y la fecha, para que se sepa a qué día corresponde cada cosa."""
+    return f"{DIAS_SEM[lang][d.weekday()]}{chr(10) if salto else ' '}{d.day}/{d.month}"
+
+
+def _horas(texto):
+    h, m = texto.split(":")
+    return int(h) + int(m) / 60
 
 
 def grafica_semana(semana, ruta, lang="es"):
@@ -269,9 +284,6 @@ def grafica_semana(semana, ruta, lang="es"):
     ax2 = ax1.twinx()
     ax2.bar(fechas, [x["viento"] or 0 for x in q], width=.7, alpha=.4, zorder=1,
             color=[rojo if x["dir"] in LEVANTE else azul if x["dir"] in PONIENTE else gris for x in q])
-    for f, x in zip(fechas, q):
-        if x["viento"]:
-            ax2.text(f, x["viento"], f"{x['dir'] or ''}", ha="center", va="bottom", fontsize=7, color="#4E5F70")
     ax2.set_ylabel(T[2], fontsize=8, color="#4E5F70")
     ax1.set_zorder(ax2.get_zorder() + 1); ax1.patch.set_visible(False)
     con = [(f, x["agua"]) for f, x in zip(fechas, q) if x["agua"] is not None]
@@ -280,10 +292,14 @@ def grafica_semana(semana, ruta, lang="es"):
         ax1.text(f, a + 0.06, f"{a:.1f}".replace(".", "," if lang == "es" else "."), ha="center", fontsize=7, color=marino)
     ax1.set_ylabel(T[1], fontsize=8, color=marino)
     ax1.set_title(T[0], loc="left", fontsize=10, fontweight="bold", color=marino)
-    ax1.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
+    ax1.set_xticks(fechas)
+    # bajo cada día, de dónde sopló el viento (dentro de la gráfica chocaba con las cifras del agua)
+    viento_de = {"es": "viento", "en": "wind"}[lang]
+    ax1.set_xticklabels([etiqueta_dia(f, lang) + (f"\n{viento_de} {x['dir']}" if x["dir"] else "") for f, x in zip(fechas, q)])
+    del mdates
     ax1.legend(handles=[Patch(color=rojo, alpha=.5, label=T[3]), Patch(color=azul, alpha=.5, label=T[4]),
                         Patch(color=gris, alpha=.5, label=T[5])], fontsize=7, loc="upper left",
-               bbox_to_anchor=(0, -0.12), frameon=False, ncol=3)
+               bbox_to_anchor=(0, -0.2), frameon=False, ncol=3)
     for ax in (ax1, ax2):
         _estilo(ax)
     fig.text(0.01, 0.01, T[6], fontsize=6.5, color="#4E5F70")
@@ -323,7 +339,6 @@ def grafica_plan(hs, mar, ruta, lang="es"):
     a1.set_ylim(bottom=-8)
     a1.set_ylabel(T[3], fontsize=8)
     a1.legend(fontsize=7, loc="upper left", frameon=False, ncol=2)
-    a1.set_title(T[0], loc="left", fontsize=10, fontweight="bold", color=marino)
     a2.plot(t, [h["ola"] for h in hs], color=azul, lw=1.8)
     a2.set_ylabel(T[4], fontsize=8, color=azul)
     a2b = a2.twinx()
@@ -334,12 +349,79 @@ def grafica_plan(hs, mar, ruta, lang="es"):
     a3.bar(t, [h["lluvia"] or 0 for h in hs], width=1 / 24, color=amarillo)
     a3.set_ylim(0, 100)
     a3.set_ylabel(T[6], fontsize=8)
-    a3.xaxis.set_major_locator(mdates.DayLocator())
-    a3.xaxis.set_major_formatter(mdates.DateFormatter("%a %d" if lang == "en" else "%d/%m"))
+    # cada día con su nombre: una raya a medianoche y el nombre a mediodía, abajo y encima del viento
+    dias = sorted({x.date() for x in t})
+    mediodias = [datetime.datetime.combine(d, datetime.time(12)) for d in dias]
+    for d in dias[1:]:
+        for ax in (a1, a2, a3):
+            ax.axvline(datetime.datetime.combine(d, datetime.time(0)), color="#4E5F70", lw=.8, zorder=1)
+    a3.set_xticks(mediodias)
+    a3.set_xticklabels([etiqueta_dia(d, lang) for d in dias])
+    a3.tick_params(axis="x", length=0)
+    techo = a1.get_ylim()[1]
+    for m, d in zip(mediodias, dias):
+        a1.text(m, techo, etiqueta_dia(d, lang, salto=False), ha="center", va="bottom", fontsize=7.5,
+                fontweight="bold", color=marino)
+    a1.set_title(T[0], loc="left", fontsize=10, fontweight="bold", color=marino, pad=16)
+    del mdates
     for ax in (a1, a2, a2b, a3):
         _estilo(ax)
     fig.text(0.01, 0.005, T[7], fontsize=6.5, color="#4E5F70")
     fig.tight_layout(rect=(0, 0.02, 1, 1))
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    fig.savefig(ruta)
+    plt.close(fig)
+
+
+def grafica_pesca(dias, ruta, lang="es"):
+    """La pesca, día a día: una fila por día con la noche en gris, los periodos de más actividad (mayores en verde
+    oscuro, menores en verde claro, ★ si caen con el alba o el ocaso) y, a la derecha, la actividad del día."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
+    marino, verde, verde_claro, noche, azul = "#0B2D52", "#1E7B3A", "#8CCB97", "#DCE4EB", "#1F4E9A"
+    T = {"es": ("Las mejores horas para pescar", "Periodo mayor (2 h)", "Periodo menor (1 h)", "Noche",
+                "★ con el alba o el ocaso", "Actividad de los peces según la luna (teoría solunar). Sol y luna: cálculo astronómico."),
+         "en": ("The best hours to fish", "Major period (2 h)", "Minor period (1 h)", "Night",
+                "★ at dawn or dusk", "Fish activity according to the moon (solunar theory). Sun and moon: astronomical calculation.")}[lang]
+    n = len(dias)
+    fig, ax = plt.subplots(figsize=(7.2, 0.55 * n + 1.3), dpi=150)
+    for i, d in enumerate(dias):
+        y = n - 1 - i
+        if d.get("amanecer"):
+            ax.barh(y, _horas(d["amanecer"]), left=0, height=.8, color=noche, lw=0)
+        if d.get("ocaso"):
+            ax.barh(y, 24 - _horas(d["ocaso"]), left=_horas(d["ocaso"]), height=.8, color=noche, lw=0)
+        for p in d.get("periodos", []):
+            a, b = _horas(p["desde"]), _horas(p["hasta"])
+            tramos = [(a, b)] if a < b else [(a, 24), (0, b)]          # un periodo que pasa la medianoche
+            for x0, x1 in tramos:
+                ax.barh(y, x1 - x0, left=x0, height=.55 if p["tipo"] == "mayor" else .35,
+                        color=verde if p["tipo"] == "mayor" else verde_claro, lw=0)
+            if p["alba_ocaso"]:
+                ax.text(_horas(p["centro"]), y + .42, "★", ha="center", va="center", fontsize=9, color="#C99700")
+        act = d.get("actividad_peces") or 0
+        ax.text(24.4, y, "●" * act + "○" * (4 - act), va="center", fontsize=8, color=azul)
+        ax.text(27.6, y, ACTIVIDAD[lang][act], va="center", fontsize=8, color=marino, fontweight="bold")
+    ax.set_yticks(range(n))
+    ax.set_yticklabels([etiqueta_dia(datetime.date.fromisoformat(d["fecha"]), lang, salto=False) for d in reversed(dias)],
+                       fontsize=8, fontweight="bold", color=marino)
+    ax.set_xlim(0, 24)
+    ax.set_xticks(range(0, 25, 3))
+    ax.set_xticklabels([f"{h}:00" for h in range(0, 25, 3)])
+    ax.grid(axis="x", color="#C9D5DF", lw=.5)
+    ax.set_axisbelow(True)
+    for lado in ("top", "right", "left"):
+        ax.spines[lado].set_visible(False)
+    ax.tick_params(axis="y", length=0)
+    ax.tick_params(axis="x", labelsize=7)
+    ax.set_title(T[0], loc="left", fontsize=10, fontweight="bold", color=marino)
+    ax.legend(handles=[Patch(color=verde, label=T[1]), Patch(color=verde_claro, label=T[2]), Patch(color=noche, label=T[3]),
+                       Patch(color="white", label=T[4])], fontsize=7, loc="upper left", bbox_to_anchor=(0, -0.12 * 7 / n),
+              frameon=False, ncol=4)
+    fig.text(0.01, 0.01, T[5], fontsize=6.5, color="#4E5F70")
+    fig.tight_layout(rect=(0, 0.03, .82, 1))
     os.makedirs(os.path.dirname(ruta), exist_ok=True)
     fig.savefig(ruta)
     plt.close(fig)
