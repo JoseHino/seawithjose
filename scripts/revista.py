@@ -558,6 +558,10 @@ def cmd_revisar():
         salida("No encuentro el borrador de esta incidencia.")
         return
     e = json.load(open(ruta_estado(m.group(1)), encoding="utf-8"))
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", e["numero"]):
+        salida(f"El nº {e['numero']} es de la revista quincenal antigua, con noticias; ya no se publica ni se envía.",
+               cerrar=True)
+        return
     if e["estado"] == "publicado":
         salida(f"El nº {e['numero']} ya está publicado y enviado; no he hecho nada.")
         return
@@ -633,15 +637,19 @@ def publicar(e):
             enviados.append(f"{lang}: la lista {lista} aún no tiene suscriptores, no enviado")
             continue
         c = e["contenido"][lang]
-        camp = brevo("/emailCampaigns", {
-            "name": f"Bitácora {numero} ({lang})", "subject": c.get("asunto", TXT[lang]["nombre"]),
-            "previewText": c.get("entradilla", "")[:150],
-            "sender": {"name": REMITENTE_NOMBRE, "email": REMITENTE}, "replyTo": os.environ.get("REVISTA_RESPONDER", REMITENTE),
-            "recipients": {"listIds": [int(lista)]}, "mirrorActive": True,
-            "htmlContent": montar(numero, e["version"], e["contenido"], e["mar"], lang, "brevo"),
-            **({"scheduledAt": cuando.isoformat()} if programar else {})})
-        if not programar:
-            brevo(f"/emailCampaigns/{camp['id']}/sendNow")
+        try:
+            camp = brevo("/emailCampaigns", {
+                "name": f"Bitácora {numero} ({lang})", "subject": c.get("asunto", TXT[lang]["nombre"]),
+                "previewText": c.get("entradilla", "")[:150],
+                "sender": {"name": REMITENTE_NOMBRE, "email": REMITENTE}, "replyTo": os.environ.get("REVISTA_RESPONDER", REMITENTE),
+                "recipients": {"listIds": [int(lista)]}, "mirrorActive": True,
+                "htmlContent": montar(numero, e["version"], e["contenido"], e["mar"], lang, "brevo"),
+                **({"scheduledAt": cuando.isoformat()} if programar else {})})
+            if not programar:
+                brevo(f"/emailCampaigns/{camp['id']}/sendNow")
+        except Exception as error:  # noqa: BLE001  (un idioma que falla no impide publicar ni enviar el otro)
+            enviados.append(f"{lang}: Brevo no lo ha aceptado, no enviado ({str(error)[-160:]})")
+            continue
         hechos[lang] = camp["id"]
         guardar_estado(e)
         enviados.append(f"{lang}: campaña {camp['id']} "

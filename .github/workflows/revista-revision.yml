@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A revista datos/revista index.html es ru revista.html sitemap.xml robots.txt 404.html buceo.html legal.html gracias.html
+          git add -A              # todo lo que haya generado build.py (con una lista fija, un fichero borrado lo rompía)
           git diff --cached --quiet && exit 0
           git commit -m "Bitácora: revisión de la incidencia #${{ github.event.issue.number }}"
           git pull --rebase
