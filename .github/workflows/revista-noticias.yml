@@ -1,10 +1,8 @@
 name: Bitácora · noticias
 
-# Cada día guarda las noticias de cada eje (buceo, vela, pesca, viajes, océano y Marbella) en español e inglés.
-# Los RSS solo devuelven unos días, por eso se acumulan en datos/revista/noticias.json (40 días).
+# Guardaba las noticias de cada eje para la revista quincenal. Desde octubre de 2026 la newsletter es semanal y
+# solo del tiempo, así que ya no se ejecuta sola; queda a mano por si vuelven las noticias.
 on:
-  schedule:
-    - cron: "40 6 * * *"
   workflow_dispatch:
 
 permissions:

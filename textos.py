@@ -432,7 +432,7 @@ T["en"] = {
         ("Who runs this website", "Sea With Jose is the personal brand of José María Hinojosa Figueira, based in "
                                   "Marbella (Málaga, Spain). Contact: {email} · WhatsApp {tel}."),
         ("What this website does", "It shows my sailing trips on the Petit and the extras for private trips, and "
-                                   "lets you book and pay for them online. It also publishes the Sea Logbook, my fortnightly magazine, "
+                                   "lets you book and pay for them online. It also publishes my weekly newsletter on the Marbella weather,"
                                    "and official weather data for Marbella."),
         ("Bookings and payment", "Trips are paid in advance by card through Stripe, which processes the payment: this "
                                  "website never sees or stores your card details. Your booking is confirmed when I "
@@ -451,7 +451,7 @@ T["en"] = {
                       "me at any time to see, correct or delete your data by writing to {email}, and you can complain "
                       "to the Spanish Data Protection Agency (aepd.es)."),
         ("The Sea Logbook (newsletter)", "If you subscribe to the Logbook, I only use your email address (and your name, "
-         "if you give it) to send you the magazine every fortnight, on the basis of the consent you give in the form "
+         "if you give it) to send you the newsletter every week, on the basis of the consent you give in the form "
          "and confirm by email (double opt-in). The list is kept by Brevo (Sendinblue SAS, France, EU) as data "
          "processor; Brevo records whether each issue is opened, only to measure the newsletter. Every issue has an "
          "unsubscribe link and I delete your data when you unsubscribe. You can also ask me to see, correct or delete "
@@ -509,20 +509,17 @@ T["en"] = {
                "pocos": "Not enough data in this period."},
     },
     "revista": {
-        "title": "Newsletter: a free fortnightly magazine about the sea · Sea With Jose",
-        "description": ("Every fortnight, in your inbox: the water temperature off Marbella, and the most interesting news "
-                        "on diving, sailing, fishing, sea travel and the ocean. Written by Jose, captain and oceanographer."),
-        "eyebrow": "Free · every fortnight",
+        "title": "Newsletter: Marbella weather every Tuesday, free · Sea With Jose",
+        "description": ("Every Tuesday, in your inbox: how the weather and the sea have been in Marbella over the last few "
+                        "days and what the coming week holds. Written by Jose, captain and oceanographer."),
+        "eyebrow": "Free · every Tuesday",
         "h1": "Newsletter",
-        "lead": ("Every fortnight I send a short magazine about the sea: how the water has been off Marbella, and the "
-                 "best news on diving, sailing, fishing and sea travel, picked and explained by me."),
+        "lead": ("Every Tuesday I send you the weather in Marbella: what the last few days have been like and what’s "
+                 "coming next week, with official AEMET data, explained by me."),
         "ejes_h": "What’s inside",
-        "ejes": [("mar", "The sea this fortnight", "Water temperature, waves and wind off Puerto Banús, and the moon for fishing."),
-                 ("buceo", "Diving", "New sites, marine life, courses and what’s happening under the water."),
-                 ("vela", "Sailing and boats", "Regattas, boats, seamanship and news from the marinas."),
-                 ("pesca", "Fishing", "Seasons, species and the rules for recreational fishing."),
-                 ("viajes", "Sea travel", "Destinations for diving and sailing, near and far."),
-                 ("ciencia", "Ocean news", "Discoveries, whales, sharks and the stories that make the headlines.")],
+        "ejes": [("mar", "The last 7 days", "Highs and lows, rain, the strongest gust and whether it blew easterly or westerly."),
+                 ("vela", "The week ahead", "AEMET’s forecast for Marbella day by day: sky, temperature, rain and wind."),
+                 ("pesca", "The water and the moon", "Sea temperature, the highest wave and the moon phases for fishing.")],
         "susc_h": "Get it in your inbox",
         "susc_corto": "Subscribe",
         "susc_p": "Choose your language. You’ll get an email to confirm, and you can unsubscribe with one click.",
@@ -839,7 +836,7 @@ T["es"] = {
         ("Titular", "Sea With Jose es la marca personal de José María Hinojosa Figueira, con domicilio en Marbella "
                     "(Málaga). Contacto: {email} · WhatsApp {tel}."),
         ("Qué hace esta web", "Enseña mis salidas en velero en el Petit y los extras de las salidas privadas, y "
-                              "permite reservarlas y pagarlas. También publica la Bitácora del mar, mi revista quincenal, y los "
+                              "permite reservarlas y pagarlas. También publica mi newsletter semanal del tiempo en Marbella, y los"
                               "datos oficiales del tiempo en Marbella."),
         ("Reservas y pagos", "Las salidas se pagan por adelantado con tarjeta a través de Stripe, que procesa el pago: "
                              "esta web no ve ni guarda los datos de tu tarjeta. La reserva queda confirmada cuando te "
@@ -917,20 +914,17 @@ T["es"] = {
                "pocos": "No hay suficientes datos en este periodo."},
     },
     "revista": {
-        "title": "Newsletter: revista quincenal gratuita sobre el mar · Sea With Jose",
-        "description": ("Cada quince días, en tu correo: la temperatura del agua en Marbella y lo más interesante del buceo, "
-                        "la vela, la pesca, los viajes por mar y el océano. La escribe Jose, capitán y oceanógrafo."),
-        "eyebrow": "Gratis · cada quince días",
+        "title": "Newsletter: el tiempo en Marbella cada martes, gratis · Sea With Jose",
+        "description": ("Cada martes, en tu correo: cómo han estado el tiempo y el mar en Marbella los últimos días y qué "
+                        "viene la semana que entra. La escribe Jose, capitán y oceanógrafo."),
+        "eyebrow": "Gratis · cada martes",
         "h1": "Newsletter",
-        "lead": ("Cada quince días envío una revista corta sobre el mar: cómo ha estado el agua en Marbella y las mejores "
-                 "noticias de buceo, vela, pesca y viajes por mar, elegidas y explicadas por mí."),
+        "lead": ("Cada martes te mando el tiempo en Marbella: cómo han sido los últimos días y qué viene la semana que "
+                 "entra, con los datos oficiales de AEMET y explicado por mí."),
         "ejes_h": "Qué trae cada número",
-        "ejes": [("mar", "El mar en la quincena", "Temperatura del agua, oleaje y viento frente a Puerto Banús, y la luna para pescar."),
-                 ("buceo", "Buceo", "Inmersiones, fauna, cursos y lo que pasa bajo el agua."),
-                 ("vela", "Vela y barcos", "Regatas, barcos, náutica y novedades de los puertos."),
-                 ("pesca", "Pesca", "Temporadas, especies y normas de la pesca recreativa."),
-                 ("viajes", "Viajes por mar", "Destinos para bucear y navegar, cerca y lejos."),
-                 ("ciencia", "Noticias del océano", "Descubrimientos, ballenas, tiburones y las historias que dan que hablar.")],
+        "ejes": [("mar", "Los últimos 7 días", "Máximas y mínimas, lluvia, la racha más fuerte y si ha soplado levante o poniente."),
+                 ("vela", "La semana que viene", "La previsión de AEMET para Marbella día a día: cielo, temperatura, lluvia y viento."),
+                 ("pesca", "El agua y la luna", "La temperatura del mar, la ola más alta y las fases de la luna para pescar.")],
         "susc_h": "Recíbela en tu correo",
         "susc_corto": "Suscríbete",
         "susc_p": "Elige el idioma. Te llegará un correo para confirmar y puedes darte de baja con un clic.",
@@ -1274,7 +1268,7 @@ T["ru"] = {
                         "данные, написав на {email}, а также подать жалобу в Испанское агентство по защите данных "
                         "(aepd.es)."),
         ("Морской журнал (рассылка)", "Если вы подписались на журнал, я использую ваш email (и имя, если вы его "
-         "указали) только для отправки журнала раз в две недели, на основании согласия, которое вы даёте в форме и "
+         "указали) только для еженедельной рассылки, на основании согласия, которое вы даёте в форме и "
          "подтверждаете по почте (двойное подтверждение). Список хранит Brevo (Sendinblue SAS, Франция, ЕС) как "
          "обработчик данных; Brevo отмечает, открыт ли номер, только для статистики рассылки. В каждом номере есть "
          "ссылка для отписки, и после отписки я удаляю ваши данные. Также можно попросить показать, исправить или "
@@ -1332,20 +1326,17 @@ T["ru"] = {
                "pocos": "Недостаточно данных за этот период."},
     },
     "revista": {
-        "title": "Рассылка о море раз в две недели, бесплатно · Sea With Jose",
-        "description": ("Раз в две недели на почту: температура воды в Марбелье и самое интересное о дайвинге, парусе, "
-                        "рыбалке, морских путешествиях и океане. Пишет Хосе, капитан и океанограф."),
-        "eyebrow": "Бесплатно · раз в две недели",
+        "title": "Рассылка: погода в Марбелье каждый вторник, бесплатно · Sea With Jose",
+        "description": ("Каждый вторник на почту: какими были погода и море в Марбелье в последние дни и что ждёт на "
+                        "следующей неделе. Пишет Хосе, капитан и океанограф."),
+        "eyebrow": "Бесплатно · каждый вторник",
         "h1": "Рассылка",
-        "lead": ("Раз в две недели я отправляю короткий журнал о море: какой была вода в Марбелье и лучшие новости о "
-                 "дайвинге, парусе, рыбалке и морских путешествиях. Журнал выходит на английском и испанском."),
+        "lead": ("Каждый вторник я присылаю погоду в Марбелье: какими были последние дни и что ждёт на следующей неделе, "
+                 "по официальным данным AEMET и с моими пояснениями. Рассылка выходит на английском и испанском."),
         "ejes_h": "Что в каждом номере",
-        "ejes": [("mar", "Море за две недели", "Температура воды, волны и ветер у Пуэрто-Бануса и луна для рыбалки."),
-                 ("buceo", "Дайвинг", "Места погружений, морская жизнь, курсы."),
-                 ("vela", "Парус и яхты", "Регаты, яхты, морское дело и новости марин."),
-                 ("pesca", "Рыбалка", "Сезоны, виды рыб и правила любительской рыбалки."),
-                 ("viajes", "Морские путешествия", "Куда поехать нырять и ходить под парусом."),
-                 ("ciencia", "Новости океана", "Открытия, киты, акулы и громкие истории.")],
+        "ejes": [("mar", "Последние 7 дней", "Максимум и минимум, осадки, самый сильный порыв и откуда дул ветер: с востока или с запада."),
+                 ("vela", "Следующая неделя", "Прогноз AEMET для Марбельи по дням: небо, температура, осадки и ветер."),
+                 ("pesca", "Вода и луна", "Температура моря, самая высокая волна и фазы луны для рыбалки.")],
         "susc_h": "Подписаться",
         "susc_corto": "Подписаться",
         "susc_p": "Выберите язык. Вам придёт письмо для подтверждения; отписаться можно в один клик.",

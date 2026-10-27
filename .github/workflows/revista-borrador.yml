@@ -1,16 +1,19 @@
 name: Bitácora · borrador
 
-# Los días 1 y 16 prepara el número de la quincena y abre una incidencia para que Jose lo apruebe por correo.
-# A mano (Run workflow) se puede pedir un número concreto (AAAA-MM-1 o AAAA-MM-2) y dejar notas para la IA.
+# Cada martes por la mañana prepara el número de la semana (el tiempo en Marbella) y abre una incidencia para que
+# Jose lo apruebe por correo; al aprobarlo se programa en Brevo para el martes a las 14:00 (DIA_ENVIO y HORA_ENVIO
+# en scripts/revista.py). Para pasarlo al domingo a las 17:00: aquí "0 9 * * 0", y en revista.py DIA_ENVIO = 6 y
+# HORA_ENVIO = (17, 0).
+# A mano (Run workflow) se puede pedir un número concreto (la fecha de envío, AAAA-MM-DD) y dejar notas para la IA.
 on:
   schedule:
-    - cron: "0 7 1,16 * *"
+    - cron: "0 7 * * 2"           # martes 07:00 UTC (8:00 o 9:00 en Madrid)
   repository_dispatch:            # lo lanza el correo a la dirección de la Bitácora (Apps Script de Gmail)
     types: [revista]
   workflow_dispatch:
     inputs:
       numero:
-        description: "Número (AAAA-MM-1 primera quincena, AAAA-MM-2 segunda). Vacío = el que toca."
+        description: "Fecha de envío (AAAA-MM-DD). Vacío = el próximo martes (o hoy, si es martes)."
         required: false
       notas:
         description: "Indicaciones para la IA (opcional)"
@@ -33,10 +36,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Librería de gráficas
-        run: pip install --quiet matplotlib
-      - name: Noticias al día
-        run: python scripts/revista_noticias.py
       - name: Redactar el borrador
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -47,7 +46,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add revista datos/revista
+          git add revista
           git commit -m "Bitácora: borrador $(date -u +%Y-%m-%d)"
           git pull --rebase
           git push

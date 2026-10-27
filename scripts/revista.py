@@ -1,23 +1,27 @@
 # -*- coding: utf-8 -*-
-"""Bitácora del mar: la revista quincenal de Sea With Jose, en español y en inglés.
+"""Bitácora del mar: la newsletter semanal del tiempo en Marbella de Sea With Jose, en español y en inglés.
 
-    python scripts/revista.py borrador [AAAA-MM-Q]   prepara el número (Q = 1 o 2, por quincena) y su versión 1
+    python scripts/revista.py borrador [AAAA-MM-DD]  prepara el número del día de envío indicado y su versión 1
     python scripts/revista.py abrir                  abre la incidencia de GitHub para aprobarlo (tras subir los ficheros)
-    python scripts/revista.py revisar                lee la respuesta de Jose: OK publica y envía; si no, nueva versión
+    python scripts/revista.py revisar                lee la respuesta de Jose: OK publica y programa el envío; si no, nueva versión
     python scripts/revista.py comentar               contesta en la incidencia (tras subir los ficheros)
+
+Cada número es el tiempo en Marbella: cómo han sido los últimos 7 días (AEMET, Marbella Puerto), qué dice la
+previsión de AEMET para la semana que entra, y el mar (agua, olas, racha y luna). Se envía cada semana el día
+DIA_ENVIO a la HORA_ENVIO (hora de Madrid). Para cambiarlo, toca esas dos constantes y el cron de
+`revista-borrador.yml` (el borrador sale unas horas antes, para que Jose lo apruebe a tiempo).
 
 El circuito, todo en GitHub Actions y sin servidor:
 
-  1. `revista-borrador.yml` (días 1 y 16, o a mano) ejecuta `borrador`: junta los
-     datos del mar de la quincena (Open-Meteo y AEMET), las noticias guardadas por
-     `revista_noticias.py`, y la IA redacta los dos idiomas. El HTML lo monta este
-     script con la plantilla de abajo: la IA no escribe ninguna cifra.
+  1. `revista-borrador.yml` (el día de envío por la mañana, o a mano) ejecuta `borrador`: junta los datos del
+     tiempo y del mar y la IA escribe los comentarios en los dos idiomas. El HTML lo monta este script con la
+     plantilla de abajo: la IA no escribe ninguna cifra.
   2. `abrir` crea una incidencia con la etiqueta «revista» que menciona a Jose:
      GitHub se la manda por correo con los enlaces a la vista previa.
   3. Jose responde a ese correo (o comenta en la incidencia). `revista-revision.yml`
-     ejecuta `revisar`: «OK» → se publica en seawithjose.es/revista/ y se envía con
-     Brevo a la lista de cada idioma; cualquier otra cosa → la IA aplica los cambios
-     y sale la versión siguiente.
+     ejecuta `revisar`: «OK» → se publica en seawithjose.es/revista/ y se programa en Brevo para el día y la hora
+     de envío (si ya han pasado, sale en el momento); cualquier otra cosa → la IA aplica los cambios y sale la
+     versión siguiente.
 
 Variables de entorno (secretos y variables del repositorio):
   OPENAI_API_KEY, REVISTA_MODELO (por defecto gpt-5.6-terra)
@@ -41,14 +45,15 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CARPETA = os.path.join(RAIZ, "revista")
 BORRADORES = os.path.join(CARPETA, "borradores")
 INDICE = os.path.join(CARPETA, "index.json")
-NOTICIAS = os.path.join(RAIZ, "datos", "revista", "noticias.json")
 PARTE = os.path.join(RAIZ, "datos", "mar.json")
 SALIDA_TMP = os.path.join(RAIZ, ".revista_salida.json")
 ULTIMO_TMP = os.path.join(RAIZ, ".revista_ultimo")
 DOMINIO = "https://seawithjose.es"
 LAT, LON = 36.47, -4.95                       # frente a Puerto Banús
 IDIOMAS = ("es", "en")
-EJES = ("local", "buceo", "vela", "pesca", "viajes", "ciencia")
+DIA_ENVIO = 1                                 # 0 lunes … 6 domingo (martes; más adelante, domingo = 6)
+HORA_ENVIO = (14, 0)                          # hora de Madrid (más adelante, (17, 0))
+DIAS = 7                                      # días que repasa cada número
 
 MODELO = os.environ.get("REVISTA_MODELO") or "gpt-5.6-terra"
 REMITENTE = os.environ.get("REVISTA_REMITENTE") or "jose@seawithjose.es"
@@ -58,15 +63,15 @@ COLOR = {"marino": "#0B2D52", "azul": "#1F4E9A", "amarillo": "#FFC20E", "rojo": 
          "gris": "#4E5F70", "cielo": "#E7F1F7", "linea": "#CFDCE5"}
 
 TXT = {
-    "es": {"nombre": "Bitácora del mar", "de": "Sea With Jose", "num": "Nº", "quincena": ["1.ª quincena", "2.ª quincena"],
+    "es": {"nombre": "Bitácora del mar", "de": "Sea With Jose · El tiempo en Marbella", "num": "Nº", "semana": "Semana del {d}",
            "meses": "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre".split(),
-           "mar_h": "El mar en la quincena", "agua": "Agua (media)", "rango": "mín. {a} · máx. {b} °C",
+           "mar_h": "El mar", "agua": "Agua (media de la semana)", "rango": "mín. {a} · máx. {b} °C",
            "vs": "{d} °C {s} que hace un año", "mas": "más", "menos": "menos", "igual": "igual que hace un año",
            "ola": "Ola más alta", "viento": "Racha más fuerte", "luna": "Luna", "hoy": "Agua hoy (AEMET)",
            "fases": {"nueva": "Luna nueva", "llena": "Luna llena", "creciente": "Cuarto creciente", "menguante": "Cuarto menguante"},
            "fuentes": "Datos: Open-Meteo (Copernicus Marine, ERA5) y AEMET, frente a Puerto Banús.",
-           "datos_h": "Lo que dicen los datos", "tiempo_h": "El tiempo en Marbella",
-           "ultimos": "Los últimos 15 días", "proximos": "Los próximos 7 días (previsión de AEMET)",
+           "datos_h": "Lo que dicen los datos", "tiempo_h": "Los últimos 7 días", "prevision_h": "La semana que viene",
+           "ultimos": "Los últimos 7 días", "proximos": "Previsión de AEMET para Marbella",
            "t_max": "Máxima", "t_min": "Mínima", "t_lluvia": "Lluvia", "t_racha": "Racha más fuerte", "t_viento": "Viento",
            "dias_lluvia": "{n} día(s) de lluvia", "levante_poniente": "{l} días de levante · {p} de poniente",
            "dias_sem": "lun mar mié jue vie sáb dom".split(),
@@ -75,16 +80,16 @@ TXT = {
            "leer": "Leer en", "web": "Ver en la web", "datos": "Ver todos los datos de Marbella, hora a hora", "baja": "Darse de baja",
            "pie": "Recibes la Bitácora porque te suscribiste en seawithjose.es.", "salidas": "Salir a navegar, bucear o pescar conmigo",
            "aviso": "Borrador para tu aprobación · versión {v}",
-           "aviso_p": "Responde «OK» al correo de GitHub (o comenta en la incidencia) y se publica y se envía. Si quieres cambios, escríbelos en tu respuesta."},
-    "en": {"nombre": "The Sea Logbook", "de": "Sea With Jose", "num": "No.", "quincena": ["First half of", "Second half of"],
+           "aviso_p": "Responde «OK» al correo de GitHub (o comenta en la incidencia) y se publica y se programa el envío. Si quieres cambios, escríbelos en tu respuesta."},
+    "en": {"nombre": "The Sea Logbook", "de": "Sea With Jose · Marbella weather", "num": "No.", "semana": "Week of {d}",
            "meses": "January February March April May June July August September October November December".split(),
-           "mar_h": "The sea this fortnight", "agua": "Water (average)", "rango": "min {a} · max {b} °C",
+           "mar_h": "The sea", "agua": "Water (weekly average)", "rango": "min {a} · max {b} °C",
            "vs": "{d} °C {s} than a year ago", "mas": "warmer", "menos": "cooler", "igual": "same as a year ago",
            "ola": "Highest wave", "viento": "Strongest gust", "luna": "Moon", "hoy": "Water today (AEMET)",
            "fases": {"nueva": "New moon", "llena": "Full moon", "creciente": "First quarter", "menguante": "Last quarter"},
            "fuentes": "Data: Open-Meteo (Copernicus Marine, ERA5) and AEMET, off Puerto Banús.",
-           "datos_h": "What the data say", "tiempo_h": "Marbella weather",
-           "ultimos": "The last 15 days", "proximos": "The next 7 days (AEMET forecast)",
+           "datos_h": "What the data say", "tiempo_h": "The last 7 days", "prevision_h": "The week ahead",
+           "ultimos": "The last 7 days", "proximos": "AEMET forecast for Marbella",
            "t_max": "High", "t_min": "Low", "t_lluvia": "Rain", "t_racha": "Strongest gust", "t_viento": "Wind",
            "dias_lluvia": "{n} rainy day(s)", "levante_poniente": "{l} easterly days · {p} westerly",
            "dias_sem": "Mon Tue Wed Thu Fri Sat Sun".split(),
@@ -93,7 +98,7 @@ TXT = {
            "leer": "Read on", "web": "View on the website", "datos": "See all the Marbella data, hour by hour", "baja": "Unsubscribe",
            "pie": "You get the Logbook because you subscribed at seawithjose.es.", "salidas": "Come sailing, diving or fishing with me",
            "aviso": "Draft for your approval · version {v}",
-           "aviso_p": "Reply “OK” to the GitHub email (or comment on the issue) and it will be published and sent."},
+           "aviso_p": "Reply “OK” to the GitHub email (or comment on the issue) and it will be published and scheduled."},
 }
 
 
@@ -116,38 +121,34 @@ def pedir_json(url, datos=None, cabeceras=None, metodo=None, timeout=60):
 
 
 def numero_de(fecha):
-    return f"{fecha.year}-{fecha.month:02d}-{1 if fecha.day < 16 else 2}"
+    """El número es la fecha de envío (AAAA-MM-DD): el primer día de envío desde `fecha`, incluida."""
+    fecha += datetime.timedelta(days=(DIA_ENVIO - fecha.weekday()) % 7)
+    return fecha.isoformat()
 
 
 def salida_de(numero):
-    """AAAA-MM-1 y AAAA-MM-2 salen el 1 y el 16; AAAA-MM-DD (DD de dos cifras) es un número especial de ese día."""
-    a, m, q = numero.split("-")
-    a, m = int(a), int(m)
-    if len(q) == 2:
-        return datetime.date(a, m, int(q)), True
-    return datetime.date(a, m, 1 if q == "1" else 16), False
+    return datetime.date.fromisoformat(numero)
 
 
 def periodo(numero):
-    """Días que cubre un número: la quincena anterior a su salida (los especiales, los 15 días anteriores)."""
-    salida, especial = salida_de(numero)
-    fin = salida - datetime.timedelta(days=1)
-    if especial:
-        return fin - datetime.timedelta(days=14), fin
-    ini = fin.replace(day=16) if fin.day > 15 else fin.replace(day=1)
-    return ini, fin
+    """Días que repasa un número: los DIAS anteriores a su envío."""
+    fin = salida_de(numero) - datetime.timedelta(days=1)
+    return fin - datetime.timedelta(days=DIAS - 1), fin
+
+
+def envio(numero):
+    """Día y hora de envío, en hora de Madrid."""
+    from zoneinfo import ZoneInfo
+    return datetime.datetime.combine(salida_de(numero), datetime.time(*HORA_ENVIO), ZoneInfo("Europe/Madrid"))
+
+
+def fecha_larga(d, lang):
+    mes = TXT[lang]["meses"][d.month - 1]
+    return f"{d.day} de {mes} de {d.year}" if lang == "es" else f"{d.day} {mes} {d.year}"
 
 
 def titulo_fecha(numero, lang):
-    salida, especial = salida_de(numero)
-    if especial:
-        mes = TXT[lang]["meses"][salida.month - 1]
-        return (f"Especial · {salida.day} de {mes} de {salida.year}" if lang == "es"
-                else f"Special · {salida.day} {mes} {salida.year}")
-    a, m, q = (int(x) for x in numero.split("-"))
-    t = TXT[lang]
-    mes = t["meses"][m - 1]
-    return f"{t['quincena'][q - 1]} de {mes} de {a}" if lang == "es" else f"{t['quincena'][q - 1]} {mes} {a}"
+    return TXT[lang]["semana"].format(d=fecha_larga(salida_de(numero), lang))
 
 
 def num_es(x, dec=1):
@@ -216,9 +217,9 @@ def datos_mar(numero):
             out["agua_hoy"] = hoy["agua"]
     except Exception:  # noqa: BLE001
         pass
-    # la luna de la quincena que empieza ahora, que es la que le sirve a quien sale a pescar
-    salida, _ = salida_de(numero)
-    out["luna"] = [(d.isoformat(), f) for d, f in fases_luna(salida, salida + datetime.timedelta(days=15))]
+    # las dos próximas fases de la luna (en una semana puede no haber ninguna), que es lo que le sirve a quien pesca
+    salida = salida_de(numero)
+    out["luna"] = [(d.isoformat(), f) for d, f in fases_luna(salida, salida + datetime.timedelta(days=15))][:2]
     return out
 
 
@@ -232,33 +233,12 @@ def texto_mar(mar, lang):
         partes.append(f"diferencia con hace un año {mar['agua_dif']:+} °C")
     if "ola_max" in mar:
         partes.append(f"ola máxima {mar['ola_max']} m")
-    if "racha_max" in mar:
-        partes.append(f"racha máxima {mar['racha_max']} km/h")
     if mar.get("luna"):
         partes.append("luna: " + ", ".join(f"{t['fases'][f]} {d}" for d, f in mar["luna"]))
     return "; ".join(partes)
 
 
-# ─────────────────────────────── noticias de la quincena ───────────────────────────────
-def noticias(numero, lang, refs, por_eje=14):
-    """Lista para la IA. Cada noticia lleva un código corto (N1, N2…) en vez del enlace: los enlaces de Google
-    Noticias pasan de 200 caracteres y la IA los copiaba con alguna letra cambiada. El enlace lo pone `resolver()`."""
-    ini, fin = periodo(numero)
-    ini = ini - datetime.timedelta(days=3)
-    try:
-        todas = json.load(open(NOTICIAS, encoding="utf-8"))["noticias"]
-    except (OSError, ValueError, KeyError):
-        return ""
-    lineas = []
-    for eje in EJES:
-        sel = [n for n in todas if n["lang"] == lang and n["eje"] == eje and ini.isoformat() <= n["fecha"] <= fin.isoformat()]
-        for n in sel[:por_eje]:
-            ref = f"N{len(refs) + 1}"
-            refs[ref] = {"url": n["url"], "fuente": n["fuente"], "titular": n["titular"]}
-            lineas.append(f"[{eje}] {ref} · {n['fecha']} · {n['fuente']} · {n['titular']}")
-    return "\n".join(lineas)
-
-
+# ─────────────────────────────── enlaces de las noticias (solo números antiguos) ───────────────────────────────
 def resolver(contenido, refs):
     """Pone a cada noticia el enlace y la fuente exactos de su código. Una noticia sin código válido se queda sin
     enlace (nunca con uno inventado); una sección que se queda vacía, desaparece."""
@@ -300,15 +280,13 @@ def instrucciones(nombre):
 
 
 def redactar(numero, mar, notas=""):
-    refs = {}
-    usuario = [f"NÚMERO: {numero}", f"NOTAS DE JOSE: {notas or '(ninguna)'}"]
-    for lang in IDIOMAS:
-        usuario += [f"\n=== IDIOMA {lang} ===", f"CIFRAS DEL MAR ({mar['desde']} a {mar['hasta']}): {texto_mar(mar, lang)}",
-                    f"NOTICIAS ({lang}; formato: [eje] código · fecha · fuente · titular):", noticias(numero, lang, refs)]
-    if mar.get("hechos"):
-        usuario += ["\n=== HECHOS CALCULADOS (para «datos_titulo», «datos_texto» y «tiempo_comentario», en los dos idiomas) ===",
-                    mar["hechos"]]
-    return resolver(ia(instrucciones("redaccion"), "\n".join(usuario)), refs), refs
+    salida = salida_de(numero)
+    usuario = [f"NÚMERO: {numero} (sale el {salida.isoformat()}, {['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'][salida.weekday()]})",
+               f"NOTAS DE JOSE: {notas or '(ninguna)'}",
+               f"\nCIFRAS DEL MAR ({mar['desde']} a {mar['hasta']}): {texto_mar(mar, 'es')}",
+               f"\nTIEMPO DE LOS ÚLTIMOS {DIAS} DÍAS (AEMET, Marbella Puerto): {json.dumps(mar.get('tiempo') or {}, ensure_ascii=False)}",
+               f"\nPREVISIÓN DE AEMET PARA MARBELLA, DÍA A DÍA: {json.dumps(mar.get('prevision') or [], ensure_ascii=False)}"]
+    return ia(instrucciones("redaccion"), "\n".join(usuario)), {}
 
 
 # ─────────────────────────────── la plantilla del correo ───────────────────────────────
@@ -326,8 +304,7 @@ def bloque_mar(mar, lang):
         celdas.append((t["hoy"], f"{mar['agua_hoy']} °C", ""))
     if "ola_max" in mar:
         celdas.append((t["ola"], f"{fmt(mar['ola_max'], lang)} m", ""))
-    if "racha_max" in mar:
-        celdas.append((t["viento"], f"{mar['racha_max']} km/h", ""))
+    # la racha va en «Los últimos 7 días», con el dato oficial de AEMET (el de Open-Meteo es de modelo y no coincide)
     if mar.get("luna"):
         lunas = "<br>".join(f"{esc(t['fases'][f])} · {int(d[8:10])}/{int(d[5:7])}" for d, f in mar["luna"])
         celdas.append((t["luna"], "", lunas))
@@ -354,26 +331,16 @@ def titulo_seccion(texto):
             f'color:{COLOR["rojo"]};margin-bottom:12px;border-top:3px solid {COLOR["marino"]};padding-top:14px;">{esc(texto)}</div>')
 
 
-def bloque_analisis(c, mar, lang):
-    t = TXT[lang]
-    if not (c.get("datos_texto") or mar.get("graficas")):
-        return ""
-    img = mar.get("graficas", {}).get(lang)
-    return (f'<tr><td style="padding:26px 30px 0;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
-            + titulo_seccion(t["datos_h"])
-            + (f'<div style="font:800 19px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin-bottom:8px;">{esc(c["datos_titulo"])}</div>' if c.get("datos_titulo") else "")
-            + "".join(f'<p style="margin:0 0 12px;">{texto_html(p)}</p>' for p in str(c.get("datos_texto", "")).split("\n\n") if p.strip())
-            + (f'<img src="{esc(img)}" width="580" alt="{esc(t["graf_alt"])}" style="display:block;width:100%;max-width:580px;height:auto;border:1px solid {COLOR["linea"]};">' if img else "")
-            + "</td></tr>")
-
-
 def bloque_tiempo(c, mar, lang):
+    """Dos bloques: cómo han sido los últimos días y la previsión de la semana que viene, cada uno con su comentario."""
     t, q, prev = TXT[lang], mar.get("tiempo") or {}, mar.get("prevision") or []
     if not (q or prev):
         return ""
     def dia(f):
         d = datetime.date.fromisoformat(f)
         return f"{t['dias_sem'][d.weekday()]} {d.day}/{d.month}"
+    def parrafos(texto):
+        return "".join(f'<p style="margin:0 0 12px;">{texto_html(p)}</p>' for p in str(texto or "").split("\n\n") if p.strip())
     celdas = []
     if "tmax" in q:
         celdas.append((t["t_max"], f"{fmt(q['tmax'], lang)} °C", dia(q["tmax_dia"])))
@@ -397,15 +364,16 @@ def bloque_tiempo(c, mar, lang):
         f'<td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};white-space:nowrap;">{"" if p.get("lluvia") is None else str(p["lluvia"]) + " %"}</td>'
         f'<td style="padding:7px 6px;border-bottom:1px solid {COLOR["linea"]};white-space:nowrap;">{esc(p.get("viento_dir") or "")} {p.get("viento") or ""}{" km/h" if p.get("viento") else ""}</td></tr>'
         for p in prev)
-    return (f'<tr><td style="padding:26px 30px 0;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
-            + titulo_seccion(t["tiempo_h"])
-            + (f'<p style="margin:0 0 12px;">{texto_html(c["tiempo_comentario"])}</p>' if c.get("tiempo_comentario") else "")
-            + (f'<div style="font:700 14px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin:4px 0 6px;">{esc(t["ultimos"])}</div>'
-               f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>{tarjetas}</tr></table>{extra}' if celdas else "")
-            + (f'<div style="font:700 14px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin:18px 0 4px;">{esc(t["proximos"])}</div>'
-               f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font:13px/1.4 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{filas}</table>' if prev else "")
-            + f'<p style="margin:10px 0 0;font:12px/1.5 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};">{esc(t["fuentes_tiempo"])}</p>'
-            + "</td></tr>")
+    caja = f'<tr><td style="padding:26px 30px 0;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
+    ultimos = (caja + titulo_seccion(t["tiempo_h"]) + parrafos(c.get("tiempo_comentario"))
+               + f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>{tarjetas}</tr></table>{extra}'
+               + "</td></tr>") if celdas else ""
+    proximos = (caja + titulo_seccion(t["prevision_h"]) + parrafos(c.get("prevision_comentario"))
+                + f'<div style="font:700 14px/1.3 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin:4px 0 4px;">{esc(t["proximos"])}</div>'
+                f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font:13px/1.4 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{filas}</table>'
+                + f'<p style="margin:10px 0 0;font:12px/1.5 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};">{esc(t["fuentes_tiempo"])}</p>'
+                + "</td></tr>") if prev else ""
+    return ultimos + proximos
 
 
 def texto_html(s):
@@ -418,20 +386,6 @@ def montar(numero, version, contenido, mar, lang, modo):
     """modo: «borrador» (con el recuadro de aprobación), «web» o «brevo» (con enlaces de baja de Brevo)."""
     t = TXT[lang]
     c = contenido[lang]
-    url_web = f"{DOMINIO}/revista/{numero}-{lang}.html"
-    secciones = []
-    for s in c.get("secciones", []):
-        items = "".join(
-            f'<tr><td style="padding:0 0 18px;font:16px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">'
-            f'<div style="font-weight:800;color:{COLOR["marino"]};font-size:17px;line-height:1.35;">{esc(i.get("titular"))}</div>'
-            f'<div style="margin-top:4px;">{texto_html(i.get("texto"))}</div>'
-            + (f'<div style="margin-top:4px;font-size:14px;"><a href="{esc(i["url"])}" style="color:{COLOR["azul"]};font-weight:700;">'
-               f'{esc(t["leer"])} {esc(i.get("fuente") or "")} →</a></div>' if i.get("url") else "")
-            + "</td></tr>" for i in s.get("items", []))
-        secciones.append(
-            f'<tr><td style="padding:26px 30px 0;"><div style="font:800 13px/1 Arial,Helvetica,sans-serif;letter-spacing:.14em;'
-            f'text-transform:uppercase;color:{COLOR["rojo"]};margin-bottom:12px;border-top:3px solid {COLOR["marino"]};padding-top:14px;">'
-            f'{esc(s.get("titulo"))}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">{items}</table></td></tr>')
     aviso = ""
     if modo == "borrador":
         aviso = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;margin:0 0 14px;">'
@@ -465,16 +419,14 @@ def montar(numero, version, contenido, mar, lang, modo):
     <div style="font:800 24px/1.25 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin-bottom:10px;">{esc(c.get("asunto"))}</div>
     {"".join(f'<p style="margin:0 0 12px;">{texto_html(p)}</p>' for p in str(c.get("editorial", "")).split(chr(10) + chr(10)) if p.strip())}
   </td></tr>
+  {bloque_tiempo(c, mar, lang)}
   <tr><td style="padding:22px 25px 0;">
     <div style="font:800 13px/1 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:{COLOR["rojo"]};margin:0 5px 12px;border-top:3px solid {COLOR["marino"]};padding-top:14px;">{esc(t["mar_h"])}</div>
     {bloque_mar(mar, lang)}
     {f'<p style="margin:12px 5px 0;font:15px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">{texto_html(c.get("comentario_mar"))}</p>' if c.get("comentario_mar") else ""}
     <p style="margin:14px 5px 0;"><a href="{DOMINIO}/{"es/" if lang == "es" else ""}datos.html" style="color:{COLOR["azul"]};font:700 15px/1.4 Arial,Helvetica,sans-serif;">{esc(t["datos"])} →</a></p>
   </td></tr>
-  {bloque_analisis(c, mar, lang)}
-  {"".join(secciones)}
-  {bloque_tiempo(c, mar, lang)}
-  <tr><td style="padding:10px 30px 30px;" align="left">
+  <tr><td style="padding:26px 30px 30px;" align="left">
     <a href="{DOMINIO}/{"es/" if lang == "es" else ""}" style="display:inline-block;background:{COLOR["amarillo"]};color:{COLOR["marino"]};font:700 16px/1 Arial,Helvetica,sans-serif;text-decoration:none;padding:15px 22px;">{esc(t["salidas"])} →</a>
   </td></tr>
   <tr><td style="background:{COLOR["marino"]};padding:20px 30px;font:12px/1.6 Arial,Helvetica,sans-serif;color:#C9D7E6;">
@@ -532,27 +484,18 @@ def editor():
 
 # ─────────────────────────────── órdenes ───────────────────────────────
 def analizar(numero, mar):
-    """Análisis, tiempo de la quincena y previsión (scripts/revista_datos.py), y la gráfica de cada idioma."""
+    """El tiempo de los últimos días y la previsión de AEMET (scripts/revista_datos.py)."""
     import revista_datos as rd
     ini, fin = periodo(numero)
-    for clave, funcion in (("tiempo", lambda: rd.tiempo_quincena(ini, fin)), ("prevision", rd.prevision),
-                           ("analisis", lambda: rd.analisis(ini, fin))):
+    for clave, funcion in (("tiempo", lambda: rd.tiempo_quincena(ini, fin)), ("prevision", rd.prevision)):
         try:
             mar[clave] = funcion()
         except Exception as e:  # noqa: BLE001
             print(f"  {clave}: {e}")
-    if mar.get("analisis"):
-        mar["hechos"] = rd.texto_analisis(mar["analisis"], mar.get("tiempo"), mar.get("prevision"))
-        for lang in IDIOMAS:
-            try:
-                rd.grafica(mar["analisis"], os.path.join(CARPETA, "graficas", f"{numero}-{lang}.png"), lang)
-                mar.setdefault("graficas", {})[lang] = f"{DOMINIO}/revista/graficas/{numero}-{lang}.png"
-            except Exception as e:  # noqa: BLE001
-                print(f"  gráfica {lang}: {e}")
 
 
 def cmd_borrador(numero=None, notas=""):
-    numero = numero or numero_de(datetime.date.today() + datetime.timedelta(days=1))
+    numero = numero or numero_de(datetime.date.today())
     if os.path.exists(ruta_estado(numero)) and json.load(open(ruta_estado(numero), encoding="utf-8"))["estado"] == "publicado":
         sys.exit(f"El número {numero} ya está publicado.")
     mar = datos_mar(numero)
@@ -578,7 +521,9 @@ def cmd_abrir():
               f"- Vista previa en español: {v['es']}\n- Vista previa en inglés: {v['en']}\n\n"
               "(Los enlaces tardan uno o dos minutos en funcionar.)\n\n"
               "**Responde a este correo** (o comenta aquí):\n"
-              "- **OK** → se publica en la web y se envía a los suscritos de cada idioma.\n"
+              f"- **OK** → se publica en la web y se programa el envío a los suscritos de cada idioma para el "
+              f"{fecha_larga(salida_de(e['numero']), 'es')} a las {HORA_ENVIO[0]}:{HORA_ENVIO[1]:02d} "
+              "(si apruebas más tarde, sale en el momento).\n"
               "- **Cualquier cambio** («quita la noticia de…», «el editorial más corto», «añade que…») → "
               "llega una versión nueva para revisar.\n")
     r = github("/issues", {"title": f"Bitácora del mar nº {e['numero']} · borrador", "body": cuerpo,
@@ -624,7 +569,8 @@ def cmd_revisar():
         publicar(e)
         return
     r = ia(instrucciones("revision"), json.dumps({"contenido": e["contenido"], "cifras_es": texto_mar(e["mar"], "es"),
-                                                  "cifras_en": texto_mar(e["mar"], "en"), "respuesta_de_jose": respuesta},
+                                                  "cifras_en": texto_mar(e["mar"], "en"), "tiempo_ultimos_dias": e["mar"].get("tiempo"),
+                                                  "prevision_aemet": e["mar"].get("prevision"), "respuesta_de_jose": respuesta},
                                                  ensure_ascii=False))
     if r.get("decision") == "aprobado":
         publicar(e)
@@ -668,6 +614,8 @@ def publicar(e):
     subprocess.run([sys.executable, os.path.join(RAIZ, "build.py")], check=True)
     enviados = []
     hechos = e.setdefault("enviados", {})          # idioma → campaña: lo ya enviado no se repite nunca
+    cuando = envio(numero)
+    programar = cuando > datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=5)
     for lang in IDIOMAS:
         lista = os.environ.get(f"BREVO_LISTA_{lang.upper()}")
         if hechos.get(lang):
@@ -690,12 +638,15 @@ def publicar(e):
             "previewText": c.get("entradilla", "")[:150],
             "sender": {"name": REMITENTE_NOMBRE, "email": REMITENTE}, "replyTo": os.environ.get("REVISTA_RESPONDER", REMITENTE),
             "recipients": {"listIds": [int(lista)]}, "mirrorActive": True,
-            "htmlContent": montar(numero, e["version"], e["contenido"], e["mar"], lang, "brevo")})
-        brevo(f"/emailCampaigns/{camp['id']}/sendNow")
+            "htmlContent": montar(numero, e["version"], e["contenido"], e["mar"], lang, "brevo"),
+            **({"scheduledAt": cuando.isoformat()} if programar else {})})
+        if not programar:
+            brevo(f"/emailCampaigns/{camp['id']}/sendNow")
         hechos[lang] = camp["id"]
         guardar_estado(e)
-        enviados.append(f"{lang}: campaña {camp['id']} enviada a la lista {lista}"
-                        + (f" ({suscritos} suscriptores)" if suscritos else ""))
+        enviados.append(f"{lang}: campaña {camp['id']} "
+                        + (f"programada para el {cuando:%d/%m a las %H:%M}" if programar else "enviada")
+                        + f" a la lista {lista}" + (f" ({suscritos} suscriptores)" if suscritos else ""))
     e["estado"] = "publicado"
     e["historial"].append(f"v{e['version']} · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · "
                           "aprobado y publicado · " + " · ".join(enviados))
