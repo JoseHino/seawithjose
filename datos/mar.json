@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-27T10:38:44Z",
+ "generado": "2026-10-27T16:43:01Z",
  "elaborado": {
   "playa": "2026-10-27T09:01:17",
-  "horas": "2026-10-27T08:59:08"
+  "horas": "2026-10-27T15:05:10"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -35,22 +35,22 @@
      "niebla": 0,
      "cielo": "nubes_altas",
      "fondo": false,
-     "fuerza": 5,
+     "fuerza": null,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 20,
      "notas": {
       "navegar": {
-       "n": 4,
+       "n": 6,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 5,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     },
@@ -65,7 +65,7 @@
      "niebla": 0,
      "cielo": "cubierto",
      "fondo": false,
-     "fuerza": 5,
+     "fuerza": 4,
      "aviso": false,
      "mar": 2,
      "agua": 20,
@@ -115,22 +115,22 @@
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 4,
      "aviso": false,
-     "mar": 1,
+     "mar": 2,
      "agua": 22,
      "notas": {
       "navegar": {
-       "n": 8,
-       "m": "poco_viento"
+       "n": 6,
+       "m": "marejada"
       },
       "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 5,
+       "m": "marejada"
       },
       "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
+       "n": 5,
+       "m": "marejada"
       }
      }
     },
@@ -249,16 +249,16 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "E y NE 2 a 3 amainando a variable 2 de madrugada y arreciando a W y SW 3 a 5 por la tarde. Rizada a marejadilla localmente marejada por la tarde. Regular a buena.",
-  "elaborado": "2026-10-26T20:00:00",
-  "inicio": "2026-10-26T20:00:00",
-  "fin": "2026-10-27T20:00:00",
+  "texto": "W y NW 2 a 4 temporalmente variable de madrugada en el oeste, rolando a E al final. Marejadilla, localmente marejada. Temporalmente regular al amanecer.",
+  "elaborado": "2026-10-27T12:00:00",
+  "inicio": "2026-10-27T12:00:00",
+  "fin": "2026-10-28T12:00:00",
   "fuerza": [
    2,
-   5
+   4
   ],
   "mar": [
-   0,
+   1,
    2
   ],
   "fondo": false,
