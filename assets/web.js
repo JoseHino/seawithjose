@@ -107,7 +107,8 @@
     const pagos = d.pagos || {};
     const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
     const formatoHora = new Intl.DateTimeFormat(d.lang, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Madrid' });
-    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' }).format(n);
+    // miles con punto en los tres idiomas (1.300 €); en inglés el símbolo va delante (€1.300)
+    const euros = n => { const c = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0, useGrouping: 'always' }).format(n); return d.lang === 'en' ? `€${c}` : `${c} €`; };
     const CODIGOS = { buffet: 'bu', paella: 'pa', sushi: 'su', cocteles: 'co', tarta: 'ta', decoracion: 'de', moto: 'mo', taxi: 'tx', otra: 'ot' };
     const LETRA = { compartida: 'C', privada: 'P', dia: 'D' };
     let datos = null;
@@ -276,7 +277,8 @@
     }
     if (!r) { document.querySelector('.gracias-sin').hidden = false; return; }
     const f = d.form, b = d.resumen;
-    const euros = n => new Intl.NumberFormat(d.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' }).format(n);
+    // miles con punto en los tres idiomas (1.300 €); en inglés el símbolo va delante (€1.300)
+    const euros = n => { const c = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0, useGrouping: 'always' }).format(n); return d.lang === 'en' ? `€${c}` : `${c} €`; };
     const formatoFecha = new Intl.DateTimeFormat(d.lang, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' });
     const extras = [...(r.extras || []).map(x => d.extras[x]), r.otra ? `${d.extras.otra}: ${r.otra}` : ''].filter(Boolean).join(', ');
     const filas = [[b.salida, f.tipos[r.tipo]], [b.fecha, formatoFecha.format(new Date(`${r.dia}T12:00:00Z`))],
