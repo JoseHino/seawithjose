@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-26T23:55:42Z",
+ "generado": "2026-10-27T10:38:44Z",
  "elaborado": {
-  "playa": "2026-10-26T23:51:13",
-  "horas": "2026-10-26T20:55:08"
+  "playa": "2026-10-27T09:01:17",
+  "horas": "2026-10-27T08:59:08"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,9 +27,9 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 5,
+     "viento": 6,
      "racha": 13,
-     "dir": "N",
+     "dir": "SO",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -57,9 +57,9 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 5,
-     "racha": 14,
-     "dir": "S",
+     "viento": 6,
+     "racha": 13,
+     "dir": "SO",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -102,14 +102,14 @@
    ],
    "agua": 22,
    "maxima": 25,
-   "uv": 4,
+   "uv": 3,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 11,
-     "racha": 31,
-     "dir": "E",
+     "viento": 10,
+     "racha": 28,
+     "dir": "SE",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -137,8 +137,8 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 16,
-     "racha": 34,
+     "viento": 14,
+     "racha": 31,
      "dir": "SE",
      "lluvia": null,
      "tormenta": null,
@@ -155,8 +155,8 @@
        "m": "buen_viento"
       },
       "bucear": {
-       "n": 8,
-       "m": "viento"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
        "n": 10,
@@ -193,7 +193,7 @@
      "lluvia": 40,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "lluvia_escasa",
+     "cielo": "nuboso",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -220,10 +220,10 @@
      "viento": 15,
      "racha": null,
      "dir": "E",
-     "lluvia": 10,
+     "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "intervalos",
+     "cielo": "poco_nuboso",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
