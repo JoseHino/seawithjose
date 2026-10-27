@@ -49,6 +49,10 @@ FOTOS = {
     "petit-puerto": (os.path.join(BARCO, "261026", "Velero Jeanneau al atardecer en el puerto (editada, rotulo 42CC).png"), None, (600, 1086)),
     "petit-ocaso": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.28.jpeg"), (0.0, 0.33, 1.0, 1.0), (800, 1200)),
     "petit-torre": (os.path.join(BARCO, "261026", "WhatsApp Image 2026-10-26 at 09.25.28 (2).jpeg"), (0.0, 0.22, 1.0, 1.0), (800, 1200)),
+    # Pesca: Jose con capturas (subcarpeta Pesca; algunas son en otros barcos)
+    "pesca-velero": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54 (1).jpeg"), None, (480, 900)),
+    "pesca-cubierta": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54 (2).jpeg"), None, (480, 900)),
+    "pesca-captura": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54.jpeg"), None, (480, 900)),
 }
 VIDEO = os.path.join(BARCO, "WhatsApp Video 2026-07-03 at 16.43.47.mp4")
 

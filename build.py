@@ -688,6 +688,7 @@ def portada(lang):
     </div>
     <a class="boton boton-borde-azul" href="{wa(t["pesca_wa"])}">{ICONO_WA}{esc(t["pesca_cta"])}</a>
   </div>
+  <div class="contenedor pesca-fotos">{"".join(f'<figure>{imagen(n, (480, 900), t["pesca_fotos"][n], prefijo, "", "(max-width: 700px) 33vw, 30vw")}</figure>' for n in ("pesca-velero", "pesca-cubierta", "pesca-captura"))}</div>
 </section>
 
 <section class="seccion faq" id="faq" aria-labelledby="faq-titulo">

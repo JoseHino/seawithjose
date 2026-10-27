@@ -400,6 +400,9 @@ T["en"] = {
     "pesca_p": ("I also run fishing trips, bottom fishing or trolling, in the morning or the afternoon. If it’s your "
                 "first time, I’ll show you how."),
     "pesca_cta": "Ask about fishing",
+    "pesca_fotos": {"pesca-velero": "Jose with two fish caught from a sailing boat",
+                    "pesca-cubierta": "Jose with three fish on the deck of a fishing boat",
+                    "pesca-captura": "Jose holding up a big catch at sea"},
     "pesca_wa": "Hi Jose! I’d like to know more about your fishing trips.",
     "faq_h2": "Questions",
     "faq": [
@@ -805,6 +808,9 @@ T["es"] = {
     "pesca_p": ("También organizo salidas de pesca, a fondo o al curricán, por la mañana o por la tarde. Si es tu "
                 "primera vez, te enseño."),
     "pesca_cta": "Pregunta por la pesca",
+    "pesca_fotos": {"pesca-velero": "Jose con dos piezas pescadas desde un velero",
+                    "pesca-cubierta": "Jose con tres piezas en la cubierta de un barco de pesca",
+                    "pesca-captura": "Jose sujetando una buena captura en el mar"},
     "pesca_wa": "¡Hola Jose! Me gustaría saber más sobre las salidas de pesca.",
     "faq_h2": "Preguntas",
     "faq": [
@@ -1216,6 +1222,9 @@ T["ru"] = {
     "pesca_p": ("Я также организую морскую рыбалку, донную или троллингом, утром или после обеда. Если вы рыбачите "
                 "впервые, всё покажу."),
     "pesca_cta": "Спросить о рыбалке",
+    "pesca_fotos": {"pesca-velero": "Хосе с двумя рыбами, пойманными с парусной яхты",
+                    "pesca-cubierta": "Хосе с тремя рыбами на палубе рыболовного катера",
+                    "pesca-captura": "Хосе держит крупный улов в море"},
     "pesca_wa": "Здравствуйте, Хосе! Хотел(а) бы узнать подробнее о морской рыбалке.",
     "faq_h2": "Вопросы",
     "faq": [
