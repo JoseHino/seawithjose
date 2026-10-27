@@ -236,10 +236,10 @@ def texto_analisis(a, t, p):
                       + "; ".join(f"{s} {v['media']:+} °C ({v['n']} días)" for s, v in a["por_sector"].items()))
     for nombre, tr in a["tramos"].items():
         lineas.append(f"Con {nombre}: " + "; ".join(f"{k} {v['media']:+} °C ({v['n']} días)" for k, v in tr.items()))
-    lineas.append("Quincena día a día (fecha: agua °C · viento medio km/h · dirección): "
+    lineas.append("Los días del periodo, uno a uno (fecha: agua °C · viento medio km/h · dirección): "
                   + "; ".join(f"{q['fecha'][5:]}: {q['agua']} · {q['viento']} · {q['dir']}" for q in a["quincena"]))
     if a.get("cambio_quincena") is not None:
-        lineas.append(f"El agua pasó de {a['agua_inicio']} a {a['agua_fin']} °C en la quincena ({a['cambio_quincena']:+} °C)"
+        lineas.append(f"El agua pasó de {a['agua_inicio']} a {a['agua_fin']} °C en el periodo ({a['cambio_quincena']:+} °C)"
                       + (f"; en las mismas fechas de los {a['anios_normal']} años anteriores cambió de media "
                          f"{a['cambio_normal']:+} °C (lo normal por la época)" if a.get("cambio_normal") is not None else ""))
     for clave, nombre in (("mayor_bajada_2_dias", "Mayor bajada en 2 días"), ("mayor_subida_2_dias", "Mayor subida en 2 días")):
@@ -248,7 +248,7 @@ def texto_analisis(a, t, p):
             lineas.append(f"{nombre}: {e['cambio']:+} °C del {e['desde']} al {e['hasta']}, con viento "
                           + ", ".join(f"{d} {v} km/h" for d, v in e["vientos"]))
     if t:
-        lineas.append("Tiempo de la quincena (AEMET Marbella Puerto): " + json.dumps(t, ensure_ascii=False))
+        lineas.append("Tiempo del periodo (AEMET Marbella Puerto): " + json.dumps(t, ensure_ascii=False))
     if p:
         lineas.append("Previsión AEMET Marbella próximos días: " + json.dumps(p, ensure_ascii=False))
     return "\n".join(lineas)

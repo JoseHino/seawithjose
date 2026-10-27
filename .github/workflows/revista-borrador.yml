@@ -36,6 +36,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Librerías de gráficas y de sol y luna
+        run: pip install --quiet matplotlib ephem
       - name: Redactar el borrador
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
