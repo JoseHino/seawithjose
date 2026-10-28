@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-28T11:23:03Z",
+ "generado": "2026-10-28T19:37:08Z",
  "elaborado": {
   "playa": "2026-10-28T09:01:15",
-  "horas": "2026-10-28T08:55:09"
+  "horas": "2026-10-28T19:09:08"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,8 +27,38 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 7,
-     "racha": 22,
+     "viento": 10,
+     "racha": null,
+     "dir": "SE",
+     "lluvia": null,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": null,
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 21,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 5,
+     "racha": 14,
      "dir": "SE",
      "lluvia": null,
      "tormenta": null,
@@ -51,36 +81,6 @@
       "pescar": {
        "n": 10,
        "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 10,
-     "racha": 27,
-     "dir": "SE",
-     "lluvia": null,
-     "tormenta": null,
-     "niebla": 0,
-     "cielo": "despejado",
-     "fondo": false,
-     "fuerza": 4,
-     "aviso": false,
-     "mar": 2,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 6,
-       "m": "marejada"
-      },
-      "bucear": {
-       "n": 5,
-       "m": "marejada"
-      },
-      "pescar": {
-       "n": 5,
-       "m": "marejada"
       }
      }
     }
@@ -107,13 +107,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 14,
-     "racha": 27,
+     "viento": 15,
+     "racha": 34,
      "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "cubierto",
+     "cielo": "nuboso",
      "fondo": false,
      "fuerza": 4,
      "aviso": false,
@@ -125,7 +125,7 @@
        "m": "marejada"
       },
       "bucear": {
-       "n": 5,
+       "n": 4,
        "m": "marejada"
       },
       "pescar": {
@@ -137,15 +137,15 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 16,
-     "racha": 31,
-     "dir": "SE",
+     "viento": 18,
+     "racha": 34,
+     "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 4,
      "aviso": false,
      "mar": 2,
      "agua": 21,
@@ -187,13 +187,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": null,
-     "dir": "NE",
-     "lluvia": 0,
-     "tormenta": 0,
+     "viento": 8,
+     "racha": 23,
+     "dir": "N",
+     "lluvia": null,
+     "tormenta": null,
      "niebla": 0,
-     "cielo": "poco_nuboso",
+     "cielo": "nuboso",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -201,8 +201,8 @@
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "marejada"
+       "n": 4,
+       "m": "poco_viento"
       },
       "bucear": {
        "n": 5,
@@ -217,13 +217,13 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 10,
+     "viento": 15,
      "racha": null,
      "dir": "SE",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "nubes_altas",
+     "cielo": "poco_nuboso",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -231,12 +231,12 @@
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 8,
-       "m": "poco_viento"
+       "n": 10,
+       "m": "buen_viento"
       },
       "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 8,
+       "m": "viento"
       },
       "pescar": {
        "n": 10,
@@ -249,17 +249,17 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "E o NE 3 o 4. Marejadilla, localmente marejada. Regular en el este al final.",
-  "elaborado": "2026-10-28T12:00:00",
-  "inicio": "2026-10-28T12:00:00",
-  "fin": "2026-10-29T12:00:00",
+  "texto": "E y NE 3, ocasionalmente 4 en el oeste. Marejadilla. Temporalmente regular. Algún aguacero.",
+  "elaborado": "2026-10-28T20:00:00",
+  "inicio": "2026-10-28T20:00:00",
+  "fin": "2026-10-29T20:00:00",
   "fuerza": [
    3,
    4
   ],
   "mar": [
    1,
-   2
+   1
   ],
   "fondo": false,
   "fondo_m": null,
