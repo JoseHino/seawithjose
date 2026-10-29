@@ -1,95 +1,15 @@
 {
- "generado": "2026-10-29T19:40:31Z",
+ "generado": "2026-10-29T23:57:37Z",
  "elaborado": {
-  "playa": "2026-10-29T08:51:15",
+  "playa": "2026-10-29T23:51:13",
   "horas": "2026-10-29T19:15:10"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
   {
-   "fecha": "2026-10-29",
-   "cielo": [
-    "nuboso",
-    "despejado"
-   ],
-   "viento": [
-    "flojo",
-    "flojo"
-   ],
-   "oleaje": [
-    "moderado",
-    "moderado"
-   ],
-   "agua": 21,
-   "maxima": 25,
-   "uv": 3,
-   "tramos": [
-    {
-     "de": 8,
-     "a": 14,
-     "viento": 25,
-     "racha": null,
-     "dir": "SE",
-     "lluvia": null,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": null,
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 2,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 8,
-       "m": "marejada"
-      },
-      "bucear": {
-       "n": 3,
-       "m": "marejada"
-      },
-      "pescar": {
-       "n": 3,
-       "m": "marejada"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 21,
-     "racha": 34,
-     "dir": "SE",
-     "lluvia": null,
-     "tormenta": null,
-     "niebla": 0,
-     "cielo": "despejado",
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 2,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 8,
-       "m": "marejada"
-      },
-      "bucear": {
-       "n": 3,
-       "m": "marejada"
-      },
-      "pescar": {
-       "n": 5,
-       "m": "marejada"
-      }
-     }
-    }
-   ]
-  },
-  {
    "fecha": "2026-10-30",
    "cielo": [
-    "muy nuboso",
+    "nuboso",
     "muy nuboso"
    ],
    "viento": [
@@ -98,9 +18,9 @@
    ],
    "oleaje": [
     "moderado",
-    "moderado"
+    "débil"
    ],
-   "agua": 22,
+   "agua": 21,
    "maxima": 24,
    "uv": 3,
    "tramos": [
@@ -118,7 +38,7 @@
      "fuerza": 3,
      "aviso": false,
      "mar": 2,
-     "agua": 22,
+     "agua": 21,
      "notas": {
       "navegar": {
        "n": 4,
@@ -147,20 +67,20 @@
      "fondo": false,
      "fuerza": 3,
      "aviso": false,
-     "mar": 2,
-     "agua": 22,
+     "mar": 1,
+     "agua": 21,
      "notas": {
       "navegar": {
-       "n": 4,
+       "n": 6,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 5,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
@@ -170,7 +90,7 @@
    "fecha": "2026-10-31",
    "cielo": [
     "despejado",
-    "despejado"
+    "nuboso"
    ],
    "viento": [
     "flojo",
@@ -221,6 +141,86 @@
      "racha": null,
      "dir": "E",
      "lluvia": 5,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "intervalos",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 2,
+     "agua": 22,
+     "notas": {
+      "navegar": {
+       "n": 6,
+       "m": "marejada"
+      },
+      "bucear": {
+       "n": 5,
+       "m": "marejada"
+      },
+      "pescar": {
+       "n": 5,
+       "m": "marejada"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-01",
+   "cielo": [
+    "nuboso",
+    "despejado"
+   ],
+   "viento": [
+    "flojo",
+    "flojo"
+   ],
+   "oleaje": [
+    "moderado",
+    "moderado"
+   ],
+   "agua": 22,
+   "maxima": 24,
+   "uv": 3,
+   "tramos": [
+    {
+     "de": 8,
+     "a": 14,
+     "viento": 10,
+     "racha": null,
+     "dir": "E",
+     "lluvia": 55,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "lluvia_escasa",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 2,
+     "agua": 22,
+     "notas": {
+      "navegar": {
+       "n": 5,
+       "m": "marejada"
+      },
+      "bucear": {
+       "n": 5,
+       "m": "marejada"
+      },
+      "pescar": {
+       "n": 4,
+       "m": "marejada"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 10,
+     "racha": null,
+     "dir": "E",
+     "lluvia": 15,
      "tormenta": 0,
      "niebla": 0,
      "cielo": "intervalos",
