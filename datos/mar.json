@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-29T23:57:37Z",
+ "generado": "2026-10-30T11:25:44Z",
  "elaborado": {
-  "playa": "2026-10-29T23:51:13",
-  "horas": "2026-10-29T19:15:10"
+  "playa": "2026-10-30T08:51:17",
+  "horas": "2026-10-30T08:59:07"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -28,14 +28,14 @@
      "de": 8,
      "a": 14,
      "viento": 8,
-     "racha": 16,
+     "racha": 17,
      "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "nubes_altas",
      "fondo": false,
-     "fuerza": 3,
+     "fuerza": null,
      "aviso": false,
      "mar": 2,
      "agua": 21,
@@ -58,14 +58,14 @@
      "de": 14,
      "a": 20,
      "viento": 6,
-     "racha": 15,
+     "racha": 17,
      "dir": "SE",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "nubes_altas",
      "fondo": false,
-     "fuerza": 3,
+     "fuerza": 4,
      "aviso": false,
      "mar": 1,
      "agua": 21,
@@ -107,21 +107,21 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 12,
-     "racha": 22,
-     "dir": "NE",
+     "viento": 13,
+     "racha": 27,
+     "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "cubierto",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 4,
      "aviso": false,
      "mar": 2,
      "agua": 22,
      "notas": {
       "navegar": {
-       "n": 6,
+       "n": 8,
        "m": "marejada"
       },
       "bucear": {
@@ -137,13 +137,13 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 10,
-     "racha": null,
+     "viento": 13,
+     "racha": 25,
      "dir": "E",
-     "lluvia": 5,
-     "tormenta": 0,
+     "lluvia": null,
+     "tormenta": null,
      "niebla": 0,
-     "cielo": "intervalos",
+     "cielo": "despejado",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -151,7 +151,7 @@
      "agua": 22,
      "notas": {
       "navegar": {
-       "n": 6,
+       "n": 8,
        "m": "marejada"
       },
       "bucear": {
@@ -181,49 +181,19 @@
     "moderado"
    ],
    "agua": 22,
-   "maxima": 24,
+   "maxima": 23,
    "uv": 3,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
+     "viento": 15,
      "racha": null,
      "dir": "E",
-     "lluvia": 55,
+     "lluvia": 85,
      "tormenta": 0,
      "niebla": 0,
      "cielo": "lluvia_escasa",
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 2,
-     "agua": 22,
-     "notas": {
-      "navegar": {
-       "n": 5,
-       "m": "marejada"
-      },
-      "bucear": {
-       "n": 5,
-       "m": "marejada"
-      },
-      "pescar": {
-       "n": 4,
-       "m": "marejada"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 10,
-     "racha": null,
-     "dir": "E",
-     "lluvia": 15,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": "intervalos",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -235,7 +205,37 @@
        "m": "marejada"
       },
       "bucear": {
-       "n": 5,
+       "n": 3,
+       "m": "marejada"
+      },
+      "pescar": {
+       "n": 3,
+       "m": "marejada"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 15,
+     "racha": null,
+     "dir": "E",
+     "lluvia": 35,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "intervalos",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 2,
+     "agua": 22,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "marejada"
+      },
+      "bucear": {
+       "n": 4,
        "m": "marejada"
       },
       "pescar": {
@@ -249,16 +249,16 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "E y NE 2 a 3. Marejadilla.",
-  "elaborado": "2026-10-29T20:00:00",
-  "inicio": "2026-10-29T20:00:00",
-  "fin": "2026-10-30T20:00:00",
+  "texto": "E o NE 2 a 4. Rizada o marejadilla.",
+  "elaborado": "2026-10-30T12:00:00",
+  "inicio": "2026-10-30T12:00:00",
+  "fin": "2026-10-31T12:00:00",
   "fuerza": [
    2,
-   3
+   4
   ],
   "mar": [
-   1,
+   0,
    1
   ],
   "fondo": false,
