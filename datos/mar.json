@@ -1,8 +1,8 @@
 {
- "generado": "2026-10-30T23:51:24Z",
+ "generado": "2026-10-31T10:57:36Z",
  "elaborado": {
-  "playa": "2026-10-30T08:51:17",
-  "horas": "2026-10-30T21:05:09"
+  "playa": "2026-10-31T08:51:15",
+  "horas": "2026-10-31T09:49:07"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -10,35 +10,65 @@
    "fecha": "2026-10-31",
    "cielo": [
     "despejado",
-    "nuboso"
+    "despejado"
    ],
    "viento": [
     "flojo",
     "flojo"
    ],
    "oleaje": [
-    "moderado",
+    "débil",
     "moderado"
    ],
-   "agua": 22,
+   "agua": 21,
    "maxima": 24,
    "uv": 3,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 12,
-     "racha": 23,
-     "dir": "NE",
+     "viento": 10,
+     "racha": 27,
+     "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "cubierto",
+     "cielo": "nuboso",
      "fondo": false,
-     "fuerza": 4,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 21,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 12,
+     "racha": 28,
+     "dir": "SE",
+     "lluvia": null,
+     "tormenta": null,
+     "niebla": 0,
+     "cielo": "poco_nuboso",
+     "fondo": false,
+     "fuerza": 5,
      "aviso": false,
      "mar": 2,
-     "agua": 22,
+     "agua": 21,
      "notas": {
       "navegar": {
        "n": 6,
@@ -53,22 +83,72 @@
        "m": "marejada"
       }
      }
-    },
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-01",
+   "cielo": [
+    "nuboso",
+    "nuboso"
+   ],
+   "viento": [
+    "flojo",
+    "flojo"
+   ],
+   "oleaje": [
+    "moderado",
+    "moderado"
+   ],
+   "agua": 21,
+   "maxima": 23,
+   "uv": 3,
+   "tramos": [
     {
-     "de": 14,
-     "a": 20,
-     "viento": 15,
-     "racha": 27,
+     "de": 8,
+     "a": 14,
+     "viento": 18,
+     "racha": 34,
      "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "poco_nuboso",
+     "cielo": "lluvia_escasa",
      "fondo": false,
-     "fuerza": 4,
+     "fuerza": 5,
      "aviso": false,
      "mar": 2,
-     "agua": 22,
+     "agua": 21,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "marejada"
+      },
+      "bucear": {
+       "n": 4,
+       "m": "marejada"
+      },
+      "pescar": {
+       "n": 5,
+       "m": "marejada"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 18,
+     "racha": 33,
+     "dir": "E",
+     "lluvia": null,
+     "tormenta": null,
+     "niebla": 0,
+     "cielo": "intervalos",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 2,
+     "agua": 21,
      "notas": {
       "navegar": {
        "n": 8,
@@ -87,9 +167,9 @@
    ]
   },
   {
-   "fecha": "2026-11-01",
+   "fecha": "2026-11-02",
    "cielo": [
-    "nuboso",
+    "despejado",
     "despejado"
    ],
    "viento": [
@@ -97,70 +177,70 @@
     "flojo"
    ],
    "oleaje": [
-    "moderado",
-    "moderado"
+    "débil",
+    "débil"
    ],
-   "agua": 22,
+   "agua": 21,
    "maxima": 23,
-   "uv": 3,
+   "uv": 4,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 17,
-     "racha": 31,
-     "dir": "E",
-     "lluvia": null,
-     "tormenta": null,
+     "viento": 5,
+     "racha": null,
+     "dir": "S",
+     "lluvia": 0,
+     "tormenta": 0,
      "niebla": 0,
-     "cielo": "lluvia_escasa",
+     "cielo": "despejado",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
-     "mar": 2,
-     "agua": 22,
+     "mar": 1,
+     "agua": 21,
      "notas": {
       "navegar": {
-       "n": 8,
-       "m": "marejada"
+       "n": 6,
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 4,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     },
     {
      "de": 14,
      "a": 20,
-     "viento": 19,
-     "racha": 30,
-     "dir": "SE",
-     "lluvia": null,
-     "tormenta": null,
+     "viento": 5,
+     "racha": null,
+     "dir": "S",
+     "lluvia": 5,
+     "tormenta": 0,
      "niebla": 0,
-     "cielo": "lluvia_escasa",
+     "cielo": "despejado",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
-     "mar": 2,
-     "agua": 22,
+     "mar": 1,
+     "agua": 21,
      "notas": {
       "navegar": {
-       "n": 8,
-       "m": "marejada"
+       "n": 6,
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 4,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
@@ -169,17 +249,17 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "E o NE 2 a 4 localmente N de madrugada. Rizada o marejadilla. Regular a buena.",
-  "elaborado": "2026-10-30T20:00:00",
-  "inicio": "2026-10-30T20:00:00",
-  "fin": "2026-10-31T20:00:00",
+  "texto": "E o NE 2 a 4, arreciando localmente a 5 mar adentro a partir de la madrugada. Marejadilla aumentando a marejada de madrugada. Algún aguacero a partir de la madrugada. Localmente regular.",
+  "elaborado": "2026-10-31T12:00:00",
+  "inicio": "2026-10-31T12:00:00",
+  "fin": "2026-11-01T12:00:00",
   "fuerza": [
    2,
-   4
+   5
   ],
   "mar": [
-   0,
-   1
+   1,
+   2
   ],
   "fondo": false,
   "fondo_m": null,
