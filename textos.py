@@ -254,7 +254,7 @@ T["en"] = {
                 "petit-pantalan": "The Petit alongside a pontoon",
                 "petit-ocaso": "The deck seen from the bow at sunset",
                 "petit-torre": "The Petit at sunset with Puerto Banús behind"},
-    "video_alt": "The Petit under way on a calm sea", "video_pausa": "Pause the video", "video_play": "Play the video",
+    "video_alt": "Dolphins swimming at the Petit's bow", "video_pausa": "Pause the video", "video_play": "Play the video",
     "jose_h2": "Who’ll take you out",
     "jose_p": [
         ("I studied oceanography at the University of Cádiz. I’m a yacht captain and a FEDAS diving instructor, and "
@@ -655,7 +655,7 @@ T["es"] = {
                 "petit-pantalan": "El Petit abarloado a un pantalán",
                 "petit-ocaso": "La cubierta vista desde proa al atardecer",
                 "petit-torre": "El Petit al atardecer con Puerto Banús detrás"},
-    "video_alt": "El Petit navegando con el mar en calma", "video_pausa": "Pausar el vídeo",
+    "video_alt": "Delfines nadando en la proa del Petit", "video_pausa": "Pausar el vídeo",
     "video_play": "Reproducir el vídeo",
     "jose_h2": "Quién te lleva",
     "jose_p": [
@@ -1061,7 +1061,7 @@ T["ru"] = {
                 "petit-pantalan": "«Пти» у понтона",
                 "petit-ocaso": "Палуба на закате, вид с носа",
                 "petit-torre": "«Пти» на закате, позади Пуэрто-Банус"},
-    "video_alt": "«Пти» идёт по спокойному морю", "video_pausa": "Поставить видео на паузу",
+    "video_alt": "Дельфины плывут у носа «Пти»", "video_pausa": "Поставить видео на паузу",
     "video_play": "Воспроизвести видео",
     "jose_h2": "Кто вас повезёт",
     "jose_p": [

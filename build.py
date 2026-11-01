@@ -647,8 +647,8 @@ def portada(lang):
 <section class="seccion barco" id="barco" aria-labelledby="barco-titulo">
   <div class="contenedor barco-rejilla">
     <figure class="barco-video">
-      <video muted loop playsinline preload="none" poster="{prefijo}assets/video/petit-navegando.webp" aria-label="{esc(t["video_alt"])}">
-        <source src="{prefijo}assets/video/petit-navegando.mp4" type="video/mp4">
+      <video muted loop playsinline preload="none" poster="{prefijo}assets/video/petit-delfines.webp" aria-label="{esc(t["video_alt"])}">
+        <source src="{prefijo}assets/video/petit-delfines.mp4" type="video/mp4">
       </video>
       <button class="video-boton" type="button" aria-pressed="false" data-play="{esc(t["video_play"])}" data-pausa="{esc(t["video_pausa"])}">
         <span class="visualmente-oculto">{esc(t["video_play"])}</span>

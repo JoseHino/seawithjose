@@ -54,7 +54,11 @@ FOTOS = {
     "pesca-cubierta": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54 (2).jpeg"), None, (480, 900)),
     "pesca-captura": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54.jpeg"), None, (480, 900)),
 }
-VIDEO = os.path.join(BARCO, "WhatsApp Video 2026-07-03 at 16.43.47.mp4")
+# Delfines en la proa del Petit (vídeo del 01-11-2026): tramo 0:40-0:51, portada en 0:45
+VIDEO = os.path.join(BARCO, "WhatsApp Video 2026-11-01 at 09.11.16.mp4")
+VIDEO_TRAMO = ("40", "11")
+VIDEO_PORTADA = "45"
+VIDEO_NOMBRE = "petit-delfines"
 
 
 def descargar(url):
@@ -109,7 +113,7 @@ def fotos():
 
 
 def video():
-    """El Petit navegando: MP4 sin sonido, ligero y con arranque rápido, más su fotograma de portada."""
+    """Delfines en la proa del Petit: MP4 sin sonido, ligero y con arranque rápido, más su fotograma de portada."""
     import subprocess
     try:
         import imageio_ffmpeg
@@ -118,12 +122,12 @@ def video():
         ffmpeg = "ffmpeg"
     destino = os.path.join(RAIZ, "assets", "video")
     os.makedirs(destino, exist_ok=True)
-    mp4 = os.path.join(destino, "petit-navegando.mp4")
-    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-i", VIDEO, "-an", "-vf", "scale=848:-2,fps=30",
+    mp4 = os.path.join(destino, VIDEO_NOMBRE + ".mp4")
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", VIDEO_TRAMO[0], "-i", VIDEO, "-t", VIDEO_TRAMO[1], "-an", "-vf", "scale=848:-2,fps=30",
                     "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p", "-crf", "27",
                     "-preset", "slow", "-movflags", "+faststart", mp4], check=True)
-    poster = os.path.join(destino, "petit-navegando.jpg")
-    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", "3", "-i", VIDEO, "-frames:v", "1",
+    poster = os.path.join(destino, VIDEO_NOMBRE + ".jpg")
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", VIDEO_PORTADA, "-i", VIDEO, "-frames:v", "1",
                     "-vf", "scale=848:-2", "-strict", "unofficial", "-q:v", "4", poster], check=True)
     Image.open(poster).convert("RGB").save(poster.replace(".jpg", ".webp"), "WEBP", quality=78, method=6)
     os.remove(poster)
