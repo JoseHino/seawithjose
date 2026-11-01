@@ -153,7 +153,7 @@ T["en"] = {
                   "out on the Petit and seeing them come back ashore wanting to do it again."),
     "hero_idiomas": "I speak English, Spanish and Russian.",
     "hero_precios": [("Shared", "€60", "per person"), ("Private", "€350", "the whole boat"), ("Full day", "€1.300", "8 hours")],
-    "hero_parking": "Free parking, 10 minutes’ walk from the boat",
+    "hero_parking": "Parking included, 10 minutes’ walk from the boat",
     "hero_cta": "Book",
     "hero_cta2": "Message me on WhatsApp",
     "hero_foto_alt": "The Petit in Puerto Banús at sunset, with La Concha behind",
@@ -164,24 +164,24 @@ T["en"] = {
                        "incluye": ["Drinks: water, soft drinks, beer and wine", "Snacks (crisps) and fruit",
                                    "Snorkel mask and fins"],
                        "letra": ["Free cancellation up to 24 hours before"],
-                       "parking": "Free parking",
+                       "parking": "Parking included",
                        "cta": "Book a seat"},
         "privada": {"titulo": "Private trip", "precio": "€350", "unidad": "the whole boat, 2 hours",
                     "incluye": ["Drinks: water, soft drinks, beer and wine", "Snacks (crisps) and fruit",
                                 "Snorkel mask and fins"],
                     "letra": ["11 guests at most", "Free cancellation up to 48 hours before"],
-                    "parking": "Free parking",
+                    "parking": "Parking included",
                     "cta": "Book the boat"},
         "dia": {"titulo": "Full-day trip", "precio": "€1.300", "unidad": "the whole boat, 8 hours / all day",
                 "incluye": ["Everything in the private trip", "Lunch on board", "3 cocktails per person", "Paddle surf and fishing rod"],
                 "letra": ["You choose the 8 hours that suit you best", "11 guests at most", "Free cancellation up to 48 hours before"],
-                "parking": "Free parking",
+                "parking": "Parking included",
                 "cta": "Book the day"},
     },
     "precios_nota": "Nothing else to pay on board. Just bring a swimsuit, a towel and sun cream.",
-    "parking": {"titulo": "Free parking", "texto": ("Leave the car at the Cristamar car park, on Calle Francisco Villalón, "
-                "and walk to the boat in 10 minutes. It’s free for everyone sailing with me, so you don’t have to "
-                "pay for parking in the port."), "enlace": "How to get there"},
+    "parking": {"titulo": "Parking included", "texto": ("Leave the car at the Cristamar car park, on Calle Francisco Villalón, "
+                "and walk to the boat in 10 minutes. Parking is included for everyone sailing with me, so you don’t "
+                "have to pay for parking in the port."), "enlace": "How to get there"},
     "capitan": {"titulo": "Your skipper: Jose", "creds": ["Yacht captain", "Oceanographer", "FEDAS diving instructor"],
                 "enlace": "More about me"},
     "resenas_h2": "What people say",
@@ -336,8 +336,8 @@ T["en"] = {
     "llegar_h2": "Getting here",
     "llegar_p": [
         "We leave from Puerto José Banús, in Marbella. When you book, I’ll send you the exact pontoon on WhatsApp.",
-        ("If you’re coming by car, park at the Cristamar car park on Calle Francisco Villalón. It’s free if you’re "
-         "sailing with us, and it’s a 10-minute walk to the boat."),
+        ("If you’re coming by car, park at the Cristamar car park on Calle Francisco Villalón. Parking is included "
+         "when you sail with us, and it’s a 10-minute walk to the boat."),
     ],
     "mapa": {"puerto": "Puerto José Banús", "parking": "Parking", "minutos": "10 min walk",
              "aria": "Map of Puerto Banús with the Cristamar car park and the walk to the harbour",
@@ -410,8 +410,8 @@ T["en"] = {
                                    "hours, for up to 11 people. A full day is €1.300 for the whole boat for 8 hours, starting whenever suits you best, with lunch, 3 cocktails per person, paddle surf and a fishing rod. Extras for private trips are priced separately."),
         ("Do I need to know how to sail?", "No, I sail the boat. If you like, I’ll show you how to steer."),
         ("Where do we meet?", "At Puerto José Banús. I’ll send you the exact pontoon on WhatsApp."),
-        ("Where can I park?", "At the Cristamar car park, a 10-minute walk from the boat. It’s free if you’re sailing "
-                              "with us."),
+        ("Where can I park?", "At the Cristamar car park, a 10-minute walk from the boat. Parking is included "
+                              "when you sail with us."),
         ("What should I bring?", "Swimsuit, towel, sunscreen and sunglasses."),
         ("What if the weather is bad?", "I only go out when the sea is right. If I cancel because of the weather, you "
                                         "choose another day or I give you your money back."),
@@ -555,7 +555,7 @@ T["es"] = {
                   "el Petit y que vuelva a tierra con ganas de repetir."),
     "hero_idiomas": "Hablo español, inglés y ruso.",
     "hero_precios": [("Compartida", "60 €", "por persona"), ("Privada", "350 €", "el barco entero"), ("Día entero", "1.300 €", "8 horas")],
-    "hero_parking": "Parking gratis a 10 minutos andando del barco",
+    "hero_parking": "Parking incluido, a 10 minutos andando del barco",
     "hero_cta": "Reservar",
     "hero_cta2": "Escríbeme por WhatsApp",
     "hero_foto_alt": "El Petit en Puerto Banús al atardecer, con La Concha detrás",
@@ -566,23 +566,23 @@ T["es"] = {
                        "incluye": ["Bebida: agua, refrescos, cerveza y vino", "Snacks (patatas) y fruta",
                                    "Gafas y aletas de snorkel"],
                        "letra": ["Cancelación gratis hasta 24 horas antes"],
-                       "parking": "Parking gratis",
+                       "parking": "Parking incluido",
                        "cta": "Reservar plaza"},
         "privada": {"titulo": "Salida privada", "precio": "350 €", "unidad": "el barco entero, 2 horas",
                     "incluye": ["Bebida: agua, refrescos, cerveza y vino", "Snacks (patatas) y fruta",
                                 "Gafas y aletas de snorkel"],
                     "letra": ["Máximo 11 personas", "Cancelación gratis hasta 48 horas antes"],
-                    "parking": "Parking gratis",
+                    "parking": "Parking incluido",
                     "cta": "Reservar el barco"},
         "dia": {"titulo": "Día entero", "precio": "1.300 €", "unidad": "el barco entero, 8 h / todo el día",
                 "incluye": ["Todo lo de la privada", "Comida a bordo", "3 cócteles por persona", "Paddle surf y caña de pesca"],
                 "letra": ["Tú eliges las 8 horas que mejor te vengan", "Máximo 11 personas", "Cancelación gratis hasta 48 horas antes"],
-                "parking": "Parking gratis",
+                "parking": "Parking incluido",
                 "cta": "Reservar el día"},
     },
     "precios_nota": "Nada más que pagar a bordo. Solo trae bañador, toalla y crema solar.",
-    "parking": {"titulo": "Parking gratis", "texto": ("Deja el coche en el parking Cristamar, en la calle Francisco "
-                "Villalón, y en 10 minutos andando estás en el barco. Es gratis para todos los que salen conmigo, así "
+    "parking": {"titulo": "Parking incluido", "texto": ("Deja el coche en el parking Cristamar, en la calle Francisco "
+                "Villalón, y en 10 minutos andando estás en el barco. El parking está incluido para todos los que salen conmigo, así "
                 "que no tienes que pagar parking en el puerto."), "enlace": "Cómo llegar"},
     "capitan": {"titulo": "Tu capitán: Jose", "creds": ["Capitán de yate", "Oceanógrafo", "Instructor de buceo FEDAS"],
                 "enlace": "Más sobre mí"},
@@ -738,7 +738,7 @@ T["es"] = {
     "llegar_p": [
         "Salimos de Puerto José Banús, en Marbella. Cuando reserves, te mando por WhatsApp el pantalán exacto.",
         ("Si vienes en coche, aparca en el parking Cristamar, en la calle Francisco Villalón. Si sales en el barco, "
-         "es gratis, y de ahí al barco hay 10 minutos andando."),
+         "el parking está incluido, y de ahí al barco hay 10 minutos andando."),
     ],
     "mapa": {"puerto": "Puerto José Banús", "parking": "Parking", "minutos": "10 min andando",
              "aria": "Plano de Puerto Banús con el parking Cristamar y el camino andando hasta el puerto",
@@ -815,7 +815,7 @@ T["es"] = {
                             "para hasta 11 personas. El día entero, 1.300 € por el barco durante 8 horas, a la hora que mejor te venga, con comida, 3 cócteles por persona, paddle surf y caña de pesca. Los extras de las privadas van aparte."),
         ("¿Tengo que saber navegar?", "No, el barco lo llevo yo. Si quieres, te enseño a llevar el timón."),
         ("¿Dónde quedamos?", "En Puerto José Banús. Te mando el pantalán exacto por WhatsApp."),
-        ("¿Dónde aparco?", "En el parking Cristamar, a 10 minutos andando del barco. Si sales con nosotros, es gratis."),
+        ("¿Dónde aparco?", "En el parking Cristamar, a 10 minutos andando del barco. Si sales con nosotros, el parking está incluido."),
         ("¿Qué llevo?", "Bañador, toalla, crema solar y gafas de sol."),
         ("¿Y si hace mal tiempo?", "Solo salgo si el mar está bien. Si cancelo por el tiempo, eliges otro día o te "
                                    "devuelvo el dinero."),
@@ -960,7 +960,7 @@ T["ru"] = {
                   "на «Пти» с гостями и видеть, как они возвращаются на берег с желанием повторить."),
     "hero_idiomas": "Говорю по-русски, по-английски и по-испански.",
     "hero_precios": [("Групповая", "60 €", "с человека"), ("Индивидуальная", "350 €", "вся яхта"), ("Весь день", "1.300 €", "8 часов")],
-    "hero_parking": "Бесплатная парковка в 10 минутах пешком от яхты",
+    "hero_parking": "Парковка включена, в 10 минутах пешком от яхты",
     "hero_cta": "Забронировать",
     "hero_cta2": "Написать в WhatsApp",
     "hero_foto_alt": "«Пти» в Пуэрто-Банусе на закате, позади гора Ла-Конча",
@@ -971,23 +971,23 @@ T["ru"] = {
                        "incluye": ["Напитки: вода, газировка, пиво и вино", "Закуски (чипсы) и фрукты",
                                    "Маска и ласты для снорклинга"],
                        "letra": ["Бесплатная отмена не позднее чем за 24 часа"],
-                       "parking": "Бесплатная парковка",
+                       "parking": "Парковка включена",
                        "cta": "Забронировать место"},
         "privada": {"titulo": "Индивидуальная прогулка", "precio": "350 €", "unidad": "вся яхта, 2 часа",
                     "incluye": ["Напитки: вода, газировка, пиво и вино", "Закуски (чипсы) и фрукты",
                                 "Маска и ласты для снорклинга"],
                     "letra": ["Не больше 11 гостей", "Бесплатная отмена не позднее чем за 48 часов"],
-                    "parking": "Бесплатная парковка",
+                    "parking": "Парковка включена",
                     "cta": "Забронировать яхту"},
         "dia": {"titulo": "Прогулка на весь день", "precio": "1.300 €", "unidad": "вся яхта, 8 часов / весь день",
                 "incluye": ["Всё, что в индивидуальной прогулке", "Обед на борту", "3 коктейля на человека", "Сапборд и удочка"],
                 "letra": ["Вы сами выбираете удобные 8 часов", "Не больше 11 гостей", "Бесплатная отмена не позднее чем за 48 часов"],
-                "parking": "Бесплатная парковка",
+                "parking": "Парковка включена",
                 "cta": "Забронировать день"},
     },
     "precios_nota": "На борту больше ничего платить не нужно. Возьмите купальник, полотенце и солнцезащитный крем.",
-    "parking": {"titulo": "Бесплатная парковка", "texto": ("Оставьте машину на парковке Cristamar на улице "
-                "Франсиско Вильялон, и через 10 минут пешком вы у яхты. Для всех, кто выходит со мной, она бесплатная, "
+    "parking": {"titulo": "Парковка включена", "texto": ("Оставьте машину на парковке Cristamar на улице "
+                "Франсиско Вильялон, и через 10 минут пешком вы у яхты. Для всех, кто выходит со мной, парковка включена в стоимость, "
                 "так что платить за парковку в порту не нужно."), "enlace": "Как добраться"},
     "capitan": {"titulo": "Ваш капитан: Хосе", "creds": ["Капитан яхты", "Океанограф", "Инструктор по дайвингу FEDAS"],
                 "enlace": "Обо мне"},
@@ -1145,8 +1145,8 @@ T["ru"] = {
     "llegar_h2": "Как добраться",
     "llegar_p": [
         "Мы выходим из порта Пуэрто-Хосе-Банус в Марбелье. После бронирования я пришлю в WhatsApp точный причал.",
-        ("Если вы на машине, оставьте её на парковке Cristamar на улице Франсиско Вильялон. Для гостей яхты она "
-         "бесплатная, а до яхты оттуда 10 минут пешком."),
+        ("Если вы на машине, оставьте её на парковке Cristamar на улице Франсиско Вильялон. Для гостей яхты парковка "
+         "включена в стоимость, а до яхты оттуда 10 минут пешком."),
     ],
     "mapa": {"puerto": "Пуэрто-Хосе-Банус", "parking": "Парковка", "minutos": "10 минут пешком",
              "aria": "Карта Пуэрто-Бануса с парковкой Cristamar и пешим путём до порта",
@@ -1226,7 +1226,7 @@ T["ru"] = {
                                "часа, до 11 человек. Прогулка на весь день, 1.300 € за яхту на 8 часов в удобное для вас время, с обедом, тремя коктейлями на человека, сапбордом и удочкой. Дополнительные услуги оплачиваются отдельно."),
         ("Нужно ли уметь ходить под парусом?", "Нет, яхтой управляю я. Если захотите, научу держать штурвал."),
         ("Где встречаемся?", "В Пуэрто-Хосе-Банусе. Точный причал пришлю в WhatsApp."),
-        ("Где оставить машину?", "На парковке Cristamar, в 10 минутах пешком от яхты. Для гостей яхты она бесплатная."),
+        ("Где оставить машину?", "На парковке Cristamar, в 10 минутах пешком от яхты. Для гостей яхты парковка включена в стоимость."),
         ("Что взять с собой?", "Купальник, полотенце, солнцезащитный крем и солнечные очки."),
         ("А если погода плохая?", "Я выхожу в море, только когда оно спокойное. Если я отменю прогулку из-за погоды, "
                                   "выбирайте другой день или полный возврат денег."),
