@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-02T13:34:19Z",
+ "generado": "2026-11-02T22:48:22Z",
  "elaborado": {
   "playa": "2026-11-02T08:51:16",
-  "horas": "2026-11-02T13:01:09"
+  "horas": "2026-11-02T20:55:10"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,13 +27,23 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 6,
-     "racha": 16,
-     "dir": "S",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 20,
+     "notas": null
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 0,
+     "racha": null,
+     "dir": "C",
      "lluvia": null,
-     "tormenta": null,
+     "tormenta": 0,
      "niebla": 0,
-     "cielo": "despejado",
+     "cielo": null,
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -41,38 +51,8 @@
      "agua": 20,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "poco_viento"
-      },
-      "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
-      },
-      "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 6,
-     "racha": 14,
-     "dir": "SE",
-     "lluvia": null,
-     "tormenta": null,
-     "niebla": 0,
-     "cielo": "despejado",
-     "fondo": false,
-     "fuerza": 3,
-     "aviso": false,
-     "mar": 1,
-     "agua": 20,
-     "notas": {
-      "navegar": {
-       "n": 6,
-       "m": "poco_viento"
+       "n": 4,
+       "m": "sin_viento"
       },
       "bucear": {
        "n": 9,
@@ -137,21 +117,21 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 5,
-     "racha": 15,
+     "viento": 10,
+     "racha": 27,
      "dir": "S",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "nubes_altas",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 3,
      "aviso": false,
      "mar": 1,
      "agua": 20,
      "notas": {
       "navegar": {
-       "n": 6,
+       "n": 8,
        "m": "poco_viento"
       },
       "bucear": {
@@ -187,43 +167,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": null,
-     "dir": "S",
-     "lluvia": 65,
-     "tormenta": 0,
+     "viento": 6,
+     "racha": 28,
+     "dir": "SE",
+     "lluvia": null,
+     "tormenta": null,
      "niebla": 0,
-     "cielo": "lluvia",
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 1,
-     "agua": 21,
-     "notas": {
-      "navegar": {
-       "n": 7,
-       "m": "poco_viento"
-      },
-      "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
-      },
-      "pescar": {
-       "n": 9,
-       "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 10,
-     "racha": null,
-     "dir": "S",
-     "lluvia": 85,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": "lluvia",
+     "cielo": "lluvia_escasa",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -232,15 +182,45 @@
      "notas": {
       "navegar": {
        "n": 6,
-       "m": "lluvia"
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 8,
-       "m": "lluvia"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 9,
+     "racha": 21,
+     "dir": "E",
+     "lluvia": null,
+     "tormenta": null,
+     "niebla": 0,
+     "cielo": "lluvia_escasa",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 21,
+     "notas": {
+      "navegar": {
        "n": 8,
-       "m": "lluvia"
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
@@ -249,17 +229,17 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "Variable 1 o 2, principalmente Componente E, salvo localmente E 3 mar adentro. Rizada. Localmente regular o mala en torno al Estrecho desde la noche.",
-  "elaborado": "2026-11-02T12:00:00",
-  "inicio": "2026-11-02T12:00:00",
-  "fin": "2026-11-03T12:00:00",
+  "texto": "E y NE 2 a 3 rolando a W y SW a partir de la mañana. Marejadilla.",
+  "elaborado": "2026-11-02T20:00:00",
+  "inicio": "2026-11-02T20:00:00",
+  "fin": "2026-11-03T20:00:00",
   "fuerza": [
-   1,
+   2,
    3
   ],
   "mar": [
-   0,
-   0
+   1,
+   1
   ],
   "fondo": false,
   "fondo_m": null,
