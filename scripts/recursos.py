@@ -115,11 +115,11 @@ def fotos():
     print("  [ok] compartir.jpg")
 
 
-# Lucha con un pez (vídeo del 03-11-2026): los dos tramos buenos que eligió el usuario, unidos con un fundido
-# corto: 0:45-0:54 y, sobre todo, 1:46-1:58 (el arreón en que el pez saca hilo del carrete con el freno apretado).
+# Lucha con un pez (vídeo del 03-11-2026): el tramo 1:46-1:58 que eligió el usuario (el arreón en que el pez
+# saca hilo del carrete con el freno apretado). Probamos a añadirle 0:45-0:54 delante y prefirió solo este.
 # CON sonido, que es lo que cuenta. Portada en 1:49,5 (la caña más doblada).
 VIDEO_PESCA = os.path.join(PESCA_JOSE, "WhatsApp Video 2026-11-03 at 14.06.32.mp4")
-VIDEO_PESCA_TRAMOS = [(45, 54), (106, 118)]
+VIDEO_PESCA_TRAMOS = [(106, 118)]
 VIDEO_PESCA_FUNDIDO = 0.4
 VIDEO_PESCA_PORTADA = "109.5"
 VIDEO_PESCA_NOMBRE = "pesca-carrete"
