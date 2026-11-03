@@ -474,6 +474,9 @@ def portada(lang):
     hero_precios = "".join(f'<div><dt>{esc(a)}</dt><dd><b>{esc(p)}</b> {esc(u)}</dd></div>'
                            for a, p, u in t["hero_precios"])
 
+    def foto_pesca(n):
+        return f'<figure>{imagen(n, (480, 900), t["pesca_fotos"][n], prefijo, "", "(max-width: 700px) 50vw, 20vw")}</figure>'
+
     def panel(tipo):
         o = t["opciones"][tipo]
         return f"""
@@ -688,7 +691,7 @@ def portada(lang):
     </div>
     <a class="boton boton-borde-azul" href="{wa(t["pesca_wa"])}">{ICONO_WA}{esc(t["pesca_cta"])}</a>
   </div>
-  <div class="contenedor pesca-fotos">
+  <div class="contenedor pesca-fotos">{foto_pesca("pesca-cubierta")}{foto_pesca("pesca-captura")}
     <figure class="pesca-video">
       <video muted loop playsinline preload="none" poster="{prefijo}assets/video/pesca-carrete.webp" aria-label="{esc(t["pesca_video_alt"])}">
         <source src="{prefijo}assets/video/pesca-carrete.mp4" type="video/mp4">
@@ -697,7 +700,7 @@ def portada(lang):
         <svg viewBox="0 0 24 24" aria-hidden="true"><path class="altavoz" d="M4 9h4l5-4v14l-5-4H4z"/><path class="ondas" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="tachado" d="M16 9l6 6M22 9l-6 6"/></svg>
         <span class="sonido-texto">{esc(t["pesca_video_sonido"])}</span>
       </button>
-    </figure>{"".join(f'<figure>{imagen(n, (480, 900), t["pesca_fotos"][n], prefijo, "", "(max-width: 700px) 50vw, 20vw")}</figure>' for n in ("pesca-abadejo", "pesca-velero", "pesca-cubierta", "pesca-captura"))}
+    </figure>{foto_pesca("pesca-velero")}{foto_pesca("pesca-abadejo")}
   </div>
 </section>
 
