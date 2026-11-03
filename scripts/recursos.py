@@ -115,11 +115,12 @@ def fotos():
     print("  [ok] compartir.jpg")
 
 
-# Lucha con un pez (vídeo del 03-11-2026): tramo 1:43,5-1:53, el arreón más fuerte. En 1:45 el carrete pasa de
-# clics sueltos a un zumbido continuo que sube de tono hasta 1:50,5 (el pez saca hilo aunque el freno está
-# apretado; la caña se dobla al máximo). CON sonido, que es lo que cuenta. Portada en 1:49,5.
+# Lucha con un pez (vídeo del 03-11-2026): los dos tramos buenos que eligió el usuario, unidos con un fundido
+# corto: 0:45-0:54 y, sobre todo, 1:46-1:58 (el arreón en que el pez saca hilo del carrete con el freno apretado).
+# CON sonido, que es lo que cuenta. Portada en 1:49,5 (la caña más doblada).
 VIDEO_PESCA = os.path.join(PESCA_JOSE, "WhatsApp Video 2026-11-03 at 14.06.32.mp4")
-VIDEO_PESCA_TRAMO = ("103.5", "9.5")
+VIDEO_PESCA_TRAMOS = [(45, 54), (106, 118)]
+VIDEO_PESCA_FUNDIDO = 0.4
 VIDEO_PESCA_PORTADA = "109.5"
 VIDEO_PESCA_NOMBRE = "pesca-carrete"
 
@@ -135,9 +136,20 @@ def video_pesca():
     destino = os.path.join(RAIZ, "assets", "video")
     os.makedirs(destino, exist_ok=True)
     mp4 = os.path.join(destino, VIDEO_PESCA_NOMBRE + ".mp4")
-    a, t = VIDEO_PESCA_TRAMO
-    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", a, "-i", VIDEO_PESCA, "-t", t,
-                    "-vf", "scale=540:-2,fps=30", "-af", "afade=t=in:d=0.4,afade=t=out:st=" + str(float(t) - 0.5) + ":d=0.5,loudnorm=I=-16:TP=-1.5",
+    fd = VIDEO_PESCA_FUNDIDO
+    partes, v_prev, a_prev, largo = [], None, None, 0.0
+    for k, (a, b) in enumerate(VIDEO_PESCA_TRAMOS):
+        partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,scale=540:-2,fps=30,format=yuv420p,settb=1/30[v{k}]")
+        partes.append(f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=44100[a{k}]")
+        if v_prev is None:
+            v_prev, a_prev, largo = f"v{k}", f"a{k}", b - a
+        else:
+            partes.append(f"[{v_prev}][v{k}]xfade=transition=fade:duration={fd}:offset={largo - fd}[vx{k}]")
+            partes.append(f"[{a_prev}][a{k}]acrossfade=d={fd}[ax{k}]")
+            v_prev, a_prev, largo = f"vx{k}", f"ax{k}", largo + (b - a) - fd
+    partes.append(f"[{a_prev}]afade=t=in:d=0.3,afade=t=out:st={largo - 0.5}:d=0.5,loudnorm=I=-16:TP=-1.5[afin]")
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-i", VIDEO_PESCA, "-filter_complex", ";".join(partes),
+                    "-map", f"[{v_prev}]", "-map", "[afin]",
                     "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p", "-crf", "27", "-preset", "slow",
                     "-c:a", "aac", "-b:a", "96k", "-ar", "44100", "-movflags", "+faststart", mp4], check=True)
     poster = os.path.join(destino, VIDEO_PESCA_NOMBRE + ".jpg")
@@ -145,7 +157,7 @@ def video_pesca():
                     "-vf", "scale=540:-2", "-strict", "unofficial", "-q:v", "4", poster], check=True)
     Image.open(poster).convert("RGB").save(poster.replace(".jpg", ".webp"), "WEBP", quality=78, method=6)
     os.remove(poster)
-    print(f"  [ok] vídeo de pesca: {os.path.getsize(mp4) // 1024} KB")
+    print(f"  [ok] vídeo de pesca: {largo:.1f} s, {os.path.getsize(mp4) // 1024} KB")
 
 
 def video():
