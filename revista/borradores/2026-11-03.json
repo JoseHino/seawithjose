@@ -1,7 +1,7 @@
 {
  "numero": "2026-11-03",
  "version": 1,
- "estado": "pendiente",
+ "estado": "publicado",
  "mar": {
   "desde": "2026-10-27",
   "hasta": "2026-11-02",
@@ -969,6 +969,11 @@
  },
  "refs": {},
  "historial": [
-  "v1 · 2026-11-03 14:52 UTC · borrador"
- ]
+  "v1 · 2026-11-03 14:52 UTC · borrador",
+  "v1 · 2026-11-03 15:36 UTC · aprobado y publicado · es: campaña 12 enviada a la lista 7 (3 suscriptores) · en: campaña 13 enviada a la lista 8 (1 suscriptores)"
+ ],
+ "enviados": {
+  "es": 12,
+  "en": 13
+ }
 }
