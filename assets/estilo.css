@@ -545,9 +545,23 @@ a.parada:hover { scale: 1.12; }
 .pesca h2 { font-size: clamp(34px, 4vw, 52px); }
 .pesca p { margin: 8px 0 0; color: var(--gris); max-width: 60ch; }
 /* mis capturas: tres fotos en vertical bajo el texto */
-.pesca-fotos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 28px; }
+.pesca-fotos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 28px; }
 .pesca-fotos figure { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: var(--cielo); }
-.pesca-fotos img { width: 100%; height: 100%; object-fit: cover; }
+.pesca-fotos img, .pesca-fotos video { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* la lucha con el pez: vídeo con sonido (el carrete), que arranca en silencio */
+.pesca-video { position: relative; background: #000; }
+.sonido-boton {
+  position: absolute; left: 8px; right: 8px; bottom: 8px; display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border: 0; border-radius: 4px; cursor: pointer; text-align: left;
+  background: var(--amarillo); color: var(--marino); font: inherit; font-size: 14px; font-weight: 800; line-height: 1.15;
+}
+.sonido-boton svg { flex: none; width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sonido-boton .altavoz { fill: currentColor; }
+.sonido-boton .ondas { display: none; }
+.sonido-boton[aria-pressed="true"] { left: auto; padding: 8px; }
+.sonido-boton[aria-pressed="true"] .ondas { display: inline; }
+.sonido-boton[aria-pressed="true"] .tachado,
+.sonido-boton[aria-pressed="true"] .sonido-texto { display: none; }
 
 /* ───── preguntas ───── */
 .faq-rejilla { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(28px, 5vw, 80px); }
@@ -648,7 +662,8 @@ a.parada:hover { scale: 1.12; }
   .buceo-mas .buceo-foto:last-child { margin-top: 0; }
   .pesca-fila { grid-template-columns: auto minmax(0, 1fr); }
   .pesca-fila .boton { grid-column: 1 / -1; justify-self: start; }
-  .pesca-fotos { gap: 4px; }
+  .pesca-fotos { gap: 4px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pesca-fotos .pesca-video { grid-column: 1 / -1; aspect-ratio: 9 / 13; max-height: 80vh; }
   .pie-rejilla { grid-template-columns: minmax(0, 1fr); }
 }
 

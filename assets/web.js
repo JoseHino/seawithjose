@@ -92,6 +92,8 @@
   }));
   const video = document.querySelector('.barco-video');
   if (video) iniciarVideo(video);
+  const pesca = document.querySelector('.pesca-video');
+  if (pesca) iniciarVideoPesca(pesca);
   if (d.pagina === 'buceo') iniciarFiltros();
   if (d.pagina === 'gracias') pintarGracias(d);
 
@@ -245,6 +247,29 @@
     new IntersectionObserver(entradas => entradas.forEach(e => {
       if (manual) return;
       if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+    }), { threshold: 0.4 }).observe(figura);
+  }
+
+  // ── la lucha con el pez: en silencio y solo a la vista; el botón activa el sonido del carrete ──
+  function iniciarVideoPesca(figura) {
+    const v = figura.querySelector('video');
+    const b = figura.querySelector('.sonido-boton');
+    const texto = b.querySelector('.sonido-texto');
+    const marcar = () => {
+      b.setAttribute('aria-pressed', String(!v.muted));
+      b.setAttribute('aria-label', v.muted ? b.dataset.sonido : b.dataset.silencio);
+    };
+    b.addEventListener('click', () => {
+      v.muted = !v.muted;
+      if (!v.muted) { v.currentTime = 0; v.play().catch(() => {}); }
+      marcar();
+    });
+    marcar();
+    texto.textContent = b.dataset.sonido;
+    if (!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(entradas => entradas.forEach(e => {
+      if (e.isIntersecting && (!sinMovimiento || !v.muted)) v.play().catch(() => {});
+      else if (!e.isIntersecting) v.pause();
     }), { threshold: 0.4 }).observe(figura);
   }
 

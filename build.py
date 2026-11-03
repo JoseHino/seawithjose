@@ -688,7 +688,17 @@ def portada(lang):
     </div>
     <a class="boton boton-borde-azul" href="{wa(t["pesca_wa"])}">{ICONO_WA}{esc(t["pesca_cta"])}</a>
   </div>
-  <div class="contenedor pesca-fotos">{"".join(f'<figure>{imagen(n, (480, 900), t["pesca_fotos"][n], prefijo, "", "(max-width: 700px) 33vw, 30vw")}</figure>' for n in ("pesca-velero", "pesca-cubierta", "pesca-captura"))}</div>
+  <div class="contenedor pesca-fotos">
+    <figure class="pesca-video">
+      <video muted loop playsinline preload="none" poster="{prefijo}assets/video/pesca-carrete.webp" aria-label="{esc(t["pesca_video_alt"])}">
+        <source src="{prefijo}assets/video/pesca-carrete.mp4" type="video/mp4">
+      </video>
+      <button class="sonido-boton" type="button" aria-pressed="false" data-sonido="{esc(t["pesca_video_sonido"])}" data-silencio="{esc(t["pesca_video_silencio"])}">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="altavoz" d="M4 9h4l5-4v14l-5-4H4z"/><path class="ondas" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="tachado" d="M16 9l6 6M22 9l-6 6"/></svg>
+        <span class="sonido-texto">{esc(t["pesca_video_sonido"])}</span>
+      </button>
+    </figure>{"".join(f'<figure>{imagen(n, (480, 900), t["pesca_fotos"][n], prefijo, "", "(max-width: 700px) 50vw, 20vw")}</figure>' for n in ("pesca-abadejo", "pesca-velero", "pesca-cubierta", "pesca-captura"))}
+  </div>
 </section>
 
 <section class="seccion faq" id="faq" aria-labelledby="faq-titulo">

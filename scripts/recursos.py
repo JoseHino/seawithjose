@@ -22,6 +22,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ESCRITORIO = os.path.join(os.path.expanduser("~"), "OneDrive", "Escritorio")
 BUCEO = os.path.join(ESCRITORIO, "buceo-marbella", "img")
 BARCO = os.path.join(ESCRITORIO, "Proyectos", "Petit", "Charter", "Fotos")
+PESCA_JOSE = os.path.join(ESCRITORIO, "Jose Mª Hinojosa", "DNI Y FOTO", "FOTOS", "Fotos Pesca")
 
 FUENTES_CSS = ("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400..800;1,400..600"
                "&family=Sofia+Sans+Extra+Condensed:wght@700..900&display=swap")
@@ -53,6 +54,8 @@ FOTOS = {
     "pesca-velero": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54 (1).jpeg"), None, (480, 900)),
     "pesca-cubierta": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54 (2).jpeg"), None, (480, 900)),
     "pesca-captura": (os.path.join(BARCO, "Pesca", "WhatsApp Image 2026-10-27 at 10.04.54.jpeg"), None, (480, 900)),
+    # Abadejo del 03-11-2026 con La Concha y Marbella detrás
+    "pesca-abadejo": (os.path.join(PESCA_JOSE, "WhatsApp Image 2026-11-03 at 14.06.28.jpeg"), None, (480, 900)),
 }
 # Delfines en la proa del Petit (vídeo del 01-11-2026): tramo 0:40-0:51, portada en 0:45
 VIDEO = os.path.join(BARCO, "WhatsApp Video 2026-11-01 at 09.11.16.mp4")
@@ -112,6 +115,38 @@ def fotos():
     print("  [ok] compartir.jpg")
 
 
+# Lucha con un pez (vídeo del 03-11-2026): tramo 0:57,5-1:08,5, con el carrete soltando hilo (freno sonando)
+# y casi sin voces; CON sonido, que es lo que cuenta. Portada en 1:00.
+VIDEO_PESCA = os.path.join(PESCA_JOSE, "WhatsApp Video 2026-11-03 at 14.06.32.mp4")
+VIDEO_PESCA_TRAMO = ("57.5", "11")
+VIDEO_PESCA_PORTADA = "60"
+VIDEO_PESCA_NOMBRE = "pesca-carrete"
+
+
+def video_pesca():
+    """La lucha con el pez: MP4 vertical con sonido (el freno del carrete), más su portada."""
+    import subprocess
+    try:
+        import imageio_ffmpeg
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        ffmpeg = "ffmpeg"
+    destino = os.path.join(RAIZ, "assets", "video")
+    os.makedirs(destino, exist_ok=True)
+    mp4 = os.path.join(destino, VIDEO_PESCA_NOMBRE + ".mp4")
+    a, t = VIDEO_PESCA_TRAMO
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", a, "-i", VIDEO_PESCA, "-t", t,
+                    "-vf", "scale=540:-2,fps=30", "-af", "afade=t=in:d=0.4,afade=t=out:st=" + str(float(t) - 0.5) + ":d=0.5,loudnorm=I=-16:TP=-1.5",
+                    "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p", "-crf", "27", "-preset", "slow",
+                    "-c:a", "aac", "-b:a", "96k", "-ar", "44100", "-movflags", "+faststart", mp4], check=True)
+    poster = os.path.join(destino, VIDEO_PESCA_NOMBRE + ".jpg")
+    subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-ss", VIDEO_PESCA_PORTADA, "-i", VIDEO_PESCA, "-frames:v", "1",
+                    "-vf", "scale=540:-2", "-strict", "unofficial", "-q:v", "4", poster], check=True)
+    Image.open(poster).convert("RGB").save(poster.replace(".jpg", ".webp"), "WEBP", quality=78, method=6)
+    os.remove(poster)
+    print(f"  [ok] vídeo de pesca: {os.path.getsize(mp4) // 1024} KB")
+
+
 def video():
     """Delfines en la proa del Petit: MP4 sin sonido, ligero y con arranque rápido, más su fotograma de portada."""
     import subprocess
@@ -139,6 +174,6 @@ if __name__ == "__main__":
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:                                             # noqa: BLE001
         pass
-    pasos = sys.argv[1:] or ["fuentes", "fotos", "video"]       # p. ej. «python scripts/recursos.py fotos»
+    pasos = sys.argv[1:] or ["fuentes", "fotos", "video", "video_pesca"]       # p. ej. «python scripts/recursos.py fotos»
     for paso in pasos:
-        {"fuentes": fuentes, "fotos": fotos, "video": video}[paso]()
+        {"fuentes": fuentes, "fotos": fotos, "video": video, "video_pesca": video_pesca}[paso]()
