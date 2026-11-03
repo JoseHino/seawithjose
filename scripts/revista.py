@@ -51,6 +51,8 @@ PARTE = os.path.join(RAIZ, "datos", "mar.json")
 SALIDA_TMP = os.path.join(RAIZ, ".revista_salida.json")
 ULTIMO_TMP = os.path.join(RAIZ, ".revista_ultimo")
 DOMINIO = "https://seawithjose.es"
+CONTADOR = ('<script data-goatcounter="https://seawithjose.goatcounter.com/count" async '   # visitas (GoatCounter, sin cookies); solo en la web, nunca en el correo
+            'src="https://gc.zgo.at/count.js"></script>')
 LAT, LON = 36.47, -4.95                       # frente a Puerto Banús
 IDIOMAS = ("es", "en")
 DIA_ENVIO = 1                                 # 0 lunes … 6 domingo (martes; más adelante, domingo = 6)
@@ -501,7 +503,7 @@ def montar(numero, version, contenido, mar, lang, modo):
         enlaces_pie = f'<a href="{DOMINIO}/{"es/" if lang == "es" else ""}revista.html" style="color:#fff;">seawithjose.es</a>'
     return f"""<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-{'<meta name="robots" content="noindex">' if modo == "borrador" else ''}<title>{esc(c.get("asunto"))}</title></head>
+{'<meta name="robots" content="noindex">' if modo == "borrador" else ''}{CONTADOR if modo == "web" else ''}<title>{esc(c.get("asunto"))}</title></head>
 <body style="margin:0;padding:0;background:{COLOR["cielo"]};">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{esc(c.get("entradilla"))}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{COLOR["cielo"]};"><tr><td align="center" style="padding:24px 12px;">

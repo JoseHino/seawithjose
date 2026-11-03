@@ -286,6 +286,7 @@ def cabeza(t, lang, prefijo, titulo, descripcion, ruta, extra=""):
 <link rel="preload" href="{prefijo}assets/fuentes/sofia-sans-normal-400-800-{sub}.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{prefijo}assets/fuentes.css?v={VERSION}">
 <link rel="stylesheet" href="{prefijo}assets/estilo.css?v={VERSION}">
+<script data-goatcounter="https://seawithjose.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 {extra}</head>"""
 
 

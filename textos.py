@@ -459,7 +459,7 @@ T["en"] = {
          "processor; Brevo records whether each issue is opened, only to measure the newsletter. Every issue has an "
          "unsubscribe link and I delete your data when you unsubscribe. You can also ask me to see, correct or delete "
          "it at {email}."),
-        ("Cookies", "This website uses no cookies and no analytics. While you book, your browser keeps the details of "
+        ("Cookies and visit statistics", "This website uses no cookies. To know how many people visit it, I use GoatCounter, which counts visits without cookies and without identifying anyone: it records the page, where the visit comes from, the country, the language and the type of device, never your IP address or anything that identifies you. While you book, your browser keeps the details of "
                     "your booking so they can be shown again when you come back from the payment page. Fonts and "
                     "images are served from the site itself."),
         ("Third parties", "The site is hosted on GitHub Pages (GitHub Inc.), which may record visitors’ IP addresses "
@@ -866,7 +866,7 @@ T["es"] = {
          "encargado del tratamiento; Brevo registra si se abre cada número, solo para medir el boletín. Cada número "
          "trae un enlace para darte de baja y borro tus datos cuando te das de baja. También puedes pedirme verlos, "
          "corregirlos o borrarlos en {email}."),
-        ("Cookies", "Esta web no usa cookies ni herramientas de analítica. Mientras reservas, tu navegador guarda los "
+        ("Cookies y estadísticas de visitas", "Esta web no usa cookies. Para saber cuánta gente la visita uso GoatCounter, que cuenta las visitas sin cookies y sin identificar a nadie: guarda la página, de dónde llega la visita, el país, el idioma y el tipo de dispositivo, nunca tu dirección IP ni nada que te identifique. Mientras reservas, tu navegador guarda los "
                     "datos de la reserva para enseñártelos al volver de la página de pago. Las tipografías y las "
                     "imágenes se sirven desde la propia web."),
         ("Terceros", "La web está alojada en GitHub Pages (GitHub Inc.), que puede registrar las direcciones IP de las "
@@ -1282,7 +1282,7 @@ T["ru"] = {
          "обработчик данных; Brevo отмечает, открыт ли номер, только для статистики рассылки. В каждом номере есть "
          "ссылка для отписки, и после отписки я удаляю ваши данные. Также можно попросить показать, исправить или "
          "удалить их по адресу {email}."),
-        ("Cookies", "Сайт не использует cookies и аналитику. Пока вы бронируете, браузер хранит данные брони, чтобы "
+        ("Cookies и статистика посещений", "Сайт не использует cookies. Чтобы знать, сколько людей его посещает, я использую GoatCounter: он считает посещения без cookies и никого не идентифицирует — сохраняет страницу, откуда пришёл посетитель, страну, язык и тип устройства, но не ваш IP-адрес и ничего, что позволяет вас узнать. Пока вы бронируете, браузер хранит данные брони, чтобы "
                     "показать их вам после возвращения со страницы оплаты. Шрифты и изображения загружаются с самого "
                     "сайта."),
         ("Третьи лица", "Сайт размещён на GitHub Pages (GitHub Inc.), который может записывать IP-адреса посетителей "
