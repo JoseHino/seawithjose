@@ -115,11 +115,12 @@ def fotos():
     print("  [ok] compartir.jpg")
 
 
-# Lucha con un pez (vídeo del 03-11-2026): tramo 0:57,5-1:08,5, con el carrete soltando hilo (freno sonando)
-# y casi sin voces; CON sonido, que es lo que cuenta. Portada en 1:00.
+# Lucha con un pez (vídeo del 03-11-2026): tramo 1:43,5-1:53, el arreón más fuerte. En 1:45 el carrete pasa de
+# clics sueltos a un zumbido continuo que sube de tono hasta 1:50,5 (el pez saca hilo aunque el freno está
+# apretado; la caña se dobla al máximo). CON sonido, que es lo que cuenta. Portada en 1:49,5.
 VIDEO_PESCA = os.path.join(PESCA_JOSE, "WhatsApp Video 2026-11-03 at 14.06.32.mp4")
-VIDEO_PESCA_TRAMO = ("57.5", "11")
-VIDEO_PESCA_PORTADA = "60"
+VIDEO_PESCA_TRAMO = ("103.5", "9.5")
+VIDEO_PESCA_PORTADA = "109.5"
 VIDEO_PESCA_NOMBRE = "pesca-carrete"
 
 
