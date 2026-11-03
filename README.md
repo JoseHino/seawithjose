@@ -24,7 +24,7 @@ Eso regenera `index.html`, `es/`, `ru/`, las páginas legales, el 404, el
 | `scripts/carta.py` | Isobatas reales de EMODnet (CC BY 4.0) para la carta con la ruta → `fuentes/carta.json`. |
 | `scripts/mapa.py` | Plano de Puerto Banús con el parking Cristamar, de OpenStreetMap (ODbL) → `fuentes/mapa_banus.json`. |
 | `scripts/recursos.py` | Descarga las tipografías (servidas desde la propia web, sin cookies) y optimiza las fotos. |
-| `scripts/revista.py` | La Bitácora del mar: ver más abajo. |
+| `scripts/revista.py` | El Parte de condiciones del mar (la newsletter): ver más abajo. |
 | `scripts/parte_mar.py` | Previsión de AEMET y notas del 1 al 10 para navegar, bucear y pescar → `datos/mar.json`. |
 
 ## El mar, ahora (parte, notas y cámaras)
@@ -53,7 +53,9 @@ Con eso la web pinta el parte de la portada y la sección «El mar, ahora»:
 Sin datos (AEMET caído), la portada enseña la puesta de sol, que se calcula en
 el navegador, y la sección invita a escribir por WhatsApp.
 
-## La Bitácora del mar (revista quincenal)
+## El Parte de condiciones del mar (newsletter semanal; antes «Bitácora del mar»)
+
+Cada número lleva en portada una foto de Marbella con el mar, distinta cada semana: la primera de `revista/fotos/fotos.json` que no haya salido en ningún número (se mira en `revista/borradores/*.json`). Son fotos de Wikimedia Commons con licencia libre (CC0, CC BY, CC BY-SA), recortadas a 1200×675; el pie lleva lugar, autor y licencia, como piden. La incidencia del borrador dice cuántas quedan; con menos de 5 avisa de que hay que añadir más.
 
 Revista gratuita cada quince días, en español e inglés: el mar de la quincena frente a Puerto Banús (agua,
 olas, viento y luna) y lo más interesante de Marbella, buceo, vela y barcos, pesca, viajes por mar y el océano.

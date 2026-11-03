@@ -827,7 +827,7 @@ def pagina_buceo(lang):
     return cabeza(t, lang, prefijo, t["buceo_title"], t["buceo_description"], "buceo.html") + cuerpo
 
 
-# ─────────────────────────────── la Bitácora del mar (revista quincenal) ───────────────────────────────
+# ─────────────────────────────── el Parte de condiciones del mar (newsletter semanal) ───────────────────────────────
 # Iconos de los ejes, con el mismo trazo que el resto de la web
 ICONOS_EJE = {
     "mar": '<path d="M4 30c4-3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 8 3"/><path d="M4 22c4-3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 8 3"/><path d="M34 6v10M30 10h8"/>',

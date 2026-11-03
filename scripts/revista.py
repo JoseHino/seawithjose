@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bitácora del mar: la newsletter semanal del tiempo en Marbella de Sea With Jose, en español y en inglés.
+"""Parte de condiciones del mar (antes «Bitácora del mar»): la newsletter semanal del tiempo en Marbella de Sea With Jose, en español y en inglés.
 
     python scripts/revista.py borrador [AAAA-MM-DD]  prepara el número del día de envío indicado y su versión 1
     python scripts/revista.py abrir                  abre la incidencia de GitHub para aprobarlo (tras subir los ficheros)
@@ -37,6 +37,7 @@ import math
 import os
 import re
 import subprocess
+import glob
 import sys
 import urllib.parse
 import urllib.request
@@ -45,6 +46,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CARPETA = os.path.join(RAIZ, "revista")
 BORRADORES = os.path.join(CARPETA, "borradores")
 INDICE = os.path.join(CARPETA, "index.json")
+FOTOS = os.path.join(CARPETA, "fotos")          # fotos de portada: fotos.json manda el orden (una distinta cada semana)
 PARTE = os.path.join(RAIZ, "datos", "mar.json")
 SALIDA_TMP = os.path.join(RAIZ, ".revista_salida.json")
 ULTIMO_TMP = os.path.join(RAIZ, ".revista_ultimo")
@@ -63,7 +65,7 @@ COLOR = {"marino": "#0B2D52", "azul": "#1F4E9A", "amarillo": "#FFC20E", "rojo": 
          "gris": "#4E5F70", "cielo": "#E7F1F7", "linea": "#CFDCE5"}
 
 TXT = {
-    "es": {"nombre": "Bitácora del mar", "de": "Sea With Jose · El tiempo en Marbella", "num": "Nº", "semana": "Semana del {d}",
+    "es": {"nombre": "Parte de condiciones del mar", "de": "Sea With Jose · Marbella", "num": "Nº", "semana": "Semana del {d}",
            "meses": "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre".split(),
            "mar_h": "El mar", "agua": "Agua (media de la semana)", "rango": "mín. {a} · máx. {b} °C",
            "vs": "{d} °C {s} que hace un año", "mas": "más", "menos": "menos", "igual": "igual que hace un año",
@@ -78,7 +80,7 @@ TXT = {
            "graf_alt": "Gráfica: temperatura del agua y viento en la quincena, y cambio medio del agua según la dirección del viento",
            "fuentes_tiempo": "Datos: AEMET, estación Marbella Puerto (6076X) y predicción para Marbella. Agua: Copernicus Marine (satélite y modelo de la UE).",
            "leer": "Leer en", "web": "Ver en la web", "datos": "Ver todos los datos de Marbella, hora a hora", "baja": "Darse de baja",
-           "pie": "Recibes la Bitácora porque te suscribiste en seawithjose.es.", "salidas": "Salir a navegar, bucear o pescar conmigo",
+           "pie": "Recibes el Parte porque te suscribiste en seawithjose.es.", "salidas": "Salir a navegar, bucear o pescar conmigo",
            "pesca_h": "La pesca esta semana", "actividad": ["", "baja", "media", "alta", "muy alta"],
            "graf_pesca_alt": "Gráfica: las mejores horas para pescar cada día de la semana que viene y la actividad de los peces",
            "salir_h": "¿Cuándo salir al mar?", "c_dia": "Día", "c_vela": "Vela", "c_fondo": "Pesca a fondo",
@@ -90,9 +92,9 @@ TXT = {
                              "y bajamares (▼), del modelo de nivel del mar de Copernicus Marine."),
            "graf_semana_alt": "Gráfica: temperatura del agua y viento de cada día de la semana pasada",
            "graf_plan_alt": "Gráfica: viento, rachas, olas, marea y probabilidad de lluvia de la semana que viene, hora a hora",
-           "aviso": "Borrador para tu aprobación · versión {v}",
+           "aviso": "Borrador para tu aprobación · versión {v}", "foto": "Foto",
            "aviso_p": "Responde «OK» al correo de GitHub (o comenta en la incidencia) y se publica y se programa el envío. Si quieres cambios, escríbelos en tu respuesta."},
-    "en": {"nombre": "The Sea Logbook", "de": "Sea With Jose · Marbella weather", "num": "No.", "semana": "Week of {d}",
+    "en": {"nombre": "Sea Conditions Report", "de": "Sea With Jose · Marbella", "num": "No.", "semana": "Week of {d}",
            "meses": "January February March April May June July August September October November December".split(),
            "mar_h": "The sea", "agua": "Water (weekly average)", "rango": "min {a} · max {b} °C",
            "vs": "{d} °C {s} than a year ago", "mas": "warmer", "menos": "cooler", "igual": "same as a year ago",
@@ -107,7 +109,7 @@ TXT = {
            "graf_alt": "Chart: water temperature and wind this fortnight, and average change in the water by wind direction",
            "fuentes_tiempo": "Data: AEMET, Marbella Marina station (6076X) and Marbella forecast. Water: Copernicus Marine (EU satellite and model).",
            "leer": "Read on", "web": "View on the website", "datos": "See all the Marbella data, hour by hour", "baja": "Unsubscribe",
-           "pie": "You get the Logbook because you subscribed at seawithjose.es.", "salidas": "Come sailing, diving or fishing with me",
+           "pie": "You get the Report because you subscribed at seawithjose.es.", "salidas": "Come sailing, diving or fishing with me",
            "pesca_h": "Fishing this week", "actividad": ["", "low", "fair", "high", "very high"],
            "graf_pesca_alt": "Chart: the best hours to fish each day of the week ahead and fish activity",
            "salir_h": "When to go out to sea?", "c_dia": "Day", "c_vela": "Sailing", "c_fondo": "Bottom fishing",
@@ -119,7 +121,7 @@ TXT = {
                              "from the Copernicus Marine sea-level model."),
            "graf_semana_alt": "Chart: water temperature and wind for each day of last week",
            "graf_plan_alt": "Chart: wind, gusts, waves, tide and chance of rain for the week ahead, hour by hour",
-           "aviso": "Draft for your approval · version {v}",
+           "aviso": "Draft for your approval · version {v}", "foto": "Photo",
            "aviso_p": "Reply “OK” to the GitHub email (or comment on the issue) and it will be published and scheduled."},
 }
 
@@ -515,6 +517,7 @@ def montar(numero, version, contenido, mar, lang, modo):
     <div style="font:900 38px/1.05 'Arial Narrow',Arial,Helvetica,sans-serif;text-transform:uppercase;color:#fff;margin-top:6px;">{esc(t["nombre"])}</div>
     <div style="font:13px/1.4 Arial,Helvetica,sans-serif;color:#C9D7E6;margin-top:12px;">{esc(t["num"])} {esc(numero)} · {esc(titulo_fecha(numero, lang))}</div>
   </td></tr>
+  {bloque_portada(mar, lang)}
   <tr><td style="padding:26px 30px 0;font:17px/1.6 Arial,Helvetica,sans-serif;color:{COLOR["tinta"]};">
     <div style="font:800 24px/1.25 Arial,Helvetica,sans-serif;color:{COLOR["marino"]};margin-bottom:10px;">{esc(c.get("asunto"))}</div>
     {"".join(f'<p style="margin:0 0 12px;">{texto_html(p)}</p>' for p in str(c.get("editorial", "")).split(chr(10) + chr(10)) if p.strip())}
@@ -536,6 +539,65 @@ def montar(numero, version, contenido, mar, lang, modo):
 </td></tr></table>
 </body></html>
 """
+
+
+# ─────────────────────────────── foto de portada ───────────────────────────────
+def catalogo_fotos():
+    try:
+        return json.load(open(os.path.join(FOTOS, "fotos.json"), encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+
+
+def fotos_usadas(excepto=None):
+    """Foto de portada de cada número ya preparado: {archivo: número}."""
+    usadas = {}
+    for f in sorted(glob.glob(os.path.join(BORRADORES, "*.json"))):
+        try:
+            e = json.load(open(f, encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        archivo = ((e.get("mar") or {}).get("portada") or {}).get("archivo")
+        if archivo and e.get("numero") != excepto:
+            usadas[archivo] = e["numero"]
+    return usadas
+
+
+def foto_portada(numero):
+    """Una foto de Marbella con el mar, distinta cada semana: la primera de fotos.json que no haya salido nunca.
+    Si ya han salido todas, vuelve a la que lleva más tiempo sin salir."""
+    fotos = catalogo_fotos()
+    if not fotos:
+        return None
+    usadas = fotos_usadas(excepto=numero)
+    libres = [f for f in fotos if f["archivo"] not in usadas]
+    elegida = libres[0] if libres else min(fotos, key=lambda f: usadas[f["archivo"]])
+    return {**elegida, "url": f"{DOMINIO}/revista/fotos/{elegida['archivo']}"}
+
+
+def aviso_fotos(e):
+    """Línea para la incidencia: qué foto lleva y cuántas quedan sin estrenar."""
+    p = (e.get("mar") or {}).get("portada")
+    if not p:
+        return ""
+    quedan = len([f for f in catalogo_fotos() if f["archivo"] not in fotos_usadas()])
+    linea = f"\nFoto de portada: {p['lugar']} ({p['autor']}). Quedan {quedan} fotos sin estrenar."
+    if quedan < 5:
+        linea += " **Hay que añadir fotos nuevas a revista/fotos/fotos.json** (si no, empiezan a repetirse)."
+    return linea + "\n"
+
+
+def bloque_portada(mar, lang):
+    """La foto de portada a todo el ancho, con el lugar y el crédito (las licencias CC piden autor y licencia)."""
+    p = (mar or {}).get("portada")
+    if not p:
+        return ""
+    t = TXT[lang]
+    credito = (f'{esc(p["lugar"])} · {esc(t["foto"])}: <a href="{esc(p["fuente"])}" style="color:{COLOR["gris"]};">{esc(p["autor"])}</a>, '
+               f'<a href="{esc(p["licencia_url"])}" style="color:{COLOR["gris"]};">{esc(p["licencia"])}</a>')
+    return (f'<tr><td style="padding:0;line-height:0;font-size:0;"><img src="{esc(p["url"])}" width="640" alt="{esc(p["lugar"])}" '
+            f'style="display:block;width:100%;max-width:640px;height:auto;border:0;"></td></tr>'
+            f'<tr><td style="padding:6px 30px 0;font:11px/1.4 Arial,Helvetica,sans-serif;color:{COLOR["gris"]};" align="right">{credito}</td></tr>')
 
 
 # ─────────────────────────────── estado de cada número ───────────────────────────────
@@ -625,6 +687,7 @@ def cmd_borrador(numero=None, notas=""):
     mar = datos_mar(numero)
     print("Mar:", texto_mar(mar, "es"))
     analizar(numero, mar)
+    mar["portada"] = foto_portada(numero)
     contenido, refs = redactar(numero, mar, notas)
     e = {"numero": numero, "version": 1, "estado": "pendiente", "mar": mar, "contenido": contenido, "refs": refs,
          "historial": [f"v1 · {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · borrador"]}
@@ -639,7 +702,7 @@ def cmd_abrir():
     e = json.load(open(ruta_estado(open(ULTIMO_TMP, encoding="utf-8").read().strip()), encoding="utf-8"))
     v = enlaces_vista(e)
     asunto_es = e["contenido"]["es"].get("asunto", "")
-    cuerpo = (f"@{editor()} ya está el borrador de la **Bitácora del mar nº {e['numero']}** "
+    cuerpo = (f"@{editor()} ya está el borrador de la **Parte de condiciones del mar nº {e['numero']}** "
               f"({titulo_fecha(e['numero'], 'es')}).\n\n"
               f"**{asunto_es}**\n\n"
               f"- Vista previa en español: {v['es']}\n- Vista previa en inglés: {v['en']}\n\n"
@@ -649,8 +712,9 @@ def cmd_abrir():
               f"{fecha_larga(salida_de(e['numero']), 'es')} a las {HORA_ENVIO[0]}:{HORA_ENVIO[1]:02d} "
               "(si apruebas más tarde, sale en el momento).\n"
               "- **Cualquier cambio** («quita la noticia de…», «el editorial más corto», «añade que…») → "
-              "llega una versión nueva para revisar.\n")
-    r = github("/issues", {"title": f"Bitácora del mar nº {e['numero']} · borrador", "body": cuerpo,
+              "llega una versión nueva para revisar.\n"
+              + aviso_fotos(e))
+    r = github("/issues", {"title": f"Parte de condiciones del mar nº {e['numero']} · borrador", "body": cuerpo,
                            "labels": ["revista"], "assignees": [editor()]})
     print("Incidencia abierta:", r.get("html_url"))
 
@@ -776,7 +840,7 @@ def publicar(e, hora=None):
         c = e["contenido"][lang]
         try:
             camp = brevo("/emailCampaigns", {
-                "name": f"Bitácora {numero} ({lang})", "subject": c.get("asunto", TXT[lang]["nombre"]),
+                "name": f"Parte del mar {numero} ({lang})", "subject": c.get("asunto", TXT[lang]["nombre"]),
                 "previewText": c.get("entradilla", "")[:150],
                 "sender": {"name": REMITENTE_NOMBRE, "email": REMITENTE}, "replyTo": os.environ.get("REVISTA_RESPONDER", REMITENTE),
                 "recipients": {"listIds": [int(lista)]}, "mirrorActive": True,

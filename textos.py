@@ -30,7 +30,7 @@ PAGOS = {"compartida": {}, "privada": "", "dia": ""}
 # Formato: {"texto": "...", "nombre": "Anna", "origen": "Alemania", "fuente": "Google"}. Nunca inventarlas.
 RESENAS = []
 
-# ─────────────────────────────── la Bitácora (revista quincenal) ───────────────────────────────
+# ─────────────────────────────── el Parte de condiciones del mar (newsletter semanal) ───────────────────────────────
 # Formularios de suscripción de Brevo (Contactos > Formularios > Compartir), uno por idioma de la revista.
 # Mientras estén vacíos, la página invita a escribir por WhatsApp.
 REVISTA_FORMS = {"es": "https://24245cf8.sibforms.com/serve/MUIFAEmrpgChojMxJoy6P68lKnQH8Pdwr-1qUUHTz8eTHIz24_MokRkUUTL0Ddciyszt54Yy99S_mMPS4bzUsIa7bEnnK8uvHB7nZ3c1f3yjoMEvqG08nNosjRxRZGX-vZ8G_-YIc53MvrryVad9DcENcjd453jnG93gUSwdNseQz5Q7NfYePWa7uxB1Bq0XP5XDpgBcI6zk7awFXQ==",
@@ -453,7 +453,7 @@ T["en"] = {
                       "Stripe processes payment data as an independent controller (stripe.com/privacy). You can ask "
                       "me at any time to see, correct or delete your data by writing to {email}, and you can complain "
                       "to the Spanish Data Protection Agency (aepd.es)."),
-        ("The Sea Logbook (newsletter)", "If you subscribe to the Logbook, I only use your email address (and your name, "
+        ("The Sea Conditions Report (newsletter)", "If you subscribe to the Report, I only use your email address (and your name, "
          "if you give it) to send you the newsletter every week, on the basis of the consent you give in the form "
          "and confirm by email (double opt-in). The list is kept by Brevo (Sendinblue SAS, France, EU) as data "
          "processor; Brevo records whether each issue is opened, only to measure the newsletter. Every issue has an "
@@ -860,8 +860,8 @@ T["es"] = {
                       "obligatorio. Stripe trata los datos del pago como responsable independiente "
                       "(stripe.com/privacy). Puedes pedirme en cualquier momento verlos, corregirlos o borrarlos "
                       "escribiendo a {email}, y reclamar ante la Agencia Española de Protección de Datos (aepd.es)."),
-        ("La Bitácora del mar (boletín)", "Si te suscribes a la Bitácora, uso tu correo (y tu nombre, si lo das) solo "
-         "para enviarte la revista cada quince días, con la base del consentimiento que das en el formulario y "
+        ("El Parte de condiciones del mar (boletín)", "Si te suscribes al Parte, uso tu correo (y tu nombre, si lo das) solo "
+         "para enviarte el boletín cada semana, con la base del consentimiento que das en el formulario y "
          "confirmas por correo (doble confirmación). La lista la guarda Brevo (Sendinblue SAS, Francia, UE) como "
          "encargado del tratamiento; Brevo registra si se abre cada número, solo para medir el boletín. Cada número "
          "trae un enlace para darte de baja y borro tus datos cuando te das de baja. También puedes pedirme verlos, "
@@ -1257,8 +1257,8 @@ T["ru"] = {
         ("Владелец сайта", "Sea With Jose, личный бренд Хосе Марии Инохосы Фигейры (José María Hinojosa Figueira), "
                            "Марбелья (Малага, Испания). Контакты: {email} · WhatsApp {tel}."),
         ("Назначение сайта", "Сайт рассказывает о прогулках под парусом на «Пти» и дополнительных услугах для "
-                             "индивидуальных прогулок и позволяет забронировать и оплатить их. Здесь также выходит «Морской "
-                             "журнал» и публикуются официальные данные о погоде в Марбелье."),
+                             "индивидуальных прогулок и позволяет забронировать и оплатить их. Здесь также выходит «Сводка "
+                             "морских условий» и публикуются официальные данные о погоде в Марбелье."),
         ("Бронирование и оплата", "Прогулки оплачиваются заранее картой через Stripe, который проводит платёж: этот "
                                   "сайт не видит и не хранит данные вашей карты. Бронь подтверждается, когда я пишу вам "
                                   "в WhatsApp или по почте. Указанные цены окончательные. Дополнительные услуги для "
@@ -1276,7 +1276,7 @@ T["ru"] = {
                         "(stripe.com/privacy). В любой момент вы можете попросить показать, исправить или удалить ваши "
                         "данные, написав на {email}, а также подать жалобу в Испанское агентство по защите данных "
                         "(aepd.es)."),
-        ("Морской журнал (рассылка)", "Если вы подписались на журнал, я использую ваш email (и имя, если вы его "
+        ("Сводка морских условий (рассылка)", "Если вы подписались на сводку, я использую ваш email (и имя, если вы его "
          "указали) только для еженедельной рассылки, на основании согласия, которое вы даёте в форме и "
          "подтверждаете по почте (двойное подтверждение). Список хранит Brevo (Sendinblue SAS, Франция, ЕС) как "
          "обработчик данных; Brevo отмечает, открыт ли номер, только для статистики рассылки. В каждом номере есть "
@@ -1356,7 +1356,7 @@ T["ru"] = {
         "archivo_h": "Вышедшие номера",
         "archivo_vacio": "Первый номер уже готовится.",
         "archivo_idioma": {"es": "Испанский", "en": "Английский"},
-        "privacidad": ("Ваш адрес используется только для рассылки журнала через Brevo (Sendinblue SAS, ЕС). "
+        "privacidad": ("Ваш адрес используется только для рассылки сводки через Brevo (Sendinblue SAS, ЕС). "
                        "Отписаться можно в любой момент из любого номера."),
         "estado": {"pendiente": ("Проверьте почту", "Я отправил вам письмо со ссылкой для подтверждения подписки."),
                    "ok": ("Вы подписаны!", "Следующий номер придёт через несколько дней.")},
