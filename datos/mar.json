@@ -1,91 +1,11 @@
 {
- "generado": "2026-11-04T20:50:34Z",
+ "generado": "2026-11-05T13:15:18Z",
  "elaborado": {
-  "playa": "2026-11-04T08:51:16",
-  "horas": "2026-11-04T19:11:10"
+  "playa": "2026-11-05T08:51:19",
+  "horas": "2026-11-05T13:01:09"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
-  {
-   "fecha": "2026-11-04",
-   "cielo": [
-    "muy nuboso",
-    "muy nuboso con lluvia"
-   ],
-   "viento": [
-    "flojo",
-    "flojo"
-   ],
-   "oleaje": [
-    "débil",
-    "débil"
-   ],
-   "agua": 18,
-   "maxima": 21,
-   "uv": 3,
-   "tramos": [
-    {
-     "de": 8,
-     "a": 14,
-     "viento": 0,
-     "racha": null,
-     "dir": "C",
-     "lluvia": null,
-     "tormenta": 0,
-     "niebla": 0,
-     "cielo": null,
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 1,
-     "agua": 18,
-     "notas": {
-      "navegar": {
-       "n": 4,
-       "m": "sin_viento"
-      },
-      "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
-      },
-      "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 6,
-     "racha": 19,
-     "dir": "SO",
-     "lluvia": null,
-     "tormenta": null,
-     "niebla": 0,
-     "cielo": "lluvia_escasa",
-     "fondo": false,
-     "fuerza": null,
-     "aviso": false,
-     "mar": 1,
-     "agua": 18,
-     "notas": {
-      "navegar": {
-       "n": 6,
-       "m": "poco_viento"
-      },
-      "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
-      },
-      "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
-      }
-     }
-    }
-   ]
-  },
   {
    "fecha": "2026-11-05",
    "cielo": [
@@ -107,39 +27,39 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 8,
-     "racha": 30,
-     "dir": "S",
+     "viento": 9,
+     "racha": 20,
+     "dir": "NO",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "intervalos",
+     "cielo": "despejado",
      "fondo": false,
-     "fuerza": 4,
+     "fuerza": null,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 4,
+       "n": 8,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 5,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     },
     {
      "de": 14,
      "a": 20,
-     "viento": 17,
-     "racha": 39,
-     "dir": "SO",
+     "viento": 10,
+     "racha": 25,
+     "dir": "S",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -147,20 +67,20 @@
      "fondo": false,
      "fuerza": 4,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 19,
      "notas": {
       "navegar": {
        "n": 8,
-       "m": "marejada"
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 4,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     }
@@ -170,7 +90,7 @@
    "fecha": "2026-11-06",
    "cielo": [
     "despejado",
-    "muy nuboso"
+    "nuboso"
    ],
    "viento": [
     "flojo",
@@ -180,25 +100,25 @@
     "débil",
     "débil"
    ],
-   "agua": 22,
+   "agua": 21,
    "maxima": 22,
    "uv": 3,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 6,
-     "racha": 16,
-     "dir": "N",
+     "viento": 7,
+     "racha": 18,
+     "dir": "SE",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "poco_nuboso",
+     "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 4,
      "aviso": false,
      "mar": 1,
-     "agua": 22,
+     "agua": 21,
      "notas": {
       "navegar": {
        "n": 6,
@@ -217,10 +137,90 @@
     {
      "de": 14,
      "a": 20,
+     "viento": 6,
+     "racha": 18,
+     "dir": "SE",
+     "lluvia": null,
+     "tormenta": null,
+     "niebla": 0,
+     "cielo": "nubes_altas",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 21,
+     "notas": {
+      "navegar": {
+       "n": 6,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "fecha": "2026-11-07",
+   "cielo": [
+    "nuboso",
+    "muy nuboso"
+   ],
+   "viento": [
+    "flojo",
+    "flojo"
+   ],
+   "oleaje": [
+    "débil",
+    "débil"
+   ],
+   "agua": 22,
+   "maxima": 22,
+   "uv": 3,
+   "tramos": [
+    {
+     "de": 8,
+     "a": 14,
      "viento": 10,
      "racha": null,
-     "dir": "S",
+     "dir": "N",
      "lluvia": 0,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": "poco_nuboso",
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 22,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 10,
+     "racha": null,
+     "dir": "SE",
+     "lluvia": 5,
      "tormenta": 0,
      "niebla": 0,
      "cielo": "nubes_altas",
@@ -249,17 +249,17 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "Variable 2 a 4 tendiendo a componente W de madrugada. Marejadilla con áreas de marejada. Algún aguacero.",
-  "elaborado": "2026-11-04T20:00:00",
-  "inicio": "2026-11-04T20:00:00",
-  "fin": "2026-11-05T20:00:00",
+  "texto": "W o SW 2 a 4, amainando a W 1 a 3 desde medianoche, tendiendo a Variable al final. Marejadilla disminuyendo a rizada.",
+  "elaborado": "2026-11-05T12:00:00",
+  "inicio": "2026-11-05T12:00:00",
+  "fin": "2026-11-06T12:00:00",
   "fuerza": [
-   2,
+   1,
    4
   ],
   "mar": [
-   1,
-   2
+   0,
+   1
   ],
   "fondo": false,
   "fondo_m": null,
