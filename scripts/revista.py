@@ -708,7 +708,7 @@ def cmd_abrir():
               f"({titulo_fecha(e['numero'], 'es')}).\n\n"
               f"**{asunto_es}**\n\n"
               f"- Vista previa en español: {v['es']}\n- Vista previa en inglés: {v['en']}\n\n"
-              "(Los enlaces tardan uno o dos minutos en funcionar.)\n\n"
+              "(Los enlaces tardan unos 10 minutos en funcionar: si da error 404, espera un poco y vuelve a abrirlo.)\n\n"
               "**Responde a este correo** (o comenta aquí):\n"
               f"- **OK** → se publica en la web y se programa el envío a los suscritos de cada idioma para el "
               f"{fecha_larga(salida_de(e['numero']), 'es')} a las {HORA_ENVIO[0]}:{HORA_ENVIO[1]:02d} "
