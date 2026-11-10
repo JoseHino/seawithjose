@@ -1,13 +1,18 @@
 name: Parte del mar · borrador
 
-# Cada martes por la mañana prepara el número de la semana (el tiempo en Marbella) y abre una incidencia para que
+# Cada martes de madrugada prepara el número de la semana (el tiempo en Marbella) y abre una incidencia para que
 # Jose lo apruebe por correo; al aprobarlo se programa en Brevo para el martes a las 14:00 (DIA_ENVIO y HORA_ENVIO
-# en scripts/revista.py). Para pasarlo al domingo a las 17:00: aquí "0 9 * * 0", y en revista.py DIA_ENVIO = 6 y
+# en scripts/revista.py). Para pasarlo al domingo a las 17:00: aquí los tres cron con día 0 (p. ej. "17 1 * * 0"), y en revista.py DIA_ENVIO = 6 y
 # HORA_ENVIO = (17, 0).
 # A mano (Run workflow) se puede pedir un número concreto (la fecha de envío, AAAA-MM-DD) y dejar notas para la IA.
 on:
   schedule:
-    - cron: "0 7 * * 2"           # martes 07:00 UTC (8:00 o 9:00 en Madrid)
+    # GitHub retrasa mucho las tareas programadas (en noviembre de 2026 llegaban con 8 h de retraso, después de la hora
+    # de envío), así que se lanza tres veces de madrugada en minutos poco concurridos; la primera que entra hace el
+    # borrador y las demás ven que ya existe y no hacen nada.
+    - cron: "17 1 * * 2"          # martes 01:17 UTC
+    - cron: "43 3 * * 2"          # martes 03:43 UTC
+    - cron: "29 5 * * 2"          # martes 05:29 UTC
   repository_dispatch:            # lo lanza el correo a la dirección de la Bitácora (Apps Script de Gmail)
     types: [revista]
   workflow_dispatch:
@@ -33,18 +38,28 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: ¿Ya está el borrador de esta semana?
+        id: hecho
+        if: github.event_name == 'schedule'
+        run: |
+          f="revista/borradores/$(date -u +%Y-%m-%d).json"
+          if [ -f "$f" ]; then echo "Ya existe $f: no se repite."; echo "si=1" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-python@v5
+        if: steps.hecho.outputs.si != '1'
         with:
           python-version: "3.12"
       - name: Librerías de gráficas y de sol y luna
+        if: steps.hecho.outputs.si != '1'
         run: pip install --quiet matplotlib ephem
       - name: Redactar el borrador
+        if: steps.hecho.outputs.si != '1'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           REVISTA_MODELO: ${{ vars.REVISTA_MODELO }}
           REVISTA_NOTAS: ${{ inputs.notas || github.event.client_payload.notas }}
         run: python scripts/revista.py borrador "${{ inputs.numero || github.event.client_payload.numero }}"
       - name: Subir
+        if: steps.hecho.outputs.si != '1'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,6 +70,7 @@ jobs:
           for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; git rebase --abort 2>/dev/null; sleep 5; done
           exit 1
       - name: Abrir la incidencia para aprobarlo
+        if: steps.hecho.outputs.si != '1'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVISTA_EDITOR: ${{ vars.REVISTA_EDITOR }}
