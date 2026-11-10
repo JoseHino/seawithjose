@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-10T13:30:30Z",
+ "generado": "2026-11-10T20:51:14Z",
  "elaborado": {
   "playa": "2026-11-10T08:51:19",
-  "horas": "2026-11-10T13:15:09"
+  "horas": "2026-11-10T19:05:10"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,9 +27,39 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": 36,
-     "dir": "N",
+     "viento": 15,
+     "racha": null,
+     "dir": "SO",
+     "lluvia": null,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": null,
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 20,
+     "notas": {
+      "navegar": {
+       "n": 10,
+       "m": "buen_viento"
+      },
+      "bucear": {
+       "n": 8,
+       "m": "viento"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 12,
+     "racha": 24,
+     "dir": "S",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -51,36 +81,6 @@
       "pescar": {
        "n": 10,
        "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 15,
-     "racha": 34,
-     "dir": "SO",
-     "lluvia": null,
-     "tormenta": null,
-     "niebla": 0,
-     "cielo": "lluvia_escasa",
-     "fondo": false,
-     "fuerza": 6,
-     "aviso": false,
-     "mar": 3,
-     "agua": 20,
-     "notas": {
-      "navegar": {
-       "n": 2,
-       "m": "mar_fuerte"
-      },
-      "bucear": {
-       "n": 1,
-       "m": "mar_fuerte"
-      },
-      "pescar": {
-       "n": 1,
-       "m": "mar_fuerte"
       }
      }
     }
@@ -107,9 +107,9 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": 28,
-     "dir": "NE",
+     "viento": 9,
+     "racha": 33,
+     "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
@@ -137,30 +137,30 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 20,
-     "racha": 36,
+     "viento": 19,
+     "racha": 37,
      "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "lluvia",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 6,
      "aviso": false,
-     "mar": 2,
+     "mar": 3,
      "agua": 21,
      "notas": {
       "navegar": {
-       "n": 8,
-       "m": "marejada"
+       "n": 2,
+       "m": "mar_fuerte"
       },
       "bucear": {
-       "n": 4,
-       "m": "marejada"
+       "n": 1,
+       "m": "mar_fuerte"
       },
       "pescar": {
-       "n": 5,
-       "m": "marejada"
+       "n": 1,
+       "m": "mar_fuerte"
       }
      }
     }
@@ -187,13 +187,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 20,
-     "racha": 50,
+     "viento": 23,
+     "racha": 51,
      "dir": "O",
-     "lluvia": 100,
-     "tormenta": 0,
+     "lluvia": null,
+     "tormenta": null,
      "niebla": 0,
-     "cielo": "lluvia",
+     "cielo": "lluvia_escasa",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -201,7 +201,7 @@
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 3,
+       "n": 5,
        "m": "rachas"
       },
       "bucear": {
@@ -217,8 +217,8 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 20,
-     "racha": null,
+     "viento": 35,
+     "racha": 50,
      "dir": "O",
      "lluvia": 100,
      "tormenta": 0,
@@ -231,16 +231,16 @@
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "marejada"
+       "n": 1,
+       "m": "viento_fuerte"
       },
       "bucear": {
-       "n": 3,
-       "m": "marejada"
+       "n": 1,
+       "m": "viento_fuerte"
       },
       "pescar": {
-       "n": 3,
-       "m": "marejada"
+       "n": 1,
+       "m": "viento_fuerte"
       }
      }
     }
@@ -249,10 +249,10 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "SE 2 a 3, arreciando a SE y E 4 a 5, temporalmente 6 al final. Marejadilla aumentando a marejada por la tarde, y a fuerte marejada al final en el oeste. Aguaceros o tormentas al final. Temporalmente regular a mala.",
-  "elaborado": "2026-11-10T12:00:00",
-  "inicio": "2026-11-10T12:00:00",
-  "fin": "2026-11-11T12:00:00",
+  "texto": "Variable 2 a 4 arreciando a E 4 a 6 por la tarde. Marejadilla aumentando a marejada o fuerte marejada. Aguaceros desde la mañana.",
+  "elaborado": "2026-11-10T20:00:00",
+  "inicio": "2026-11-10T20:00:00",
+  "fin": "2026-11-11T20:00:00",
   "fuerza": [
    2,
    6
