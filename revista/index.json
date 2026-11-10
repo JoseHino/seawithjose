@@ -30,5 +30,21 @@
    "es": "2026-11-03-es.html",
    "en": "2026-11-03-en.html"
   }
+ },
+ {
+  "numero": "2026-11-10",
+  "fecha": {
+   "es": "Semana del 10 de noviembre de 2026",
+   "en": "Week of 10 November 2026",
+   "ru": "Week of 10 November 2026"
+  },
+  "titulos": {
+   "es": "46,4 mm de lluvia y una semana para esperar",
+   "en": "46.4 mm of rain and a week to wait"
+  },
+  "archivos": {
+   "es": "2026-11-10-es.html",
+   "en": "2026-11-10-en.html"
+  }
  }
 ]
