@@ -46,5 +46,21 @@
    "es": "2026-11-10-es.html",
    "en": "2026-11-10-en.html"
   }
+ },
+ {
+  "numero": "2026-11-17",
+  "fecha": {
+   "es": "Semana del 17 de noviembre de 2026",
+   "en": "Week of 17 November 2026",
+   "ru": "Week of 17 November 2026"
+  },
+  "titulos": {
+   "es": "El poniente bajó el agua 0,9 °C",
+   "en": "Westerlies cooled the water by 0.9 °C"
+  },
+  "archivos": {
+   "es": "2026-11-17-es.html",
+   "en": "2026-11-17-en.html"
+  }
  }
 ]
