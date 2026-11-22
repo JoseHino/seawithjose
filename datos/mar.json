@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-22T13:24:06Z",
+ "generado": "2026-11-22T20:44:26Z",
  "elaborado": {
   "playa": "2026-11-22T08:51:18",
-  "horas": "2026-11-22T13:01:09"
+  "horas": "2026-11-22T19:05:10"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -27,13 +27,43 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 8,
-     "racha": 21,
-     "dir": "NO",
+     "viento": 10,
+     "racha": null,
+     "dir": "SO",
+     "lluvia": null,
+     "tormenta": 0,
+     "niebla": 0,
+     "cielo": null,
+     "fondo": false,
+     "fuerza": null,
+     "aviso": false,
+     "mar": 1,
+     "agua": 19,
+     "notas": {
+      "navegar": {
+       "n": 8,
+       "m": "poco_viento"
+      },
+      "bucear": {
+       "n": 9,
+       "m": "mar_tranquila"
+      },
+      "pescar": {
+       "n": 10,
+       "m": "mar_tranquila"
+      }
+     }
+    },
+    {
+     "de": 14,
+     "a": 20,
+     "viento": 6,
+     "racha": 19,
+     "dir": "S",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "nubes_altas",
+     "cielo": "despejado",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -51,36 +81,6 @@
       "pescar": {
        "n": 10,
        "m": "mar_tranquila"
-      }
-     }
-    },
-    {
-     "de": 14,
-     "a": 20,
-     "viento": 7,
-     "racha": 21,
-     "dir": "S",
-     "lluvia": null,
-     "tormenta": null,
-     "niebla": 0,
-     "cielo": "despejado",
-     "fondo": false,
-     "fuerza": 6,
-     "aviso": false,
-     "mar": 2,
-     "agua": 19,
-     "notas": {
-      "navegar": {
-       "n": 2,
-       "m": "poco_viento"
-      },
-      "bucear": {
-       "n": 3,
-       "m": "marejada"
-      },
-      "pescar": {
-       "n": 3,
-       "m": "marejada"
       }
      }
     }
@@ -108,28 +108,28 @@
      "de": 8,
      "a": 14,
      "viento": 22,
-     "racha": 34,
-     "dir": "E",
+     "racha": 37,
+     "dir": "NE",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "cubierto",
+     "cielo": "poco_nuboso",
      "fondo": false,
-     "fuerza": 6,
+     "fuerza": 5,
      "aviso": false,
      "mar": 2,
      "agua": 20,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "viento_fuerte"
+       "n": 8,
+       "m": "marejada"
       },
       "bucear": {
-       "n": 1,
+       "n": 3,
        "m": "marejada"
       },
       "pescar": {
-       "n": 3,
+       "n": 5,
        "m": "marejada"
       }
      }
@@ -137,7 +137,7 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 18,
+     "viento": 19,
      "racha": 34,
      "dir": "E",
      "lluvia": null,
@@ -145,7 +145,7 @@
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 5,
      "aviso": false,
      "mar": 2,
      "agua": 20,
@@ -187,13 +187,13 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 10,
-     "racha": null,
-     "dir": "SO",
-     "lluvia": 0,
-     "tormenta": 0,
+     "viento": 9,
+     "racha": 16,
+     "dir": "NE",
+     "lluvia": null,
+     "tormenta": null,
      "niebla": 0,
-     "cielo": "nuboso",
+     "cielo": "cubierto",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -219,11 +219,11 @@
      "a": 20,
      "viento": 10,
      "racha": null,
-     "dir": "SO",
+     "dir": "O",
      "lluvia": 45,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "nuboso",
+     "cielo": "cubierto",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -249,13 +249,13 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "NW o W 3 a 5 localmente 6 rolando a NE o E por la noche. Marejadilla o marejada.",
-  "elaborado": "2026-11-22T12:00:00",
-  "inicio": "2026-11-22T12:00:00",
-  "fin": "2026-11-23T12:00:00",
+  "texto": "Variable 2 a 3 localmente NW 4 a 5 hasta medianoche, teniendo a E y NE 3 a 5 de madrugada. Marejadilla o marejada.",
+  "elaborado": "2026-11-22T20:00:00",
+  "inicio": "2026-11-22T20:00:00",
+  "fin": "2026-11-23T20:00:00",
   "fuerza": [
-   3,
-   6
+   2,
+   5
   ],
   "mar": [
    1,
