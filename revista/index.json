@@ -62,5 +62,21 @@
    "es": "2026-11-17-es.html",
    "en": "2026-11-17-en.html"
   }
+ },
+ {
+  "numero": "2026-11-24",
+  "fecha": {
+   "es": "Semana del 24 de noviembre de 2026",
+   "en": "Week of 24 November 2026",
+   "ru": "Week of 24 November 2026"
+  },
+  "titulos": {
+   "es": "El poniente bajó el agua 0,4 °C en dos días",
+   "en": "Westerlies cooled the water by 0.4 °C in two days"
+  },
+  "archivos": {
+   "es": "2026-11-24-es.html",
+   "en": "2026-11-24-en.html"
+  }
  }
 ]
