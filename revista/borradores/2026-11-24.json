@@ -1,0 +1,960 @@
+{
+ "numero": "2026-11-24",
+ "version": 1,
+ "estado": "pendiente",
+ "mar": {
+  "desde": "2026-11-17",
+  "hasta": "2026-11-23",
+  "agua": 17.9,
+  "agua_min": 17.5,
+  "agua_max": 18.9,
+  "ola_max": 0.8,
+  "agua_dif": -0.2,
+  "racha_max": 39,
+  "agua_hoy": 20,
+  "luna": [
+   [
+    "2026-11-25",
+    "llena"
+   ],
+   [
+    "2026-12-02",
+    "menguante"
+   ]
+  ],
+  "tiempo": {
+   "desde": "2026-11-17",
+   "hasta": "2026-11-23",
+   "dias_con_datos": 7,
+   "tmax": 25.1,
+   "tmax_dia": "2026-11-19",
+   "tmin": 13.4,
+   "tmin_dia": "2026-11-17",
+   "lluvia_total": 0.6,
+   "dias_lluvia": 0,
+   "racha_max": 57,
+   "racha_dia": "2026-11-17",
+   "racha_dir": "O",
+   "viento_medio": 14,
+   "dir_dominante": "O",
+   "dias_levante": 1,
+   "dias_poniente": 5
+  },
+  "prevision": [
+   {
+    "fecha": "2026-11-24",
+    "cielo": "Muy nuboso",
+    "tmax": 22,
+    "tmin": 14,
+    "lluvia": 25,
+    "viento": 10,
+    "viento_dir": "NE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-25",
+    "cielo": "Poco nuboso",
+    "tmax": 21,
+    "tmin": 11,
+    "lluvia": 0,
+    "viento": 15,
+    "viento_dir": "NO",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-26",
+    "cielo": "Poco nuboso",
+    "tmax": 20,
+    "tmin": 10,
+    "lluvia": 5,
+    "viento": 0,
+    "viento_dir": "calma",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-27",
+    "cielo": "Intervalos nubosos",
+    "tmax": 19,
+    "tmin": 10,
+    "lluvia": 15,
+    "viento": 5,
+    "viento_dir": "S",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-28",
+    "cielo": "Nubes altas",
+    "tmax": 19,
+    "tmin": 11,
+    "lluvia": 5,
+    "viento": 5,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-29",
+    "cielo": "Intervalos nubosos",
+    "tmax": 19,
+    "tmin": 11,
+    "lluvia": 15,
+    "viento": 5,
+    "viento_dir": "SE",
+    "racha": null
+   },
+   {
+    "fecha": "2026-11-30",
+    "cielo": "Intervalos nubosos",
+    "tmax": 20,
+    "tmin": 11,
+    "lluvia": 40,
+    "viento": 15,
+    "viento_dir": "E",
+    "racha": null
+   }
+  ],
+  "analisis": {
+   "pares_historicos": 1324,
+   "desde_historico": "2022-11-23",
+   "por_sector": {
+    "NE": {
+     "media": 0.15,
+     "n": 30
+    },
+    "E": {
+     "media": 0.1,
+     "n": 134
+    },
+    "SE": {
+     "media": 0.14,
+     "n": 21
+    },
+    "S": {
+     "media": -0.0,
+     "n": 7
+    },
+    "SO": {
+     "media": -0.2,
+     "n": 173
+    },
+    "O": {
+     "media": -0.17,
+     "n": 31
+    }
+   },
+   "tramos": {
+    "poniente": {
+     "flojo (<10 km/h)": {
+      "media": -0.03,
+      "n": 195
+     },
+     "moderado (10-20 km/h)": {
+      "media": -0.13,
+      "n": 215
+     },
+     "fuerte (>20 km/h)": {
+      "media": -0.2,
+      "n": 123
+     }
+    },
+    "levante": {
+     "flojo (<10 km/h)": {
+      "media": 0.06,
+      "n": 224
+     },
+     "moderado (10-20 km/h)": {
+      "media": 0.12,
+      "n": 231
+     },
+     "fuerte (>20 km/h)": {
+      "media": 0.16,
+      "n": 86
+     }
+    }
+   },
+   "quincena": [
+    {
+     "fecha": "2026-11-17",
+     "agua": 18.2,
+     "viento": 19,
+     "dir": "O"
+    },
+    {
+     "fecha": "2026-11-18",
+     "agua": 17.9,
+     "viento": 25,
+     "dir": "SO"
+    },
+    {
+     "fecha": "2026-11-19",
+     "agua": 17.8,
+     "viento": 14,
+     "dir": "O"
+    },
+    {
+     "fecha": "2026-11-20",
+     "agua": 17.7,
+     "viento": 6,
+     "dir": "N"
+    },
+    {
+     "fecha": "2026-11-21",
+     "agua": 17.7,
+     "viento": 7,
+     "dir": "NO"
+    },
+    {
+     "fecha": "2026-11-22",
+     "agua": 17.7,
+     "viento": 7,
+     "dir": "O"
+    },
+    {
+     "fecha": "2026-11-23",
+     "agua": 18.3,
+     "viento": 15,
+     "dir": "NE"
+    }
+   ],
+   "mayor_bajada_2_dias": {
+    "desde": "2026-11-17",
+    "hasta": "2026-11-19",
+    "cambio": -0.4,
+    "vientos": [
+     [
+      "O",
+      19
+     ],
+     [
+      "SO",
+      25
+     ]
+    ]
+   },
+   "mayor_subida_2_dias": {
+    "desde": "2026-11-21",
+    "hasta": "2026-11-23",
+    "cambio": 0.6,
+    "vientos": [
+     [
+      "NO",
+      7
+     ],
+     [
+      "O",
+      7
+     ]
+    ]
+   },
+   "agua_inicio": 18.2,
+   "agua_fin": 18.3,
+   "cambio_quincena": 0.1,
+   "cambio_normal": -0.1,
+   "anios_normal": 3
+  },
+  "hechos": "Histórico: 1324 días desde 2022-11-23 con viento de AEMET (Marbella Puerto) y temperatura del agua de Copernicus Marine.\nCambio medio del agua al día siguiente con viento medio ≥ 15 km/h, por dirección: NE +0.15 °C (30 días); E +0.1 °C (134 días); SE +0.14 °C (21 días); S -0.0 °C (7 días); SO -0.2 °C (173 días); O -0.17 °C (31 días)\nCon poniente: flojo (<10 km/h) -0.03 °C (195 días); moderado (10-20 km/h) -0.13 °C (215 días); fuerte (>20 km/h) -0.2 °C (123 días)\nCon levante: flojo (<10 km/h) +0.06 °C (224 días); moderado (10-20 km/h) +0.12 °C (231 días); fuerte (>20 km/h) +0.16 °C (86 días)\nLos días del periodo, uno a uno (fecha: agua °C · viento medio km/h · dirección): 11-17: 18.2 · 19 · O; 11-18: 17.9 · 25 · SO; 11-19: 17.8 · 14 · O; 11-20: 17.7 · 6 · N; 11-21: 17.7 · 7 · NO; 11-22: 17.7 · 7 · O; 11-23: 18.3 · 15 · NE\nEl agua pasó de 18.2 a 18.3 °C en el periodo (+0.1 °C); en las mismas fechas de los 3 años anteriores cambió de media -0.1 °C (lo normal por la época)\nMayor bajada en 2 días: -0.4 °C del 2026-11-17 al 2026-11-19, con viento O 19 km/h, SO 25 km/h\nMayor subida en 2 días: +0.6 °C del 2026-11-21 al 2026-11-23, con viento NO 7 km/h, O 7 km/h\nTiempo del periodo (AEMET Marbella Puerto): {\"desde\": \"2026-11-17\", \"hasta\": \"2026-11-23\", \"dias_con_datos\": 7, \"tmax\": 25.1, \"tmax_dia\": \"2026-11-19\", \"tmin\": 13.4, \"tmin_dia\": \"2026-11-17\", \"lluvia_total\": 0.6, \"dias_lluvia\": 0, \"racha_max\": 57, \"racha_dia\": \"2026-11-17\", \"racha_dir\": \"O\", \"viento_medio\": 14, \"dir_dominante\": \"O\", \"dias_levante\": 1, \"dias_poniente\": 5}\nPrevisión AEMET Marbella próximos días: [{\"fecha\": \"2026-11-24\", \"cielo\": \"Muy nuboso\", \"tmax\": 22, \"tmin\": 14, \"lluvia\": 25, \"viento\": 10, \"viento_dir\": \"NE\", \"racha\": null}, {\"fecha\": \"2026-11-25\", \"cielo\": \"Poco nuboso\", \"tmax\": 21, \"tmin\": 11, \"lluvia\": 0, \"viento\": 15, \"viento_dir\": \"NO\", \"racha\": null}, {\"fecha\": \"2026-11-26\", \"cielo\": \"Poco nuboso\", \"tmax\": 20, \"tmin\": 10, \"lluvia\": 5, \"viento\": 0, \"viento_dir\": \"calma\", \"racha\": null}, {\"fecha\": \"2026-11-27\", \"cielo\": \"Intervalos nubosos\", \"tmax\": 19, \"tmin\": 10, \"lluvia\": 15, \"viento\": 5, \"viento_dir\": \"S\", \"racha\": null}, {\"fecha\": \"2026-11-28\", \"cielo\": \"Nubes altas\", \"tmax\": 19, \"tmin\": 11, \"lluvia\": 5, \"viento\": 5, \"viento_dir\": \"SE\", \"racha\": null}, {\"fecha\": \"2026-11-29\", \"cielo\": \"Intervalos nubosos\", \"tmax\": 19, \"tmin\": 11, \"lluvia\": 15, \"viento\": 5, \"viento_dir\": \"SE\", \"racha\": null}, {\"fecha\": \"2026-11-30\", \"cielo\": \"Intervalos nubosos\", \"tmax\": 20, \"tmin\": 11, \"lluvia\": 40, \"viento\": 15, \"viento_dir\": \"E\", \"racha\": null}]",
+  "plan": [
+   {
+    "fecha": "2026-11-24",
+    "viento": 6,
+    "viento_max": 11,
+    "racha": 20,
+    "dir": "S",
+    "ola": 0.5,
+    "lluvia": 25,
+    "mm": 0.0,
+    "temp_max": 19,
+    "agua": 19.5,
+    "notas": {
+     "vela": 1,
+     "fondo": 2,
+     "currican": 2
+    },
+    "motivos": {
+     "vela": [
+      "poco viento"
+     ],
+     "fondo": [],
+     "currican": []
+    },
+    "actividad_peces": 4,
+    "horas_pesca": [
+     {
+      "tipo": "mayor",
+      "desde": "11:54",
+      "hasta": "13:54",
+      "centro": "12:54",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "17:14",
+      "hasta": "18:14",
+      "centro": "17:44",
+      "alba_ocaso": true
+     }
+    ],
+    "amanecer": "08:06",
+    "ocaso": "18:06",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "23:23",
+      "hasta": "01:23",
+      "centro": "00:23",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "07:29",
+      "hasta": "08:29",
+      "centro": "07:59",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "mayor",
+      "desde": "11:54",
+      "hasta": "13:54",
+      "centro": "12:54",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "17:14",
+      "hasta": "18:14",
+      "centro": "17:44",
+      "alba_ocaso": true
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-24T01:56",
+      "altura": -0.23
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-24T07:30",
+      "altura": -0.8
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-24T14:06",
+      "altura": -0.09
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-24T20:10",
+      "altura": -0.86
+     }
+    ],
+    "carrera_cm": 77
+   },
+   {
+    "fecha": "2026-11-25",
+    "viento": 9,
+    "viento_max": 12,
+    "racha": 25,
+    "dir": "O",
+    "ola": 0.5,
+    "lluvia": 0,
+    "mm": 0.0,
+    "temp_max": 19,
+    "agua": 18.9,
+    "notas": {
+     "vela": 2,
+     "fondo": 2,
+     "currican": 2
+    },
+    "motivos": {
+     "vela": [],
+     "fondo": [],
+     "currican": []
+    },
+    "actividad_peces": 4,
+    "horas_pesca": [
+     {
+      "tipo": "mayor",
+      "desde": "12:59",
+      "hasta": "14:59",
+      "centro": "13:59",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "08:45",
+      "hasta": "09:45",
+      "centro": "09:15",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "08:07",
+    "ocaso": "18:06",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "00:26",
+      "hasta": "02:26",
+      "centro": "01:26",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "08:45",
+      "hasta": "09:45",
+      "centro": "09:15",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "12:59",
+      "hasta": "14:59",
+      "centro": "13:59",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "18:13",
+      "hasta": "19:13",
+      "centro": "18:43",
+      "alba_ocaso": true
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-25T02:36",
+      "altura": -0.16
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-25T08:15",
+      "altura": -0.81
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-25T14:48",
+      "altura": -0.12
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-25T20:47",
+      "altura": -0.9
+     }
+    ],
+    "carrera_cm": 78
+   },
+   {
+    "fecha": "2026-11-26",
+    "viento": 4,
+    "viento_max": 8,
+    "racha": 14,
+    "dir": "NO",
+    "ola": 0.2,
+    "lluvia": 5,
+    "mm": 0.0,
+    "temp_max": 18,
+    "agua": 18.0,
+    "notas": {
+     "vela": 1,
+     "fondo": 3,
+     "currican": 3
+    },
+    "motivos": {
+     "vela": [
+      "poco viento"
+     ],
+     "fondo": [],
+     "currican": []
+    },
+    "actividad_peces": 3,
+    "horas_pesca": [
+     {
+      "tipo": "mayor",
+      "desde": "14:06",
+      "hasta": "16:06",
+      "centro": "15:06",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "09:53",
+      "hasta": "10:53",
+      "centro": "10:23",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "08:08",
+    "ocaso": "18:05",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "01:33",
+      "hasta": "03:33",
+      "centro": "02:33",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "09:53",
+      "hasta": "10:53",
+      "centro": "10:23",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "14:06",
+      "hasta": "16:06",
+      "centro": "15:06",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "19:21",
+      "hasta": "20:21",
+      "centro": "19:51",
+      "alba_ocaso": false
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-26T03:24",
+      "altura": -0.17
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-26T09:00",
+      "altura": -0.79
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-26T15:35",
+      "altura": -0.08
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-26T21:40",
+      "altura": -0.85
+     }
+    ],
+    "carrera_cm": 77
+   },
+   {
+    "fecha": "2026-11-27",
+    "viento": 4,
+    "viento_max": 8,
+    "racha": 14,
+    "dir": "S",
+    "ola": 0.1,
+    "lluvia": 15,
+    "mm": 0.0,
+    "temp_max": 17,
+    "agua": 17.6,
+    "notas": {
+     "vela": 1,
+     "fondo": 3,
+     "currican": 3
+    },
+    "motivos": {
+     "vela": [
+      "poco viento"
+     ],
+     "fondo": [],
+     "currican": []
+    },
+    "actividad_peces": 3,
+    "horas_pesca": [
+     {
+      "tipo": "mayor",
+      "desde": "15:11",
+      "hasta": "17:11",
+      "centro": "16:11",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "10:52",
+      "hasta": "11:52",
+      "centro": "11:22",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "08:09",
+    "ocaso": "18:05",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "02:39",
+      "hasta": "04:39",
+      "centro": "03:39",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "10:52",
+      "hasta": "11:52",
+      "centro": "11:22",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "15:11",
+      "hasta": "17:11",
+      "centro": "16:11",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "20:36",
+      "hasta": "21:36",
+      "centro": "21:06",
+      "alba_ocaso": false
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-27T04:08",
+      "altura": -0.16
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-27T09:55",
+      "altura": -0.76
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-27T16:13",
+      "altura": -0.13
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-27T22:30",
+      "altura": -0.85
+     }
+    ],
+    "carrera_cm": 72
+   },
+   {
+    "fecha": "2026-11-28",
+    "viento": 4,
+    "viento_max": 7,
+    "racha": 15,
+    "dir": "S",
+    "ola": 0.2,
+    "lluvia": 5,
+    "mm": 0.0,
+    "temp_max": 18,
+    "agua": 17.5,
+    "notas": {
+     "vela": 1,
+     "fondo": 3,
+     "currican": 3
+    },
+    "motivos": {
+     "vela": [
+      "poco viento"
+     ],
+     "fondo": [],
+     "currican": []
+    },
+    "actividad_peces": 3,
+    "horas_pesca": [
+     {
+      "tipo": "mayor",
+      "desde": "16:12",
+      "hasta": "18:12",
+      "centro": "17:12",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "menor",
+      "desde": "11:39",
+      "hasta": "12:39",
+      "centro": "12:09",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "08:10",
+    "ocaso": "18:05",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "03:42",
+      "hasta": "05:42",
+      "centro": "04:42",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "11:39",
+      "hasta": "12:39",
+      "centro": "12:09",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "16:12",
+      "hasta": "18:12",
+      "centro": "17:12",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "menor",
+      "desde": "21:51",
+      "hasta": "22:51",
+      "centro": "22:21",
+      "alba_ocaso": false
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-28T05:00",
+      "altura": -0.21
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-28T10:45",
+      "altura": -0.75
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-28T17:07",
+      "altura": -0.22
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-28T23:30",
+      "altura": -0.86
+     }
+    ],
+    "carrera_cm": 65
+   },
+   {
+    "fecha": "2026-11-29",
+    "viento": 10,
+    "viento_max": 12,
+    "racha": 24,
+    "dir": "NE",
+    "ola": 0.3,
+    "lluvia": 15,
+    "mm": 0.0,
+    "temp_max": 18,
+    "agua": 17.5,
+    "notas": {
+     "vela": 2,
+     "fondo": 3,
+     "currican": 3
+    },
+    "motivos": {
+     "vela": [],
+     "fondo": [],
+     "currican": []
+    },
+    "actividad_peces": 3,
+    "horas_pesca": [
+     {
+      "tipo": "menor",
+      "desde": "12:17",
+      "hasta": "13:17",
+      "centro": "12:47",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "08:10",
+    "ocaso": "18:04",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "04:40",
+      "hasta": "06:40",
+      "centro": "05:40",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "12:17",
+      "hasta": "13:17",
+      "centro": "12:47",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "17:06",
+      "hasta": "19:06",
+      "centro": "18:06",
+      "alba_ocaso": true
+     },
+     {
+      "tipo": "menor",
+      "desde": "23:04",
+      "hasta": "00:04",
+      "centro": "23:34",
+      "alba_ocaso": false
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-29T06:00",
+      "altura": -0.29
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-29T11:45",
+      "altura": -0.75
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-29T18:12",
+      "altura": -0.28
+     }
+    ],
+    "carrera_cm": 47
+   },
+   {
+    "fecha": "2026-11-30",
+    "viento": 10,
+    "viento_max": 12,
+    "racha": 24,
+    "dir": "E",
+    "ola": 0.9,
+    "lluvia": 40,
+    "mm": 0.0,
+    "temp_max": 18,
+    "agua": 17.6,
+    "notas": {
+     "vela": 1,
+     "fondo": 1,
+     "currican": 1
+    },
+    "motivos": {
+     "vela": [
+      "probable lluvia"
+     ],
+     "fondo": [
+      "mar movida",
+      "probable lluvia"
+     ],
+     "currican": [
+      "mar movida",
+      "probable lluvia"
+     ]
+    },
+    "actividad_peces": 2,
+    "horas_pesca": [
+     {
+      "tipo": "menor",
+      "desde": "12:49",
+      "hasta": "13:49",
+      "centro": "13:19",
+      "alba_ocaso": false
+     }
+    ],
+    "amanecer": "08:11",
+    "ocaso": "18:04",
+    "periodos": [
+     {
+      "tipo": "mayor",
+      "desde": "05:32",
+      "hasta": "07:32",
+      "centro": "06:32",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "menor",
+      "desde": "12:49",
+      "hasta": "13:49",
+      "centro": "13:19",
+      "alba_ocaso": false
+     },
+     {
+      "tipo": "mayor",
+      "desde": "17:56",
+      "hasta": "19:56",
+      "centro": "18:56",
+      "alba_ocaso": true
+     }
+    ],
+    "mareas": [
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-30T00:30",
+      "altura": -0.81
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-30T07:04",
+      "altura": -0.28
+     },
+     {
+      "tipo": "bajamar",
+      "momento": "2026-11-30T12:45",
+      "altura": -0.66
+     },
+     {
+      "tipo": "pleamar",
+      "momento": "2026-11-30T19:20",
+      "altura": -0.25
+     }
+    ],
+    "carrera_cm": 56
+   }
+  ],
+  "hechos_salir": "Notas por actividad entre las 9:00 y las 20:00 (0 no aconsejable, 1 regular, 2 bueno, 3 muy bueno), con viento medio y máximo, racha, dirección dominante, ola máxima (m), probabilidad máxima de lluvia (%) y lluvia (mm):\n2026-11-24: vela regular (poco viento); pesca a fondo bueno; curricán bueno · viento 6 km/h (máx 11), racha 20 km/h, del S, ola 0.5 m, lluvia 25 % (0.0 mm), 19 °C, agua 19.5 °C · actividad de peces 4/4 · mejores horas de pesca: 11:54-13:54 (mayor), 17:14-18:14 (menor, con el alba o el ocaso) · mareas: pleamar 01:56, bajamar 07:30, pleamar 14:06, bajamar 20:10 (carrera 77 cm)\n2026-11-25: vela bueno; pesca a fondo bueno; curricán bueno · viento 9 km/h (máx 12), racha 25 km/h, del O, ola 0.5 m, lluvia 0 % (0.0 mm), 19 °C, agua 18.9 °C · actividad de peces 4/4 · mejores horas de pesca: 12:59-14:59 (mayor), 08:45-09:45 (menor) · mareas: pleamar 02:36, bajamar 08:15, pleamar 14:48, bajamar 20:47 (carrera 78 cm)\n2026-11-26: vela regular (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 4 km/h (máx 8), racha 14 km/h, del NO, ola 0.2 m, lluvia 5 % (0.0 mm), 18 °C, agua 18.0 °C · actividad de peces 3/4 · mejores horas de pesca: 14:06-16:06 (mayor), 09:53-10:53 (menor) · mareas: pleamar 03:24, bajamar 09:00, pleamar 15:35, bajamar 21:40 (carrera 77 cm)\n2026-11-27: vela regular (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 4 km/h (máx 8), racha 14 km/h, del S, ola 0.1 m, lluvia 15 % (0.0 mm), 17 °C, agua 17.6 °C · actividad de peces 3/4 · mejores horas de pesca: 15:11-17:11 (mayor), 10:52-11:52 (menor) · mareas: pleamar 04:08, bajamar 09:55, pleamar 16:13, bajamar 22:30 (carrera 72 cm)\n2026-11-28: vela regular (poco viento); pesca a fondo muy bueno; curricán muy bueno · viento 4 km/h (máx 7), racha 15 km/h, del S, ola 0.2 m, lluvia 5 % (0.0 mm), 18 °C, agua 17.5 °C · actividad de peces 3/4 · mejores horas de pesca: 16:12-18:12 (mayor, con el alba o el ocaso), 11:39-12:39 (menor) · mareas: pleamar 05:00, bajamar 10:45, pleamar 17:07, bajamar 23:30 (carrera 65 cm)\n2026-11-29: vela bueno; pesca a fondo muy bueno; curricán muy bueno · viento 10 km/h (máx 12), racha 24 km/h, del NE, ola 0.3 m, lluvia 15 % (0.0 mm), 18 °C, agua 17.5 °C · actividad de peces 3/4 · mejores horas de pesca: 12:17-13:17 (menor) · mareas: pleamar 06:00, bajamar 11:45, pleamar 18:12 (carrera 47 cm)\n2026-11-30: vela regular (probable lluvia); pesca a fondo regular (mar movida, probable lluvia); curricán regular (mar movida, probable lluvia) · viento 10 km/h (máx 12), racha 24 km/h, del E, ola 0.9 m, lluvia 40 % (0.0 mm), 18 °C, agua 17.6 °C · actividad de peces 2/4 · mejores horas de pesca: 12:49-13:49 (menor) · mareas: bajamar 00:30, pleamar 07:04, bajamar 12:45, pleamar 19:20 (carrera 56 cm)",
+  "graficas": {
+   "semana": {
+    "es": "https://seawithjose.es/revista/graficas/2026-11-24-semana-es.png",
+    "en": "https://seawithjose.es/revista/graficas/2026-11-24-semana-en.png"
+   },
+   "plan": {
+    "es": "https://seawithjose.es/revista/graficas/2026-11-24-plan-es.png",
+    "en": "https://seawithjose.es/revista/graficas/2026-11-24-plan-en.png"
+   },
+   "pesca": {
+    "es": "https://seawithjose.es/revista/graficas/2026-11-24-pesca-es.png",
+    "en": "https://seawithjose.es/revista/graficas/2026-11-24-pesca-en.png"
+   }
+  },
+  "portada": {
+   "archivo": "03-marbella.jpg",
+   "lugar": "Marbella",
+   "autor": "Harvey Barrison",
+   "licencia": "CC BY-SA 2.0",
+   "licencia_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+   "fuente": "https://commons.wikimedia.org/wiki/File:Marbella_2015_10_19_2049_(24109859614).jpg",
+   "url": "https://seawithjose.es/revista/fotos/03-marbella.jpg"
+  }
+ },
+ "contenido": {
+  "es": {
+   "asunto": "El poniente bajó el agua 0,4 °C en dos días",
+   "entradilla": "Tras el poniente, llega una semana de mar casi plana para pescar.",
+   "editorial": "He visto cómo el poniente enfrió el agua con rapidez. Esta semana ofrece mar muy tranquilo para pescar y días suaves para salir.",
+   "tiempo_comentario": "Predominó el poniente y hubo una racha de 57 km/h el lunes 17. La semana fue seca, con máxima de 25,1 °C el miércoles 19.",
+   "datos_titulo": "Dos días de poniente bajaron el agua 0,4 °C",
+   "datos_texto": "Del lunes 17 al miércoles 19, el agua bajó 0,4 °C con O de 19 km/h y SO de 25 km/h. Con poniente fuerte, suele bajar 0,2 °C al día siguiente, según 123 días. El viento empuja el agua superficial mar adentro y sube agua más fría.",
+   "prevision_comentario": "Del martes 24 al domingo 29 dominarán los vientos flojos y apenas lloverá. El lunes 30 entra levante de 15 km/h, con 40 % de lluvia.",
+   "pesca_comentario": "El martes 24 ofrece actividad 4/4 y mar de 0,5 m; pruebe a fondo de 11:54 a 13:54. El miércoles 26, con ola de 0,2 m, es excelente a fondo o al curricán de 14:06 a 16:06. El viernes 28 también promete curricán al ocaso, de 16:12 a 18:12. El lunes 30 no merece la pena: habrá 0,9 m de ola y 40 % de lluvia.",
+   "salir_comentario": "El domingo 29 es el mejor día para vela, con NE de 10 km/h y ola de 0,3 m. El lunes 30 mejor quedarse en puerto por la ola de 0,9 m y la lluvia probable.",
+   "comentario_mar": "El agua prevista baja hasta 17,5 °C: para bucear, traje completo de invierno. La luna llena cae el martes 25."
+  },
+  "en": {
+   "asunto": "Westerlies cooled the water by 0.4 °C in two days",
+   "entradilla": "After the westerlies, a near-flat week offers fine fishing conditions.",
+   "editorial": "I watched the westerly cool the water quickly. This week brings very calm seas for fishing and mild days afloat.",
+   "tiempo_comentario": "Westerlies dominated, with a 57 km/h gust on Monday 17th. It stayed dry, with a high of 25.1 °C on Wednesday 19th.",
+   "datos_titulo": "Two days of westerlies cooled the water by 0.4 °C",
+   "datos_texto": "From Monday 17th to Wednesday 19th, water cooled by 0.4 °C with 19 km/h W and 25 km/h SW winds. Strong westerlies typically cool it by 0.2 °C next day, across 123 days. They push surface water offshore, allowing colder water to rise.",
+   "prevision_comentario": "From Tuesday 24th to Sunday 29th, winds stay light and rain is unlikely. On Monday 30th, a 15 km/h easterly arrives with a 40% rain chance.",
+   "pesca_comentario": "Tuesday 24th has 4/4 fish activity and 0.5 m seas; try bottom fishing from 11:54 to 13:54. Wednesday 26th, with 0.2 m seas, is excellent for bottom fishing or trolling from 14:06 to 16:06. Friday 28th also suits trolling at sunset, from 16:12 to 18:12. Monday 30th is not worthwhile: 0.9 m seas and a 40% rain chance.",
+   "salir_comentario": "Sunday 29th is best for sailing, with a 10 km/h NE wind and 0.3 m seas. Stay in port on Monday 30th because of 0.9 m seas and likely rain.",
+   "comentario_mar": "Forecast water falls to 17.5 °C, so use a full winter wetsuit for diving. The full moon is on Tuesday 25th."
+  }
+ },
+ "refs": {},
+ "historial": [
+  "v1 · 2026-11-24 10:58 UTC · borrador"
+ ]
+}
