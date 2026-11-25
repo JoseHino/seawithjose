@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-25T01:26:35Z",
+ "generado": "2026-11-25T15:40:29Z",
  "elaborado": {
-  "playa": "2026-11-24T23:51:19",
-  "horas": "2026-11-24T20:59:08"
+  "playa": "2026-11-25T08:51:21",
+  "horas": "2026-11-25T15:09:08"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -21,44 +21,44 @@
     "débil"
    ],
    "agua": 18,
-   "maxima": 21,
+   "maxima": 20,
    "uv": 2,
    "tramos": [
     {
      "de": 8,
      "a": 14,
      "viento": 12,
-     "racha": 27,
+     "racha": 26,
      "dir": "SO",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "nubes_altas",
      "fondo": false,
-     "fuerza": 6,
+     "fuerza": null,
      "aviso": false,
-     "mar": 3,
+     "mar": 1,
      "agua": 18,
      "notas": {
       "navegar": {
-       "n": 1,
-       "m": "mar_fuerte"
+       "n": 8,
+       "m": "poco_viento"
       },
       "bucear": {
-       "n": 1,
-       "m": "mar_fuerte"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 1,
-       "m": "mar_fuerte"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     },
     {
      "de": 14,
      "a": 20,
-     "viento": 15,
-     "racha": 27,
+     "viento": 14,
+     "racha": 26,
      "dir": "NO",
      "lluvia": null,
      "tormenta": null,
@@ -107,30 +107,30 @@
     {
      "de": 8,
      "a": 14,
-     "viento": 7,
-     "racha": 17,
+     "viento": 6,
+     "racha": 16,
      "dir": "N",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 6,
      "aviso": false,
-     "mar": 1,
+     "mar": 3,
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 6,
-       "m": "poco_viento"
+       "n": 1,
+       "m": "mar_fuerte"
       },
       "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 1,
+       "m": "mar_fuerte"
       },
       "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
+       "n": 1,
+       "m": "mar_fuerte"
       }
      }
     },
@@ -189,11 +189,11 @@
      "a": 14,
      "viento": 10,
      "racha": null,
-     "dir": "N",
+     "dir": "S",
      "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "despejado",
+     "cielo": "poco_nuboso",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -217,13 +217,13 @@
     {
      "de": 14,
      "a": 20,
-     "viento": 0,
+     "viento": 10,
      "racha": null,
-     "dir": "C",
-     "lluvia": 10,
+     "dir": "S",
+     "lluvia": 0,
      "tormenta": 0,
      "niebla": 0,
-     "cielo": "intervalos",
+     "cielo": "despejado",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -231,8 +231,8 @@
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 4,
-       "m": "sin_viento"
+       "n": 8,
+       "m": "poco_viento"
       },
       "bucear": {
        "n": 9,
@@ -249,10 +249,10 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "Componente W 4 a 6. Rachas. Marejada con áreas de fuerte marejada. Algún aguacero por la noche.",
-  "elaborado": "2026-11-24T20:00:00",
-  "inicio": "2026-11-24T20:00:00",
-  "fin": "2026-11-25T20:00:00",
+  "texto": "Componente W 4 a 6. Rachas. Marejada con áreas de fuerte marejada.",
+  "elaborado": "2026-11-25T12:00:00",
+  "inicio": "2026-11-25T12:00:00",
+  "fin": "2026-11-26T12:00:00",
   "fuerza": [
    4,
    6
