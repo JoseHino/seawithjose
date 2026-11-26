@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-26T01:00:03Z",
+ "generado": "2026-11-26T15:22:05Z",
  "elaborado": {
-  "playa": "2026-11-25T23:51:16",
-  "horas": "2026-11-25T21:03:08"
+  "playa": "2026-11-26T08:51:21",
+  "horas": "2026-11-26T14:23:08"
  },
  "fuente": "Información elaborada por la Agencia Estatal de Meteorología (AEMET)",
  "dias": [
@@ -28,29 +28,29 @@
      "de": 8,
      "a": 14,
      "viento": 6,
-     "racha": 15,
+     "racha": 16,
      "dir": "N",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": 6,
+     "fuerza": null,
      "aviso": false,
-     "mar": 2,
+     "mar": 1,
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 2,
+       "n": 6,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 3,
-       "m": "marejada"
+       "n": 9,
+       "m": "mar_tranquila"
       },
       "pescar": {
-       "n": 3,
-       "m": "marejada"
+       "n": 10,
+       "m": "mar_tranquila"
       }
      }
     },
@@ -58,12 +58,12 @@
      "de": 14,
      "a": 20,
      "viento": 6,
-     "racha": 14,
-     "dir": "SE",
+     "racha": 15,
+     "dir": "E",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "despejado",
+     "cielo": "poco_nuboso",
      "fondo": false,
      "fuerza": 6,
      "aviso": false,
@@ -101,49 +101,49 @@
     "débil"
    ],
    "agua": 19,
-   "maxima": 19,
+   "maxima": 18,
    "uv": 2,
    "tramos": [
     {
      "de": 8,
      "a": 14,
-     "viento": 5,
-     "racha": 18,
-     "dir": "NO",
+     "viento": 7,
+     "racha": 20,
+     "dir": "O",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
      "cielo": "despejado",
      "fondo": false,
-     "fuerza": null,
+     "fuerza": 6,
      "aviso": false,
-     "mar": 1,
+     "mar": 2,
      "agua": 19,
      "notas": {
       "navegar": {
-       "n": 6,
+       "n": 2,
        "m": "poco_viento"
       },
       "bucear": {
-       "n": 9,
-       "m": "mar_tranquila"
+       "n": 3,
+       "m": "marejada"
       },
       "pescar": {
-       "n": 10,
-       "m": "mar_tranquila"
+       "n": 3,
+       "m": "marejada"
       }
      }
     },
     {
      "de": 14,
      "a": 20,
-     "viento": 8,
-     "racha": 26,
-     "dir": "S",
+     "viento": 7,
+     "racha": 20,
+     "dir": "SE",
      "lluvia": null,
      "tormenta": null,
      "niebla": 0,
-     "cielo": "despejado",
+     "cielo": "poco_nuboso",
      "fondo": false,
      "fuerza": null,
      "aviso": false,
@@ -249,12 +249,12 @@
  ],
  "costera": {
   "zona": "Aguas costeras de Málaga",
-  "texto": "W y NW 3 a 5, ocasionalmente 6 en el este. Marejadilla o marejada.",
-  "elaborado": "2026-11-25T20:00:00",
-  "inicio": "2026-11-25T20:00:00",
-  "fin": "2026-11-26T20:00:00",
+  "texto": "NW 3 a 5, ocasionalmente 6 en el este, amainando a Variable 1 a 3 al final. Marejadilla o marejada.",
+  "elaborado": "2026-11-26T12:00:00",
+  "inicio": "2026-11-26T12:00:00",
+  "fin": "2026-11-27T12:00:00",
   "fuerza": [
-   3,
+   1,
    6
   ],
   "mar": [
